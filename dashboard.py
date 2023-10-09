@@ -14,7 +14,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import datetime
 import itertools
 
-TESTING = True
+TESTING = False
 
 servers = GFServers.open(".gf_server_data.json")
 # servers.update()
