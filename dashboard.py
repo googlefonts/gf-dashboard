@@ -152,7 +152,7 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
         for workflow in workflows or []:
             runs = list(workflow.get_runs())
             if runs and len(runs) > 0:
-                gf.build_badges.append(anybadge.Badge(workflow.name, run[0].conclusion))
+                gf.build_badges.append(anybadge.Badge(workflow.name, runs[0].conclusion))
 
     # Codepoints
 
