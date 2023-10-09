@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#{{font.html_id}}_upstreamcard">
+                <span class="material-icons"></span>
+                Upstream Repo
+            </button>
+        </h5>
+    </div>
+    <div id="{{font.html_id}}_upstreamcard" class="collapse">
+        <div class="card-body">
+            <ul>
+                <li>
+                    <a href="https://github.com/{{font.github_owner_repo[0]}}/{{font.github_owner_repo[1]}}">
+                        Upstream repository
+                    </a>
+                </li>
+            </ul>
+            <!-- last upstream commit -->
+            <!-- new versions -->
+            {% if font.releases %}
+            <h6>Latest releases</h6>
+            <ul>
+                {% for release in font.releases %}
+                <li>
+                    <a href="{{release.html_url}}">{{release.title}}</a>
+                    ({{release.published_at | ago}} ago)
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <!-- build badges -->
+            <div class="build-badges">
+                {% for badge in font.build_badges %}
+                {{badge |safe}}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

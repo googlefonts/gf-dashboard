@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#{{font.html_id}}_fbcard">
+                <span class="material-icons"></span>
+                Fontbakery checks
+            </button>
+        </h5>
+    </div>
+    <div id="{{font.html_id}}_fbcard" class="collapse">
+        <div class="card-body">
+            {% if font.fb_fails %}
+            <h6>Failing tests</h6>
+            <ul>
+                {% for fail in font.fb_fails %}
+                <li><b>{{fail.result}}</b>: {{ fail.description }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div class="fontbakery-badges">
+                {% for badge in font.fb_badges %}
+                {{badge |safe}}
+                {% endfor %}
+            </div>
+            {% if font.fontbakery_report %}
+            <li><a href="fontbakery-reports/{{font.fontbakery_report}}">Full Fontbakery report</a></li>
+            {% endif %}
+        </div>
+    </div>
+</div>

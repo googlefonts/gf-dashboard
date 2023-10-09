@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#{{font.html_id}}_gfcard">
+                <span class="material-icons"></span>
+                Google/Fonts Repo
+            </button>
+        </h5>
+    </div>
+    <div id="{{font.html_id}}_gfcard" class="collapse">
+        <div class="card-body">
+            {% if font.open_prs %}
+            <h6> Open Pull Requests </h6>
+            <ul>
+                {% for pull in font.open_pulls %}
+                <li>#{{pull.number}}: <a href="{{pull.html_url}}">{{pull.title}}
+                    </a> by {{pull.user.login}},
+                    {{pull.updated_at | ago}} ago
+                    {% endfor %}
+            </ul>
+            {% endif %}
+            {% if font.recent_pulls %}
+            <h6> Recent Pull Requests </h6>
+            <ul>
+                {% for pull in font.recent_pulls %}
+                <li>#{{pull.number}}: <a href="{{pull.html_url}}">{{pull.title}}
+                    </a> by {{pull.user.login}},
+                    {{pull.updated_at | ago}} ago
+                    {% endfor %}
+            </ul>
+            {% endif %}
+            {% if font.recent_commits %}
+            <h6> Recent Commits </h6>
+            <ul>
+                {% for commit in font.recent_commits[0:5] %}
+                <li><a href="{{commit.html_url}}">{{commit.commit.message.split("\n")[0]}}
+                    </a> by {{commit.committer.login}},
+                    {{commit.commit.author.date | ago}} ago
+                    {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>

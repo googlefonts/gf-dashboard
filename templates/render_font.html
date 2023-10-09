@@ -1,0 +1,39 @@
+<div id="{{font.html_id}}">
+    <h2 class="mb-4 mt-4"> {{ font.metadata.name }}
+        <a href="https://fonts.google.com/specimen/{{font.metadata.name | urlencode}}"><span class="material-symbols">link</span></a>
+        <span class="version-badges">
+            {% for badge in font.version_badges %}
+            {{badge |safe}}
+            {% endfor %}
+        </span>
+    </h2>
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#{{font.html_id}}_fontinfocard">
+                <span class="material-icons"></span>
+                Font Information
+            </button>
+        </div>
+        <div class="card-body collapse show" id="{{font.html_id}}_fontinfocard">
+            <table class="table">
+                <tr>
+                    <th>Designer</th>
+                    <td>{{font.metadata.designer}}</td>
+                </tr>
+                <tr>
+                    <th>Subsets</th>
+                    <td>{{font.metadata.subsets | join(", ")}}</td>
+                </tr>
+                <tr>
+                    <th>Codepoints</th>
+                    <td>{{font.codepoints}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    {% if font.github_owner_repo %}
+    {% include 'upstream.html' %}
+    {% endif %}
+    {% include 'gfrepo.html' %}
+    {% include 'fontbakery.html' %}
+</div>
