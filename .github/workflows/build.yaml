@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Write out secret
-      run: echo ${{ secrets.GF_PUSH_CONFIG }} | base64 -d > ~/.gf_push_config.ini
+      run: echo "${{ secrets.GF_PUSH_CONFIG }}" | base64 -d > ~/.gf_push_config.ini
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
