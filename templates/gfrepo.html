@@ -23,9 +23,9 @@
             <h6> Recent Pull Requests </h6>
             <ul>
                 {% for pull in font.recent_pulls %}
-                <li>#{{pull.number}}: <a href="{{pull.html_url}}">{{pull.title}}
-                    </a> by {{pull.user.login}},
-                    {{pull.updated_at | ago}} ago
+                <li>#{{pull["number"]}}: <a href="{{pull['url']}}">{{pull.title}}
+                    </a> by {{pull["author"]["login"]}},
+                    {{pull["updatedAt"] | ago}} ago
                     {% endfor %}
             </ul>
             {% endif %}

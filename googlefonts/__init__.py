@@ -9,7 +9,9 @@ from fontTools.ttLib import TTFont
 from gflanguages import LoadLanguages
 from gftools.util.google_fonts import (GetExemplarFont, LanguageComments,
                                        Metadata, WriteProto)
+from gftools.gfgithub import GitHubClient
 from github import Auth, Github
+
 
 try:
     from yaml import CDumper as Dumper
@@ -29,6 +31,9 @@ LANGUAGE_COMMENTS = LanguageComments(LoadLanguages())
 
 A_YEAR_AGO = datetime.now(timezone.utc) - timedelta(days=365)
 GF_REPO = GITHUB.get_repo("google/fonts")
+
+os.environ['GH_TOKEN'] = os.environ["GITHUB_TOKEN"]
+GRAPHQL_CLIENT = GitHubClient("google", "fonts")
 
 
 class GoogleFont:
@@ -164,18 +169,28 @@ class GoogleFont:
     @cached_property
     def recent_pulls(self):
         try:
-            pulls = []
-            pull_numbers = set()
-            for commit in self.recent_commits or []:
-                this_pulls = commit.get_pulls()
-                for pull in this_pulls:
-                    if pull.number in pull_numbers:
-                        continue
-                    pulls.append(pull)
-                    pull_numbers.add(pull.number)
-                    if pull.updated_at < A_YEAR_AGO:
-                        break
-            return pulls[:5]
+            result = GRAPHQL_CLIENT._run_graphql("""
+{
+  search(query: "is:pr repo:google/fonts %s/", type: ISSUE, first: 100) {
+    edges {
+      node {
+        ... on PullRequest {
+          number
+          title
+          url
+          updatedAt
+          author { login }
+        }
+      }
+    }
+  }
+}
+"""  % self.directory, {})
+            result = result["data"]["search"]["edges"]
+            result = [x["node"] for x in result]
+            for x in result:
+                x["updatedAt"] = datetime.fromisoformat(x["updatedAt"])
+            return result
         except Exception as e:
             raise e
             return None
