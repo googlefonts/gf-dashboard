@@ -28,6 +28,7 @@ GITHUB = Github(auth=Auth.Token(os.environ["GITHUB_TOKEN"]))
 LANGUAGE_COMMENTS = LanguageComments(LoadLanguages())
 
 A_YEAR_AGO = datetime.now(timezone.utc) - timedelta(days=365)
+GF_REPO = GITHUB.get_repo("google/fonts")
 
 
 class GoogleFont:
@@ -151,7 +152,6 @@ class GoogleFont:
 
     @cached_property
     def recent_commits(self):
-        GF_REPO = GITHUB.get_repo("google/fonts")
         try:
             commits = GF_REPO.get_commits(path=self.directory, since=A_YEAR_AGO)
             return list(commits[0:10])
@@ -160,7 +160,6 @@ class GoogleFont:
 
     @cached_property
     def recent_pulls(self):
-        GF_REPO = GITHUB.get_repo("google/fonts")
         try:
             pulls = []
             pull_numbers = set()
