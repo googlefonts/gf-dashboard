@@ -116,7 +116,10 @@ class GoogleFont:
     @cached_property
     def upstream_gh(self):
         if self.github_owner_repo:
-            return GITHUB.get_repo("/".join(self.github_owner_repo))
+            try:
+                return GITHUB.get_repo("/".join(self.github_owner_repo))
+            except Exception:
+                return
 
     @cached_property
     def last_updated(self):
