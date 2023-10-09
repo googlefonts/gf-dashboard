@@ -36,6 +36,31 @@ os.environ['GH_TOKEN'] = os.environ["GITHUB_TOKEN"]
 GRAPHQL_CLIENT = GitHubClient("google", "fonts")
 
 
+RECENT_COMMITS_QUERY = """
+query($path: String!) {
+  repository(name: "fonts", owner: "google") {
+    ref(qualifiedName: "main") {
+      target {
+        ... on Commit {
+          history(first: 10, path: $path) {
+            edges {
+              node {
+                url
+                message
+                committedDate
+                author {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+"""
+
 class GoogleFont:
     has_open_prs = None
 
@@ -161,9 +186,20 @@ class GoogleFont:
     @cached_property
     def recent_commits(self):
         try:
-            commits = GF_REPO.get_commits(path=self.directory, since=A_YEAR_AGO)
-            return list(commits[0:10])
-        except:
+            result = GRAPHQL_CLIENT._run_graphql(RECENT_COMMITS_QUERY,
+                '{"path": "%s"}' % self.directory
+            )
+            result = result["data"]["repository"]["ref"]["target"]["history"]["edges"]
+            result = [x["node"] for x in result]
+            newresult = []
+            for x in result:
+                x["committedDate"] = datetime.fromisoformat(x["committedDate"])
+                if x["committedDate"] > A_YEAR_AGO:
+                    newresult.append(x)
+            return newresult
+        except Exception as e:
+            raise e
+
             return None
 
     @cached_property

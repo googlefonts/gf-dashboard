@@ -33,9 +33,9 @@
             <h6> Recent Commits </h6>
             <ul>
                 {% for commit in font.recent_commits[0:5] %}
-                <li><a href="{{commit.html_url}}">{{commit.commit.message.split("\n")[0]}}
-                    </a> by {{commit.committer.login}},
-                    {{commit.commit.author.date | ago}} ago
+                <li><a href="{{commit.url}}">{{commit.message.split("\n")[0]}}
+                    </a> by {{commit.author.name}},
+                    {{commit.committedDate | ago}} ago
                     {% endfor %}
             </ul>
             {% endif %}

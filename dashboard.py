@@ -166,11 +166,16 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
         "-".join(map(lambda c: "U+%04X" % c, (item[0], item[-1])[: len(item)]))
         for item in groups
     )
+    if len(gf.codepoints) > 1000:
+        gf.codepoints = "%s codepoints" % len(gf.encoded_codepoints)
+    # Prime the pump
+    _ = gf.recent_commits
+    _ = gf.recent_pulls
 
     # Downstream versions if noto
     # Version history
     fonts.append(gf)
-    if TESTING and len(fonts) > 5:
+    if TESTING and len(fonts) > 15:
         break
 fonts = sorted(fonts, key=lambda x: x.metadata.name)
 
