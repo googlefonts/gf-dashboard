@@ -17,7 +17,7 @@ import itertools
 TESTING = False
 
 servers = GFServers.open(".gf_server_data.json")
-# servers.update()
+servers.update()
 gfpath = os.environ["GF_PATH"]
 fonts = []
 github_repo = os.environ.get("GITHUB_REPOSITORY", "")
