@@ -1,3 +1,16 @@
 </body>
+<script>
+$(function() {
+    $("#searchbar").on("input", function() {
+        var search = $('#searchbar').val().replace(" ", "_").replace("]", "").replace("'", "");
+        if (search) {
+            $(".afont").hide();
+            $(".afont[id*='" + search + "' i]").show();
+        } else {
+            $(".afont").show();
+        }
+    });
+});
+</script>
 
 </html>
