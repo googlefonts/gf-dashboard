@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>16</td>
+                <td>17</td>
+                <td>68</td>
+                <td>9</td>
+                <td>131</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>8%</td>
+                <td>9%</td>
+                <td>36%</td>
+                <td>5%</td>
+                <td>69%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>DESCRIPTION.en_us.html must have more than 200 bytes.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>DESCRIPTION.en_us.html must have size larger than 200 bytes. [code: too-short]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'DINR' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code>, <code>latin-ext</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2011, font diner, inc (diner@fontdiner.com),&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb subsets should be alphabetically ordered.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin', 'latin-ext'] and expected ['latin', 'latin-ext', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.full_name and font.post_script_name fields have equivalent values ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_fullname_postscript&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font full_name = &quot;Creepster&quot; does not match post_script_name = &quot;Creepster-Regular&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2011, font diner, inc dba sideshow (diner@fontdiner.com), with reserved font names &quot;creepster&quot;&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2011, Font Diner, Inc (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2011, Font Diner, Inc (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notice on METADATA.pb should not contain 'Reserved Font Name'.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/reserved_font_name&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: copyright field (&quot;Copyright (c) 2011, Font Diner, Inc DBA Sideshow (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot;) contains &quot;Reserved Font Name&quot;. This is an error except in a few specific rare cases. [code: rfn]</p>
+</span></li></ul></div></details>
+<h3>Check font names are correct</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Regular missing from full name [code: lacks-regular]</p>
+</span></li></ul></div></details>
+<h3>Copyright field for this font on METADATA.pb matches all copyright notice entries on the name table ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/copyright&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright (c) 2011, Font Diner, Inc DBA Sideshow (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot;) differs from a copyright notice entry on the name table: &quot;Copyright (c) 2011, Font Diner, Inc (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright (c) 2011, Font Diner, Inc DBA Sideshow (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot;) differs from a copyright notice entry on the name table: &quot;Copyright (c) 2011, Font Diner, Inc (diner@fontdiner.com), with Reserved Font Names &quot;Creepster&quot;&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>Ensure METADATA.pb does not use escaped strings.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/escaped_strings&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Found escaped chars at 'Copyright (c) 2011, Font Diner, Inc DBA Sideshow (diner@fontdiner.com), with Reserved Font Names '. Please use an unicode string instead. [code: escaped-strings]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Designer Sideshow still does not have an avatar image. Please provide one. [code: missing-avatar]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['/Users/simon/others-repos/fonts/ofl/creepster/Creepster-Regular.ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts do not contain any pre-production tables.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Checking with ots-sanitize.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ots&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ots-sanitize passed this file, however warnings were printed:</p>
+<p>WARNING: gasp: Changed the version number to 1
+[code: ots-sanitize-warn]</p>
+</span></li></ul></div></details>
+<h3>Font contains '.notdef' as its first glyph?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_glyphs&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The '.notdef' glyph should contain a drawing, but it is blank. [code: notdef-is-blank]</p>
+</span></li></ul></div></details>
+<h3>Are there unwanted tables?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- nonmarkingreturn
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: percent	Contours detected: 4	Expected: 5
+
+- Glyph name: b	Contours detected: 3	Expected: 2
+
+- Glyph name: e	Contours detected: 1	Expected: 2
+
+- Glyph name: g	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: i	Contours detected: 1	Expected: 2
+
+- Glyph name: j	Contours detected: 1	Expected: 2
+
+- Glyph name: r	Contours detected: 2	Expected: 1
+
+- Glyph name: sfthyphen	Contours detected: 1	Expected: 0
+
+- Glyph name: germandbls	Contours detected: 2	Expected: 1
+
+- Glyph name: aring	Contours detected: 3	Expected: 4
+
+- Glyph name: ae	Contours detected: 2	Expected: 3
+
+- Glyph name: egrave	Contours detected: 2	Expected: 3
+
+- Glyph name: eacute	Contours detected: 2	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: oe	Contours detected: 2	Expected: 3
+
+- Glyph name: perthousand	Contours detected: 5	Expected: 6 or 7
+
+- Glyph name: trademark	Contours detected: 1	Expected: 2
+
+- Glyph name: ae	Contours detected: 2	Expected: 3
+
+- Glyph name: aring	Contours detected: 3	Expected: 4
+
+- Glyph name: b	Contours detected: 3	Expected: 2
+
+- Glyph name: e	Contours detected: 1	Expected: 2
+
+- Glyph name: eacute	Contours detected: 2	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: egrave	Contours detected: 2	Expected: 3
+
+- Glyph name: fi	Contours detected: 2	Expected: 3
+
+- Glyph name: g	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: germandbls	Contours detected: 2	Expected: 1
+
+- Glyph name: i	Contours detected: 1	Expected: 2
+
+- Glyph name: j	Contours detected: 1	Expected: 2
+
+- Glyph name: oe	Contours detected: 2	Expected: 3
+
+- Glyph name: percent	Contours detected: 4	Expected: 5
+
+- Glyph name: perthousand	Contours detected: 5	Expected: 6 or 7
+
+- Glyph name: r	Contours detected: 2	Expected: 1
+
+- Glyph name: trademark	Contours detected: 1	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 439 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 411:
+plus</p>
+<p>Width = 413:
+divide, equal</p>
+<p>Width = 677:
+logicalnot</p>
+<p>Width = 370:
+multiply</p>
+<p>Width = 399:
+minus
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.head</h2>
+<span class='section__emoji'>🔥⏩</span>
+<h3>Checking font version fields (head and name table).</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_version&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;1.00000&quot; while name version string (for platform 1, encoding 0) is &quot;Version 1.002&quot;. [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;1.00000&quot; while name version string (for platform 3, encoding 1) is &quot;Version 1.002&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.name</h2>
+<span class='section__emoji'>🔥⏩⏩</span>
+<h3>Description strings in the name table must not contain copyright info.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/no_copyright_on_description&gt;</div>
+
+<details><summary>🔥 Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Some namerecords with ID=10 (NameID.DESCRIPTION) containing copyright info should be removed (perhaps these were added by a longstanding FontLab Studio 5.x bug that copied copyright notices to them.) [code: copyright-on-description]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ Creepster-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 82, 754)
+* ('exclam', 178, 623)
+* ('exclam', 195, 29)
+* ('exclam', 98, -30)
+* ('quotedbl', 50, 737)
+* ('quotedbl', 232, 737)
+* ('quotedbl', 270, 666)
+* ('quotedbl', 241, 426)
+* ('numbersign', 478, 746)
+* ('numbersign', 332, -24)
+* ('numbersign', 91, -27)
+* ('numbersign', -1, 252)
+* ('dollar', 191, 753)
+* ('dollar', 361, 540)
+* ('dollar', 188, -16)
+* ('dollar', 8, 516)
+* ('percent', 90, -26)
+* ('percent', 429, 759)
+* ('percent', 555, 210)
+* ('ampersand', 477, 282)
+* ('ampersand', 220, -27)
+* ('ampersand', 3, 90)
+* ('ampersand', 349, 747)
+* ('quotesingle', 127, 675)
+* ('quotesingle', 101, 425)
+* ('quotesingle', 18, 625)
+* ('quotesingle', 19, 651)
+* ('quotesingle', 19, 699)
+* ('quotesingle', 102, 740)
+* ('parenleft', 211, 778)
+* ('parenleft', 225, 753)
+* ('parenleft', 201, -30)
+* ('parenright', 19, -29)
+* ('parenright', -8, 2)
+* ('parenright', 9, 749)
+* ('asterisk', 4, 603)
+* ('asterisk', 189, 753)
+* ('asterisk', 414, 622)
+* ('asterisk', 411, 416)
+* ('asterisk', 191, 291)
+* ('plus', 407, 341)
+* ('plus', 207, 140)
+* ('plus', -4, 364)
+* ('plus', 189, 575)
+* ('comma', 138, 0)
+* ('comma', 3, 3)
+* ('comma', 88, 103)
+* ('hyphen', -5, 328)
+* ('hyphen', 32, 400)
+* ('hyphen', 357, 398)
+* ('hyphen', 397, 328)
+* ('hyphen', 26, 300)
+* ('period', 4, 25)
+* ('period', 81, 91)
+* ('period', 156, 49)
+* ('period', 71, -30)
+* ('slash', 306, 758)
+* ('slash', 345, 691)
+* ('slash', 36, -8)
+* ('slash', -15, 62)
+* ('zero', 294, 762)
+* ('zero', 458, 428)
+* ('zero', -1, 454)
+* ('one', 299, 156)
+* ('one', 111, -23)
+* ('one', 4, 558)
+* ('one', 286, 721)
+* ('two', 144, -20)
+* ('two', 5, 548)
+* ('three', 2, 545)
+* ('three', 164, 766)
+* ('three', 263, 774)
+* ('four', 433, 227)
+* ('four', 264, -24)
+* ('four', -2, 345)
+* ('four', 198, 759)
+* ('four', 349, 755)
+* ('five', 384, 759)
+* ('five', 425, 186)
+* ('five', 19, 471)
+* ('six', 419, 172)
+* ('six', 179, -22)
+* ('six', 9, 228)
+* ('six', 9, 485)
+* ('six', 230, 762)
+* ('seven', 4, 616)
+* ('seven', 394, 698)
+* ('seven', 179, -39)
+* ('seven', 9, 481)
+* ('eight', 429, 519)
+* ('eight', 12, 542)
+* ('nine', 436, 472)
+* ('nine', 0, 488)
+* ('nine', 253, 766)
+* ('colon', 57, 353)
+* ('colon', 105, 353)
+* ('colon', 4, 25)
+* ('colon', 156, 49)
+* ('colon', 71, -30)
+* ('semicolon', 141, 0)
+* ('semicolon', 6, 3)
+* ('semicolon', 142, 319)
+* ('semicolon', -1, 270)
+* ('less', 4, 335)
+* ('less', 397, 570)
+* ('less', 426, 552)
+* ('less', 424, 150)
+* ('less', 384, 117)
+* ('equal', 27, 206)
+* ('equal', 409, 235)
+* ('greater', 435, 335)
+* ('greater', 55, 117)
+* ('greater', 15, 150)
+* ('greater', 13, 551)
+* ('greater', 52, 575)
+* ('question', 381, 569)
+* ('question', 380, 516)
+* ('question', -9, 624)
+* ('question', 151, 741)
+* ('question', 185, -34)
+* ('at', 697, 377)
+* ('at', 4, 353)
+* ('at', 380, 763)
+* ('A', 381, -28)
+* ('A', 7, 110)
+* ('A', 431, 68)
+* ('B', 27, 237)
+* ('B', 19, 601)
+* ('B', 169, 752)
+* ('B', 343, 745)
+* ('B', 465, 573)
+* ('B', 459, 503)
+* ('B', 277, -30)
+* ('B', 211, -25)
+* ('B', 135, -26)
+* ('C', 438, 502)
+* ('C', 244, -34)
+* ('C', 24, 246)
+* ('C', 24, 386)
+* ('C', 24, 553)
+* ('C', 248, 766)
+* ('D', 462, 507)
+* ('D', 146, -17)
+* ('D', 19, 669)
+* ('D', 102, 743)
+* ('E', 24, 694)
+* ('E', 438, 714)
+* ('E', 213, -32)
+* ('E', 22, 329)
+* ('F', 158, -14)
+* ('F', 22, 574)
+* ('F', 424, 671)
+* ('G', 462, 320)
+* ('G', 375, -19)
+* ('G', 215, -36)
+* ('G', 9, 495)
+* ('G', 204, 769)
+* ('H', 194, 765)
+* ('H', 444, 642)
+* ('H', 116, -20)
+* ('H', 25, 680)
+* ('H', 106, 766)
+* ('I', 13, 583)
+* ('I', 12, 685)
+* ('I', 77, 756)
+* ('I', 305, 606)
+* ('J', 314, 771)
+* ('J', 382, 751)
+* ('J', 207, -32)
+* ('J', -33, 168)
+* ('K', 28, 693)
+* ('K', 83, 763)
+* ('K', 508, 706)
+* ('K', 360, -30)
+* ('L', 392, 101)
+* ('L', 255, -12)
+* ('L', 95, -20)
+* ('M', 647, 692)
+* ('M', 648, 628)
+* ('M', 654, 535)
+* ('M', 574, -13)
+* ('M', 30, 387)
+* ('M', 30, 462)
+* ('N', 422, 755)
+* ('N', 506, 710)
+* ('N', 505, 598)
+* ('N', 509, 416)
+* ('N', 122, -13)
+* ('N', 371, 757)
+* ('O', 177, 761)
+* ('O', 448, 511)
+* ('O', 245, -50)
+* ('O', 177, -10)
+* ('O', 7, 294)
+* ('P', 18, 711)
+* ('P', 451, 459)
+* ('P', 114, -39)
+* ('Q', 395, -35)
+* ('Q', 3, 374)
+* ('Q', 465, 406)
+* ('R', 120, -11)
+* ('R', 117, 760)
+* ('R', 450, 500)
+* ('R', 401, -11)
+* ('S', 418, 470)
+* ('S', 5, 472)
+* ('T', 414, 616)
+* ('T', 170, -23)
+* ('T', -5, 554)
+* ('T', 61, 758)
+* ('T', 397, 770)
+* ('U', 312, 742)
+* ('U', 436, 743)
+* ('U', 473, 406)
+* ('U', 301, -18)
+* ('U', 23, 549)
+* ('V', -4, 745)
+* ('V', 323, 752)
+* ('V', 441, 717)
+* ('V', 192, -25)
+* ('W', -15, 699)
+* ('W', 490, 752)
+* ('X', 60, -32)
+* ('X', -40, 692)
+* ('X', 153, 745)
+* ('X', 342, 764)
+* ('X', 490, 684)
+* ('X', 422, -16)
+* ('Y', 1, 746)
+* ('Y', 125, 746)
+* ('Y', 442, 704)
+* ('Z', 263, -13)
+* ('Z', -1, 528)
+* ('Z', 36, 747)
+* ('Z', 344, 749)
+* ('Z', 392, 721)
+* ('bracketleft', 86, -24)
+* ('bracketleft', 40, 405)
+* ('bracketleft', 41, 604)
+* ('bracketleft', 38, 673)
+* ('bracketleft', 40, 732)
+* ('backslash', 44, 758)
+* ('backslash', 365, 62)
+* ('backslash', 314, -8)
+* ('backslash', 9, 705)
+* ('bracketright', 5, 770)
+* ('bracketright', 187, 674)
+* ('bracketright', 40, -11)
+* ('bracketright', -1, 20)
+* ('asciicircum', 9, 304)
+* ('asciicircum', 205, 759)
+* ('asciicircum', 332, 290)
+* ('asciicircum', 64, 299)
+* ('underscore', 0, 102)
+* ('underscore', 580, 33)
+* ('underscore', 420, -8)
+* ('underscore', 51, -8)
+* ('grave', 319, 650)
+* ('grave', 274, 623)
+* ('grave', 149, 725)
+* ('grave', 184, 769)
+* ('a', 87, -15)
+* ('a', 11, 179)
+* ('a', 155, 759)
+* ('b', 275, -26)
+* ('b', 135, 750)
+* ('b', 455, 498)
+* ('c', 193, -25)
+* ('c', 9, 324)
+* ('c', 197, 738)
+* ('d', 120, 760)
+* ('d', 438, 404)
+* ('d', 432, 347)
+* ('e', 64, 746)
+* ('e', 330, 756)
+* ('e', 397, 704)
+* ('e', 235, -37)
+* ('f', 25, 379)
+* ('f', 23, 639)
+* ('f', 128, 778)
+* ('f', 405, 658)
+* ('g', 192, -19)
+* ('g', 323, 767)
+* ('g', 433, 326)
+* ('g', 430, 40)
+* ('h', 120, -17)
+* ('h', 20, 520)
+* ('h', 193, 757)
+* ('h', 324, 755)
+* ('h', 439, 764)
+* ('i', 99, -35)
+* ('i', 208, 765)
+* ('i', 314, 562)
+* ('j', 351, 338)
+* ('j', 192, -33)
+* ('j', 237, 783)
+* ('j', 345, 681)
+* ('j', 345, 604)
+* ('k', 368, -10)
+* ('k', 30, 705)
+* ('k', 66, 756)
+* ('k', 219, 762)
+* ('k', 507, 711)
+* ('l', 24, 690)
+* ('l', 99, 760)
+* ('l', 193, 760)
+* ('m', 23, 395)
+* ('m', 26, 641)
+* ('m', 216, 750)
+* ('m', 583, 764)
+* ('m', 652, 495)
+* ('m', 652, 439)
+* ('m', 557, -34)
+* ('n', 456, 755)
+* ('n', 495, 722)
+* ('n', 165, -11)
+* ('n', 28, 694)
+* ('o', 195, 762)
+* ('o', 19, 343)
+* ('p', 465, 609)
+* ('q', 410, -67)
+* ('q', 14, 396)
+* ('q', 248, 752)
+* ('q', 472, 374)
+* ('r', 452, 471)
+* ('r', 124, -20)
+* ('r', 19, 420)
+* ('r', 173, 762)
+* ('s', 398, 577)
+* ('s', 159, -23)
+* ('s', 5, 492)
+* ('s', 174, 757)
+* ('s', 286, 744)
+* ('t', 277, 765)
+* ('t', 397, 759)
+* ('t', 452, 684)
+* ('t', 241, -15)
+* ('t', 4, 615)
+* ('u', 313, 748)
+* ('u', 207, -30)
+* ('u', 25, 323)
+* ('u', 24, 550)
+* ('u', 188, 772)
+* ('v', 467, 692)
+* ('v', 227, -34)
+* ('v', -20, 677)
+* ('v', 110, 758)
+* ('w', 481, 752)
+* ('w', 647, 701)
+* ('w', 466, -23)
+* ('w', -7, 710)
+* ('w', 152, 754)
+* ('w', 322, 751)
+* ('x', 382, -18)
+* ('x', 143, 753)
+* ('x', 497, 716)
+* ('y', 224, -15)
+* ('y', -36, 704)
+* ('y', 24, 745)
+* ('z', 45, 756)
+* ('z', 382, 632)
+* ('z', 382, 506)
+* ('z', 92, -22)
+* ('braceleft', 190, -27)
+* ('braceleft', 19, 379)
+* ('braceleft', 205, 785)
+* ('braceleft', 240, 790)
+* ('bar', 94, 760)
+* ('bar', 140, 668)
+* ('bar', 137, 433)
+* ('bar', 138, 40)
+* ('bar', 22, 16)
+* ('braceright', 105, 786)
+* ('braceright', 258, 378)
+* ('braceright', 72, -26)
+* ('braceright', 24, -39)
+* ('asciitilde', 406, 373)
+* ('asciitilde', 280, 299)
+* ('asciitilde', 64, 301)
+* ('asciitilde', 7, 347)
+* ('asciitilde', 121, 431)
+* ('asciitilde', 153, 433)
+* ('exclamdown', 125, -29)
+* ('exclamdown', 23, 679)
+* ('exclamdown', 110, 755)
+* ('cent', 367, 484)
+* ('cent', 4, 360)
+* ('cent', 231, 748)
+* ('sterling', 240, 694)
+* ('sterling', 377, 536)
+* ('sterling', 311, 48)
+* ('sterling', -13, 369)
+* ('currency', 344, 513)
+* ('currency', 341, 245)
+* ('currency', 39, 199)
+* ('currency', 9, 217)
+* ('currency', 36, 532)
+* ('yen', 300, 706)
+* ('yen', 358, 704)
+* ('yen', 395, 694)
+* ('yen', 3, 368)
+* ('yen', 6, 654)
+* ('yen', 91, 704)
+* ('brokenbar', 63, 756)
+* ('brokenbar', 134, 672)
+* ('brokenbar', 134, 558)
+* ('brokenbar', 60, -14)
+* ('brokenbar', 19, 63)
+* ('section', 92, -80)
+* ('section', 18, 297)
+* ('section', 7, 582)
+* ('section', 361, 391)
+* ('dieresis', 149, 636)
+* ('dieresis', 81, 674)
+* ('dieresis', 295, 638)
+* ('dieresis', 342, 768)
+* ('dieresis', 385, 677)
+* ('copyright', 336, 229)
+* ('copyright', 196, 217)
+* ('copyright', 8, 488)
+* ('ordfeminine', 139, 259)
+* ('ordfeminine', -1, 354)
+* ('ordfeminine', 6, 482)
+* ('ordfeminine', 222, 656)
+* ('ordfeminine', 285, 336)
+* ('guillemotleft', 391, 395)
+* ('guillemotleft', 341, -15)
+* ('guillemotleft', 211, -14)
+* ('guillemotleft', 4, 200)
+* ('guillemotleft', 231, 432)
+* ('logicalnot', 670, 328)
+* ('sfthyphen', -5, 328)
+* ('sfthyphen', 32, 400)
+* ('sfthyphen', 357, 398)
+* ('sfthyphen', 397, 328)
+* ('sfthyphen', 26, 300)
+* ('registered', 336, 229)
+* ('registered', 196, 217)
+* ('registered', 8, 488)
+* ('macron', 109, 703)
+* ('macron', 147, 735)
+* ('macron', 208, 734)
+* ('macron', 274, 734)
+* ('macron', 326, 734)
+* ('macron', 357, 708)
+* ('macron', 357, 684)
+* ('macron', 308, 658)
+* ('macron', 222, 658)
+* ('degree', 126, 778)
+* ('degree', 87, 613)
+* ('degree', 19, 703)
+* ('twosuperior', 67, 360)
+* ('twosuperior', 5, 596)
+* ('twosuperior', 10, 640)
+* ('twosuperior', 123, 740)
+* ('twosuperior', 224, 640)
+* ('threesuperior', 121, 372)
+* ('threesuperior', 3, 440)
+* ('threesuperior', 4, 621)
+* ('threesuperior', 3, 640)
+* ('threesuperior', 111, 746)
+* ('threesuperior', 147, 744)
+* ('threesuperior', 216, 647)
+* ('acute', 192, 623)
+* ('acute', 147, 650)
+* ('acute', 278, 770)
+* ('acute', 316, 725)
+* ('mu', 501, 76)
+* ('mu', -65, -224)
+* ('mu', 173, 458)
+* ('mu', 381, 475)
+* ('paragraph', 306, -29)
+* ('paragraph', -12, 522)
+* ('paragraph', 476, 723)
+* ('periodcentered', 10, 357)
+* ('periodcentered', 86, 424)
+* ('periodcentered', 162, 382)
+* ('periodcentered', 72, 303)
+* ('cedilla', 172, 49)
+* ('cedilla', 199, 49)
+* ('cedilla', 222, 50)
+* ('cedilla', 237, -217)
+* ('onesuperior', 140, 442)
+* ('onesuperior', 14, 668)
+* ('onesuperior', 72, 749)
+* ('ordmasculine', 191, 665)
+* ('ordmasculine', 121, 266)
+* ('ordmasculine', 5, 478)
+* ('guillemotright', 26, 434)
+* ('guillemotright', 50, -15)
+* ('guillemotright', 165, -19)
+* ('onequarter', 3, 16)
+* ('onequarter', 436, 751)
+* ('onequarter', 474, 704)
+* ('onequarter', 371, -22)
+* ('onehalf', 114, 744)
+* ('onehalf', 12, 58)
+* ('onehalf', 336, -15)
+* ('onehalf', 486, 261)
+* ('threequarters', 13, 640)
+* ('threequarters', 121, 746)
+* ('threequarters', 158, 744)
+* ('threequarters', 465, 745)
+* ('questiondown', -6, 139)
+* ('questiondown', -5, 191)
+* ('questiondown', 383, 84)
+* ('questiondown', 221, -34)
+* ('questiondown', 104, -36)
+* ('questiondown', 189, 741)
+* ('Agrave', 381, -28)
+* ('Agrave', 7, 110)
+* ('Agrave', 431, 68)
+* ('Agrave', 184, 953)
+* ('Aacute', 381, -28)
+* ('Aacute', 7, 110)
+* ('Aacute', 431, 68)
+* ('Aacute', 288, 944)
+* ('Acircumflex', 381, -28)
+* ('Acircumflex', 7, 110)
+* ('Acircumflex', 431, 68)
+* ('Acircumflex', 242, 943)
+* ('Atilde', 381, -28)
+* ('Atilde', 7, 110)
+* ('Atilde', 431, 68)
+* ('Atilde', 183, 920)
+* ('Atilde', 203, 918)
+* ('Adieresis', 381, -28)
+* ('Adieresis', 7, 110)
+* ('Adieresis', 431, 68)
+* ('Adieresis', 352, 922)
+* ('Aring', 254, 873)
+* ('Aring', 434, 24)
+* ('Aring', 381, -28)
+* ('Aring', 7, 110)
+* ('AE', 644, 135)
+* ('AE', 12, -40)
+* ('AE', -43, 41)
+* ('AE', 197, 752)
+* ('Ccedilla', 24, 246)
+* ('Ccedilla', 24, 386)
+* ('Ccedilla', 24, 553)
+* ('Ccedilla', 248, 766)
+* ('Ccedilla', 438, 502)
+* ('Ccedilla', 246, -223)
+* ('Egrave', 24, 694)
+* ('Egrave', 438, 714)
+* ('Egrave', 213, -32)
+* ('Egrave', 22, 329)
+* ('Egrave', 184, 933)
+* ('Eacute', 24, 694)
+* ('Eacute', 438, 714)
+* ('Eacute', 213, -32)
+* ('Eacute', 22, 329)
+* ('Eacute', 309, 924)
+* ('Ecircumflex', 24, 694)
+* ('Ecircumflex', 438, 714)
+* ('Ecircumflex', 213, -32)
+* ('Ecircumflex', 22, 329)
+* ('Ecircumflex', 232, 953)
+* ('Edieresis', 24, 694)
+* ('Edieresis', 438, 714)
+* ('Edieresis', 213, -32)
+* ('Edieresis', 22, 329)
+* ('Edieresis', 342, 922)
+* ('Igrave', 13, 583)
+* ('Igrave', 12, 685)
+* ('Igrave', 305, 606)
+* ('Igrave', 113, 953)
+* ('Iacute', 13, 583)
+* ('Iacute', 12, 685)
+* ('Iacute', 305, 606)
+* ('Iacute', 238, 954)
+* ('Icircumflex', 13, 583)
+* ('Icircumflex', 12, 685)
+* ('Icircumflex', 305, 606)
+* ('Icircumflex', 161, 953)
+* ('Icircumflex', 298, 865)
+* ('Idieresis', 10, 838)
+* ('Idieresis', 271, 932)
+* ('Idieresis', 314, 841)
+* ('Eth', 80, 756)
+* ('Eth', 441, 405)
+* ('Eth', 434, 350)
+* ('Ntilde', 506, 710)
+* ('Ntilde', 505, 598)
+* ('Ntilde', 509, 416)
+* ('Ntilde', 122, -13)
+* ('Ntilde', 204, 920)
+* ('Ntilde', 224, 918)
+* ('Ograve', 448, 511)
+* ('Ograve', 245, -50)
+* ('Ograve', 177, -10)
+* ('Ograve', 7, 294)
+* ('Ograve', 184, 953)
+* ('Oacute', 448, 511)
+* ('Oacute', 245, -50)
+* ('Oacute', 177, -10)
+* ('Oacute', 7, 294)
+* ('Oacute', 288, 944)
+* ('Ocircumflex', 448, 511)
+* ('Ocircumflex', 245, -50)
+* ('Ocircumflex', 177, -10)
+* ('Ocircumflex', 7, 294)
+* ('Ocircumflex', 232, 964)
+* ('Otilde', 448, 511)
+* ('Otilde', 245, -50)
+* ('Otilde', 177, -10)
+* ('Otilde', 7, 294)
+* ('Otilde', 173, 930)
+* ('Otilde', 193, 928)
+* ('Odieresis', 448, 511)
+* ('Odieresis', 245, -50)
+* ('Odieresis', 177, -10)
+* ('Odieresis', 7, 294)
+* ('Odieresis', 352, 922)
+* ('multiply', 294, 521)
+* ('multiply', 365, 249)
+* ('multiply', 9, 494)
+* ('multiply', 67, 540)
+* ('Oslash', 477, 724)
+* ('Oslash', 19, 343)
+* ('Oslash', 195, 762)
+* ('Ugrave', 473, 406)
+* ('Ugrave', 301, -18)
+* ('Ugrave', 23, 549)
+* ('Ugrave', 194, 943)
+* ('Uacute', 473, 406)
+* ('Uacute', 301, -18)
+* ('Uacute', 23, 549)
+* ('Uacute', 319, 934)
+* ('Ucircumflex', 473, 406)
+* ('Ucircumflex', 301, -18)
+* ('Ucircumflex', 23, 549)
+* ('Ucircumflex', 252, 953)
+* ('Udieresis', 473, 406)
+* ('Udieresis', 301, -18)
+* ('Udieresis', 23, 549)
+* ('Udieresis', 373, 932)
+* ('Yacute', 442, 704)
+* ('Yacute', 278, 913)
+* ('Thorn', 105, -25)
+* ('Thorn', 14, 723)
+* ('Thorn', 34, 744)
+* ('Thorn', 154, 760)
+* ('Thorn', 452, 402)
+* ('germandbls', 827, 470)
+* ('germandbls', 159, -23)
+* ('germandbls', 5, 492)
+* ('germandbls', 174, 757)
+* ('agrave', 87, -15)
+* ('agrave', 11, 179)
+* ('agrave', 175, 953)
+* ('aacute', 87, -15)
+* ('aacute', 11, 179)
+* ('aacute', 309, 954)
+* ('acircumflex', 87, -15)
+* ('acircumflex', 11, 179)
+* ('acircumflex', 232, 943)
+* ('atilde', 87, -15)
+* ('atilde', 11, 179)
+* ('atilde', 173, 920)
+* ('atilde', 193, 918)
+* ('adieresis', 87, -15)
+* ('adieresis', 11, 179)
+* ('adieresis', 352, 922)
+* ('aring', 217, 878)
+* ('aring', 251, 880)
+* ('aring', 87, -15)
+* ('aring', 11, 179)
+* ('ae', 644, 135)
+* ('ae', 12, -40)
+* ('ae', -43, 41)
+* ('ae', 197, 752)
+* ('ccedilla', 9, 324)
+* ('ccedilla', 197, 738)
+* ('ccedilla', 427, 579)
+* ('ccedilla', 430, 439)
+* ('ccedilla', 247, -223)
+* ('egrave', 397, 704)
+* ('egrave', 235, -37)
+* ('egrave', 165, 943)
+* ('eacute', 397, 704)
+* ('eacute', 235, -37)
+* ('eacute', 278, 934)
+* ('ecircumflex', 397, 704)
+* ('ecircumflex', 235, -37)
+* ('ecircumflex', 213, 943)
+* ('edieresis', 397, 704)
+* ('edieresis', 235, -37)
+* ('edieresis', 333, 922)
+* ('igrave', 99, -35)
+* ('igrave', 314, 562)
+* ('igrave', 113, 974)
+* ('iacute', 99, -35)
+* ('iacute', 314, 562)
+* ('iacute', 228, 954)
+* ('icircumflex', 99, -35)
+* ('icircumflex', 314, 562)
+* ('icircumflex', 161, 953)
+* ('idieresis', 99, -35)
+* ('idieresis', 282, 942)
+* ('idieresis', 325, 851)
+* ('eth', 80, 756)
+* ('eth', 441, 405)
+* ('eth', 434, 350)
+* ('ntilde', 495, 722)
+* ('ntilde', 165, -11)
+* ('ntilde', 28, 694)
+* ('ntilde', 193, 920)
+* ('ntilde', 213, 918)
+* ('ograve', 19, 343)
+* ('ograve', 194, 953)
+* ('oacute', 19, 343)
+* ('oacute', 298, 954)
+* ('ocircumflex', 19, 343)
+* ('ocircumflex', 232, 943)
+* ('otilde', 19, 343)
+* ('otilde', 183, 920)
+* ('otilde', 203, 918)
+* ('odieresis', 19, 343)
+* ('odieresis', 352, 922)
+* ('divide', 225, 573)
+* ('divide', 410, 379)
+* ('divide', 205, 125)
+* ('oslash', 477, 724)
+* ('oslash', 19, 343)
+* ('oslash', 195, 762)
+* ('ugrave', 207, -30)
+* ('ugrave', 25, 323)
+* ('ugrave', 24, 550)
+* ('ugrave', 184, 953)
+* ('uacute', 207, -30)
+* ('uacute', 25, 323)
+* ('uacute', 24, 550)
+* ('uacute', 329, 944)
+* ('ucircumflex', 207, -30)
+* ('ucircumflex', 25, 323)
+* ('ucircumflex', 24, 550)
+* ('ucircumflex', 242, 953)
+* ('udieresis', 207, -30)
+* ('udieresis', 25, 323)
+* ('udieresis', 24, 550)
+* ('udieresis', 352, 922)
+* ('yacute', 224, -15)
+* ('yacute', -36, 704)
+* ('yacute', 278, 913)
+* ('thorn', 105, -25)
+* ('thorn', 14, 723)
+* ('thorn', 34, 744)
+* ('thorn', 154, 760)
+* ('thorn', 452, 402)
+* ('ydieresis', 224, -15)
+* ('ydieresis', -36, 704)
+* ('ydieresis', 333, 922)
+* ('dotlessi', 99, -35)
+* ('dotlessi', 208, 765)
+* ('dotlessi', 314, 562)
+* ('Lslash', 392, 101)
+* ('Lslash', 255, -12)
+* ('Lslash', 95, -20)
+* ('Lslash', -33, 310)
+* ('lslash', -45, 310)
+* ('lslash', 99, 760)
+* ('lslash', 193, 760)
+* ('OE', 658, 688)
+* ('OE', 9, 356)
+* ('OE', 390, 747)
+* ('OE', 609, 745)
+* ('oe', 658, 688)
+* ('oe', 9, 356)
+* ('oe', 390, 747)
+* ('oe', 609, 745)
+* ('Scaron', 418, 470)
+* ('Scaron', 5, 472)
+* ('Scaron', 110, 939)
+* ('Scaron', 300, 938)
+* ('scaron', 398, 577)
+* ('scaron', 159, -23)
+* ('scaron', 5, 492)
+* ('scaron', 110, 939)
+* ('scaron', 300, 938)
+* ('Ydieresis', 442, 704)
+* ('Ydieresis', 323, 922)
+* ('Zcaron', 263, -13)
+* ('Zcaron', -1, 528)
+* ('Zcaron', 392, 721)
+* ('Zcaron', 99, 939)
+* ('Zcaron', 289, 938)
+* ('zcaron', 382, 632)
+* ('zcaron', 382, 506)
+* ('zcaron', 92, -22)
+* ('zcaron', 99, 939)
+* ('zcaron', 289, 938)
+* ('circumflex', 96, 678)
+* ('circumflex', 232, 769)
+* ('circumflex', 369, 681)
+* ('circumflex', 147, 625)
+* ('caron', 89, 723)
+* ('caron', 129, 765)
+* ('caron', 319, 764)
+* ('caron', 368, 716)
+* ('breve', 89, 738)
+* ('breve', 116, 765)
+* ('breve', 154, 761)
+* ('breve', 318, 763)
+* ('dotaccent', 204, 638)
+* ('dotaccent', 170, 701)
+* ('dotaccent', 251, 768)
+* ('ring', 257, 778)
+* ('ring', 217, 613)
+* ('ring', 149, 703)
+* ('ogonek', 364, -74)
+* ('ogonek', 105, -41)
+* ('ogonek', 168, 22)
+* ('tilde', 385, 717)
+* ('tilde', 81, 697)
+* ('tilde', 173, 756)
+* ('tilde', 193, 754)
+* ('hungarumlaut', 110, 623)
+* ('hungarumlaut', 65, 650)
+* ('hungarumlaut', 198, 770)
+* ('hungarumlaut', 274, 623)
+* ('hungarumlaut', 360, 770)
+* ('hungarumlaut', 398, 725)
+* ('endash', -5, 328)
+* ('endash', 32, 400)
+* ('endash', 357, 398)
+* ('endash', 397, 328)
+* ('endash', 26, 300)
+* ('emdash', 5, 405)
+* ('emdash', 585, 335)
+* ('emdash', 425, 295)
+* ('emdash', 54, 295)
+* ('quoteleft', 86, 767)
+* ('quoteleft', 133, 624)
+* ('quoteleft', 80, 556)
+* ('quoteleft', 50, 556)
+* ('quoteright', 128, 649)
+* ('quoteright', 65, 552)
+* ('quoteright', 9, 683)
+* ('quoteright', 60, 752)
+* ('quoteright', 92, 750)
+* ('quotesinglbase', 59, -80)
+* ('quotesinglbase', 52, 119)
+* ('quotedblleft', 86, 767)
+* ('quotedblleft', 215, 753)
+* ('quotedblleft', 221, 553)
+* ('quotedblright', 259, 649)
+* ('quotedblright', 196, 552)
+* ('quotedblright', 52, 754)
+* ('quotedblbase', 259, 14)
+* ('quotedblbase', 197, -83)
+* ('quotedblbase', 52, 119)
+* ('bullet', 61, 238)
+* ('bullet', 13, 385)
+* ('bullet', 140, 467)
+* ('bullet', 169, 364)
+* ('bullet', 169, 297)
+* ('ellipsis', 4, 25)
+* ('ellipsis', 81, 91)
+* ('ellipsis', 71, -30)
+* ('ellipsis', 287, 90)
+* ('ellipsis', 276, -30)
+* ('ellipsis', 490, 91)
+* ('ellipsis', 577, 29)
+* ('ellipsis', 476, -30)
+* ('perthousand', 90, -26)
+* ('perthousand', 429, 759)
+* ('guilsinglleft', 205, 434)
+* ('guilsinglleft', 181, -15)
+* ('guilsinglleft', 4, 193)
+* ('guilsinglright', 26, 434)
+* ('guilsinglright', 226, 193)
+* ('guilsinglright', 50, -15)
+* ('fraction', 54, -16)
+* ('fraction', 13, 16)
+* ('fraction', 447, 751)
+* ('fraction', 484, 704)
+* ('Euro', 366, 598)
+* ('Euro', 282, 47)
+* ('Euro', -6, 372)
+* ('trademark', 242, 689)
+* ('trademark', 468, 617)
+* ('trademark', -5, 656)
+* ('minus', -5, 328)
+* ('minus', 32, 400)
+* ('minus', 357, 398)
+* ('minus', 397, 328)
+* ('minus', 26, 300)
+* ('fi', 25, 379)
+* ('fi', 23, 639)
+* ('fi', 128, 778)
+* ('fi', 503, -35)
+* ('fi', 612, 765)
+* ('fi', 719, 562)
+* ('fl', 25, 379)
+* ('fl', 23, 639) and ('fl', 128, 778)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

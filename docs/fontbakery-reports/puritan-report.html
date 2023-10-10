@@ -1,0 +1,3573 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>75</td>
+                <td>56</td>
+                <td>252</td>
+                <td>25</td>
+                <td>505</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>10%</td>
+                <td>8%</td>
+                <td>34%</td>
+                <td>3%</td>
+                <td>69%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'Alts' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'Alts' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'Alts' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'Alts' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00D7 (MULTIPLICATION SIGN)
+
+
+- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x20AC (EURO SIGN)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00D7 (MULTIPLICATION SIGN)
+
+
+- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x20AC (EURO SIGN)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00D7 (MULTIPLICATION SIGN)
+
+
+- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x20AC (EURO SIGN)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00D7 (MULTIPLICATION SIGN)
+
+
+- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x20AC (EURO SIGN)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+000C : not included in any glyphset definition</li>
+<li>U+0141 LATIN CAPITAL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0142 LATIN SMALL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding greek</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding greek</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2010 HYPHEN: try adding one of: syloti-nagri, arabic, cham, kaithi, sundanese, coptic, lisu, kharoshthi, kayah-li</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F000 : not included in any glyphset definition</li>
+<li>U+F001 : not included in any glyphset definition</li>
+<li>U+F002 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+000C : not included in any glyphset definition</li>
+<li>U+0141 LATIN CAPITAL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0142 LATIN SMALL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding greek</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding greek</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2010 HYPHEN: try adding one of: syloti-nagri, arabic, cham, kaithi, sundanese, coptic, lisu, kharoshthi, kayah-li</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F000 : not included in any glyphset definition</li>
+<li>U+F001 : not included in any glyphset definition</li>
+<li>U+F002 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+000C : not included in any glyphset definition</li>
+<li>U+0141 LATIN CAPITAL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0142 LATIN SMALL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding greek</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding greek</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2010 HYPHEN: try adding one of: syloti-nagri, arabic, cham, kaithi, sundanese, coptic, lisu, kharoshthi, kayah-li</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F000 : not included in any glyphset definition</li>
+<li>U+F001 : not included in any glyphset definition</li>
+<li>U+F002 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+000C : not included in any glyphset definition</li>
+<li>U+0141 LATIN CAPITAL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0142 LATIN SMALL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding greek</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding greek</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2010 HYPHEN: try adding one of: syloti-nagri, arabic, cham, kaithi, sundanese, coptic, lisu, kharoshthi, kayah-li</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F000 : not included in any glyphset definition</li>
+<li>U+F001 : not included in any glyphset definition</li>
+<li>U+F002 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 1999-2010 ben weiner (ben@readingtype.org.uk),&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 1999-2010 ben weiner (ben@readingtype.org.uk),&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 1999-2010 ben weiner (ben@readingtype.org.uk),&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 1999-2010 ben weiner (ben@readingtype.org.uk),&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 1999-2010 Ben Weiner (ben@readingtype.org.uk),
+with Reserved Font Name Puritan</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<h3>Version format is correct in 'name' table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/version_format&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.1&quot; [code: bad-version-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.1&quot; [code: bad-version-strings]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.0a&quot; [code: bad-version-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.0a&quot; [code: bad-version-strings]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.0a&quot; [code: bad-version-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.0a&quot; [code: bad-version-strings]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.1&quot; [code: bad-version-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;2.1&quot; [code: bad-version-strings]</p>
+</span></li></ul></div></details>
+<h3>Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
+If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
+GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
+If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
+GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
+If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
+GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
+If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
+GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb subsets should be alphabetically ordered.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin'] and expected ['latin', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin'] and expected ['latin', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin'] and expected ['latin', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin'] and expected ['latin', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 1999-2010 ben weiner (ben@readingtype.org.uk). licensed under the open font license v1.1 (http://scripts.sil.org/ofl)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 1999-2010 ben weiner (ben@readingtype.org.uk). licensed under the open font license v1.1 (http://scripts.sil.org/ofl)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 1999-2010 ben weiner (ben@readingtype.org.uk). licensed under the open font license v1.1 (http://scripts.sil.org/ofl)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 1999-2010 ben weiner (ben@readingtype.org.uk). licensed under the open font license v1.1 (http://scripts.sil.org/ofl)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: http://scripts.sil.org/OFL, http://scripts.sil.org/OFL, http://scripts.sil.org/OFL and http://scripts.sil.org/OFL
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: http://scripts.sil.org/OFL, http://scripts.sil.org/OFL, http://scripts.sil.org/OFL and http://scripts.sil.org/OFL
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: http://scripts.sil.org/OFL, http://scripts.sil.org/OFL, http://scripts.sil.org/OFL and http://scripts.sil.org/OFL
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: http://scripts.sil.org/OFL, http://scripts.sil.org/OFL, http://scripts.sil.org/OFL and http://scripts.sil.org/OFL
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Check font names are correct</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
+
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font names are incorrect:</p>
+<p>| nameID | current | expected |
+| :--- | :--- | :--- |
+| Family Name | Puritan | Puritan BoldItalic |
+| Subfamily Name | BoldItalic | Regular |
+| Full Name | Puritan Bold Italic | Puritan BoldItalic Regular |
+| Poscript Name | Puritan-BoldItalic | PuritanBoldItalic-Regular | [code: bad-names]</p>
+</span></li></ul></div></details>
+<h3>Copyright field for this font on METADATA.pb matches all copyright notice entries on the name table ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/copyright&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright 1999-2010 Ben Weiner (ben@readingtype.org.uk). Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot;) differs from a copyright notice entry on the name table: &quot;Copyright 1999-2010 Ben Weiner. Licensed under the Open Font License v1.1 (http://scripts.sil.org/OFL)&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Font enables smart dropout control in "prep" table instructions?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<h3>Name table entries should not contain line-breaks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/line_breaks&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>Check if the vertical metrics of a family are similar to the same family hosted on Google Fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics_regressions&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Puritan Regular: hhea Descender is -256 when it should be -255 [code: bad-hhea-descender]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Puritan Regular: hhea Descender is -256 when it should be -255 [code: bad-hhea-descender]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Puritan Regular: hhea Descender is -256 when it should be -255 [code: bad-hhea-descender]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Puritan Regular: hhea Descender is -256 when it should be -255 [code: bad-hhea-descender]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts do not contain any pre-production tables.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Each font in a family must have the same set of vertical metrics values.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/vertical_metrics&gt;</div>
+
+<details><summary>🔥 <strong>Family check</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>sTypoAscender is not the same across the family:
+Puritan Bold: 897
+Puritan: 881
+Puritan Italic: 881
+Puritan BoldItalic: 897 [code: sTypoAscender-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>usWinAscent is not the same across the family:
+Puritan Bold: 896
+Puritan: 881
+Puritan Italic: 880
+Puritan BoldItalic: 896 [code: usWinAscent-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>usWinDescent is not the same across the family:
+Puritan Bold: 248
+Puritan: 238
+Puritan Italic: 255
+Puritan BoldItalic: 248 [code: usWinDescent-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>ascent is not the same across the family:
+Puritan Bold: 896
+Puritan: 881
+Puritan Italic: 880
+Puritan BoldItalic: 896 [code: ascent-mismatch]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 usWinAscent & usWinDescent.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 255, but got 248 instead [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 896, but got 881 instead [code: ascent]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 255, but got 238 instead [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 896, but got 880 instead [code: ascent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 255, but got 248 instead [code: descent]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 Metrics match hhea Metrics.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoAscender (897) and hhea ascent (896) must be equal. [code: ascender]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoDescender (-255) and hhea descent (-256) must be equal. [code: descender]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoAscender (881) and hhea ascent (880) must be equal. [code: ascender]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoAscender (897) and hhea ascent (896) must be equal. [code: ascender]</p>
+</span></li></ul></div></details>
+<h3>Font has **proper** whitespace glyph names?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphnames&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Glyph 0x00A0 is called &quot;nonbreakingspace&quot;: Change to &quot;uni00A0&quot; [code: not-recommended-00a0]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Glyph 0x00A0 is called &quot;nonbreakingspace&quot;: Change to &quot;uni00A0&quot; [code: not-recommended-00a0]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Glyph 0x00A0 is called &quot;nonbreakingspace&quot;: Change to &quot;uni00A0&quot; [code: not-recommended-00a0]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Glyph 0x00A0 is called &quot;nonbreakingspace&quot;: Change to &quot;uni00A0&quot; [code: not-recommended-00a0]</p>
+</span></li></ul></div></details>
+<h3>Are there unwanted tables?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+
+<details><summary>🔥 Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: fi	Contours detected: 1	Expected: 3
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: fi	Contours detected: 2	Expected: 3
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: fi	Contours detected: 2	Expected: 3
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: currency	Contours detected: 1	Expected: 2
+
+- Glyph name: fi	Contours detected: 1	Expected: 3
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 509 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 374:
+less</p>
+<p>Width = 451:
+equal, notequal</p>
+<p>Width = 373:
+greater</p>
+<p>Width = 627:
+logicalnot</p>
+<p>Width = 513:
+plusminus</p>
+<p>Width = 507:
+divide</p>
+<p>Width = 548:
+approxequal</p>
+<p>Width = 256:
+greaterequal, lessequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 509 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 374:
+less</p>
+<p>Width = 451:
+equal, notequal</p>
+<p>Width = 373:
+greater</p>
+<p>Width = 627:
+logicalnot</p>
+<p>Width = 513:
+plusminus</p>
+<p>Width = 507:
+divide</p>
+<p>Width = 548:
+approxequal</p>
+<p>Width = 256:
+greaterequal, lessequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 509 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 374:
+less</p>
+<p>Width = 451:
+equal, notequal</p>
+<p>Width = 373:
+greater</p>
+<p>Width = 627:
+logicalnot</p>
+<p>Width = 513:
+plusminus</p>
+<p>Width = 507:
+divide</p>
+<p>Width = 548:
+approxequal</p>
+<p>Width = 256:
+greaterequal, lessequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 509 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 374:
+less</p>
+<p>Width = 451:
+equal, notequal</p>
+<p>Width = 373:
+greater</p>
+<p>Width = 627:
+logicalnot</p>
+<p>Width = 513:
+plusminus</p>
+<p>Width = 507:
+divide</p>
+<p>Width = 548:
+approxequal</p>
+<p>Width = 256:
+greaterequal, lessequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.head</h2>
+<span class='section__emoji'>🔥🔥⏩⏩⏩⏩</span>
+<h3>Checking font version fields (head and name table).</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_version&gt;</div>
+
+<details><summary>🔥 Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;2.09999&quot; while name version string (for platform 1, encoding 0) is &quot;2.0a&quot;. [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;2.09999&quot; while name version string (for platform 3, encoding 1) is &quot;2.0a&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;2.09999&quot; while name version string (for platform 1, encoding 0) is &quot;2.0a&quot;. [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;2.09999&quot; while name version string (for platform 3, encoding 1) is &quot;2.0a&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.post</h2>
+<span class='section__emoji'>🔥🔥</span>
+<h3>Checking post.italicAngle value. (derived from com.google.fonts/check/italic_angle)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_angle:googlefonts&gt;</div>
+
+<details><summary>🔥 Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is italic, so post.italicAngle should be non-zero. [code: zero-italic]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font is italic, so post.italicAngle should be non-zero. [code: zero-italic]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.name</h2>
+<span class='section__emoji'>🔥⏩⏩⏩⏩⏩⏩</span>
+<h3>Check name table IDs 1, 2, 16, 17 to conform to Italic style.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/italic_names&gt;</div>
+
+<details><summary>🔥 Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name ID 2 (Subfamily Name) does not conform to specs. Only R/I/B/BI are allowed.
+Got: 'BoldItalic'. [code: bad-subfamilyname]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ Puritan-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('ampersand', 281, -10)
+* ('parenright', 276, 589)
+* ('zero', 372, -13)
+* ('zero', 129, -13)
+* ('three', 363, -20)
+* ('nine', 24, 344)
+* ('D', 547, 174)
+* ('G', 31, 455)
+* ('P', 341, 660)
+* ('S', 445, 305)
+* ('U', 64, 113)
+* ('a', 223, -17)
+* ('a', 192, 525)
+* ('c', 187, 525)
+* ('d', 251, -14)
+* ('braceleft', 377, -204)
+* ('braceright', 179, -205)
+* ('Scaron', 457, 896)
+* ('Scaron', 457, 796)
+* ('Scaron', 170, 895)
+* ('section', 149, 478)
+* ('section', 330, -18)
+* ('section', 116, -90)
+* ('scaron', 409, 169)
+* ('scaron', 409, 80)
+* ('scaron', 415, 742)
+* ('scaron', 415, 642)
+* ('scaron', 128, 741)
+* ('paragraph', 50, 325)
+* ('paragraph', 132, 658)
+* ('questiondown', 296, -106)
+* ('Atilde', 272, 846)
+* ('Ccedilla', 416, 677)
+* ('Eth', 547, 174)
+* ('Ntilde', 293, 815)
+* ('Otilde', 293, 825)
+* ('Ugrave', 69, 111)
+* ('Uacute', 69, 111)
+* ('Ucircumflex', 69, 111)
+* ('Udieresis', 69, 111)
+* ('Thorn', 507, 273)
+* ('germandbls', 164, 733)
+* ('germandbls', 516, 217)
+* ('agrave', 223, -17)
+* ('aacute', 223, -17)
+* ('acircumflex', 223, -17)
+* ('atilde', 217, 702)
+* ('atilde', 223, -17)
+* ('adieresis', 223, -17)
+* ('aring', 223, -17)
+* ('ae', 216, 525)
+* ('ccedilla', 349, -225)
+* ('ccedilla', 187, 525)
+* ('ccedilla', 349, -225)
+* ('edieresis', 328, 717)
+* ('edieresis', 363, 717)
+* ('edieresis', 397, 717)
+* ('edieresis', 113, 717)
+* ('edieresis', 148, 717)
+* ('edieresis', 182, 717)
+* ('edieresis', 461, 72)
+* ('edieresis', 465, 415)
+* ('edieresis', 465, 321)
+* ('edieresis', 465, 244)
+* ('igrave', 271, 641)
+* ('igrave', 51, 732)
+* ('icircumflex', 116, 732)
+* ('icircumflex', 262, 624)
+* ('icircumflex', 262, 535)
+* ('ntilde', 239, 702)
+* ('otilde', 272, 702)
+* ('odieresis', 359, 717)
+* ('odieresis', 394, 717)
+* ('odieresis', 428, 717)
+* ('odieresis', 144, 717)
+* ('odieresis', 179, 717)
+* ('odieresis', 213, 717)
+* ('odieresis', 519, 390)
+* ('odieresis', 519, 258)
+* ('odieresis', 519, 168)
+* ('udieresis', 339, 717)
+* ('udieresis', 374, 717)
+* ('udieresis', 408, 717)
+* ('udieresis', 124, 717)
+* ('udieresis', 159, 717)
+* ('udieresis', 193, 717)
+* ('udieresis', 457, 507)
+* ('udieresis', 457, 0)
+* ('yacute', 346, 750)
+* ('yacute', 117, -201)
+* ('yacute', 88, -201)
+* ('yacute', 475, 487)
+* ('yacute', 173, -201)
+* ('thorn', 506, 123)
+* ('partialdiff', 43, 385)
+* ('integral', 204, -144)
+* ('Omega', 193, 653)
+* ('ellipsis', 670, 146)
+* ('ellipsis', 425, 146)
+* ('ellipsis', 181, 146)
+* ('fl', 90, 736) and ('tilde', 181, 702)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('six', 24, 120)
+* ('nine', 143, 523)
+* ('B', 483, 325)
+* ('B', 366, -1)
+* ('C', 31, 192)
+* ('D', 547, 171)
+* ('G', 31, 456)
+* ('O', 32, 181)
+* ('P', 341, 661)
+* ('Q', 31, 184)
+* ('a', 202, 525)
+* ('c', 164, 520)
+* ('g', 160, 527)
+* ('n', 250, 524)
+* ('p', 213, 525)
+* ('q', 141, 525)
+* ('s', 156, 527)
+* ('u', 297, -19)
+* ('u', 64, 92)
+* ('braceleft', 360, -203)
+* ('braceright', 198, -203)
+* ('Scaron', 461, 288)
+* ('Scaron', 461, 189)
+* ('Scaron', 461, 94)
+* ('Scaron', 457, 881)
+* ('Scaron', 457, 808)
+* ('Scaron', 170, 881)
+* ('section', 144, 478)
+* ('scaron', 416, 727)
+* ('scaron', 416, 654)
+* ('scaron', 129, 727)
+* ('paragraph', 50, 345)
+* ('Atilde', 260, 825)
+* ('Eth', 547, 171)
+* ('Ntilde', 282, 815)
+* ('Otilde', 282, 825)
+* ('Thorn', 507, 301)
+* ('atilde', 206, 702)
+* ('ae', 204, 525)
+* ('ccedilla', 169, 520)
+* ('ntilde', 228, 702)
+* ('otilde', 260, 702)
+* ('ugrave', 302, -19)
+* ('uacute', 302, -19)
+* ('ucircumflex', 302, -19)
+* ('udieresis', 302, -19)
+* ('yacute', 341, 744)
+* ('yacute', 144, -201)
+* ('yacute', 93, -201)
+* ('yacute', 78, -201)
+* ('yacute', 469, 493)
+* ('thorn', 506, 145)
+* ('partialdiff', 43, 364)
+* ('integral', 272, -144)
+* ('quotesinglbase', 29, -37) and ('tilde', 169, 702)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-Italic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 23, 20)
+* ('quotedbl', 323, 697)
+* ('quotedbl', 74, 617)
+* ('quotesingle', 66, 617)
+* ('quotesingle', 170, 699)
+* ('period', 59, 34)
+* ('period', 202, 97)
+* ('two', 474, 560)
+* ('three', 485, 241)
+* ('six', 26, 95)
+* ('eight', 493, 594)
+* ('eight', 506, 303)
+* ('nine', 530, 544)
+* ('colon', 228, 475)
+* ('colon', 44, 34)
+* ('semicolon', 246, 474)
+* ('question', 447, 588)
+* ('B', 332, -1)
+* ('O', 30, 134)
+* ('P', 368, 661)
+* ('Q', 32, 135)
+* ('c', 210, 520)
+* ('e', 25, 319)
+* ('i', 209, 696)
+* ('j', 236, 697)
+* ('m', 747, 421)
+* ('o', 522, 411)
+* ('p', 252, 525)
+* ('q', 181, 525)
+* ('s', 189, 527)
+* ('s', 407, 245)
+* ('u', 269, -19)
+* ('braceleft', 302, -203)
+* ('braceright', 141, -203)
+* ('exclamdown', 216, 689)
+* ('Scaron', 484, 881)
+* ('Scaron', 197, 881)
+* ('section', 178, 479)
+* ('section', 339, 288)
+* ('scaron', 426, 727)
+* ('scaron', 139, 727)
+* ('degree', 281, 652)
+* ('degree', -1, 541)
+* ('paragraph', 50, 345)
+* ('paragraph', 128, 658)
+* ('periodcentered', 59, 389)
+* ('periodcentered', 203, 457)
+* ('questiondown', 4, 4)
+* ('Atilde', 308, 825)
+* ('Edieresis', 465, 785)
+* ('Idieresis', 314, 785)
+* ('Idieresis', -6, 745)
+* ('Ntilde', 328, 815)
+* ('Ograve', 24, 134)
+* ('Oacute', 24, 134)
+* ('Ocircumflex', 24, 134)
+* ('Otilde', 26, 134)
+* ('Otilde', 329, 825)
+* ('Odieresis', 26, 134)
+* ('germandbls', 498, 204)
+* ('atilde', 302, 702)
+* ('adieresis', 497, 632)
+* ('ae', 238, 525)
+* ('ccedilla', 36, 321)
+* ('ccedilla', 182, 520)
+* ('egrave', 25, 319)
+* ('eacute', 25, 319)
+* ('ecircumflex', 25, 319)
+* ('edieresis', 518, 632)
+* ('edieresis', 25, 319)
+* ('idieresis', 303, 632)
+* ('idieresis', -17, 592)
+* ('ntilde', 268, 702)
+* ('otilde', 519, 411)
+* ('otilde', 300, 702)
+* ('odieresis', 521, 411)
+* ('ugrave', 262, -19)
+* ('uacute', 262, -19)
+* ('ucircumflex', 262, -19)
+* ('udieresis', 265, -19)
+* ('yacute', 389, 744)
+* ('yacute', 112, -201)
+* ('yacute', 55, -201)
+* ('yacute', 40, -201)
+* ('yacute', 505, 493)
+* ('bullet', 44, 253)
+* ('bullet', 242, 342)
+* ('dieresis', 314, 632)
+* ('dieresis', -7, 592)
+* ('infinity', 3, 351)
+* ('infinity', 545, 464)
+* ('integral', 227, -144)
+* ('integral', 184, 731)
+* ('ellipsis', 588, 88)
+* ('ellipsis', 58, 22)
+* ('fl', 208, 736)
+* ('quotesinglbase', 27, -37)
+* ('quotesinglbase', 176, 62)
+* ('perthousand', 848, 171)
+* ('tilde', 180, 702)
+* ('dotaccent', 75, 570)
+* ('dotaccent', 187, 610)
+* ('ring', 79, 640)
+* ('ring', 273, 717) and ('cedilla', 202, -100)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Puritan-BoldItalic.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 4, 12)
+* ('period', 219, 116)
+* ('period', 33, 42)
+* ('zero', 337, -13)
+* ('zero', 93, -13)
+* ('three', 478, 579)
+* ('three', 325, -20)
+* ('colon', 238, 467)
+* ('colon', 14, 42)
+* ('semicolon', 241, 516)
+* ('B', 475, 259)
+* ('O', 30, 136)
+* ('P', 370, 660)
+* ('a', 194, -17)
+* ('a', 221, 525)
+* ('b', 486, 411)
+* ('c', 215, 525)
+* ('d', 213, -14)
+* ('d', 25, 116)
+* ('g', 9, -179)
+* ('i', 229, 706)
+* ('j', 246, 707)
+* ('m', 747, 418)
+* ('o', 522, 410)
+* ('braceleft', 321, -204)
+* ('braceright', 123, -205)
+* ('exclamdown', 236, 698)
+* ('cent', 35, 138)
+* ('Scaron', 485, 896)
+* ('Scaron', 198, 895)
+* ('section', 178, 478)
+* ('section', 86, -90)
+* ('scaron', 426, 742)
+* ('scaron', 139, 741)
+* ('degree', -11, 537)
+* ('degree', 291, 655)
+* ('paragraph', 50, 325)
+* ('paragraph', 132, 658)
+* ('periodcentered', 223, 465)
+* ('periodcentered', 38, 382)
+* ('questiondown', 253, -106)
+* ('questiondown', 5, 11)
+* ('Atilde', 318, 846)
+* ('Ccedilla', 463, 677)
+* ('Edieresis', 485, 802)
+* ('Idieresis', 333, 792)
+* ('Idieresis', -29, 737)
+* ('Ntilde', 337, 815)
+* ('Oacute', 25, 136)
+* ('Ocircumflex', 23, 136)
+* ('Otilde', 26, 136)
+* ('Otilde', 338, 825)
+* ('germandbls', 205, 733)
+* ('germandbls', 499, 217)
+* ('agrave', 194, -17)
+* ('aacute', 194, -17)
+* ('acircumflex', 194, -17)
+* ('atilde', 255, 702)
+* ('atilde', 194, -17)
+* ('adieresis', 194, -17)
+* ('aring', 194, -17)
+* ('ae', 244, 525)
+* ('ccedilla', 226, 525)
+* ('edieresis', 336, 717)
+* ('edieresis', 371, 717)
+* ('edieresis', 405, 717)
+* ('edieresis', 122, 717)
+* ('edieresis', 190, 717)
+* ('edieresis', 473, 430)
+* ('edieresis', 473, 349)
+* ('edieresis', 473, 335)
+* ('edieresis', 472, 321)
+* ('edieresis', 464, 244)
+* ('igrave', 270, 641)
+* ('igrave', 59, 732)
+* ('icircumflex', 126, 732)
+* ('icircumflex', 261, 624)
+* ('idieresis', 305, 669)
+* ('idieresis', -59, 614)
+* ('ntilde', 277, 702)
+* ('ograve', 522, 410)
+* ('oacute', 522, 410)
+* ('ocircumflex', 522, 410)
+* ('otilde', 310, 702)
+* ('otilde', 522, 410)
+* ('odieresis', 367, 717)
+* ('odieresis', 402, 717)
+* ('odieresis', 436, 717)
+* ('odieresis', 153, 717)
+* ('odieresis', 221, 717)
+* ('odieresis', 522, 410)
+* ('odieresis', 521, 298)
+* ('odieresis', 521, 279)
+* ('odieresis', 519, 258)
+* ('odieresis', 510, 168)
+* ('udieresis', 347, 717)
+* ('udieresis', 382, 717)
+* ('udieresis', 416, 717)
+* ('udieresis', 133, 717)
+* ('udieresis', 201, 717)
+* ('udieresis', 484, 507)
+* ('yacute', 405, 749)
+* ('yacute', 79, -201)
+* ('yacute', 50, -201)
+* ('yacute', 510, 487)
+* ('yacute', 136, -201)
+* ('bullet', 44, 253)
+* ('bullet', 242, 342)
+* ('dieresis', 336, 669)
+* ('dieresis', -29, 614)
+* ('infinity', 3, 350)
+* ('infinity', 545, 464)
+* ('partialdiff', 484, -18)
+* ('integral', 158, -144)
+* ('ellipsis', 680, 146)
+* ('ellipsis', 799, 97)
+* ('ellipsis', 436, 146)
+* ('ellipsis', 191, 146)
+* ('ellipsis', 124, 12)
+* ('fl', 130, 736)
+* ('perthousand', 850, 184)
+* ('tilde', 188, 702)
+* ('dotaccent', 209, 618)
+* ('dotaccent', 53, 561)
+* ('ring', 79, 640)
+* ('ring', 273, 717) and ('cedilla', 203, -97)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>
