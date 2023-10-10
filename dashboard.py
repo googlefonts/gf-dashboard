@@ -207,8 +207,8 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     if len(gf.codepoints) > 1000:
         gf.codepoints = "%s codepoints" % len(gf.encoded_codepoints)
     # Prime the pump
-    _ = gf.recent_commits
-    _ = gf.recent_pulls
+    # _ = gf.recent_commits
+    # _ = gf.recent_pulls
 
     # Downstream versions if noto
     # Version history
