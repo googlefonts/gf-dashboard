@@ -30,7 +30,7 @@ if os.path.exists("versionhistory.json"):
 else:
     versionhistory = {}
 
-reports_this_session = 10
+reports_this_session = 100
 
 
 def fontbakery_needs_update(directory, last_update: datetime.datetime):
