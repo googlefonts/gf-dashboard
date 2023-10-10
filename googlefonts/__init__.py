@@ -3,6 +3,7 @@ import re
 from functools import cached_property
 from pathlib import Path
 
+import certifi
 import yaml
 from fontTools.misc.timeTools import epoch_diff
 from fontTools.ttLib import TTFont
@@ -32,7 +33,7 @@ LANGUAGE_COMMENTS = LanguageComments(LoadLanguages())
 A_YEAR_AGO = datetime.now(timezone.utc) - timedelta(days=365)
 GF_REPO = GITHUB.get_repo("google/fonts")
 
-GRAPHQL_CLIENT = GitHubAPI(bearer_token= os.environ["GITHUB_TOKEN"])
+GRAPHQL_CLIENT = GitHubAPI(bearer_token= os.environ["GITHUB_TOKEN"], cabundle=certifi.where())
 
 
 RECENT_COMMITS_QUERY = """
