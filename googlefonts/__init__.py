@@ -188,7 +188,6 @@ class GoogleFont:
             result = GRAPHQL_CLIENT.graphql(RECENT_COMMITS_QUERY,
                 {"path": self.directory}
             )
-            import IPython;IPython.embed()
             result = result["data"]["repository"]["ref"]["target"]["history"]["edges"]
             result = [x["node"] for x in result]
             newresult = []
@@ -222,7 +221,6 @@ class GoogleFont:
   }
 }
 """  % self.directory, {})
-            import IPython;IPython.embed()
             result = result["data"]["search"]["edges"]
             result = [x["node"] for x in result]
             for x in result:
