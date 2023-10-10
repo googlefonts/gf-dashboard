@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#{{font.html_id}}_versionscard">
+                <span class="material-symbols-outlined"></span>
+                Version history
+            </button>
+        </h5>
+    </div>
+    <div id="{{font.html_id}}_versionscard" class="collapse">
+        <div class="card-body">
+            <ul>
+                {% for move in font.version_history %}
+                <li>
+                    Version <b>{{move.version}}</b> moved to <b>{{move.server}}</b> on <b>{{move.date.strftime("%Y-%m-%d")}}</b>
+                    ({{move.date | ago}} ago)
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

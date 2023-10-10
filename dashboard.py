@@ -25,6 +25,11 @@ repo_url = (
     os.environ.get("GITHUB_SERVER_URL", "https://github.com/") + "/" + github_repo
 )
 
+if os.path.exists("versionhistory.json"):
+    versionhistory = json.load(open("versionhistory.json"))
+else:
+    versionhistory = {}
+
 reports_this_session = 10
 
 
@@ -110,6 +115,17 @@ def tidy_version(version):
     version = version.split(";")[0].strip()
     return version
 
+def rearrange_history(history):
+    new_history = []
+    for server, moves in history.items():
+        # Ignore the first move
+        for move in moves[1:]:
+            new_history.append({
+                "date": datetime.datetime.fromisoformat(move["date"]),
+                "version": move["version"],
+                "server": server,
+            })
+    return sorted(new_history, key=lambda x: x["date"], reverse=True)
 
 for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     if "noto" in directory:
@@ -125,6 +141,26 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
         run_fontbakery(directory)
 
     gf.html_id = gf.directory.replace("/", "_")
+
+    if gf.metadata.name not in versionhistory:
+        versionhistory[gf.metadata.name] = {}
+
+    for s in servers:
+        if gf.metadata.name not in s.families:
+            continue
+        if s.name not in versionhistory[gf.metadata.name]:
+            versionhistory[gf.metadata.name][s.name] = []
+        current_version = s.families[gf.metadata.name].version
+        versions = [x["version"] for x in versionhistory[gf.metadata.name][s.name]]
+        if current_version not in versions:
+            versionhistory[gf.metadata.name][s.name].append({
+                "version": current_version,
+                "date": datetime.datetime.now().isoformat(),
+            })
+    json.dump(versionhistory, open("versionhistory.json", "w"), indent=2)
+
+    gf.version_history = rearrange_history(versionhistory[gf.metadata.name])
+
     gf.server_versions = {
         s.name: s.families[gf.metadata.name].version
         for s in servers

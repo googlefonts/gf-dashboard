@@ -8,6 +8,9 @@
         </span>
     </h2>
     {% include 'fontinfo.html' %}
+    {% if font.version_history | length > 0 %}
+    {% include 'versionhistory.html' %}
+    {% endif %}
     {% if font.github_owner_repo %}
     {% include 'upstream.html' %}
     {% endif %}
