@@ -9,7 +9,7 @@ from fontTools.ttLib import TTFont
 from gflanguages import LoadLanguages
 from gftools.util.google_fonts import (GetExemplarFont, LanguageComments,
                                        Metadata, WriteProto)
-from gftools.gfgithub import GitHubClient
+from github3api import GitHubAPI
 from github import Auth, Github
 
 
@@ -32,8 +32,7 @@ LANGUAGE_COMMENTS = LanguageComments(LoadLanguages())
 A_YEAR_AGO = datetime.now(timezone.utc) - timedelta(days=365)
 GF_REPO = GITHUB.get_repo("google/fonts")
 
-os.environ['GH_TOKEN'] = os.environ["GITHUB_TOKEN"]
-GRAPHQL_CLIENT = GitHubClient("google", "fonts")
+GRAPHQL_CLIENT = GitHubAPI(bearer_token= os.environ["GITHUB_TOKEN"])
 
 
 RECENT_COMMITS_QUERY = """
@@ -186,9 +185,10 @@ class GoogleFont:
     @cached_property
     def recent_commits(self):
         try:
-            result = GRAPHQL_CLIENT._run_graphql(RECENT_COMMITS_QUERY,
-                '{"path": "%s"}' % self.directory
+            result = GRAPHQL_CLIENT.graphql(RECENT_COMMITS_QUERY,
+                {"path": self.directory}
             )
+            import IPython;IPython.embed()
             result = result["data"]["repository"]["ref"]["target"]["history"]["edges"]
             result = [x["node"] for x in result]
             newresult = []
@@ -205,7 +205,7 @@ class GoogleFont:
     @cached_property
     def recent_pulls(self):
         try:
-            result = GRAPHQL_CLIENT._run_graphql("""
+            result = GRAPHQL_CLIENT.graphql("""
 {
   search(query: "is:pr repo:google/fonts %s/", type: ISSUE, first: 100) {
     edges {
@@ -222,6 +222,7 @@ class GoogleFont:
   }
 }
 """  % self.directory, {})
+            import IPython;IPython.embed()
             result = result["data"]["search"]["edges"]
             result = [x["node"] for x in result]
             for x in result:
