@@ -1,0 +1,6190 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>4</td>
+                <td>14</td>
+                <td>40</td>
+                <td>9</td>
+                <td>173</td>
+            </tr>
+            <tr>
+                <td>1%</td>
+                <td>2%</td>
+                <td>8%</td>
+                <td>23%</td>
+                <td>5%</td>
+                <td>98%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+0262 LATIN LETTER SMALL CAPITAL G: not included in any glyphset definition</li>
+<li>U+026A LATIN LETTER SMALL CAPITAL I: not included in any glyphset definition</li>
+<li>U+0274 LATIN LETTER SMALL CAPITAL N: not included in any glyphset definition</li>
+<li>U+0276 LATIN LETTER SMALL CAPITAL OE: not included in any glyphset definition</li>
+<li>U+0280 LATIN LETTER SMALL CAPITAL R: not included in any glyphset definition</li>
+<li>U+028F LATIN LETTER SMALL CAPITAL Y: not included in any glyphset definition</li>
+<li>U+0299 LATIN LETTER SMALL CAPITAL B: not included in any glyphset definition</li>
+<li>U+029C LATIN LETTER SMALL CAPITAL H: not included in any glyphset definition</li>
+<li>U+029F LATIN LETTER SMALL CAPITAL L: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: cherokee, tai-le, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: cherokee, tai-le, tifinagh, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, tifinagh, coptic</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: cherokee, tifinagh, gothic, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, tifinagh, malayalam, coptic, tai-le</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: coptic, gothic, tai-le</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0323 COMBINING DOT BELOW: try adding one of: malayalam, cherokee, tifinagh, coptic</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: not included in any glyphset definition</li>
+<li>U+0330 COMBINING TILDE BELOW: try adding cherokee</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+05BE HEBREW PUNCTUATION MAQAF: try adding hebrew</li>
+<li>U+05C0 HEBREW PUNCTUATION PASEQ: try adding hebrew</li>
+<li>U+05C3 HEBREW PUNCTUATION SOF PASUQ: try adding hebrew</li>
+<li>U+05F3 HEBREW PUNCTUATION GERESH: try adding hebrew</li>
+<li>U+05F4 HEBREW PUNCTUATION GERSHAYIM: try adding hebrew</li>
+<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
+<li>U+1D00 LATIN LETTER SMALL CAPITAL A: not included in any glyphset definition</li>
+<li>U+1D01 LATIN LETTER SMALL CAPITAL AE: not included in any glyphset definition</li>
+<li>U+1D04 LATIN LETTER SMALL CAPITAL C: not included in any glyphset definition</li>
+<li>U+1D05 LATIN LETTER SMALL CAPITAL D: not included in any glyphset definition</li>
+<li>U+1D06 LATIN LETTER SMALL CAPITAL ETH: not included in any glyphset definition</li>
+<li>U+1D07 LATIN LETTER SMALL CAPITAL E: not included in any glyphset definition</li>
+<li>U+1D0A LATIN LETTER SMALL CAPITAL J: not included in any glyphset definition</li>
+<li>U+1D0B LATIN LETTER SMALL CAPITAL K: not included in any glyphset definition</li>
+<li>U+1D0C LATIN LETTER SMALL CAPITAL L WITH STROKE: not included in any glyphset definition</li>
+<li>U+1D0D LATIN LETTER SMALL CAPITAL M: not included in any glyphset definition</li>
+<li>U+1D0F LATIN LETTER SMALL CAPITAL O: not included in any glyphset definition</li>
+<li>U+1D18 LATIN LETTER SMALL CAPITAL P: not included in any glyphset definition</li>
+<li>U+1D1B LATIN LETTER SMALL CAPITAL T: not included in any glyphset definition</li>
+<li>U+1D1C LATIN LETTER SMALL CAPITAL U: not included in any glyphset definition</li>
+<li>U+1D20 LATIN LETTER SMALL CAPITAL V: not included in any glyphset definition</li>
+<li>U+1D21 LATIN LETTER SMALL CAPITAL W: not included in any glyphset definition</li>
+<li>U+1D22 LATIN LETTER SMALL CAPITAL Z: not included in any glyphset definition</li>
+<li>U+1EA0 LATIN CAPITAL LETTER A WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EA1 LATIN SMALL LETTER A WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EAC LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EAD LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EB6 LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EB7 LATIN SMALL LETTER A WITH BREVE AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EB8 LATIN CAPITAL LETTER E WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EB9 LATIN SMALL LETTER E WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EBC LATIN CAPITAL LETTER E WITH TILDE: try adding vietnamese</li>
+<li>U+1EBD LATIN SMALL LETTER E WITH TILDE: try adding vietnamese</li>
+<li>U+1EC6 LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EC7 LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1ECB LATIN SMALL LETTER I WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ECC LATIN CAPITAL LETTER O WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ECD LATIN SMALL LETTER O WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ED8 LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1ED9 LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EE4 LATIN CAPITAL LETTER U WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EE5 LATIN SMALL LETTER U WITH DOT BELOW: try adding vietnamese</li>
+<li>U+2003 EM SPACE: not included in any glyphset definition</li>
+<li>U+2004 THREE-PER-EM SPACE: not included in any glyphset definition</li>
+<li>U+2005 FOUR-PER-EM SPACE: not included in any glyphset definition</li>
+<li>U+2006 SIX-PER-EM SPACE: not included in any glyphset definition</li>
+<li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
+<li>U+2010 HYPHEN: try adding one of: cham, arabic, coptic, syloti-nagri, lisu, sundanese, kaithi, kharoshthi, kayah-li</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, syloti-nagri</li>
+<li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
+<li>U+2015 HORIZONTAL BAR: not included in any glyphset definition</li>
+<li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+2017 DOUBLE LOW LINE: not included in any glyphset definition</li>
+<li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2023 TRIANGULAR BULLET: not included in any glyphset definition</li>
+<li>U+2024 ONE DOT LEADER: try adding armenian</li>
+<li>U+2025 TWO DOT LEADER: try adding phags-pa</li>
+<li>U+2027 HYPHENATION POINT: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2031 PER TEN THOUSAND SIGN: not included in any glyphset definition</li>
+<li>U+2034 TRIPLE PRIME: not included in any glyphset definition</li>
+<li>U+2035 REVERSED PRIME: not included in any glyphset definition</li>
+<li>U+2036 REVERSED DOUBLE PRIME: not included in any glyphset definition</li>
+<li>U+2037 REVERSED TRIPLE PRIME: not included in any glyphset definition</li>
+<li>U+203B REFERENCE MARK: not included in any glyphset definition</li>
+<li>U+203C DOUBLE EXCLAMATION MARK: not included in any glyphset definition</li>
+<li>U+203D INTERROBANG: not included in any glyphset definition</li>
+<li>U+203E OVERLINE: not included in any glyphset definition</li>
+<li>U+203F UNDERTIE: not included in any glyphset definition</li>
+<li>U+2040 CHARACTER TIE: not included in any glyphset definition</li>
+<li>U+2043 HYPHEN BULLET: not included in any glyphset definition</li>
+<li>U+2045 LEFT SQUARE BRACKET WITH QUILL: not included in any glyphset definition</li>
+<li>U+2046 RIGHT SQUARE BRACKET WITH QUILL: not included in any glyphset definition</li>
+<li>U+2047 DOUBLE QUESTION MARK: not included in any glyphset definition</li>
+<li>U+2048 QUESTION EXCLAMATION MARK: try adding mongolian</li>
+<li>U+2049 EXCLAMATION QUESTION MARK: try adding mongolian</li>
+<li>U+204A TIRONIAN SIGN ET: not included in any glyphset definition</li>
+<li>U+204B REVERSED PILCROW SIGN: not included in any glyphset definition</li>
+<li>U+204F REVERSED SEMICOLON: try adding arabic</li>
+<li>U+2050 CLOSE UP: not included in any glyphset definition</li>
+<li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
+<li>U+2053 SWUNG DASH: try adding coptic</li>
+<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+207A SUPERSCRIPT PLUS SIGN: not included in any glyphset definition</li>
+<li>U+207B SUPERSCRIPT MINUS: not included in any glyphset definition</li>
+<li>U+207C SUPERSCRIPT EQUALS SIGN: not included in any glyphset definition</li>
+<li>U+207D SUPERSCRIPT LEFT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+207E SUPERSCRIPT RIGHT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+2080 SUBSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
+<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
+<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
+<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
+<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+208A SUBSCRIPT PLUS SIGN: not included in any glyphset definition</li>
+<li>U+208B SUBSCRIPT MINUS: not included in any glyphset definition</li>
+<li>U+208C SUBSCRIPT EQUALS SIGN: not included in any glyphset definition</li>
+<li>U+208D SUBSCRIPT LEFT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+208E SUBSCRIPT RIGHT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+2103 DEGREE CELSIUS: not included in any glyphset definition</li>
+<li>U+2105 CARE OF: not included in any glyphset definition</li>
+<li>U+2109 DEGREE FAHRENHEIT: not included in any glyphset definition</li>
+<li>U+2117 SOUND RECORDING COPYRIGHT: not included in any glyphset definition</li>
+<li>U+211E PRESCRIPTION TAKE: not included in any glyphset definition</li>
+<li>U+2120 SERVICE MARK: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2127 INVERTED OHM SIGN: not included in any glyphset definition</li>
+<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
+<li>U+213A ROTATED CAPITAL Q: not included in any glyphset definition</li>
+<li>U+2141 TURNED SANS-SERIF CAPITAL G: not included in any glyphset definition</li>
+<li>U+2142 TURNED SANS-SERIF CAPITAL L: not included in any glyphset definition</li>
+<li>U+2143 REVERSED SANS-SERIF CAPITAL L: not included in any glyphset definition</li>
+<li>U+2144 TURNED SANS-SERIF CAPITAL Y: not included in any glyphset definition</li>
+<li>U+214B TURNED AMPERSAND: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+2155 VULGAR FRACTION ONE FIFTH: not included in any glyphset definition</li>
+<li>U+2156 VULGAR FRACTION TWO FIFTHS: not included in any glyphset definition</li>
+<li>U+2157 VULGAR FRACTION THREE FIFTHS: not included in any glyphset definition</li>
+<li>U+2158 VULGAR FRACTION FOUR FIFTHS: not included in any glyphset definition</li>
+<li>U+2159 VULGAR FRACTION ONE SIXTH: not included in any glyphset definition</li>
+<li>U+215A VULGAR FRACTION FIVE SIXTHS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+215F FRACTION NUMERATOR ONE: not included in any glyphset definition</li>
+<li>U+2160 ROMAN NUMERAL ONE: not included in any glyphset definition</li>
+<li>U+2161 ROMAN NUMERAL TWO: not included in any glyphset definition</li>
+<li>U+2162 ROMAN NUMERAL THREE: not included in any glyphset definition</li>
+<li>U+2163 ROMAN NUMERAL FOUR: not included in any glyphset definition</li>
+<li>U+2164 ROMAN NUMERAL FIVE: not included in any glyphset definition</li>
+<li>U+2165 ROMAN NUMERAL SIX: not included in any glyphset definition</li>
+<li>U+2166 ROMAN NUMERAL SEVEN: not included in any glyphset definition</li>
+<li>U+2167 ROMAN NUMERAL EIGHT: not included in any glyphset definition</li>
+<li>U+2168 ROMAN NUMERAL NINE: not included in any glyphset definition</li>
+<li>U+2169 ROMAN NUMERAL TEN: not included in any glyphset definition</li>
+<li>U+216A ROMAN NUMERAL ELEVEN: not included in any glyphset definition</li>
+<li>U+216B ROMAN NUMERAL TWELVE: not included in any glyphset definition</li>
+<li>U+216C ROMAN NUMERAL FIFTY: not included in any glyphset definition</li>
+<li>U+216D ROMAN NUMERAL ONE HUNDRED: not included in any glyphset definition</li>
+<li>U+216E ROMAN NUMERAL FIVE HUNDRED: not included in any glyphset definition</li>
+<li>U+216F ROMAN NUMERAL ONE THOUSAND: not included in any glyphset definition</li>
+<li>U+2170 SMALL ROMAN NUMERAL ONE: not included in any glyphset definition</li>
+<li>U+2171 SMALL ROMAN NUMERAL TWO: not included in any glyphset definition</li>
+<li>U+2172 SMALL ROMAN NUMERAL THREE: not included in any glyphset definition</li>
+<li>U+2173 SMALL ROMAN NUMERAL FOUR: not included in any glyphset definition</li>
+<li>U+2174 SMALL ROMAN NUMERAL FIVE: not included in any glyphset definition</li>
+<li>U+2175 SMALL ROMAN NUMERAL SIX: not included in any glyphset definition</li>
+<li>U+2176 SMALL ROMAN NUMERAL SEVEN: not included in any glyphset definition</li>
+<li>U+2177 SMALL ROMAN NUMERAL EIGHT: not included in any glyphset definition</li>
+<li>U+2178 SMALL ROMAN NUMERAL NINE: not included in any glyphset definition</li>
+<li>U+2179 SMALL ROMAN NUMERAL TEN: not included in any glyphset definition</li>
+<li>U+217A SMALL ROMAN NUMERAL ELEVEN: not included in any glyphset definition</li>
+<li>U+217B SMALL ROMAN NUMERAL TWELVE: not included in any glyphset definition</li>
+<li>U+217C SMALL ROMAN NUMERAL FIFTY: not included in any glyphset definition</li>
+<li>U+217D SMALL ROMAN NUMERAL ONE HUNDRED: not included in any glyphset definition</li>
+<li>U+217E SMALL ROMAN NUMERAL FIVE HUNDRED: not included in any glyphset definition</li>
+<li>U+217F SMALL ROMAN NUMERAL ONE THOUSAND: not included in any glyphset definition</li>
+<li>U+2190 LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2192 RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2194 LEFT RIGHT ARROW: not included in any glyphset definition</li>
+<li>U+2195 UP DOWN ARROW: not included in any glyphset definition</li>
+<li>U+2196 NORTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+2197 NORTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2198 SOUTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2199 SOUTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+21A8 UP DOWN ARROW WITH BASE: not included in any glyphset definition</li>
+<li>U+21B0 UPWARDS ARROW WITH TIP LEFTWARDS: not included in any glyphset definition</li>
+<li>U+21B1 UPWARDS ARROW WITH TIP RIGHTWARDS: not included in any glyphset definition</li>
+<li>U+21B2 DOWNWARDS ARROW WITH TIP LEFTWARDS: not included in any glyphset definition</li>
+<li>U+21B3 DOWNWARDS ARROW WITH TIP RIGHTWARDS: not included in any glyphset definition</li>
+<li>U+21B4 RIGHTWARDS ARROW WITH CORNER DOWNWARDS: not included in any glyphset definition</li>
+<li>U+21B9 LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR: not included in any glyphset definition</li>
+<li>U+21C4 RIGHTWARDS ARROW OVER LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21C5 UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21C6 LEFTWARDS ARROW OVER RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21C7 LEFTWARDS PAIRED ARROWS: not included in any glyphset definition</li>
+<li>U+21C8 UPWARDS PAIRED ARROWS: not included in any glyphset definition</li>
+<li>U+21C9 RIGHTWARDS PAIRED ARROWS: not included in any glyphset definition</li>
+<li>U+21CA DOWNWARDS PAIRED ARROWS: not included in any glyphset definition</li>
+<li>U+21D0 LEFTWARDS DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D1 UPWARDS DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D2 RIGHTWARDS DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D3 DOWNWARDS DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D4 LEFT RIGHT DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D5 UP DOWN DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D6 NORTH WEST DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D7 NORTH EAST DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D8 SOUTH EAST DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D9 SOUTH WEST DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21E4 LEFTWARDS ARROW TO BAR: not included in any glyphset definition</li>
+<li>U+21E5 RIGHTWARDS ARROW TO BAR: not included in any glyphset definition</li>
+<li>U+21E6 LEFTWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21E7 UPWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21E8 RIGHTWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21E9 DOWNWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21EB UPWARDS WHITE ARROW ON PEDESTAL: not included in any glyphset definition</li>
+<li>U+21EC UPWARDS WHITE ARROW ON PEDESTAL WITH HORIZONTAL BAR: not included in any glyphset definition</li>
+<li>U+21ED UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR: not included in any glyphset definition</li>
+<li>U+2200 FOR ALL: not included in any glyphset definition</li>
+<li>U+2201 COMPLEMENT: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2203 THERE EXISTS: not included in any glyphset definition</li>
+<li>U+2204 THERE DOES NOT EXIST: not included in any glyphset definition</li>
+<li>U+2205 EMPTY SET: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+2207 NABLA: not included in any glyphset definition</li>
+<li>U+2208 ELEMENT OF: not included in any glyphset definition</li>
+<li>U+2209 NOT AN ELEMENT OF: not included in any glyphset definition</li>
+<li>U+220B CONTAINS AS MEMBER: not included in any glyphset definition</li>
+<li>U+220C DOES NOT CONTAIN AS MEMBER: not included in any glyphset definition</li>
+<li>U+220E END OF PROOF: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2210 N-ARY COPRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2213 MINUS-OR-PLUS SIGN: not included in any glyphset definition</li>
+<li>U+2216 SET MINUS: not included in any glyphset definition</li>
+<li>U+2217 ASTERISK OPERATOR: not included in any glyphset definition</li>
+<li>U+2218 RING OPERATOR: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221B CUBE ROOT: not included in any glyphset definition</li>
+<li>U+221C FOURTH ROOT: not included in any glyphset definition</li>
+<li>U+221D PROPORTIONAL TO: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+221F RIGHT ANGLE: not included in any glyphset definition</li>
+<li>U+2220 ANGLE: not included in any glyphset definition</li>
+<li>U+2225 PARALLEL TO: not included in any glyphset definition</li>
+<li>U+2226 NOT PARALLEL TO: not included in any glyphset definition</li>
+<li>U+2227 LOGICAL AND: not included in any glyphset definition</li>
+<li>U+2228 LOGICAL OR: not included in any glyphset definition</li>
+<li>U+2229 INTERSECTION: not included in any glyphset definition</li>
+<li>U+222A UNION: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+222C DOUBLE INTEGRAL: not included in any glyphset definition</li>
+<li>U+222D TRIPLE INTEGRAL: not included in any glyphset definition</li>
+<li>U+222E CONTOUR INTEGRAL: not included in any glyphset definition</li>
+<li>U+222F SURFACE INTEGRAL: not included in any glyphset definition</li>
+<li>U+2230 VOLUME INTEGRAL: not included in any glyphset definition</li>
+<li>U+2231 CLOCKWISE INTEGRAL: not included in any glyphset definition</li>
+<li>U+2232 CLOCKWISE CONTOUR INTEGRAL: not included in any glyphset definition</li>
+<li>U+2233 ANTICLOCKWISE CONTOUR INTEGRAL: not included in any glyphset definition</li>
+<li>U+2234 THEREFORE: not included in any glyphset definition</li>
+<li>U+2235 BECAUSE: not included in any glyphset definition</li>
+<li>U+223C TILDE OPERATOR: not included in any glyphset definition</li>
+<li>U+223D REVERSED TILDE: not included in any glyphset definition</li>
+<li>U+2242 MINUS TILDE: not included in any glyphset definition</li>
+<li>U+2243 ASYMPTOTICALLY EQUAL TO: not included in any glyphset definition</li>
+<li>U+2245 APPROXIMATELY EQUAL TO: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2250 APPROACHES THE LIMIT: not included in any glyphset definition</li>
+<li>U+2251 GEOMETRICALLY EQUAL TO: not included in any glyphset definition</li>
+<li>U+2252 APPROXIMATELY EQUAL TO OR THE IMAGE OF: not included in any glyphset definition</li>
+<li>U+2253 IMAGE OF OR APPROXIMATELY EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2261 IDENTICAL TO: not included in any glyphset definition</li>
+<li>U+2262 NOT IDENTICAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2266 LESS-THAN OVER EQUAL TO: not included in any glyphset definition</li>
+<li>U+2267 GREATER-THAN OVER EQUAL TO: not included in any glyphset definition</li>
+<li>U+226A MUCH LESS-THAN: not included in any glyphset definition</li>
+<li>U+226B MUCH GREATER-THAN: not included in any glyphset definition</li>
+<li>U+2276 LESS-THAN OR GREATER-THAN: not included in any glyphset definition</li>
+<li>U+2277 GREATER-THAN OR LESS-THAN: not included in any glyphset definition</li>
+<li>U+2282 SUBSET OF: not included in any glyphset definition</li>
+<li>U+2283 SUPERSET OF: not included in any glyphset definition</li>
+<li>U+2284 NOT A SUBSET OF: not included in any glyphset definition</li>
+<li>U+2285 NOT A SUPERSET OF: not included in any glyphset definition</li>
+<li>U+2286 SUBSET OF OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2287 SUPERSET OF OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2288 NEITHER A SUBSET OF NOR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2289 NEITHER A SUPERSET OF NOR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2295 CIRCLED PLUS: not included in any glyphset definition</li>
+<li>U+2296 CIRCLED MINUS: not included in any glyphset definition</li>
+<li>U+2297 CIRCLED TIMES: not included in any glyphset definition</li>
+<li>U+2298 CIRCLED DIVISION SLASH: not included in any glyphset definition</li>
+<li>U+229D CIRCLED DASH: not included in any glyphset definition</li>
+<li>U+22A2 RIGHT TACK: not included in any glyphset definition</li>
+<li>U+22A3 LEFT TACK: not included in any glyphset definition</li>
+<li>U+22A4 DOWN TACK: not included in any glyphset definition</li>
+<li>U+22A5 UP TACK: not included in any glyphset definition</li>
+<li>U+22BB XOR: not included in any glyphset definition</li>
+<li>U+22BC NAND: not included in any glyphset definition</li>
+<li>U+22BD NOR: not included in any glyphset definition</li>
+<li>U+22BF RIGHT TRIANGLE: not included in any glyphset definition</li>
+<li>U+22C0 N-ARY LOGICAL AND: not included in any glyphset definition</li>
+<li>U+22C1 N-ARY LOGICAL OR: not included in any glyphset definition</li>
+<li>U+22C2 N-ARY INTERSECTION: not included in any glyphset definition</li>
+<li>U+22C3 N-ARY UNION: not included in any glyphset definition</li>
+<li>U+22C5 DOT OPERATOR: not included in any glyphset definition</li>
+<li>U+22EE VERTICAL ELLIPSIS: not included in any glyphset definition</li>
+<li>U+22EF MIDLINE HORIZONTAL ELLIPSIS: not included in any glyphset definition</li>
+<li>U+2300 DIAMETER SIGN: not included in any glyphset definition</li>
+<li>U+2302 HOUSE: not included in any glyphset definition</li>
+<li>U+2307 WAVY LINE: not included in any glyphset definition</li>
+<li>U+2308 LEFT CEILING: not included in any glyphset definition</li>
+<li>U+2309 RIGHT CEILING: not included in any glyphset definition</li>
+<li>U+230A LEFT FLOOR: not included in any glyphset definition</li>
+<li>U+230B RIGHT FLOOR: not included in any glyphset definition</li>
+<li>U+2310 REVERSED NOT SIGN: not included in any glyphset definition</li>
+<li>U+2312 ARC: not included in any glyphset definition</li>
+<li>U+2320 TOP HALF INTEGRAL: not included in any glyphset definition</li>
+<li>U+2321 BOTTOM HALF INTEGRAL: not included in any glyphset definition</li>
+<li>U+2329 LEFT-POINTING ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+232A RIGHT-POINTING ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+2422 BLANK SYMBOL: not included in any glyphset definition</li>
+<li>U+2423 OPEN BOX: not included in any glyphset definition</li>
+<li>U+2426 SYMBOL FOR SUBSTITUTE FORM TWO: not included in any glyphset definition</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding mongolian</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding mongolian</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding mongolian</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding mongolian</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding mongolian</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding mongolian</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding mongolian</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding mongolian</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding mongolian</li>
+<li>U+2469 CIRCLED NUMBER TEN: try adding mongolian</li>
+<li>U+246A CIRCLED NUMBER ELEVEN: try adding mongolian</li>
+<li>U+246B CIRCLED NUMBER TWELVE: try adding mongolian</li>
+<li>U+246C CIRCLED NUMBER THIRTEEN: try adding mongolian</li>
+<li>U+246D CIRCLED NUMBER FOURTEEN: try adding mongolian</li>
+<li>U+246E CIRCLED NUMBER FIFTEEN: try adding mongolian</li>
+<li>U+246F CIRCLED NUMBER SIXTEEN: try adding mongolian</li>
+<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding mongolian</li>
+<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding mongolian</li>
+<li>U+2472 CIRCLED NUMBER NINETEEN: try adding mongolian</li>
+<li>U+2473 CIRCLED NUMBER TWENTY: try adding mongolian</li>
+<li>U+24B8 CIRCLED LATIN CAPITAL LETTER C: not included in any glyphset definition</li>
+<li>U+24C5 CIRCLED LATIN CAPITAL LETTER P: not included in any glyphset definition</li>
+<li>U+24C7 CIRCLED LATIN CAPITAL LETTER R: not included in any glyphset definition</li>
+<li>U+24C8 CIRCLED LATIN CAPITAL LETTER S: not included in any glyphset definition</li>
+<li>U+24EA CIRCLED DIGIT ZERO: not included in any glyphset definition</li>
+<li>U+24EB NEGATIVE CIRCLED NUMBER ELEVEN: not included in any glyphset definition</li>
+<li>U+24EC NEGATIVE CIRCLED NUMBER TWELVE: not included in any glyphset definition</li>
+<li>U+24ED NEGATIVE CIRCLED NUMBER THIRTEEN: not included in any glyphset definition</li>
+<li>U+24EE NEGATIVE CIRCLED NUMBER FOURTEEN: not included in any glyphset definition</li>
+<li>U+24EF NEGATIVE CIRCLED NUMBER FIFTEEN: not included in any glyphset definition</li>
+<li>U+24F0 NEGATIVE CIRCLED NUMBER SIXTEEN: not included in any glyphset definition</li>
+<li>U+24F1 NEGATIVE CIRCLED NUMBER SEVENTEEN: not included in any glyphset definition</li>
+<li>U+24F2 NEGATIVE CIRCLED NUMBER EIGHTEEN: not included in any glyphset definition</li>
+<li>U+24F3 NEGATIVE CIRCLED NUMBER NINETEEN: not included in any glyphset definition</li>
+<li>U+24F4 NEGATIVE CIRCLED NUMBER TWENTY: not included in any glyphset definition</li>
+<li>U+24F5 DOUBLE CIRCLED DIGIT ONE: not included in any glyphset definition</li>
+<li>U+24F6 DOUBLE CIRCLED DIGIT TWO: not included in any glyphset definition</li>
+<li>U+24F7 DOUBLE CIRCLED DIGIT THREE: not included in any glyphset definition</li>
+<li>U+24F8 DOUBLE CIRCLED DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+24F9 DOUBLE CIRCLED DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+24FA DOUBLE CIRCLED DIGIT SIX: not included in any glyphset definition</li>
+<li>U+24FB DOUBLE CIRCLED DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+24FC DOUBLE CIRCLED DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+24FD DOUBLE CIRCLED DIGIT NINE: not included in any glyphset definition</li>
+<li>U+24FE DOUBLE CIRCLED NUMBER TEN: not included in any glyphset definition</li>
+<li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: not included in any glyphset definition</li>
+<li>U+2500 BOX DRAWINGS LIGHT HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2501 BOX DRAWINGS HEAVY HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2502 BOX DRAWINGS LIGHT VERTICAL: not included in any glyphset definition</li>
+<li>U+2503 BOX DRAWINGS HEAVY VERTICAL: not included in any glyphset definition</li>
+<li>U+2504 BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2505 BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2506 BOX DRAWINGS LIGHT TRIPLE DASH VERTICAL: not included in any glyphset definition</li>
+<li>U+2507 BOX DRAWINGS HEAVY TRIPLE DASH VERTICAL: not included in any glyphset definition</li>
+<li>U+2508 BOX DRAWINGS LIGHT QUADRUPLE DASH HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2509 BOX DRAWINGS HEAVY QUADRUPLE DASH HORIZONTAL: not included in any glyphset definition</li>
+<li>U+250A BOX DRAWINGS LIGHT QUADRUPLE DASH VERTICAL: not included in any glyphset definition</li>
+<li>U+250B BOX DRAWINGS HEAVY QUADRUPLE DASH VERTICAL: not included in any glyphset definition</li>
+<li>U+250C BOX DRAWINGS LIGHT DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+250D BOX DRAWINGS DOWN LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+250E BOX DRAWINGS DOWN HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+250F BOX DRAWINGS HEAVY DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+2510 BOX DRAWINGS LIGHT DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2511 BOX DRAWINGS DOWN LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+2512 BOX DRAWINGS DOWN HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+2513 BOX DRAWINGS HEAVY DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2514 BOX DRAWINGS LIGHT UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2515 BOX DRAWINGS UP LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+2516 BOX DRAWINGS UP HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+2517 BOX DRAWINGS HEAVY UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2518 BOX DRAWINGS LIGHT UP AND LEFT: not included in any glyphset definition</li>
+<li>U+2519 BOX DRAWINGS UP LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+251A BOX DRAWINGS UP HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+251B BOX DRAWINGS HEAVY UP AND LEFT: not included in any glyphset definition</li>
+<li>U+251C BOX DRAWINGS LIGHT VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+251D BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+251E BOX DRAWINGS UP HEAVY AND RIGHT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+251F BOX DRAWINGS DOWN HEAVY AND RIGHT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2520 BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+2521 BOX DRAWINGS DOWN LIGHT AND RIGHT UP HEAVY: not included in any glyphset definition</li>
+<li>U+2522 BOX DRAWINGS UP LIGHT AND RIGHT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+2523 BOX DRAWINGS HEAVY VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+2524 BOX DRAWINGS LIGHT VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+2525 BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+2526 BOX DRAWINGS UP HEAVY AND LEFT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+2527 BOX DRAWINGS DOWN HEAVY AND LEFT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2528 BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+2529 BOX DRAWINGS DOWN LIGHT AND LEFT UP HEAVY: not included in any glyphset definition</li>
+<li>U+252A BOX DRAWINGS UP LIGHT AND LEFT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+252B BOX DRAWINGS HEAVY VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+252C BOX DRAWINGS LIGHT DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+252D BOX DRAWINGS LEFT HEAVY AND RIGHT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+252E BOX DRAWINGS RIGHT HEAVY AND LEFT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+252F BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2530 BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2531 BOX DRAWINGS RIGHT LIGHT AND LEFT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+2532 BOX DRAWINGS LEFT LIGHT AND RIGHT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+2533 BOX DRAWINGS HEAVY DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2534 BOX DRAWINGS LIGHT UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2535 BOX DRAWINGS LEFT HEAVY AND RIGHT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2536 BOX DRAWINGS RIGHT HEAVY AND LEFT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2537 BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2538 BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2539 BOX DRAWINGS RIGHT LIGHT AND LEFT UP HEAVY: not included in any glyphset definition</li>
+<li>U+253A BOX DRAWINGS LEFT LIGHT AND RIGHT UP HEAVY: not included in any glyphset definition</li>
+<li>U+253B BOX DRAWINGS HEAVY UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253C BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253D BOX DRAWINGS LEFT HEAVY AND RIGHT VERTICAL LIGHT: not included in any glyphset definition</li>
+<li>U+253E BOX DRAWINGS RIGHT HEAVY AND LEFT VERTICAL LIGHT: not included in any glyphset definition</li>
+<li>U+253F BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2540 BOX DRAWINGS UP HEAVY AND DOWN HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2541 BOX DRAWINGS DOWN HEAVY AND UP HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2542 BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2543 BOX DRAWINGS LEFT UP HEAVY AND RIGHT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+2544 BOX DRAWINGS RIGHT UP HEAVY AND LEFT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+2545 BOX DRAWINGS LEFT DOWN HEAVY AND RIGHT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2546 BOX DRAWINGS RIGHT DOWN HEAVY AND LEFT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2547 BOX DRAWINGS DOWN LIGHT AND UP HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2548 BOX DRAWINGS UP LIGHT AND DOWN HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2549 BOX DRAWINGS RIGHT LIGHT AND LEFT VERTICAL HEAVY: not included in any glyphset definition</li>
+<li>U+254A BOX DRAWINGS LEFT LIGHT AND RIGHT VERTICAL HEAVY: not included in any glyphset definition</li>
+<li>U+254B BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2550 BOX DRAWINGS DOUBLE HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2551 BOX DRAWINGS DOUBLE VERTICAL: not included in any glyphset definition</li>
+<li>U+2552 BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE: not included in any glyphset definition</li>
+<li>U+2553 BOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE: not included in any glyphset definition</li>
+<li>U+2554 BOX DRAWINGS DOUBLE DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+2555 BOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE: not included in any glyphset definition</li>
+<li>U+2556 BOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE: not included in any glyphset definition</li>
+<li>U+2557 BOX DRAWINGS DOUBLE DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2558 BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE: not included in any glyphset definition</li>
+<li>U+2559 BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE: not included in any glyphset definition</li>
+<li>U+255A BOX DRAWINGS DOUBLE UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+255B BOX DRAWINGS UP SINGLE AND LEFT DOUBLE: not included in any glyphset definition</li>
+<li>U+255C BOX DRAWINGS UP DOUBLE AND LEFT SINGLE: not included in any glyphset definition</li>
+<li>U+255D BOX DRAWINGS DOUBLE UP AND LEFT: not included in any glyphset definition</li>
+<li>U+255E BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE: not included in any glyphset definition</li>
+<li>U+255F BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE: not included in any glyphset definition</li>
+<li>U+2560 BOX DRAWINGS DOUBLE VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+2561 BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE: not included in any glyphset definition</li>
+<li>U+2562 BOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE: not included in any glyphset definition</li>
+<li>U+2563 BOX DRAWINGS DOUBLE VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+2564 BOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE: not included in any glyphset definition</li>
+<li>U+2565 BOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE: not included in any glyphset definition</li>
+<li>U+2566 BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2567 BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE: not included in any glyphset definition</li>
+<li>U+2568 BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE: not included in any glyphset definition</li>
+<li>U+2569 BOX DRAWINGS DOUBLE UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+256A BOX DRAWINGS VERTICAL SINGLE AND HORIZONTAL DOUBLE: not included in any glyphset definition</li>
+<li>U+256B BOX DRAWINGS VERTICAL DOUBLE AND HORIZONTAL SINGLE: not included in any glyphset definition</li>
+<li>U+256C BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2580 UPPER HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2581 LOWER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2582 LOWER ONE QUARTER BLOCK: not included in any glyphset definition</li>
+<li>U+2583 LOWER THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2584 LOWER HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2585 LOWER FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2586 LOWER THREE QUARTERS BLOCK: not included in any glyphset definition</li>
+<li>U+2587 LOWER SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2588 FULL BLOCK: not included in any glyphset definition</li>
+<li>U+2589 LEFT SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258A LEFT THREE QUARTERS BLOCK: not included in any glyphset definition</li>
+<li>U+258B LEFT FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258C LEFT HALF BLOCK: not included in any glyphset definition</li>
+<li>U+258D LEFT THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258E LEFT ONE QUARTER BLOCK: not included in any glyphset definition</li>
+<li>U+258F LEFT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2590 RIGHT HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2591 LIGHT SHADE: not included in any glyphset definition</li>
+<li>U+2592 MEDIUM SHADE: not included in any glyphset definition</li>
+<li>U+2593 DARK SHADE: not included in any glyphset definition</li>
+<li>U+2594 UPPER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2595 RIGHT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2596 QUADRANT LOWER LEFT: not included in any glyphset definition</li>
+<li>U+2597 QUADRANT LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+2598 QUADRANT UPPER LEFT: not included in any glyphset definition</li>
+<li>U+2599 QUADRANT UPPER LEFT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259A QUADRANT UPPER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259B QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
+<li>U+259C QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259D QUADRANT UPPER RIGHT: not included in any glyphset definition</li>
+<li>U+259E QUADRANT UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
+<li>U+259F QUADRANT UPPER RIGHT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+25A0 BLACK SQUARE: not included in any glyphset definition</li>
+<li>U+25A1 WHITE SQUARE: not included in any glyphset definition</li>
+<li>U+25AA BLACK SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AB WHITE SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AC BLACK RECTANGLE: not included in any glyphset definition</li>
+<li>U+25AD WHITE RECTANGLE: not included in any glyphset definition</li>
+<li>U+25AE BLACK VERTICAL RECTANGLE: not included in any glyphset definition</li>
+<li>U+25AF WHITE VERTICAL RECTANGLE: not included in any glyphset definition</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BA BLACK RIGHT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25BB WHITE RIGHT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C4 BLACK LEFT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25C5 WHITE LEFT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25C6 BLACK DIAMOND: not included in any glyphset definition</li>
+<li>U+25C7 WHITE DIAMOND: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+25CB WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: gurmukhi, tamil, batak, malayalam, buhid, balinese, kharoshthi, limbu, gujarati, hanunoo, syloti-nagri, tagbanwa, hebrew, thai, oriya, telugu, thaana, meetei-mayek, lao, lepcha, tagalog, sinhala, phags-pa, cham, devanagari, brahmi, sundanese, chakma, javanese, bengali, mongolian, myanmar, canadian-aboriginal, tifinagh, coptic, tibetan, buginese, khmer, kaithi, tai-le, mandaic, rejang, kayah-li, new-tai-lue, tai-viet, kannada</li>
+<li>U+25CE BULLSEYE: not included in any glyphset definition</li>
+<li>U+25CF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25D8 INVERSE BULLET: not included in any glyphset definition</li>
+<li>U+25D9 INVERSE WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+25E6 WHITE BULLET: not included in any glyphset definition</li>
+<li>U+25EF LARGE CIRCLE: not included in any glyphset definition</li>
+<li>U+2605 BLACK STAR: not included in any glyphset definition</li>
+<li>U+2606 WHITE STAR: not included in any glyphset definition</li>
+<li>U+2610 BALLOT BOX: not included in any glyphset definition</li>
+<li>U+2611 BALLOT BOX WITH CHECK: not included in any glyphset definition</li>
+<li>U+2612 BALLOT BOX WITH X: not included in any glyphset definition</li>
+<li>U+2616 WHITE SHOGI PIECE: not included in any glyphset definition</li>
+<li>U+2617 BLACK SHOGI PIECE: not included in any glyphset definition</li>
+<li>U+263A WHITE SMILING FACE: not included in any glyphset definition</li>
+<li>U+263B BLACK SMILING FACE: not included in any glyphset definition</li>
+<li>U+263C WHITE SUN WITH RAYS: not included in any glyphset definition</li>
+<li>U+2640 FEMALE SIGN: not included in any glyphset definition</li>
+<li>U+2642 MALE SIGN: not included in any glyphset definition</li>
+<li>U+2660 BLACK SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2661 WHITE HEART SUIT: not included in any glyphset definition</li>
+<li>U+2662 WHITE DIAMOND SUIT: not included in any glyphset definition</li>
+<li>U+2663 BLACK CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2664 WHITE SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2665 BLACK HEART SUIT: not included in any glyphset definition</li>
+<li>U+2666 BLACK DIAMOND SUIT: not included in any glyphset definition</li>
+<li>U+2667 WHITE CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2669 QUARTER NOTE: not included in any glyphset definition</li>
+<li>U+266A EIGHTH NOTE: not included in any glyphset definition</li>
+<li>U+266B BEAMED EIGHTH NOTES: not included in any glyphset definition</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: not included in any glyphset definition</li>
+<li>U+266D MUSIC FLAT SIGN: not included in any glyphset definition</li>
+<li>U+266E MUSIC NATURAL SIGN: not included in any glyphset definition</li>
+<li>U+266F MUSIC SHARP SIGN: not included in any glyphset definition</li>
+<li>U+2698 FLOWER: not included in any glyphset definition</li>
+<li>U+26A2 DOUBLED FEMALE SIGN: not included in any glyphset definition</li>
+<li>U+26A3 DOUBLED MALE SIGN: not included in any glyphset definition</li>
+<li>U+26A4 INTERLOCKED FEMALE AND MALE SIGN: not included in any glyphset definition</li>
+<li>U+26A5 MALE AND FEMALE SIGN: not included in any glyphset definition</li>
+<li>U+26A6 MALE WITH STROKE SIGN: not included in any glyphset definition</li>
+<li>U+26A7 MALE WITH STROKE AND MALE AND FEMALE SIGN: not included in any glyphset definition</li>
+<li>U+26A8 VERTICAL MALE WITH STROKE SIGN: not included in any glyphset definition</li>
+<li>U+26A9 HORIZONTAL MALE WITH STROKE SIGN: not included in any glyphset definition</li>
+<li>U+26AA MEDIUM WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+26AB MEDIUM BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+26AC MEDIUM SMALL WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+26AD MARRIAGE SYMBOL: not included in any glyphset definition</li>
+<li>U+26AE DIVORCE SYMBOL: not included in any glyphset definition</li>
+<li>U+26AF UNMARRIED PARTNERSHIP SYMBOL: not included in any glyphset definition</li>
+<li>U+26B9 SEXTILE: not included in any glyphset definition</li>
+<li>U+2713 CHECK MARK: not included in any glyphset definition</li>
+<li>U+2714 HEAVY CHECK MARK: not included in any glyphset definition</li>
+<li>U+2715 MULTIPLICATION X: not included in any glyphset definition</li>
+<li>U+2716 HEAVY MULTIPLICATION X: not included in any glyphset definition</li>
+<li>U+2717 BALLOT X: not included in any glyphset definition</li>
+<li>U+2718 HEAVY BALLOT X: not included in any glyphset definition</li>
+<li>U+271A HEAVY GREEK CROSS: not included in any glyphset definition</li>
+<li>U+271B OPEN CENTRE CROSS: not included in any glyphset definition</li>
+<li>U+271C HEAVY OPEN CENTRE CROSS: not included in any glyphset definition</li>
+<li>U+271D LATIN CROSS: not included in any glyphset definition</li>
+<li>U+273F BLACK FLORETTE: not included in any glyphset definition</li>
+<li>U+2740 WHITE FLORETTE: not included in any glyphset definition</li>
+<li>U+2741 EIGHT PETALLED OUTLINED BLACK FLORETTE: not included in any glyphset definition</li>
+<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: not included in any glyphset definition</li>
+<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: not included in any glyphset definition</li>
+<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: not included in any glyphset definition</li>
+<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: not included in any glyphset definition</li>
+<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: not included in any glyphset definition</li>
+<li>U+277F DINGBAT NEGATIVE CIRCLED NUMBER TEN: not included in any glyphset definition</li>
+<li>U+2780 DINGBAT CIRCLED SANS-SERIF DIGIT ONE: not included in any glyphset definition</li>
+<li>U+2781 DINGBAT CIRCLED SANS-SERIF DIGIT TWO: not included in any glyphset definition</li>
+<li>U+2782 DINGBAT CIRCLED SANS-SERIF DIGIT THREE: not included in any glyphset definition</li>
+<li>U+2783 DINGBAT CIRCLED SANS-SERIF DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+2784 DINGBAT CIRCLED SANS-SERIF DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+2785 DINGBAT CIRCLED SANS-SERIF DIGIT SIX: not included in any glyphset definition</li>
+<li>U+2786 DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+2787 DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+2788 DINGBAT CIRCLED SANS-SERIF DIGIT NINE: not included in any glyphset definition</li>
+<li>U+2789 DINGBAT CIRCLED SANS-SERIF NUMBER TEN: not included in any glyphset definition</li>
+<li>U+278A DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE: not included in any glyphset definition</li>
+<li>U+278B DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO: not included in any glyphset definition</li>
+<li>U+278C DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE: not included in any glyphset definition</li>
+<li>U+278D DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+278E DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+278F DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX: not included in any glyphset definition</li>
+<li>U+2790 DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+2791 DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+2792 DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE: not included in any glyphset definition</li>
+<li>U+2793 DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN: not included in any glyphset definition</li>
+<li>U+27E6 MATHEMATICAL LEFT WHITE SQUARE BRACKET: not included in any glyphset definition</li>
+<li>U+27E7 MATHEMATICAL RIGHT WHITE SQUARE BRACKET: not included in any glyphset definition</li>
+<li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+2A00 N-ARY CIRCLED DOT OPERATOR: not included in any glyphset definition</li>
+<li>U+2A01 N-ARY CIRCLED PLUS OPERATOR: not included in any glyphset definition</li>
+<li>U+2A02 N-ARY CIRCLED TIMES OPERATOR: not included in any glyphset definition</li>
+<li>U+2A03 N-ARY UNION OPERATOR WITH DOT: not included in any glyphset definition</li>
+<li>U+2A04 N-ARY UNION OPERATOR WITH PLUS: not included in any glyphset definition</li>
+<li>U+2A05 N-ARY SQUARE INTERSECTION OPERATOR: not included in any glyphset definition</li>
+<li>U+2A06 N-ARY SQUARE UNION OPERATOR: not included in any glyphset definition</li>
+<li>U+2A09 N-ARY TIMES OPERATOR: not included in any glyphset definition</li>
+<li>U+2A0C QUADRUPLE INTEGRAL OPERATOR: not included in any glyphset definition</li>
+<li>U+2A0D FINITE PART INTEGRAL: not included in any glyphset definition</li>
+<li>U+2A0E INTEGRAL WITH DOUBLE STROKE: not included in any glyphset definition</li>
+<li>U+2A0F INTEGRAL AVERAGE WITH SLASH: not included in any glyphset definition</li>
+<li>U+2A16 QUATERNION INTEGRAL OPERATOR: not included in any glyphset definition</li>
+<li>U+2A2F VECTOR OR CROSS PRODUCT: not included in any glyphset definition</li>
+<li>U+2E17 DOUBLE OBLIQUE HYPHEN: try adding coptic</li>
+<li>U+2E28 LEFT DOUBLE PARENTHESIS: not included in any glyphset definition</li>
+<li>U+2E29 RIGHT DOUBLE PARENTHESIS: not included in any glyphset definition</li>
+<li>U+2E85 CJK RADICAL PERSON: not included in any glyphset definition</li>
+<li>U+2E89 CJK RADICAL KNIFE TWO: not included in any glyphset definition</li>
+<li>U+2E8C CJK RADICAL SMALL ONE: not included in any glyphset definition</li>
+<li>U+2E8D CJK RADICAL SMALL TWO: not included in any glyphset definition</li>
+<li>U+2E8E CJK RADICAL LAME ONE: not included in any glyphset definition</li>
+<li>U+2E90 CJK RADICAL LAME THREE: not included in any glyphset definition</li>
+<li>U+2E92 CJK RADICAL SNAKE: not included in any glyphset definition</li>
+<li>U+2E93 CJK RADICAL THREAD: not included in any glyphset definition</li>
+<li>U+2E94 CJK RADICAL SNOUT ONE: not included in any glyphset definition</li>
+<li>U+2E96 CJK RADICAL HEART ONE: not included in any glyphset definition</li>
+<li>U+2E98 CJK RADICAL HAND: not included in any glyphset definition</li>
+<li>U+2E99 CJK RADICAL RAP: not included in any glyphset definition</li>
+<li>U+2E9F CJK RADICAL MOTHER: not included in any glyphset definition</li>
+<li>U+2EA0 CJK RADICAL CIVILIAN: not included in any glyphset definition</li>
+<li>U+2EA1 CJK RADICAL WATER ONE: not included in any glyphset definition</li>
+<li>U+2EA2 CJK RADICAL WATER TWO: not included in any glyphset definition</li>
+<li>U+2EA3 CJK RADICAL FIRE: not included in any glyphset definition</li>
+<li>U+2EA8 CJK RADICAL DOG: not included in any glyphset definition</li>
+<li>U+2EAB CJK RADICAL EYE: not included in any glyphset definition</li>
+<li>U+2EAD CJK RADICAL SPIRIT TWO: not included in any glyphset definition</li>
+<li>U+2EAE CJK RADICAL BAMBOO: not included in any glyphset definition</li>
+<li>U+2EB2 CJK RADICAL NET TWO: not included in any glyphset definition</li>
+<li>U+2EB9 CJK RADICAL OLD: not included in any glyphset definition</li>
+<li>U+2EBC CJK RADICAL MEAT: not included in any glyphset definition</li>
+<li>U+2EBE CJK RADICAL GRASS ONE: not included in any glyphset definition</li>
+<li>U+2EC2 CJK RADICAL CLOTHES: not included in any glyphset definition</li>
+<li>U+2EC3 CJK RADICAL WEST ONE: not included in any glyphset definition</li>
+<li>U+2EC4 CJK RADICAL WEST TWO: not included in any glyphset definition</li>
+<li>U+2ECA CJK RADICAL FOOT: not included in any glyphset definition</li>
+<li>U+2ECC CJK RADICAL SIMPLIFIED WALK: not included in any glyphset definition</li>
+<li>U+2ECD CJK RADICAL WALK ONE: not included in any glyphset definition</li>
+<li>U+2ED1 CJK RADICAL LONG ONE: not included in any glyphset definition</li>
+<li>U+2ED7 CJK RADICAL RAIN: not included in any glyphset definition</li>
+<li>U+2ED8 CJK RADICAL BLUE: not included in any glyphset definition</li>
+<li>U+2EDF CJK RADICAL EAT THREE: not included in any glyphset definition</li>
+<li>U+2EE8 CJK RADICAL SIMPLIFIED WHEAT: not included in any glyphset definition</li>
+<li>U+2EE9 CJK RADICAL SIMPLIFIED YELLOW: not included in any glyphset definition</li>
+<li>U+2EEB CJK RADICAL J-SIMPLIFIED EVEN: not included in any glyphset definition</li>
+<li>U+2EED CJK RADICAL J-SIMPLIFIED TOOTH: not included in any glyphset definition</li>
+<li>U+2EEF CJK RADICAL J-SIMPLIFIED DRAGON: not included in any glyphset definition</li>
+<li>U+2EF2 CJK RADICAL J-SIMPLIFIED TURTLE: not included in any glyphset definition</li>
+<li>U+2F00 KANGXI RADICAL ONE: not included in any glyphset definition</li>
+<li>U+2F01 KANGXI RADICAL LINE: not included in any glyphset definition</li>
+<li>U+2F02 KANGXI RADICAL DOT: not included in any glyphset definition</li>
+<li>U+2F03 KANGXI RADICAL SLASH: not included in any glyphset definition</li>
+<li>U+2F04 KANGXI RADICAL SECOND: not included in any glyphset definition</li>
+<li>U+2F05 KANGXI RADICAL HOOK: not included in any glyphset definition</li>
+<li>U+2F06 KANGXI RADICAL TWO: not included in any glyphset definition</li>
+<li>U+2F07 KANGXI RADICAL LID: not included in any glyphset definition</li>
+<li>U+2F08 KANGXI RADICAL MAN: not included in any glyphset definition</li>
+<li>U+2F09 KANGXI RADICAL LEGS: not included in any glyphset definition</li>
+<li>U+2F0A KANGXI RADICAL ENTER: not included in any glyphset definition</li>
+<li>U+2F0B KANGXI RADICAL EIGHT: not included in any glyphset definition</li>
+<li>U+2F0C KANGXI RADICAL DOWN BOX: not included in any glyphset definition</li>
+<li>U+2F0D KANGXI RADICAL COVER: not included in any glyphset definition</li>
+<li>U+2F0E KANGXI RADICAL ICE: not included in any glyphset definition</li>
+<li>U+2F0F KANGXI RADICAL TABLE: not included in any glyphset definition</li>
+<li>U+2F10 KANGXI RADICAL OPEN BOX: not included in any glyphset definition</li>
+<li>U+2F11 KANGXI RADICAL KNIFE: not included in any glyphset definition</li>
+<li>U+2F12 KANGXI RADICAL POWER: not included in any glyphset definition</li>
+<li>U+2F13 KANGXI RADICAL WRAP: not included in any glyphset definition</li>
+<li>U+2F14 KANGXI RADICAL SPOON: not included in any glyphset definition</li>
+<li>U+2F15 KANGXI RADICAL RIGHT OPEN BOX: not included in any glyphset definition</li>
+<li>U+2F16 KANGXI RADICAL HIDING ENCLOSURE: not included in any glyphset definition</li>
+<li>U+2F17 KANGXI RADICAL TEN: not included in any glyphset definition</li>
+<li>U+2F18 KANGXI RADICAL DIVINATION: not included in any glyphset definition</li>
+<li>U+2F19 KANGXI RADICAL SEAL: not included in any glyphset definition</li>
+<li>U+2F1A KANGXI RADICAL CLIFF: not included in any glyphset definition</li>
+<li>U+2F1B KANGXI RADICAL PRIVATE: not included in any glyphset definition</li>
+<li>U+2F1C KANGXI RADICAL AGAIN: not included in any glyphset definition</li>
+<li>U+2F1D KANGXI RADICAL MOUTH: not included in any glyphset definition</li>
+<li>U+2F1E KANGXI RADICAL ENCLOSURE: not included in any glyphset definition</li>
+<li>U+2F1F KANGXI RADICAL EARTH: not included in any glyphset definition</li>
+<li>U+2F20 KANGXI RADICAL SCHOLAR: not included in any glyphset definition</li>
+<li>U+2F21 KANGXI RADICAL GO: not included in any glyphset definition</li>
+<li>U+2F22 KANGXI RADICAL GO SLOWLY: not included in any glyphset definition</li>
+<li>U+2F23 KANGXI RADICAL EVENING: not included in any glyphset definition</li>
+<li>U+2F24 KANGXI RADICAL BIG: not included in any glyphset definition</li>
+<li>U+2F25 KANGXI RADICAL WOMAN: not included in any glyphset definition</li>
+<li>U+2F26 KANGXI RADICAL CHILD: not included in any glyphset definition</li>
+<li>U+2F27 KANGXI RADICAL ROOF: not included in any glyphset definition</li>
+<li>U+2F28 KANGXI RADICAL INCH: not included in any glyphset definition</li>
+<li>U+2F29 KANGXI RADICAL SMALL: not included in any glyphset definition</li>
+<li>U+2F2A KANGXI RADICAL LAME: not included in any glyphset definition</li>
+<li>U+2F2B KANGXI RADICAL CORPSE: not included in any glyphset definition</li>
+<li>U+2F2C KANGXI RADICAL SPROUT: not included in any glyphset definition</li>
+<li>U+2F2D KANGXI RADICAL MOUNTAIN: not included in any glyphset definition</li>
+<li>U+2F2E KANGXI RADICAL RIVER: not included in any glyphset definition</li>
+<li>U+2F2F KANGXI RADICAL WORK: not included in any glyphset definition</li>
+<li>U+2F30 KANGXI RADICAL ONESELF: not included in any glyphset definition</li>
+<li>U+2F31 KANGXI RADICAL TURBAN: not included in any glyphset definition</li>
+<li>U+2F32 KANGXI RADICAL DRY: not included in any glyphset definition</li>
+<li>U+2F33 KANGXI RADICAL SHORT THREAD: not included in any glyphset definition</li>
+<li>U+2F34 KANGXI RADICAL DOTTED CLIFF: not included in any glyphset definition</li>
+<li>U+2F35 KANGXI RADICAL LONG STRIDE: not included in any glyphset definition</li>
+<li>U+2F36 KANGXI RADICAL TWO HANDS: not included in any glyphset definition</li>
+<li>U+2F37 KANGXI RADICAL SHOOT: not included in any glyphset definition</li>
+<li>U+2F38 KANGXI RADICAL BOW: not included in any glyphset definition</li>
+<li>U+2F3A KANGXI RADICAL BRISTLE: not included in any glyphset definition</li>
+<li>U+2F3B KANGXI RADICAL STEP: not included in any glyphset definition</li>
+<li>U+2F3C KANGXI RADICAL HEART: not included in any glyphset definition</li>
+<li>U+2F3D KANGXI RADICAL HALBERD: not included in any glyphset definition</li>
+<li>U+2F3E KANGXI RADICAL DOOR: not included in any glyphset definition</li>
+<li>U+2F3F KANGXI RADICAL HAND: not included in any glyphset definition</li>
+<li>U+2F40 KANGXI RADICAL BRANCH: not included in any glyphset definition</li>
+<li>U+2F41 KANGXI RADICAL RAP: not included in any glyphset definition</li>
+<li>U+2F42 KANGXI RADICAL SCRIPT: not included in any glyphset definition</li>
+<li>U+2F43 KANGXI RADICAL DIPPER: not included in any glyphset definition</li>
+<li>U+2F44 KANGXI RADICAL AXE: not included in any glyphset definition</li>
+<li>U+2F45 KANGXI RADICAL SQUARE: not included in any glyphset definition</li>
+<li>U+2F46 KANGXI RADICAL NOT: not included in any glyphset definition</li>
+<li>U+2F47 KANGXI RADICAL SUN: not included in any glyphset definition</li>
+<li>U+2F48 KANGXI RADICAL SAY: not included in any glyphset definition</li>
+<li>U+2F49 KANGXI RADICAL MOON: not included in any glyphset definition</li>
+<li>U+2F4A KANGXI RADICAL TREE: not included in any glyphset definition</li>
+<li>U+2F4B KANGXI RADICAL LACK: not included in any glyphset definition</li>
+<li>U+2F4C KANGXI RADICAL STOP: not included in any glyphset definition</li>
+<li>U+2F4D KANGXI RADICAL DEATH: not included in any glyphset definition</li>
+<li>U+2F4E KANGXI RADICAL WEAPON: not included in any glyphset definition</li>
+<li>U+2F4F KANGXI RADICAL DO NOT: not included in any glyphset definition</li>
+<li>U+2F50 KANGXI RADICAL COMPARE: not included in any glyphset definition</li>
+<li>U+2F51 KANGXI RADICAL FUR: not included in any glyphset definition</li>
+<li>U+2F52 KANGXI RADICAL CLAN: not included in any glyphset definition</li>
+<li>U+2F53 KANGXI RADICAL STEAM: not included in any glyphset definition</li>
+<li>U+2F54 KANGXI RADICAL WATER: not included in any glyphset definition</li>
+<li>U+2F55 KANGXI RADICAL FIRE: not included in any glyphset definition</li>
+<li>U+2F56 KANGXI RADICAL CLAW: not included in any glyphset definition</li>
+<li>U+2F57 KANGXI RADICAL FATHER: not included in any glyphset definition</li>
+<li>U+2F58 KANGXI RADICAL DOUBLE X: not included in any glyphset definition</li>
+<li>U+2F59 KANGXI RADICAL HALF TREE TRUNK: not included in any glyphset definition</li>
+<li>U+2F5A KANGXI RADICAL SLICE: not included in any glyphset definition</li>
+<li>U+2F5B KANGXI RADICAL FANG: not included in any glyphset definition</li>
+<li>U+2F5C KANGXI RADICAL COW: not included in any glyphset definition</li>
+<li>U+2F5D KANGXI RADICAL DOG: not included in any glyphset definition</li>
+<li>U+2F5E KANGXI RADICAL PROFOUND: not included in any glyphset definition</li>
+<li>U+2F5F KANGXI RADICAL JADE: not included in any glyphset definition</li>
+<li>U+2F60 KANGXI RADICAL MELON: not included in any glyphset definition</li>
+<li>U+2F61 KANGXI RADICAL TILE: not included in any glyphset definition</li>
+<li>U+2F62 KANGXI RADICAL SWEET: not included in any glyphset definition</li>
+<li>U+2F63 KANGXI RADICAL LIFE: not included in any glyphset definition</li>
+<li>U+2F64 KANGXI RADICAL USE: not included in any glyphset definition</li>
+<li>U+2F65 KANGXI RADICAL FIELD: not included in any glyphset definition</li>
+<li>U+2F66 KANGXI RADICAL BOLT OF CLOTH: not included in any glyphset definition</li>
+<li>U+2F67 KANGXI RADICAL SICKNESS: not included in any glyphset definition</li>
+<li>U+2F68 KANGXI RADICAL DOTTED TENT: not included in any glyphset definition</li>
+<li>U+2F69 KANGXI RADICAL WHITE: not included in any glyphset definition</li>
+<li>U+2F6A KANGXI RADICAL SKIN: not included in any glyphset definition</li>
+<li>U+2F6B KANGXI RADICAL DISH: not included in any glyphset definition</li>
+<li>U+2F6C KANGXI RADICAL EYE: not included in any glyphset definition</li>
+<li>U+2F6D KANGXI RADICAL SPEAR: not included in any glyphset definition</li>
+<li>U+2F6E KANGXI RADICAL ARROW: not included in any glyphset definition</li>
+<li>U+2F6F KANGXI RADICAL STONE: not included in any glyphset definition</li>
+<li>U+2F70 KANGXI RADICAL SPIRIT: not included in any glyphset definition</li>
+<li>U+2F71 KANGXI RADICAL TRACK: not included in any glyphset definition</li>
+<li>U+2F72 KANGXI RADICAL GRAIN: not included in any glyphset definition</li>
+<li>U+2F73 KANGXI RADICAL CAVE: not included in any glyphset definition</li>
+<li>U+2F74 KANGXI RADICAL STAND: not included in any glyphset definition</li>
+<li>U+2F75 KANGXI RADICAL BAMBOO: not included in any glyphset definition</li>
+<li>U+2F76 KANGXI RADICAL RICE: not included in any glyphset definition</li>
+<li>U+2F77 KANGXI RADICAL SILK: not included in any glyphset definition</li>
+<li>U+2F78 KANGXI RADICAL JAR: not included in any glyphset definition</li>
+<li>U+2F79 KANGXI RADICAL NET: not included in any glyphset definition</li>
+<li>U+2F7A KANGXI RADICAL SHEEP: not included in any glyphset definition</li>
+<li>U+2F7B KANGXI RADICAL FEATHER: not included in any glyphset definition</li>
+<li>U+2F7C KANGXI RADICAL OLD: not included in any glyphset definition</li>
+<li>U+2F7D KANGXI RADICAL AND: not included in any glyphset definition</li>
+<li>U+2F7E KANGXI RADICAL PLOW: not included in any glyphset definition</li>
+<li>U+2F7F KANGXI RADICAL EAR: not included in any glyphset definition</li>
+<li>U+2F80 KANGXI RADICAL BRUSH: not included in any glyphset definition</li>
+<li>U+2F81 KANGXI RADICAL MEAT: not included in any glyphset definition</li>
+<li>U+2F82 KANGXI RADICAL MINISTER: not included in any glyphset definition</li>
+<li>U+2F83 KANGXI RADICAL SELF: not included in any glyphset definition</li>
+<li>U+2F84 KANGXI RADICAL ARRIVE: not included in any glyphset definition</li>
+<li>U+2F85 KANGXI RADICAL MORTAR: not included in any glyphset definition</li>
+<li>U+2F86 KANGXI RADICAL TONGUE: not included in any glyphset definition</li>
+<li>U+2F87 KANGXI RADICAL OPPOSE: not included in any glyphset definition</li>
+<li>U+2F88 KANGXI RADICAL BOAT: not included in any glyphset definition</li>
+<li>U+2F89 KANGXI RADICAL STOPPING: not included in any glyphset definition</li>
+<li>U+2F8A KANGXI RADICAL COLOR: not included in any glyphset definition</li>
+<li>U+2F8B KANGXI RADICAL GRASS: not included in any glyphset definition</li>
+<li>U+2F8C KANGXI RADICAL TIGER: not included in any glyphset definition</li>
+<li>U+2F8D KANGXI RADICAL INSECT: not included in any glyphset definition</li>
+<li>U+2F8E KANGXI RADICAL BLOOD: not included in any glyphset definition</li>
+<li>U+2F8F KANGXI RADICAL WALK ENCLOSURE: not included in any glyphset definition</li>
+<li>U+2F90 KANGXI RADICAL CLOTHES: not included in any glyphset definition</li>
+<li>U+2F91 KANGXI RADICAL WEST: not included in any glyphset definition</li>
+<li>U+2F92 KANGXI RADICAL SEE: not included in any glyphset definition</li>
+<li>U+2F93 KANGXI RADICAL HORN: not included in any glyphset definition</li>
+<li>U+2F94 KANGXI RADICAL SPEECH: not included in any glyphset definition</li>
+<li>U+2F95 KANGXI RADICAL VALLEY: not included in any glyphset definition</li>
+<li>U+2F96 KANGXI RADICAL BEAN: not included in any glyphset definition</li>
+<li>U+2F97 KANGXI RADICAL PIG: not included in any glyphset definition</li>
+<li>U+2F98 KANGXI RADICAL BADGER: not included in any glyphset definition</li>
+<li>U+2F99 KANGXI RADICAL SHELL: not included in any glyphset definition</li>
+<li>U+2F9A KANGXI RADICAL RED: not included in any glyphset definition</li>
+<li>U+2F9B KANGXI RADICAL RUN: not included in any glyphset definition</li>
+<li>U+2F9C KANGXI RADICAL FOOT: not included in any glyphset definition</li>
+<li>U+2F9D KANGXI RADICAL BODY: not included in any glyphset definition</li>
+<li>U+2F9E KANGXI RADICAL CART: not included in any glyphset definition</li>
+<li>U+2F9F KANGXI RADICAL BITTER: not included in any glyphset definition</li>
+<li>U+2FA0 KANGXI RADICAL MORNING: not included in any glyphset definition</li>
+<li>U+2FA1 KANGXI RADICAL WALK: not included in any glyphset definition</li>
+<li>U+2FA2 KANGXI RADICAL CITY: not included in any glyphset definition</li>
+<li>U+2FA3 KANGXI RADICAL WINE: not included in any glyphset definition</li>
+<li>U+2FA4 KANGXI RADICAL DISTINGUISH: not included in any glyphset definition</li>
+<li>U+2FA5 KANGXI RADICAL VILLAGE: not included in any glyphset definition</li>
+<li>U+2FA6 KANGXI RADICAL GOLD: not included in any glyphset definition</li>
+<li>U+2FA7 KANGXI RADICAL LONG: not included in any glyphset definition</li>
+<li>U+2FA8 KANGXI RADICAL GATE: not included in any glyphset definition</li>
+<li>U+2FA9 KANGXI RADICAL MOUND: not included in any glyphset definition</li>
+<li>U+2FAA KANGXI RADICAL SLAVE: not included in any glyphset definition</li>
+<li>U+2FAB KANGXI RADICAL SHORT TAILED BIRD: not included in any glyphset definition</li>
+<li>U+2FAC KANGXI RADICAL RAIN: not included in any glyphset definition</li>
+<li>U+2FAE KANGXI RADICAL WRONG: not included in any glyphset definition</li>
+<li>U+2FAF KANGXI RADICAL FACE: not included in any glyphset definition</li>
+<li>U+2FB0 KANGXI RADICAL LEATHER: not included in any glyphset definition</li>
+<li>U+2FB1 KANGXI RADICAL TANNED LEATHER: not included in any glyphset definition</li>
+<li>U+2FB2 KANGXI RADICAL LEEK: not included in any glyphset definition</li>
+<li>U+2FB3 KANGXI RADICAL SOUND: not included in any glyphset definition</li>
+<li>U+2FB4 KANGXI RADICAL LEAF: not included in any glyphset definition</li>
+<li>U+2FB5 KANGXI RADICAL WIND: not included in any glyphset definition</li>
+<li>U+2FB6 KANGXI RADICAL FLY: not included in any glyphset definition</li>
+<li>U+2FB7 KANGXI RADICAL EAT: not included in any glyphset definition</li>
+<li>U+2FB8 KANGXI RADICAL HEAD: not included in any glyphset definition</li>
+<li>U+2FB9 KANGXI RADICAL FRAGRANT: not included in any glyphset definition</li>
+<li>U+2FBA KANGXI RADICAL HORSE: not included in any glyphset definition</li>
+<li>U+2FBB KANGXI RADICAL BONE: not included in any glyphset definition</li>
+<li>U+2FBC KANGXI RADICAL TALL: not included in any glyphset definition</li>
+<li>U+2FBD KANGXI RADICAL HAIR: not included in any glyphset definition</li>
+<li>U+2FBE KANGXI RADICAL FIGHT: not included in any glyphset definition</li>
+<li>U+2FBF KANGXI RADICAL SACRIFICIAL WINE: not included in any glyphset definition</li>
+<li>U+2FC0 KANGXI RADICAL CAULDRON: not included in any glyphset definition</li>
+<li>U+2FC1 KANGXI RADICAL GHOST: not included in any glyphset definition</li>
+<li>U+2FC2 KANGXI RADICAL FISH: not included in any glyphset definition</li>
+<li>U+2FC3 KANGXI RADICAL BIRD: not included in any glyphset definition</li>
+<li>U+2FC4 KANGXI RADICAL SALT: not included in any glyphset definition</li>
+<li>U+2FC5 KANGXI RADICAL DEER: not included in any glyphset definition</li>
+<li>U+2FC6 KANGXI RADICAL WHEAT: not included in any glyphset definition</li>
+<li>U+2FC7 KANGXI RADICAL HEMP: not included in any glyphset definition</li>
+<li>U+2FC9 KANGXI RADICAL MILLET: not included in any glyphset definition</li>
+<li>U+2FCA KANGXI RADICAL BLACK: not included in any glyphset definition</li>
+<li>U+2FCB KANGXI RADICAL EMBROIDERY: not included in any glyphset definition</li>
+<li>U+2FCC KANGXI RADICAL FROG: not included in any glyphset definition</li>
+<li>U+2FCD KANGXI RADICAL TRIPOD: not included in any glyphset definition</li>
+<li>U+2FCE KANGXI RADICAL DRUM: not included in any glyphset definition</li>
+<li>U+2FCF KANGXI RADICAL RAT: not included in any glyphset definition</li>
+<li>U+2FD0 KANGXI RADICAL NOSE: not included in any glyphset definition</li>
+<li>U+2FD1 KANGXI RADICAL EVEN: not included in any glyphset definition</li>
+<li>U+2FD2 KANGXI RADICAL TOOTH: not included in any glyphset definition</li>
+<li>U+2FD3 KANGXI RADICAL DRAGON: not included in any glyphset definition</li>
+<li>U+2FD4 KANGXI RADICAL TURTLE: not included in any glyphset definition</li>
+<li>U+2FD5 KANGXI RADICAL FLUTE: not included in any glyphset definition</li>
+<li>U+3004 JAPANESE INDUSTRIAL STANDARD SYMBOL: not included in any glyphset definition</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi</li>
+<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+301A LEFT WHITE SQUARE BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+301B RIGHT WHITE SQUARE BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+301D REVERSED DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+301F LOW DOUBLE PRIME QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+3030 WAVY DASH: not included in any glyphset definition</li>
+<li>U+3031 VERTICAL KANA REPEAT MARK: not included in any glyphset definition</li>
+<li>U+3032 VERTICAL KANA REPEAT WITH VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+3033 VERTICAL KANA REPEAT MARK UPPER HALF: not included in any glyphset definition</li>
+<li>U+3034 VERTICAL KANA REPEAT WITH VOICED SOUND MARK UPPER HALF: not included in any glyphset definition</li>
+<li>U+3035 VERTICAL KANA REPEAT MARK LOWER HALF: not included in any glyphset definition</li>
+<li>U+303B VERTICAL IDEOGRAPHIC ITERATION MARK: not included in any glyphset definition</li>
+<li>U+303C MASU MARK: not included in any glyphset definition</li>
+<li>U+303D PART ALTERNATION MARK: not included in any glyphset definition</li>
+<li>U+3094 HIRAGANA LETTER VU: not included in any glyphset definition</li>
+<li>U+3095 HIRAGANA LETTER SMALL KA: not included in any glyphset definition</li>
+<li>U+3096 HIRAGANA LETTER SMALL KE: not included in any glyphset definition</li>
+<li>U+3099 COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+309A COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+309F HIRAGANA DIGRAPH YORI: not included in any glyphset definition</li>
+<li>U+30A0 KATAKANA-HIRAGANA DOUBLE HYPHEN: not included in any glyphset definition</li>
+<li>U+30F7 KATAKANA LETTER VA: not included in any glyphset definition</li>
+<li>U+30F8 KATAKANA LETTER VI: not included in any glyphset definition</li>
+<li>U+30F9 KATAKANA LETTER VE: not included in any glyphset definition</li>
+<li>U+30FA KATAKANA LETTER VO: not included in any glyphset definition</li>
+<li>U+30FF KATAKANA DIGRAPH KOTO: not included in any glyphset definition</li>
+<li>U+31F0 KATAKANA LETTER SMALL KU: not included in any glyphset definition</li>
+<li>U+31F1 KATAKANA LETTER SMALL SI: not included in any glyphset definition</li>
+<li>U+31F2 KATAKANA LETTER SMALL SU: not included in any glyphset definition</li>
+<li>U+31F3 KATAKANA LETTER SMALL TO: not included in any glyphset definition</li>
+<li>U+31F4 KATAKANA LETTER SMALL NU: not included in any glyphset definition</li>
+<li>U+31F5 KATAKANA LETTER SMALL HA: not included in any glyphset definition</li>
+<li>U+31F6 KATAKANA LETTER SMALL HI: not included in any glyphset definition</li>
+<li>U+31F7 KATAKANA LETTER SMALL HU: not included in any glyphset definition</li>
+<li>U+31F8 KATAKANA LETTER SMALL HE: not included in any glyphset definition</li>
+<li>U+31F9 KATAKANA LETTER SMALL HO: not included in any glyphset definition</li>
+<li>U+31FA KATAKANA LETTER SMALL MU: not included in any glyphset definition</li>
+<li>U+31FB KATAKANA LETTER SMALL RA: not included in any glyphset definition</li>
+<li>U+31FC KATAKANA LETTER SMALL RI: not included in any glyphset definition</li>
+<li>U+31FD KATAKANA LETTER SMALL RU: not included in any glyphset definition</li>
+<li>U+31FE KATAKANA LETTER SMALL RE: not included in any glyphset definition</li>
+<li>U+31FF KATAKANA LETTER SMALL RO: not included in any glyphset definition</li>
+<li>U+322A PARENTHESIZED IDEOGRAPH MOON: not included in any glyphset definition</li>
+<li>U+322B PARENTHESIZED IDEOGRAPH FIRE: not included in any glyphset definition</li>
+<li>U+322C PARENTHESIZED IDEOGRAPH WATER: not included in any glyphset definition</li>
+<li>U+322D PARENTHESIZED IDEOGRAPH WOOD: not included in any glyphset definition</li>
+<li>U+322E PARENTHESIZED IDEOGRAPH METAL: not included in any glyphset definition</li>
+<li>U+322F PARENTHESIZED IDEOGRAPH EARTH: not included in any glyphset definition</li>
+<li>U+3230 PARENTHESIZED IDEOGRAPH SUN: not included in any glyphset definition</li>
+<li>U+3231 PARENTHESIZED IDEOGRAPH STOCK: not included in any glyphset definition</li>
+<li>U+3232 PARENTHESIZED IDEOGRAPH HAVE: not included in any glyphset definition</li>
+<li>U+3233 PARENTHESIZED IDEOGRAPH SOCIETY: not included in any glyphset definition</li>
+<li>U+3234 PARENTHESIZED IDEOGRAPH NAME: not included in any glyphset definition</li>
+<li>U+3235 PARENTHESIZED IDEOGRAPH SPECIAL: not included in any glyphset definition</li>
+<li>U+3236 PARENTHESIZED IDEOGRAPH FINANCIAL: not included in any glyphset definition</li>
+<li>U+3237 PARENTHESIZED IDEOGRAPH CONGRATULATION: not included in any glyphset definition</li>
+<li>U+3238 PARENTHESIZED IDEOGRAPH LABOR: not included in any glyphset definition</li>
+<li>U+3239 PARENTHESIZED IDEOGRAPH REPRESENT: not included in any glyphset definition</li>
+<li>U+323A PARENTHESIZED IDEOGRAPH CALL: not included in any glyphset definition</li>
+<li>U+323B PARENTHESIZED IDEOGRAPH STUDY: not included in any glyphset definition</li>
+<li>U+323C PARENTHESIZED IDEOGRAPH SUPERVISE: not included in any glyphset definition</li>
+<li>U+323D PARENTHESIZED IDEOGRAPH ENTERPRISE: not included in any glyphset definition</li>
+<li>U+323E PARENTHESIZED IDEOGRAPH RESOURCE: not included in any glyphset definition</li>
+<li>U+323F PARENTHESIZED IDEOGRAPH ALLIANCE: not included in any glyphset definition</li>
+<li>U+3240 PARENTHESIZED IDEOGRAPH FESTIVAL: not included in any glyphset definition</li>
+<li>U+3242 PARENTHESIZED IDEOGRAPH SELF: not included in any glyphset definition</li>
+<li>U+3243 PARENTHESIZED IDEOGRAPH REACH: not included in any glyphset definition</li>
+<li>U+3251 CIRCLED NUMBER TWENTY ONE: not included in any glyphset definition</li>
+<li>U+3252 CIRCLED NUMBER TWENTY TWO: not included in any glyphset definition</li>
+<li>U+3253 CIRCLED NUMBER TWENTY THREE: not included in any glyphset definition</li>
+<li>U+3254 CIRCLED NUMBER TWENTY FOUR: not included in any glyphset definition</li>
+<li>U+3255 CIRCLED NUMBER TWENTY FIVE: not included in any glyphset definition</li>
+<li>U+3256 CIRCLED NUMBER TWENTY SIX: not included in any glyphset definition</li>
+<li>U+3257 CIRCLED NUMBER TWENTY SEVEN: not included in any glyphset definition</li>
+<li>U+3258 CIRCLED NUMBER TWENTY EIGHT: not included in any glyphset definition</li>
+<li>U+3259 CIRCLED NUMBER TWENTY NINE: not included in any glyphset definition</li>
+<li>U+325A CIRCLED NUMBER THIRTY: not included in any glyphset definition</li>
+<li>U+325B CIRCLED NUMBER THIRTY ONE: not included in any glyphset definition</li>
+<li>U+325C CIRCLED NUMBER THIRTY TWO: not included in any glyphset definition</li>
+<li>U+325D CIRCLED NUMBER THIRTY THREE: not included in any glyphset definition</li>
+<li>U+325E CIRCLED NUMBER THIRTY FOUR: not included in any glyphset definition</li>
+<li>U+325F CIRCLED NUMBER THIRTY FIVE: not included in any glyphset definition</li>
+<li>U+3296 CIRCLED IDEOGRAPH FINANCIAL: not included in any glyphset definition</li>
+<li>U+3297 CIRCLED IDEOGRAPH CONGRATULATION: not included in any glyphset definition</li>
+<li>U+3298 CIRCLED IDEOGRAPH LABOR: not included in any glyphset definition</li>
+<li>U+3299 CIRCLED IDEOGRAPH SECRET: not included in any glyphset definition</li>
+<li>U+329A CIRCLED IDEOGRAPH MALE: not included in any glyphset definition</li>
+<li>U+329B CIRCLED IDEOGRAPH FEMALE: not included in any glyphset definition</li>
+<li>U+329D CIRCLED IDEOGRAPH EXCELLENT: not included in any glyphset definition</li>
+<li>U+329E CIRCLED IDEOGRAPH PRINT: not included in any glyphset definition</li>
+<li>U+32A4 CIRCLED IDEOGRAPH HIGH: not included in any glyphset definition</li>
+<li>U+32A5 CIRCLED IDEOGRAPH CENTRE: not included in any glyphset definition</li>
+<li>U+32A6 CIRCLED IDEOGRAPH LOW: not included in any glyphset definition</li>
+<li>U+32A7 CIRCLED IDEOGRAPH LEFT: not included in any glyphset definition</li>
+<li>U+32A8 CIRCLED IDEOGRAPH RIGHT: not included in any glyphset definition</li>
+<li>U+32A9 CIRCLED IDEOGRAPH MEDICINE: not included in any glyphset definition</li>
+<li>U+32B1 CIRCLED NUMBER THIRTY SIX: not included in any glyphset definition</li>
+<li>U+32B2 CIRCLED NUMBER THIRTY SEVEN: not included in any glyphset definition</li>
+<li>U+32B3 CIRCLED NUMBER THIRTY EIGHT: not included in any glyphset definition</li>
+<li>U+32B4 CIRCLED NUMBER THIRTY NINE: not included in any glyphset definition</li>
+<li>U+32B5 CIRCLED NUMBER FORTY: not included in any glyphset definition</li>
+<li>U+32B6 CIRCLED NUMBER FORTY ONE: not included in any glyphset definition</li>
+<li>U+32B7 CIRCLED NUMBER FORTY TWO: not included in any glyphset definition</li>
+<li>U+32B8 CIRCLED NUMBER FORTY THREE: not included in any glyphset definition</li>
+<li>U+32B9 CIRCLED NUMBER FORTY FOUR: not included in any glyphset definition</li>
+<li>U+32BA CIRCLED NUMBER FORTY FIVE: not included in any glyphset definition</li>
+<li>U+32BB CIRCLED NUMBER FORTY SIX: not included in any glyphset definition</li>
+<li>U+32BC CIRCLED NUMBER FORTY SEVEN: not included in any glyphset definition</li>
+<li>U+32BD CIRCLED NUMBER FORTY EIGHT: not included in any glyphset definition</li>
+<li>U+32BE CIRCLED NUMBER FORTY NINE: not included in any glyphset definition</li>
+<li>U+32BF CIRCLED NUMBER FIFTY: not included in any glyphset definition</li>
+<li>U+32FF SQUARE ERA NAME REIWA: not included in any glyphset definition</li>
+<li>U+3300 SQUARE APAATO: not included in any glyphset definition</li>
+<li>U+3303 SQUARE AARU: not included in any glyphset definition</li>
+<li>U+3304 SQUARE ININGU: not included in any glyphset definition</li>
+<li>U+3305 SQUARE INTI: not included in any glyphset definition</li>
+<li>U+330D SQUARE KARORII: not included in any glyphset definition</li>
+<li>U+3314 SQUARE KIRO: not included in any glyphset definition</li>
+<li>U+3315 SQUARE KIROGURAMU: not included in any glyphset definition</li>
+<li>U+3316 SQUARE KIROMEETORU: not included in any glyphset definition</li>
+<li>U+3317 SQUARE KIROWATTO: not included in any glyphset definition</li>
+<li>U+3318 SQUARE GURAMU: not included in any glyphset definition</li>
+<li>U+331E SQUARE KOOPO: not included in any glyphset definition</li>
+<li>U+3322 SQUARE SENTI: not included in any glyphset definition</li>
+<li>U+3323 SQUARE SENTO: not included in any glyphset definition</li>
+<li>U+3326 SQUARE DORU: not included in any glyphset definition</li>
+<li>U+3327 SQUARE TON: not included in any glyphset definition</li>
+<li>U+332A SQUARE HAITU: not included in any glyphset definition</li>
+<li>U+332B SQUARE PAASENTO: not included in any glyphset definition</li>
+<li>U+3331 SQUARE BIRU: not included in any glyphset definition</li>
+<li>U+3333 SQUARE HUIITO: not included in any glyphset definition</li>
+<li>U+3336 SQUARE HEKUTAARU: not included in any glyphset definition</li>
+<li>U+3339 SQUARE HERUTU: not included in any glyphset definition</li>
+<li>U+333B SQUARE PEEZI: not included in any glyphset definition</li>
+<li>U+3342 SQUARE HOON: not included in any glyphset definition</li>
+<li>U+3347 SQUARE MANSYON: not included in any glyphset definition</li>
+<li>U+3349 SQUARE MIRI: not included in any glyphset definition</li>
+<li>U+334A SQUARE MIRIBAARU: not included in any glyphset definition</li>
+<li>U+334D SQUARE MEETORU: not included in any glyphset definition</li>
+<li>U+334E SQUARE YAADO: not included in any glyphset definition</li>
+<li>U+3351 SQUARE RITTORU: not included in any glyphset definition</li>
+<li>U+3357 SQUARE WATTO: not included in any glyphset definition</li>
+<li>U+337B SQUARE ERA NAME HEISEI: not included in any glyphset definition</li>
+<li>U+337C SQUARE ERA NAME SYOUWA: not included in any glyphset definition</li>
+<li>U+337D SQUARE ERA NAME TAISYOU: not included in any glyphset definition</li>
+<li>U+337E SQUARE ERA NAME MEIZI: not included in any glyphset definition</li>
+<li>U+337F SQUARE CORPORATION: not included in any glyphset definition</li>
+<li>U+339B SQUARE MU M: not included in any glyphset definition</li>
+<li>U+339C SQUARE MM: try adding chinese-simplified</li>
+<li>U+339D SQUARE CM: try adding chinese-simplified</li>
+<li>U+339E SQUARE KM: not included in any glyphset definition</li>
+<li>U+339F SQUARE MM SQUARED: not included in any glyphset definition</li>
+<li>U+33A0 SQUARE CM SQUARED: not included in any glyphset definition</li>
+<li>U+33A1 SQUARE M SQUARED: try adding chinese-simplified</li>
+<li>U+33A2 SQUARE KM SQUARED: not included in any glyphset definition</li>
+<li>U+33A3 SQUARE MM CUBED: not included in any glyphset definition</li>
+<li>U+33A4 SQUARE CM CUBED: not included in any glyphset definition</li>
+<li>U+33A5 SQUARE M CUBED: not included in any glyphset definition</li>
+<li>U+33A6 SQUARE KM CUBED: not included in any glyphset definition</li>
+<li>U+471F CJK UNIFIED IDEOGRAPH-471F: not included in any glyphset definition</li>
+<li>U+4E28 CJK UNIFIED IDEOGRAPH-4E28: try adding chinese-simplified</li>
+<li>U+4EBB CJK UNIFIED IDEOGRAPH-4EBB: try adding chinese-simplified</li>
+<li>U+5202 CJK UNIFIED IDEOGRAPH-5202: try adding chinese-simplified</li>
+<li>U+525D CJK UNIFIED IDEOGRAPH-525D: try adding chinese-traditional</li>
+<li>U+5350 CJK UNIFIED IDEOGRAPH-5350: try adding chinese-simplified</li>
+<li>U+5861 CJK UNIFIED IDEOGRAPH-5861: not included in any glyphset definition</li>
+<li>U+5FC4 CJK UNIFIED IDEOGRAPH-5FC4: try adding chinese-simplified</li>
+<li>U+624C CJK UNIFIED IDEOGRAPH-624C: try adding chinese-simplified</li>
+<li>U+6C35 CJK UNIFIED IDEOGRAPH-6C35: try adding chinese-simplified</li>
+<li>U+6C3A CJK UNIFIED IDEOGRAPH-6C3A: try adding chinese-simplified</li>
+<li>U+706C CJK UNIFIED IDEOGRAPH-706C: try adding chinese-simplified</li>
+<li>U+72AD CJK UNIFIED IDEOGRAPH-72AD: not included in any glyphset definition</li>
+<li>U+7592 CJK UNIFIED IDEOGRAPH-7592: not included in any glyphset definition</li>
+<li>U+793B CJK UNIFIED IDEOGRAPH-793B: not included in any glyphset definition</li>
+<li>U+79B8 CJK UNIFIED IDEOGRAPH-79B8: not included in any glyphset definition</li>
+<li>U+7F52 CJK UNIFIED IDEOGRAPH-7F52: try adding chinese-simplified</li>
+<li>U+8002 CJK UNIFIED IDEOGRAPH-8002: not included in any glyphset definition</li>
+<li>U+8279 CJK UNIFIED IDEOGRAPH-8279: try adding chinese-simplified</li>
+<li>U+8864 CJK UNIFIED IDEOGRAPH-8864: not included in any glyphset definition</li>
+<li>U+8980 CJK UNIFIED IDEOGRAPH-8980: not included in any glyphset definition</li>
+<li>U+8A01 CJK UNIFIED IDEOGRAPH-8A01: not included in any glyphset definition</li>
+<li>U+8FB5 CJK UNIFIED IDEOGRAPH-8FB5: not included in any glyphset definition</li>
+<li>U+8FB6 CJK UNIFIED IDEOGRAPH-8FB6: not included in any glyphset definition</li>
+<li>U+9830 CJK UNIFIED IDEOGRAPH-9830: try adding chinese-traditional</li>
+<li>U+98E0 CJK UNIFIED IDEOGRAPH-98E0: not included in any glyphset definition</li>
+<li>U+FA66 CJK COMPATIBILITY IDEOGRAPH-FA66: not included in any glyphset definition</li>
+<li>U+FE10 PRESENTATION FORM FOR VERTICAL COMMA: not included in any glyphset definition</li>
+<li>U+FE11 PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC COMMA: not included in any glyphset definition</li>
+<li>U+FE12 PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC FULL STOP: not included in any glyphset definition</li>
+<li>U+FE17 PRESENTATION FORM FOR VERTICAL LEFT WHITE LENTICULAR BRACKET: not included in any glyphset definition</li>
+<li>U+FE18 PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRAKCET: not included in any glyphset definition</li>
+<li>U+FE19 PRESENTATION FORM FOR VERTICAL HORIZONTAL ELLIPSIS: not included in any glyphset definition</li>
+<li>U+FE30 PRESENTATION FORM FOR VERTICAL TWO DOT LEADER: try adding chinese-simplified</li>
+<li>U+FE31 PRESENTATION FORM FOR VERTICAL EM DASH: try adding chinese-simplified</li>
+<li>U+FE32 PRESENTATION FORM FOR VERTICAL EN DASH: not included in any glyphset definition</li>
+<li>U+FE33 PRESENTATION FORM FOR VERTICAL LOW LINE: not included in any glyphset definition</li>
+<li>U+FE35 PRESENTATION FORM FOR VERTICAL LEFT PARENTHESIS: try adding chinese-simplified</li>
+<li>U+FE36 PRESENTATION FORM FOR VERTICAL RIGHT PARENTHESIS: try adding chinese-simplified</li>
+<li>U+FE37 PRESENTATION FORM FOR VERTICAL LEFT CURLY BRACKET: not included in any glyphset definition</li>
+<li>U+FE38 PRESENTATION FORM FOR VERTICAL RIGHT CURLY BRACKET: not included in any glyphset definition</li>
+<li>U+FE39 PRESENTATION FORM FOR VERTICAL LEFT TORTOISE SHELL BRACKET: try adding chinese-simplified</li>
+<li>U+FE3A PRESENTATION FORM FOR VERTICAL RIGHT TORTOISE SHELL BRACKET: not included in any glyphset definition</li>
+<li>U+FE3B PRESENTATION FORM FOR VERTICAL LEFT BLACK LENTICULAR BRACKET: not included in any glyphset definition</li>
+<li>U+FE3C PRESENTATION FORM FOR VERTICAL RIGHT BLACK LENTICULAR BRACKET: not included in any glyphset definition</li>
+<li>U+FE3D PRESENTATION FORM FOR VERTICAL LEFT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE3E PRESENTATION FORM FOR VERTICAL RIGHT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE3F PRESENTATION FORM FOR VERTICAL LEFT ANGLE BRACKET: try adding chinese-simplified</li>
+<li>U+FE40 PRESENTATION FORM FOR VERTICAL RIGHT ANGLE BRACKET: try adding chinese-simplified</li>
+<li>U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE42 PRESENTATION FORM FOR VERTICAL RIGHT CORNER BRACKET: try adding mongolian</li>
+<li>U+FE43 PRESENTATION FORM FOR VERTICAL LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE44 PRESENTATION FORM FOR VERTICAL RIGHT WHITE CORNER BRACKET: try adding mongolian</li>
+<li>U+FE45 SESAME DOT: not included in any glyphset definition</li>
+<li>U+FE46 WHITE SESAME DOT: not included in any glyphset definition</li>
+<li>U+FE47 PRESENTATION FORM FOR VERTICAL LEFT SQUARE BRACKET: not included in any glyphset definition</li>
+<li>U+FE48 PRESENTATION FORM FOR VERTICAL RIGHT SQUARE BRACKET: not included in any glyphset definition</li>
+<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding chinese-simplified</li>
+<li>U+FF07 FULLWIDTH APOSTROPHE: try adding chinese-simplified</li>
+<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding chinese-simplified</li>
+<li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding chinese-simplified</li>
+<li>U+FF5E FULLWIDTH TILDE: try adding chinese-simplified</li>
+<li>U+FF5F FULLWIDTH LEFT WHITE PARENTHESIS: not included in any glyphset definition</li>
+<li>U+FF60 FULLWIDTH RIGHT WHITE PARENTHESIS: not included in any glyphset definition</li>
+<li>U+FF61 HALFWIDTH IDEOGRAPHIC FULL STOP: try adding yi</li>
+<li>U+FF62 HALFWIDTH LEFT CORNER BRACKET: try adding yi</li>
+<li>U+FF63 HALFWIDTH RIGHT CORNER BRACKET: try adding yi</li>
+<li>U+FF64 HALFWIDTH IDEOGRAPHIC COMMA: try adding yi</li>
+<li>U+FF65 HALFWIDTH KATAKANA MIDDLE DOT: try adding yi</li>
+<li>U+FF66 HALFWIDTH KATAKANA LETTER WO: not included in any glyphset definition</li>
+<li>U+FF67 HALFWIDTH KATAKANA LETTER SMALL A: not included in any glyphset definition</li>
+<li>U+FF68 HALFWIDTH KATAKANA LETTER SMALL I: not included in any glyphset definition</li>
+<li>U+FF69 HALFWIDTH KATAKANA LETTER SMALL U: not included in any glyphset definition</li>
+<li>U+FF6A HALFWIDTH KATAKANA LETTER SMALL E: not included in any glyphset definition</li>
+<li>U+FF6B HALFWIDTH KATAKANA LETTER SMALL O: not included in any glyphset definition</li>
+<li>U+FF6C HALFWIDTH KATAKANA LETTER SMALL YA: not included in any glyphset definition</li>
+<li>U+FF6D HALFWIDTH KATAKANA LETTER SMALL YU: not included in any glyphset definition</li>
+<li>U+FF6E HALFWIDTH KATAKANA LETTER SMALL YO: not included in any glyphset definition</li>
+<li>U+FF6F HALFWIDTH KATAKANA LETTER SMALL TU: not included in any glyphset definition</li>
+<li>U+FF70 HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK: not included in any glyphset definition</li>
+<li>U+FF71 HALFWIDTH KATAKANA LETTER A: not included in any glyphset definition</li>
+<li>U+FF72 HALFWIDTH KATAKANA LETTER I: not included in any glyphset definition</li>
+<li>U+FF73 HALFWIDTH KATAKANA LETTER U: not included in any glyphset definition</li>
+<li>U+FF74 HALFWIDTH KATAKANA LETTER E: not included in any glyphset definition</li>
+<li>U+FF75 HALFWIDTH KATAKANA LETTER O: not included in any glyphset definition</li>
+<li>U+FF76 HALFWIDTH KATAKANA LETTER KA: not included in any glyphset definition</li>
+<li>U+FF77 HALFWIDTH KATAKANA LETTER KI: not included in any glyphset definition</li>
+<li>U+FF78 HALFWIDTH KATAKANA LETTER KU: not included in any glyphset definition</li>
+<li>U+FF79 HALFWIDTH KATAKANA LETTER KE: not included in any glyphset definition</li>
+<li>U+FF7A HALFWIDTH KATAKANA LETTER KO: not included in any glyphset definition</li>
+<li>U+FF7B HALFWIDTH KATAKANA LETTER SA: not included in any glyphset definition</li>
+<li>U+FF7C HALFWIDTH KATAKANA LETTER SI: not included in any glyphset definition</li>
+<li>U+FF7D HALFWIDTH KATAKANA LETTER SU: not included in any glyphset definition</li>
+<li>U+FF7E HALFWIDTH KATAKANA LETTER SE: not included in any glyphset definition</li>
+<li>U+FF7F HALFWIDTH KATAKANA LETTER SO: not included in any glyphset definition</li>
+<li>U+FF80 HALFWIDTH KATAKANA LETTER TA: not included in any glyphset definition</li>
+<li>U+FF81 HALFWIDTH KATAKANA LETTER TI: not included in any glyphset definition</li>
+<li>U+FF82 HALFWIDTH KATAKANA LETTER TU: not included in any glyphset definition</li>
+<li>U+FF83 HALFWIDTH KATAKANA LETTER TE: not included in any glyphset definition</li>
+<li>U+FF84 HALFWIDTH KATAKANA LETTER TO: not included in any glyphset definition</li>
+<li>U+FF85 HALFWIDTH KATAKANA LETTER NA: not included in any glyphset definition</li>
+<li>U+FF86 HALFWIDTH KATAKANA LETTER NI: not included in any glyphset definition</li>
+<li>U+FF87 HALFWIDTH KATAKANA LETTER NU: not included in any glyphset definition</li>
+<li>U+FF88 HALFWIDTH KATAKANA LETTER NE: not included in any glyphset definition</li>
+<li>U+FF89 HALFWIDTH KATAKANA LETTER NO: not included in any glyphset definition</li>
+<li>U+FF8A HALFWIDTH KATAKANA LETTER HA: not included in any glyphset definition</li>
+<li>U+FF8B HALFWIDTH KATAKANA LETTER HI: not included in any glyphset definition</li>
+<li>U+FF8C HALFWIDTH KATAKANA LETTER HU: not included in any glyphset definition</li>
+<li>U+FF8D HALFWIDTH KATAKANA LETTER HE: not included in any glyphset definition</li>
+<li>U+FF8E HALFWIDTH KATAKANA LETTER HO: not included in any glyphset definition</li>
+<li>U+FF8F HALFWIDTH KATAKANA LETTER MA: not included in any glyphset definition</li>
+<li>U+FF90 HALFWIDTH KATAKANA LETTER MI: not included in any glyphset definition</li>
+<li>U+FF91 HALFWIDTH KATAKANA LETTER MU: not included in any glyphset definition</li>
+<li>U+FF92 HALFWIDTH KATAKANA LETTER ME: not included in any glyphset definition</li>
+<li>U+FF93 HALFWIDTH KATAKANA LETTER MO: not included in any glyphset definition</li>
+<li>U+FF94 HALFWIDTH KATAKANA LETTER YA: not included in any glyphset definition</li>
+<li>U+FF95 HALFWIDTH KATAKANA LETTER YU: not included in any glyphset definition</li>
+<li>U+FF96 HALFWIDTH KATAKANA LETTER YO: not included in any glyphset definition</li>
+<li>U+FF97 HALFWIDTH KATAKANA LETTER RA: not included in any glyphset definition</li>
+<li>U+FF98 HALFWIDTH KATAKANA LETTER RI: not included in any glyphset definition</li>
+<li>U+FF99 HALFWIDTH KATAKANA LETTER RU: not included in any glyphset definition</li>
+<li>U+FF9A HALFWIDTH KATAKANA LETTER RE: not included in any glyphset definition</li>
+<li>U+FF9B HALFWIDTH KATAKANA LETTER RO: not included in any glyphset definition</li>
+<li>U+FF9C HALFWIDTH KATAKANA LETTER WA: not included in any glyphset definition</li>
+<li>U+FF9D HALFWIDTH KATAKANA LETTER N: not included in any glyphset definition</li>
+<li>U+FF9E HALFWIDTH KATAKANA VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+FF9F HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+FFE0 FULLWIDTH CENT SIGN: try adding chinese-simplified</li>
+<li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
+<li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
+<li>U+FFE4 FULLWIDTH BROKEN BAR: not included in any glyphset definition</li>
+<li>U+FFE6 FULLWIDTH WON SIGN: not included in any glyphset definition</li>
+<li>U+201A2 CJK UNIFIED IDEOGRAPH-201A2: not included in any glyphset definition</li>
+<li>U+20B9F CJK UNIFIED IDEOGRAPH-20B9F: not included in any glyphset definition</li>
+<li>U+20BB7 CJK UNIFIED IDEOGRAPH-20BB7: not included in any glyphset definition</li>
+<li>U+25771 CJK UNIFIED IDEOGRAPH-25771: not included in any glyphset definition</li>
+<li>U+2634C CJK UNIFIED IDEOGRAPH-2634C: not included in any glyphset definition</li>
+<li>U+26ED9 CJK UNIFIED IDEOGRAPH-26ED9: not included in any glyphset definition</li>
+<li>U+27FB7 CJK UNIFIED IDEOGRAPH-27FB7: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic</code>, <code>cyrillic-ext</code>, <code>greek</code>, <code>japanese</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 1.4Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_name_values&gt;</div>
+
+<details><summary>🔥 Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.name field (&quot;Murecho&quot;) does not match correct font name format (&quot;Murecho Thin&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+
+<details><summary>🔥 Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: https://github.com/positype/Murecho-Project
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check for primary_script</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: primary_script field should be 'Hani' but is missing.
+Make sure that 'Hani' is actually the correct one (out of Jpan, Hani, Hant, Hans). [code: missing-primary-script]</p>
+</span></li></ul></div></details>
+<h3>Glyphs are similiar to Google Fonts version?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/production_glyphs_similarity&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* .notdef
+* A
+* AE
+* AEacute
+* Aacute
+* Abreve
+* Acircumflex
+* Adieresis
+* Agrave
+* Alpha
+* Alphatonos
+* Amacron
+* Aogonek
+* Aring
+* Atilde
+* B
+* Beta
+* C
+* Cacute
+* Ccaron
+* Ccedilla
+* Ccircumflex
+* Cdotaccent
+* Chi
+* D
+* Dcaron
+* Dcroat
+* E
+* Eacute
+* Ebreve
+* Ecaron
+* Ecircumflex
+* Edieresis
+* Edotaccent
+* Egrave
+* Emacron
+* Eng
+* Eogonek
+* Epsilon
+* Epsilontonos
+* Eta
+* Etatonos
+* Eth
+* Euro
+* F
+* G
+* Gamma
+* Gbreve
+* Gcaron
+* Gcircumflex
+* Gdotaccent
+* H
+* Hbar
+* Hcircumflex
+* I
+* IJ
+* Iacute
+* Icircumflex
+* Idieresis
+* Idotaccent
+* Igrave
+* Imacron
+* Iogonek
+* Iota
+* Iotadieresis
+* Iotatonos
+* Itilde
+* J
+* K
+* Kappa
+* L
+* Lacute
+* Lambda
+* Lcaron
+* Ldot
+* Lslash
+* M
+* Mu
+* N
+* Nacute
+* Ncaron
+* Ntilde
+* Nu
+* O
+* OE
+* Oacute
+* Obreve
+* Ocircumflex
+* Odieresis
+* Ograve
+* Ohungarumlaut
+* Omacron
+* Omegatonos
+* Omicron
+* Omicrontonos
+* Oslash
+* Otilde
+* P
+* Phi
+* Pi
+* Psi
+* Q
+* R
+* Racute
+* Rcaron
+* Rho
+* S
+* Sacute
+* Scaron
+* Scedilla
+* Scircumflex
+* Sigma
+* T
+* Tau
+* Tbar
+* Tcaron
+* Theta
+* Thorn
+* U
+* Uacute
+* Ucircumflex
+* Udieresis
+* Ugrave
+* Uhungarumlaut
+* Umacron
+* Uogonek
+* Upsilon
+* Upsilondieresis
+* Upsilontonos
+* Uring
+* Utilde
+* V
+* W
+* Wacute
+* Wcircumflex
+* Wdieresis
+* Wgrave
+* X
+* Xi
+* Y
+* Yacute
+* Ycircumflex
+* Ydieresis
+* Ygrave
+* Z
+* Zacute
+* Zcaron
+* Zdotaccent
+* Zeta
+* a
+* aacute
+* abreve
+* acircumflex
+* adieresis
+* ae
+* aeacute
+* agrave
+* alpha
+* alphatonos
+* amacron
+* ampersand
+* angle
+* angleleft
+* angleright
+* anoteleia
+* aogonek
+* approxequal
+* aring
+* arrowboth
+* arrowboth.vert
+* arrowdblboth
+* arrowdbldown
+* arrowdblleft
+* arrowdblright
+* arrowdblup
+* arrowdown
+* arrowdown.vert
+* arrowleft
+* arrowleft.vert
+* arrowright
+* arrowright.vert
+* arrowup
+* arrowup.vert
+* arrowupdn
+* arrowupdn.vert
+* arrowupdnbse
+* asciicircum
+* asciitilde
+* asciitilde.full.vert
+* asterisk
+* asteriskmath
+* at
+* atilde
+* b
+* backslash
+* bar
+* bar.full.vert
+* beta
+* braceleft
+* braceright
+* bracketleft
+* bracketright
+* breve
+* brokenbar
+* bullet
+* c
+* cacute
+* caron
+* ccaron
+* ccedilla
+* ccircumflex
+* cdotaccent
+* cedilla
+* cent
+* chi
+* circle
+* circlemultiply
+* circleplus
+* circumflex
+* colon
+* colon.full.vert
+* comma
+* congruent
+* copyright
+* currency
+* d
+* dagger
+* daggerdbl
+* dcaron
+* dcroat
+* degree
+* delta
+* dieresis
+* dieresistonos
+* divide
+* dollar
+* dong
+* dotlessi
+* dotmath
+* e
+* eacute
+* ebreve
+* ecaron
+* ecircumflex
+* edieresis
+* edotaccent
+* egrave
+* eight
+* eight.dnom
+* eight.numr
+* element
+* ellipsis
+* emacron
+* emdash
+* emptyset
+* endash
+* eng
+* eogonek
+* epsilon
+* epsilontonos
+* equal
+* equal.full.vert
+* equivalence
+* eta
+* etatonos
+* eth
+* exclam
+* exclamdbl
+* exclamdown
+* existential
+* f
+* female
+* figuredash
+* figuredash.vert
+* five
+* five.dnom
+* five.numr
+* fiveeighths
+* florin
+* four
+* four.dnom
+* four.numr
+* fraction
+* franc
+* g
+* gamma
+* gbreve
+* gcaron
+* gcircumflex
+* gdotaccent
+* germandbls
+* gradient
+* greater
+* greaterequal
+* guillemotleft
+* guillemotright
+* guilsinglleft
+* guilsinglright
+* h
+* hbar
+* hcircumflex
+* heart
+* house
+* hungarumlaut
+* hyphen
+* i
+* i.loclTRK
+* iacute
+* ibreve
+* icircumflex
+* idieresis
+* igrave
+* imacron
+* infinity
+* integral
+* integralbt
+* integraltp
+* intersection
+* invbullet
+* invcircle
+* invsmileface
+* iogonek
+* iota
+* iotadieresis
+* iotadieresistonos
+* iotatonos
+* itilde
+* j
+* jcircumflex
+* k
+* kappa
+* kgreenlandic
+* l
+* lacute
+* lambda
+* lcaron
+* ldot
+* less
+* lessequal
+* lira
+* logicaland
+* logicalnot
+* logicalor
+* lozenge
+* lslash
+* m
+* macron
+* macron.full.vert
+* male
+* minus
+* minute
+* multiply
+* musicalnote
+* musicalnotedbl
+* n
+* nacute
+* ncaron
+* nine
+* nine.dnom
+* nine.numr
+* notelement
+* notequal
+* notsubset
+* ntilde
+* nu
+* numbersign
+* o
+* oacute
+* obreve
+* ocircumflex
+* odieresis
+* oe
+* ogonek
+* ograve
+* ohungarumlaut
+* omacron
+* omega
+* omegatonos
+* omicron
+* omicrontonos
+* one
+* one.dnom
+* one.numr
+* onedotenleader
+* oneeighth
+* onehalf
+* onequarter
+* openbullet
+* ordfeminine
+* ordmasculine
+* orthogonal
+* oslash
+* oslashacute
+* otilde
+* p
+* paragraph
+* parenleft
+* parenright
+* partialdiff
+* percent
+* period
+* period.full.vert
+* periodcentered
+* perthousand
+* phi
+* pi
+* plus
+* plusminus
+* prescription
+* product
+* propersubset
+* propersuperset
+* proportional
+* psi
+* q
+* question
+* questiondown
+* quotedbl
+* quotedblbase
+* quotedblbase.vert
+* quotedblleft
+* quotedblleft.vert
+* quotedblright
+* quotedblright.vert
+* quoteleft
+* quoteleft.vert
+* quotereversed
+* quotereversed.vert
+* quoteright
+* quoteright.vert
+* quotesinglbase
+* quotesinglbase.vert
+* quotesingle
+* r
+* racute
+* radical
+* rcaron
+* reflexsubset
+* reflexsuperset
+* registered
+* revlogicalnot
+* rho
+* ring
+* s
+* sacute
+* scaron
+* scedilla
+* scircumflex
+* second
+* section
+* semicolon
+* seven
+* seven.dnom
+* seven.numr
+* seveneighths
+* sigma
+* similar
+* six
+* six.dnom
+* six.numr
+* slash
+* smileface
+* sterling
+* suchthat
+* summation
+* sun
+* t
+* tau
+* tbar
+* tcaron
+* therefore
+* theta
+* thorn
+* three
+* three.dnom
+* three.numr
+* threeeighths
+* threequarters
+* tilde
+* tildecomb
+* tildecomb.case
+* tildecomb.narrow
+* tonos
+* trademark
+* two
+* two.dnom
+* two.numr
+* twodotenleader
+* twodotenleader.vert
+* u
+* u201A2
+* u20B9F
+* u20BB7
+* u25771
+* u2634C
+* u26ED9
+* u27FB7
+* uacute
+* ubreve
+* ucircumflex
+* udieresis
+* ugrave
+* uhungarumlaut
+* umacron
+* underscore
+* underscoredbl
+* underscoredbl.vert
+* uni00AD
+* uni00B2
+* uni00B3
+* uni00B5
+* uni00B9
+* uni0122
+* uni0123
+* uni0136
+* uni0137
+* uni013B
+* uni013C
+* uni0145
+* uni0146
+* uni0156
+* uni0157
+* uni0162
+* uni0163
+* uni0189
+* uni01C9
+* uni01CD
+* uni01CE
+* uni01D0
+* uni01D1
+* uni01D2
+* uni01D3
+* uni01D4
+* uni01E2
+* uni01E3
+* uni01E8
+* uni01E9
+* uni01F0
+* uni01F4
+* uni01F5
+* uni01F8
+* uni01F9
+* uni0218
+* uni0219
+* uni021A
+* uni021B
+* uni021E
+* uni021F
+* uni0226
+* uni0227
+* uni0228
+* uni0229
+* uni022E
+* uni022F
+* uni0233
+* uni0237
+* uni023D
+* uni0262
+* uni026A
+* uni0274
+* uni0276
+* uni0280
+* uni028F
+* uni0299
+* uni029C
+* uni029F
+* uni0302
+* uni0302.case
+* uni0302.narrow
+* uni0304
+* uni0304.case
+* uni0306
+* uni0306.case
+* uni0306.narrow
+* uni0308
+* uni0308.case
+* uni0308.narrow
+* uni030A
+* uni030A.case
+* uni030B
+* uni030B.case
+* uni030C
+* uni030C.case
+* uni030C.narrow
+* uni0324
+* uni0327
+* uni0328
+* uni032D
+* uni0330
+* uni0335
+* uni0374
+* uni0375
+* uni037E
+* uni0394
+* uni03A9
+* uni03BC
+* uni03C2
+* uni0400
+* uni0401
+* uni0402
+* uni0403
+* uni0404
+* uni0405
+* uni0406
+* uni0407
+* uni0408
+* uni0409
+* uni040A
+* uni040B
+* uni040C
+* uni040D
+* uni040F
+* uni0410
+* uni0411
+* uni0412
+* uni0413
+* uni0414
+* uni0415
+* uni0416
+* uni0417
+* uni0418
+* uni0419
+* uni041A
+* uni041B
+* uni041C
+* uni041D
+* uni041E
+* uni041F
+* uni0420
+* uni0421
+* uni0422
+* uni0423
+* uni0424
+* uni0425
+* uni0426
+* uni0427
+* uni0428
+* uni0429
+* uni042A
+* uni042B
+* uni042C
+* uni042D
+* uni042E
+* uni042F
+* uni0430
+* uni0431
+* uni0432
+* uni0433
+* uni0434
+* uni0435
+* uni0436
+* uni0437
+* uni0438
+* uni0439
+* uni043A
+* uni043B
+* uni043C
+* uni043D
+* uni043E
+* uni043F
+* uni0440
+* uni0441
+* uni0442
+* uni0443
+* uni0444
+* uni0445
+* uni0446
+* uni0447
+* uni0448
+* uni0449
+* uni044A
+* uni044B
+* uni044C
+* uni044D
+* uni044E
+* uni044F
+* uni0450
+* uni0451
+* uni0452
+* uni0453
+* uni0454
+* uni0455
+* uni0456
+* uni0457
+* uni0458
+* uni0459
+* uni045A
+* uni045B
+* uni045C
+* uni045D
+* uni045F
+* uni0462
+* uni0463
+* uni0490
+* uni0491
+* uni04C0
+* uni05BE
+* uni05C0
+* uni05C3
+* uni05F3
+* uni05F4
+* uni0E3F
+* uni1D00
+* uni1D01
+* uni1D04
+* uni1D05
+* uni1D06
+* uni1D07
+* uni1D0A
+* uni1D0B
+* uni1D0C
+* uni1D0D
+* uni1D0F
+* uni1D18
+* uni1D1B
+* uni1D1C
+* uni1D20
+* uni1D21
+* uni1D22
+* uni1E02
+* uni1E03
+* uni1E04
+* uni1E05
+* uni1E09
+* uni1E0A
+* uni1E0C
+* uni1E13
+* uni1E18
+* uni1E19
+* uni1E1A
+* uni1E1B
+* uni1E1D
+* uni1E1E
+* uni1E20
+* uni1E21
+* uni1E22
+* uni1E23
+* uni1E24
+* uni1E25
+* uni1E26
+* uni1E27
+* uni1E2D
+* uni1E30
+* uni1E31
+* uni1E32
+* uni1E33
+* uni1E36
+* uni1E37
+* uni1E39
+* uni1E3C
+* uni1E3E
+* uni1E3F
+* uni1E40
+* uni1E41
+* uni1E42
+* uni1E43
+* uni1E44
+* uni1E45
+* uni1E46
+* uni1E47
+* uni1E4A
+* uni1E4B
+* uni1E54
+* uni1E55
+* uni1E56
+* uni1E57
+* uni1E58
+* uni1E59
+* uni1E5A
+* uni1E5B
+* uni1E5D
+* uni1E60
+* uni1E61
+* uni1E62
+* uni1E63
+* uni1E69
+* uni1E6A
+* uni1E6B
+* uni1E6C
+* uni1E6D
+* uni1E70
+* uni1E71
+* uni1E72
+* uni1E73
+* uni1E75
+* uni1E76
+* uni1E77
+* uni1E7D
+* uni1E7E
+* uni1E7F
+* uni1E86
+* uni1E87
+* uni1E88
+* uni1E89
+* uni1E8A
+* uni1E8B
+* uni1E8C
+* uni1E8D
+* uni1E8E
+* uni1E8F
+* uni1E90
+* uni1E91
+* uni1E92
+* uni1E93
+* uni1E97
+* uni1E98
+* uni1E99
+* uni1E9E
+* uni1EA0
+* uni1EA1
+* uni1EAC
+* uni1EAD
+* uni1EB6
+* uni1EB7
+* uni1EB8
+* uni1EB9
+* uni1EBC
+* uni1EBD
+* uni1EC6
+* uni1EC7
+* uni1ECB
+* uni1ECC
+* uni1ECD
+* uni1ED8
+* uni1ED9
+* uni1EE4
+* uni1EE5
+* uni1EF4
+* uni1EF5
+* uni1EF8
+* uni1EF9
+* uni2010
+* uni2010.vert
+* uni2011
+* uni2011.vert
+* uni2015
+* uni2015.vert
+* uni2016
+* uni2016.vert
+* uni201F
+* uni201F.vert
+* uni2023
+* uni2027
+* uni2031
+* uni2034
+* uni2035
+* uni2036
+* uni2037
+* uni203B
+* uni203D
+* uni203E
+* uni203F
+* uni2040
+* uni2043
+* uni2045
+* uni2046
+* uni2047
+* uni2048
+* uni2049
+* uni204A
+* uni204B
+* uni204F
+* uni2050
+* uni2052
+* uni2053
+* uni2070
+* uni2074
+* uni2075
+* uni2076
+* uni2077
+* uni2078
+* uni2079
+* uni207A
+* uni207B
+* uni207C
+* uni207D
+* uni207E
+* uni2080
+* uni2081
+* uni2082
+* uni2083
+* uni2084
+* uni2085
+* uni2086
+* uni2087
+* uni2088
+* uni2089
+* uni208A
+* uni208B
+* uni208C
+* uni208D
+* uni208E
+* uni20A6
+* uni20A9
+* uni20AA
+* uni20AD
+* uni20B1
+* uni20B2
+* uni20B9
+* uni20BD
+* uni20BF
+* uni2103
+* uni2105
+* uni2109
+* uni2116
+* uni2117
+* uni2120
+* uni2126
+* uni2127
+* uni213A
+* uni2141
+* uni2142
+* uni2143
+* uni2144
+* uni214B
+* uni2153
+* uni2154
+* uni2155
+* uni2156
+* uni2157
+* uni2158
+* uni2159
+* uni215A
+* uni215F
+* uni2160
+* uni2161
+* uni2162
+* uni2163
+* uni2164
+* uni2165
+* uni2166
+* uni2167
+* uni2168
+* uni2169
+* uni216A
+* uni216C
+* uni216D
+* uni216E
+* uni216F
+* uni2170
+* uni2171
+* uni2172
+* uni2173
+* uni2174
+* uni2175
+* uni2176
+* uni2177
+* uni2178
+* uni2179
+* uni217A
+* uni217B
+* uni217C
+* uni217D
+* uni217E
+* uni217F
+* uni2196
+* uni2196.vert
+* uni2197
+* uni2197.vert
+* uni2198
+* uni2198.vert
+* uni2199
+* uni2199.vert
+* uni21B0
+* uni21B1
+* uni21B2
+* uni21B3
+* uni21B4
+* uni21B9
+* uni21C4
+* uni21C5
+* uni21C6
+* uni21C7
+* uni21C8
+* uni21C9
+* uni21CA
+* uni21D5
+* uni21D6
+* uni21D7
+* uni21D8
+* uni21D9
+* uni21E4
+* uni21E5
+* uni21E6
+* uni21E7
+* uni21E8
+* uni21E9
+* uni21EB
+* uni21EC
+* uni21ED
+* uni2201
+* uni2204
+* uni2206
+* uni220C
+* uni220E
+* uni2210
+* uni2213
+* uni2215
+* uni2216
+* uni2218
+* uni2219
+* uni221B
+* uni221C
+* uni2225
+* uni2225.vert
+* uni2226
+* uni2226.vert
+* uni222C
+* uni222D
+* uni222E
+* uni222F
+* uni2230
+* uni2231
+* uni2232
+* uni2233
+* uni2235
+* uni223D
+* uni2242
+* uni2243
+* uni2250
+* uni2251
+* uni2252
+* uni2253
+* uni2262
+* uni2266
+* uni2267
+* uni226A
+* uni226B
+* uni2276
+* uni2277
+* uni2285
+* uni2288
+* uni2289
+* uni2296
+* uni2298
+* uni229D
+* uni22A2
+* uni22A3
+* uni22A4
+* uni22A5
+* uni22BB
+* uni22BC
+* uni22BD
+* uni22BF
+* uni22C0
+* uni22C1
+* uni22C2
+* uni22C3
+* uni22EE
+* uni22EF
+* uni2300
+* uni2307
+* uni2308
+* uni2309
+* uni230A
+* uni230B
+* uni2312
+* uni2422
+* uni2423
+* uni2426
+* uni2460
+* uni2461
+* uni2462
+* uni2463
+* uni2464
+* uni2465
+* uni2466
+* uni2467
+* uni2468
+* uni2469
+* uni246A
+* uni246B
+* uni246C
+* uni246D
+* uni246E
+* uni246F
+* uni2470
+* uni2471
+* uni2472
+* uni2473
+* uni24B8
+* uni24C5
+* uni24C7
+* uni24C8
+* uni24EA
+* uni24EB
+* uni24EC
+* uni24ED
+* uni24EE
+* uni24EF
+* uni24F0
+* uni24F1
+* uni24F2
+* uni24F3
+* uni24F4
+* uni24F5
+* uni24F6
+* uni24F7
+* uni24F8
+* uni24F9
+* uni24FA
+* uni24FB
+* uni24FC
+* uni24FD
+* uni24FE
+* uni24FF
+* uni2500
+* uni2500.vert
+* uni2501
+* uni2501.vert
+* uni2502
+* uni2502.vert
+* uni2503
+* uni2503.vert
+* uni2504
+* uni2504.vert
+* uni2505
+* uni2505.vert
+* uni2506
+* uni2506.vert
+* uni2507
+* uni2507.vert
+* uni2508
+* uni2508.vert
+* uni2509
+* uni2509.vert
+* uni250A
+* uni250A.vert
+* uni250B
+* uni250B.vert
+* uni250C
+* uni250C.vert
+* uni250D
+* uni250D.vert
+* uni250E
+* uni250E.vert
+* uni250F
+* uni250F.vert
+* uni2510
+* uni2510.vert
+* uni2511
+* uni2511.vert
+* uni2512
+* uni2512.vert
+* uni2513
+* uni2513.vert
+* uni2514
+* uni2514.vert
+* uni2515
+* uni2515.vert
+* uni2516
+* uni2516.vert
+* uni2517
+* uni2517.vert
+* uni2518
+* uni2518.vert
+* uni2519
+* uni2519.vert
+* uni251A
+* uni251A.vert
+* uni251B
+* uni251B.vert
+* uni251C
+* uni251C.vert
+* uni251D
+* uni251D.vert
+* uni251E
+* uni251E.vert
+* uni251F
+* uni251F.vert
+* uni2520
+* uni2520.vert
+* uni2521
+* uni2521.vert
+* uni2522
+* uni2522.vert
+* uni2523
+* uni2523.vert
+* uni2524
+* uni2524.vert
+* uni2525
+* uni2525.vert
+* uni2526
+* uni2526.vert
+* uni2527
+* uni2527.vert
+* uni2528
+* uni2528.vert
+* uni2529
+* uni2529.vert
+* uni252A
+* uni252A.vert
+* uni252B
+* uni252B.vert
+* uni252C
+* uni252C.vert
+* uni252D
+* uni252D.vert
+* uni252E
+* uni252E.vert
+* uni252F
+* uni252F.vert
+* uni2530
+* uni2530.vert
+* uni2531
+* uni2531.vert
+* uni2532
+* uni2532.vert
+* uni2533
+* uni2533.vert
+* uni2534
+* uni2534.vert
+* uni2535
+* uni2535.vert
+* uni2536
+* uni2536.vert
+* uni2537
+* uni2537.vert
+* uni2538
+* uni2538.vert
+* uni2539
+* uni2539.vert
+* uni253A
+* uni253A.vert
+* uni253B
+* uni253B.vert
+* uni253C
+* uni253C.vert
+* uni253D
+* uni253D.vert
+* uni253E
+* uni253E.vert
+* uni253F
+* uni253F.vert
+* uni2540
+* uni2540.vert
+* uni2541
+* uni2541.vert
+* uni2542
+* uni2542.vert
+* uni2543
+* uni2543.vert
+* uni2544
+* uni2544.vert
+* uni2545
+* uni2545.vert
+* uni2546
+* uni2546.vert
+* uni2547
+* uni2547.vert
+* uni2548
+* uni2548.vert
+* uni2549
+* uni2549.vert
+* uni254A
+* uni254A.vert
+* uni254B
+* uni254B.vert
+* uni2550
+* uni2551
+* uni2552
+* uni2553
+* uni2554
+* uni2555
+* uni2556
+* uni2557
+* uni2558
+* uni2559
+* uni255A
+* uni255B
+* uni255C
+* uni255D
+* uni255E
+* uni255F
+* uni2560
+* uni2561
+* uni2562
+* uni2563
+* uni2564
+* uni2565
+* uni2566
+* uni2567
+* uni2568
+* uni2569
+* uni256A
+* uni256B
+* uni256C
+* uni25A1
+* uni25AB
+* uni25AD
+* uni25AF
+* uni25B3
+* uni25B7
+* uni25BB
+* uni25BD
+* uni25C1
+* uni25C5
+* uni25C6
+* uni25C7
+* uni25CC
+* uni25CE
+* uni25EF
+* uni2606
+* uni2610
+* uni2611
+* uni2612
+* uni2616
+* uni2617
+* uni2661
+* uni2662
+* uni2664
+* uni2667
+* uni2669
+* uni266C
+* uni266D
+* uni266E
+* uni266F
+* uni26A2
+* uni26A3
+* uni26A4
+* uni26A5
+* uni26A6
+* uni26A7
+* uni26A8
+* uni26A9
+* uni26AA
+* uni26AC
+* uni26AD
+* uni26AE
+* uni26AF
+* uni26B9
+* uni2713
+* uni2714
+* uni2715
+* uni2716
+* uni2717
+* uni2718
+* uni271A
+* uni271B
+* uni271D
+* uni2776
+* uni2777
+* uni2778
+* uni2779
+* uni277A
+* uni277B
+* uni277C
+* uni277D
+* uni277E
+* uni277F
+* uni2780
+* uni2781
+* uni2782
+* uni2783
+* uni2784
+* uni2785
+* uni2786
+* uni2787
+* uni2788
+* uni2789
+* uni278A
+* uni278B
+* uni278C
+* uni278D
+* uni278E
+* uni278F
+* uni2790
+* uni2791
+* uni2792
+* uni2793
+* uni27E6
+* uni27E7
+* uni27E8
+* uni27E9
+* uni2A00
+* uni2A01
+* uni2A02
+* uni2A03
+* uni2A04
+* uni2A05
+* uni2A06
+* uni2A09
+* uni2A0C
+* uni2A0D
+* uni2A0E
+* uni2A0F
+* uni2A16
+* uni2A2F
+* uni2E17
+* uni2E28
+* uni2E29
+* uni2E85
+* uni2E89
+* uni2E8C
+* uni2E8D
+* uni2E8E
+* uni2E90
+* uni2E92
+* uni2E93
+* uni2E94
+* uni2E96
+* uni2E98
+* uni2E99
+* uni2E9F
+* uni2EA0
+* uni2EA1
+* uni2EA2
+* uni2EA3
+* uni2EA8
+* uni2EAB
+* uni2EAD
+* uni2EAE
+* uni2EB2
+* uni2EB9
+* uni2EBC
+* uni2EBE
+* uni2EC2
+* uni2EC3
+* uni2EC4
+* uni2ECA
+* uni2ECC
+* uni2ECD
+* uni2ED1
+* uni2ED7
+* uni2ED8
+* uni2EDF
+* uni2EE8
+* uni2EE9
+* uni2EEB
+* uni2EED
+* uni2EEF
+* uni2EF2
+* uni2F00
+* uni2F01
+* uni2F02
+* uni2F03
+* uni2F04
+* uni2F05
+* uni2F06
+* uni2F07
+* uni2F08
+* uni2F09
+* uni2F0A
+* uni2F0B
+* uni2F0C
+* uni2F0D
+* uni2F0E
+* uni2F0F
+* uni2F10
+* uni2F11
+* uni2F12
+* uni2F13
+* uni2F14
+* uni2F15
+* uni2F16
+* uni2F17
+* uni2F18
+* uni2F19
+* uni2F1A
+* uni2F1B
+* uni2F1C
+* uni2F1D
+* uni2F1E
+* uni2F1F
+* uni2F20
+* uni2F21
+* uni2F22
+* uni2F23
+* uni2F24
+* uni2F25
+* uni2F26
+* uni2F27
+* uni2F28
+* uni2F29
+* uni2F2A
+* uni2F2B
+* uni2F2C
+* uni2F2D
+* uni2F2E
+* uni2F2F
+* uni2F30
+* uni2F31
+* uni2F32
+* uni2F33
+* uni2F34
+* uni2F35
+* uni2F36
+* uni2F37
+* uni2F38
+* uni2F3A
+* uni2F3B
+* uni2F3C
+* uni2F3D
+* uni2F3E
+* uni2F3F
+* uni2F40
+* uni2F41
+* uni2F42
+* uni2F43
+* uni2F44
+* uni2F45
+* uni2F46
+* uni2F47
+* uni2F48
+* uni2F49
+* uni2F4A
+* uni2F4B
+* uni2F4C
+* uni2F4D
+* uni2F4E
+* uni2F4F
+* uni2F50
+* uni2F51
+* uni2F52
+* uni2F53
+* uni2F54
+* uni2F55
+* uni2F56
+* uni2F57
+* uni2F58
+* uni2F59
+* uni2F5A
+* uni2F5B
+* uni2F5C
+* uni2F5D
+* uni2F5E
+* uni2F5F
+* uni2F60
+* uni2F61
+* uni2F62
+* uni2F63
+* uni2F64
+* uni2F65
+* uni2F66
+* uni2F67
+* uni2F68
+* uni2F69
+* uni2F6A
+* uni2F6B
+* uni2F6C
+* uni2F6D
+* uni2F6E
+* uni2F6F
+* uni2F70
+* uni2F71
+* uni2F72
+* uni2F73
+* uni2F74
+* uni2F75
+* uni2F76
+* uni2F77
+* uni2F78
+* uni2F79
+* uni2F7A
+* uni2F7B
+* uni2F7C
+* uni2F7D
+* uni2F7E
+* uni2F7F
+* uni2F80
+* uni2F81
+* uni2F82
+* uni2F83
+* uni2F84
+* uni2F85
+* uni2F86
+* uni2F87
+* uni2F88
+* uni2F89
+* uni2F8A
+* uni2F8B
+* uni2F8C
+* uni2F8D
+* uni2F8E
+* uni2F8F
+* uni2F90
+* uni2F91
+* uni2F92
+* uni2F93
+* uni2F94
+* uni2F95
+* uni2F96
+* uni2F97
+* uni2F98
+* uni2F99
+* uni2F9A
+* uni2F9B
+* uni2F9C
+* uni2F9D
+* uni2F9E
+* uni2F9F
+* uni2FA0
+* uni2FA1
+* uni2FA2
+* uni2FA3
+* uni2FA4
+* uni2FA5
+* uni2FA6
+* uni2FA7
+* uni2FA8
+* uni2FA9
+* uni2FAA
+* uni2FAB
+* uni2FAC
+* uni2FAE
+* uni2FAF
+* uni2FB0
+* uni2FB1
+* uni2FB2
+* uni2FB3
+* uni2FB4
+* uni2FB5
+* uni2FB6
+* uni2FB7
+* uni2FB8
+* uni2FB9
+* uni2FBA
+* uni2FBB
+* uni2FBC
+* uni2FBD
+* uni2FBE
+* uni2FBF
+* uni2FC0
+* uni2FC1
+* uni2FC2
+* uni2FC3
+* uni2FC4
+* uni2FC5
+* uni2FC6
+* uni2FC7
+* uni2FC9
+* uni2FCA
+* uni2FCB
+* uni2FCC
+* uni2FCD
+* uni2FCE
+* uni2FCF
+* uni2FD0
+* uni2FD1
+* uni2FD2
+* uni2FD3
+* uni2FD4
+* uni2FD5
+* uni3001
+* uni3002
+* uni3003
+* uni3004
+* uni3005
+* uni3006
+* uni3007
+* uni3008
+* uni3009
+* uni300A
+* uni300B
+* uni300C
+* uni300D
+* uni300E
+* uni300F
+* uni3010
+* uni3011
+* uni3012
+* uni3014
+* uni3015
+* uni3016
+* uni3017
+* uni3018
+* uni3018.vert
+* uni3019
+* uni3019.vert
+* uni301A
+* uni301A.vert
+* uni301B
+* uni301B.vert
+* uni301C
+* uni301C.vert
+* uni301D
+* uni301D.vert
+* uni301E
+* uni301E.vert
+* uni301F
+* uni301F.vert
+* uni3030
+* uni3031
+* uni3032
+* uni3033
+* uni3034
+* uni3035
+* uni303B
+* uni303C
+* uni303D
+* uni3041
+* uni3041.vert
+* uni3042
+* uni3043
+* uni3043.vert
+* uni3044
+* uni3045
+* uni3045.vert
+* uni3046
+* uni3047
+* uni3047.vert
+* uni3048
+* uni3049
+* uni3049.vert
+* uni304A
+* uni304B
+* uni304C
+* uni304D
+* uni304E
+* uni304F
+* uni3050
+* uni3051
+* uni3052
+* uni3053
+* uni3054
+* uni3055
+* uni3056
+* uni3057
+* uni3058
+* uni3059
+* uni305A
+* uni305B
+* uni305C
+* uni305D
+* uni305E
+* uni305F
+* uni3060
+* uni3061
+* uni3062
+* uni3063
+* uni3063.vert
+* uni3064
+* uni3065
+* uni3066
+* uni3067
+* uni3068
+* uni3069
+* uni306A
+* uni306B
+* uni306C
+* uni306D
+* uni306E
+* uni306F
+* uni3070
+* uni3071
+* uni3072
+* uni3073
+* uni3074
+* uni3075
+* uni3076
+* uni3077
+* uni3078
+* uni3079
+* uni307A
+* uni307B
+* uni307C
+* uni307D
+* uni307E
+* uni307F
+* uni3080
+* uni3081
+* uni3082
+* uni3083
+* uni3083.vert
+* uni3084
+* uni3085
+* uni3085.vert
+* uni3086
+* uni3087
+* uni3087.vert
+* uni3088
+* uni3089
+* uni308A
+* uni308B
+* uni308C
+* uni308D
+* uni308E
+* uni308E.vert
+* uni308F
+* uni3090
+* uni3091
+* uni3092
+* uni3093
+* uni3094
+* uni3095
+* uni3095.vert
+* uni3096
+* uni3096.vert
+* uni3099
+* uni309A
+* uni309B
+* uni309C
+* uni309D
+* uni309E
+* uni309F
+* uni30A0
+* uni30A1
+* uni30A1.vert
+* uni30A2
+* uni30A3
+* uni30A3.vert
+* uni30A4
+* uni30A5
+* uni30A5.vert
+* uni30A6
+* uni30A7
+* uni30A7.vert
+* uni30A8
+* uni30A9
+* uni30A9.vert
+* uni30AA
+* uni30AB
+* uni30AC
+* uni30AD
+* uni30AE
+* uni30AF
+* uni30B0
+* uni30B1
+* uni30B2
+* uni30B3
+* uni30B4
+* uni30B5
+* uni30B6
+* uni30B7
+* uni30B8
+* uni30B9
+* uni30BA
+* uni30BB
+* uni30BC
+* uni30BD
+* uni30BE
+* uni30BF
+* uni30C0
+* uni30C1
+* uni30C2
+* uni30C3
+* uni30C3.vert
+* uni30C4
+* uni30C5
+* uni30C6
+* uni30C7
+* uni30C8
+* uni30C9
+* uni30CA
+* uni30CB
+* uni30CC
+* uni30CD
+* uni30CE
+* uni30CF
+* uni30D0
+* uni30D1
+* uni30D2
+* uni30D3
+* uni30D4
+* uni30D5
+* uni30D6
+* uni30D7
+* uni30D8
+* uni30D9
+* uni30DA
+* uni30DB
+* uni30DC
+* uni30DD
+* uni30DE
+* uni30DF
+* uni30E0
+* uni30E1
+* uni30E2
+* uni30E3
+* uni30E3.vert
+* uni30E4
+* uni30E5
+* uni30E5.vert
+* uni30E6
+* uni30E7
+* uni30E7.vert
+* uni30E8
+* uni30E9
+* uni30EA
+* uni30EB
+* uni30EC
+* uni30ED
+* uni30EE
+* uni30EE.vert
+* uni30EF
+* uni30F0
+* uni30F1
+* uni30F2
+* uni30F3
+* uni30F4
+* uni30F5
+* uni30F5.vert
+* uni30F6
+* uni30F6.vert
+* uni30F7
+* uni30F8
+* uni30F9
+* uni30FA
+* uni30FB
+* uni30FC
+* uni30FD
+* uni30FE
+* uni30FF
+* uni31F0
+* uni31F1
+* uni31F2
+* uni31F3
+* uni31F4
+* uni31F5
+* uni31F6
+* uni31F7
+* uni31F8
+* uni31F9
+* uni31FA
+* uni31FB
+* uni31FC
+* uni31FD
+* uni31FE
+* uni31FF
+* uni322A
+* uni322B
+* uni322C
+* uni322D
+* uni322E
+* uni322F
+* uni3230
+* uni3231
+* uni3232
+* uni3233
+* uni3234
+* uni3235
+* uni3236
+* uni3237
+* uni3238
+* uni3239
+* uni323A
+* uni323B
+* uni323C
+* uni323D
+* uni323E
+* uni323F
+* uni3240
+* uni3242
+* uni3243
+* uni3251
+* uni3252
+* uni3253
+* uni3254
+* uni3255
+* uni3256
+* uni3257
+* uni3258
+* uni3259
+* uni325A
+* uni325B
+* uni325C
+* uni325D
+* uni325E
+* uni325F
+* uni3296
+* uni3297
+* uni3298
+* uni3299
+* uni329D
+* uni329E
+* uni329a
+* uni329b
+* uni32A4
+* uni32A5
+* uni32A6
+* uni32A7
+* uni32A8
+* uni32A9
+* uni32B1
+* uni32B2
+* uni32B3
+* uni32B4
+* uni32B5
+* uni32B6
+* uni32B7
+* uni32B8
+* uni32B9
+* uni32BA
+* uni32BB
+* uni32BC
+* uni32BD
+* uni32BE
+* uni32BF
+* uni32ff
+* uni3300
+* uni3303
+* uni3304
+* uni3305
+* uni330D
+* uni3314
+* uni3315
+* uni3316
+* uni3317
+* uni3318
+* uni331E
+* uni3322
+* uni3323
+* uni3326
+* uni3327
+* uni332A
+* uni332B
+* uni3331
+* uni3333
+* uni3336
+* uni3339
+* uni333B
+* uni3342
+* uni3347
+* uni3349
+* uni334A
+* uni334D
+* uni334E
+* uni3351
+* uni3357
+* uni337B
+* uni337C
+* uni337D
+* uni337E
+* uni337F
+* uni339B
+* uni339C
+* uni339D
+* uni339E
+* uni339F
+* uni33A0
+* uni33A1
+* uni33A2
+* uni33A3
+* uni33A4
+* uni33A5
+* uni33A6
+* uni471F
+* uni4E00
+* uni4E01
+* uni4E03
+* uni4E07
+* uni4E08
+* uni4E09
+* uni4E0A
+* uni4E0B
+* uni4E0D
+* uni4E0E
+* uni4E11
+* uni4E14
+* uni4E16
+* uni4E17
+* uni4E18
+* uni4E19
+* uni4E1E
+* uni4E21
+* uni4E26
+* uni4E28
+* uni4E2D
+* uni4E32
+* uni4E36
+* uni4E38
+* uni4E39
+* uni4E3B
+* uni4E3C
+* uni4E3F
+* uni4E42
+* uni4E43
+* uni4E45
+* uni4E4D
+* uni4E4E
+* uni4E4F
+* uni4E57
+* uni4E59
+* uni4E5D
+* uni4E5E
+* uni4E5F
+* uni4E71
+* uni4E73
+* uni4E7E
+* uni4E80
+* uni4E85
+* uni4E86
+* uni4E88
+* uni4E89
+* uni4E8B
+* uni4E8C
+* uni4E8E
+* uni4E91
+* uni4E92
+* uni4E94
+* uni4E95
+* uni4E98
+* uni4E9C
+* uni4E9E
+* uni4EA0
+* uni4EA1
+* uni4EA4
+* uni4EA5
+* uni4EAB
+* uni4EAC
+* uni4EAD
+* uni4EAE
+* uni4EBA
+* uni4EBB
+* uni4EC0
+* uni4EC1
+* uni4EC7
+* uni4ECA
+* uni4ECB
+* uni4ECF
+* uni4ED4
+* uni4ED5
+* uni4ED6
+* uni4ED8
+* uni4ED9
+* uni4EE3
+* uni4EE4
+* uni4EE5
+* uni4EEE
+* uni4EF0
+* uni4EF2
+* uni4EF6
+* uni4EFB
+* uni4F01
+* uni4F0D
+* uni4F0E
+* uni4F0F
+* uni4F10
+* uni4F11
+* uni4F1A
+* uni4F1D
+* uni4F2F
+* uni4F34
+* uni4F38
+* uni4F3A
+* uni4F3C
+* uni4F46
+* uni4F4D
+* uni4F4E
+* uni4F4F
+* uni4F50
+* uni4F51
+* uni4F53
+* uni4F55
+* uni4F59
+* uni4F5C
+* uni4F73
+* uni4F75
+* uni4F7C
+* uni4F7F
+* uni4F8B
+* uni4F8D
+* uni4F9B
+* uni4F9D
+* uni4FA1
+* uni4FAE
+* uni4FAF
+* uni4FB5
+* uni4FB6
+* uni4FBF
+* uni4FC2
+* uni4FC3
+* uni4FCA
+* uni4FD7
+* uni4FDD
+* uni4FE1
+* uni4FEE
+* uni4FF3
+* uni4FF5
+* uni4FF8
+* uni4FFA
+* uni5009
+* uni500B
+* uni500D
+* uni5012
+* uni5019
+* uni501F
+* uni5023
+* uni5024
+* uni502B
+* uni502C
+* uni5039
+* uni5049
+* uni504F
+* uni505C
+* uni5065
+* uni5072
+* uni5074
+* uni5075
+* uni5076
+* uni507D
+* uni508D
+* uni5091
+* uni5098
+* uni5099
+* uni50AC
+* uni50B2
+* uni50B5
+* uni50B7
+* uni50BE
+* uni50C5
+* uni50CD
+* uni50CF
+* uni50D5
+* uni50DA
+* uni50E7
+* uni5100
+* uni5104
+* uni5112
+* uni511F
+* uni5121
+* uni512A
+* uni513F
+* uni5140
+* uni5143
+* uni5144
+* uni5145
+* uni5146
+* uni5148
+* uni5149
+* uni514B
+* uni514D
+* uni5150
+* uni515A
+* uni5165
+* uni5168
+* uni516B
+* uni516C
+* uni516D
+* uni5171
+* uni5175
+* uni5177
+* uni5178
+* uni517C
+* uni5182
+* uni5185
+* uni5186
+* uni5189
+* uni518A
+* uni518D
+* uni5192
+* uni5196
+* uni5197
+* uni5199
+* uni51A0
+* uni51A5
+* uni51AB
+* uni51AC
+* uni51B6
+* uni51B7
+* uni51C4
+* uni51C6
+* uni51CD
+* uni51DD
+* uni51E0
+* uni51E1
+* uni51E6
+* uni51F5
+* uni51F6
+* uni51F8
+* uni51F9
+* uni51FA
+* uni5200
+* uni5202
+* uni5203
+* uni5204
+* uni5206
+* uni5207
+* uni5208
+* uni520A
+* uni5211
+* uni5217
+* uni521D
+* uni5224
+* uni5225
+* uni5229
+* uni5230
+* uni5236
+* uni5237
+* uni5238
+* uni5239
+* uni523A
+* uni523B
+* uni5247
+* uni524A
+* uni524D
+* uni5256
+* uni525B
+* uni525D
+* uni5263
+* uni5264
+* uni526F
+* uni5270
+* uni5272
+* uni5275
+* uni5287
+* uni529B
+* uni529F
+* uni52A0
+* uni52A3
+* uni52A9
+* uni52AA
+* uni52B1
+* uni52B4
+* uni52B9
+* uni52BE
+* uni52C3
+* uni52C5
+* uni52C7
+* uni52C9
+* uni52D5
+* uni52D8
+* uni52D9
+* uni52DD
+* uni52DF
+* uni52E2
+* uni52E4
+* uni52E7
+* uni52F2
+* uni52F9
+* uni52FE
+* uni5302
+* uni5305
+* uni5315
+* uni5316
+* uni5317
+* uni531A
+* uni5320
+* uni5321
+* uni5323
+* uni5338
+* uni5339
+* uni533A
+* uni533B
+* uni533F
+* uni5341
+* uni5343
+* uni5345
+* uni5347
+* uni5348
+* uni534A
+* uni534D
+* uni5350
+* uni5351
+* uni5352
+* uni5353
+* uni5354
+* uni5357
+* uni5358
+* uni535A
+* uni535C
+* uni535E
+* uni5360
+* uni5366
+* uni5369
+* uni5370
+* uni5371
+* uni5373
+* uni5374
+* uni5375
+* uni5378
+* uni5382
+* uni5384
+* uni5398
+* uni539A
+* uni539F
+* uni53B3
+* uni53B6
+* uni53BB
+* uni53C2
+* uni53C8
+* uni53C9
+* uni53CA
+* uni53CB
+* uni53CC
+* uni53CD
+* uni53CE
+* uni53D4
+* uni53D6
+* uni53D7
+* uni53D9
+* uni53E3
+* uni53E4
+* uni53E5
+* uni53EA
+* uni53EB
+* uni53EC
+* uni53EE
+* uni53EF
+* uni53F0
+* uni53F2
+* uni53F3
+* uni53F7
+* uni53F8
+* uni5404
+* uni5408
+* uni5409
+* uni540C
+* uni540D
+* uni540E
+* uni540F
+* uni5410
+* uni5411
+* uni541B
+* uni541F
+* uni5426
+* uni542B
+* uni5438
+* uni5439
+* uni5442
+* uni5446
+* uni5448
+* uni5449
+* uni544A
+* uni5468
+* uni546A
+* uni5473
+* uni547C
+* uni547D
+* uni548C
+* uni54B2
+* uni54BD
+* uni54C0
+* uni54C1
+* uni54E1
+* uni54F2
+* uni54FA
+* uni5504
+* uni5506
+* uni5507
+* uni5510
+* uni552F
+* uni5531
+* uni553E
+* uni5546
+* uni554F
+* uni5553
+* uni5584
+* uni5589
+* uni559A
+* uni559C
+* uni559D
+* uni55A9
+* uni55AA
+* uni55AB
+* uni55B6
+* uni55C5
+* uni55E3
+* uni5606
+* uni5631
+* uni5632
+* uni5668
+* uni5674
+* uni5687
+* uni56D7
+* uni56DA
+* uni56DB
+* uni56DE
+* uni56E0
+* uni56E3
+* uni56EE
+* uni56F0
+* uni56F2
+* uni56F3
+* uni56FA
+* uni56FD
+* uni570F
+* uni5712
+* uni571F
+* uni5727
+* uni5728
+* uni572D
+* uni5730
+* uni5742
+* uni5747
+* uni574A
+* uni5751
+* uni576A
+* uni5782
+* uni578B
+* uni57A3
+* uni57CB
+* uni57CE
+* uni57DF
+* uni57F7
+* uni57F9
+* uni57FA
+* uni57FC
+* uni5800
+* uni5802
+* uni5805
+* uni5806
+* uni5815
+* uni5824
+* uni582A
+* uni5831
+* uni5834
+* uni5840
+* uni5841
+* uni584A
+* uni5851
+* uni5854
+* uni5857
+* uni585A
+* uni585E
+* uni5861
+* uni5869
+* uni587E
+* uni5883
+* uni5893
+* uni5897
+* uni589C
+* uni58A8
+* uni58B3
+* uni58BE
+* uni58C1
+* uni58C7
+* uni58CA
+* uni58CC
+* uni58EB
+* uni58EC
+* uni58EE
+* uni58F0
+* uni58F1
+* uni58F2
+* uni5902
+* uni5909
+* uni590A
+* uni590F
+* uni5915
+* uni5916
+* uni591A
+* uni591C
+* uni5922
+* uni5927
+* uni5929
+* uni592A
+* uni592B
+* uni592C
+* uni592D
+* uni592E
+* uni5931
+* uni5947
+* uni5948
+* uni5949
+* uni594F
+* uni5951
+* uni5954
+* uni5965
+* uni5968
+* uni596A
+* uni596E
+* uni5973
+* uni5974
+* uni5978
+* uni597D
+* uni5981
+* uni5982
+* uni5983
+* uni5984
+* uni598A
+* uni5996
+* uni5999
+* uni59A5
+* uni59A8
+* uni59AC
+* uni59B9
+* uni59BB
+* uni59C9
+* uni59CB
+* uni59D3
+* uni59D4
+* uni59EB
+* uni59FB
+* uni59FF
+* uni5A01
+* uni5A18
+* uni5A20
+* uni5A2F
+* uni5A46
+* uni5A5A
+* uni5A66
+* uni5A7F
+* uni5A92
+* uni5A9B
+* uni5AC1
+* uni5AC9
+* uni5ACC
+* uni5AE1
+* uni5B22
+* uni5B50
+* uni5B54
+* uni5B57
+* uni5B58
+* uni5B5D
+* uni5B63
+* uni5B64
+* uni5B66
+* uni5B6B
+* uni5B80
+* uni5B85
+* uni5B87
+* uni5B88
+* uni5B89
+* uni5B8C
+* uni5B97
+* uni5B98
+* uni5B99
+* uni5B9A
+* uni5B9B
+* uni5B9C
+* uni5B9D
+* uni5B9F
+* uni5BA2
+* uni5BA3
+* uni5BA4
+* uni5BAE
+* uni5BB0
+* uni5BB3
+* uni5BB4
+* uni5BB5
+* uni5BB6
+* uni5BB9
+* uni5BBF
+* uni5BC2
+* uni5BC4
+* uni5BC6
+* uni5BCC
+* uni5BD2
+* uni5BDB
+* uni5BDD
+* uni5BDF
+* uni5BE1
+* uni5BE7
+* uni5BE9
+* uni5BEE
+* uni5BF8
+* uni5BFA
+* uni5BFE
+* uni5BFF
+* uni5C01
+* uni5C02
+* uni5C04
+* uni5C06
+* uni5C09
+* uni5C0A
+* uni5C0B
+* uni5C0E
+* uni5C0F
+* uni5C11
+* uni5C1A
+* uni5C22
+* uni5C31
+* uni5C38
+* uni5C3A
+* uni5C3B
+* uni5C3C
+* uni5C3D
+* uni5C3E
+* uni5C3F
+* uni5C40
+* uni5C45
+* uni5C48
+* uni5C4A
+* uni5C4B
+* uni5C55
+* uni5C5E
+* uni5C64
+* uni5C65
+* uni5C6E
+* uni5C6F
+* uni5C71
+* uni5C90
+* uni5CA1
+* uni5CA9
+* uni5CAC
+* uni5CB3
+* uni5CB8
+* uni5CE0
+* uni5CE1
+* uni5CF0
+* uni5CF6
+* uni5D07
+* uni5D0E
+* uni5D16
+* uni5D29
+* uni5D50
+* uni5DDB
+* uni5DDD
+* uni5DDE
+* uni5DE1
+* uni5DE3
+* uni5DE5
+* uni5DE6
+* uni5DE7
+* uni5DE8
+* uni5DEE
+* uni5DF1
+* uni5DF2
+* uni5DF3
+* uni5DF4
+* uni5DFB
+* uni5DFE
+* uni5E02
+* uni5E03
+* uni5E06
+* uni5E0C
+* uni5E1D
+* uni5E25
+* uni5E2B
+* uni5E2D
+* uni5E2F
+* uni5E30
+* uni5E33
+* uni5E38
+* uni5E3D
+* uni5E45
+* uni5E55
+* uni5E63
+* uni5E72
+* uni5E73
+* uni5E74
+* uni5E75
+* uni5E78
+* uni5E79
+* uni5E7A
+* uni5E7B
+* uni5E7C
+* uni5E7D
+* uni5E7E
+* uni5E7F
+* uni5E81
+* uni5E83
+* uni5E8A
+* uni5E8F
+* uni5E95
+* uni5E97
+* uni5E9C
+* uni5EA6
+* uni5EA7
+* uni5EAB
+* uni5EAD
+* uni5EB6
+* uni5EB7
+* uni5EB8
+* uni5EC3
+* uni5EC9
+* uni5ECA
+* uni5EF4
+* uni5EF6
+* uni5EF7
+* uni5EFA
+* uni5EFE
+* uni5EFF
+* uni5F01
+* uni5F04
+* uni5F0A
+* uni5F0B
+* uni5F0C
+* uni5F0D
+* uni5F0F
+* uni5F10
+* uni5F13
+* uni5F14
+* uni5F15
+* uni5F17
+* uni5F1F
+* uni5F25
+* uni5F26
+* uni5F27
+* uni5F31
+* uni5F35
+* uni5F37
+* uni5F3E
+* uni5F51
+* uni5F53
+* uni5F59
+* uni5F61
+* uni5F62
+* uni5F69
+* uni5F6B
+* uni5F70
+* uni5F71
+* uni5F73
+* uni5F79
+* uni5F7C
+* uni5F80
+* uni5F81
+* uni5F84
+* uni5F85
+* uni5F88
+* uni5F8B
+* uni5F8C
+* uni5F90
+* uni5F92
+* uni5F93
+* uni5F97
+* uni5FA1
+* uni5FA9
+* uni5FAA
+* uni5FAE
+* uni5FB3
+* uni5FB4
+* uni5FB9
+* uni5FC3
+* uni5FC4
+* uni5FC5
+* uni5FCC
+* uni5FCD
+* uni5FD7
+* uni5FD8
+* uni5FD9
+* uni5FDC
+* uni5FE0
+* uni5FEB
+* uni5FF5
+* uni6012
+* uni6016
+* uni601D
+* uni6020
+* uni6025
+* uni6027
+* uni6028
+* uni602A
+* uni604B
+* uni6050
+* uni6052
+* uni6063
+* uni6065
+* uni6068
+* uni6069
+* uni606D
+* uni606F
+* uni6075
+* uni6094
+* uni609F
+* uni60A0
+* uni60A3
+* uni60A6
+* uni60A9
+* uni60AA
+* uni60B2
+* uni60BC
+* uni60C5
+* uni60D1
+* uni60DC
+* uni60E7
+* uni60E8
+* uni60F0
+* uni60F3
+* uni6101
+* uni6109
+* uni610F
+* uni611A
+* uni611B
+* uni611F
+* uni6144
+* uni6148
+* uni614B
+* uni614C
+* uni614E
+* uni6155
+* uni6162
+* uni6163
+* uni6168
+* uni616E
+* uni6170
+* uni6176
+* uni6182
+* uni618E
+* uni61A4
+* uni61A7
+* uni61A9
+* uni61AC
+* uni61B2
+* uni61B6
+* uni61BE
+* uni61C7
+* uni61D0
+* uni61F2
+* uni61F8
+* uni6208
+* uni6210
+* uni6211
+* uni6212
+* uni621A
+* uni6226
+* uni622F
+* uni6234
+* uni6238
+* uni623B
+* uni623F
+* uni6240
+* uni6247
+* uni6249
+* uni624B
+* uni624C
+* uni624D
+* uni624E
+* uni6253
+* uni6255
+* uni6271
+* uni6276
+* uni6279
+* uni627F
+* uni6280
+* uni6284
+* uni628A
+* uni6291
+* uni6295
+* uni6297
+* uni6298
+* uni629C
+* uni629E
+* uni62AB
+* uni62B1
+* uni62B5
+* uni62B9
+* uni62BC
+* uni62BD
+* uni62C5
+* uni62C9
+* uni62CD
+* uni62D0
+* uni62D2
+* uni62D3
+* uni62D8
+* uni62D9
+* uni62DB
+* uni62DD
+* uni62E0
+* uni62E1
+* uni62EC
+* uni62ED
+* uni62F3
+* uni62F6
+* uni62F7
+* uni62FE
+* uni6301
+* uni6307
+* uni6311
+* uni6319
+* uni631F
+* uni6328
+* uni632B
+* uni632F
+* uni633F
+* uni6349
+* uni6355
+* uni6357
+* uni635C
+* uni6368
+* uni636E
+* uni637B
+* uni6383
+* uni6388
+* uni638C
+* uni6392
+* uni6398
+* uni639B
+* uni63A1
+* uni63A2
+* uni63A5
+* uni63A7
+* uni63A8
+* uni63AA
+* uni63B2
+* uni63CF
+* uni63D0
+* uni63DA
+* uni63DB
+* uni63E1
+* uni63EE
+* uni63F4
+* uni63FA
+* uni640D
+* uni642C
+* uni642D
+* uni643A
+* uni643E
+* uni6442
+* uni6458
+* uni6469
+* uni646F
+* uni6483
+* uni64A4
+* uni64AE
+* uni64B2
+* uni64C1
+* uni64CD
+* uni64E6
+* uni64EC
+* uni652C
+* uni652F
+* uni6534
+* uni6535
+* uni6539
+* uni653B
+* uni653E
+* uni653F
+* uni6545
+* uni654F
+* uni6551
+* uni6557
+* uni6559
+* uni6562
+* uni6563
+* uni656C
+* uni6570
+* uni6574
+* uni6575
+* uni6577
+* uni6587
+* uni6589
+* uni658E
+* uni6591
+* uni6597
+* uni6599
+* uni659C
+* uni65A4
+* uni65A5
+* uni65AC
+* uni65AD
+* uni65B0
+* uni65B9
+* uni65BD
+* uni65C5
+* uni65CB
+* uni65CF
+* uni65D7
+* uni65E0
+* uni65E2
+* uni65E5
+* uni65E6
+* uni65E7
+* uni65E8
+* uni65E9
+* uni65EC
+* uni65F1
+* uni65FA
+* uni6606
+* uni6607
+* uni660C
+* uni660E
+* uni6613
+* uni6614
+* uni661F
+* uni6620
+* uni6625
+* uni6627
+* uni6628
+* uni662D
+* uni662F
+* uni663C
+* uni6642
+* uni6669
+* uni666E
+* uni666F
+* uni6674
+* uni6676
+* uni6681
+* uni6687
+* uni6691
+* uni6696
+* uni6697
+* uni66A6
+* uni66AB
+* uni66AE
+* uni66B4
+* uni66C7
+* uni66D6
+* uni66DC
+* uni66F0
+* uni66F2
+* uni66F4
+* uni66F8
+* uni66F9
+* uni66FD
+* uni66FF
+* uni6700
+* uni6708
+* uni6709
+* uni670B
+* uni670D
+* uni6715
+* uni6717
+* uni671B
+* uni671D
+* uni671F
+* uni6728
+* uni672A
+* uni672B
+* uni672C
+* uni672D
+* uni6731
+* uni6734
+* uni673A
+* uni673D
+* uni6749
+* uni6750
+* uni6751
+* uni675F
+* uni6761
+* uni6765
+* uni676F
+* uni6771
+* uni677E
+* uni677F
+* uni6790
+* uni6795
+* uni6797
+* uni679A
+* uni679C
+* uni679D
+* uni67A0
+* uni67A2
+* uni67AF
+* uni67B6
+* uni67C4
+* uni67D0
+* uni67D3
+* uni67D4
+* uni67F1
+* uni67F3
+* uni67F5
+* uni67FB
+* uni67FF
+* uni6803
+* uni6804
+* uni6813
+* uni6821
+* uni682A
+* uni6838
+* uni6839
+* uni683C
+* uni683D
+* uni6841
+* uni6843
+* uni6848
+* uni6851
+* uni685C
+* uni685F
+* uni6885
+* uni6897
+* uni68A8
+* uni68B0
+* uni68C4
+* uni68CB
+* uni68D2
+* uni68DA
+* uni68DF
+* uni68EE
+* uni68FA
+* uni6905
+* uni690D
+* uni690E
+* uni691C
+* uni696D
+* uni6975
+* uni6977
+* uni697C
+* uni697D
+* uni6982
+* uni69CB
+* uni69D8
+* uni69FD
+* uni6A19
+* uni6A21
+* uni6A29
+* uni6A2A
+* uni6A39
+* uni6A4B
+* uni6A5F
+* uni6B04
+* uni6B20
+* uni6B21
+* uni6B27
+* uni6B32
+* uni6B3A
+* uni6B3E
+* uni6B4C
+* uni6B53
+* uni6B62
+* uni6B63
+* uni6B66
+* uni6B69
+* uni6B6F
+* uni6B73
+* uni6B74
+* uni6B79
+* uni6B7B
+* uni6B89
+* uni6B8A
+* uni6B8B
+* uni6B96
+* uni6BB3
+* uni6BB4
+* uni6BB5
+* uni6BBA
+* uni6BBB
+* uni6BBF
+* uni6BC0
+* uni6BCB
+* uni6BCD
+* uni6BCE
+* uni6BD2
+* uni6BD4
+* uni6BDB
+* uni6C0F
+* uni6C11
+* uni6C14
+* uni6C17
+* uni6C34
+* uni6C35
+* uni6C37
+* uni6C38
+* uni6C3A
+* uni6C3E
+* uni6C40
+* uni6C41
+* uni6C42
+* uni6C4E
+* uni6C57
+* uni6C5A
+* uni6C5F
+* uni6C60
+* uni6C62
+* uni6C6A
+* uni6C70
+* uni6C7A
+* uni6C7D
+* uni6C83
+* uni6C88
+* uni6C96
+* uni6C99
+* uni6CA1
+* uni6CA2
+* uni6CB3
+* uni6CB8
+* uni6CB9
+* uni6CBA
+* uni6CBB
+* uni6CBC
+* uni6CBF
+* uni6CC1
+* uni6CC9
+* uni6CCA
+* uni6CCC
+* uni6CD5
+* uni6CE1
+* uni6CE2
+* uni6CE3
+* uni6CE5
+* uni6CE8
+* uni6CF0
+* uni6CF3
+* uni6D0B
+* uni6D17
+* uni6D1E
+* uni6D25
+* uni6D2A
+* uni6D3B
+* uni6D3E
+* uni6D41
+* uni6D44
+* uni6D45
+* uni6D5C
+* uni6D66
+* uni6D6A
+* uni6D6E
+* uni6D74
+* uni6D77
+* uni6D78
+* uni6D88
+* uni6D99
+* uni6DAF
+* uni6DB2
+* uni6DBC
+* uni6DD1
+* uni6DE1
+* uni6DEB
+* uni6DF1
+* uni6DF7
+* uni6DFB
+* uni6E05
+* uni6E07
+* uni6E08
+* uni6E09
+* uni6E0B
+* uni6E13
+* uni6E1B
+* uni6E21
+* uni6E26
+* uni6E29
+* uni6E2C
+* uni6E2F
+* uni6E56
+* uni6E67
+* uni6E6F
+* uni6E7E
+* uni6E7F
+* uni6E80
+* uni6E90
+* uni6E96
+* uni6E9D
+* uni6EB6
+* uni6EBA
+* uni6EC5
+* uni6ECB
+* uni6ED1
+* uni6EDD
+* uni6EDE
+* uni6EF4
+* uni6F01
+* uni6F02
+* uni6F06
+* uni6F0F
+* uni6F14
+* uni6F20
+* uni6F22
+* uni6F2B
+* uni6F2C
+* uni6F38
+* uni6F54
+* uni6F5C
+* uni6F5F
+* uni6F64
+* uni6F6E
+* uni6F70
+* uni6F84
+* uni6FC0
+* uni6FC1
+* uni6FC3
+* uni6FEB
+* uni6FEF
+* uni702C
+* uni706B
+* uni706C
+* uni706F
+* uni7070
+* uni707D
+* uni7089
+* uni708A
+* uni708E
+* uni70AD
+* uni70B9
+* uni70BA
+* uni70C8
+* uni7121
+* uni7126
+* uni7136
+* uni713C
+* uni714E
+* uni7159
+* uni7167
+* uni7169
+* uni716E
+* uni718A
+* uni719F
+* uni71B1
+* uni71C3
+* uni71E5
+* uni7206
+* uni722A
+* uni7235
+* uni7236
+* uni723B
+* uni723D
+* uni723F
+* uni7247
+* uni7248
+* uni7259
+* uni725B
+* uni725F
+* uni7267
+* uni7269
+* uni7272
+* uni7279
+* uni72A0
+* uni72AC
+* uni72AD
+* uni72AF
+* uni72B6
+* uni72C2
+* uni72D9
+* uni72E9
+* uni72EC
+* uni72ED
+* uni731B
+* uni731F
+* uni732B
+* uni732E
+* uni7336
+* uni733F
+* uni7344
+* uni7363
+* uni7372
+* uni7384
+* uni7387
+* uni7389
+* uni738B
+* uni73A9
+* uni73CD
+* uni73E0
+* uni73ED
+* uni73FE
+* uni7403
+* uni7405
+* uni7406
+* uni7434
+* uni7460
+* uni7483
+* uni74A7
+* uni74B0
+* uni74BD
+* uni74DC
+* uni74E6
+* uni74F6
+* uni7518
+* uni751A
+* uni751F
+* uni7523
+* uni7528
+* uni7530
+* uni7531
+* uni7532
+* uni7533
+* uni7537
+* uni753A
+* uni753B
+* uni754C
+* uni754F
+* uni7551
+* uni7554
+* uni7559
+* uni755C
+* uni755D
+* uni7565
+* uni756A
+* uni7570
+* uni7573
+* uni757F
+* uni758B
+* uni758E
+* uni7591
+* uni7592
+* uni75AB
+* uni75B2
+* uni75BE
+* uni75C5
+* uni75C7
+* uni75D5
+* uni75D8
+* uni75DB
+* uni75E2
+* uni75E9
+* uni75F4
+* uni760D
+* uni7642
+* uni7652
+* uni7656
+* uni7676
+* uni767A
+* uni767B
+* uni767D
+* uni767E
+* uni7684
+* uni7686
+* uni7687
+* uni76AE
+* uni76BF
+* uni76C6
+* uni76CA
+* uni76D7
+* uni76DB
+* uni76DF
+* uni76E3
+* uni76E4
+* uni76EE
+* uni76F2
+* uni76F4
+* uni76F8
+* uni76FE
+* uni7701
+* uni7709
+* uni770B
+* uni770C
+* uni771F
+* uni7720
+* uni773A
+* uni773C
+* uni7740
+* uni7761
+* uni7763
+* uni7766
+* uni77AC
+* uni77AD
+* uni77B3
+* uni77DB
+* uni77E2
+* uni77E5
+* uni77ED
+* uni77EF
+* uni77F3
+* uni7802
+* uni7814
+* uni7815
+* uni7832
+* uni7834
+* uni785D
+* uni786B
+* uni786C
+* uni7881
+* uni7891
+* uni78BA
+* uni78C1
+* uni78E8
+* uni7901
+* uni790E
+* uni793A
+* uni793B
+* uni793C
+* uni793E
+* uni7948
+* uni7949
+* uni7956
+* uni795D
+* uni795E
+* uni7965
+* uni7968
+* uni796D
+* uni7981
+* uni7985
+* uni798D
+* uni798F
+* uni79B8
+* uni79BE
+* uni79C0
+* uni79C1
+* uni79CB
+* uni79D1
+* uni79D2
+* uni79D8
+* uni79DF
+* uni79E9
+* uni79F0
+* uni79FB
+* uni7A0B
+* uni7A0E
+* uni7A1A
+* uni7A2E
+* uni7A32
+* uni7A3C
+* uni7A3D
+* uni7A3F
+* uni7A40
+* uni7A42
+* uni7A4D
+* uni7A4F
+* uni7A6B
+* uni7A74
+* uni7A76
+* uni7A7A
+* uni7A81
+* uni7A83
+* uni7A92
+* uni7A93
+* uni7A9F
+* uni7AAE
+* uni7AAF
+* uni7ACB
+* uni7ADC
+* uni7AE0
+* uni7AE5
+* uni7AEF
+* uni7AF6
+* uni7AF9
+* uni7B11
+* uni7B1B
+* uni7B26
+* uni7B2C
+* uni7B46
+* uni7B49
+* uni7B4B
+* uni7B52
+* uni7B54
+* uni7B56
+* uni7B87
+* uni7B8B
+* uni7B97
+* uni7BA1
+* uni7BB1
+* uni7BB8
+* uni7BC0
+* uni7BC4
+* uni7BC9
+* uni7BE4
+* uni7C21
+* uni7C3F
+* uni7C4D
+* uni7C60
+* uni7C73
+* uni7C89
+* uni7C8B
+* uni7C92
+* uni7C97
+* uni7C98
+* uni7C9B
+* uni7CA7
+* uni7CBE
+* uni7CD6
+* uni7CE7
+* uni7CF8
+* uni7CFB
+* uni7CFE
+* uni7D00
+* uni7D04
+* uni7D05
+* uni7D0B
+* uni7D0D
+* uni7D14
+* uni7D19
+* uni7D1A
+* uni7D1B
+* uni7D20
+* uni7D21
+* uni7D22
+* uni7D2B
+* uni7D2F
+* uni7D30
+* uni7D33
+* uni7D39
+* uni7D3A
+* uni7D42
+* uni7D44
+* uni7D4C
+* uni7D50
+* uni7D5E
+* uni7D61
+* uni7D66
+* uni7D71
+* uni7D75
+* uni7D76
+* uni7D79
+* uni7D99
+* uni7D9A
+* uni7DAD
+* uni7DB1
+* uni7DB2
+* uni7DBB
+* uni7DBF
+* uni7DCA
+* uni7DCF
+* uni7DD1
+* uni7DD2
+* uni7DDA
+* uni7DE0
+* uni7DE8
+* uni7DE9
+* uni7DEF
+* uni7DF4
+* uni7DFB
+* uni7E01
+* uni7E04
+* uni7E1B
+* uni7E26
+* uni7E2B
+* uni7E2E
+* uni7E3E
+* uni7E41
+* uni7E4A
+* uni7E54
+* uni7E55
+* uni7E6D
+* uni7E70
+* uni7F36
+* uni7F51
+* uni7F52
+* uni7F6A
+* uni7F6E
+* uni7F70
+* uni7F72
+* uni7F75
+* uni7F77
+* uni7F85
+* uni7F8A
+* uni7F8E
+* uni7F9E
+* uni7FA4
+* uni7FA8
+* uni7FA9
+* uni7FBD
+* uni7FC1
+* uni7FCC
+* uni7FD2
+* uni7FFB
+* uni7FFC
+* uni8001
+* uni8002
+* uni8003
+* uni8005
+* uni800C
+* uni8010
+* uni8012
+* uni8015
+* uni8017
+* uni8033
+* uni8056
+* uni805E
+* uni8074
+* uni8077
+* uni807F
+* uni8089
+* uni808C
+* uni8096
+* uni8098
+* uni809D
+* uni80A1
+* uni80A2
+* uni80A5
+* uni80A9
+* uni80AA
+* uni80AF
+* uni80B2
+* uni80BA
+* uni80C3
+* uni80C6
+* uni80CC
+* uni80CE
+* uni80DE
+* uni80F4
+* uni80F8
+* uni80FD
+* uni8102
+* uni8105
+* uni8107
+* uni8108
+* uni810A
+* uni811A
+* uni8131
+* uni8133
+* uni814E
+* uni8150
+* uni8155
+* uni816B
+* uni8170
+* uni8178
+* uni8179
+* uni817A
+* uni819A
+* uni819C
+* uni819D
+* uni81A8
+* uni81B3
+* uni81C6
+* uni81D3
+* uni81E3
+* uni81E8
+* uni81EA
+* uni81ED
+* uni81F3
+* uni81F4
+* uni81FC
+* uni8208
+* uni820C
+* uni820E
+* uni8217
+* uni821B
+* uni821E
+* uni821F
+* uni822A
+* uni822C
+* uni8236
+* uni8237
+* uni8239
+* uni8247
+* uni8266
+* uni826E
+* uni826F
+* uni8272
+* uni8276
+* uni8278
+* uni8279
+* uni827E
+* uni828B
+* uni828D
+* uni8292
+* uni8299
+* uni829D
+* uni82A5
+* uni82A6
+* uni82A6.jp04
+* uni82AD
+* uni82AF
+* uni82B1
+* uni82B3
+* uni82B8
+* uni82B9
+* uni82BB
+* uni82BD
+* uni82C5
+* uni82D1
+* uni82D3
+* uni82D4
+* uni82D7
+* uni82DB
+* uni82DF
+* uni82E5
+* uni82E6
+* uni82E7
+* uni82EB
+* uni82F1
+* uni82F4
+* uni82FA
+* uni82FB
+* uni8302
+* uni8304
+* uni8305
+* uni8309
+* uni830E
+* uni8328
+* uni8336
+* uni8349
+* uni8352
+* uni8358
+* uni8377
+* uni83CA
+* uni83CC
+* uni83D3
+* uni83DC
+* uni83EF
+* uni840E
+* uni843D
+* uni8449
+* uni8457
+* uni845B
+* uni846C
+* uni84B8
+* uni84C4
+* uni84CB
+* uni8511
+* uni8535
+* uni853D
+* uni8584
+* uni85A6
+* uni85AA
+* uni85AB
+* uni85AC
+* uni85CD
+* uni85E4
+* uni85E9
+* uni85FB
+* uni864D
+* uni864E
+* uni8650
+* uni865A
+* uni865C
+* uni865E
+* uni866B
+* uni8679
+* uni868A
+* uni8695
+* uni86C7
+* uni86CD
+* uni86EE
+* uni8702
+* uni871C
+* uni878D
+* uni8840
+* uni8846
+* uni884C
+* uni8853
+* uni8857
+* uni885B
+* uni885D
+* uni8861
+* uni8863
+* uni8864
+* uni8868
+* uni8870
+* uni8877
+* uni888B
+* uni8896
+* uni88AB
+* uni88C1
+* uni88C2
+* uni88C5
+* uni88CF
+* uni88D5
+* uni88DC
+* uni88F8
+* uni88FD
+* uni88FE
+* uni8907
+* uni8910
+* uni8912
+* uni895F
+* uni8972
+* uni897E
+* uni897F
+* uni8980
+* uni8981
+* uni8986
+* uni8987
+* uni898B
+* uni898F
+* uni8996
+* uni899A
+* uni89A7
+* uni89AA
+* uni89B3
+* uni89D2
+* uni89E3
+* uni89E6
+* uni8A00
+* uni8A01
+* uni8A02
+* uni8A03
+* uni8A08
+* uni8A0A
+* uni8A0A.jp04
+* uni8A0C
+* uni8A0E
+* uni8A10
+* uni8A13
+* uni8A17
+* uni8A18
+* uni8A1F
+* uni8A2A
+* uni8A2D
+* uni8A31
+* uni8A33
+* uni8A34
+* uni8A3A
+* uni8A3B
+* uni8A3C
+* uni8A50
+* uni8A54
+* uni8A55
+* uni8A5E
+* uni8A60
+* uni8A63
+* uni8A66
+* uni8A69
+* uni8A6E
+* uni8A70
+* uni8A71
+* uni8A72
+* uni8A73
+* uni8A87
+* uni8A89
+* uni8A8C
+* uni8A8D
+* uni8A93
+* uni8A95
+* uni8A98
+* uni8A9E
+* uni8AA0
+* uni8AA4
+* uni8AAC
+* uni8AAD
+* uni8AB0
+* uni8AB2
+* uni8ABF
+* uni8AC7
+* uni8ACB
+* uni8AD6
+* uni8AE6
+* uni8AE7
+* uni8AED
+* uni8AEE
+* uni8AF8
+* uni8AFE
+* uni8B00
+* uni8B01
+* uni8B04
+* uni8B0E
+* uni8B19
+* uni8B1B
+* uni8B1D
+* uni8B21
+* uni8B39
+* uni8B58
+* uni8B5C
+* uni8B66
+* uni8B70
+* uni8B72
+* uni8B77
+* uni8C37
+* uni8C46
+* uni8C48
+* uni8C4A
+* uni8C55
+* uni8C5A
+* uni8C61
+* uni8C6A
+* uni8C78
+* uni8C8C
+* uni8C9D
+* uni8C9E
+* uni8CA0
+* uni8CA1
+* uni8CA2
+* uni8CA7
+* uni8CA8
+* uni8CA9
+* uni8CAA
+* uni8CAB
+* uni8CAC
+* uni8CAF
+* uni8CB4
+* uni8CB7
+* uni8CB8
+* uni8CBB
+* uni8CBC
+* uni8CBF
+* uni8CC0
+* uni8CC2
+* uni8CC3
+* uni8CC4
+* uni8CC7
+* uni8CCA
+* uni8CD3
+* uni8CDB
+* uni8CDC
+* uni8CDE
+* uni8CE0
+* uni8CE2
+* uni8CE6
+* uni8CEA
+* uni8CED
+* uni8CFC
+* uni8D08
+* uni8D64
+* uni8D66
+* uni8D70
+* uni8D74
+* uni8D77
+* uni8D85
+* uni8D8A
+* uni8DA3
+* uni8DB3
+* uni8DDD
+* uni8DE1
+* uni8DEF
+* uni8DF3
+* uni8DF5
+* uni8E0A
+* uni8E0F
+* uni8E2A
+* uni8E74
+* uni8E8D
+* uni8EAB
+* uni8ECA
+* uni8ECC
+* uni8ECD
+* uni8ED2
+* uni8EDF
+* uni8EE2
+* uni8EF8
+* uni8EFD
+* uni8F03
+* uni8F09
+* uni8F1D
+* uni8F29
+* uni8F2A
+* uni8F38
+* uni8F44
+* uni8F9B
+* uni8F9E
+* uni8FA3
+* uni8FB0
+* uni8FB1
+* uni8FB2
+* uni8FB5
+* uni8FB6
+* uni8FBA
+* uni8FBB
+* uni8FBB.jp04
+* uni8FBC
+* uni8FC5
+* uni8FCE
+* uni8FD1
+* uni8FD4
+* uni8FEB
+* uni8FED
+* uni8FF0
+* uni8FF7
+* uni8FFD
+* uni9000
+* uni9001
+* uni9003
+* uni9006
+* uni900F
+* uni9010
+* uni9013
+* uni9014
+* uni901A
+* uni901D
+* uni901F
+* uni9020
+* uni9023
+* uni902E
+* uni9031
+* uni9032
+* uni9038
+* uni9042
+* uni9045
+* uni9047
+* uni904A
+* uni904B
+* uni904D
+* uni904E
+* uni9053
+* uni9054
+* uni9055
+* uni905C
+* uni9060
+* uni9061
+* uni9063
+* uni9069
+* uni906D
+* uni906E
+* uni9075
+* uni9077
+* uni9078
+* uni907A
+* uni907F
+* uni9084
+* uni9091
+* uni90A3
+* uni90A6
+* uni90AA
+* uni90B8
+* uni90CA
+* uni90CE
+* uni90E1
+* uni90E8
+* uni90ED
+* uni90F5
+* uni90F7
+* uni90FD
+* uni9149
+* uni914C
+* uni914D
+* uni914E
+* uni9152
+* uni9154
+* uni9162
+* uni916A
+* uni916C
+* uni9175
+* uni9177
+* uni9178
+* uni9192
+* uni919C
+* uni91B8
+* uni91C6
+* uni91C7
+* uni91C8
+* uni91CC
+* uni91CD
+* uni91CE
+* uni91CF
+* uni91D1
+* uni91DC
+* uni91DD
+* uni91E3
+* uni920D
+* uni9234
+* uni9244
+* uni925B
+* uni9262
+* uni9271
+* uni9280
+* uni9283
+* uni9285
+* uni9298
+* uni92AD
+* uni92ED
+* uni92F3
+* uni92FC
+* uni9320
+* uni9326
+* uni932C
+* uni932E
+* uni932F
+* uni9332
+* uni934B
+* uni935B
+* uni9375
+* uni938C
+* uni9396
+* uni93AE
+* uni93E1
+* uni9418
+* uni9451
+* uni9577
+* uni9580
+* uni9582
+* uni9583
+* uni9589
+* uni958B
+* uni958F
+* uni9591
+* uni9593
+* uni9594
+* uni95A2
+* uni95A3
+* uni95A5
+* uni95B2
+* uni95C7
+* uni95D8
+* uni961C
+* uni962A
+* uni9632
+* uni963B
+* uni9644
+* uni964D
+* uni9650
+* uni965B
+* uni9662
+* uni9663
+* uni9664
+* uni9665
+* uni966A
+* uni9670
+* uni9673
+* uni9675
+* uni9676
+* uni9678
+* uni967A
+* uni967D
+* uni9685
+* uni9686
+* uni968A
+* uni968E
+* uni968F
+* uni9694
+* uni9699
+* uni969B
+* uni969C
+* uni96A0
+* uni96A3
+* uni96B6
+* uni96B7
+* uni96B9
+* uni96BB
+* uni96C4
+* uni96C5
+* uni96C6
+* uni96C7
+* uni96CC
+* uni96D1
+* uni96E2
+* uni96E3
+* uni96E8
+* uni96EA
+* uni96F0
+* uni96F2
+* uni96F6
+* uni96F7
+* uni96FB
+* uni9700
+* uni9707
+* uni970A
+* uni971C
+* uni9727
+* uni9732
+* uni9752
+* uni9759
+* uni975E
+* uni9762
+* uni9769
+* uni9774
+* uni97CB
+* uni97D3
+* uni97ED
+* uni97F3
+* uni97FB
+* uni97FF
+* uni9801
+* uni9802
+* uni9803
+* uni9805
+* uni9806
+* uni9808
+* uni9810
+* uni9811
+* uni9812
+* uni9813
+* uni9818
+* uni982D
+* uni9830
+* uni983B
+* uni983C
+* uni984C
+* uni984D
+* uni984E
+* uni9854
+* uni9855
+* uni9858
+* uni985E
+* uni9867
+* uni98A8
+* uni98DB
+* uni98DF
+* uni98E0
+* uni98E2
+* uni98EF
+* uni98F2
+* uni98FC
+* uni98FD
+* uni98FE
+* uni9905
+* uni990A
+* uni990C
+* uni9913
+* uni9928
+* uni9996
+* uni9999
+* uni99AC
+* uni99C4
+* uni99C5
+* uni99C6
+* uni99D0
+* uni99D2
+* uni9A0E
+* uni9A12
+* uni9A13
+* uni9A30
+* uni9A5A
+* uni9AA8
+* uni9AB8
+* uni9AC4
+* uni9AD8
+* uni9ADF
+* uni9AEA
+* uni9B25
+* uni9B2F
+* uni9B31
+* uni9B32
+* uni9B3C
+* uni9B42
+* uni9B45
+* uni9B54
+* uni9B5A
+* uni9BAE
+* uni9BE8
+* uni9CE5
+* uni9CF4
+* uni9D8F
+* uni9DB4
+* uni9E75
+* uni9E7F
+* uni9E93
+* uni9E97
+* uni9EA5
+* uni9EA6
+* uni9EBA
+* uni9EBB
+* uni9EC4
+* uni9ECD
+* uni9ED2
+* uni9ED9
+* uni9EF9
+* uni9EFD
+* uni9F0E
+* uni9F13
+* uni9F20
+* uni9F3B
+* uni9F4A
+* uni9F52
+* uni9F62
+* uni9F8D
+* uni9F9C
+* uni9FA0
+* uniA730
+* uniA731
+* uniFA66
+* uniFE10
+* uniFE11
+* uniFE12
+* uniFE17
+* uniFE18
+* uniFE19
+* uniFE30
+* uniFE31
+* uniFE32
+* uniFE33
+* uniFE35
+* uniFE36
+* uniFE37
+* uniFE38
+* uniFE39
+* uniFE3A
+* uniFE3B
+* uniFE3C
+* uniFE3D
+* uniFE3E
+* uniFE3F
+* uniFE40
+* uniFE41
+* uniFE42
+* uniFE43
+* uniFE44
+* uniFE45
+* uniFE46
+* uniFE47
+* uniFE48
+* uniFF01
+* uniFF02
+* uniFF03
+* uniFF04
+* uniFF05
+* uniFF06
+* uniFF07
+* uniFF08
+* uniFF09
+* uniFF0A
+* uniFF0B
+* uniFF0C
+* uniFF0D
+* uniFF0E
+* uniFF0F
+* uniFF10
+* uniFF11
+* uniFF12
+* uniFF13
+* uniFF14
+* uniFF15
+* uniFF16
+* uniFF17
+* uniFF18
+* uniFF19
+* uniFF1A
+* uniFF1B
+* uniFF1C
+* uniFF1D
+* uniFF1E
+* uniFF1F
+* uniFF20
+* uniFF3B
+* uniFF3C
+* uniFF3D
+* uniFF3F
+* uniFF5B
+* uniFF5C
+* uniFF5D
+* uniFF5E
+* uniFF5F
+* uniFF60
+* uniFF61
+* uniFF62
+* uniFF63
+* uniFF64
+* uniFF65
+* uniFF66
+* uniFF67
+* uniFF68
+* uniFF69
+* uniFF6A
+* uniFF6B
+* uniFF6C
+* uniFF6D
+* uniFF6E
+* uniFF6F
+* uniFF70
+* uniFF71
+* uniFF72
+* uniFF73
+* uniFF74
+* uniFF75
+* uniFF76
+* uniFF77
+* uniFF78
+* uniFF79
+* uniFF7A
+* uniFF7B
+* uniFF7C
+* uniFF7D
+* uniFF7E
+* uniFF7F
+* uniFF80
+* uniFF81
+* uniFF82
+* uniFF83
+* uniFF84
+* uniFF85
+* uniFF86
+* uniFF87
+* uniFF88
+* uniFF89
+* uniFF8A
+* uniFF8B
+* uniFF8C
+* uniFF8D
+* uniFF8E
+* uniFF8F
+* uniFF90
+* uniFF91
+* uniFF92
+* uniFF93
+* uniFF94
+* uniFF95
+* uniFF96
+* uniFF97
+* uniFF98
+* uniFF99
+* uniFF9A
+* uniFF9B
+* uniFF9C
+* uniFF9D
+* uniFF9E
+* uniFF9F
+* uniFFE0
+* uniFFE1
+* uniFFE2
+* uniFFE3
+* uniFFE4
+* uniFFE5
+* uniFFE6
+* union
+* universal
+* uogonek
+* upsilon
+* upsilondieresis
+* upsilondieresistonos
+* upsilontonos
+* uring
+* utilde
+* v
+* w
+* wacute
+* wcircumflex
+* wdieresis
+* wgrave
+* x
+* xi
+* y
+* yacute
+* ycircumflex
+* ydieresis
+* yen
+* ygrave
+* z
+* zacute
+* zcaron
+* zdotaccent
+* zero
+* zero.dnom
+* zero.numr and zeta</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>It seems that Neil Summerour is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry. [code: profile-not-found]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>💥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- c.001
+
+- dieresistonos.001
+
+- husmall_semivoicedcombkanakata
+
+- ka_semivoicedcombkanahira
+
+- ka_semivoicedcombkanakata
+
+- ke_semivoicedcombkanahira
+
+- ke_semivoicedcombkanakata
+
+- ki_semivoicedcombkanahira
+
+- ki_semivoicedcombkanakata
+
+- ko_semivoicedcombkanahira
+
+- ko_semivoicedcombkanakata
+
+- ku_semivoicedcombkanahira
+
+- ku_semivoicedcombkanakata
+
+- o.001
+
+- se_semivoicedcombkanakata
+
+- to_semivoicedcombkanakata
+
+- tu_semivoicedcombkanakata
+
+- uni030B.narrow
+
+- uni0326.top
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain chws and vchw features?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
+</span></li></ul></div></details>
+<h3>Detect any interpolation issues in the font.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 2 start point differs in glyph 'arrowboth' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1316d31f0&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1316d3220&gt;</p>
+<pre><code>- Contour order differs in glyph 'uni7B1B': [0, 1, 2, 3, 4, 5, 6, 7, 8] in &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1316d31f0&gt;, [0, 1, 7, 3, 4, 5, 6, 2, 8] in &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x1316d3220&gt;. [code: interpolation-issues]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 710 among a set of 12 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 583:
+plus, minus, uni2213, equal, uni223D</p>
+<p>Width = 571:
+greater, greaterequal, less, uni2266, uni2267, lessequal, uni2276, uni2277</p>
+<p>Width = 638:
+logicalnot</p>
+<p>Width = 584:
+plusminus, congruent, uni2243, uni2242</p>
+<p>Width = 576:
+multiply</p>
+<p>Width = 579:
+divide</p>
+<p>Width = 675:
+proportional</p>
+<p>Width = 770:
+orthogonal</p>
+<p>Width = 800:
+angle</p>
+<p>Width = 613:
+similar</p>
+<p>Width = 580:
+approxequal</p>
+<p>Width = 744:
+uni2252, uni2253, uni2250, uni2251</p>
+<p>Width = 597:
+notequal</p>
+<p>Width = 624:
+uni2262, equivalence</p>
+<p>Width = 900:
+uni22A4, uni22A3, uni22A2, uni22A5</p>
+<p>Width = 1000:
+uni3012
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h3>Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+
+<details><summary>💥 Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>💥 ERROR</span><span class='details_text'><p>Failed with TypeError: cannot unpack non-iterable float object</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>🔥⚠️⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>🔥 Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- acutecomb
+
+- dotbelowcomb
+
+- gravecomb
+
+- tildecomb
+
+- uni0302
+
+- uni0304
+
+- uni0306
+
+- uni0307
+
+- uni0308
+
+- uni030A
+
+- uni030B
+
+- uni030C
+
+- uni0312
+
+- uni0324
+
+- uni0326
+
+- uni0327
+
+- uni0328
+
+- uni032D
+
+- uni0330 [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ Murecho[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ і́ ị̀ ị́ ị̂ ị̃ ị̄</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̦̇ i̦̊ i̦̋ i̦̒ ḭ̀ ḭ́ ḭ̂ ḭ̃ ḭ̄ ḭ̆ ḭ̇ ḭ̈ ḭ̊ ḭ̋ ḭ̌ ḭ̒ j̦̀ j̦́ j̦̃ j̦̄</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Lithuanian (Latn, 2,357,094 speakers), Basaa (Latn, 332,940 speakers), Belarusian (Cyrl, 10,064,517 speakers), Igbo (Latn, 27,823,640 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

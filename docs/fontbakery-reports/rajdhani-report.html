@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>30</td>
+                <td>80</td>
+                <td>302</td>
+                <td>36</td>
+                <td>689</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>3%</td>
+                <td>9%</td>
+                <td>33%</td>
+                <td>4%</td>
+                <td>76%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x00AA (FEMININE ORDINAL INDICATOR)
+
+
+- 0x00BA (MASCULINE ORDINAL INDICATOR)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding greek</li>
+<li>U+03A0 GREEK CAPITAL LETTER PI: try adding greek</li>
+<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+F6C3 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding greek</li>
+<li>U+03A0 GREEK CAPITAL LETTER PI: try adding greek</li>
+<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+F6C3 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding greek</li>
+<li>U+03A0 GREEK CAPITAL LETTER PI: try adding greek</li>
+<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+F6C3 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding greek</li>
+<li>U+03A0 GREEK CAPITAL LETTER PI: try adding greek</li>
+<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+F6C3 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding greek</li>
+<li>U+03A0 GREEK CAPITAL LETTER PI: try adding greek</li>
+<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+F6C3 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>Font has old ttfautohint applied?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/old_ttfautohint&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2014 indian type foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2014 indian type foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2014 indian type foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2014 indian type foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2014 indian type foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2014 Indian Type Foundry (info@indiantypefoundry.com)&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts do not contain any pre-production tables.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Are there unwanted tables?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+
+<details><summary>🔥 Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.uc
+
+- breve.uc
+
+- caron.uc
+
+- cedilla.uc
+
+- circumflex.uc
+
+- dieresis.uc
+
+- dotaccent.uc
+
+- dvD_BHA.aSimp
+
+- dvH_VA.aTrad
+
+- dvK_SHA.a
+
+- dvOm.a01
+
+- dvOm.a02
+
+- grave.uc
+
+- hungarumlaut.uc
+
+- itfLogo
+
+- itfStar
+
+- macron.uc
+
+- nonmarkingreturn
+
+- ogonek.uc
+
+- ring.uc
+
+- tilde.uc
+
+- uni0915094D0928.aTrad
+
+- uni0915094D0930.aTrad
+
+- uni0916094D0928.aTrad
+
+- uni0917094D0928.aTrad
+
+- uni0918094D0928.aTrad
+
+- uni091A094D0928.aTrad
+
+- uni091B094D0928.aTrad
+
+- uni091B094D0930094D092F
+
+- uni091D094D0928.aTrad
+
+- uni0924094D0928.aTrad
+
+- uni0924094D0930094D0915.aTrad
+
+- uni0925094D0928.aTrad
+
+- uni0926094D0928.aTrad
+
+- uni0927094D0928.aTrad
+
+- uni0928094D0928.aTrad
+
+- uni092A094D0928.aTrad
+
+- uni092B094D0928.aTrad
+
+- uni092C094D0928.aTrad
+
+- uni092D094D0928.aTrad
+
+- uni092E094D0928.aTrad
+
+- uni092F094D0928.aTrad
+
+- uni0935094D0928.aTrad
+
+- uni0936094D091A.aTrad
+
+- uni0936094D0932.aTrad
+
+- uni0936094D0935.aTrad
+
+- uni0938094D0928.aTrad
+
+- uni093F.a02
+
+- uni093F.a25
+
+- uni093F.a27
+
+- uni093F.a28
+
+- uni093F.a29
+
+- uni093F.a30
+
+- uni093F.a31
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.uc
+
+- breve.uc
+
+- caron.uc
+
+- cedilla.uc
+
+- circumflex.uc
+
+- dieresis.uc
+
+- dotaccent.uc
+
+- dvD_BHA.aSimp
+
+- dvH_VA.aTrad
+
+- dvK_SHA.a
+
+- dvOm.a01
+
+- dvOm.a02
+
+- grave.uc
+
+- hungarumlaut.uc
+
+- itfLogo
+
+- itfStar
+
+- macron.uc
+
+- nonmarkingreturn
+
+- ogonek.uc
+
+- ring.uc
+
+- tilde.uc
+
+- uni0915094D0928.aTrad
+
+- uni0915094D0930.aTrad
+
+- uni0916094D0928.aTrad
+
+- uni0917094D0928.aTrad
+
+- uni0918094D0928.aTrad
+
+- uni091A094D0928.aTrad
+
+- uni091B094D0928.aTrad
+
+- uni091B094D0930094D092F
+
+- uni091D094D0928.aTrad
+
+- uni0924094D0928.aTrad
+
+- uni0924094D0930094D0915.aTrad
+
+- uni0925094D0928.aTrad
+
+- uni0926094D0928.aTrad
+
+- uni0927094D0928.aTrad
+
+- uni0928094D0928.aTrad
+
+- uni092A094D0928.aTrad
+
+- uni092B094D0928.aTrad
+
+- uni092C094D0928.aTrad
+
+- uni092D094D0928.aTrad
+
+- uni092E094D0928.aTrad
+
+- uni092F094D0928.aTrad
+
+- uni0935094D0928.aTrad
+
+- uni0936094D091A.aTrad
+
+- uni0936094D0932.aTrad
+
+- uni0936094D0935.aTrad
+
+- uni0938094D0928.aTrad
+
+- uni093F.a02
+
+- uni093F.a25
+
+- uni093F.a27
+
+- uni093F.a28
+
+- uni093F.a29
+
+- uni093F.a30
+
+- uni093F.a32
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.uc
+
+- breve.uc
+
+- caron.uc
+
+- cedilla.uc
+
+- circumflex.uc
+
+- dieresis.uc
+
+- dotaccent.uc
+
+- dvD_BHA.aSimp
+
+- dvH_VA.aTrad
+
+- dvK_SHA.a
+
+- dvOm.a01
+
+- dvOm.a02
+
+- grave.uc
+
+- hungarumlaut.uc
+
+- itfLogo
+
+- itfStar
+
+- macron.uc
+
+- nonmarkingreturn
+
+- ogonek.uc
+
+- ring.uc
+
+- tilde.uc
+
+- uni0915094D0928.aTrad
+
+- uni0915094D0930.aTrad
+
+- uni0916094D0928.aTrad
+
+- uni0917094D0928.aTrad
+
+- uni0918094D0928.aTrad
+
+- uni091A094D0928.aTrad
+
+- uni091B094D0928.aTrad
+
+- uni091B094D0930094D092F
+
+- uni091D094D0928.aTrad
+
+- uni0924094D0928.aTrad
+
+- uni0924094D0930094D0915.aTrad
+
+- uni0925094D0928.aTrad
+
+- uni0926094D0928.aTrad
+
+- uni0927094D0928.aTrad
+
+- uni0928094D0928.aTrad
+
+- uni092A094D0928.aTrad
+
+- uni092B094D0928.aTrad
+
+- uni092C094D0928.aTrad
+
+- uni092D094D0928.aTrad
+
+- uni092E094D0928.aTrad
+
+- uni092F094D0928.aTrad
+
+- uni0935094D0928.aTrad
+
+- uni0936094D091A.aTrad
+
+- uni0936094D0932.aTrad
+
+- uni0936094D0935.aTrad
+
+- uni0938094D0928.aTrad
+
+- uni093F.a02
+
+- uni093F.a03
+
+- uni093F.a27
+
+- uni093F.a28
+
+- uni093F.a29
+
+- uni093F.a30
+
+- uni093F.a31
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.uc
+
+- breve.uc
+
+- caron.uc
+
+- cedilla.uc
+
+- circumflex.uc
+
+- dieresis.uc
+
+- dotaccent.uc
+
+- dvD_BHA.aSimp
+
+- dvH_VA.aTrad
+
+- dvK_SHA.a
+
+- dvOm.a01
+
+- dvOm.a02
+
+- grave.uc
+
+- hungarumlaut.uc
+
+- itfLogo
+
+- itfStar
+
+- macron.uc
+
+- nonmarkingreturn
+
+- ogonek.uc
+
+- ring.uc
+
+- tilde.uc
+
+- uni0915094D0928.aTrad
+
+- uni0915094D0930.aTrad
+
+- uni0916094D0928.aTrad
+
+- uni0917094D0928.aTrad
+
+- uni0918094D0928.aTrad
+
+- uni091A094D0928.aTrad
+
+- uni091B094D0928.aTrad
+
+- uni091B094D0930094D092F
+
+- uni091D094D0928.aTrad
+
+- uni0924094D0928.aTrad
+
+- uni0924094D0930094D0915.aTrad
+
+- uni0925094D0928.aTrad
+
+- uni0926094D0928.aTrad
+
+- uni0927094D0928.aTrad
+
+- uni0928094D0928.aTrad
+
+- uni092A094D0928.aTrad
+
+- uni092B094D0928.aTrad
+
+- uni092C094D0928.aTrad
+
+- uni092D094D0928.aTrad
+
+- uni092E094D0928.aTrad
+
+- uni092F094D0928.aTrad
+
+- uni0935094D0928.aTrad
+
+- uni0936094D091A.aTrad
+
+- uni0936094D0932.aTrad
+
+- uni0936094D0935.aTrad
+
+- uni0938094D0928.aTrad
+
+- uni093F.a02
+
+- uni093F.a26
+
+- uni093F.a27
+
+- uni093F.a28
+
+- uni093F.a29
+
+- uni093F.a30
+
+- uni093F.a32
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.uc
+
+- breve.uc
+
+- caron.uc
+
+- cedilla.uc
+
+- circumflex.uc
+
+- dieresis.uc
+
+- dotaccent.uc
+
+- dvD_BHA.aSimp
+
+- dvH_VA.aTrad
+
+- dvK_SHA.a
+
+- dvOm.a01
+
+- dvOm.a02
+
+- grave.uc
+
+- hungarumlaut.uc
+
+- itfLogo
+
+- itfStar
+
+- macron.uc
+
+- nonmarkingreturn
+
+- ogonek.uc
+
+- ring.uc
+
+- tilde.uc
+
+- uni0915094D0928.aTrad
+
+- uni0915094D0930.aTrad
+
+- uni0916094D0928.aTrad
+
+- uni0917094D0928.aTrad
+
+- uni0918094D0928.aTrad
+
+- uni091A094D0928.aTrad
+
+- uni091B094D0928.aTrad
+
+- uni091B094D0930094D092F
+
+- uni091D094D0928.aTrad
+
+- uni0924094D0928.aTrad
+
+- uni0924094D0930094D0915.aTrad
+
+- uni0925094D0928.aTrad
+
+- uni0926094D0928.aTrad
+
+- uni0927094D0928.aTrad
+
+- uni0928094D0928.aTrad
+
+- uni092A094D0928.aTrad
+
+- uni092B094D0928.aTrad
+
+- uni092C094D0928.aTrad
+
+- uni092D094D0928.aTrad
+
+- uni092E094D0928.aTrad
+
+- uni092F094D0928.aTrad
+
+- uni0935094D0928.aTrad
+
+- uni0936094D091A.aTrad
+
+- uni0936094D0932.aTrad
+
+- uni0936094D0935.aTrad
+
+- uni0938094D0928.aTrad
+
+- uni093F.a02
+
+- uni093F.a03
+
+- uni093F.a27
+
+- uni093F.a28
+
+- uni093F.a29
+
+- uni093F.a30
+
+- uni093F.a31
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 535 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 528:
+less</p>
+<p>Width = 542:
+equal, greater</p>
+<p>Width = 501:
+multiply</p>
+<p>Width = 496:
+divide
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 549 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 544:
+less</p>
+<p>Width = 554:
+equal, greater</p>
+<p>Width = 510:
+multiply</p>
+<p>Width = 481:
+divide
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 512 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 500:
+less</p>
+<p>Width = 522:
+equal, divide, greater</p>
+<p>Width = 485:
+multiply
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 565 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 563:
+less</p>
+<p>Width = 567:
+equal, greater</p>
+<p>Width = 521:
+multiply</p>
+<p>Width = 464:
+divide
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 523 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 513:
+less</p>
+<p>Width = 531:
+equal, greater</p>
+<p>Width = 493:
+multiply</p>
+<p>Width = 510:
+divide
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h3>Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.os2</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩</span>
+<h3>Check if OS/2 xAvgCharWidth is correct.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 482 but it should be 633 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 487 but it should be 638 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 473 but it should be 625 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 493 but it should be 643 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 477 but it should be 629 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('quotedbl', 283, 643)
+* ('ampersand', 549, 8)
+* ('quotesingle', 58, 628)
+* ('quotesingle', 128, 628)
+* ('asterisk', 349, 517)
+* ('asterisk', 264, 368)
+* ('asterisk', 142, 365)
+* ('asterisk', 55, 516)
+* ('slash', 47, 0)
+* ('slash', 354, 643)
+* ('less', 462, 145)
+* ('less', 462, 502)
+* ('greater', 73, 502)
+* ('greater', 73, 145)
+* ('A', 24, 0)
+* ('A', 516, 0)
+* ('K', 525, 0)
+* ('R', 495, 0)
+* ('V', 21, 643)
+* ('V', 485, 643)
+* ('W', 24, 643)
+* ('W', 774, 643)
+* ('X', 29, 9)
+* ('X', 486, 9)
+* ('Y', 20, 635)
+* ('Y', 485, 643)
+* ('backslash', 353, 0)
+* ('backslash', 47, 643)
+* ('asciicircum', 46, 364)
+* ('asciicircum', 432, 364)
+* ('grave', 62, 695)
+* ('grave', 220, 574)
+* ('k', 435, 9)
+* ('v', 415, 510)
+* ('v', 16, 510)
+* ('w', 18, 510)
+* ('w', 668, 510)
+* ('x', 17, 0)
+* ('x', 22, 510)
+* ('x', 412, 0)
+* ('y', 22, 510)
+* ('y', 442, 510)
+* ('yen', 22, 643)
+* ('yen', 490, 643)
+* ('guillemotleft', 370, 82)
+* ('guillemotleft', 370, 429)
+* ('guillemotleft', 220, 82)
+* ('guillemotleft', 220, 429)
+* ('acute', 216, 695)
+* ('acute', 59, 574)
+* ('cedilla', 58, -56)
+* ('guillemotright', 218, 429)
+* ('guillemotright', 218, 82)
+* ('guillemotright', 67, 429)
+* ('guillemotright', 67, 82)
+* ('Agrave', 24, 0)
+* ('Agrave', 516, 0)
+* ('Aacute', 24, 0)
+* ('Aacute', 516, 0)
+* ('Acircumflex', 24, 0)
+* ('Acircumflex', 516, 0)
+* ('Atilde', 24, 0)
+* ('Atilde', 516, 0)
+* ('Adieresis', 24, 0)
+* ('Adieresis', 516, 0)
+* ('Aring', 24, 0)
+* ('Aring', 516, 0)
+* ('AE', -4, 0)
+* ('Igrave', -6, 828)
+* ('Iacute', 248, 828)
+* ('Icircumflex', 12, 707)
+* ('Icircumflex', 227, 707)
+* ('multiply', 417, 200)
+* ('multiply', 371, 156)
+* ('multiply', 130, 156)
+* ('multiply', 83, 200)
+* ('multiply', 84, 442)
+* ('multiply', 129, 488)
+* ('multiply', 371, 488)
+* ('multiply', 416, 442)
+* ('Oslash', 78, -3)
+* ('Oslash', 41, 24)
+* ('Oslash', 487, 645)
+* ('Oslash', 524, 620)
+* ('Yacute', 20, 635)
+* ('Yacute', 485, 643)
+* ('igrave', -17, 695)
+* ('iacute', 237, 695)
+* ('icircumflex', 2, 574)
+* ('icircumflex', 218, 574)
+* ('eth', 168, 711)
+* ('eth', 361, 707)
+* ('oslash', 18, 44)
+* ('oslash', 503, 466)
+* ('yacute', 22, 510)
+* ('yacute', 442, 510)
+* ('ydieresis', 22, 510)
+* ('ydieresis', 442, 510)
+* ('Amacron', 24, 0)
+* ('Amacron', 516, 0)
+* ('Abreve', 24, 0)
+* ('Abreve', 516, 0)
+* ('Aogonek', 24, 0)
+* ('Aogonek', 516, 0)
+* ('Iogonek', 33, -83)
+* ('iogonek', 30, -75)
+* ('Jcircumflex', 500, 707)
+* ('jcircumflex', 217, 574)
+* ('uni0136', 525, 0)
+* ('uni0137', 435, 9)
+* ('lacute', 235, 871)
+* ('Racute', 495, 0)
+* ('uni0156', 495, 0)
+* ('Rcaron', 495, 0)
+* ('Wcircumflex', 24, 643)
+* ('Wcircumflex', 774, 643)
+* ('wcircumflex', 18, 510)
+* ('wcircumflex', 668, 510)
+* ('Ycircumflex', 20, 635)
+* ('Ycircumflex', 485, 643)
+* ('ycircumflex', 22, 510)
+* ('ycircumflex', 442, 510)
+* ('Ydieresis', 20, 635)
+* ('Ydieresis', 485, 643)
+* ('AEacute', -4, 0)
+* ('Oslashacute', 78, -3)
+* ('Oslashacute', 41, 24)
+* ('Oslashacute', 524, 620)
+* ('oslashacute', 18, 44)
+* ('oslashacute', 503, 466)
+* ('circumflex', 58, 574)
+* ('circumflex', 273, 574)
+* ('caron', 58, 703)
+* ('caron', 273, 703)
+* ('ogonek', 176, -72)
+* ('ogonek', 65, -75)
+* ('hungarumlaut', 59, 574)
+* ('hungarumlaut', 332, 703)
+* ('Wgrave', 24, 643)
+* ('Wgrave', 774, 643)
+* ('wgrave', 18, 510)
+* ('wgrave', 668, 510)
+* ('Wacute', 24, 643)
+* ('Wacute', 774, 643)
+* ('wacute', 18, 510)
+* ('wacute', 668, 510)
+* ('Wdieresis', 24, 643)
+* ('Wdieresis', 774, 643)
+* ('wdieresis', 18, 510)
+* ('wdieresis', 668, 510)
+* ('Ygrave', 20, 635)
+* ('Ygrave', 485, 643)
+* ('ygrave', 22, 510)
+* ('ygrave', 442, 510)
+* ('guilsinglleft', 220, 82)
+* ('guilsinglleft', 220, 429)
+* ('guilsinglright', 67, 429)
+* ('guilsinglright', 67, 82)
+* ('fraction', -204, 8)
+* ('fraction', 316, 633)
+* ('uni2206', 592, 0)
+* ('uni2206', 26, 0)
+* ('lessequal', 465, 520)
+* ('greaterequal', 70, 520)
+* ('grave.uc', 75, 836)
+* ('grave.uc', 239, 707)
+* ('acute.uc', 235, 828)
+* ('acute.uc', 76, 707)
+* ('cedilla.uc', 83, -56)
+* ('ogonek.uc', 92, -83)
+* ('hungarumlaut.uc', 52, 707)
+* ('hungarumlaut.uc', 327, 836)
+* ('caron.uc', 58, 836)
+* ('caron.uc', 273, 836)
+* ('circumflex.uc', 58, 707) and ('circumflex.uc', 273, 707)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('quotedbl', 46, 643)
+* ('quotedbl', 300, 643)
+* ('ampersand', 564, 10)
+* ('quotesingle', 47, 619)
+* ('quotesingle', 138, 612)
+* ('asterisk', 356, 505)
+* ('asterisk', 261, 351)
+* ('asterisk', 143, 347)
+* ('asterisk', 45, 503)
+* ('slash', 36, 0)
+* ('slash', 368, 643)
+* ('less', 477, 138)
+* ('less', 477, 513)
+* ('greater', 72, 513)
+* ('greater', 72, 138)
+* ('A', 22, 0)
+* ('A', 526, 0)
+* ('K', 540, 0)
+* ('R', 507, 0)
+* ('V', 15, 643)
+* ('V', 498, 643)
+* ('W', 19, 643)
+* ('W', 784, 643)
+* ('X', 25, 10)
+* ('X', 501, 11)
+* ('Y', 14, 633)
+* ('Y', 494, 633)
+* ('backslash', 369, 0)
+* ('backslash', 36, 643)
+* ('asciicircum', 41, 363)
+* ('asciicircum', 452, 363)
+* ('grave', 57, 694)
+* ('grave', 235, 574)
+* ('k', 451, 12)
+* ('v', 435, 510)
+* ('v', 15, 510)
+* ('w', 17, 510)
+* ('w', 674, 510)
+* ('x', 13, 0)
+* ('x', 16, 510)
+* ('x', 422, 510)
+* ('x', 431, 0)
+* ('y', 19, 510)
+* ('y', 448, 510)
+* ('yen', 19, 643)
+* ('yen', 507, 643)
+* ('guillemotleft', 382, 80)
+* ('guillemotleft', 382, 432)
+* ('guillemotleft', 221, 81)
+* ('guillemotleft', 221, 431)
+* ('acute', 231, 694)
+* ('acute', 54, 574)
+* ('cedilla', 54, -55)
+* ('guillemotright', 224, 431)
+* ('guillemotright', 224, 81)
+* ('guillemotright', 62, 431)
+* ('guillemotright', 62, 81)
+* ('Agrave', 22, 0)
+* ('Agrave', 526, 0)
+* ('Aacute', 22, 0)
+* ('Aacute', 526, 0)
+* ('Acircumflex', 22, 0)
+* ('Acircumflex', 526, 0)
+* ('Atilde', 22, 0)
+* ('Atilde', 526, 0)
+* ('Adieresis', 22, 0)
+* ('Adieresis', 526, 0)
+* ('Aring', 22, 0)
+* ('Aring', 526, 0)
+* ('AE', -3, 0)
+* ('Igrave', -9, 826)
+* ('Iacute', 263, 826)
+* ('Icircumflex', 10, 707)
+* ('Icircumflex', 242, 707)
+* ('multiply', 433, 203)
+* ('multiply', 374, 142)
+* ('multiply', 135, 142)
+* ('multiply', 76, 203)
+* ('multiply', 77, 440)
+* ('multiply', 136, 501)
+* ('multiply', 373, 500)
+* ('multiply', 432, 440)
+* ('Oslash', 86, -7)
+* ('Oslash', 40, 26)
+* ('Oslash', 486, 650)
+* ('Oslash', 532, 618)
+* ('Yacute', 14, 633)
+* ('Yacute', 494, 633)
+* ('igrave', -20, 694)
+* ('iacute', 253, 694)
+* ('icircumflex', 0, 574)
+* ('icircumflex', 232, 574)
+* ('eth', 172, 716)
+* ('eth', 354, 717)
+* ('oslash', 12, 44)
+* ('oslash', 510, 466)
+* ('yacute', 19, 510)
+* ('yacute', 448, 510)
+* ('ydieresis', 19, 510)
+* ('ydieresis', 448, 510)
+* ('Amacron', 22, 0)
+* ('Amacron', 526, 0)
+* ('Abreve', 22, 0)
+* ('Abreve', 526, 0)
+* ('Aogonek', 22, 0)
+* ('Aogonek', 526, 0)
+* ('Iogonek', 43, -85)
+* ('iogonek', 44, -74)
+* ('Jcircumflex', 511, 707)
+* ('jcircumflex', 230, 574)
+* ('uni0136', 540, 0)
+* ('uni0137', 451, 12)
+* ('lacute', 251, 871)
+* ('Racute', 507, 0)
+* ('uni0156', 507, 0)
+* ('Rcaron', 507, 0)
+* ('Wcircumflex', 19, 643)
+* ('Wcircumflex', 784, 643)
+* ('wcircumflex', 17, 510)
+* ('wcircumflex', 674, 510)
+* ('Ycircumflex', 14, 633)
+* ('Ycircumflex', 494, 633)
+* ('ycircumflex', 19, 510)
+* ('ycircumflex', 448, 510)
+* ('Ydieresis', 14, 633)
+* ('Ydieresis', 494, 633)
+* ('AEacute', -3, 0)
+* ('Oslashacute', 86, -7)
+* ('Oslashacute', 40, 26)
+* ('Oslashacute', 532, 618)
+* ('oslashacute', 12, 44)
+* ('oslashacute', 510, 466)
+* ('circumflex', 57, 582)
+* ('circumflex', 280, 582)
+* ('caron', 57, 696)
+* ('caron', 284, 703)
+* ('ogonek', 183, -61)
+* ('ogonek', 64, -74)
+* ('hungarumlaut', 54, 574)
+* ('hungarumlaut', 350, 703)
+* ('Wgrave', 19, 643)
+* ('Wgrave', 784, 643)
+* ('wgrave', 17, 510)
+* ('wgrave', 674, 510)
+* ('Wacute', 19, 643)
+* ('Wacute', 784, 643)
+* ('wacute', 17, 510)
+* ('wacute', 674, 510)
+* ('Wdieresis', 19, 643)
+* ('Wdieresis', 784, 643)
+* ('wdieresis', 17, 510)
+* ('wdieresis', 674, 510)
+* ('Ygrave', 14, 633)
+* ('Ygrave', 494, 633)
+* ('ygrave', 19, 510)
+* ('ygrave', 448, 510)
+* ('guilsinglleft', 221, 81)
+* ('guilsinglleft', 221, 431)
+* ('guilsinglright', 62, 431)
+* ('guilsinglright', 62, 81)
+* ('fraction', -211, 10)
+* ('fraction', 320, 632)
+* ('uni2206', 617, 0)
+* ('uni2206', 25, 0)
+* ('lessequal', 479, 529)
+* ('greaterequal', 70, 529)
+* ('grave.uc', 87, 826)
+* ('grave.uc', 264, 707)
+* ('acute.uc', 260, 826)
+* ('acute.uc', 82, 707)
+* ('cedilla.uc', 92, -55)
+* ('ogonek.uc', 107, -85)
+* ('hungarumlaut.uc', 44, 707)
+* ('hungarumlaut.uc', 342, 836)
+* ('caron.uc', 57, 828)
+* ('caron.uc', 280, 828)
+* ('circumflex.uc', 57, 714) and ('circumflex.uc', 284, 707)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('asterisk', 336, 536)
+* ('asterisk', 268, 395)
+* ('asterisk', 139, 396)
+* ('asterisk', 73, 538)
+* ('slash', 66, 0)
+* ('slash', 327, 643)
+* ('less', 436, 157)
+* ('less', 436, 485)
+* ('greater', 75, 485)
+* ('greater', 75, 157)
+* ('A', 28, 0)
+* ('A', 498, 0)
+* ('K', 497, 0)
+* ('R', 474, 0)
+* ('V', 28, 643)
+* ('V', 466, 643)
+* ('W', 34, 643)
+* ('W', 757, 643)
+* ('X', 33, 0)
+* ('X', 462, 0)
+* ('Y', 26, 643)
+* ('Y', 460, 643)
+* ('backslash', 326, 0)
+* ('backslash', 66, 643)
+* ('asciicircum', 55, 365)
+* ('asciicircum', 398, 365)
+* ('grave', 69, 698)
+* ('grave', 194, 574)
+* ('k', 412, 0)
+* ('v', 384, 510)
+* ('v', 18, 510)
+* ('w', 18, 510)
+* ('w', 661, 510)
+* ('x', 22, 0)
+* ('x', 378, 0)
+* ('y', 28, 510)
+* ('y', 428, 510)
+* ('yen', 27, 643)
+* ('yen', 460, 643)
+* ('guillemotleft', 348, 86)
+* ('guillemotleft', 348, 424)
+* ('guillemotleft', 216, 86)
+* ('guillemotleft', 216, 424)
+* ('acute', 192, 698)
+* ('acute', 67, 574)
+* ('cedilla', 66, -56)
+* ('guillemotright', 208, 424)
+* ('guillemotright', 208, 86)
+* ('guillemotright', 76, 424)
+* ('guillemotright', 76, 86)
+* ('Agrave', 28, 0)
+* ('Agrave', 498, 0)
+* ('Aacute', 28, 0)
+* ('Aacute', 498, 0)
+* ('Acircumflex', 28, 0)
+* ('Acircumflex', 498, 0)
+* ('Atilde', 28, 0)
+* ('Atilde', 498, 0)
+* ('Adieresis', 28, 0)
+* ('Adieresis', 498, 0)
+* ('Aring', 28, 0)
+* ('Aring', 498, 0)
+* ('AE', -4, 0)
+* ('Igrave', -2, 831)
+* ('Iacute', 223, 831)
+* ('Icircumflex', 15, 707)
+* ('Icircumflex', 205, 707)
+* ('multiply', 388, 197)
+* ('multiply', 366, 175)
+* ('multiply', 118, 175)
+* ('multiply', 96, 197)
+* ('multiply', 96, 445)
+* ('multiply', 118, 467)
+* ('multiply', 366, 467)
+* ('multiply', 388, 445)
+* ('Oslash', 43, 21)
+* ('Oslash', 510, 622)
+* ('Yacute', 26, 643)
+* ('Yacute', 460, 643)
+* ('igrave', -13, 698)
+* ('iacute', 211, 698)
+* ('icircumflex', 5, 574)
+* ('icircumflex', 195, 574)
+* ('eth', 162, 700)
+* ('oslash', 27, 43)
+* ('oslash', 494, 468)
+* ('yacute', 28, 510)
+* ('yacute', 428, 510)
+* ('ydieresis', 28, 510)
+* ('ydieresis', 428, 510)
+* ('Amacron', 28, 0)
+* ('Amacron', 498, 0)
+* ('Abreve', 28, 0)
+* ('Abreve', 498, 0)
+* ('Aogonek', 28, 0)
+* ('Aogonek', 498, 0)
+* ('Iogonek', 17, -79)
+* ('iogonek', 7, -79)
+* ('Jcircumflex', 484, 707)
+* ('jcircumflex', 195, 574)
+* ('uni0136', 497, 0)
+* ('uni0137', 412, 0)
+* ('lacute', 210, 872)
+* ('Racute', 474, 0)
+* ('uni0156', 474, 0)
+* ('Rcaron', 474, 0)
+* ('rcaron', 75, 703)
+* ('Wcircumflex', 34, 643)
+* ('Wcircumflex', 757, 643)
+* ('wcircumflex', 18, 510)
+* ('wcircumflex', 661, 510)
+* ('Ycircumflex', 26, 643)
+* ('Ycircumflex', 460, 643)
+* ('ycircumflex', 28, 510)
+* ('ycircumflex', 428, 510)
+* ('Ydieresis', 26, 643)
+* ('Ydieresis', 460, 643)
+* ('AEacute', -4, 0)
+* ('Oslashacute', 43, 21)
+* ('Oslashacute', 510, 622)
+* ('oslashacute', 27, 43)
+* ('oslashacute', 494, 468)
+* ('circumflex', 65, 574)
+* ('circumflex', 255, 574)
+* ('caron', 65, 703)
+* ('caron', 255, 703)
+* ('ogonek', 65, -79)
+* ('hungarumlaut', 67, 574)
+* ('hungarumlaut', 298, 698)
+* ('Wgrave', 34, 643)
+* ('Wgrave', 757, 643)
+* ('wgrave', 18, 510)
+* ('wgrave', 661, 510)
+* ('Wacute', 34, 643)
+* ('Wacute', 757, 643)
+* ('wacute', 18, 510)
+* ('wacute', 661, 510)
+* ('Wdieresis', 34, 643)
+* ('Wdieresis', 757, 643)
+* ('wdieresis', 18, 510)
+* ('wdieresis', 661, 510)
+* ('Ygrave', 26, 643)
+* ('Ygrave', 460, 643)
+* ('ygrave', 28, 510)
+* ('ygrave', 428, 510)
+* ('guilsinglleft', 216, 86)
+* ('guilsinglleft', 216, 424)
+* ('guilsinglright', 76, 424)
+* ('guilsinglright', 76, 86)
+* ('fraction', -196, 0)
+* ('uni2206', 547, 0)
+* ('uni2206', 27, 0)
+* ('lessequal', 442, 507)
+* ('greaterequal', 70, 507)
+* ('grave.uc', 69, 831)
+* ('grave.uc', 194, 707)
+* ('acute.uc', 192, 831)
+* ('acute.uc', 67, 707)
+* ('cedilla.uc', 66, -56)
+* ('ogonek.uc', 65, -79)
+* ('hungarumlaut.uc', 67, 707)
+* ('hungarumlaut.uc', 298, 831)
+* ('caron.uc', 65, 836)
+* ('caron.uc', 255, 836)
+* ('circumflex.uc', 65, 707) and ('circumflex.uc', 255, 707)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('quotedbl', 34, 643)
+* ('quotedbl', 319, 643)
+* ('ampersand', 582, 12)
+* ('quotesingle', 36, 609)
+* ('quotesingle', 152, 609)
+* ('asterisk', 365, 493)
+* ('asterisk', 260, 332)
+* ('asterisk', 146, 327)
+* ('asterisk', 34, 487)
+* ('slash', 23, 0)
+* ('slash', 387, 643)
+* ('less', 494, 132)
+* ('less', 494, 524)
+* ('greater', 71, 524)
+* ('greater', 71, 132)
+* ('A', 18, 0)
+* ('A', 539, 0)
+* ('K', 551, 13)
+* ('R', 517, 0)
+* ('V', 9, 643)
+* ('V', 511, 643)
+* ('W', 12, 643)
+* ('W', 795, 643)
+* ('X', 21, 13)
+* ('X', 519, 13)
+* ('Y', 8, 630)
+* ('Y', 510, 631)
+* ('backslash', 387, 0)
+* ('backslash', 23, 643)
+* ('asciicircum', 35, 362)
+* ('asciicircum', 475, 362)
+* ('grave', 51, 691)
+* ('grave', 252, 574)
+* ('k', 469, 15)
+* ('v', 456, 510)
+* ('v', 12, 510)
+* ('w', 17, 510)
+* ('w', 679, 510)
+* ('x', 10, 0)
+* ('x', 12, 510)
+* ('x', 446, 510)
+* ('x', 447, 12)
+* ('y', 14, 510)
+* ('y', 458, 510)
+* ('yen', 15, 643)
+* ('yen', 528, 643)
+* ('guillemotleft', 397, 78)
+* ('guillemotleft', 397, 435)
+* ('guillemotleft', 223, 78)
+* ('guillemotleft', 223, 435)
+* ('acute', 247, 691)
+* ('acute', 47, 574)
+* ('cedilla', 49, -55)
+* ('guillemotright', 230, 435)
+* ('guillemotright', 230, 78)
+* ('guillemotright', 56, 435)
+* ('guillemotright', 56, 78)
+* ('Agrave', 18, 0)
+* ('Agrave', 539, 0)
+* ('Aacute', 18, 0)
+* ('Aacute', 539, 0)
+* ('Acircumflex', 18, 0)
+* ('Acircumflex', 539, 0)
+* ('Atilde', 18, 0)
+* ('Atilde', 539, 0)
+* ('Adieresis', 18, 0)
+* ('Adieresis', 539, 0)
+* ('Aring', 18, 0)
+* ('Aring', 539, 0)
+* ('AE', -2, 0)
+* ('Igrave', -13, 824)
+* ('Iacute', 280, 824)
+* ('Icircumflex', 8, 707)
+* ('Icircumflex', 256, 707)
+* ('multiply', 453, 205)
+* ('multiply', 377, 129)
+* ('multiply', 143, 129)
+* ('multiply', 67, 205)
+* ('multiply', 68, 438)
+* ('multiply', 144, 514)
+* ('multiply', 376, 514)
+* ('multiply', 452, 438)
+* ('Oslash', 96, -12)
+* ('Oslash', 39, 27)
+* ('Oslash', 486, 655)
+* ('Oslash', 542, 616)
+* ('Yacute', 8, 630)
+* ('Yacute', 510, 631)
+* ('igrave', -24, 691)
+* ('iacute', 272, 691)
+* ('icircumflex', -1, 574)
+* ('icircumflex', 247, 574)
+* ('eth', 176, 723)
+* ('eth', 347, 728)
+* ('oslash', 6, 44)
+* ('oslash', 516, 464)
+* ('yacute', 14, 510)
+* ('yacute', 458, 510)
+* ('ydieresis', 14, 510)
+* ('ydieresis', 458, 510)
+* ('Amacron', 18, 0)
+* ('Amacron', 539, 0)
+* ('Abreve', 18, 0)
+* ('Abreve', 539, 0)
+* ('Aogonek', 18, 0)
+* ('Aogonek', 539, 0)
+* ('Iogonek', 54, -88)
+* ('Jcircumflex', 521, 707)
+* ('jcircumflex', 244, 574)
+* ('uni0136', 551, 13)
+* ('uni0137', 469, 15)
+* ('lacute', 268, 870)
+* ('Racute', 517, 0)
+* ('uni0156', 517, 0)
+* ('Rcaron', 517, 0)
+* ('uhungarumlaut', 477, 703)
+* ('Wcircumflex', 12, 643)
+* ('Wcircumflex', 795, 643)
+* ('wcircumflex', 17, 510)
+* ('wcircumflex', 679, 510)
+* ('Ycircumflex', 8, 630)
+* ('Ycircumflex', 510, 631)
+* ('ycircumflex', 14, 510)
+* ('ycircumflex', 458, 510)
+* ('Ydieresis', 8, 630)
+* ('Ydieresis', 510, 631)
+* ('AEacute', -2, 0)
+* ('Oslashacute', 96, -12)
+* ('Oslashacute', 39, 27)
+* ('Oslashacute', 542, 616)
+* ('oslashacute', 6, 44)
+* ('oslashacute', 516, 464)
+* ('circumflex', 48, 574)
+* ('circumflex', 296, 574)
+* ('caron', 48, 703)
+* ('caron', 296, 703)
+* ('ogonek', 186, -65)
+* ('ogonek', 64, -71)
+* ('hungarumlaut', 47, 574)
+* ('hungarumlaut', 371, 703)
+* ('Wgrave', 12, 643)
+* ('Wgrave', 795, 643)
+* ('wgrave', 17, 510)
+* ('wgrave', 679, 510)
+* ('Wacute', 12, 643)
+* ('Wacute', 795, 643)
+* ('wacute', 17, 510)
+* ('wacute', 679, 510)
+* ('Wdieresis', 12, 643)
+* ('Wdieresis', 795, 643)
+* ('wdieresis', 17, 510)
+* ('wdieresis', 679, 510)
+* ('Ygrave', 8, 630)
+* ('Ygrave', 510, 631)
+* ('ygrave', 14, 510)
+* ('ygrave', 458, 510)
+* ('guilsinglleft', 223, 78)
+* ('guilsinglleft', 223, 435)
+* ('guilsinglright', 56, 435)
+* ('guilsinglright', 56, 78)
+* ('fraction', -220, 11)
+* ('fraction', 324, 632)
+* ('uni2206', 647, 0)
+* ('uni2206', 24, 0)
+* ('lessequal', 495, 538)
+* ('greaterequal', 70, 538)
+* ('grave.uc', 94, 824)
+* ('grave.uc', 295, 707)
+* ('acute.uc', 289, 824)
+* ('acute.uc', 89, 707)
+* ('cedilla.uc', 104, -55)
+* ('ogonek.uc', 125, -88)
+* ('hungarumlaut.uc', 35, 707)
+* ('hungarumlaut.uc', 360, 836)
+* ('caron.uc', 48, 836)
+* ('caron.uc', 296, 836)
+* ('circumflex.uc', 48, 707) and ('circumflex.uc', 296, 707)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('quotesingle', 120, 636)
+* ('asterisk', 342, 527)
+* ('asterisk', 266, 381)
+* ('asterisk', 140, 381)
+* ('asterisk', 65, 527)
+* ('slash', 57, 0)
+* ('slash', 339, 643)
+* ('less', 448, 152)
+* ('less', 448, 494)
+* ('greater', 74, 494)
+* ('greater', 74, 152)
+* ('A', 26, 0)
+* ('A', 506, 0)
+* ('K', 510, 0)
+* ('R', 483, 0)
+* ('V', 24, 643)
+* ('V', 475, 643)
+* ('W', 29, 643)
+* ('W', 765, 643)
+* ('X', 30, 0)
+* ('X', 476, 0)
+* ('Y', 21, 643)
+* ('Y', 470, 643)
+* ('backslash', 340, 0)
+* ('backslash', 56, 643)
+* ('asciicircum', 55, 372)
+* ('asciicircum', 410, 372)
+* ('grave', 65, 696)
+* ('grave', 206, 574)
+* ('k', 421, 7)
+* ('v', 399, 510)
+* ('v', 17, 510)
+* ('w', 18, 510)
+* ('w', 665, 510)
+* ('x', 19, 0)
+* ('x', 26, 510)
+* ('x', 394, 0)
+* ('y', 25, 510)
+* ('y', 434, 510)
+* ('yen', 25, 643)
+* ('yen', 475, 643)
+* ('guillemotleft', 359, 84)
+* ('guillemotleft', 359, 427)
+* ('guillemotleft', 218, 84)
+* ('guillemotleft', 218, 427)
+* ('acute', 203, 696)
+* ('acute', 63, 574)
+* ('cedilla', 62, -56)
+* ('guillemotright', 213, 427)
+* ('guillemotright', 213, 84)
+* ('guillemotright', 72, 427)
+* ('guillemotright', 72, 84)
+* ('Agrave', 26, 0)
+* ('Agrave', 506, 0)
+* ('Aacute', 26, 0)
+* ('Aacute', 506, 0)
+* ('Acircumflex', 26, 0)
+* ('Acircumflex', 506, 0)
+* ('Atilde', 26, 0)
+* ('Atilde', 506, 0)
+* ('Adieresis', 26, 0)
+* ('Adieresis', 506, 0)
+* ('Aring', 26, 0)
+* ('Aring', 506, 0)
+* ('AE', -2, 0)
+* ('Igrave', -9, 836)
+* ('Iacute', 235, 830)
+* ('Icircumflex', 14, 707)
+* ('Icircumflex', 216, 707)
+* ('multiply', 401, 199)
+* ('multiply', 368, 166)
+* ('multiply', 124, 166)
+* ('multiply', 90, 199)
+* ('multiply', 91, 443)
+* ('multiply', 124, 476)
+* ('multiply', 368, 476)
+* ('multiply', 401, 443)
+* ('Oslash', 42, 23)
+* ('Oslash', 516, 620)
+* ('Yacute', 21, 643)
+* ('Yacute', 470, 643)
+* ('igrave', -15, 696)
+* ('iacute', 224, 696)
+* ('icircumflex', 4, 574)
+* ('icircumflex', 206, 574)
+* ('eth', 166, 705)
+* ('eth', 365, 699)
+* ('oslash', 23, 42)
+* ('oslash', 498, 467)
+* ('yacute', 25, 510)
+* ('yacute', 434, 510)
+* ('ydieresis', 25, 510)
+* ('ydieresis', 434, 510)
+* ('Amacron', 26, 0)
+* ('Amacron', 506, 0)
+* ('Abreve', 26, 0)
+* ('Abreve', 506, 0)
+* ('Aogonek', 26, 0)
+* ('Aogonek', 506, 0)
+* ('Iogonek', 25, -81)
+* ('iogonek', 18, -77)
+* ('Jcircumflex', 492, 707)
+* ('jcircumflex', 205, 574)
+* ('uni0136', 510, 0)
+* ('uni0137', 421, 7)
+* ('lacute', 223, 872)
+* ('Racute', 483, 0)
+* ('uni0156', 483, 0)
+* ('Rcaron', 483, 0)
+* ('rcaron', 73, 703)
+* ('Wcircumflex', 29, 643)
+* ('Wcircumflex', 765, 643)
+* ('wcircumflex', 18, 510)
+* ('wcircumflex', 665, 510)
+* ('Ycircumflex', 21, 643)
+* ('Ycircumflex', 470, 643)
+* ('ycircumflex', 25, 510)
+* ('ycircumflex', 434, 510)
+* ('Ydieresis', 21, 643)
+* ('Ydieresis', 470, 643)
+* ('AEacute', -2, 0)
+* ('Oslashacute', 42, 23)
+* ('Oslashacute', 516, 620)
+* ('oslashacute', 23, 42)
+* ('oslashacute', 498, 467)
+* ('circumflex', 61, 574)
+* ('circumflex', 264, 574)
+* ('caron', 61, 703)
+* ('caron', 264, 703)
+* ('ogonek', 173, -70)
+* ('ogonek', 65, -77)
+* ('hungarumlaut', 63, 574)
+* ('hungarumlaut', 316, 703)
+* ('Wgrave', 29, 643)
+* ('Wgrave', 765, 643)
+* ('wgrave', 18, 510)
+* ('wgrave', 665, 510)
+* ('Wacute', 29, 643)
+* ('Wacute', 765, 643)
+* ('wacute', 18, 510)
+* ('wacute', 665, 510)
+* ('Wdieresis', 29, 643)
+* ('Wdieresis', 765, 643)
+* ('wdieresis', 18, 510)
+* ('wdieresis', 665, 510)
+* ('Ygrave', 21, 643)
+* ('Ygrave', 470, 643)
+* ('ygrave', 25, 510)
+* ('ygrave', 434, 510)
+* ('guilsinglleft', 218, 84)
+* ('guilsinglleft', 218, 427)
+* ('guilsinglright', 72, 427)
+* ('guilsinglright', 72, 84)
+* ('fraction', -202, 0)
+* ('fraction', 313, 633)
+* ('uni2206', 568, 0)
+* ('uni2206', 28, 0)
+* ('lessequal', 453, 513)
+* ('greaterequal', 70, 513)
+* ('grave.uc', 74, 830)
+* ('grave.uc', 215, 707)
+* ('acute.uc', 213, 830)
+* ('acute.uc', 72, 707)
+* ('cedilla.uc', 74, -56)
+* ('ogonek.uc', 78, -81)
+* ('hungarumlaut.uc', 60, 707)
+* ('hungarumlaut.uc', 314, 836)
+* ('caron.uc', 61, 836)
+* ('caron.uc', 264, 836)
+* ('circumflex.uc', 61, 707) and ('circumflex.uc', 264, 707)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>🔥 Rajdhani-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Rajdhani-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>
