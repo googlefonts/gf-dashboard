@@ -194,8 +194,7 @@ class GoogleFont:
             newresult = []
             for x in result:
                 x["committedDate"] = datetime.fromisoformat(x["committedDate"])
-                if x["committedDate"] > A_YEAR_AGO:
-                    newresult.append(x)
+                newresult.append(x)
             return newresult
         except Exception as e:
             raise e
