@@ -153,7 +153,9 @@ class GoogleFont:
 
     @cached_property
     def last_updated(self):
-        return datetime.fromtimestamp(self.exemplar.stat().st_mtime)
+        # Unfortunately this just gives the last date of the git clone.
+        # return datetime.fromtimestamp(self.exemplar.stat().st_mtime)
+        return self.recent_commits[0]["committedDate"]
 
     @cached_property
     def releases(self):
