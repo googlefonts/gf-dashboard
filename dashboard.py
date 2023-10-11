@@ -15,7 +15,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import datetime
 import itertools
 
-FONTBAKERY_BLACKLISTED = ["handjet"]
+FONTBAKERY_BLACKLISTED = ["handjet", "adobeblank"]
 
 TESTING = False
 
