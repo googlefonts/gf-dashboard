@@ -5,6 +5,7 @@ import anybadge
 import humanize
 import json
 import tqdm
+import time
 import re
 import github
 import subprocess
@@ -217,8 +218,9 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     if len(gf.codepoints) > 1000:
         gf.codepoints = "%s codepoints" % len(gf.encoded_codepoints)
     # Prime the pump
-    # _ = gf.recent_commits
-    # _ = gf.recent_pulls
+    _ = gf.recent_commits
+    _ = gf.recent_pulls
+    time.sleep(2)
 
     # Downstream versions if noto
     # Version history
