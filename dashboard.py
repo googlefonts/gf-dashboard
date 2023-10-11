@@ -14,6 +14,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import datetime
 import itertools
 
+FONTBAKERY_BLACKLISTED = ["handjet"]
+
 TESTING = False
 
 servers = GFServers.open(".gf_server_data.json")
@@ -37,6 +39,8 @@ def fontbakery_needs_update(directory, last_update: datetime.datetime):
     global reports_this_session
     basedir = os.path.basename(directory)
     report_file = "docs/fontbakery-reports/" + basedir + "-report.html"
+    if basedir in FONTBAKERY_BLACKLISTED:
+        return False
     if (
         os.path.exists(report_file)
         and os.path.getmtime(report_file) > last_update.timestamp()
