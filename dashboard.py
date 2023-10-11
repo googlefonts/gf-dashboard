@@ -220,6 +220,7 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     # Prime the pump
     _ = gf.recent_commits
     _ = gf.recent_pulls
+    _ = gf.releases
     time.sleep(2)
 
     # Downstream versions if noto
