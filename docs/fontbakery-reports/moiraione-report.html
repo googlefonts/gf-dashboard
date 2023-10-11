@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>2</td>
+                <td>11</td>
+                <td>61</td>
+                <td>8</td>
+                <td>159</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>1%</td>
+                <td>6%</td>
+                <td>35%</td>
+                <td>5%</td>
+                <td>91%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0141 (LATIN CAPITAL LETTER L WITH STROKE)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x0160 (LATIN CAPITAL LETTER S WITH CARON)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017D (LATIN CAPITAL LETTER Z WITH CARON)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0142 (LATIN SMALL LETTER L WITH STROKE)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x0161 (LATIN SMALL LETTER S WITH CARON)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017E (LATIN SMALL LETTER Z WITH CARON)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DD (DOUBLE ACUTE ACCENT)
+
+
+- 0x02C7 (CARON)
+
+
+- 0x02D8 (BREVE)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: coptic, cherokee, tai-le</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: coptic, cherokee, tifinagh, tai-le</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, coptic, tifinagh, tai-le, canadian-aboriginal</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: coptic, tai-le, gothic</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2080 SUBSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
+<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
+<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
+<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
+<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+2190 LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2192 RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2196 NORTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+2197 NORTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2198 SOUTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2199 SOUTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2299 CIRCLED DOT OPERATOR: not included in any glyphset definition</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding mongolian</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding mongolian</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding mongolian</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding mongolian</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding mongolian</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding mongolian</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding mongolian</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding mongolian</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding mongolian</li>
+<li>U+2469 CIRCLED NUMBER TEN: try adding mongolian</li>
+<li>U+246A CIRCLED NUMBER ELEVEN: try adding mongolian</li>
+<li>U+246B CIRCLED NUMBER TWELVE: try adding mongolian</li>
+<li>U+246C CIRCLED NUMBER THIRTEEN: try adding mongolian</li>
+<li>U+246D CIRCLED NUMBER FOURTEEN: try adding mongolian</li>
+<li>U+246E CIRCLED NUMBER FIFTEEN: try adding mongolian</li>
+<li>U+2474 PARENTHESIZED DIGIT ONE: not included in any glyphset definition</li>
+<li>U+2475 PARENTHESIZED DIGIT TWO: not included in any glyphset definition</li>
+<li>U+2476 PARENTHESIZED DIGIT THREE: not included in any glyphset definition</li>
+<li>U+2477 PARENTHESIZED DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+2478 PARENTHESIZED DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+2479 PARENTHESIZED DIGIT SIX: not included in any glyphset definition</li>
+<li>U+247A PARENTHESIZED DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+247B PARENTHESIZED DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+247C PARENTHESIZED DIGIT NINE: not included in any glyphset definition</li>
+<li>U+247D PARENTHESIZED NUMBER TEN: not included in any glyphset definition</li>
+<li>U+247E PARENTHESIZED NUMBER ELEVEN: not included in any glyphset definition</li>
+<li>U+247F PARENTHESIZED NUMBER TWELVE: not included in any glyphset definition</li>
+<li>U+2480 PARENTHESIZED NUMBER THIRTEEN: not included in any glyphset definition</li>
+<li>U+2481 PARENTHESIZED NUMBER FOURTEEN: not included in any glyphset definition</li>
+<li>U+2482 PARENTHESIZED NUMBER FIFTEEN: not included in any glyphset definition</li>
+<li>U+249C PARENTHESIZED LATIN SMALL LETTER A: not included in any glyphset definition</li>
+<li>U+249D PARENTHESIZED LATIN SMALL LETTER B: not included in any glyphset definition</li>
+<li>U+249E PARENTHESIZED LATIN SMALL LETTER C: not included in any glyphset definition</li>
+<li>U+249F PARENTHESIZED LATIN SMALL LETTER D: not included in any glyphset definition</li>
+<li>U+24A0 PARENTHESIZED LATIN SMALL LETTER E: not included in any glyphset definition</li>
+<li>U+24A1 PARENTHESIZED LATIN SMALL LETTER F: not included in any glyphset definition</li>
+<li>U+24A2 PARENTHESIZED LATIN SMALL LETTER G: not included in any glyphset definition</li>
+<li>U+24A3 PARENTHESIZED LATIN SMALL LETTER H: not included in any glyphset definition</li>
+<li>U+24A4 PARENTHESIZED LATIN SMALL LETTER I: not included in any glyphset definition</li>
+<li>U+24A5 PARENTHESIZED LATIN SMALL LETTER J: not included in any glyphset definition</li>
+<li>U+24A6 PARENTHESIZED LATIN SMALL LETTER K: not included in any glyphset definition</li>
+<li>U+24A7 PARENTHESIZED LATIN SMALL LETTER L: not included in any glyphset definition</li>
+<li>U+24A8 PARENTHESIZED LATIN SMALL LETTER M: not included in any glyphset definition</li>
+<li>U+24A9 PARENTHESIZED LATIN SMALL LETTER N: not included in any glyphset definition</li>
+<li>U+24AA PARENTHESIZED LATIN SMALL LETTER O: not included in any glyphset definition</li>
+<li>U+24AB PARENTHESIZED LATIN SMALL LETTER P: not included in any glyphset definition</li>
+<li>U+24AC PARENTHESIZED LATIN SMALL LETTER Q: not included in any glyphset definition</li>
+<li>U+24AD PARENTHESIZED LATIN SMALL LETTER R: not included in any glyphset definition</li>
+<li>U+24AE PARENTHESIZED LATIN SMALL LETTER S: not included in any glyphset definition</li>
+<li>U+24AF PARENTHESIZED LATIN SMALL LETTER T: not included in any glyphset definition</li>
+<li>U+24B0 PARENTHESIZED LATIN SMALL LETTER U: not included in any glyphset definition</li>
+<li>U+24B1 PARENTHESIZED LATIN SMALL LETTER V: not included in any glyphset definition</li>
+<li>U+24B2 PARENTHESIZED LATIN SMALL LETTER W: not included in any glyphset definition</li>
+<li>U+24B3 PARENTHESIZED LATIN SMALL LETTER X: not included in any glyphset definition</li>
+<li>U+24B4 PARENTHESIZED LATIN SMALL LETTER Y: not included in any glyphset definition</li>
+<li>U+24B5 PARENTHESIZED LATIN SMALL LETTER Z: not included in any glyphset definition</li>
+<li>U+24D0 CIRCLED LATIN SMALL LETTER A: not included in any glyphset definition</li>
+<li>U+24D1 CIRCLED LATIN SMALL LETTER B: not included in any glyphset definition</li>
+<li>U+24D2 CIRCLED LATIN SMALL LETTER C: not included in any glyphset definition</li>
+<li>U+24D3 CIRCLED LATIN SMALL LETTER D: not included in any glyphset definition</li>
+<li>U+24D4 CIRCLED LATIN SMALL LETTER E: not included in any glyphset definition</li>
+<li>U+24D5 CIRCLED LATIN SMALL LETTER F: not included in any glyphset definition</li>
+<li>U+24D6 CIRCLED LATIN SMALL LETTER G: not included in any glyphset definition</li>
+<li>U+24D7 CIRCLED LATIN SMALL LETTER H: not included in any glyphset definition</li>
+<li>U+24D8 CIRCLED LATIN SMALL LETTER I: not included in any glyphset definition</li>
+<li>U+24D9 CIRCLED LATIN SMALL LETTER J: not included in any glyphset definition</li>
+<li>U+24DA CIRCLED LATIN SMALL LETTER K: not included in any glyphset definition</li>
+<li>U+24DB CIRCLED LATIN SMALL LETTER L: not included in any glyphset definition</li>
+<li>U+24DC CIRCLED LATIN SMALL LETTER M: not included in any glyphset definition</li>
+<li>U+24DD CIRCLED LATIN SMALL LETTER N: not included in any glyphset definition</li>
+<li>U+24DE CIRCLED LATIN SMALL LETTER O: not included in any glyphset definition</li>
+<li>U+24DF CIRCLED LATIN SMALL LETTER P: not included in any glyphset definition</li>
+<li>U+24E0 CIRCLED LATIN SMALL LETTER Q: not included in any glyphset definition</li>
+<li>U+24E1 CIRCLED LATIN SMALL LETTER R: not included in any glyphset definition</li>
+<li>U+24E2 CIRCLED LATIN SMALL LETTER S: not included in any glyphset definition</li>
+<li>U+24E3 CIRCLED LATIN SMALL LETTER T: not included in any glyphset definition</li>
+<li>U+24E4 CIRCLED LATIN SMALL LETTER U: not included in any glyphset definition</li>
+<li>U+24E5 CIRCLED LATIN SMALL LETTER V: not included in any glyphset definition</li>
+<li>U+24E6 CIRCLED LATIN SMALL LETTER W: not included in any glyphset definition</li>
+<li>U+24E7 CIRCLED LATIN SMALL LETTER X: not included in any glyphset definition</li>
+<li>U+24E8 CIRCLED LATIN SMALL LETTER Y: not included in any glyphset definition</li>
+<li>U+24E9 CIRCLED LATIN SMALL LETTER Z: not included in any glyphset definition</li>
+<li>U+24EA CIRCLED DIGIT ZERO: not included in any glyphset definition</li>
+<li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: not included in any glyphset definition</li>
+<li>U+25A2 WHITE SQUARE WITH ROUNDED CORNERS: not included in any glyphset definition</li>
+<li>U+25E6 WHITE BULLET: not included in any glyphset definition</li>
+<li>U+25EF LARGE CIRCLE: not included in any glyphset definition</li>
+<li>U+2605 BLACK STAR: not included in any glyphset definition</li>
+<li>U+2606 WHITE STAR: not included in any glyphset definition</li>
+<li>U+260E BLACK TELEPHONE: not included in any glyphset definition</li>
+<li>U+260F WHITE TELEPHONE: not included in any glyphset definition</li>
+<li>U+261C WHITE LEFT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261E WHITE RIGHT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+2660 BLACK SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2661 WHITE HEART SUIT: not included in any glyphset definition</li>
+<li>U+2663 BLACK CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2664 WHITE SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2665 BLACK HEART SUIT: not included in any glyphset definition</li>
+<li>U+2667 WHITE CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2669 QUARTER NOTE: not included in any glyphset definition</li>
+<li>U+266A EIGHTH NOTE: not included in any glyphset definition</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: not included in any glyphset definition</li>
+<li>U+266D MUSIC FLAT SIGN: not included in any glyphset definition</li>
+<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: not included in any glyphset definition</li>
+<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: not included in any glyphset definition</li>
+<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: not included in any glyphset definition</li>
+<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: not included in any glyphset definition</li>
+<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: not included in any glyphset definition</li>
+<li>U+277F DINGBAT NEGATIVE CIRCLED NUMBER TEN: not included in any glyphset definition</li>
+<li>U+AC0B HANGUL SYLLABLE GALB: not included in any glyphset definition</li>
+<li>U+AC23 HANGUL SYLLABLE GAED: not included in any glyphset definition</li>
+<li>U+AC65 HANGUL SYLLABLE GYAEB: not included in any glyphset definition</li>
+<li>U+AC82 HANGUL SYLLABLE GEOBS: not included in any glyphset definition</li>
+<li>U+AC8D HANGUL SYLLABLE GEG: not included in any glyphset definition</li>
+<li>U+ACB7 HANGUL SYLLABLE GYEOLH: not included in any glyphset definition</li>
+<li>U+ACBF HANGUL SYLLABLE GYEOC: not included in any glyphset definition</li>
+<li>U+ACD8 HANGUL SYLLABLE GYESS: not included in any glyphset definition</li>
+<li>U+ACF9 HANGUL SYLLABLE GOT: not included in any glyphset definition</li>
+<li>U+AD10 HANGUL SYLLABLE GWASS: not included in any glyphset definition</li>
+<li>U+AD12 HANGUL SYLLABLE GWAJ: not included in any glyphset definition</li>
+<li>U+AD22 HANGUL SYLLABLE GWAELM: not included in any glyphset definition</li>
+<li>U+AD60 HANGUL SYLLABLE GYOM: not included in any glyphset definition</li>
+<li>U+AD65 HANGUL SYLLABLE GYONG: not included in any glyphset definition</li>
+<li>U+AD83 HANGUL SYLLABLE GUC: not included in any glyphset definition</li>
+<li>U+ADB8 HANGUL SYLLABLE GWESS: not included in any glyphset definition</li>
+<li>U+ADD5 HANGUL SYLLABLE GWING: not included in any glyphset definition</li>
+<li>U+ADEC HANGUL SYLLABLE GYUM: not included in any glyphset definition</li>
+<li>U+ADED HANGUL SYLLABLE GYUB: not included in any glyphset definition</li>
+<li>U+AE02 HANGUL SYLLABLE GEULM: not included in any glyphset definition</li>
+<li>U+AE07 HANGUL SYLLABLE GEULH: not included in any glyphset definition</li>
+<li>U+AE0F HANGUL SYLLABLE GEUC: not included in any glyphset definition</li>
+<li>U+AE11 HANGUL SYLLABLE GEUT: not included in any glyphset definition</li>
+<li>U+AE13 HANGUL SYLLABLE GEUH: not included in any glyphset definition</li>
+<li>U+AE18 HANGUL SYLLABLE GYIN: not included in any glyphset definition</li>
+<li>U+AE29 HANGUL SYLLABLE GYING: not included in any glyphset definition</li>
+<li>U+AE44 HANGUL SYLLABLE GISS: not included in any glyphset definition</li>
+<li>U+AE6F HANGUL SYLLABLE GGAED: not included in any glyphset definition</li>
+<li>U+AE86 HANGUL SYLLABLE GGYAGG: not included in any glyphset definition</li>
+<li>U+AE8D HANGUL SYLLABLE GGYALG: not included in any glyphset definition</li>
+<li>U+AEA0 HANGUL SYLLABLE GGYAE: not included in any glyphset definition</li>
+<li>U+AEA4 HANGUL SYLLABLE GGYAEN: not included in any glyphset definition</li>
+<li>U+AED3 HANGUL SYLLABLE GGEOC: not included in any glyphset definition</li>
+<li>U+AED5 HANGUL SYLLABLE GGEOT: not included in any glyphset definition</li>
+<li>U+AF09 HANGUL SYLLABLE GGYEONG: not included in any glyphset definition</li>
+<li>U+AF33 HANGUL SYLLABLE GGOD: not included in any glyphset definition</li>
+<li>U+AF45 HANGUL SYLLABLE GGOT: not included in any glyphset definition</li>
+<li>U+AF4C HANGUL SYLLABLE GGWAN: not included in any glyphset definition</li>
+<li>U+AF68 HANGUL SYLLABLE GGWAEN: not included in any glyphset definition</li>
+<li>U+AF78 HANGUL SYLLABLE GGWAESS: not included in any glyphset definition</li>
+<li>U+AFCF HANGUL SYLLABLE GGUC: not included in any glyphset definition</li>
+<li>U+AFD8 HANGUL SYLLABLE GGWEON: not included in any glyphset definition</li>
+<li>U+B030 HANGUL SYLLABLE GGYUL: not included in any glyphset definition</li>
+<li>U+B03C HANGUL SYLLABLE GGYUSS: not included in any glyphset definition</li>
+<li>U+B060 HANGUL SYLLABLE GGYI: not included in any glyphset definition</li>
+<li>U+B064 HANGUL SYLLABLE GGYIN: not included in any glyphset definition</li>
+<li>U+B090 HANGUL SYLLABLE GGISS: not included in any glyphset definition</li>
+<li>U+B0BB HANGUL SYLLABLE NAED: not included in any glyphset definition</li>
+<li>U+B0D7 HANGUL SYLLABLE NYAD: not included in any glyphset definition</li>
+<li>U+B0E1 HANGUL SYLLABLE NYAB: not included in any glyphset definition</li>
+<li>U+B0E3 HANGUL SYLLABLE NYAS: not included in any glyphset definition</li>
+<li>U+B0EC HANGUL SYLLABLE NYAE: not included in any glyphset definition</li>
+<li>U+B10F HANGUL SYLLABLE NEOD: not included in any glyphset definition</li>
+<li>U+B111 HANGUL SYLLABLE NEOLG: not included in any glyphset definition</li>
+<li>U+B122 HANGUL SYLLABLE NEOP: not included in any glyphset definition</li>
+<li>U+B12B HANGUL SYLLABLE NED: not included in any glyphset definition</li>
+<li>U+B13E HANGUL SYLLABLE NEP: not included in any glyphset definition</li>
+<li>U+B147 HANGUL SYLLABLE NYEOD: not included in any glyphset definition</li>
+<li>U+B171 HANGUL SYLLABLE NYENG: not included in any glyphset definition</li>
+<li>U+B181 HANGUL SYLLABLE NOLG: not included in any glyphset definition</li>
+<li>U+B191 HANGUL SYLLABLE NOT: not included in any glyphset definition</li>
+<li>U+B1A5 HANGUL SYLLABLE NWAB: not included in any glyphset definition</li>
+<li>U+B1B0 HANGUL SYLLABLE NWAE: not included in any glyphset definition</li>
+<li>U+B1C4 HANGUL SYLLABLE NWAESS: not included in any glyphset definition</li>
+<li>U+B1CD HANGUL SYLLABLE NOEG: not included in any glyphset definition</li>
+<li>U+B1E1 HANGUL SYLLABLE NOENG: not included in any glyphset definition</li>
+<li>U+B1F8 HANGUL SYLLABLE NYOM: not included in any glyphset definition</li>
+<li>U+B20D HANGUL SYLLABLE NULG: not included in any glyphset definition</li>
+<li>U+B21D HANGUL SYLLABLE NUT: not included in any glyphset definition</li>
+<li>U+B27B HANGUL SYLLABLE NYUD: not included in any glyphset definition</li>
+<li>U+B297 HANGUL SYLLABLE NEUD: not included in any glyphset definition</li>
+<li>U+B2A7 HANGUL SYLLABLE NEUC: not included in any glyphset definition</li>
+<li>U+B2AB HANGUL SYLLABLE NEUH: not included in any glyphset definition</li>
+<li>U+B2BC HANGUL SYLLABLE NYIM: not included in any glyphset definition</li>
+<li>U+B2BF HANGUL SYLLABLE NYIS: not included in any glyphset definition</li>
+<li>U+B2C1 HANGUL SYLLABLE NYING: not included in any glyphset definition</li>
+<li>U+B2CF HANGUL SYLLABLE NID: not included in any glyphset definition</li>
+<li>U+B2DE HANGUL SYLLABLE NIJ: not included in any glyphset definition</li>
+<li>U+B2E0 HANGUL SYLLABLE NIK: not included in any glyphset definition</li>
+<li>U+B2FD HANGUL SYLLABLE DAT: not included in any glyphset definition</li>
+<li>U+B316 HANGUL SYLLABLE DAEJ: not included in any glyphset definition</li>
+<li>U+B320 HANGUL SYLLABLE DYAN: not included in any glyphset definition</li>
+<li>U+B331 HANGUL SYLLABLE DYANG: not included in any glyphset definition</li>
+<li>U+B36F HANGUL SYLLABLE DEOH: not included in any glyphset definition</li>
+<li>U+B40F HANGUL SYLLABLE DWAES: not included in any glyphset definition</li>
+<li>U+B42C HANGUL SYLLABLE DOESS: not included in any glyphset definition</li>
+<li>U+B42D HANGUL SYLLABLE DOENG: not included in any glyphset definition</li>
+<li>U+B457 HANGUL SYLLABLE DUD: not included in any glyphset definition</li>
+<li>U+B45A HANGUL SYLLABLE DULM: not included in any glyphset definition</li>
+<li>U+B499 HANGUL SYLLABLE DWEB: not included in any glyphset definition</li>
+<li>U+B4B8 HANGUL SYLLABLE DWISS: not included in any glyphset definition</li>
+<li>U+B4E5 HANGUL SYLLABLE DEULG: not included in any glyphset definition</li>
+<li>U+B4E7 HANGUL SYLLABLE DEULB: not included in any glyphset definition</li>
+<li>U+B4FC HANGUL SYLLABLE DYIN: not included in any glyphset definition</li>
+<li>U+B500 HANGUL SYLLABLE DYIL: not included in any glyphset definition</li>
+<li>U+B52B HANGUL SYLLABLE DIC: not included in any glyphset definition</li>
+<li>U+B52E HANGUL SYLLABLE DIP: not included in any glyphset definition</li>
+<li>U+B532 HANGUL SYLLABLE DDAGG: not included in any glyphset definition</li>
+<li>U+B537 HANGUL SYLLABLE DDAD: not included in any glyphset definition</li>
+<li>U+B584 HANGUL SYLLABLE DDYAE: not included in any glyphset definition</li>
+<li>U+B588 HANGUL SYLLABLE DDYAEN: not included in any glyphset definition</li>
+<li>U+B594 HANGUL SYLLABLE DDYAEM: not included in any glyphset definition</li>
+<li>U+B599 HANGUL SYLLABLE DDYAENG: not included in any glyphset definition</li>
+<li>U+B620 HANGUL SYLLABLE DDOM: not included in any glyphset definition</li>
+<li>U+B621 HANGUL SYLLABLE DDOB: not included in any glyphset definition</li>
+<li>U+B623 HANGUL SYLLABLE DDOS: not included in any glyphset definition</li>
+<li>U+B62D HANGUL SYLLABLE DDWAG: not included in any glyphset definition</li>
+<li>U+B630 HANGUL SYLLABLE DDWAN: not included in any glyphset definition</li>
+<li>U+B647 HANGUL SYLLABLE DDWAH: not included in any glyphset definition</li>
+<li>U+B65C HANGUL SYLLABLE DDWAESS: not included in any glyphset definition</li>
+<li>U+B6A7 HANGUL SYLLABLE DDULB: not included in any glyphset definition</li>
+<li>U+B6AF HANGUL SYLLABLE DDUS: not included in any glyphset definition</li>
+<li>U+B6B8 HANGUL SYLLABLE DDWEO: not included in any glyphset definition</li>
+<li>U+B704 HANGUL SYLLABLE DDWISS: not included in any glyphset definition</li>
+<li>U+B70C HANGUL SYLLABLE DDYU: not included in any glyphset definition</li>
+<li>U+B733 HANGUL SYLLABLE DDEULB: not included in any glyphset definition</li>
+<li>U+B73D HANGUL SYLLABLE DDEUNG: not included in any glyphset definition</li>
+<li>U+B73E HANGUL SYLLABLE DDEUJ: not included in any glyphset definition</li>
+<li>U+B743 HANGUL SYLLABLE DDEUH: not included in any glyphset definition</li>
+<li>U+B761 HANGUL SYLLABLE DDIG: not included in any glyphset definition</li>
+<li>U+B783 HANGUL SYLLABLE RAD: not included in any glyphset definition</li>
+<li>U+B79F HANGUL SYLLABLE RAED: not included in any glyphset definition</li>
+<li>U+B7B0 HANGUL SYLLABLE RAEK: not included in any glyphset definition</li>
+<li>U+B7B2 HANGUL SYLLABLE RAEP: not included in any glyphset definition</li>
+<li>U+B7C5 HANGUL SYLLABLE RYAB: not included in any glyphset definition</li>
+<li>U+B7D0 HANGUL SYLLABLE RYAE: not included in any glyphset definition</li>
+<li>U+B7D4 HANGUL SYLLABLE RYAEN: not included in any glyphset definition</li>
+<li>U+B7F2 HANGUL SYLLABLE REONH: not included in any glyphset definition</li>
+<li>U+B7F3 HANGUL SYLLABLE REOD: not included in any glyphset definition</li>
+<li>U+B81C HANGUL SYLLABLE RESS: not included in any glyphset definition</li>
+<li>U+B82B HANGUL SYLLABLE RYEOD: not included in any glyphset definition</li>
+<li>U+B863 HANGUL SYLLABLE ROD: not included in any glyphset definition</li>
+<li>U+B879 HANGUL SYLLABLE RWAG: not included in any glyphset definition</li>
+<li>U+B894 HANGUL SYLLABLE RWAE: not included in any glyphset definition</li>
+<li>U+B908 HANGUL SYLLABLE RWEON: not included in any glyphset definition</li>
+<li>U+B924 HANGUL SYLLABLE RWEN: not included in any glyphset definition</li>
+<li>U+B98F HANGUL SYLLABLE REUH: not included in any glyphset definition</li>
+<li>U+B990 HANGUL SYLLABLE RYI: not included in any glyphset definition</li>
+<li>U+B994 HANGUL SYLLABLE RYIN: not included in any glyphset definition</li>
+<li>U+B9C0 HANGUL SYLLABLE RISS: not included in any glyphset definition</li>
+<li>U+B9C6 HANGUL SYLLABLE RIP: not included in any glyphset definition</li>
+<li>U+B9D4 HANGUL SYLLABLE MALS: not included in any glyphset definition</li>
+<li>U+B9DC HANGUL SYLLABLE MASS: not included in any glyphset definition</li>
+<li>U+B9DF HANGUL SYLLABLE MAC: not included in any glyphset definition</li>
+<li>U+B9E2 HANGUL SYLLABLE MAP: not included in any glyphset definition</li>
+<li>U+B9EB HANGUL SYLLABLE MAED: not included in any glyphset definition</li>
+<li>U+B9FB HANGUL SYLLABLE MAEC: not included in any glyphset definition</li>
+<li>U+B9FD HANGUL SYLLABLE MAET: not included in any glyphset definition</li>
+<li>U+BA04 HANGUL SYLLABLE MYAN: not included in any glyphset definition</li>
+<li>U+BA10 HANGUL SYLLABLE MYAM: not included in any glyphset definition</li>
+<li>U+BA4C HANGUL SYLLABLE MEOSS: not included in any glyphset definition</li>
+<li>U+BA5B HANGUL SYLLABLE MED: not included in any glyphset definition</li>
+<li>U+BA6B HANGUL SYLLABLE MEC: not included in any glyphset definition</li>
+<li>U+BA77 HANGUL SYLLABLE MYEOD: not included in any glyphset definition</li>
+<li>U+BA90 HANGUL SYLLABLE MYEN: not included in any glyphset definition</li>
+<li>U+BAAF HANGUL SYLLABLE MOD: not included in any glyphset definition</li>
+<li>U+BAB1 HANGUL SYLLABLE MOLG: not included in any glyphset definition</li>
+<li>U+BAE0 HANGUL SYLLABLE MWAE: not included in any glyphset definition</li>
+<li>U+BAF4 HANGUL SYLLABLE MWAESS: not included in any glyphset definition</li>
+<li>U+BB0C HANGUL SYLLABLE MOEM: not included in any glyphset definition</li>
+<li>U+BB64 HANGUL SYLLABLE MWEOSS: not included in any glyphset definition</li>
+<li>U+BB65 HANGUL SYLLABLE MWEONG: not included in any glyphset definition</li>
+<li>U+BB8A HANGUL SYLLABLE MWIGG: not included in any glyphset definition</li>
+<li>U+BB99 HANGUL SYLLABLE MWIB: not included in any glyphset definition</li>
+<li>U+BB9B HANGUL SYLLABLE MWIS: not included in any glyphset definition</li>
+<li>U+BBB9 HANGUL SYLLABLE MYUNG: not included in any glyphset definition</li>
+<li>U+BBC1 HANGUL SYLLABLE MEUG: not included in any glyphset definition</li>
+<li>U+BBD1 HANGUL SYLLABLE MEUB: not included in any glyphset definition</li>
+<li>U+BBD5 HANGUL SYLLABLE MEUNG: not included in any glyphset definition</li>
+<li>U+BBDC HANGUL SYLLABLE MYI: not included in any glyphset definition</li>
+<li>U+BBE0 HANGUL SYLLABLE MYIN: not included in any glyphset definition</li>
+<li>U+BBED HANGUL SYLLABLE MYIB: not included in any glyphset definition</li>
+<li>U+BBF1 HANGUL SYLLABLE MYING: not included in any glyphset definition</li>
+<li>U+BC23 HANGUL SYLLABLE BALH: not included in any glyphset definition</li>
+<li>U+BC28 HANGUL SYLLABLE BASS: not included in any glyphset definition</li>
+<li>U+BC2B HANGUL SYLLABLE BAC: not included in any glyphset definition</li>
+<li>U+BC32 HANGUL SYLLABLE BAEGG: not included in any glyphset definition</li>
+<li>U+BC37 HANGUL SYLLABLE BAED: not included in any glyphset definition</li>
+<li>U+BC5C HANGUL SYLLABLE BYAM: not included in any glyphset definition</li>
+<li>U+BC5F HANGUL SYLLABLE BYAS: not included in any glyphset definition</li>
+<li>U+BC61 HANGUL SYLLABLE BYANG: not included in any glyphset definition</li>
+<li>U+BC98 HANGUL SYLLABLE BEOSS: not included in any glyphset definition</li>
+<li>U+BC9D HANGUL SYLLABLE BEOT: not included in any glyphset definition</li>
+<li>U+BC9F HANGUL SYLLABLE BEOH: not included in any glyphset definition</li>
+<li>U+BCCC HANGUL SYLLABLE BYEOM: not included in any glyphset definition</li>
+<li>U+BCD3 HANGUL SYLLABLE BYEOC: not included in any glyphset definition</li>
+<li>U+BCFB HANGUL SYLLABLE BOD: not included in any glyphset definition</li>
+<li>U+BCFD HANGUL SYLLABLE BOLG: not included in any glyphset definition</li>
+<li>U+BCFE HANGUL SYLLABLE BOLM: not included in any glyphset definition</li>
+<li>U+BCFF HANGUL SYLLABLE BOLB: not included in any glyphset definition</li>
+<li>U+BD23 HANGUL SYLLABLE BWAS: not included in any glyphset definition</li>
+<li>U+BD25 HANGUL SYLLABLE BWANG: not included in any glyphset definition</li>
+<li>U+BD5C HANGUL SYLLABLE BOESS: not included in any glyphset definition</li>
+<li>U+BD74 HANGUL SYLLABLE BYOM: not included in any glyphset definition</li>
+<li>U+BD94 HANGUL SYLLABLE BUSS: not included in any glyphset definition</li>
+<li>U+BD9D HANGUL SYLLABLE BWEOG: not included in any glyphset definition</li>
+<li>U+BDA0 HANGUL SYLLABLE BWEON: not included in any glyphset definition</li>
+<li>U+BDAD HANGUL SYLLABLE BWEOB: not included in any glyphset definition</li>
+<li>U+BDB4 HANGUL SYLLABLE BWEOK: not included in any glyphset definition</li>
+<li>U+BDC1 HANGUL SYLLABLE BWELG: not included in any glyphset definition</li>
+<li>U+BDE5 HANGUL SYLLABLE BWIB: not included in any glyphset definition</li>
+<li>U+BE01 HANGUL SYLLABLE BYUB: not included in any glyphset definition</li>
+<li>U+BE15 HANGUL SYLLABLE BEULG: not included in any glyphset definition</li>
+<li>U+BE21 HANGUL SYLLABLE BEUNG: not included in any glyphset definition</li>
+<li>U+BE28 HANGUL SYLLABLE BYI: not included in any glyphset definition</li>
+<li>U+BE29 HANGUL SYLLABLE BYIG: not included in any glyphset definition</li>
+<li>U+BE30 HANGUL SYLLABLE BYIL: not included in any glyphset definition</li>
+<li>U+BE3D HANGUL SYLLABLE BYING: not included in any glyphset definition</li>
+<li>U+BE4B HANGUL SYLLABLE BID: not included in any glyphset definition</li>
+<li>U+BE58 HANGUL SYLLABLE BISS: not included in any glyphset definition</li>
+<li>U+BE67 HANGUL SYLLABLE BBAD: not included in any glyphset definition</li>
+<li>U+BE69 HANGUL SYLLABLE BBALG: not included in any glyphset definition</li>
+<li>U+BE7E HANGUL SYLLABLE BBAEGG: not included in any glyphset definition</li>
+<li>U+BE9C HANGUL SYLLABLE BBYAN: not included in any glyphset definition</li>
+<li>U+BED9 HANGUL SYLLABLE BBEOLG: not included in any glyphset definition</li>
+<li>U+BEF0 HANGUL SYLLABLE BBEN: not included in any glyphset definition</li>
+<li>U+BF0C HANGUL SYLLABLE BBYEON: not included in any glyphset definition</li>
+<li>U+BF53 HANGUL SYLLABLE BBOS: not included in any glyphset definition</li>
+<li>U+BFB1 HANGUL SYLLABLE BBYOG: not included in any glyphset definition</li>
+<li>U+BFD5 HANGUL SYLLABLE BBULG: not included in any glyphset definition</li>
+<li>U+BFDD HANGUL SYLLABLE BBUB: not included in any glyphset definition</li>
+<li>U+C020 HANGUL SYLLABLE BBWI: not included in any glyphset definition</li>
+<li>U+C06D HANGUL SYLLABLE BBEUNG: not included in any glyphset definition</li>
+<li>U+C0C6 HANGUL SYLLABLE SAP: not included in any glyphset definition</li>
+<li>U+C0CF HANGUL SYLLABLE SAED: not included in any glyphset definition</li>
+<li>U+C0FE HANGUL SYLLABLE SYAP: not included in any glyphset definition</li>
+<li>U+C101 HANGUL SYLLABLE SYAEG: not included in any glyphset definition</li>
+<li>U+C13F HANGUL SYLLABLE SED: not included in any glyphset definition</li>
+<li>U+C151 HANGUL SYLLABLE SET: not included in any glyphset definition</li>
+<li>U+C171 HANGUL SYLLABLE SYEG: not included in any glyphset definition</li>
+<li>U+C180 HANGUL SYLLABLE SYEM: not included in any glyphset definition</li>
+<li>U+C181 HANGUL SYLLABLE SYEB: not included in any glyphset definition</li>
+<li>U+C193 HANGUL SYLLABLE SOD: not included in any glyphset definition</li>
+<li>U+C1F4 HANGUL SYLLABLE SOESS: not included in any glyphset definition</li>
+<li>U+C1F5 HANGUL SYLLABLE SOENG: not included in any glyphset definition</li>
+<li>U+C216 HANGUL SYLLABLE SYOP: not included in any glyphset definition</li>
+<li>U+C28C HANGUL SYLLABLE SYUN: not included in any glyphset definition</li>
+<li>U+C2AB HANGUL SYLLABLE SEUD: not included in any glyphset definition</li>
+<li>U+C2B2 HANGUL SYLLABLE SEULP: not included in any glyphset definition</li>
+<li>U+C2C0 HANGUL SYLLABLE SYI: not included in any glyphset definition</li>
+<li>U+C2C1 HANGUL SYLLABLE SYIG: not included in any glyphset definition</li>
+<li>U+C2E5 HANGUL SYLLABLE SILG: not included in any glyphset definition</li>
+<li>U+C2F0 HANGUL SYLLABLE SISS: not included in any glyphset definition</li>
+<li>U+C2F3 HANGUL SYLLABLE SIC: not included in any glyphset definition</li>
+<li>U+C2FF HANGUL SYLLABLE SSAD: not included in any glyphset definition</li>
+<li>U+C330 HANGUL SYLLABLE SSYA: not included in any glyphset definition</li>
+<li>U+C331 HANGUL SYLLABLE SSYAG: not included in any glyphset definition</li>
+<li>U+C382 HANGUL SYLLABLE SSEOP: not included in any glyphset definition</li>
+<li>U+C385 HANGUL SYLLABLE SSEG: not included in any glyphset definition</li>
+<li>U+C394 HANGUL SYLLABLE SSEM: not included in any glyphset definition</li>
+<li>U+C3A0 HANGUL SYLLABLE SSYEO: not included in any glyphset definition</li>
+<li>U+C3A4 HANGUL SYLLABLE SSYEON: not included in any glyphset definition</li>
+<li>U+C3B5 HANGUL SYLLABLE SSYEONG: not included in any glyphset definition</li>
+<li>U+C3BC HANGUL SYLLABLE SSYE: not included in any glyphset definition</li>
+<li>U+C3DA HANGUL SYLLABLE SSOGG: not included in any glyphset definition</li>
+<li>U+C3FC HANGUL SYLLABLE SSWAL: not included in any glyphset definition</li>
+<li>U+C40B HANGUL SYLLABLE SSWAC: not included in any glyphset definition</li>
+<li>U+C440 HANGUL SYLLABLE SSOESS: not included in any glyphset definition</li>
+<li>U+C45D HANGUL SYLLABLE SSYONG: not included in any glyphset definition</li>
+<li>U+C490 HANGUL SYLLABLE SSWEOM: not included in any glyphset definition</li>
+<li>U+C4A0 HANGUL SYLLABLE SSWEN: not included in any glyphset definition</li>
+<li>U+C4AC HANGUL SYLLABLE SSWEM: not included in any glyphset definition</li>
+<li>U+C4D4 HANGUL SYLLABLE SSYU: not included in any glyphset definition</li>
+<li>U+C503 HANGUL SYLLABLE SSEUS: not included in any glyphset definition</li>
+<li>U+C52B HANGUL SYLLABLE SSIGS: not included in any glyphset definition</li>
+<li>U+C53C HANGUL SYLLABLE SSISS: not included in any glyphset definition</li>
+<li>U+C53F HANGUL SYLLABLE SSIC: not included in any glyphset definition</li>
+<li>U+C54B HANGUL SYLLABLE AD: not included in any glyphset definition</li>
+<li>U+C54F HANGUL SYLLABLE ALB: not included in any glyphset definition</li>
+<li>U+C55C HANGUL SYLLABLE AK: not included in any glyphset definition</li>
+<li>U+C590 HANGUL SYLLABLE YASS: not included in any glyphset definition</li>
+<li>U+C5AC HANGUL SYLLABLE YAESS: not included in any glyphset definition</li>
+<li>U+C5AD HANGUL SYLLABLE YAENG: not included in any glyphset definition</li>
+<li>U+C5BA HANGUL SYLLABLE EONH: not included in any glyphset definition</li>
+<li>U+C5CF HANGUL SYLLABLE EOH: not included in any glyphset definition</li>
+<li>U+C5E4 HANGUL SYLLABLE ESS: not included in any glyphset definition</li>
+<li>U+C60F HANGUL SYLLABLE YED: not included in any glyphset definition</li>
+<li>U+C61D HANGUL SYLLABLE YENG: not included in any glyphset definition</li>
+<li>U+C626 HANGUL SYLLABLE OGG: not included in any glyphset definition</li>
+<li>U+C62B HANGUL SYLLABLE OD: not included in any glyphset definition</li>
+<li>U+C62F HANGUL SYLLABLE OLB: not included in any glyphset definition</li>
+<li>U+C64E HANGUL SYLLABLE WALP: not included in any glyphset definition</li>
+<li>U+C658 HANGUL SYLLABLE WAK: not included in any glyphset definition</li>
+<li>U+C66D HANGUL SYLLABLE WAEB: not included in any glyphset definition</li>
+<li>U+C670 HANGUL SYLLABLE WAESS: not included in any glyphset definition</li>
+<li>U+C68C HANGUL SYLLABLE OESS: not included in any glyphset definition</li>
+<li>U+C6B7 HANGUL SYLLABLE UD: not included in any glyphset definition</li>
+<li>U+C6C2 HANGUL SYLLABLE UBS: not included in any glyphset definition</li>
+<li>U+C6C7 HANGUL SYLLABLE UC: not included in any glyphset definition</li>
+<li>U+C6DF HANGUL SYLLABLE WEOS: not included in any glyphset definition</li>
+<li>U+C6FB HANGUL SYLLABLE WES: not included in any glyphset definition</li>
+<li>U+C718 HANGUL SYLLABLE WISS: not included in any glyphset definition</li>
+<li>U+C73E HANGUL SYLLABLE EUGG: not included in any glyphset definition</li>
+<li>U+C743 HANGUL SYLLABLE EUD: not included in any glyphset definition</li>
+<li>U+C747 HANGUL SYLLABLE EULB: not included in any glyphset definition</li>
+<li>U+C74E HANGUL SYLLABLE EUBS: not included in any glyphset definition</li>
+<li>U+C769 HANGUL SYLLABLE YIB: not included in any glyphset definition</li>
+<li>U+C76C HANGUL SYLLABLE YISS: not included in any glyphset definition</li>
+<li>U+C76D HANGUL SYLLABLE YING: not included in any glyphset definition</li>
+<li>U+C77B HANGUL SYLLABLE ID: not included in any glyphset definition</li>
+<li>U+C78C HANGUL SYLLABLE IK: not included in any glyphset definition</li>
+<li>U+C78D HANGUL SYLLABLE IT: not included in any glyphset definition</li>
+<li>U+C7F5 HANGUL SYLLABLE JYAEB: not included in any glyphset definition</li>
+<li>U+C802 HANGUL SYLLABLE JEOGG: not included in any glyphset definition</li>
+<li>U+C807 HANGUL SYLLABLE JEOD: not included in any glyphset definition</li>
+<li>U+C809 HANGUL SYLLABLE JEOLG: not included in any glyphset definition</li>
+<li>U+C80B HANGUL SYLLABLE JEOLB: not included in any glyphset definition</li>
+<li>U+C814 HANGUL SYLLABLE JEOSS: not included in any glyphset definition</li>
+<li>U+C839 HANGUL SYLLABLE JYEOG: not included in any glyphset definition</li>
+<li>U+C842 HANGUL SYLLABLE JYEOLM: not included in any glyphset definition</li>
+<li>U+C84B HANGUL SYLLABLE JYEOS: not included in any glyphset definition</li>
+<li>U+C890 HANGUL SYLLABLE JWAN: not included in any glyphset definition</li>
+<li>U+C8A6 HANGUL SYLLABLE JWAP: not included in any glyphset definition</li>
+<li>U+C8AC HANGUL SYLLABLE JWAEN: not included in any glyphset definition</li>
+<li>U+C8C5 HANGUL SYLLABLE JOEG: not included in any glyphset definition</li>
+<li>U+C96D HANGUL SYLLABLE JYUG: not included in any glyphset definition</li>
+<li>U+C981 HANGUL SYLLABLE JYUNG: not included in any glyphset definition</li>
+<li>U+C992 HANGUL SYLLABLE JEULM: not included in any glyphset definition</li>
+<li>U+C9A4 HANGUL SYLLABLE JYI: not included in any glyphset definition</li>
+<li>U+C9D4 HANGUL SYLLABLE JISS: not included in any glyphset definition</li>
+<li>U+C9D7 HANGUL SYLLABLE JIC: not included in any glyphset definition</li>
+<li>U+C9E3 HANGUL SYLLABLE JJAD: not included in any glyphset definition</li>
+<li>U+C9F2 HANGUL SYLLABLE JJAJ: not included in any glyphset definition</li>
+<li>U+CA24 HANGUL SYLLABLE JJYAM: not included in any glyphset definition</li>
+<li>U+CA30 HANGUL SYLLABLE JJYAE: not included in any glyphset definition</li>
+<li>U+CA70 HANGUL SYLLABLE JJEL: not included in any glyphset definition</li>
+<li>U+CAC3 HANGUL SYLLABLE JJOD: not included in any glyphset definition</li>
+<li>U+CAD2 HANGUL SYLLABLE JJOJ: not included in any glyphset definition</li>
+<li>U+CADC HANGUL SYLLABLE JJWAN: not included in any glyphset definition</li>
+<li>U+CB27 HANGUL SYLLABLE JJOEC: not included in any glyphset definition</li>
+<li>U+CB2C HANGUL SYLLABLE JJYO: not included in any glyphset definition</li>
+<li>U+CB2D HANGUL SYLLABLE JJYOG: not included in any glyphset definition</li>
+<li>U+CB32 HANGUL SYLLABLE JJYONH: not included in any glyphset definition</li>
+<li>U+CB5B HANGUL SYLLABLE JJUS: not included in any glyphset definition</li>
+<li>U+CB80 HANGUL SYLLABLE JJWE: not included in any glyphset definition</li>
+<li>U+CB93 HANGUL SYLLABLE JJWES: not included in any glyphset definition</li>
+<li>U+CBCD HANGUL SYLLABLE JJYUNG: not included in any glyphset definition</li>
+<li>U+CBD5 HANGUL SYLLABLE JJEUG: not included in any glyphset definition</li>
+<li>U+CC13 HANGUL SYLLABLE JJID: not included in any glyphset definition</li>
+<li>U+CC1F HANGUL SYLLABLE JJIS: not included in any glyphset definition</li>
+<li>U+CC26 HANGUL SYLLABLE JJIP: not included in any glyphset definition</li>
+<li>U+CC3F HANGUL SYLLABLE CAC: not included in any glyphset definition</li>
+<li>U+CCCA HANGUL SYLLABLE CEJ: not included in any glyphset definition</li>
+<li>U+CCE1 HANGUL SYLLABLE CYEOB: not included in any glyphset definition</li>
+<li>U+CCE5 HANGUL SYLLABLE CYEONG: not included in any glyphset definition</li>
+<li>U+CD23 HANGUL SYLLABLE COH: not included in any glyphset definition</li>
+<li>U+CD25 HANGUL SYLLABLE CWAG: not included in any glyphset definition</li>
+<li>U+CD35 HANGUL SYLLABLE CWAB: not included in any glyphset definition</li>
+<li>U+CD40 HANGUL SYLLABLE CWAE: not included in any glyphset definition</li>
+<li>U+CDCD HANGUL SYLLABLE CWEG: not included in any glyphset definition</li>
+<li>U+CDD4 HANGUL SYLLABLE CWEL: not included in any glyphset definition</li>
+<li>U+CE05 HANGUL SYLLABLE CYUG: not included in any glyphset definition</li>
+<li>U+CE29 HANGUL SYLLABLE CEULG: not included in any glyphset definition</li>
+<li>U+CE3C HANGUL SYLLABLE CYI: not included in any glyphset definition</li>
+<li>U+CE62 HANGUL SYLLABLE CILM: not included in any glyphset definition</li>
+<li>U+CE6C HANGUL SYLLABLE CISS: not included in any glyphset definition</li>
+<li>U+CE6E HANGUL SYLLABLE CIJ: not included in any glyphset definition</li>
+<li>U+CE70 HANGUL SYLLABLE CIK: not included in any glyphset definition</li>
+<li>U+CE7B HANGUL SYLLABLE KAD: not included in any glyphset definition</li>
+<li>U+CEA8 HANGUL SYLLABLE KAEK: not included in any glyphset definition</li>
+<li>U+CEB0 HANGUL SYLLABLE KYAN: not included in any glyphset definition</li>
+<li>U+CEC4 HANGUL SYLLABLE KYAK: not included in any glyphset definition</li>
+<li>U+CEFD HANGUL SYLLABLE KEOT: not included in any glyphset definition</li>
+<li>U+CF14 HANGUL SYLLABLE KESS: not included in any glyphset definition</li>
+<li>U+CF18 HANGUL SYLLABLE KEK: not included in any glyphset definition</li>
+<li>U+CF19 HANGUL SYLLABLE KET: not included in any glyphset definition</li>
+<li>U+CF5B HANGUL SYLLABLE KOD: not included in any glyphset definition</li>
+<li>U+CF83 HANGUL SYLLABLE KWAS: not included in any glyphset definition</li>
+<li>U+CFC8 HANGUL SYLLABLE KYON: not included in any glyphset definition</li>
+<li>U+CFFD HANGUL SYLLABLE KWEOG: not included in any glyphset definition</li>
+<li>U+D00C HANGUL SYLLABLE KWEOM: not included in any glyphset definition</li>
+<li>U+D01C HANGUL SYLLABLE KWEN: not included in any glyphset definition</li>
+<li>U+D020 HANGUL SYLLABLE KWEL: not included in any glyphset definition</li>
+<li>U+D072 HANGUL SYLLABLE KEUNH: not included in any glyphset definition</li>
+<li>U+D084 HANGUL SYLLABLE KEUK: not included in any glyphset definition</li>
+<li>U+D088 HANGUL SYLLABLE KYI: not included in any glyphset definition</li>
+<li>U+D0B8 HANGUL SYLLABLE KISS: not included in any glyphset definition</li>
+<li>U+D0C7 HANGUL SYLLABLE TAD: not included in any glyphset definition</li>
+<li>U+D114 HANGUL SYLLABLE TYAE: not included in any glyphset definition</li>
+<li>U+D13B HANGUL SYLLABLE TEOLB: not included in any glyphset definition</li>
+<li>U+D166 HANGUL SYLLABLE TEP: not included in any glyphset definition</li>
+<li>U+D170 HANGUL SYLLABLE TYEOL: not included in any glyphset definition</li>
+<li>U+D17B HANGUL SYLLABLE TYEOS: not included in any glyphset definition</li>
+<li>U+D1A7 HANGUL SYLLABLE TOD: not included in any glyphset definition</li>
+<li>U+D1FB HANGUL SYLLABLE TOED: not included in any glyphset definition</li>
+<li>U+D225 HANGUL SYLLABLE TYONG: not included in any glyphset definition</li>
+<li>U+D236 HANGUL SYLLABLE TULM: not included in any glyphset definition</li>
+<li>U+D277 HANGUL SYLLABLE TWES: not included in any glyphset definition</li>
+<li>U+D2CD HANGUL SYLLABLE TEUNG: not included in any glyphset definition</li>
+<li>U+D2D1 HANGUL SYLLABLE TEUT: not included in any glyphset definition</li>
+<li>U+D311 HANGUL SYLLABLE PANJ: not included in any glyphset definition</li>
+<li>U+D313 HANGUL SYLLABLE PAD: not included in any glyphset definition</li>
+<li>U+D324 HANGUL SYLLABLE PAK: not included in any glyphset definition</li>
+<li>U+D32F HANGUL SYLLABLE PAED: not included in any glyphset definition</li>
+<li>U+D35D HANGUL SYLLABLE PYAT: not included in any glyphset definition</li>
+<li>U+D396 HANGUL SYLLABLE PEOP: not included in any glyphset definition</li>
+<li>U+D3B5 HANGUL SYLLABLE PYEOG: not included in any glyphset definition</li>
+<li>U+D3D4 HANGUL SYLLABLE PYEN: not included in any glyphset definition</li>
+<li>U+D405 HANGUL SYLLABLE POT: not included in any glyphset definition</li>
+<li>U+D409 HANGUL SYLLABLE PWAG: not included in any glyphset definition</li>
+<li>U+D519 HANGUL SYLLABLE PEUNG: not included in any glyphset definition</li>
+<li>U+D520 HANGUL SYLLABLE PYI: not included in any glyphset definition</li>
+<li>U+D535 HANGUL SYLLABLE PYING: not included in any glyphset definition</li>
+<li>U+D550 HANGUL SYLLABLE PISS: not included in any glyphset definition</li>
+<li>U+D564 HANGUL SYLLABLE HALS: not included in any glyphset definition</li>
+<li>U+D570 HANGUL SYLLABLE HAK: not included in any glyphset definition</li>
+<li>U+D573 HANGUL SYLLABLE HAH: not included in any glyphset definition</li>
+<li>U+D57B HANGUL SYLLABLE HAED: not included in any glyphset definition</li>
+<li>U+D58B HANGUL SYLLABLE HAEC: not included in any glyphset definition</li>
+<li>U+D58F HANGUL SYLLABLE HAEH: not included in any glyphset definition</li>
+<li>U+D594 HANGUL SYLLABLE HYAN: not included in any glyphset definition</li>
+<li>U+D5A3 HANGUL SYLLABLE HYAS: not included in any glyphset definition</li>
+<li>U+D5AC HANGUL SYLLABLE HYAE: not included in any glyphset definition</li>
+<li>U+D5C0 HANGUL SYLLABLE HYAESS: not included in any glyphset definition</li>
+<li>U+D5D7 HANGUL SYLLABLE HEOLH: not included in any glyphset definition</li>
+<li>U+D5E0 HANGUL SYLLABLE HEOK: not included in any glyphset definition</li>
+<li>U+D5E1 HANGUL SYLLABLE HEOT: not included in any glyphset definition</li>
+<li>U+D5E3 HANGUL SYLLABLE HEOH: not included in any glyphset definition</li>
+<li>U+D5F8 HANGUL SYLLABLE HESS: not included in any glyphset definition</li>
+<li>U+D5FF HANGUL SYLLABLE HEH: not included in any glyphset definition</li>
+<li>U+D665 HANGUL SYLLABLE HWAB: not included in any glyphset definition</li>
+<li>U+D668 HANGUL SYLLABLE HWASS: not included in any glyphset definition</li>
+<li>U+D6BD HANGUL SYLLABLE HYONG: not included in any glyphset definition</li>
+<li>U+D6CD HANGUL SYLLABLE HULG: not included in any glyphset definition</li>
+<li>U+D6D0 HANGUL SYLLABLE HULS: not included in any glyphset definition</li>
+<li>U+D6D3 HANGUL SYLLABLE HULH: not included in any glyphset definition</li>
+<li>U+D6D5 HANGUL SYLLABLE HUB: not included in any glyphset definition</li>
+<li>U+D75D HANGUL SYLLABLE HEULT: not included in any glyphset definition</li>
+<li>U+D79C HANGUL SYLLABLE HISS: not included in any glyphset definition</li>
+<li>U+D7A3 HANGUL SYLLABLE HIH: not included in any glyphset definition</li>
+<li>U+E000 : not included in any glyphset definition</li>
+<li>U+E001 : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>korean</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 2.0Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>Are there caret positions declared for every ligature?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + h
+
+- h + f
+
+- f + i
+
+- i + f
+
+- h + i
+
+- t + h
+
+- h + t [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>It seems that Jiyeon Park is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry. [code: profile-not-found]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>It seems that JAMO is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry. [code: profile-not-found]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: exclam	Contours detected: 1	Expected: 2
+
+- Glyph name: percent	Contours detected: 3	Expected: 5
+
+- Glyph name: period	Contours detected: 2	Expected: 1
+
+- Glyph name: five	Contours detected: 2	Expected: 1
+
+- Glyph name: eight	Contours detected: 2	Expected: 3
+
+- Glyph name: colon	Contours detected: 4	Expected: 2
+
+- Glyph name: semicolon	Contours detected: 3	Expected: 2
+
+- Glyph name: question	Contours detected: 1	Expected: 2
+
+- Glyph name: at	Contours detected: 1	Expected: 2
+
+- Glyph name: A	Contours detected: 1	Expected: 2
+
+- Glyph name: B	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: E	Contours detected: 2	Expected: 1
+
+- Glyph name: F	Contours detected: 2	Expected: 1
+
+- Glyph name: a	Contours detected: 1	Expected: 2
+
+- Glyph name: b	Contours detected: 1	Expected: 2
+
+- Glyph name: d	Contours detected: 1	Expected: 2
+
+- Glyph name: e	Contours detected: 1	Expected: 2
+
+- Glyph name: f	Contours detected: 2	Expected: 1
+
+- Glyph name: g	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: i	Contours detected: 4	Expected: 2
+
+- Glyph name: j	Contours detected: 3	Expected: 2
+
+- Glyph name: l	Contours detected: 2	Expected: 1
+
+- Glyph name: p	Contours detected: 1	Expected: 2
+
+- Glyph name: q	Contours detected: 1	Expected: 2
+
+- Glyph name: braceleft	Contours detected: 2	Expected: 1
+
+- Glyph name: braceright	Contours detected: 2	Expected: 1
+
+- Glyph name: exclamdown	Contours detected: 1	Expected: 2
+
+- Glyph name: cent	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: yen	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: section	Contours detected: 1	Expected: 2
+
+- Glyph name: dieresis	Contours detected: 4	Expected: 2
+
+- Glyph name: ordfeminine	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: degree	Contours detected: 1	Expected: 2
+
+- Glyph name: questiondown	Contours detected: 1	Expected: 2
+
+- Glyph name: Agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: Aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 1	Expected: 4
+
+- Glyph name: AE	Contours detected: 3	Expected: 2
+
+- Glyph name: Egrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Eacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ecircumflex	Contours detected: 3	Expected: 2
+
+- Glyph name: Edieresis	Contours detected: 2	Expected: 3
+
+- Glyph name: Idieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: Odieresis	Contours detected: 2	Expected: 4
+
+- Glyph name: Udieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: adieresis	Contours detected: 5	Expected: 4
+
+- Glyph name: aring	Contours detected: 5	Expected: 4
+
+- Glyph name: ae	Contours detected: 1	Expected: 3
+
+- Glyph name: egrave	Contours detected: 2	Expected: 3
+
+- Glyph name: eacute	Contours detected: 2	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 5	Expected: 4
+
+- Glyph name: igrave	Contours detected: 3	Expected: 2
+
+- Glyph name: iacute	Contours detected: 3	Expected: 2
+
+- Glyph name: icircumflex	Contours detected: 3	Expected: 2
+
+- Glyph name: idieresis	Contours detected: 6	Expected: 3
+
+- Glyph name: eth	Contours detected: 1	Expected: 2
+
+- Glyph name: odieresis	Contours detected: 6	Expected: 4
+
+- Glyph name: divide	Contours detected: 5	Expected: 3
+
+- Glyph name: oslash	Contours detected: 2	Expected: 3
+
+- Glyph name: udieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: thorn	Contours detected: 1	Expected: 2
+
+- Glyph name: ydieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: dotlessi	Contours detected: 2	Expected: 1
+
+- Glyph name: ij	Contours detected: 6	Expected: 3 or 4
+
+- Glyph name: oe	Contours detected: 1	Expected: 3
+
+- Glyph name: Ydieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: dotaccent	Contours detected: 2	Expected: 1
+
+- Glyph name: ring	Contours detected: 4	Expected: 2
+
+- Glyph name: uni0307	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0308	Contours detected: 4	Expected: 2
+
+- Glyph name: uni030A	Contours detected: 4	Expected: 2
+
+- Glyph name: Wdieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: wdieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: ellipsis	Contours detected: 6	Expected: 3
+
+- Glyph name: uni2075	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2078	Contours detected: 2	Expected: 3
+
+- Glyph name: uni2079	Contours detected: 1	Expected: 2
+
+- Glyph name: uni2085	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2088	Contours detected: 2	Expected: 3
+
+- Glyph name: uni2089	Contours detected: 1	Expected: 2
+
+- Glyph name: uni20A9	Contours detected: 2	Expected: 1, 3, 4 or 7
+
+- Glyph name: oneeighth	Contours detected: 4	Expected: 5
+
+- Glyph name: threeeighths	Contours detected: 4	Expected: 5
+
+- Glyph name: seveneighths	Contours detected: 4	Expected: 5
+
+- Glyph name: arrowleft	Contours detected: 2	Expected: 1
+
+- Glyph name: arrowup	Contours detected: 2	Expected: 1
+
+- Glyph name: arrowright	Contours detected: 2	Expected: 1
+
+- Glyph name: arrowdown	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2196	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2197	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2198	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2199	Contours detected: 2	Expected: 1
+
+- Glyph name: infinity	Contours detected: 1	Expected: 3
+
+- Glyph name: A	Contours detected: 1	Expected: 2
+
+- Glyph name: AE	Contours detected: 3	Expected: 2
+
+- Glyph name: Aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 1	Expected: 4
+
+- Glyph name: Agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: B	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: E	Contours detected: 2	Expected: 1
+
+- Glyph name: Eacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ecircumflex	Contours detected: 3	Expected: 2
+
+- Glyph name: Edieresis	Contours detected: 2	Expected: 3
+
+- Glyph name: Egrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: F	Contours detected: 2	Expected: 1
+
+- Glyph name: Idieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: Odieresis	Contours detected: 2	Expected: 4
+
+- Glyph name: Udieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: Wdieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: Ydieresis	Contours detected: 1	Expected: 3
+
+- Glyph name: a	Contours detected: 1	Expected: 2
+
+- Glyph name: aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: adieresis	Contours detected: 5	Expected: 4
+
+- Glyph name: ae	Contours detected: 1	Expected: 3
+
+- Glyph name: agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: aring	Contours detected: 5	Expected: 4
+
+- Glyph name: arrowdown	Contours detected: 2	Expected: 1
+
+- Glyph name: arrowup	Contours detected: 2	Expected: 1
+
+- Glyph name: at	Contours detected: 1	Expected: 2
+
+- Glyph name: atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: b	Contours detected: 1	Expected: 2
+
+- Glyph name: braceleft	Contours detected: 2	Expected: 1
+
+- Glyph name: braceright	Contours detected: 2	Expected: 1
+
+- Glyph name: cent	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: colon	Contours detected: 4	Expected: 2
+
+- Glyph name: d	Contours detected: 1	Expected: 2
+
+- Glyph name: degree	Contours detected: 1	Expected: 2
+
+- Glyph name: dieresis	Contours detected: 4	Expected: 2
+
+- Glyph name: divide	Contours detected: 5	Expected: 3
+
+- Glyph name: dotaccent	Contours detected: 2	Expected: 1
+
+- Glyph name: dotlessi	Contours detected: 2	Expected: 1
+
+- Glyph name: e	Contours detected: 1	Expected: 2
+
+- Glyph name: eacute	Contours detected: 2	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 5	Expected: 4
+
+- Glyph name: egrave	Contours detected: 2	Expected: 3
+
+- Glyph name: eight	Contours detected: 2	Expected: 3
+
+- Glyph name: ellipsis	Contours detected: 6	Expected: 3
+
+- Glyph name: eth	Contours detected: 1	Expected: 2
+
+- Glyph name: exclam	Contours detected: 1	Expected: 2
+
+- Glyph name: exclamdown	Contours detected: 1	Expected: 2
+
+- Glyph name: f	Contours detected: 2	Expected: 1
+
+- Glyph name: five	Contours detected: 2	Expected: 1
+
+- Glyph name: g	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: i	Contours detected: 4	Expected: 2
+
+- Glyph name: iacute	Contours detected: 3	Expected: 2
+
+- Glyph name: icircumflex	Contours detected: 3	Expected: 2
+
+- Glyph name: idieresis	Contours detected: 6	Expected: 3
+
+- Glyph name: igrave	Contours detected: 3	Expected: 2
+
+- Glyph name: ij	Contours detected: 6	Expected: 3 or 4
+
+- Glyph name: infinity	Contours detected: 1	Expected: 3
+
+- Glyph name: j	Contours detected: 3	Expected: 2
+
+- Glyph name: l	Contours detected: 2	Expected: 1
+
+- Glyph name: odieresis	Contours detected: 6	Expected: 4
+
+- Glyph name: oe	Contours detected: 1	Expected: 3
+
+- Glyph name: oneeighth	Contours detected: 4	Expected: 5
+
+- Glyph name: ordfeminine	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: oslash	Contours detected: 2	Expected: 3
+
+- Glyph name: p	Contours detected: 1	Expected: 2
+
+- Glyph name: percent	Contours detected: 3	Expected: 5
+
+- Glyph name: period	Contours detected: 2	Expected: 1
+
+- Glyph name: q	Contours detected: 1	Expected: 2
+
+- Glyph name: question	Contours detected: 1	Expected: 2
+
+- Glyph name: questiondown	Contours detected: 1	Expected: 2
+
+- Glyph name: ring	Contours detected: 4	Expected: 2
+
+- Glyph name: section	Contours detected: 1	Expected: 2
+
+- Glyph name: semicolon	Contours detected: 3	Expected: 2
+
+- Glyph name: seveneighths	Contours detected: 4	Expected: 5
+
+- Glyph name: thorn	Contours detected: 1	Expected: 2
+
+- Glyph name: threeeighths	Contours detected: 4	Expected: 5
+
+- Glyph name: udieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: uni0307	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0308	Contours detected: 4	Expected: 2
+
+- Glyph name: uni030A	Contours detected: 4	Expected: 2
+
+- Glyph name: uni20A9	Contours detected: 2	Expected: 1, 3, 4 or 7
+
+- Glyph name: uni2196	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2197	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2198	Contours detected: 2	Expected: 1
+
+- Glyph name: uni2199	Contours detected: 2	Expected: 1
+
+- Glyph name: wdieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: ydieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: yen	Contours detected: 3	Expected: 1 or 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain chws and vchw features?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 550 among a set of 10 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 447:
+logicalnot</p>
+<p>Width = 530:
+multiply
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>🔥⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>🔥 MoiraiOne-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>No dotted circle glyph present and font uses a complex shaper [code: missing-dotted-circle-complex]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

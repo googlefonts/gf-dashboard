@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>20</td>
+                <td>20</td>
+                <td>68</td>
+                <td>7</td>
+                <td>126</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>11%</td>
+                <td>11%</td>
+                <td>36%</td>
+                <td>4%</td>
+                <td>67%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Does DESCRIPTION file contain broken links?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/broken_links&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following links are broken in the DESCRIPTION file:
+http://mshio.b.osdn.me/ [code: broken-links]</p>
+</span></li></ul></div></details>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID is 'PfEd', a font editor default. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: bad]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x2018 (LEFT SINGLE QUOTATION MARK)
+
+
+- 0x2019 (RIGHT SINGLE QUOTATION MARK)
+
+
+- 0x02D9 (DOT ABOVE)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x2022 (BULLET)
+
+
+- 0x2013 (EN DASH)
+
+
+- 0x2014 (EM DASH)
+
+
+- 0x201A (SINGLE LOW-9 QUOTATION MARK)
+
+
+- 0x2039 (SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
+
+
+- 0x203A (SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
+
+
+- 0x2122 (TRADE MARK SIGN)
+
+
+- 0x20AC (EURO SIGN)
+
+
+- 0x2212 (MINUS SIGN)
+
+
+- 0x02DD (DOUBLE ACUTE ACCENT)
+
+
+- 0x02C6 (MODIFIER LETTER CIRCUMFLEX ACCENT)
+
+
+- 0x02C7 (CARON)
+
+
+- 0x02D8 (BREVE)
+
+
+- 0x02DA (RING ABOVE)
+
+
+- 0x02DC (SMALL TILDE)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02CB MODIFIER LETTER GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: cherokee, coptic, tai-le</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: cherokee, coptic, tai-le, tifinagh</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, tifinagh</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: cherokee, coptic, tifinagh, gothic</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, coptic, malayalam, tifinagh, canadian-aboriginal</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: coptic, tai-le, gothic</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0315 COMBINING COMMA ABOVE RIGHT: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+203B REFERENCE MARK: not included in any glyphset definition</li>
+<li>U+203C DOUBLE EXCLAMATION MARK: not included in any glyphset definition</li>
+<li>U+2047 DOUBLE QUESTION MARK: not included in any glyphset definition</li>
+<li>U+2048 QUESTION EXCLAMATION MARK: try adding mongolian</li>
+<li>U+2049 EXCLAMATION QUESTION MARK: try adding mongolian</li>
+<li>U+2318 PLACE OF INTEREST SIGN: not included in any glyphset definition</li>
+<li>U+2319 TURNED NOT SIGN: not included in any glyphset definition</li>
+<li>U+231A WATCH: not included in any glyphset definition</li>
+<li>U+2326 ERASE TO THE RIGHT: not included in any glyphset definition</li>
+<li>U+232B ERASE TO THE LEFT: not included in any glyphset definition</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding mongolian</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding mongolian</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding mongolian</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding mongolian</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding mongolian</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding mongolian</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding mongolian</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding mongolian</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding mongolian</li>
+<li>U+2500 BOX DRAWINGS LIGHT HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2501 BOX DRAWINGS HEAVY HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2502 BOX DRAWINGS LIGHT VERTICAL: not included in any glyphset definition</li>
+<li>U+2503 BOX DRAWINGS HEAVY VERTICAL: not included in any glyphset definition</li>
+<li>U+250C BOX DRAWINGS LIGHT DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+250D BOX DRAWINGS DOWN LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+250E BOX DRAWINGS DOWN HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+250F BOX DRAWINGS HEAVY DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+2510 BOX DRAWINGS LIGHT DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2511 BOX DRAWINGS DOWN LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+2512 BOX DRAWINGS DOWN HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+2513 BOX DRAWINGS HEAVY DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2514 BOX DRAWINGS LIGHT UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2515 BOX DRAWINGS UP LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+2516 BOX DRAWINGS UP HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+2517 BOX DRAWINGS HEAVY UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2518 BOX DRAWINGS LIGHT UP AND LEFT: not included in any glyphset definition</li>
+<li>U+2519 BOX DRAWINGS UP LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+251A BOX DRAWINGS UP HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+251B BOX DRAWINGS HEAVY UP AND LEFT: not included in any glyphset definition</li>
+<li>U+251C BOX DRAWINGS LIGHT VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+251D BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+251E BOX DRAWINGS UP HEAVY AND RIGHT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+251F BOX DRAWINGS DOWN HEAVY AND RIGHT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2520 BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+2521 BOX DRAWINGS DOWN LIGHT AND RIGHT UP HEAVY: not included in any glyphset definition</li>
+<li>U+2522 BOX DRAWINGS UP LIGHT AND RIGHT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+2523 BOX DRAWINGS HEAVY VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+2524 BOX DRAWINGS LIGHT VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+2525 BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+2526 BOX DRAWINGS UP HEAVY AND LEFT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+2527 BOX DRAWINGS DOWN HEAVY AND LEFT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2528 BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+2529 BOX DRAWINGS DOWN LIGHT AND LEFT UP HEAVY: not included in any glyphset definition</li>
+<li>U+252A BOX DRAWINGS UP LIGHT AND LEFT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+252B BOX DRAWINGS HEAVY VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+252C BOX DRAWINGS LIGHT DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+252D BOX DRAWINGS LEFT HEAVY AND RIGHT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+252E BOX DRAWINGS RIGHT HEAVY AND LEFT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+252F BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2530 BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2531 BOX DRAWINGS RIGHT LIGHT AND LEFT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+2532 BOX DRAWINGS LEFT LIGHT AND RIGHT DOWN HEAVY: not included in any glyphset definition</li>
+<li>U+2533 BOX DRAWINGS HEAVY DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2534 BOX DRAWINGS LIGHT UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2535 BOX DRAWINGS LEFT HEAVY AND RIGHT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2536 BOX DRAWINGS RIGHT HEAVY AND LEFT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2537 BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2538 BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2539 BOX DRAWINGS RIGHT LIGHT AND LEFT UP HEAVY: not included in any glyphset definition</li>
+<li>U+253A BOX DRAWINGS LEFT LIGHT AND RIGHT UP HEAVY: not included in any glyphset definition</li>
+<li>U+253B BOX DRAWINGS HEAVY UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253C BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253D BOX DRAWINGS LEFT HEAVY AND RIGHT VERTICAL LIGHT: not included in any glyphset definition</li>
+<li>U+253E BOX DRAWINGS RIGHT HEAVY AND LEFT VERTICAL LIGHT: not included in any glyphset definition</li>
+<li>U+253F BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2540 BOX DRAWINGS UP HEAVY AND DOWN HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2541 BOX DRAWINGS DOWN HEAVY AND UP HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2542 BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2543 BOX DRAWINGS LEFT UP HEAVY AND RIGHT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+2544 BOX DRAWINGS RIGHT UP HEAVY AND LEFT DOWN LIGHT: not included in any glyphset definition</li>
+<li>U+2545 BOX DRAWINGS LEFT DOWN HEAVY AND RIGHT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2546 BOX DRAWINGS RIGHT DOWN HEAVY AND LEFT UP LIGHT: not included in any glyphset definition</li>
+<li>U+2547 BOX DRAWINGS DOWN LIGHT AND UP HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2548 BOX DRAWINGS UP LIGHT AND DOWN HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2549 BOX DRAWINGS RIGHT LIGHT AND LEFT VERTICAL HEAVY: not included in any glyphset definition</li>
+<li>U+254A BOX DRAWINGS LEFT LIGHT AND RIGHT VERTICAL HEAVY: not included in any glyphset definition</li>
+<li>U+254B BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2550 BOX DRAWINGS DOUBLE HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2551 BOX DRAWINGS DOUBLE VERTICAL: not included in any glyphset definition</li>
+<li>U+2552 BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE: not included in any glyphset definition</li>
+<li>U+2553 BOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE: not included in any glyphset definition</li>
+<li>U+2554 BOX DRAWINGS DOUBLE DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+2555 BOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE: not included in any glyphset definition</li>
+<li>U+2556 BOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE: not included in any glyphset definition</li>
+<li>U+2557 BOX DRAWINGS DOUBLE DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2558 BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE: not included in any glyphset definition</li>
+<li>U+2559 BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE: not included in any glyphset definition</li>
+<li>U+255A BOX DRAWINGS DOUBLE UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+255B BOX DRAWINGS UP SINGLE AND LEFT DOUBLE: not included in any glyphset definition</li>
+<li>U+255C BOX DRAWINGS UP DOUBLE AND LEFT SINGLE: not included in any glyphset definition</li>
+<li>U+255D BOX DRAWINGS DOUBLE UP AND LEFT: not included in any glyphset definition</li>
+<li>U+255E BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE: not included in any glyphset definition</li>
+<li>U+255F BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE: not included in any glyphset definition</li>
+<li>U+2560 BOX DRAWINGS DOUBLE VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+2561 BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE: not included in any glyphset definition</li>
+<li>U+2562 BOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE: not included in any glyphset definition</li>
+<li>U+2563 BOX DRAWINGS DOUBLE VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+2564 BOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE: not included in any glyphset definition</li>
+<li>U+2565 BOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE: not included in any glyphset definition</li>
+<li>U+2566 BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2567 BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE: not included in any glyphset definition</li>
+<li>U+2568 BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE: not included in any glyphset definition</li>
+<li>U+2569 BOX DRAWINGS DOUBLE UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+256A BOX DRAWINGS VERTICAL SINGLE AND HORIZONTAL DOUBLE: not included in any glyphset definition</li>
+<li>U+256B BOX DRAWINGS VERTICAL DOUBLE AND HORIZONTAL SINGLE: not included in any glyphset definition</li>
+<li>U+256C BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2574 BOX DRAWINGS LIGHT LEFT: not included in any glyphset definition</li>
+<li>U+2575 BOX DRAWINGS LIGHT UP: not included in any glyphset definition</li>
+<li>U+2576 BOX DRAWINGS LIGHT RIGHT: not included in any glyphset definition</li>
+<li>U+2577 BOX DRAWINGS LIGHT DOWN: not included in any glyphset definition</li>
+<li>U+2578 BOX DRAWINGS HEAVY LEFT: not included in any glyphset definition</li>
+<li>U+2579 BOX DRAWINGS HEAVY UP: not included in any glyphset definition</li>
+<li>U+257A BOX DRAWINGS HEAVY RIGHT: not included in any glyphset definition</li>
+<li>U+257B BOX DRAWINGS HEAVY DOWN: not included in any glyphset definition</li>
+<li>U+257C BOX DRAWINGS LIGHT LEFT AND HEAVY RIGHT: not included in any glyphset definition</li>
+<li>U+257D BOX DRAWINGS LIGHT UP AND HEAVY DOWN: not included in any glyphset definition</li>
+<li>U+257E BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT: not included in any glyphset definition</li>
+<li>U+257F BOX DRAWINGS HEAVY UP AND LIGHT DOWN: not included in any glyphset definition</li>
+<li>U+2580 UPPER HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2581 LOWER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2582 LOWER ONE QUARTER BLOCK: not included in any glyphset definition</li>
+<li>U+2583 LOWER THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2584 LOWER HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2585 LOWER FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2586 LOWER THREE QUARTERS BLOCK: not included in any glyphset definition</li>
+<li>U+2587 LOWER SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2588 FULL BLOCK: not included in any glyphset definition</li>
+<li>U+2589 LEFT SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258A LEFT THREE QUARTERS BLOCK: not included in any glyphset definition</li>
+<li>U+258B LEFT FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258C LEFT HALF BLOCK: not included in any glyphset definition</li>
+<li>U+258D LEFT THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258E LEFT ONE QUARTER BLOCK: not included in any glyphset definition</li>
+<li>U+258F LEFT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2590 RIGHT HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2594 UPPER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2595 RIGHT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2596 QUADRANT LOWER LEFT: not included in any glyphset definition</li>
+<li>U+2597 QUADRANT LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+2598 QUADRANT UPPER LEFT: not included in any glyphset definition</li>
+<li>U+2599 QUADRANT UPPER LEFT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259A QUADRANT UPPER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259B QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
+<li>U+259C QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259D QUADRANT UPPER RIGHT: not included in any glyphset definition</li>
+<li>U+259E QUADRANT UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
+<li>U+259F QUADRANT UPPER RIGHT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+25A0 BLACK SQUARE: not included in any glyphset definition</li>
+<li>U+25A1 WHITE SQUARE: not included in any glyphset definition</li>
+<li>U+25A2 WHITE SQUARE WITH ROUNDED CORNERS: not included in any glyphset definition</li>
+<li>U+25A3 WHITE SQUARE CONTAINING BLACK SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25A4 SQUARE WITH HORIZONTAL FILL: not included in any glyphset definition</li>
+<li>U+25A5 SQUARE WITH VERTICAL FILL: not included in any glyphset definition</li>
+<li>U+25A6 SQUARE WITH ORTHOGONAL CROSSHATCH FILL: not included in any glyphset definition</li>
+<li>U+25A7 SQUARE WITH UPPER LEFT TO LOWER RIGHT FILL: not included in any glyphset definition</li>
+<li>U+25A8 SQUARE WITH UPPER RIGHT TO LOWER LEFT FILL: not included in any glyphset definition</li>
+<li>U+25A9 SQUARE WITH DIAGONAL CROSSHATCH FILL: not included in any glyphset definition</li>
+<li>U+25AA BLACK SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AB WHITE SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AC BLACK RECTANGLE: not included in any glyphset definition</li>
+<li>U+25AD WHITE RECTANGLE: not included in any glyphset definition</li>
+<li>U+25AE BLACK VERTICAL RECTANGLE: not included in any glyphset definition</li>
+<li>U+25AF WHITE VERTICAL RECTANGLE: not included in any glyphset definition</li>
+<li>U+25B0 BLACK PARALLELOGRAM: not included in any glyphset definition</li>
+<li>U+25B1 WHITE PARALLELOGRAM: not included in any glyphset definition</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B4 BLACK UP-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B5 WHITE UP-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B8 BLACK RIGHT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B9 WHITE RIGHT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BA BLACK RIGHT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25BB WHITE RIGHT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BE BLACK DOWN-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BF WHITE DOWN-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C4 BLACK LEFT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25C5 WHITE LEFT-POINTING POINTER: not included in any glyphset definition</li>
+<li>U+25C6 BLACK DIAMOND: not included in any glyphset definition</li>
+<li>U+25C7 WHITE DIAMOND: not included in any glyphset definition</li>
+<li>U+25C8 WHITE DIAMOND CONTAINING BLACK SMALL DIAMOND: not included in any glyphset definition</li>
+<li>U+25C9 FISHEYE: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+25CB WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: bengali, tai-le, telugu, thai, tagalog, cham, malayalam, tifinagh, buhid, meetei-mayek, limbu, myanmar, kaithi, tamil, batak, tibetan, lepcha, hanunoo, sinhala, new-tai-lue, phags-pa, devanagari, kayah-li, hebrew, syloti-nagri, oriya, rejang, mandaic, javanese, khmer, lao, gujarati, balinese, brahmi, thaana, sundanese, coptic, kannada, mongolian, buginese, canadian-aboriginal, chakma, gurmukhi, kharoshthi, tagbanwa, tai-viet</li>
+<li>U+25CD CIRCLE WITH VERTICAL FILL: not included in any glyphset definition</li>
+<li>U+25CE BULLSEYE: not included in any glyphset definition</li>
+<li>U+25CF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25D0 CIRCLE WITH LEFT HALF BLACK: not included in any glyphset definition</li>
+<li>U+25D1 CIRCLE WITH RIGHT HALF BLACK: not included in any glyphset definition</li>
+<li>U+25D2 CIRCLE WITH LOWER HALF BLACK: not included in any glyphset definition</li>
+<li>U+25D3 CIRCLE WITH UPPER HALF BLACK: not included in any glyphset definition</li>
+<li>U+25D4 CIRCLE WITH UPPER RIGHT QUADRANT BLACK: not included in any glyphset definition</li>
+<li>U+25D5 CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK: not included in any glyphset definition</li>
+<li>U+25D6 LEFT HALF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25D7 RIGHT HALF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25DC UPPER LEFT QUADRANT CIRCULAR ARC: not included in any glyphset definition</li>
+<li>U+25DD UPPER RIGHT QUADRANT CIRCULAR ARC: not included in any glyphset definition</li>
+<li>U+25DE LOWER RIGHT QUADRANT CIRCULAR ARC: not included in any glyphset definition</li>
+<li>U+25DF LOWER LEFT QUADRANT CIRCULAR ARC: not included in any glyphset definition</li>
+<li>U+25E0 UPPER HALF CIRCLE: not included in any glyphset definition</li>
+<li>U+25E1 LOWER HALF CIRCLE: not included in any glyphset definition</li>
+<li>U+25E2 BLACK LOWER RIGHT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25E3 BLACK LOWER LEFT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25E4 BLACK UPPER LEFT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25E5 BLACK UPPER RIGHT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25E6 WHITE BULLET: not included in any glyphset definition</li>
+<li>U+25E7 SQUARE WITH LEFT HALF BLACK: not included in any glyphset definition</li>
+<li>U+25E8 SQUARE WITH RIGHT HALF BLACK: not included in any glyphset definition</li>
+<li>U+25E9 SQUARE WITH UPPER LEFT DIAGONAL HALF BLACK: not included in any glyphset definition</li>
+<li>U+25EA SQUARE WITH LOWER RIGHT DIAGONAL HALF BLACK: not included in any glyphset definition</li>
+<li>U+25EB WHITE SQUARE WITH VERTICAL BISECTING LINE: not included in any glyphset definition</li>
+<li>U+25EC WHITE UP-POINTING TRIANGLE WITH DOT: not included in any glyphset definition</li>
+<li>U+25ED UP-POINTING TRIANGLE WITH LEFT HALF BLACK: not included in any glyphset definition</li>
+<li>U+25EE UP-POINTING TRIANGLE WITH RIGHT HALF BLACK: not included in any glyphset definition</li>
+<li>U+25EF LARGE CIRCLE: not included in any glyphset definition</li>
+<li>U+25F0 WHITE SQUARE WITH UPPER LEFT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F1 WHITE SQUARE WITH LOWER LEFT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F2 WHITE SQUARE WITH LOWER RIGHT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F3 WHITE SQUARE WITH UPPER RIGHT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F4 WHITE CIRCLE WITH UPPER LEFT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F5 WHITE CIRCLE WITH LOWER LEFT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F6 WHITE CIRCLE WITH LOWER RIGHT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F7 WHITE CIRCLE WITH UPPER RIGHT QUADRANT: not included in any glyphset definition</li>
+<li>U+25F8 UPPER LEFT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25F9 UPPER RIGHT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25FA LOWER LEFT TRIANGLE: not included in any glyphset definition</li>
+<li>U+25FF LOWER RIGHT TRIANGLE: not included in any glyphset definition</li>
+<li>U+2600 BLACK SUN WITH RAYS: not included in any glyphset definition</li>
+<li>U+2601 CLOUD: not included in any glyphset definition</li>
+<li>U+2602 UMBRELLA: not included in any glyphset definition</li>
+<li>U+2603 SNOWMAN: not included in any glyphset definition</li>
+<li>U+2604 COMET: not included in any glyphset definition</li>
+<li>U+2605 BLACK STAR: not included in any glyphset definition</li>
+<li>U+2606 WHITE STAR: not included in any glyphset definition</li>
+<li>U+2607 LIGHTNING: not included in any glyphset definition</li>
+<li>U+2608 THUNDERSTORM: not included in any glyphset definition</li>
+<li>U+2609 SUN: not included in any glyphset definition</li>
+<li>U+260E BLACK TELEPHONE: not included in any glyphset definition</li>
+<li>U+260F WHITE TELEPHONE: not included in any glyphset definition</li>
+<li>U+2610 BALLOT BOX: not included in any glyphset definition</li>
+<li>U+2611 BALLOT BOX WITH CHECK: not included in any glyphset definition</li>
+<li>U+2612 BALLOT BOX WITH X: not included in any glyphset definition</li>
+<li>U+2614 UMBRELLA WITH RAIN DROPS: not included in any glyphset definition</li>
+<li>U+2615 HOT BEVERAGE: not included in any glyphset definition</li>
+<li>U+2616 WHITE SHOGI PIECE: not included in any glyphset definition</li>
+<li>U+2617 BLACK SHOGI PIECE: not included in any glyphset definition</li>
+<li>U+2618 SHAMROCK: not included in any glyphset definition</li>
+<li>U+2619 REVERSED ROTATED FLORAL HEART BULLET: not included in any glyphset definition</li>
+<li>U+261A BLACK LEFT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261B BLACK RIGHT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261C WHITE LEFT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261D WHITE UP POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261E WHITE RIGHT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261F WHITE DOWN POINTING INDEX: not included in any glyphset definition</li>
+<li>U+2620 SKULL AND CROSSBONES: not included in any glyphset definition</li>
+<li>U+2622 RADIOACTIVE SIGN: not included in any glyphset definition</li>
+<li>U+2623 BIOHAZARD SIGN: not included in any glyphset definition</li>
+<li>U+262F YIN YANG: not included in any glyphset definition</li>
+<li>U+2630 TRIGRAM FOR HEAVEN: not included in any glyphset definition</li>
+<li>U+2631 TRIGRAM FOR LAKE: not included in any glyphset definition</li>
+<li>U+2632 TRIGRAM FOR FIRE: not included in any glyphset definition</li>
+<li>U+2633 TRIGRAM FOR THUNDER: not included in any glyphset definition</li>
+<li>U+2634 TRIGRAM FOR WIND: not included in any glyphset definition</li>
+<li>U+2635 TRIGRAM FOR WATER: not included in any glyphset definition</li>
+<li>U+2636 TRIGRAM FOR MOUNTAIN: not included in any glyphset definition</li>
+<li>U+2637 TRIGRAM FOR EARTH: not included in any glyphset definition</li>
+<li>U+2638 WHEEL OF DHARMA: not included in any glyphset definition</li>
+<li>U+2639 WHITE FROWNING FACE: not included in any glyphset definition</li>
+<li>U+263A WHITE SMILING FACE: not included in any glyphset definition</li>
+<li>U+263B BLACK SMILING FACE: not included in any glyphset definition</li>
+<li>U+263C WHITE SUN WITH RAYS: not included in any glyphset definition</li>
+<li>U+263D FIRST QUARTER MOON: not included in any glyphset definition</li>
+<li>U+263E LAST QUARTER MOON: not included in any glyphset definition</li>
+<li>U+263F MERCURY: not included in any glyphset definition</li>
+<li>U+2640 FEMALE SIGN: not included in any glyphset definition</li>
+<li>U+2641 EARTH: not included in any glyphset definition</li>
+<li>U+2642 MALE SIGN: not included in any glyphset definition</li>
+<li>U+2660 BLACK SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2661 WHITE HEART SUIT: not included in any glyphset definition</li>
+<li>U+2662 WHITE DIAMOND SUIT: not included in any glyphset definition</li>
+<li>U+2663 BLACK CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2664 WHITE SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2665 BLACK HEART SUIT: not included in any glyphset definition</li>
+<li>U+2666 BLACK DIAMOND SUIT: not included in any glyphset definition</li>
+<li>U+2667 WHITE CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2668 HOT SPRINGS: not included in any glyphset definition</li>
+<li>U+2669 QUARTER NOTE: not included in any glyphset definition</li>
+<li>U+266A EIGHTH NOTE: not included in any glyphset definition</li>
+<li>U+266B BEAMED EIGHTH NOTES: not included in any glyphset definition</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: not included in any glyphset definition</li>
+<li>U+266D MUSIC FLAT SIGN: not included in any glyphset definition</li>
+<li>U+266E MUSIC NATURAL SIGN: not included in any glyphset definition</li>
+<li>U+266F MUSIC SHARP SIGN: not included in any glyphset definition</li>
+<li>U+2672 UNIVERSAL RECYCLING SYMBOL: not included in any glyphset definition</li>
+<li>U+267B BLACK UNIVERSAL RECYCLING SYMBOL: not included in any glyphset definition</li>
+<li>U+267C RECYCLED PAPER SYMBOL: not included in any glyphset definition</li>
+<li>U+267D PARTIALLY-RECYCLED PAPER SYMBOL: not included in any glyphset definition</li>
+<li>U+267F WHEELCHAIR SYMBOL: not included in any glyphset definition</li>
+<li>U+2680 DIE FACE-1: not included in any glyphset definition</li>
+<li>U+2681 DIE FACE-2: not included in any glyphset definition</li>
+<li>U+2682 DIE FACE-3: not included in any glyphset definition</li>
+<li>U+2683 DIE FACE-4: not included in any glyphset definition</li>
+<li>U+2684 DIE FACE-5: not included in any glyphset definition</li>
+<li>U+2685 DIE FACE-6: not included in any glyphset definition</li>
+<li>U+2686 WHITE CIRCLE WITH DOT RIGHT: not included in any glyphset definition</li>
+<li>U+2687 WHITE CIRCLE WITH TWO DOTS: not included in any glyphset definition</li>
+<li>U+2688 BLACK CIRCLE WITH WHITE DOT RIGHT: not included in any glyphset definition</li>
+<li>U+2689 BLACK CIRCLE WITH TWO WHITE DOTS: not included in any glyphset definition</li>
+<li>U+2695 STAFF OF AESCULAPIUS: not included in any glyphset definition</li>
+<li>U+26BE BASEBALL: not included in any glyphset definition</li>
+<li>U+26C4 SNOWMAN WITHOUT SNOW: not included in any glyphset definition</li>
+<li>U+26C7 BLACK SNOWMAN: not included in any glyphset definition</li>
+<li>U+26C9 TURNED WHITE SHOGI PIECE: not included in any glyphset definition</li>
+<li>U+26CA TURNED BLACK SHOGI PIECE: not included in any glyphset definition</li>
+<li>U+270A RAISED FIST: not included in any glyphset definition</li>
+<li>U+270E LOWER RIGHT PENCIL: not included in any glyphset definition</li>
+<li>U+270F PENCIL: not included in any glyphset definition</li>
+<li>U+2710 UPPER RIGHT PENCIL: not included in any glyphset definition</li>
+<li>U+2715 MULTIPLICATION X: not included in any glyphset definition</li>
+<li>U+2716 HEAVY MULTIPLICATION X: not included in any glyphset definition</li>
+<li>U+272A CIRCLED WHITE STAR: not included in any glyphset definition</li>
+<li>U+272B OPEN CENTRE BLACK STAR: not included in any glyphset definition</li>
+<li>U+272D OUTLINED BLACK STAR: not included in any glyphset definition</li>
+<li>U+272F PINWHEEL STAR: not included in any glyphset definition</li>
+<li>U+273F BLACK FLORETTE: not included in any glyphset definition</li>
+<li>U+2801 BRAILLE PATTERN DOTS-1: not included in any glyphset definition</li>
+<li>U+2802 BRAILLE PATTERN DOTS-2: not included in any glyphset definition</li>
+<li>U+2803 BRAILLE PATTERN DOTS-12: not included in any glyphset definition</li>
+<li>U+2804 BRAILLE PATTERN DOTS-3: not included in any glyphset definition</li>
+<li>U+2805 BRAILLE PATTERN DOTS-13: not included in any glyphset definition</li>
+<li>U+2806 BRAILLE PATTERN DOTS-23: not included in any glyphset definition</li>
+<li>U+2807 BRAILLE PATTERN DOTS-123: not included in any glyphset definition</li>
+<li>U+2808 BRAILLE PATTERN DOTS-4: not included in any glyphset definition</li>
+<li>U+2809 BRAILLE PATTERN DOTS-14: not included in any glyphset definition</li>
+<li>U+280A BRAILLE PATTERN DOTS-24: not included in any glyphset definition</li>
+<li>U+280B BRAILLE PATTERN DOTS-124: not included in any glyphset definition</li>
+<li>U+280C BRAILLE PATTERN DOTS-34: not included in any glyphset definition</li>
+<li>U+280D BRAILLE PATTERN DOTS-134: not included in any glyphset definition</li>
+<li>U+280E BRAILLE PATTERN DOTS-234: not included in any glyphset definition</li>
+<li>U+280F BRAILLE PATTERN DOTS-1234: not included in any glyphset definition</li>
+<li>U+2810 BRAILLE PATTERN DOTS-5: not included in any glyphset definition</li>
+<li>U+2811 BRAILLE PATTERN DOTS-15: not included in any glyphset definition</li>
+<li>U+2812 BRAILLE PATTERN DOTS-25: not included in any glyphset definition</li>
+<li>U+2813 BRAILLE PATTERN DOTS-125: not included in any glyphset definition</li>
+<li>U+2814 BRAILLE PATTERN DOTS-35: not included in any glyphset definition</li>
+<li>U+2815 BRAILLE PATTERN DOTS-135: not included in any glyphset definition</li>
+<li>U+2816 BRAILLE PATTERN DOTS-235: not included in any glyphset definition</li>
+<li>U+2817 BRAILLE PATTERN DOTS-1235: not included in any glyphset definition</li>
+<li>U+2818 BRAILLE PATTERN DOTS-45: not included in any glyphset definition</li>
+<li>U+2819 BRAILLE PATTERN DOTS-145: not included in any glyphset definition</li>
+<li>U+281A BRAILLE PATTERN DOTS-245: not included in any glyphset definition</li>
+<li>U+281B BRAILLE PATTERN DOTS-1245: not included in any glyphset definition</li>
+<li>U+281C BRAILLE PATTERN DOTS-345: not included in any glyphset definition</li>
+<li>U+281D BRAILLE PATTERN DOTS-1345: not included in any glyphset definition</li>
+<li>U+281E BRAILLE PATTERN DOTS-2345: not included in any glyphset definition</li>
+<li>U+281F BRAILLE PATTERN DOTS-12345: not included in any glyphset definition</li>
+<li>U+2820 BRAILLE PATTERN DOTS-6: not included in any glyphset definition</li>
+<li>U+2821 BRAILLE PATTERN DOTS-16: not included in any glyphset definition</li>
+<li>U+2822 BRAILLE PATTERN DOTS-26: not included in any glyphset definition</li>
+<li>U+2823 BRAILLE PATTERN DOTS-126: not included in any glyphset definition</li>
+<li>U+2824 BRAILLE PATTERN DOTS-36: not included in any glyphset definition</li>
+<li>U+2825 BRAILLE PATTERN DOTS-136: not included in any glyphset definition</li>
+<li>U+2826 BRAILLE PATTERN DOTS-236: not included in any glyphset definition</li>
+<li>U+2827 BRAILLE PATTERN DOTS-1236: not included in any glyphset definition</li>
+<li>U+2828 BRAILLE PATTERN DOTS-46: not included in any glyphset definition</li>
+<li>U+2829 BRAILLE PATTERN DOTS-146: not included in any glyphset definition</li>
+<li>U+282A BRAILLE PATTERN DOTS-246: not included in any glyphset definition</li>
+<li>U+282B BRAILLE PATTERN DOTS-1246: not included in any glyphset definition</li>
+<li>U+282C BRAILLE PATTERN DOTS-346: not included in any glyphset definition</li>
+<li>U+282D BRAILLE PATTERN DOTS-1346: not included in any glyphset definition</li>
+<li>U+282E BRAILLE PATTERN DOTS-2346: not included in any glyphset definition</li>
+<li>U+282F BRAILLE PATTERN DOTS-12346: not included in any glyphset definition</li>
+<li>U+2830 BRAILLE PATTERN DOTS-56: not included in any glyphset definition</li>
+<li>U+2831 BRAILLE PATTERN DOTS-156: not included in any glyphset definition</li>
+<li>U+2832 BRAILLE PATTERN DOTS-256: not included in any glyphset definition</li>
+<li>U+2833 BRAILLE PATTERN DOTS-1256: not included in any glyphset definition</li>
+<li>U+2834 BRAILLE PATTERN DOTS-356: not included in any glyphset definition</li>
+<li>U+2835 BRAILLE PATTERN DOTS-1356: not included in any glyphset definition</li>
+<li>U+2836 BRAILLE PATTERN DOTS-2356: not included in any glyphset definition</li>
+<li>U+2837 BRAILLE PATTERN DOTS-12356: not included in any glyphset definition</li>
+<li>U+2838 BRAILLE PATTERN DOTS-456: not included in any glyphset definition</li>
+<li>U+2839 BRAILLE PATTERN DOTS-1456: not included in any glyphset definition</li>
+<li>U+283A BRAILLE PATTERN DOTS-2456: not included in any glyphset definition</li>
+<li>U+283B BRAILLE PATTERN DOTS-12456: not included in any glyphset definition</li>
+<li>U+283C BRAILLE PATTERN DOTS-3456: not included in any glyphset definition</li>
+<li>U+283D BRAILLE PATTERN DOTS-13456: not included in any glyphset definition</li>
+<li>U+283E BRAILLE PATTERN DOTS-23456: not included in any glyphset definition</li>
+<li>U+283F BRAILLE PATTERN DOTS-123456: not included in any glyphset definition</li>
+<li>U+2840 BRAILLE PATTERN DOTS-7: not included in any glyphset definition</li>
+<li>U+2841 BRAILLE PATTERN DOTS-17: not included in any glyphset definition</li>
+<li>U+2842 BRAILLE PATTERN DOTS-27: not included in any glyphset definition</li>
+<li>U+2843 BRAILLE PATTERN DOTS-127: not included in any glyphset definition</li>
+<li>U+2844 BRAILLE PATTERN DOTS-37: not included in any glyphset definition</li>
+<li>U+2845 BRAILLE PATTERN DOTS-137: not included in any glyphset definition</li>
+<li>U+2846 BRAILLE PATTERN DOTS-237: not included in any glyphset definition</li>
+<li>U+2847 BRAILLE PATTERN DOTS-1237: not included in any glyphset definition</li>
+<li>U+2848 BRAILLE PATTERN DOTS-47: not included in any glyphset definition</li>
+<li>U+2849 BRAILLE PATTERN DOTS-147: not included in any glyphset definition</li>
+<li>U+284A BRAILLE PATTERN DOTS-247: not included in any glyphset definition</li>
+<li>U+284B BRAILLE PATTERN DOTS-1247: not included in any glyphset definition</li>
+<li>U+284C BRAILLE PATTERN DOTS-347: not included in any glyphset definition</li>
+<li>U+284D BRAILLE PATTERN DOTS-1347: not included in any glyphset definition</li>
+<li>U+284E BRAILLE PATTERN DOTS-2347: not included in any glyphset definition</li>
+<li>U+284F BRAILLE PATTERN DOTS-12347: not included in any glyphset definition</li>
+<li>U+2850 BRAILLE PATTERN DOTS-57: not included in any glyphset definition</li>
+<li>U+2851 BRAILLE PATTERN DOTS-157: not included in any glyphset definition</li>
+<li>U+2852 BRAILLE PATTERN DOTS-257: not included in any glyphset definition</li>
+<li>U+2853 BRAILLE PATTERN DOTS-1257: not included in any glyphset definition</li>
+<li>U+2854 BRAILLE PATTERN DOTS-357: not included in any glyphset definition</li>
+<li>U+2855 BRAILLE PATTERN DOTS-1357: not included in any glyphset definition</li>
+<li>U+2856 BRAILLE PATTERN DOTS-2357: not included in any glyphset definition</li>
+<li>U+2857 BRAILLE PATTERN DOTS-12357: not included in any glyphset definition</li>
+<li>U+2858 BRAILLE PATTERN DOTS-457: not included in any glyphset definition</li>
+<li>U+2859 BRAILLE PATTERN DOTS-1457: not included in any glyphset definition</li>
+<li>U+285A BRAILLE PATTERN DOTS-2457: not included in any glyphset definition</li>
+<li>U+285B BRAILLE PATTERN DOTS-12457: not included in any glyphset definition</li>
+<li>U+285C BRAILLE PATTERN DOTS-3457: not included in any glyphset definition</li>
+<li>U+285D BRAILLE PATTERN DOTS-13457: not included in any glyphset definition</li>
+<li>U+285E BRAILLE PATTERN DOTS-23457: not included in any glyphset definition</li>
+<li>U+285F BRAILLE PATTERN DOTS-123457: not included in any glyphset definition</li>
+<li>U+2860 BRAILLE PATTERN DOTS-67: not included in any glyphset definition</li>
+<li>U+2861 BRAILLE PATTERN DOTS-167: not included in any glyphset definition</li>
+<li>U+2862 BRAILLE PATTERN DOTS-267: not included in any glyphset definition</li>
+<li>U+2863 BRAILLE PATTERN DOTS-1267: not included in any glyphset definition</li>
+<li>U+2864 BRAILLE PATTERN DOTS-367: not included in any glyphset definition</li>
+<li>U+2865 BRAILLE PATTERN DOTS-1367: not included in any glyphset definition</li>
+<li>U+2866 BRAILLE PATTERN DOTS-2367: not included in any glyphset definition</li>
+<li>U+2867 BRAILLE PATTERN DOTS-12367: not included in any glyphset definition</li>
+<li>U+2868 BRAILLE PATTERN DOTS-467: not included in any glyphset definition</li>
+<li>U+2869 BRAILLE PATTERN DOTS-1467: not included in any glyphset definition</li>
+<li>U+286A BRAILLE PATTERN DOTS-2467: not included in any glyphset definition</li>
+<li>U+286B BRAILLE PATTERN DOTS-12467: not included in any glyphset definition</li>
+<li>U+286C BRAILLE PATTERN DOTS-3467: not included in any glyphset definition</li>
+<li>U+286D BRAILLE PATTERN DOTS-13467: not included in any glyphset definition</li>
+<li>U+286E BRAILLE PATTERN DOTS-23467: not included in any glyphset definition</li>
+<li>U+286F BRAILLE PATTERN DOTS-123467: not included in any glyphset definition</li>
+<li>U+2870 BRAILLE PATTERN DOTS-567: not included in any glyphset definition</li>
+<li>U+2871 BRAILLE PATTERN DOTS-1567: not included in any glyphset definition</li>
+<li>U+2872 BRAILLE PATTERN DOTS-2567: not included in any glyphset definition</li>
+<li>U+2873 BRAILLE PATTERN DOTS-12567: not included in any glyphset definition</li>
+<li>U+2874 BRAILLE PATTERN DOTS-3567: not included in any glyphset definition</li>
+<li>U+2875 BRAILLE PATTERN DOTS-13567: not included in any glyphset definition</li>
+<li>U+2876 BRAILLE PATTERN DOTS-23567: not included in any glyphset definition</li>
+<li>U+2877 BRAILLE PATTERN DOTS-123567: not included in any glyphset definition</li>
+<li>U+2878 BRAILLE PATTERN DOTS-4567: not included in any glyphset definition</li>
+<li>U+2879 BRAILLE PATTERN DOTS-14567: not included in any glyphset definition</li>
+<li>U+287A BRAILLE PATTERN DOTS-24567: not included in any glyphset definition</li>
+<li>U+287B BRAILLE PATTERN DOTS-124567: not included in any glyphset definition</li>
+<li>U+287C BRAILLE PATTERN DOTS-34567: not included in any glyphset definition</li>
+<li>U+287D BRAILLE PATTERN DOTS-134567: not included in any glyphset definition</li>
+<li>U+287E BRAILLE PATTERN DOTS-234567: not included in any glyphset definition</li>
+<li>U+287F BRAILLE PATTERN DOTS-1234567: not included in any glyphset definition</li>
+<li>U+2880 BRAILLE PATTERN DOTS-8: not included in any glyphset definition</li>
+<li>U+2881 BRAILLE PATTERN DOTS-18: not included in any glyphset definition</li>
+<li>U+2882 BRAILLE PATTERN DOTS-28: not included in any glyphset definition</li>
+<li>U+2883 BRAILLE PATTERN DOTS-128: not included in any glyphset definition</li>
+<li>U+2884 BRAILLE PATTERN DOTS-38: not included in any glyphset definition</li>
+<li>U+2885 BRAILLE PATTERN DOTS-138: not included in any glyphset definition</li>
+<li>U+2886 BRAILLE PATTERN DOTS-238: not included in any glyphset definition</li>
+<li>U+2887 BRAILLE PATTERN DOTS-1238: not included in any glyphset definition</li>
+<li>U+2888 BRAILLE PATTERN DOTS-48: not included in any glyphset definition</li>
+<li>U+2889 BRAILLE PATTERN DOTS-148: not included in any glyphset definition</li>
+<li>U+288A BRAILLE PATTERN DOTS-248: not included in any glyphset definition</li>
+<li>U+288B BRAILLE PATTERN DOTS-1248: not included in any glyphset definition</li>
+<li>U+288C BRAILLE PATTERN DOTS-348: not included in any glyphset definition</li>
+<li>U+288D BRAILLE PATTERN DOTS-1348: not included in any glyphset definition</li>
+<li>U+288E BRAILLE PATTERN DOTS-2348: not included in any glyphset definition</li>
+<li>U+288F BRAILLE PATTERN DOTS-12348: not included in any glyphset definition</li>
+<li>U+2890 BRAILLE PATTERN DOTS-58: not included in any glyphset definition</li>
+<li>U+2891 BRAILLE PATTERN DOTS-158: not included in any glyphset definition</li>
+<li>U+2892 BRAILLE PATTERN DOTS-258: not included in any glyphset definition</li>
+<li>U+2893 BRAILLE PATTERN DOTS-1258: not included in any glyphset definition</li>
+<li>U+2894 BRAILLE PATTERN DOTS-358: not included in any glyphset definition</li>
+<li>U+2895 BRAILLE PATTERN DOTS-1358: not included in any glyphset definition</li>
+<li>U+2896 BRAILLE PATTERN DOTS-2358: not included in any glyphset definition</li>
+<li>U+2897 BRAILLE PATTERN DOTS-12358: not included in any glyphset definition</li>
+<li>U+2898 BRAILLE PATTERN DOTS-458: not included in any glyphset definition</li>
+<li>U+2899 BRAILLE PATTERN DOTS-1458: not included in any glyphset definition</li>
+<li>U+289A BRAILLE PATTERN DOTS-2458: not included in any glyphset definition</li>
+<li>U+289B BRAILLE PATTERN DOTS-12458: not included in any glyphset definition</li>
+<li>U+289C BRAILLE PATTERN DOTS-3458: not included in any glyphset definition</li>
+<li>U+289D BRAILLE PATTERN DOTS-13458: not included in any glyphset definition</li>
+<li>U+289E BRAILLE PATTERN DOTS-23458: not included in any glyphset definition</li>
+<li>U+289F BRAILLE PATTERN DOTS-123458: not included in any glyphset definition</li>
+<li>U+28A0 BRAILLE PATTERN DOTS-68: not included in any glyphset definition</li>
+<li>U+28A1 BRAILLE PATTERN DOTS-168: not included in any glyphset definition</li>
+<li>U+28A2 BRAILLE PATTERN DOTS-268: not included in any glyphset definition</li>
+<li>U+28A3 BRAILLE PATTERN DOTS-1268: not included in any glyphset definition</li>
+<li>U+28A4 BRAILLE PATTERN DOTS-368: not included in any glyphset definition</li>
+<li>U+28A5 BRAILLE PATTERN DOTS-1368: not included in any glyphset definition</li>
+<li>U+28A6 BRAILLE PATTERN DOTS-2368: not included in any glyphset definition</li>
+<li>U+28A7 BRAILLE PATTERN DOTS-12368: not included in any glyphset definition</li>
+<li>U+28A8 BRAILLE PATTERN DOTS-468: not included in any glyphset definition</li>
+<li>U+28A9 BRAILLE PATTERN DOTS-1468: not included in any glyphset definition</li>
+<li>U+28AA BRAILLE PATTERN DOTS-2468: not included in any glyphset definition</li>
+<li>U+28AB BRAILLE PATTERN DOTS-12468: not included in any glyphset definition</li>
+<li>U+28AC BRAILLE PATTERN DOTS-3468: not included in any glyphset definition</li>
+<li>U+28AD BRAILLE PATTERN DOTS-13468: not included in any glyphset definition</li>
+<li>U+28AE BRAILLE PATTERN DOTS-23468: not included in any glyphset definition</li>
+<li>U+28AF BRAILLE PATTERN DOTS-123468: not included in any glyphset definition</li>
+<li>U+28B0 BRAILLE PATTERN DOTS-568: not included in any glyphset definition</li>
+<li>U+28B1 BRAILLE PATTERN DOTS-1568: not included in any glyphset definition</li>
+<li>U+28B2 BRAILLE PATTERN DOTS-2568: not included in any glyphset definition</li>
+<li>U+28B3 BRAILLE PATTERN DOTS-12568: not included in any glyphset definition</li>
+<li>U+28B4 BRAILLE PATTERN DOTS-3568: not included in any glyphset definition</li>
+<li>U+28B5 BRAILLE PATTERN DOTS-13568: not included in any glyphset definition</li>
+<li>U+28B6 BRAILLE PATTERN DOTS-23568: not included in any glyphset definition</li>
+<li>U+28B7 BRAILLE PATTERN DOTS-123568: not included in any glyphset definition</li>
+<li>U+28B8 BRAILLE PATTERN DOTS-4568: not included in any glyphset definition</li>
+<li>U+28B9 BRAILLE PATTERN DOTS-14568: not included in any glyphset definition</li>
+<li>U+28BA BRAILLE PATTERN DOTS-24568: not included in any glyphset definition</li>
+<li>U+28BB BRAILLE PATTERN DOTS-124568: not included in any glyphset definition</li>
+<li>U+28BC BRAILLE PATTERN DOTS-34568: not included in any glyphset definition</li>
+<li>U+28BD BRAILLE PATTERN DOTS-134568: not included in any glyphset definition</li>
+<li>U+28BE BRAILLE PATTERN DOTS-234568: not included in any glyphset definition</li>
+<li>U+28BF BRAILLE PATTERN DOTS-1234568: not included in any glyphset definition</li>
+<li>U+28C0 BRAILLE PATTERN DOTS-78: not included in any glyphset definition</li>
+<li>U+28C1 BRAILLE PATTERN DOTS-178: not included in any glyphset definition</li>
+<li>U+28C2 BRAILLE PATTERN DOTS-278: not included in any glyphset definition</li>
+<li>U+28C3 BRAILLE PATTERN DOTS-1278: not included in any glyphset definition</li>
+<li>U+28C4 BRAILLE PATTERN DOTS-378: not included in any glyphset definition</li>
+<li>U+28C5 BRAILLE PATTERN DOTS-1378: not included in any glyphset definition</li>
+<li>U+28C6 BRAILLE PATTERN DOTS-2378: not included in any glyphset definition</li>
+<li>U+28C7 BRAILLE PATTERN DOTS-12378: not included in any glyphset definition</li>
+<li>U+28C8 BRAILLE PATTERN DOTS-478: not included in any glyphset definition</li>
+<li>U+28C9 BRAILLE PATTERN DOTS-1478: not included in any glyphset definition</li>
+<li>U+28CA BRAILLE PATTERN DOTS-2478: not included in any glyphset definition</li>
+<li>U+28CB BRAILLE PATTERN DOTS-12478: not included in any glyphset definition</li>
+<li>U+28CC BRAILLE PATTERN DOTS-3478: not included in any glyphset definition</li>
+<li>U+28CD BRAILLE PATTERN DOTS-13478: not included in any glyphset definition</li>
+<li>U+28CE BRAILLE PATTERN DOTS-23478: not included in any glyphset definition</li>
+<li>U+28CF BRAILLE PATTERN DOTS-123478: not included in any glyphset definition</li>
+<li>U+28D0 BRAILLE PATTERN DOTS-578: not included in any glyphset definition</li>
+<li>U+28D1 BRAILLE PATTERN DOTS-1578: not included in any glyphset definition</li>
+<li>U+28D2 BRAILLE PATTERN DOTS-2578: not included in any glyphset definition</li>
+<li>U+28D3 BRAILLE PATTERN DOTS-12578: not included in any glyphset definition</li>
+<li>U+28D4 BRAILLE PATTERN DOTS-3578: not included in any glyphset definition</li>
+<li>U+28D5 BRAILLE PATTERN DOTS-13578: not included in any glyphset definition</li>
+<li>U+28D6 BRAILLE PATTERN DOTS-23578: not included in any glyphset definition</li>
+<li>U+28D7 BRAILLE PATTERN DOTS-123578: not included in any glyphset definition</li>
+<li>U+28D8 BRAILLE PATTERN DOTS-4578: not included in any glyphset definition</li>
+<li>U+28D9 BRAILLE PATTERN DOTS-14578: not included in any glyphset definition</li>
+<li>U+28DA BRAILLE PATTERN DOTS-24578: not included in any glyphset definition</li>
+<li>U+28DB BRAILLE PATTERN DOTS-124578: not included in any glyphset definition</li>
+<li>U+28DC BRAILLE PATTERN DOTS-34578: not included in any glyphset definition</li>
+<li>U+28DD BRAILLE PATTERN DOTS-134578: not included in any glyphset definition</li>
+<li>U+28DE BRAILLE PATTERN DOTS-234578: not included in any glyphset definition</li>
+<li>U+28DF BRAILLE PATTERN DOTS-1234578: not included in any glyphset definition</li>
+<li>U+28E0 BRAILLE PATTERN DOTS-678: not included in any glyphset definition</li>
+<li>U+28E1 BRAILLE PATTERN DOTS-1678: not included in any glyphset definition</li>
+<li>U+28E2 BRAILLE PATTERN DOTS-2678: not included in any glyphset definition</li>
+<li>U+28E3 BRAILLE PATTERN DOTS-12678: not included in any glyphset definition</li>
+<li>U+28E4 BRAILLE PATTERN DOTS-3678: not included in any glyphset definition</li>
+<li>U+28E5 BRAILLE PATTERN DOTS-13678: not included in any glyphset definition</li>
+<li>U+28E6 BRAILLE PATTERN DOTS-23678: not included in any glyphset definition</li>
+<li>U+28E7 BRAILLE PATTERN DOTS-123678: not included in any glyphset definition</li>
+<li>U+28E8 BRAILLE PATTERN DOTS-4678: not included in any glyphset definition</li>
+<li>U+28E9 BRAILLE PATTERN DOTS-14678: not included in any glyphset definition</li>
+<li>U+28EA BRAILLE PATTERN DOTS-24678: not included in any glyphset definition</li>
+<li>U+28EB BRAILLE PATTERN DOTS-124678: not included in any glyphset definition</li>
+<li>U+28EC BRAILLE PATTERN DOTS-34678: not included in any glyphset definition</li>
+<li>U+28ED BRAILLE PATTERN DOTS-134678: not included in any glyphset definition</li>
+<li>U+28EE BRAILLE PATTERN DOTS-234678: not included in any glyphset definition</li>
+<li>U+28EF BRAILLE PATTERN DOTS-1234678: not included in any glyphset definition</li>
+<li>U+28F0 BRAILLE PATTERN DOTS-5678: not included in any glyphset definition</li>
+<li>U+28F1 BRAILLE PATTERN DOTS-15678: not included in any glyphset definition</li>
+<li>U+28F2 BRAILLE PATTERN DOTS-25678: not included in any glyphset definition</li>
+<li>U+28F3 BRAILLE PATTERN DOTS-125678: not included in any glyphset definition</li>
+<li>U+28F4 BRAILLE PATTERN DOTS-35678: not included in any glyphset definition</li>
+<li>U+28F5 BRAILLE PATTERN DOTS-135678: not included in any glyphset definition</li>
+<li>U+28F6 BRAILLE PATTERN DOTS-235678: not included in any glyphset definition</li>
+<li>U+28F7 BRAILLE PATTERN DOTS-1235678: not included in any glyphset definition</li>
+<li>U+28F8 BRAILLE PATTERN DOTS-45678: not included in any glyphset definition</li>
+<li>U+28F9 BRAILLE PATTERN DOTS-145678: not included in any glyphset definition</li>
+<li>U+28FA BRAILLE PATTERN DOTS-245678: not included in any glyphset definition</li>
+<li>U+28FB BRAILLE PATTERN DOTS-1245678: not included in any glyphset definition</li>
+<li>U+28FC BRAILLE PATTERN DOTS-345678: not included in any glyphset definition</li>
+<li>U+28FD BRAILLE PATTERN DOTS-1345678: not included in any glyphset definition</li>
+<li>U+28FE BRAILLE PATTERN DOTS-2345678: not included in any glyphset definition</li>
+<li>U+28FF BRAILLE PATTERN DOTS-12345678: not included in any glyphset definition</li>
+<li>U+2B00 NORTH EAST WHITE ARROW: not included in any glyphset definition</li>
+<li>U+2B01 NORTH WEST WHITE ARROW: not included in any glyphset definition</li>
+<li>U+2B02 SOUTH EAST WHITE ARROW: not included in any glyphset definition</li>
+<li>U+2B03 SOUTH WEST WHITE ARROW: not included in any glyphset definition</li>
+<li>U+2B04 LEFT RIGHT WHITE ARROW: not included in any glyphset definition</li>
+<li>U+2B05 LEFTWARDS BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B06 UPWARDS BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B07 DOWNWARDS BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B08 NORTH EAST BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B09 NORTH WEST BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B0A SOUTH EAST BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B0B SOUTH WEST BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B0C LEFT RIGHT BLACK ARROW: not included in any glyphset definition</li>
+<li>U+2B0D UP DOWN BLACK ARROW: not included in any glyphset definition</li>
+<li>U+3004 JAPANESE INDUSTRIAL STANDARD SYMBOL: not included in any glyphset definition</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: phags-pa, yi, chinese-simplified</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: phags-pa, yi, chinese-simplified</li>
+<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: phags-pa, yi</li>
+<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: phags-pa, yi</li>
+<li>U+301D REVERSED DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+301F LOW DOUBLE PRIME QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+3036 CIRCLED POSTAL MARK: not included in any glyphset definition</li>
+<li>U+3094 HIRAGANA LETTER VU: not included in any glyphset definition</li>
+<li>U+3095 HIRAGANA LETTER SMALL KA: not included in any glyphset definition</li>
+<li>U+3096 HIRAGANA LETTER SMALL KE: not included in any glyphset definition</li>
+<li>U+3099 COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+309A COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+30F7 KATAKANA LETTER VA: not included in any glyphset definition</li>
+<li>U+30F8 KATAKANA LETTER VI: not included in any glyphset definition</li>
+<li>U+30F9 KATAKANA LETTER VE: not included in any glyphset definition</li>
+<li>U+30FA KATAKANA LETTER VO: not included in any glyphset definition</li>
+<li>U+30FF KATAKANA DIGRAPH KOTO: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>japanese</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright 2016 the sawarabi mincho project authors.&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 1.0Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The gasp range 0xFFFF value 0x02 should be set to 0x0F. [code: unset-flags]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb subsets should be alphabetically ordered.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['latin', 'latin-ext', 'japanese', 'menu'] and expected ['japanese', 'latin', 'latin-ext', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.full_name value matches fullname declared on the name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/full_name&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Unmatched fullname in font: TTF has &quot;さわらび明朝&quot; while METADATA.pb has &quot;Sawarabi Mincho&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.name value should be same as the family name declared on the name table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/font_name&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Unmatched familyname in font: TTF has familyname = &quot;さわらび明朝&quot; while METADATA.pb has font.name = &quot;Sawarabi Mincho&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.full_name and font.post_script_name fields have equivalent values ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_fullname_postscript&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font full_name = &quot;Sawarabi Mincho&quot; does not match post_script_name = &quot;SawarabiMincho-Regular&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_name_values&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.name field (&quot;Sawarabi Mincho&quot;) does not match correct font name format (&quot;さわらび明朝&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.full_name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_full_name_values&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.full_name field (&quot;Sawarabi Mincho&quot;) does not match correct font name format (&quot;さわらび明朝&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.post_script_name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_post_script_name_values&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb postScriptName (&quot;SawarabiMincho-Regular&quot;) does not match correct font name format (&quot;さわらび明朝&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2016 the sawarabi mincho project authors.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2016 The Sawarabi Mincho Project Authors.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check for primary_script</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: primary_script field should be 'Hani' but is missing.
+Make sure that 'Hani' is actually the correct one (out of Jpan, Hani, Hant, Hans). [code: missing-primary-script]</p>
+</span></li></ul></div></details>
+<h3>Check font names are correct</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Regular missing from full name [code: lacks-regular]</p>
+</span></li></ul></div></details>
+<h3>Check glyphs do not have components which are themselves components.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_nested_components&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs have components which themselves are component glyphs:
+* Scedilla
+* scedilla
+* uni0228 and uni0229 [code: found-nested-components]</p>
+</span></li></ul></div></details>
+<h3>Font enables smart dropout control in "prep" table instructions?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Designer mshio still does not have an avatar image. Please provide one. [code: missing-avatar]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Font contains '.notdef' as its first glyph?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_glyphs&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The '.notdef' glyph should contain a drawing, but it is blank. [code: notdef-is-blank]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni3001.vert
+
+- uni3002.vert
+
+- uni3008.vert
+
+- uni3009.vert
+
+- uni300A.vert
+
+- uni300B.vert
+
+- uni300C.vert
+
+- uni300D.vert
+
+- uni300E.vert
+
+- uni300F.vert
+
+- uni3010.vert
+
+- uni3011.vert
+
+- uni3014.vert
+
+- uni3015.vert
+
+- uni3016.vert
+
+- uni3017.vert
+
+- uni3018.vert
+
+- uni3019.vert
+
+- uni301C.vert
+
+- uni3041.vert
+
+- uni3043.vert
+
+- uni3045.vert
+
+- uni3047.vert
+
+- uni3049.vert
+
+- uni3063.vert
+
+- uni3083.vert
+
+- uni3085.vert
+
+- uni3087.vert
+
+- uni308E.vert
+
+- uni3095.vert
+
+- uni3096.vert
+
+- uni30A1.vert
+
+- uni30A3.vert
+
+- uni30A5.vert
+
+- uni30A7.vert
+
+- uni30A9.vert
+
+- uni30C3.vert
+
+- uni30E3.vert
+
+- uni30E5.vert
+
+- uni30E7.vert
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: ohorn	Contours detected: 3	Expected: 2
+
+- Glyph name: Uhorn	Contours detected: 2	Expected: 1
+
+- Glyph name: uhorn	Contours detected: 2	Expected: 1
+
+- Glyph name: uni01E5	Contours detected: 4	Expected: 2
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EC	Contours detected: 4	Expected: 3
+
+- Glyph name: uni01ED	Contours detected: 4	Expected: 3
+
+- Glyph name: uni01F5	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0228	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0229	Contours detected: 3	Expected: 2
+
+- Glyph name: SF510000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF520000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF220000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF210000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF500000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF490000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF280000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF270000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF360000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF190000	Contours detected: 1	Expected: 2
+
+- Glyph name: uni25CC	Contours detected: 19	Expected: 16 or 12
+
+- Glyph name: uni2611	Contours detected: 3	Expected: 2
+
+- Glyph name: SF190000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF210000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF220000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF270000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF280000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF360000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF490000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF500000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF510000	Contours detected: 1	Expected: 2
+
+- Glyph name: SF520000	Contours detected: 1	Expected: 2
+
+- Glyph name: Uhorn	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: ohorn	Contours detected: 3	Expected: 2
+
+- Glyph name: uhorn	Contours detected: 2	Expected: 1
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni01E5	Contours detected: 4	Expected: 2
+
+- Glyph name: uni01EC	Contours detected: 4	Expected: 3
+
+- Glyph name: uni01ED	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0228	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0229	Contours detected: 3	Expected: 2
+
+- Glyph name: uni25CC	Contours detected: 19	Expected: 16 or 12
+
+- Glyph name: uni2611	Contours detected: 3	Expected: 2
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain chws and vchw features?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
+</span></li></ul></div></details>
+<h3>Ensure component transforms do not perform scaling or rotation.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs had components with scaling or rotation
+or inverted outline direction:</p>
+<ul>
+<li>exclamdown (component exclam)</li>
+<li>uni01DD (component e)</li>
+<li>uni0245 (component V)</li>
+<li>uni26C9 (component uni2616)</li>
+<li>uni26CA (component uni2617)</li>
+<li>uni304C (component uni309B)</li>
+<li>uni304E (component uni309B)</li>
+<li>uni3060 (component uni309B)</li>
+<li>uni3067 (component uni309B)</li>
+<li>uni3008.vert (component uni3008)</li>
+<li>uni3009.vert (component uni3009)</li>
+<li>uni300A.vert (component uni300A)</li>
+<li>uni300B.vert (component uni300B)</li>
+<li>uni300C.vert (component uni300C)</li>
+<li>uni300D.vert (component uni300D)</li>
+<li>uni300E.vert (component uni300E)</li>
+<li>uni300F.vert (component uni300F)</li>
+<li>uni3010.vert (component uni3010)</li>
+<li>uni3011.vert (component uni3011)</li>
+<li>uni3014.vert (component uni3014)</li>
+<li>uni3015.vert (component uni3015)</li>
+<li>uni3016.vert (component uni3016)</li>
+<li>uni3017.vert (component uni3017)</li>
+<li>uni3018.vert (component uni3018)</li>
+<li>uni3019.vert (component uni3019)</li>
+<li>uni301C.vert (component uni301C)
+[code: transformed-components]</li>
+</ul>
+</span></li></ul></div></details>
+<h3>Space and non-breaking space have the same width?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_widths&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Space and non-breaking space have differing width: The space glyph named space is 300 font units wide, non-breaking space named (uni00A0) is 200 font units wide, and both should be positive and the same. GlyphsApp has &quot;Sidebearing arithmetic&quot; (https://glyphsapp.com/tutorials/spacing) which allows you to set the non-breaking space width to always equal the space width. [code: different-widths]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 540 among a set of 3 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 525:
+equal, less, greater</p>
+<p>Width = 529:
+logicalnot</p>
+<p>Width = 475:
+multiply</p>
+<p>Width = 1000:
+uni3012
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h3>Checking Vertical Metric Linegaps.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/linegaps&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>hhea lineGap is not equal to 0. [code: hhea]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.head</h2>
+<span class='section__emoji'>🔥⏩</span>
+<h3>Checking font version fields (head and name table).</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_version&gt;</div>
+
+<details><summary>🔥 SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;0.00600&quot; while name version string (for platform 1, encoding 0) is &quot;Version 1.00&quot;. [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>head version is &quot;0.00600&quot; while name version string (for platform 3, encoding 1) is &quot;Version 1.00&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.os2</h2>
+<span class='section__emoji'>⚠️⏩</span>
+<h3>Check if OS/2 xAvgCharWidth is correct.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 915 but it should be 481 which corresponds to the weighted average of the widths of the latin lowercase glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⏩⏩⏩⏩</span>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ SawarabiMincho-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̋ j̀ j́ j̃ j̄ j̈ j̑ į̀ į́ į̂ į̃ į̄ į̌</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̇ i̒ i̛̇ i̛̊ i̛̋ i̛̒ i̦̇ i̦̊ i̦̋ i̦̒ i̧̇ i̧̊ i̧̋ i̧̒ j̆ j̇ j̊ j̋ j̏ j̒</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Navajo (Latn, 166,319 speakers), Dutch (Latn, 31,709,104 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Belarusian (Cyrl, 10,064,517 speakers), Basaa (Latn, 332,940 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

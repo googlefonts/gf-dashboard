@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>21</td>
+                <td>14</td>
+                <td>79</td>
+                <td>8</td>
+                <td>119</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>11%</td>
+                <td>8%</td>
+                <td>42%</td>
+                <td>4%</td>
+                <td>64%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Checking file is named canonically.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/canonical_filename&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Expected &quot;NothingYouCouldDo-Regular.ttf. Got NothingYouCouldDo.ttf. [code: bad-filename]</p>
+</span></li></ul></div></details>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID is 'PYRS', a font editor default. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: bad]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0131 (LATIN SMALL LETTER DOTLESS I)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x00AF (MACRON)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+0102 LATIN CAPITAL LETTER A WITH BREVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0103 LATIN SMALL LETTER A WITH BREVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0106 LATIN CAPITAL LETTER C WITH ACUTE: try adding latin-ext</li>
+<li>U+0107 LATIN SMALL LETTER C WITH ACUTE: try adding latin-ext</li>
+<li>U+0108 LATIN CAPITAL LETTER C WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0109 LATIN SMALL LETTER C WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+010A LATIN CAPITAL LETTER C WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+010B LATIN SMALL LETTER C WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+010C LATIN CAPITAL LETTER C WITH CARON: try adding latin-ext</li>
+<li>U+010D LATIN SMALL LETTER C WITH CARON: try adding latin-ext</li>
+<li>U+010E LATIN CAPITAL LETTER D WITH CARON: try adding latin-ext</li>
+<li>U+0116 LATIN CAPITAL LETTER E WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0117 LATIN SMALL LETTER E WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+011A LATIN CAPITAL LETTER E WITH CARON: try adding latin-ext</li>
+<li>U+011B LATIN SMALL LETTER E WITH CARON: try adding latin-ext</li>
+<li>U+011C LATIN CAPITAL LETTER G WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+011D LATIN SMALL LETTER G WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+011E LATIN CAPITAL LETTER G WITH BREVE: try adding latin-ext</li>
+<li>U+011F LATIN SMALL LETTER G WITH BREVE: try adding latin-ext</li>
+<li>U+0120 LATIN CAPITAL LETTER G WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0121 LATIN SMALL LETTER G WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0124 LATIN CAPITAL LETTER H WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0125 LATIN SMALL LETTER H WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0127 LATIN SMALL LETTER H WITH STROKE: try adding latin-ext</li>
+<li>U+0128 LATIN CAPITAL LETTER I WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0130 LATIN CAPITAL LETTER I WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0134 LATIN CAPITAL LETTER J WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0135 LATIN SMALL LETTER J WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0139 LATIN CAPITAL LETTER L WITH ACUTE: try adding latin-ext</li>
+<li>U+013A LATIN SMALL LETTER L WITH ACUTE: try adding latin-ext</li>
+<li>U+0141 LATIN CAPITAL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0142 LATIN SMALL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0143 LATIN CAPITAL LETTER N WITH ACUTE: try adding latin-ext</li>
+<li>U+0144 LATIN SMALL LETTER N WITH ACUTE: try adding latin-ext</li>
+<li>U+0147 LATIN CAPITAL LETTER N WITH CARON: try adding latin-ext</li>
+<li>U+0148 LATIN SMALL LETTER N WITH CARON: try adding latin-ext</li>
+<li>U+0150 LATIN CAPITAL LETTER O WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0151 LATIN SMALL LETTER O WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0154 LATIN CAPITAL LETTER R WITH ACUTE: try adding latin-ext</li>
+<li>U+0155 LATIN SMALL LETTER R WITH ACUTE: try adding latin-ext</li>
+<li>U+0158 LATIN CAPITAL LETTER R WITH CARON: try adding latin-ext</li>
+<li>U+0159 LATIN SMALL LETTER R WITH CARON: try adding latin-ext</li>
+<li>U+015A LATIN CAPITAL LETTER S WITH ACUTE: try adding latin-ext</li>
+<li>U+015B LATIN SMALL LETTER S WITH ACUTE: try adding latin-ext</li>
+<li>U+015C LATIN CAPITAL LETTER S WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+015D LATIN SMALL LETTER S WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+015E LATIN CAPITAL LETTER S WITH CEDILLA: try adding latin-ext</li>
+<li>U+015F LATIN SMALL LETTER S WITH CEDILLA: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0164 LATIN CAPITAL LETTER T WITH CARON: try adding latin-ext</li>
+<li>U+0169 LATIN SMALL LETTER U WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+016C LATIN CAPITAL LETTER U WITH BREVE: try adding latin-ext</li>
+<li>U+016D LATIN SMALL LETTER U WITH BREVE: try adding latin-ext</li>
+<li>U+016E LATIN CAPITAL LETTER U WITH RING ABOVE: try adding latin-ext</li>
+<li>U+016F LATIN SMALL LETTER U WITH RING ABOVE: try adding latin-ext</li>
+<li>U+0170 LATIN CAPITAL LETTER U WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0171 LATIN SMALL LETTER U WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0174 LATIN CAPITAL LETTER W WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0175 LATIN SMALL LETTER W WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0176 LATIN CAPITAL LETTER Y WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0177 LATIN SMALL LETTER Y WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+0179 LATIN CAPITAL LETTER Z WITH ACUTE: try adding latin-ext</li>
+<li>U+017A LATIN SMALL LETTER Z WITH ACUTE: try adding latin-ext</li>
+<li>U+017B LATIN CAPITAL LETTER Z WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+017C LATIN SMALL LETTER Z WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+1E02 LATIN CAPITAL LETTER B WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E03 LATIN SMALL LETTER B WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E0A LATIN CAPITAL LETTER D WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E0B LATIN SMALL LETTER D WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E1E LATIN CAPITAL LETTER F WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E1F LATIN SMALL LETTER F WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E40 LATIN CAPITAL LETTER M WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E41 LATIN SMALL LETTER M WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E56 LATIN CAPITAL LETTER P WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E57 LATIN SMALL LETTER P WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E60 LATIN CAPITAL LETTER S WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E61 LATIN SMALL LETTER S WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E6A LATIN CAPITAL LETTER T WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E6B LATIN SMALL LETTER T WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E80 LATIN CAPITAL LETTER W WITH GRAVE: try adding latin-ext</li>
+<li>U+1E81 LATIN SMALL LETTER W WITH GRAVE: try adding latin-ext</li>
+<li>U+1E82 LATIN CAPITAL LETTER W WITH ACUTE: try adding latin-ext</li>
+<li>U+1E83 LATIN SMALL LETTER W WITH ACUTE: try adding latin-ext</li>
+<li>U+1E84 LATIN CAPITAL LETTER W WITH DIAERESIS: try adding latin-ext</li>
+<li>U+1E85 LATIN SMALL LETTER W WITH DIAERESIS: try adding latin-ext</li>
+<li>U+1EF2 LATIN CAPITAL LETTER Y WITH GRAVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF3 LATIN SMALL LETTER Y WITH GRAVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2010, kimberly geswein (kimberlygeswein.com)&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  https://scripts.sil.org/OFL&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  https://scripts.sil.org/OFL&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<h3>Description strings in the name table must not exceed 200 characters.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/description_max_length&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>A few name table entries with ID=10 (NameID.DESCRIPTION) are longer than 200 characters. Please check whether those entries are copyright notices mistakenly stored in the description string entries by a bug in an old FontLab version. If that's the case, then such copyright notices must be removed from these entries. [code: too-long]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb subsets should be alphabetically ordered.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin'] and expected ['latin', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2010, kimberly geswein (kimberlygeswein.com kimberlygeswein@gmail.com). this font software is licensed under the sil open font license, version 1.1. this license available with a faq at: http://scripts.sil.org/ofl&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb weight matches postScriptName for static fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_weight_postscript&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Mismatch between postScriptName (&quot;NothingYouCouldDo&quot;) and weight value (400). The name must be ended with &quot;Regular&quot; or &quot;Italic&quot;.</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: http://scripts.sil.org/OFL
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Check font names are correct</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font names are incorrect:</p>
+<p>| nameID | current | expected |
+| :--- | :--- | :--- |
+| Family Name | Nothing You Could Do | Nothing You Could Do |
+| Subfamily Name | Regular | Regular |
+| Full Name | Nothing You Could Do | Nothing You Could Do Regular |
+| Poscript Name | NothingYouCouldDo | NothingYouCouldDo-Regular | [code: bad-names]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Regular missing from full name [code: lacks-regular]</p>
+</span></li></ul></div></details>
+<h3>Copyright field for this font on METADATA.pb matches all copyright notice entries on the name table ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/copyright&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com kimberlygeswein@gmail.com). This Font Software is licensed under the SIL Open Font License, Version 1.1. This license available with a FAQ at: http://scripts.sil.org/OFL&quot;) differs from a copyright notice entry on the name table: &quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com kimberlygeswein@gmail.com). This Font Software is licensed under the SIL Open Font License, Version 1.1. This license available with a FAQ at: http://scripts.sil.org/OFL&quot;) differs from a copyright notice entry on the name table: &quot;Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Directory name in GFonts repo structure must match NameID 1 of the regular.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/dirname_matches_nameid_1&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font seems to lack a regular. If family consists of a single-weight non-Regular style only, consider the Google Fonts specs for this case: https://github.com/googlefonts/gf-docs/tree/main/Spec#single-weight-families [code: lacks-regular]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>Check if the vertical metrics of a family are similar to the same family hosted on Google Fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics_regressions&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Nothing You Could Do: OS/2 sTypoAscender is 962 when it should be 959 [code: bad-typo-ascender]</p>
+</span></li></ul></div></details>
+<h3>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['/Users/simon/others-repos/fonts/ofl/nothingyoucoulddo/NothingYouCouldDo.ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts do not contain any pre-production tables.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Name table records must not have trailing spaces.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/trailing_spaces&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (1, 0, 0, 14) has trailing spaces that must be removed: ' http://sc[...]il.org/OFL' [code: trailing-space]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (3, 1, 1033, 14) has trailing spaces that must be removed: ' http://sc[...]il.org/OFL' [code: trailing-space]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 Metrics match hhea Metrics.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoAscender (962) and hhea ascent (959) must be equal. [code: ascender]</p>
+</span></li></ul></div></details>
+<h3>Font contains '.notdef' as its first glyph?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_glyphs&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The '.notdef' glyph should contain a drawing, but it is blank. [code: notdef-is-blank]</p>
+</span></li></ul></div></details>
+<h3>Are there unwanted tables?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- nonmarkingreturn
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: D	Contours detected: 1	Expected: 2
+
+- Glyph name: copyright	Contours detected: 2	Expected: 3
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: ae	Contours detected: 4	Expected: 3
+
+- Glyph name: Dcaron	Contours detected: 2	Expected: 3
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: OE	Contours detected: 3	Expected: 2
+
+- Glyph name: oe	Contours detected: 4	Expected: 3
+
+- Glyph name: uni1E0A	Contours detected: 2	Expected: 3
+
+- Glyph name: Euro	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: trademark	Contours detected: 1	Expected: 2
+
+- Glyph name: D	Contours detected: 1	Expected: 2
+
+- Glyph name: Dcaron	Contours detected: 2	Expected: 3
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: Euro	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: OE	Contours detected: 3	Expected: 2
+
+- Glyph name: ae	Contours detected: 4	Expected: 3
+
+- Glyph name: copyright	Contours detected: 2	Expected: 3
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: oe	Contours detected: 4	Expected: 3
+
+- Glyph name: trademark	Contours detected: 1	Expected: 2
+
+- Glyph name: uni1E0A	Contours detected: 2	Expected: 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Ensure component transforms do not perform scaling or rotation.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs had components with scaling or rotation
+or inverted outline direction:</p>
+<ul>
+<li>exclamdown (component exclam)
+[code: transformed-components]</li>
+</ul>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 345 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 464:
+less</p>
+<p>Width = 430:
+equal</p>
+<p>Width = 515:
+logicalnot</p>
+<p>Width = 380:
+plusminus</p>
+<p>Width = 682:
+multiply</p>
+<p>Width = 615:
+divide</p>
+<p>Width = 302:
+minus
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.name</h2>
+<span class='section__emoji'>🔥⏩⏩</span>
+<h3>Description strings in the name table must not contain copyright info.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/no_copyright_on_description&gt;</div>
+
+<details><summary>🔥 NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Some namerecords with ID=10 (NameID.DESCRIPTION) containing copyright info should be removed (perhaps these were added by a longstanding FontLab Studio 5.x bug that copied copyright notices to them.) [code: copyright-on-description]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ NothingYouCouldDo.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 3, 35)
+* ('exclam', 48, 1)
+* ('exclam', 228, 762)
+* ('exclam', 240, 752)
+* ('quotedbl', 193, 610)
+* ('quotedbl', 222, 549)
+* ('quotedbl', 61, 606)
+* ('numbersign', 13, 179)
+* ('numbersign', 458, 593)
+* ('numbersign', 686, 460)
+* ('dollar', 325, 747)
+* ('percent', 290, 565)
+* ('percent', 306, 528)
+* ('percent', 46, 37)
+* ('percent', 290, 565)
+* ('percent', 306, 528)
+* ('percent', 46, 37)
+* ('ampersand', 14, 222)
+* ('ampersand', 232, 756)
+* ('ampersand', 374, 619)
+* ('quotesingle', 117, 597)
+* ('quotesingle', 129, 540)
+* ('quotesingle', 81, 395)
+* ('parenleft', 27, 188)
+* ('parenleft', 256, 764)
+* ('parenright', 222, 432)
+* ('parenright', 42, -115)
+* ('asterisk', 12, 163)
+* ('asterisk', 322, 448)
+* ('asterisk', 543, 248)
+* ('comma', -17, -132)
+* ('comma', 94, 165)
+* ('comma', 134, 27)
+* ('comma', 12, -164)
+* ('hyphen', 16, 295)
+* ('hyphen', 479, 324)
+* ('hyphen', 116, 260)
+* ('period', 20, 32)
+* ('period', 65, 98)
+* ('period', 119, 53)
+* ('period', 44, -4)
+* ('slash', 17, 49)
+* ('slash', 271, 674)
+* ('slash', 295, 628)
+* ('slash', 34, -2)
+* ('zero', 19, 119)
+* ('zero', 390, 614)
+* ('zero', 474, 487)
+* ('zero', 99, -12)
+* ('one', 8, 26)
+* ('one', 228, 600)
+* ('one', 261, 575)
+* ('one', 43, -1)
+* ('two', 20, 22)
+* ('two', 285, 520)
+* ('two', 58, -7)
+* ('three', 17, 46)
+* ('three', 354, 606)
+* ('three', 503, 299)
+* ('three', 104, 5)
+* ('four', 16, 291)
+* ('four', 504, 640)
+* ('four', 516, 613)
+* ('four', 293, 9)
+* ('five', 505, 607)
+* ('five', 525, 587)
+* ('five', 124, -2)
+* ('six', 13, 184)
+* ('six', 278, 539)
+* ('six', 346, 181)
+* ('six', 146, -2)
+* ('seven', 16, 453)
+* ('seven', 432, 551)
+* ('seven', 470, 548)
+* ('seven', 136, 5)
+* ('eight', 13, 61)
+* ('eight', 331, 632)
+* ('eight', 473, 482)
+* ('eight', 79, -2)
+* ('nine', 13, 323)
+* ('nine', 236, 530)
+* ('nine', 370, 456)
+* ('nine', 128, -2)
+* ('colon', 21, 37)
+* ('colon', 93, 28)
+* ('colon', 61, -2)
+* ('colon', 60, 348)
+* ('colon', 89, 304)
+* ('semicolon', 128, 0)
+* ('semicolon', -4, -189)
+* ('less', 11, 311)
+* ('less', 276, 578)
+* ('less', 444, 19)
+* ('less', 411, 1)
+* ('equal', 17, 32)
+* ('equal', 410, 64)
+* ('equal', 50, -3)
+* ('equal', 264, 297)
+* ('greater', 26, 545)
+* ('greater', 313, 291)
+* ('question', 61, 59)
+* ('question', 91, 6)
+* ('question', 57, 299)
+* ('question', 551, 651)
+* ('at', 15, 216)
+* ('at', 406, 754)
+* ('at', 640, 257)
+* ('at', 204, 1)
+* ('A', 711, 779)
+* ('A', -44, -208)
+* ('B', 615, 787)
+* ('B', 694, 749)
+* ('B', 692, 314)
+* ('B', 110, -17)
+* ('C', 0, 117)
+* ('C', 576, 277)
+* ('C', 131, 1)
+* ('D', 18, 26)
+* ('D', 630, 783)
+* ('D', 891, 564)
+* ('D', 28, -3)
+* ('E', 12, 28)
+* ('E', 781, 758)
+* ('E', 901, 720)
+* ('E', 45, -1)
+* ('F', 13, 25)
+* ('F', 670, 797)
+* ('F', 23, -2)
+* ('G', -2, 140)
+* ('G', 458, 738)
+* ('G', 686, 445)
+* ('H', 24, 26)
+* ('H', 755, 808)
+* ('H', 782, 752)
+* ('H', 505, -4)
+* ('I', 9, 41)
+* ('I', 256, 719)
+* ('I', 37, 6)
+* ('J', 0, 164)
+* ('J', 136, -15)
+* ('K', 17, -13)
+* ('K', 369, 786)
+* ('K', 851, 740)
+* ('L', 13, 22)
+* ('L', 365, 750)
+* ('L', 692, 70)
+* ('L', 114, -7)
+* ('M', 30, 16)
+* ('M', 510, 780)
+* ('M', 1007, 608)
+* ('M', 780, -83)
+* ('N', 882, 685)
+* ('O', 15, 107)
+* ('O', 395, 721)
+* ('O', 595, 523)
+* ('O', 124, -1)
+* ('P', 15, 39)
+* ('P', 511, 768)
+* ('P', 761, 630)
+* ('Q', 66, 183)
+* ('Q', 513, 788)
+* ('Q', 632, 556)
+* ('Q', 463, -179)
+* ('R', 10, 34)
+* ('R', 674, 815)
+* ('R', 827, 742)
+* ('R', 27, -16)
+* ('S', 4, 81)
+* ('S', 623, 778)
+* ('S', 661, 760)
+* ('S', 140, -10)
+* ('T', 976, 717)
+* ('T', 981, 704)
+* ('T', 194, -4)
+* ('U', 29, 132)
+* ('U', 751, 727)
+* ('U', 115, -8)
+* ('V', 25, 288)
+* ('V', 797, 750)
+* ('V', 817, 713)
+* ('V', 96, 9)
+* ('W', 17, 234)
+* ('W', 796, 791)
+* ('W', 61, -12)
+* ('X', 24, 27)
+* ('X', 146, 630)
+* ('X', 513, 10)
+* ('Y', 32, 668)
+* ('Y', 501, 779)
+* ('Y', 511, 738)
+* ('Y', 80, -154)
+* ('Z', 10, 25)
+* ('Z', 834, 155)
+* ('Z', 35, 7)
+* ('bracketleft', 33, -44)
+* ('bracketleft', 420, 775)
+* ('backslash', 30, 551)
+* ('backslash', 283, -5)
+* ('bracketright', 7, 709)
+* ('bracketright', 250, 755)
+* ('bracketright', 412, 662)
+* ('asciicircum', 28, 400)
+* ('asciicircum', 171, 638)
+* ('asciicircum', 241, 420)
+* ('asciicircum', 224, 354)
+* ('grave', 40, 514)
+* ('grave', 68, 546)
+* ('grave', 174, 402)
+* ('a', 28, 121)
+* ('a', 342, 537)
+* ('a', 815, 247)
+* ('a', 143, -6)
+* ('b', 267, 611)
+* ('b', 520, 344)
+* ('b', 130, 6)
+* ('c', 18, 100)
+* ('c', 316, 496)
+* ('c', 551, 171)
+* ('c', 129, 2)
+* ('d', -2, 104)
+* ('d', 579, 589)
+* ('e', 14, 112)
+* ('e', 372, 481)
+* ('e', 117, 0)
+* ('f', 16, 268)
+* ('f', 492, 785)
+* ('f', 618, 682)
+* ('g', -232, -124)
+* ('g', 282, 481)
+* ('g', 340, 315)
+* ('g', -80, -303)
+* ('h', 476, 771)
+* ('h', 521, 24)
+* ('i', 37, -3)
+* ('i', 209, 534)
+* ('i', 239, 499)
+* ('j', -348, -255)
+* ('j', -203, -367)
+* ('j', 128, 514)
+* ('j', 170, 483)
+* ('k', 15, 55)
+* ('k', 352, 672)
+* ('k', 706, 607)
+* ('k', 462, 7)
+* ('l', 11, 96)
+* ('l', 278, 679)
+* ('l', 96, 5)
+* ('m', 750, 428)
+* ('m', 797, 380)
+* ('m', 650, -3)
+* ('n', 17, 69)
+* ('n', 526, 428)
+* ('n', 550, 396)
+* ('n', 407, -6)
+* ('o', 16, 96)
+* ('o', 311, 404)
+* ('o', 408, 309)
+* ('o', 123, -6)
+* ('p', -99, -294)
+* ('p', 419, 545)
+* ('p', 523, 429)
+* ('q', 321, 440)
+* ('q', 79, -367)
+* ('r', 27, 12)
+* ('r', 483, 472)
+* ('s', 17, 19)
+* ('s', 322, 500)
+* ('s', 384, 206)
+* ('s', 36, 6)
+* ('t', 317, 685)
+* ('t', 503, 359)
+* ('t', 108, -2)
+* ('u', 18, 94)
+* ('u', 549, 39)
+* ('u', 483, -5)
+* ('v', 16, 153)
+* ('v', 502, 442)
+* ('v', 522, 435)
+* ('v', 92, 2)
+* ('w', 11, 51)
+* ('w', 685, 469)
+* ('w', 719, 460)
+* ('w', 358, -1)
+* ('x', 9, 37)
+* ('x', 456, 418)
+* ('y', -179, -370)
+* ('y', 22, 421)
+* ('y', 407, 402)
+* ('z', 21, 22)
+* ('z', 538, 452)
+* ('z', 132, -7)
+* ('braceleft', 15, 178)
+* ('braceleft', 201, 770)
+* ('braceleft', 265, -34)
+* ('braceleft', 231, -59)
+* ('bar', 82, 575)
+* ('bar', 61, -2)
+* ('braceright', 4, 786)
+* ('braceright', 273, 142)
+* ('asciitilde', 30, 44)
+* ('asciitilde', 147, 235)
+* ('asciitilde', 515, 161)
+* ('asciitilde', 268, -1)
+* ('exclamdown', 7.98150634765625, 642.546142578125)
+* ('exclamdown', 231.594482421875, -10.79541015625)
+* ('exclamdown', 243.5205078125, -1.80859375)
+* ('cent', 18, 100)
+* ('cent', 551, 171)
+* ('cent', 257, -58)
+* ('sterling', 397, 15)
+* ('sterling', -14, 287)
+* ('sterling', 221, 645)
+* ('currency', 97, 483)
+* ('currency', 568, 471)
+* ('currency', 53, 11)
+* ('yen', 501, 779)
+* ('yen', 179, -178)
+* ('yen', 11, 151)
+* ('brokenbar', 61, -2)
+* ('section', 62, 27)
+* ('section', 472, 724)
+* ('section', 533, 441)
+* ('section', 81, 15)
+* ('dieresis', 96, 447)
+* ('dieresis', 120, 411)
+* ('dieresis', 285, 517)
+* ('dieresis', 339, 472)
+* ('copyright', 5, 175)
+* ('copyright', 375, 763)
+* ('copyright', 667, 578)
+* ('copyright', 158, -16)
+* ('ordfeminine', 17.03857421875, 257.98846435546875)
+* ('ordfeminine', 208.114013671875, 508.92401123046875)
+* ('ordfeminine', 495.9442138671875, 333.99298095703125)
+* ('ordfeminine', 87.0184326171875, 181.3807373046875)
+* ('guillemotleft', 11, 311)
+* ('guillemotleft', 411, 1)
+* ('guillemotleft', 475, 605)
+* ('guillemotleft', 642, 45)
+* ('logicalnot', 459, 144)
+* ('logicalnot', 67, 346)
+* ('logicalnot', 310, 393)
+* ('registered', 5, 175)
+* ('registered', 375, 763)
+* ('registered', 667, 578)
+* ('registered', 158, -16)
+* ('degree', 28, 470)
+* ('degree', 216, 619)
+* ('degree', 101, 412)
+* ('plusminus', 348, 72)
+* ('plusminus', 117, 18)
+* ('twosuperior', 13.84130859375, 143.6112060546875)
+* ('twosuperior', 144.2386474609375, 338.53759765625)
+* ('threesuperior', 8.48187255859375, 213.6396484375)
+* ('threesuperior', 136.9754638671875, 513.6005859375)
+* ('threesuperior', 193.78717041015625, 349.15771484375)
+* ('threesuperior', 41.65380859375, 191.67822265625)
+* ('acute', 25, 406)
+* ('acute', 146, 555)
+* ('acute', 176, 524)
+* ('mu', 22, 401)
+* ('mu', 378, 95)
+* ('paragraph', 95, -50)
+* ('paragraph', 76, 444)
+* ('paragraph', 291, 537)
+* ('paragraph', 203, -56)
+* ('periodcentered', 222, 343)
+* ('periodcentered', 269, 278)
+* ('periodcentered', 169, 197)
+* ('cedilla', 47, -144)
+* ('cedilla', 89, 34)
+* ('cedilla', 228, -72)
+* ('cedilla', 82, -180)
+* ('onesuperior', 156.129638671875, 500.6748046875)
+* ('onesuperior', 27.01129150390625, 158.4305419921875)
+* ('ordmasculine', 28, 470)
+* ('ordmasculine', 216, 619)
+* ('ordmasculine', 101, 412)
+* ('guillemotright', 26, 545)
+* ('guillemotright', 532, 297)
+* ('onequarter', 30.9267578125, 175.80322265625)
+* ('onequarter', 331.2716064453125, 684.4971923828125)
+* ('onequarter', 465.422607421875, 298.595458984375)
+* ('onehalf', 258.93377685546875, 679.5028076171875)
+* ('onehalf', 73.5894775390625, -6.0281982421875)
+* ('threequarters', 9.35552978515625, 210.09912109375)
+* ('threequarters', 307.60882568359375, 695.8380126953125)
+* ('threequarters', 146.1612548828125, 3.9530029296875)
+* ('threequarters', 465.28173828125, 367.36676025390625)
+* ('questiondown', 144.52081298828125, 598.3616943359375)
+* ('questiondown', 129.03924560546875, 643.850341796875)
+* ('questiondown', 146.58502197265625, 392.3753662109375)
+* ('questiondown', -108.34478759765625, 90.2620849609375)
+* ('Agrave', -44, -208)
+* ('Agrave', 706, 899)
+* ('Aacute', -44, -208)
+* ('Aacute', 726, 874)
+* ('Acircumflex', -44, -208)
+* ('Acircumflex', 724, 922)
+* ('Atilde', -44, -208)
+* ('Atilde', 723, 871)
+* ('Atilde', 1064, 843)
+* ('Adieresis', -44, -208)
+* ('Adieresis', 789, 891)
+* ('Adieresis', 843, 846)
+* ('Aring', -44, -208)
+* ('Aring', 797, 941)
+* ('AE', -196, -8)
+* ('AE', 811, 698)
+* ('AE', 1432, 653)
+* ('AE', 572, -266)
+* ('Ccedilla', 0, 117)
+* ('Ccedilla', 576, 277)
+* ('Ccedilla', 248, -150)
+* ('Egrave', 12, 28)
+* ('Egrave', 901, 720)
+* ('Egrave', 45, -1)
+* ('Egrave', 365, 906)
+* ('Eacute', 12, 28)
+* ('Eacute', 901, 720)
+* ('Eacute', 45, -1)
+* ('Eacute', 465, 895)
+* ('Ecircumflex', 12, 28)
+* ('Ecircumflex', 901, 720)
+* ('Ecircumflex', 45, -1)
+* ('Ecircumflex', 435, 962)
+* ('Edieresis', 12, 28)
+* ('Edieresis', 901, 720)
+* ('Edieresis', 45, -1)
+* ('Edieresis', 543, 865)
+* ('Igrave', 9, 41)
+* ('Igrave', 37, 6)
+* ('Igrave', 165, 890)
+* ('Iacute', 9, 41)
+* ('Iacute', 37, 6)
+* ('Iacute', 237, 869)
+* ('Icircumflex', 9, 41)
+* ('Icircumflex', 37, 6)
+* ('Icircumflex', 294, 914)
+* ('Icircumflex', 361, 770)
+* ('Idieresis', 9, 41)
+* ('Idieresis', 37, 6)
+* ('Idieresis', 319, 878)
+* ('Idieresis', 373, 833)
+* ('Eth', -35, 354)
+* ('Eth', 630, 783)
+* ('Eth', 891, 564)
+* ('Eth', 28, -3)
+* ('Ntilde', 882, 685)
+* ('Ntilde', 438, 860)
+* ('Ograve', 15, 107)
+* ('Ograve', 595, 523)
+* ('Ograve', 124, -1)
+* ('Ograve', 347, 897)
+* ('Oacute', 15, 107)
+* ('Oacute', 595, 523)
+* ('Oacute', 124, -1)
+* ('Oacute', 412, 861)
+* ('Ocircumflex', 15, 107)
+* ('Ocircumflex', 595, 523)
+* ('Ocircumflex', 124, -1)
+* ('Ocircumflex', 508, 931)
+* ('Otilde', 15, 107)
+* ('Otilde', 124, -1)
+* ('Otilde', 429, 880)
+* ('Otilde', 770, 852)
+* ('Odieresis', 15, 107)
+* ('Odieresis', 595, 523)
+* ('Odieresis', 124, -1)
+* ('Odieresis', 514, 856)
+* ('multiply', 77, 103)
+* ('multiply', 456, 418)
+* ('multiply', 349, 36)
+* ('Oslash', 15, 107)
+* ('Oslash', 595, 523)
+* ('Oslash', 475.03985595703125, 766.1348876953125)
+* ('Oslash', 198.6507568359375, -110.5938720703125)
+* ('Ugrave', 29, 132)
+* ('Ugrave', 751, 727)
+* ('Ugrave', 115, -8)
+* ('Ugrave', 350, 856)
+* ('Uacute', 29, 132)
+* ('Uacute', 751, 727)
+* ('Uacute', 115, -8)
+* ('Uacute', 476, 861)
+* ('Ucircumflex', 29, 132)
+* ('Ucircumflex', 751, 727)
+* ('Ucircumflex', 115, -8)
+* ('Ucircumflex', 503, 943)
+* ('Udieresis', 29, 132)
+* ('Udieresis', 751, 727)
+* ('Udieresis', 115, -8)
+* ('Udieresis', 542, 898)
+* ('Yacute', 32, 668)
+* ('Yacute', 511, 738)
+* ('Yacute', 80, -154)
+* ('Yacute', 307, 882)
+* ('Thorn', 301, 764)
+* ('Thorn', 592, 489)
+* ('Thorn', 13, -162)
+* ('germandbls', 22, 23)
+* ('germandbls', 625, 902)
+* ('germandbls', 651, 873)
+* ('agrave', 28, 121)
+* ('agrave', 815, 247)
+* ('agrave', 143, -6)
+* ('agrave', 354, 717)
+* ('aacute', 28, 121)
+* ('aacute', 815, 247)
+* ('aacute', 143, -6)
+* ('aacute', 327, 689)
+* ('acircumflex', 28, 121)
+* ('acircumflex', 815, 247)
+* ('acircumflex', 143, -6)
+* ('acircumflex', 375, 827)
+* ('atilde', 28, 121)
+* ('atilde', 815, 247)
+* ('atilde', 143, -6)
+* ('atilde', 307, 758)
+* ('adieresis', 28, 121)
+* ('adieresis', 815, 247)
+* ('adieresis', 143, -6)
+* ('adieresis', 409, 655)
+* ('aring', 28, 121)
+* ('aring', 815, 247)
+* ('aring', 143, -6)
+* ('aring', 420, 710)
+* ('ae', 28, 121)
+* ('ae', 826, 213)
+* ('ae', 143, -6)
+* ('ae', 731, 564)
+* ('ccedilla', 18, 100)
+* ('ccedilla', 316, 496)
+* ('ccedilla', 551, 171)
+* ('ccedilla', 220, -180)
+* ('egrave', 14, 112)
+* ('egrave', 117, 0)
+* ('egrave', 159, 651)
+* ('eacute', 14, 112)
+* ('eacute', 117, 0)
+* ('eacute', 277, 555)
+* ('ecircumflex', 14, 112)
+* ('ecircumflex', 117, 0)
+* ('ecircumflex', 245, 772)
+* ('edieresis', 14, 112)
+* ('edieresis', 117, 0)
+* ('edieresis', 299, 583)
+* ('igrave', 37, -3)
+* ('igrave', 77, 546)
+* ('igrave', 183, 402)
+* ('iacute', 37, -3)
+* ('iacute', 187, 555)
+* ('iacute', 217, 524)
+* ('icircumflex', 37, -3)
+* ('icircumflex', -5, 489)
+* ('icircumflex', 147, 660)
+* ('icircumflex', 214, 516)
+* ('idieresis', 37, -3)
+* ('idieresis', 202, 517)
+* ('idieresis', 256, 472)
+* ('eth', 312, 69)
+* ('eth', 216, -18)
+* ('eth', 5, 190)
+* ('eth', 100, 439)
+* ('ntilde', 17, 69)
+* ('ntilde', 407, -6)
+* ('ntilde', 225, 641)
+* ('ntilde', 566, 613)
+* ('ograve', 16, 96)
+* ('ograve', 408, 309)
+* ('ograve', 123, -6)
+* ('ograve', 227, 600)
+* ('oacute', 16, 96)
+* ('oacute', 408, 309)
+* ('oacute', 123, -6)
+* ('oacute', 275, 555)
+* ('ocircumflex', 16, 96)
+* ('ocircumflex', 408, 309)
+* ('ocircumflex', 123, -6)
+* ('ocircumflex', 297, 715)
+* ('otilde', 16, 96)
+* ('otilde', 123, -6)
+* ('otilde', 232, 612)
+* ('otilde', 573, 584)
+* ('odieresis', 16, 96)
+* ('odieresis', 408, 309)
+* ('odieresis', 123, -6)
+* ('odieresis', 335, 539)
+* ('divide', 33, 215)
+* ('divide', 255, 66)
+* ('divide', 253, 416)
+* ('oslash', 16, 96)
+* ('oslash', 408, 309)
+* ('oslash', 341, 558)
+* ('oslash', 104, -118)
+* ('ugrave', 18, 94)
+* ('ugrave', 549, 39)
+* ('ugrave', 483, -5)
+* ('ugrave', 238, 546)
+* ('uacute', 18, 94)
+* ('uacute', 549, 39)
+* ('uacute', 483, -5)
+* ('uacute', 389, 552)
+* ('ucircumflex', 18, 94)
+* ('ucircumflex', 549, 39)
+* ('ucircumflex', 483, -5)
+* ('ucircumflex', 357, 718)
+* ('udieresis', 18, 94)
+* ('udieresis', 549, 39)
+* ('udieresis', 483, -5)
+* ('udieresis', 387, 559)
+* ('yacute', -179, -370)
+* ('yacute', 407, 402)
+* ('yacute', 280, 555)
+* ('thorn', 248, 865)
+* ('thorn', 517, 445)
+* ('ydieresis', -179, -370)
+* ('ydieresis', 407, 402)
+* ('ydieresis', 295, 517)
+* ('Abreve', -44, -208)
+* ('abreve', 28, 121)
+* ('abreve', 815, 247)
+* ('abreve', 143, -6)
+* ('Cacute', 0, 117)
+* ('Cacute', 576, 277)
+* ('Cacute', 131, 1)
+* ('Cacute', 433, 875)
+* ('cacute', 18, 100)
+* ('cacute', 551, 171)
+* ('cacute', 129, 2)
+* ('cacute', 377, 707)
+* ('Ccircumflex', 0, 117)
+* ('Ccircumflex', 131, 1)
+* ('Ccircumflex', 517, 923)
+* ('Ccircumflex', 584, 779)
+* ('ccircumflex', 18, 100)
+* ('ccircumflex', 551, 171)
+* ('ccircumflex', 129, 2)
+* ('ccircumflex', 329, 819)
+* ('Cdotaccent', 0, 117)
+* ('Cdotaccent', 576, 277)
+* ('Cdotaccent', 131, 1)
+* ('Cdotaccent', 383, 875)
+* ('cdotaccent', 18, 100)
+* ('cdotaccent', 551, 171)
+* ('cdotaccent', 129, 2)
+* ('cdotaccent', 259, 670)
+* ('Ccaron', 0, 117)
+* ('Ccaron', 576, 277)
+* ('Ccaron', 131, 1)
+* ('Ccaron', 508, 879)
+* ('ccaron', 18, 100)
+* ('ccaron', 551, 171)
+* ('ccaron', 129, 2)
+* ('ccaron', 394, 691)
+* ('Dcaron', 18, 26)
+* ('Dcaron', 891, 564)
+* ('Dcaron', 28, -3)
+* ('Dcaron', 619, 901)
+* ('Edotaccent', 12, 28)
+* ('Edotaccent', 901, 720)
+* ('Edotaccent', 45, -1)
+* ('Edotaccent', 498, 878)
+* ('edotaccent', 14, 112)
+* ('edotaccent', 117, 0)
+* ('edotaccent', 252, 648)
+* ('Ecaron', 12, 28)
+* ('Ecaron', 901, 720)
+* ('Ecaron', 45, -1)
+* ('Ecaron', 526, 864)
+* ('ecaron', 14, 112)
+* ('ecaron', 117, 0)
+* ('ecaron', 315, 603)
+* ('Gcircumflex', -2, 140)
+* ('Gcircumflex', 686, 445)
+* ('Gcircumflex', 466, 923)
+* ('gcircumflex', -232, -124)
+* ('gcircumflex', -80, -303)
+* ('gcircumflex', 316, 811)
+* ('gcircumflex', 383, 667)
+* ('Gbreve', -2, 140)
+* ('Gbreve', 686, 445)
+* ('gbreve', -232, -124)
+* ('gbreve', 340, 315)
+* ('gbreve', -80, -303)
+* ('Gdotaccent', -2, 140)
+* ('Gdotaccent', 686, 445)
+* ('Gdotaccent', 358, 860)
+* ('gdotaccent', -232, -124)
+* ('gdotaccent', 340, 315)
+* ('gdotaccent', -80, -303)
+* ('gdotaccent', 219, 628)
+* ('Hcircumflex', 24, 26)
+* ('Hcircumflex', 782, 752)
+* ('Hcircumflex', 505, -4)
+* ('Hcircumflex', 568, 962)
+* ('hcircumflex', 480, 915)
+* ('hcircumflex', 547, 771)
+* ('hbar', 486, 754)
+* ('hbar', 531, 7)
+* ('Itilde', 9, 41)
+* ('Itilde', 37, 6)
+* ('Itilde', 174, 916)
+* ('Itilde', 515, 888)
+* ('Idotaccent', 9, 41)
+* ('Idotaccent', 37, 6)
+* ('Idotaccent', 239, 876)
+* ('Idotaccent', 312, 806)
+* ('Jcircumflex', 0, 164)
+* ('Jcircumflex', 136, -15)
+* ('Jcircumflex', 565, 948)
+* ('jcircumflex', -348, -255)
+* ('jcircumflex', -203, -367)
+* ('jcircumflex', 141, 660)
+* ('jcircumflex', 208, 516)
+* ('Lacute', 13, 22)
+* ('Lacute', 692, 70)
+* ('Lacute', 114, -7)
+* ('Lacute', 587, 754)
+* ('lacute', 11, 96)
+* ('lacute', 96, 5)
+* ('lacute', 311, 849)
+* ('lacute', 341, 818)
+* ('Lslash', 365, 750)
+* ('Lslash', 692, 70)
+* ('Lslash', 114, -7)
+* ('Lslash', -24, 288)
+* ('lslash', 278, 679)
+* ('lslash', 96, 5)
+* ('lslash', -59, 295)
+* ('lslash', 404, 324)
+* ('Nacute', 882, 685)
+* ('Nacute', 606, 854)
+* ('nacute', 17, 69)
+* ('nacute', 550, 396)
+* ('nacute', 407, -6)
+* ('nacute', 438, 630)
+* ('Ncaron', 882, 685)
+* ('Ncaron', 692, 850)
+* ('ncaron', 17, 69)
+* ('ncaron', 550, 396)
+* ('ncaron', 407, -6)
+* ('ncaron', 471, 674)
+* ('Ohungarumlaut', 15, 107)
+* ('Ohungarumlaut', 595, 523)
+* ('Ohungarumlaut', 124, -1)
+* ('Ohungarumlaut', 370, 882)
+* ('ohungarumlaut', 16, 96)
+* ('ohungarumlaut', 408, 309)
+* ('ohungarumlaut', 123, -6)
+* ('ohungarumlaut', 216, 608)
+* ('OE', 15, 107)
+* ('OE', 1183, 750)
+* ('OE', 1303, 712)
+* ('OE', 447, -9)
+* ('oe', 16, 96)
+* ('oe', 123, -6)
+* ('oe', 678, 481)
+* ('oe', 423, 0)
+* ('Racute', 10, 34)
+* ('Racute', 827, 742)
+* ('Racute', 27, -16)
+* ('Racute', 456, 891)
+* ('racute', 27, 12)
+* ('racute', 483, 472)
+* ('racute', 351, 755)
+* ('Rcaron', 10, 34)
+* ('Rcaron', 827, 742)
+* ('Rcaron', 27, -16)
+* ('Rcaron', 521, 895)
+* ('rcaron', 27, 12)
+* ('rcaron', 483, 472)
+* ('rcaron', 309, 605)
+* ('Sacute', 4, 81)
+* ('Sacute', 661, 760)
+* ('Sacute', 140, -10)
+* ('Sacute', 378, 880)
+* ('sacute', 17, 19)
+* ('sacute', 384, 206)
+* ('sacute', 36, 6)
+* ('sacute', 244, 613)
+* ('Scircumflex', 4, 81)
+* ('Scircumflex', 661, 760)
+* ('Scircumflex', 140, -10)
+* ('Scircumflex', 399, 936)
+* ('scircumflex', 17, 19)
+* ('scircumflex', 384, 206)
+* ('scircumflex', 36, 6)
+* ('scircumflex', 314, 802)
+* ('scircumflex', 381, 658)
+* ('Scedilla', 4, 81)
+* ('Scedilla', 623, 778)
+* ('Scedilla', 661, 760)
+* ('Scedilla', 248, -180)
+* ('scedilla', 17, 19)
+* ('scedilla', 322, 500)
+* ('scedilla', 384, 206)
+* ('scedilla', 138, -153)
+* ('Scaron', 4, 81)
+* ('Scaron', 661, 760)
+* ('Scaron', 140, -10)
+* ('Scaron', 374, 842)
+* ('scaron', 17, 19)
+* ('scaron', 384, 206)
+* ('scaron', 36, 6)
+* ('scaron', 264, 605)
+* ('Tcaron', 981, 704)
+* ('Tcaron', 194, -4)
+* ('Tcaron', 345, 777)
+* ('utilde', 18, 94)
+* ('utilde', 483, -5)
+* ('utilde', 216, 566)
+* ('utilde', 557, 538)
+* ('Ubreve', 29, 132)
+* ('Ubreve', 751, 727)
+* ('Ubreve', 115, -8)
+* ('ubreve', 18, 94)
+* ('ubreve', 549, 39)
+* ('ubreve', 483, -5)
+* ('Uring', 29, 132)
+* ('Uring', 751, 727)
+* ('Uring', 115, -8)
+* ('Uring', 591, 887)
+* ('uring', 18, 94)
+* ('uring', 549, 39)
+* ('uring', 483, -5)
+* ('uring', 437, 617)
+* ('Uhungarumlaut', 29, 132)
+* ('Uhungarumlaut', 751, 727)
+* ('Uhungarumlaut', 115, -8)
+* ('Uhungarumlaut', 479, 875)
+* ('uhungarumlaut', 18, 94)
+* ('uhungarumlaut', 549, 39)
+* ('uhungarumlaut', 483, -5)
+* ('uhungarumlaut', 323, 635)
+* ('Wcircumflex', 17, 234)
+* ('Wcircumflex', 61, -12)
+* ('Wcircumflex', 423, 917)
+* ('wcircumflex', 11, 51)
+* ('wcircumflex', 719, 460)
+* ('wcircumflex', 358, -1)
+* ('wcircumflex', 441, 846)
+* ('Ycircumflex', 32, 668)
+* ('Ycircumflex', 511, 738)
+* ('Ycircumflex', 80, -154)
+* ('Ycircumflex', 277, 942)
+* ('ycircumflex', -179, -370)
+* ('ycircumflex', 407, 402)
+* ('ycircumflex', 257, 802)
+* ('Ydieresis', 32, 668)
+* ('Ydieresis', 511, 738)
+* ('Ydieresis', 80, -154)
+* ('Ydieresis', 324, 792)
+* ('Zacute', 10, 25)
+* ('Zacute', 834, 155)
+* ('Zacute', 35, 7)
+* ('Zacute', 520, 895)
+* ('zacute', 21, 22)
+* ('zacute', 538, 452)
+* ('zacute', 132, -7)
+* ('zacute', 474, 731)
+* ('Zdotaccent', 10, 25)
+* ('Zdotaccent', 834, 155)
+* ('Zdotaccent', 35, 7)
+* ('Zdotaccent', 394, 847)
+* ('zdotaccent', 21, 22)
+* ('zdotaccent', 538, 452)
+* ('zdotaccent', 132, -7)
+* ('zdotaccent', 355, 667)
+* ('Zcaron', 10, 25)
+* ('Zcaron', 834, 155)
+* ('Zcaron', 35, 7)
+* ('Zcaron', 485, 870)
+* ('zcaron', 21, 22)
+* ('zcaron', 538, 452)
+* ('zcaron', 132, -7)
+* ('zcaron', 417, 652)
+* ('florin', 564, 845)
+* ('florin', 700, 760)
+* ('florin', -69, -205)
+* ('circumflex', 98, 463)
+* ('circumflex', 63, 489)
+* ('circumflex', 215, 660)
+* ('circumflex', 282, 516)
+* ('caron', 219, 605)
+* ('caron', 230, 588)
+* ('caron', 183, 496)
+* ('caron', 47, 585)
+* ('breve', 231, 543)
+* ('breve', 158, 491)
+* ('breve', 48, 583)
+* ('dotaccent', 113, 497)
+* ('dotaccent', 186, 427)
+* ('dotaccent', 138, 377)
+* ('ring', 116, 346)
+* ('ring', 307, 489)
+* ('ring', 188, 290)
+* ('tilde', 82, 402)
+* ('tilde', 233, 566)
+* ('tilde', 574, 538)
+* ('tilde', 327, 378)
+* ('hungarumlaut', 137, 542)
+* ('hungarumlaut', 178, 391)
+* ('hungarumlaut', 321, 498)
+* ('uni1E02', 694, 749)
+* ('uni1E02', 692, 314)
+* ('uni1E02', 110, -17)
+* ('uni1E02', 407, 893)
+* ('uni1E03', 520, 344)
+* ('uni1E03', 130, 6)
+* ('uni1E03', 419, 622)
+* ('uni1E0A', 18, 26)
+* ('uni1E0A', 891, 564)
+* ('uni1E0A', 28, -3)
+* ('uni1E0A', 531, 922)
+* ('uni1E0B', -2, 104)
+* ('uni1E0B', 579, 589)
+* ('uni1E1E', 13, 25)
+* ('uni1E1E', 23, -2)
+* ('uni1E1E', 548, 918)
+* ('uni1E1F', 16, 268)
+* ('uni1E1F', 618, 682)
+* ('uni1E1F', 539, 913)
+* ('uni1E40', 30, 16)
+* ('uni1E40', 1007, 608)
+* ('uni1E40', 780, -83)
+* ('uni1E40', 707, 905)
+* ('uni1E41', 797, 380)
+* ('uni1E41', 650, -3)
+* ('uni1E41', 488, 601)
+* ('uni1E56', 15, 39)
+* ('uni1E56', 761, 630)
+* ('uni1E56', 440, 907)
+* ('uni1E57', -99, -294)
+* ('uni1E57', 523, 429)
+* ('uni1E57', 315, 704)
+* ('uni1E60', 4, 81)
+* ('uni1E60', 661, 760)
+* ('uni1E60', 140, -10)
+* ('uni1E60', 351, 866)
+* ('uni1E61', 17, 19)
+* ('uni1E61', 384, 206)
+* ('uni1E61', 36, 6)
+* ('uni1E61', 205, 611)
+* ('uni1E6A', 981, 704)
+* ('uni1E6A', 194, -4)
+* ('uni1E6A', 411, 820)
+* ('uni1E6B', 503, 359)
+* ('uni1E6B', 108, -2)
+* ('uni1E6B', 304, 852)
+* ('Wgrave', 17, 234)
+* ('Wgrave', 61, -12)
+* ('Wgrave', 390, 896)
+* ('wgrave', 11, 51)
+* ('wgrave', 719, 460)
+* ('wgrave', 358, -1)
+* ('wgrave', 322, 546)
+* ('Wacute', 17, 234)
+* ('Wacute', 61, -12)
+* ('Wacute', 417, 916)
+* ('wacute', 11, 51)
+* ('wacute', 719, 460)
+* ('wacute', 358, -1)
+* ('wacute', 432, 555)
+* ('Wdieresis', 17, 234)
+* ('Wdieresis', 61, -12)
+* ('Wdieresis', 474, 878)
+* ('wdieresis', 11, 51)
+* ('wdieresis', 719, 460)
+* ('wdieresis', 358, -1)
+* ('wdieresis', 447, 517)
+* ('Ygrave', 32, 668)
+* ('Ygrave', 511, 738)
+* ('Ygrave', 80, -154)
+* ('Ygrave', 216, 913)
+* ('ygrave', -179, -370)
+* ('ygrave', 407, 402)
+* ('ygrave', 202, 608)
+* ('endash', 394, 260)
+* ('endash', 89, 191)
+* ('emdash', 98, 195)
+* ('quoteleft', 94, 597)
+* ('quoteleft', 105, 540)
+* ('quoteleft', 57, 395)
+* ('quoteright', 120, 550)
+* ('quoteright', 76, 390)
+* ('quotesinglbase', 85, 137)
+* ('quotesinglbase', 97, 79)
+* ('quotesinglbase', 49, -66)
+* ('quotedblleft', 181, 610)
+* ('quotedblleft', 210, 549)
+* ('quotedblleft', 48, 606)
+* ('quotedblright', 190, 610)
+* ('quotedblright', 220, 549)
+* ('quotedblright', 58, 606)
+* ('quotedblbase', 166, 106)
+* ('quotedblbase', 196, 44)
+* ('quotedblbase', 34, 101)
+* ('dagger', 46, 418)
+* ('dagger', 508, 446)
+* ('dagger', 276, -2)
+* ('daggerdbl', 454, 432)
+* ('bullet', 193, 398)
+* ('bullet', 262, 313)
+* ('bullet', 114, 208)
+* ('ellipsis', 20, 32)
+* ('ellipsis', 65, 98)
+* ('ellipsis', 44, -4)
+* ('ellipsis', 212, 98)
+* ('ellipsis', 191, -4)
+* ('ellipsis', 358, 98)
+* ('ellipsis', 412, 53)
+* ('ellipsis', 338, -4)
+* ('guilsinglleft', 11, 311)
+* ('guilsinglleft', 276, 578)
+* ('guilsinglleft', 444, 19)
+* ('guilsinglleft', 411, 1)
+* ('guilsinglright', 26, 545)
+* ('guilsinglright', 313, 291)
+* ('fraction', 17, 49)
+* ('fraction', 271, 674)
+* ('fraction', 295, 628)
+* ('fraction', 34, -2)
+* ('Euro', 604, 911)
+* ('Euro', 754, 736)
+* ('Euro', 15, 299)
+* ('trademark', 1438, 746)
+* ('trademark', 1225, -65)
+* ('minus', 33, 323)
+* ('minus', 121, 339)
+* ('minus', 282, 314)
+* ('minus', 135, 286)
+* ('fi', 16, 268)
+* ('fi', 492, 785)
+* ('fi', 618, 682)
+* ('fi', 307, -36)
+* ('fl', 16, 268) and ('fl', 492, 785)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

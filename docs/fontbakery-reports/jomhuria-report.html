@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>7</td>
+                <td>23</td>
+                <td>62</td>
+                <td>9</td>
+                <td>140</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>4%</td>
+                <td>13%</td>
+                <td>34%</td>
+                <td>5%</td>
+                <td>77%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x02DC (SMALL TILDE)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02BE MODIFIER LETTER RIGHT HALF RING: not included in any glyphset definition</li>
+<li>U+02BF MODIFIER LETTER LEFT HALF RING: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C8 MODIFIER LETTER VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+02CC MODIFIER LETTER LOW VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: cherokee, tai-le, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: tifinagh, cherokee, tai-le, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, cherokee, coptic</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: gothic, tifinagh, cherokee, coptic</li>
+<li>U+0305 COMBINING OVERLINE: try adding one of: gothic, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, malayalam, canadian-aboriginal, coptic, tai-le</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: gothic, tai-le, coptic</li>
+<li>U+0309 COMBINING HOOK ABOVE: try adding tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0313 COMBINING COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0315 COMBINING COMMA ABOVE RIGHT: not included in any glyphset definition</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0325 COMBINING RING BELOW: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032E COMBINING BREVE BELOW: not included in any glyphset definition</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: gothic, tifinagh, cherokee</li>
+<li>U+0600 ARABIC NUMBER SIGN: try adding arabic</li>
+<li>U+0601 ARABIC SIGN SANAH: try adding arabic</li>
+<li>U+0602 ARABIC FOOTNOTE MARKER: try adding arabic</li>
+<li>U+0603 ARABIC SIGN SAFHA: try adding arabic</li>
+<li>U+0606 ARABIC-INDIC CUBE ROOT: not included in any glyphset definition</li>
+<li>U+0607 ARABIC-INDIC FOURTH ROOT: not included in any glyphset definition</li>
+<li>U+0608 ARABIC RAY: not included in any glyphset definition</li>
+<li>U+0609 ARABIC-INDIC PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+060A ARABIC-INDIC PER TEN THOUSAND SIGN: not included in any glyphset definition</li>
+<li>U+060B AFGHANI SIGN: try adding arabic</li>
+<li>U+060C ARABIC COMMA: try adding one of: thaana, arabic</li>
+<li>U+060D ARABIC DATE SEPARATOR: try adding arabic</li>
+<li>U+060E ARABIC POETIC VERSE SIGN: not included in any glyphset definition</li>
+<li>U+060F ARABIC SIGN MISRA: not included in any glyphset definition</li>
+<li>U+0610 ARABIC SIGN SALLALLAHOU ALAYHE WASSALLAM: not included in any glyphset definition</li>
+<li>U+0611 ARABIC SIGN ALAYHE ASSALLAM: not included in any glyphset definition</li>
+<li>U+0612 ARABIC SIGN RAHMATULLAH ALAYHE: not included in any glyphset definition</li>
+<li>U+0613 ARABIC SIGN RADI ALLAHOU ANHU: not included in any glyphset definition</li>
+<li>U+0614 ARABIC SIGN TAKHALLUS: not included in any glyphset definition</li>
+<li>U+0615 ARABIC SMALL HIGH TAH: not included in any glyphset definition</li>
+<li>U+0616 ARABIC SMALL HIGH LIGATURE ALEF WITH LAM WITH YEH: not included in any glyphset definition</li>
+<li>U+0617 ARABIC SMALL HIGH ZAIN: not included in any glyphset definition</li>
+<li>U+0618 ARABIC SMALL FATHA: not included in any glyphset definition</li>
+<li>U+0619 ARABIC SMALL DAMMA: not included in any glyphset definition</li>
+<li>U+061A ARABIC SMALL KASRA: not included in any glyphset definition</li>
+<li>U+061B ARABIC SEMICOLON: try adding one of: thaana, arabic</li>
+<li>U+061E ARABIC TRIPLE DOT PUNCTUATION MARK: try adding arabic</li>
+<li>U+061F ARABIC QUESTION MARK: try adding one of: thaana, arabic</li>
+<li>U+0620 ARABIC LETTER KASHMIRI YEH: not included in any glyphset definition</li>
+<li>U+0621 ARABIC LETTER HAMZA: try adding arabic</li>
+<li>U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE: try adding arabic</li>
+<li>U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE: try adding arabic</li>
+<li>U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE: try adding arabic</li>
+<li>U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW: try adding arabic</li>
+<li>U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE: try adding arabic</li>
+<li>U+0627 ARABIC LETTER ALEF: try adding arabic</li>
+<li>U+0628 ARABIC LETTER BEH: try adding arabic</li>
+<li>U+0629 ARABIC LETTER TEH MARBUTA: try adding arabic</li>
+<li>U+062A ARABIC LETTER TEH: try adding arabic</li>
+<li>U+062B ARABIC LETTER THEH: try adding arabic</li>
+<li>U+062C ARABIC LETTER JEEM: try adding arabic</li>
+<li>U+062D ARABIC LETTER HAH: try adding arabic</li>
+<li>U+062E ARABIC LETTER KHAH: try adding arabic</li>
+<li>U+062F ARABIC LETTER DAL: try adding arabic</li>
+<li>U+0630 ARABIC LETTER THAL: try adding arabic</li>
+<li>U+0631 ARABIC LETTER REH: try adding arabic</li>
+<li>U+0632 ARABIC LETTER ZAIN: try adding arabic</li>
+<li>U+0633 ARABIC LETTER SEEN: try adding arabic</li>
+<li>U+0634 ARABIC LETTER SHEEN: try adding arabic</li>
+<li>U+0635 ARABIC LETTER SAD: try adding arabic</li>
+<li>U+0636 ARABIC LETTER DAD: try adding arabic</li>
+<li>U+0637 ARABIC LETTER TAH: try adding arabic</li>
+<li>U+0638 ARABIC LETTER ZAH: try adding arabic</li>
+<li>U+0639 ARABIC LETTER AIN: try adding arabic</li>
+<li>U+063A ARABIC LETTER GHAIN: try adding arabic</li>
+<li>U+063B ARABIC LETTER KEHEH WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+063C ARABIC LETTER KEHEH WITH THREE DOTS BELOW: not included in any glyphset definition</li>
+<li>U+063D ARABIC LETTER FARSI YEH WITH INVERTED V: not included in any glyphset definition</li>
+<li>U+063E ARABIC LETTER FARSI YEH WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+063F ARABIC LETTER FARSI YEH WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0640 ARABIC TATWEEL: try adding one of: arabic, mandaic</li>
+<li>U+0641 ARABIC LETTER FEH: try adding arabic</li>
+<li>U+0642 ARABIC LETTER QAF: try adding arabic</li>
+<li>U+0643 ARABIC LETTER KAF: try adding arabic</li>
+<li>U+0644 ARABIC LETTER LAM: try adding arabic</li>
+<li>U+0645 ARABIC LETTER MEEM: try adding arabic</li>
+<li>U+0646 ARABIC LETTER NOON: try adding arabic</li>
+<li>U+0647 ARABIC LETTER HEH: try adding arabic</li>
+<li>U+0648 ARABIC LETTER WAW: try adding arabic</li>
+<li>U+0649 ARABIC LETTER ALEF MAKSURA: try adding arabic</li>
+<li>U+064A ARABIC LETTER YEH: try adding arabic</li>
+<li>U+064B ARABIC FATHATAN: try adding arabic</li>
+<li>U+064C ARABIC DAMMATAN: try adding arabic</li>
+<li>U+064D ARABIC KASRATAN: try adding arabic</li>
+<li>U+064E ARABIC FATHA: try adding arabic</li>
+<li>U+064F ARABIC DAMMA: try adding arabic</li>
+<li>U+0650 ARABIC KASRA: try adding arabic</li>
+<li>U+0651 ARABIC SHADDA: try adding arabic</li>
+<li>U+0652 ARABIC SUKUN: try adding arabic</li>
+<li>U+0653 ARABIC MADDAH ABOVE: try adding arabic</li>
+<li>U+0654 ARABIC HAMZA ABOVE: try adding arabic</li>
+<li>U+0655 ARABIC HAMZA BELOW: try adding arabic</li>
+<li>U+0656 ARABIC SUBSCRIPT ALEF: try adding arabic</li>
+<li>U+0657 ARABIC INVERTED DAMMA: try adding arabic</li>
+<li>U+0658 ARABIC MARK NOON GHUNNA: try adding arabic</li>
+<li>U+0659 ARABIC ZWARAKAY: try adding arabic</li>
+<li>U+065A ARABIC VOWEL SIGN SMALL V ABOVE: not included in any glyphset definition</li>
+<li>U+065B ARABIC VOWEL SIGN INVERTED SMALL V ABOVE: not included in any glyphset definition</li>
+<li>U+065C ARABIC VOWEL SIGN DOT BELOW: not included in any glyphset definition</li>
+<li>U+065D ARABIC REVERSED DAMMA: not included in any glyphset definition</li>
+<li>U+065E ARABIC FATHA WITH TWO DOTS: not included in any glyphset definition</li>
+<li>U+065F ARABIC WAVY HAMZA BELOW: not included in any glyphset definition</li>
+<li>U+0660 ARABIC-INDIC DIGIT ZERO: try adding one of: thaana, arabic</li>
+<li>U+0661 ARABIC-INDIC DIGIT ONE: try adding one of: thaana, arabic</li>
+<li>U+0662 ARABIC-INDIC DIGIT TWO: try adding one of: thaana, arabic</li>
+<li>U+0663 ARABIC-INDIC DIGIT THREE: try adding one of: thaana, arabic</li>
+<li>U+0664 ARABIC-INDIC DIGIT FOUR: try adding one of: thaana, arabic</li>
+<li>U+0665 ARABIC-INDIC DIGIT FIVE: try adding one of: thaana, arabic</li>
+<li>U+0666 ARABIC-INDIC DIGIT SIX: try adding one of: thaana, arabic</li>
+<li>U+0667 ARABIC-INDIC DIGIT SEVEN: try adding one of: thaana, arabic</li>
+<li>U+0668 ARABIC-INDIC DIGIT EIGHT: try adding one of: thaana, arabic</li>
+<li>U+0669 ARABIC-INDIC DIGIT NINE: try adding one of: thaana, arabic</li>
+<li>U+066A ARABIC PERCENT SIGN: try adding one of: thaana, arabic</li>
+<li>U+066B ARABIC DECIMAL SEPARATOR: try adding one of: thaana, arabic</li>
+<li>U+066C ARABIC THOUSANDS SEPARATOR: try adding one of: thaana, arabic</li>
+<li>U+066D ARABIC FIVE POINTED STAR: try adding arabic</li>
+<li>U+066E ARABIC LETTER DOTLESS BEH: not included in any glyphset definition</li>
+<li>U+066F ARABIC LETTER DOTLESS QAF: not included in any glyphset definition</li>
+<li>U+0670 ARABIC LETTER SUPERSCRIPT ALEF: try adding arabic</li>
+<li>U+0671 ARABIC LETTER ALEF WASLA: try adding arabic</li>
+<li>U+0672 ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE: not included in any glyphset definition</li>
+<li>U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW: not included in any glyphset definition</li>
+<li>U+0674 ARABIC LETTER HIGH HAMZA: not included in any glyphset definition</li>
+<li>U+0675 ARABIC LETTER HIGH HAMZA ALEF: not included in any glyphset definition</li>
+<li>U+0676 ARABIC LETTER HIGH HAMZA WAW: not included in any glyphset definition</li>
+<li>U+0677 ARABIC LETTER U WITH HAMZA ABOVE: not included in any glyphset definition</li>
+<li>U+0678 ARABIC LETTER HIGH HAMZA YEH: not included in any glyphset definition</li>
+<li>U+0679 ARABIC LETTER TTEH: try adding arabic</li>
+<li>U+067A ARABIC LETTER TTEHEH: try adding arabic</li>
+<li>U+067B ARABIC LETTER BEEH: try adding arabic</li>
+<li>U+067C ARABIC LETTER TEH WITH RING: try adding arabic</li>
+<li>U+067D ARABIC LETTER TEH WITH THREE DOTS ABOVE DOWNWARDS: try adding arabic</li>
+<li>U+067E ARABIC LETTER PEH: try adding arabic</li>
+<li>U+067F ARABIC LETTER TEHEH: try adding arabic</li>
+<li>U+0680 ARABIC LETTER BEHEH: try adding arabic</li>
+<li>U+0681 ARABIC LETTER HAH WITH HAMZA ABOVE: try adding arabic</li>
+<li>U+0682 ARABIC LETTER HAH WITH TWO DOTS VERTICAL ABOVE: not included in any glyphset definition</li>
+<li>U+0683 ARABIC LETTER NYEH: try adding arabic</li>
+<li>U+0684 ARABIC LETTER DYEH: try adding arabic</li>
+<li>U+0685 ARABIC LETTER HAH WITH THREE DOTS ABOVE: try adding arabic</li>
+<li>U+0686 ARABIC LETTER TCHEH: try adding arabic</li>
+<li>U+0687 ARABIC LETTER TCHEHEH: try adding arabic</li>
+<li>U+0688 ARABIC LETTER DDAL: try adding arabic</li>
+<li>U+0689 ARABIC LETTER DAL WITH RING: try adding arabic</li>
+<li>U+068A ARABIC LETTER DAL WITH DOT BELOW: try adding arabic</li>
+<li>U+068B ARABIC LETTER DAL WITH DOT BELOW AND SMALL TAH: not included in any glyphset definition</li>
+<li>U+068C ARABIC LETTER DAHAL: try adding arabic</li>
+<li>U+068D ARABIC LETTER DDAHAL: try adding arabic</li>
+<li>U+068E ARABIC LETTER DUL: not included in any glyphset definition</li>
+<li>U+068F ARABIC LETTER DAL WITH THREE DOTS ABOVE DOWNWARDS: try adding arabic</li>
+<li>U+0690 ARABIC LETTER DAL WITH FOUR DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0691 ARABIC LETTER RREH: try adding arabic</li>
+<li>U+0692 ARABIC LETTER REH WITH SMALL V: not included in any glyphset definition</li>
+<li>U+0693 ARABIC LETTER REH WITH RING: try adding arabic</li>
+<li>U+0694 ARABIC LETTER REH WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+0695 ARABIC LETTER REH WITH SMALL V BELOW: not included in any glyphset definition</li>
+<li>U+0696 ARABIC LETTER REH WITH DOT BELOW AND DOT ABOVE: try adding arabic</li>
+<li>U+0697 ARABIC LETTER REH WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0698 ARABIC LETTER JEH: try adding arabic</li>
+<li>U+0699 ARABIC LETTER REH WITH FOUR DOTS ABOVE: try adding arabic</li>
+<li>U+069A ARABIC LETTER SEEN WITH DOT BELOW AND DOT ABOVE: try adding arabic</li>
+<li>U+069B ARABIC LETTER SEEN WITH THREE DOTS BELOW: not included in any glyphset definition</li>
+<li>U+069C ARABIC LETTER SEEN WITH THREE DOTS BELOW AND THREE DOTS ABOVE: try adding arabic</li>
+<li>U+069D ARABIC LETTER SAD WITH TWO DOTS BELOW: not included in any glyphset definition</li>
+<li>U+069E ARABIC LETTER SAD WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+069F ARABIC LETTER TAH WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+06A0 ARABIC LETTER AIN WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+06A1 ARABIC LETTER DOTLESS FEH: not included in any glyphset definition</li>
+<li>U+06A2 ARABIC LETTER FEH WITH DOT MOVED BELOW: try adding arabic</li>
+<li>U+06A3 ARABIC LETTER FEH WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+06A4 ARABIC LETTER VEH: try adding arabic</li>
+<li>U+06A5 ARABIC LETTER FEH WITH THREE DOTS BELOW: try adding arabic</li>
+<li>U+06A6 ARABIC LETTER PEHEH: try adding arabic</li>
+<li>U+06A7 ARABIC LETTER QAF WITH DOT ABOVE: try adding arabic</li>
+<li>U+06A8 ARABIC LETTER QAF WITH THREE DOTS ABOVE: try adding arabic</li>
+<li>U+06A9 ARABIC LETTER KEHEH: try adding arabic</li>
+<li>U+06AA ARABIC LETTER SWASH KAF: try adding arabic</li>
+<li>U+06AB ARABIC LETTER KAF WITH RING: try adding arabic</li>
+<li>U+06AC ARABIC LETTER KAF WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+06AD ARABIC LETTER NG: not included in any glyphset definition</li>
+<li>U+06AE ARABIC LETTER KAF WITH THREE DOTS BELOW: not included in any glyphset definition</li>
+<li>U+06AF ARABIC LETTER GAF: try adding arabic</li>
+<li>U+06B0 ARABIC LETTER GAF WITH RING: not included in any glyphset definition</li>
+<li>U+06B1 ARABIC LETTER NGOEH: try adding arabic</li>
+<li>U+06B2 ARABIC LETTER GAF WITH TWO DOTS BELOW: not included in any glyphset definition</li>
+<li>U+06B3 ARABIC LETTER GUEH: try adding arabic</li>
+<li>U+06B4 ARABIC LETTER GAF WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+06B5 ARABIC LETTER LAM WITH SMALL V: not included in any glyphset definition</li>
+<li>U+06B6 ARABIC LETTER LAM WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+06B7 ARABIC LETTER LAM WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+06B8 ARABIC LETTER LAM WITH THREE DOTS BELOW: not included in any glyphset definition</li>
+<li>U+06B9 ARABIC LETTER NOON WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+06BA ARABIC LETTER NOON GHUNNA: try adding arabic</li>
+<li>U+06BB ARABIC LETTER RNOON: try adding arabic</li>
+<li>U+06BC ARABIC LETTER NOON WITH RING: try adding arabic</li>
+<li>U+06BD ARABIC LETTER NOON WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+06BE ARABIC LETTER HEH DOACHASHMEE: try adding arabic</li>
+<li>U+06BF ARABIC LETTER TCHEH WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+06C0 ARABIC LETTER HEH WITH YEH ABOVE: try adding arabic</li>
+<li>U+06C1 ARABIC LETTER HEH GOAL: try adding arabic</li>
+<li>U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE: try adding arabic</li>
+<li>U+06C3 ARABIC LETTER TEH MARBUTA GOAL: try adding arabic</li>
+<li>U+06C4 ARABIC LETTER WAW WITH RING: not included in any glyphset definition</li>
+<li>U+06C5 ARABIC LETTER KIRGHIZ OE: not included in any glyphset definition</li>
+<li>U+06C6 ARABIC LETTER OE: not included in any glyphset definition</li>
+<li>U+06C7 ARABIC LETTER U: not included in any glyphset definition</li>
+<li>U+06C8 ARABIC LETTER YU: not included in any glyphset definition</li>
+<li>U+06C9 ARABIC LETTER KIRGHIZ YU: not included in any glyphset definition</li>
+<li>U+06CA ARABIC LETTER WAW WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+06CB ARABIC LETTER VE: not included in any glyphset definition</li>
+<li>U+06CC ARABIC LETTER FARSI YEH: try adding arabic</li>
+<li>U+06CD ARABIC LETTER YEH WITH TAIL: try adding arabic</li>
+<li>U+06CE ARABIC LETTER YEH WITH SMALL V: not included in any glyphset definition</li>
+<li>U+06CF ARABIC LETTER WAW WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+06D0 ARABIC LETTER E: try adding arabic</li>
+<li>U+06D1 ARABIC LETTER YEH WITH THREE DOTS BELOW: not included in any glyphset definition</li>
+<li>U+06D2 ARABIC LETTER YEH BARREE: try adding arabic</li>
+<li>U+06D3 ARABIC LETTER YEH BARREE WITH HAMZA ABOVE: try adding arabic</li>
+<li>U+06D4 ARABIC FULL STOP: try adding arabic</li>
+<li>U+06D5 ARABIC LETTER AE: not included in any glyphset definition</li>
+<li>U+06D6 ARABIC SMALL HIGH LIGATURE SAD WITH LAM WITH ALEF MAKSURA: not included in any glyphset definition</li>
+<li>U+06D7 ARABIC SMALL HIGH LIGATURE QAF WITH LAM WITH ALEF MAKSURA: not included in any glyphset definition</li>
+<li>U+06D8 ARABIC SMALL HIGH MEEM INITIAL FORM: not included in any glyphset definition</li>
+<li>U+06D9 ARABIC SMALL HIGH LAM ALEF: not included in any glyphset definition</li>
+<li>U+06DA ARABIC SMALL HIGH JEEM: not included in any glyphset definition</li>
+<li>U+06DB ARABIC SMALL HIGH THREE DOTS: not included in any glyphset definition</li>
+<li>U+06DC ARABIC SMALL HIGH SEEN: not included in any glyphset definition</li>
+<li>U+06DD ARABIC END OF AYAH: try adding arabic</li>
+<li>U+06DE ARABIC START OF RUB EL HIZB: try adding arabic</li>
+<li>U+06DF ARABIC SMALL HIGH ROUNDED ZERO: not included in any glyphset definition</li>
+<li>U+06E0 ARABIC SMALL HIGH UPRIGHT RECTANGULAR ZERO: not included in any glyphset definition</li>
+<li>U+06E1 ARABIC SMALL HIGH DOTLESS HEAD OF KHAH: not included in any glyphset definition</li>
+<li>U+06E2 ARABIC SMALL HIGH MEEM ISOLATED FORM: not included in any glyphset definition</li>
+<li>U+06E3 ARABIC SMALL LOW SEEN: not included in any glyphset definition</li>
+<li>U+06E4 ARABIC SMALL HIGH MADDA: not included in any glyphset definition</li>
+<li>U+06E5 ARABIC SMALL WAW: not included in any glyphset definition</li>
+<li>U+06E6 ARABIC SMALL YEH: not included in any glyphset definition</li>
+<li>U+06E7 ARABIC SMALL HIGH YEH: not included in any glyphset definition</li>
+<li>U+06E8 ARABIC SMALL HIGH NOON: not included in any glyphset definition</li>
+<li>U+06E9 ARABIC PLACE OF SAJDAH: try adding arabic</li>
+<li>U+06EA ARABIC EMPTY CENTRE LOW STOP: not included in any glyphset definition</li>
+<li>U+06EB ARABIC EMPTY CENTRE HIGH STOP: not included in any glyphset definition</li>
+<li>U+06EC ARABIC ROUNDED HIGH STOP WITH FILLED CENTRE: not included in any glyphset definition</li>
+<li>U+06ED ARABIC SMALL LOW MEEM: not included in any glyphset definition</li>
+<li>U+06EE ARABIC LETTER DAL WITH INVERTED V: not included in any glyphset definition</li>
+<li>U+06EF ARABIC LETTER REH WITH INVERTED V: not included in any glyphset definition</li>
+<li>U+06F0 EXTENDED ARABIC-INDIC DIGIT ZERO: try adding arabic</li>
+<li>U+06F1 EXTENDED ARABIC-INDIC DIGIT ONE: try adding arabic</li>
+<li>U+06F2 EXTENDED ARABIC-INDIC DIGIT TWO: try adding arabic</li>
+<li>U+06F3 EXTENDED ARABIC-INDIC DIGIT THREE: try adding arabic</li>
+<li>U+06F4 EXTENDED ARABIC-INDIC DIGIT FOUR: try adding arabic</li>
+<li>U+06F5 EXTENDED ARABIC-INDIC DIGIT FIVE: try adding arabic</li>
+<li>U+06F6 EXTENDED ARABIC-INDIC DIGIT SIX: try adding arabic</li>
+<li>U+06F7 EXTENDED ARABIC-INDIC DIGIT SEVEN: try adding arabic</li>
+<li>U+06F8 EXTENDED ARABIC-INDIC DIGIT EIGHT: try adding arabic</li>
+<li>U+06F9 EXTENDED ARABIC-INDIC DIGIT NINE: try adding arabic</li>
+<li>U+06FA ARABIC LETTER SHEEN WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+06FB ARABIC LETTER DAD WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+06FC ARABIC LETTER GHAIN WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+06FD ARABIC SIGN SINDHI AMPERSAND: try adding arabic</li>
+<li>U+06FE ARABIC SIGN SINDHI POSTPOSITION MEN: try adding arabic</li>
+<li>U+06FF ARABIC LETTER HEH WITH INVERTED V: not included in any glyphset definition</li>
+<li>U+0750 ARABIC LETTER BEH WITH THREE DOTS HORIZONTALLY BELOW: not included in any glyphset definition</li>
+<li>U+0751 ARABIC LETTER BEH WITH DOT BELOW AND THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0752 ARABIC LETTER BEH WITH THREE DOTS POINTING UPWARDS BELOW: not included in any glyphset definition</li>
+<li>U+0753 ARABIC LETTER BEH WITH THREE DOTS POINTING UPWARDS BELOW AND TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0754 ARABIC LETTER BEH WITH TWO DOTS BELOW AND DOT ABOVE: not included in any glyphset definition</li>
+<li>U+0755 ARABIC LETTER BEH WITH INVERTED SMALL V BELOW: not included in any glyphset definition</li>
+<li>U+0756 ARABIC LETTER BEH WITH SMALL V: not included in any glyphset definition</li>
+<li>U+0757 ARABIC LETTER HAH WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0758 ARABIC LETTER HAH WITH THREE DOTS POINTING UPWARDS BELOW: not included in any glyphset definition</li>
+<li>U+0759 ARABIC LETTER DAL WITH TWO DOTS VERTICALLY BELOW AND SMALL TAH: not included in any glyphset definition</li>
+<li>U+075A ARABIC LETTER DAL WITH INVERTED SMALL V BELOW: not included in any glyphset definition</li>
+<li>U+075B ARABIC LETTER REH WITH STROKE: not included in any glyphset definition</li>
+<li>U+075C ARABIC LETTER SEEN WITH FOUR DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+075D ARABIC LETTER AIN WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+075E ARABIC LETTER AIN WITH THREE DOTS POINTING DOWNWARDS ABOVE: not included in any glyphset definition</li>
+<li>U+075F ARABIC LETTER AIN WITH TWO DOTS VERTICALLY ABOVE: not included in any glyphset definition</li>
+<li>U+0760 ARABIC LETTER FEH WITH TWO DOTS BELOW: not included in any glyphset definition</li>
+<li>U+0761 ARABIC LETTER FEH WITH THREE DOTS POINTING UPWARDS BELOW: not included in any glyphset definition</li>
+<li>U+0762 ARABIC LETTER KEHEH WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+0763 ARABIC LETTER KEHEH WITH THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+0764 ARABIC LETTER KEHEH WITH THREE DOTS POINTING UPWARDS BELOW: not included in any glyphset definition</li>
+<li>U+0765 ARABIC LETTER MEEM WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+0766 ARABIC LETTER MEEM WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+0767 ARABIC LETTER NOON WITH TWO DOTS BELOW: not included in any glyphset definition</li>
+<li>U+0768 ARABIC LETTER NOON WITH SMALL TAH: not included in any glyphset definition</li>
+<li>U+0769 ARABIC LETTER NOON WITH SMALL V: not included in any glyphset definition</li>
+<li>U+076A ARABIC LETTER LAM WITH BAR: not included in any glyphset definition</li>
+<li>U+076B ARABIC LETTER REH WITH TWO DOTS VERTICALLY ABOVE: not included in any glyphset definition</li>
+<li>U+076C ARABIC LETTER REH WITH HAMZA ABOVE: not included in any glyphset definition</li>
+<li>U+076D ARABIC LETTER SEEN WITH TWO DOTS VERTICALLY ABOVE: not included in any glyphset definition</li>
+<li>U+076E ARABIC LETTER HAH WITH SMALL ARABIC LETTER TAH BELOW: not included in any glyphset definition</li>
+<li>U+076F ARABIC LETTER HAH WITH SMALL ARABIC LETTER TAH AND TWO DOTS: not included in any glyphset definition</li>
+<li>U+0770 ARABIC LETTER SEEN WITH SMALL ARABIC LETTER TAH AND TWO DOTS: not included in any glyphset definition</li>
+<li>U+0771 ARABIC LETTER REH WITH SMALL ARABIC LETTER TAH AND TWO DOTS: not included in any glyphset definition</li>
+<li>U+0772 ARABIC LETTER HAH WITH SMALL ARABIC LETTER TAH ABOVE: not included in any glyphset definition</li>
+<li>U+0773 ARABIC LETTER ALEF WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE: not included in any glyphset definition</li>
+<li>U+0774 ARABIC LETTER ALEF WITH EXTENDED ARABIC-INDIC DIGIT THREE ABOVE: not included in any glyphset definition</li>
+<li>U+0775 ARABIC LETTER FARSI YEH WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE: not included in any glyphset definition</li>
+<li>U+0776 ARABIC LETTER FARSI YEH WITH EXTENDED ARABIC-INDIC DIGIT THREE ABOVE: not included in any glyphset definition</li>
+<li>U+0777 ARABIC LETTER FARSI YEH WITH EXTENDED ARABIC-INDIC DIGIT FOUR BELOW: not included in any glyphset definition</li>
+<li>U+0778 ARABIC LETTER WAW WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE: not included in any glyphset definition</li>
+<li>U+0779 ARABIC LETTER WAW WITH EXTENDED ARABIC-INDIC DIGIT THREE ABOVE: not included in any glyphset definition</li>
+<li>U+077A ARABIC LETTER YEH BARREE WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE: not included in any glyphset definition</li>
+<li>U+077B ARABIC LETTER YEH BARREE WITH EXTENDED ARABIC-INDIC DIGIT THREE ABOVE: not included in any glyphset definition</li>
+<li>U+077C ARABIC LETTER HAH WITH EXTENDED ARABIC-INDIC DIGIT FOUR BELOW: not included in any glyphset definition</li>
+<li>U+077D ARABIC LETTER SEEN WITH EXTENDED ARABIC-INDIC DIGIT FOUR ABOVE: not included in any glyphset definition</li>
+<li>U+077E ARABIC LETTER SEEN WITH INVERTED V: not included in any glyphset definition</li>
+<li>U+077F ARABIC LETTER KAF WITH TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+08A0 ARABIC LETTER BEH WITH SMALL V BELOW: not included in any glyphset definition</li>
+<li>U+08E4 ARABIC CURLY FATHA: not included in any glyphset definition</li>
+<li>U+08E5 ARABIC CURLY DAMMA: not included in any glyphset definition</li>
+<li>U+08E6 ARABIC CURLY KASRA: not included in any glyphset definition</li>
+<li>U+08E7 ARABIC CURLY FATHATAN: not included in any glyphset definition</li>
+<li>U+08E8 ARABIC CURLY DAMMATAN: not included in any glyphset definition</li>
+<li>U+08E9 ARABIC CURLY KASRATAN: not included in any glyphset definition</li>
+<li>U+08EA ARABIC TONE ONE DOT ABOVE: not included in any glyphset definition</li>
+<li>U+08EB ARABIC TONE TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+08EC ARABIC TONE LOOP ABOVE: not included in any glyphset definition</li>
+<li>U+08ED ARABIC TONE ONE DOT BELOW: not included in any glyphset definition</li>
+<li>U+08EE ARABIC TONE TWO DOTS BELOW: not included in any glyphset definition</li>
+<li>U+08EF ARABIC TONE LOOP BELOW: not included in any glyphset definition</li>
+<li>U+08F0 ARABIC OPEN FATHATAN: not included in any glyphset definition</li>
+<li>U+08F1 ARABIC OPEN DAMMATAN: not included in any glyphset definition</li>
+<li>U+08F2 ARABIC OPEN KASRATAN: not included in any glyphset definition</li>
+<li>U+08F3 ARABIC SMALL HIGH WAW: not included in any glyphset definition</li>
+<li>U+08F4 ARABIC FATHA WITH RING: not included in any glyphset definition</li>
+<li>U+08F5 ARABIC FATHA WITH DOT ABOVE: not included in any glyphset definition</li>
+<li>U+08F6 ARABIC KASRA WITH DOT BELOW: not included in any glyphset definition</li>
+<li>U+08F7 ARABIC LEFT ARROWHEAD ABOVE: not included in any glyphset definition</li>
+<li>U+08F8 ARABIC RIGHT ARROWHEAD ABOVE: not included in any glyphset definition</li>
+<li>U+08F9 ARABIC LEFT ARROWHEAD BELOW: not included in any glyphset definition</li>
+<li>U+08FA ARABIC RIGHT ARROWHEAD BELOW: not included in any glyphset definition</li>
+<li>U+08FB ARABIC DOUBLE RIGHT ARROWHEAD ABOVE: not included in any glyphset definition</li>
+<li>U+08FC ARABIC DOUBLE RIGHT ARROWHEAD ABOVE WITH DOT: not included in any glyphset definition</li>
+<li>U+08FD ARABIC RIGHT ARROWHEAD ABOVE WITH DOT: not included in any glyphset definition</li>
+<li>U+08FE ARABIC DAMMA WITH DOT: not included in any glyphset definition</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: rejang, tibetan, gujarati, tai-viet, javanese, kannada, khmer, buginese, brahmi, balinese, mandaic, tai-le, buhid, tai-tham, gurmukhi, malayalam, tifinagh, limbu, batak, thai, lepcha, sundanese, mongolian, arabic, new-tai-lue, hanunoo, kaithi, telugu, myanmar, bengali, tagalog, phags-pa, sinhala, saurashtra, cham, kharoshthi, devanagari, syloti-nagri, oriya, tamil, thaana, avestan, meetei-mayek, chakma, kayah-li, tagbanwa</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: rejang, tibetan, gujarati, tai-viet, javanese, kannada, buginese, brahmi, balinese, mandaic, tai-le, buhid, tai-tham, gurmukhi, malayalam, tifinagh, limbu, batak, thai, lepcha, sundanese, mongolian, arabic, new-tai-lue, hanunoo, kaithi, telugu, myanmar, bengali, tagalog, phags-pa, sinhala, saurashtra, cham, kharoshthi, devanagari, syloti-nagri, oriya, tamil, thaana, avestan, meetei-mayek, chakma, kayah-li, tagbanwa</li>
+<li>U+200E LEFT-TO-RIGHT MARK: try adding one of: phags-pa, thaana, arabic</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: phags-pa, thaana</li>
+<li>U+2010 HYPHEN: try adding one of: lisu, syloti-nagri, coptic, sundanese, arabic, kharoshthi, kayah-li, kaithi, cham</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: syloti-nagri, arabic</li>
+<li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
+<li>U+2015 HORIZONTAL BAR: not included in any glyphset definition</li>
+<li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2024 ONE DOT LEADER: try adding armenian</li>
+<li>U+202A LEFT-TO-RIGHT EMBEDDING: not included in any glyphset definition</li>
+<li>U+202B RIGHT-TO-LEFT EMBEDDING: not included in any glyphset definition</li>
+<li>U+202C POP DIRECTIONAL FORMATTING: not included in any glyphset definition</li>
+<li>U+202D LEFT-TO-RIGHT OVERRIDE: not included in any glyphset definition</li>
+<li>U+202E RIGHT-TO-LEFT OVERRIDE: try adding tifinagh</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2038 CARET: not included in any glyphset definition</li>
+<li>U+203E OVERLINE: not included in any glyphset definition</li>
+<li>U+2042 ASTERISM: not included in any glyphset definition</li>
+<li>U+2051 TWO ASTERISKS ALIGNED VERTICALLY: not included in any glyphset definition</li>
+<li>U+2117 SOUND RECORDING COPYRIGHT: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+2213 MINUS-OR-PLUS SIGN: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: rejang, tibetan, gujarati, tai-viet, javanese, kannada, khmer, buginese, brahmi, balinese, mandaic, tai-le, buhid, gurmukhi, malayalam, tifinagh, limbu, batak, thai, lepcha, sundanese, mongolian, new-tai-lue, hanunoo, kaithi, telugu, hebrew, myanmar, bengali, tagalog, phags-pa, sinhala, cham, kharoshthi, devanagari, syloti-nagri, oriya, tamil, canadian-aboriginal, thaana, coptic, meetei-mayek, chakma, lao, kayah-li, tagbanwa</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+<li>U+FBB2 ARABIC SYMBOL DOT ABOVE: not included in any glyphset definition</li>
+<li>U+FBB3 ARABIC SYMBOL DOT BELOW: not included in any glyphset definition</li>
+<li>U+FBB4 ARABIC SYMBOL TWO DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+FBB5 ARABIC SYMBOL TWO DOTS BELOW: not included in any glyphset definition</li>
+<li>U+FBB6 ARABIC SYMBOL THREE DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+FBB7 ARABIC SYMBOL THREE DOTS BELOW: not included in any glyphset definition</li>
+<li>U+FBB8 ARABIC SYMBOL THREE DOTS POINTING DOWNWARDS ABOVE: not included in any glyphset definition</li>
+<li>U+FBB9 ARABIC SYMBOL THREE DOTS POINTING DOWNWARDS BELOW: not included in any glyphset definition</li>
+<li>U+FBBA ARABIC SYMBOL FOUR DOTS ABOVE: not included in any glyphset definition</li>
+<li>U+FBBB ARABIC SYMBOL FOUR DOTS BELOW: not included in any glyphset definition</li>
+<li>U+FBBC ARABIC SYMBOL DOUBLE VERTICAL BAR BELOW: not included in any glyphset definition</li>
+<li>U+FBBD ARABIC SYMBOL TWO DOTS VERTICALLY ABOVE: not included in any glyphset definition</li>
+<li>U+FBBE ARABIC SYMBOL TWO DOTS VERTICALLY BELOW: not included in any glyphset definition</li>
+<li>U+FBBF ARABIC SYMBOL RING: not included in any glyphset definition</li>
+<li>U+FBC0 ARABIC SYMBOL SMALL TAH ABOVE: not included in any glyphset definition</li>
+<li>U+FBC1 ARABIC SYMBOL SMALL TAH BELOW: not included in any glyphset definition</li>
+<li>U+FD3E ORNATE LEFT PARENTHESIS: try adding arabic</li>
+<li>U+FD3F ORNATE RIGHT PARENTHESIS: try adding arabic</li>
+<li>U+FDFC RIAL SIGN: try adding arabic</li>
+<li>U+FDFD ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM: try adding one of: thaana, arabic</li>
+<li>U+1EE00 ARABIC MATHEMATICAL ALEF: not included in any glyphset definition</li>
+<li>U+1EE01 ARABIC MATHEMATICAL BEH: not included in any glyphset definition</li>
+<li>U+1EE02 ARABIC MATHEMATICAL JEEM: not included in any glyphset definition</li>
+<li>U+1EE03 ARABIC MATHEMATICAL DAL: not included in any glyphset definition</li>
+<li>U+1EE05 ARABIC MATHEMATICAL WAW: not included in any glyphset definition</li>
+<li>U+1EE06 ARABIC MATHEMATICAL ZAIN: not included in any glyphset definition</li>
+<li>U+1EE07 ARABIC MATHEMATICAL HAH: not included in any glyphset definition</li>
+<li>U+1EE08 ARABIC MATHEMATICAL TAH: not included in any glyphset definition</li>
+<li>U+1EE09 ARABIC MATHEMATICAL YEH: not included in any glyphset definition</li>
+<li>U+1EE0A ARABIC MATHEMATICAL KAF: not included in any glyphset definition</li>
+<li>U+1EE0B ARABIC MATHEMATICAL LAM: not included in any glyphset definition</li>
+<li>U+1EE0C ARABIC MATHEMATICAL MEEM: not included in any glyphset definition</li>
+<li>U+1EE0D ARABIC MATHEMATICAL NOON: not included in any glyphset definition</li>
+<li>U+1EE0E ARABIC MATHEMATICAL SEEN: not included in any glyphset definition</li>
+<li>U+1EE0F ARABIC MATHEMATICAL AIN: not included in any glyphset definition</li>
+<li>U+1EE10 ARABIC MATHEMATICAL FEH: not included in any glyphset definition</li>
+<li>U+1EE11 ARABIC MATHEMATICAL SAD: not included in any glyphset definition</li>
+<li>U+1EE12 ARABIC MATHEMATICAL QAF: not included in any glyphset definition</li>
+<li>U+1EE13 ARABIC MATHEMATICAL REH: not included in any glyphset definition</li>
+<li>U+1EE14 ARABIC MATHEMATICAL SHEEN: not included in any glyphset definition</li>
+<li>U+1EE15 ARABIC MATHEMATICAL TEH: not included in any glyphset definition</li>
+<li>U+1EE16 ARABIC MATHEMATICAL THEH: not included in any glyphset definition</li>
+<li>U+1EE17 ARABIC MATHEMATICAL KHAH: not included in any glyphset definition</li>
+<li>U+1EE18 ARABIC MATHEMATICAL THAL: not included in any glyphset definition</li>
+<li>U+1EE19 ARABIC MATHEMATICAL DAD: not included in any glyphset definition</li>
+<li>U+1EE1A ARABIC MATHEMATICAL ZAH: not included in any glyphset definition</li>
+<li>U+1EE1B ARABIC MATHEMATICAL GHAIN: not included in any glyphset definition</li>
+<li>U+1EE1C ARABIC MATHEMATICAL DOTLESS BEH: not included in any glyphset definition</li>
+<li>U+1EE1D ARABIC MATHEMATICAL DOTLESS NOON: not included in any glyphset definition</li>
+<li>U+1EE1E ARABIC MATHEMATICAL DOTLESS FEH: not included in any glyphset definition</li>
+<li>U+1EE1F ARABIC MATHEMATICAL DOTLESS QAF: not included in any glyphset definition</li>
+<li>U+1EE21 ARABIC MATHEMATICAL INITIAL BEH: not included in any glyphset definition</li>
+<li>U+1EE22 ARABIC MATHEMATICAL INITIAL JEEM: not included in any glyphset definition</li>
+<li>U+1EE24 ARABIC MATHEMATICAL INITIAL HEH: not included in any glyphset definition</li>
+<li>U+1EE27 ARABIC MATHEMATICAL INITIAL HAH: not included in any glyphset definition</li>
+<li>U+1EE29 ARABIC MATHEMATICAL INITIAL YEH: not included in any glyphset definition</li>
+<li>U+1EE2A ARABIC MATHEMATICAL INITIAL KAF: not included in any glyphset definition</li>
+<li>U+1EE2B ARABIC MATHEMATICAL INITIAL LAM: not included in any glyphset definition</li>
+<li>U+1EE2C ARABIC MATHEMATICAL INITIAL MEEM: not included in any glyphset definition</li>
+<li>U+1EE2D ARABIC MATHEMATICAL INITIAL NOON: not included in any glyphset definition</li>
+<li>U+1EE2E ARABIC MATHEMATICAL INITIAL SEEN: not included in any glyphset definition</li>
+<li>U+1EE2F ARABIC MATHEMATICAL INITIAL AIN: not included in any glyphset definition</li>
+<li>U+1EE30 ARABIC MATHEMATICAL INITIAL FEH: not included in any glyphset definition</li>
+<li>U+1EE31 ARABIC MATHEMATICAL INITIAL SAD: not included in any glyphset definition</li>
+<li>U+1EE32 ARABIC MATHEMATICAL INITIAL QAF: not included in any glyphset definition</li>
+<li>U+1EE34 ARABIC MATHEMATICAL INITIAL SHEEN: not included in any glyphset definition</li>
+<li>U+1EE35 ARABIC MATHEMATICAL INITIAL TEH: not included in any glyphset definition</li>
+<li>U+1EE36 ARABIC MATHEMATICAL INITIAL THEH: not included in any glyphset definition</li>
+<li>U+1EE37 ARABIC MATHEMATICAL INITIAL KHAH: not included in any glyphset definition</li>
+<li>U+1EE39 ARABIC MATHEMATICAL INITIAL DAD: not included in any glyphset definition</li>
+<li>U+1EE3B ARABIC MATHEMATICAL INITIAL GHAIN: not included in any glyphset definition</li>
+<li>U+1EE42 ARABIC MATHEMATICAL TAILED JEEM: not included in any glyphset definition</li>
+<li>U+1EE47 ARABIC MATHEMATICAL TAILED HAH: not included in any glyphset definition</li>
+<li>U+1EE49 ARABIC MATHEMATICAL TAILED YEH: not included in any glyphset definition</li>
+<li>U+1EE4B ARABIC MATHEMATICAL TAILED LAM: not included in any glyphset definition</li>
+<li>U+1EE4D ARABIC MATHEMATICAL TAILED NOON: not included in any glyphset definition</li>
+<li>U+1EE4E ARABIC MATHEMATICAL TAILED SEEN: not included in any glyphset definition</li>
+<li>U+1EE4F ARABIC MATHEMATICAL TAILED AIN: not included in any glyphset definition</li>
+<li>U+1EE51 ARABIC MATHEMATICAL TAILED SAD: not included in any glyphset definition</li>
+<li>U+1EE52 ARABIC MATHEMATICAL TAILED QAF: not included in any glyphset definition</li>
+<li>U+1EE54 ARABIC MATHEMATICAL TAILED SHEEN: not included in any glyphset definition</li>
+<li>U+1EE57 ARABIC MATHEMATICAL TAILED KHAH: not included in any glyphset definition</li>
+<li>U+1EE59 ARABIC MATHEMATICAL TAILED DAD: not included in any glyphset definition</li>
+<li>U+1EE5B ARABIC MATHEMATICAL TAILED GHAIN: not included in any glyphset definition</li>
+<li>U+1EE5D ARABIC MATHEMATICAL TAILED DOTLESS NOON: not included in any glyphset definition</li>
+<li>U+1EE5F ARABIC MATHEMATICAL TAILED DOTLESS QAF: not included in any glyphset definition</li>
+<li>U+1EE61 ARABIC MATHEMATICAL STRETCHED BEH: not included in any glyphset definition</li>
+<li>U+1EE62 ARABIC MATHEMATICAL STRETCHED JEEM: not included in any glyphset definition</li>
+<li>U+1EE64 ARABIC MATHEMATICAL STRETCHED HEH: not included in any glyphset definition</li>
+<li>U+1EE67 ARABIC MATHEMATICAL STRETCHED HAH: not included in any glyphset definition</li>
+<li>U+1EE68 ARABIC MATHEMATICAL STRETCHED TAH: not included in any glyphset definition</li>
+<li>U+1EE69 ARABIC MATHEMATICAL STRETCHED YEH: not included in any glyphset definition</li>
+<li>U+1EE6A ARABIC MATHEMATICAL STRETCHED KAF: not included in any glyphset definition</li>
+<li>U+1EE6C ARABIC MATHEMATICAL STRETCHED MEEM: not included in any glyphset definition</li>
+<li>U+1EE6D ARABIC MATHEMATICAL STRETCHED NOON: not included in any glyphset definition</li>
+<li>U+1EE6E ARABIC MATHEMATICAL STRETCHED SEEN: not included in any glyphset definition</li>
+<li>U+1EE6F ARABIC MATHEMATICAL STRETCHED AIN: not included in any glyphset definition</li>
+<li>U+1EE70 ARABIC MATHEMATICAL STRETCHED FEH: not included in any glyphset definition</li>
+<li>U+1EE71 ARABIC MATHEMATICAL STRETCHED SAD: not included in any glyphset definition</li>
+<li>U+1EE72 ARABIC MATHEMATICAL STRETCHED QAF: not included in any glyphset definition</li>
+<li>U+1EE74 ARABIC MATHEMATICAL STRETCHED SHEEN: not included in any glyphset definition</li>
+<li>U+1EE75 ARABIC MATHEMATICAL STRETCHED TEH: not included in any glyphset definition</li>
+<li>U+1EE76 ARABIC MATHEMATICAL STRETCHED THEH: not included in any glyphset definition</li>
+<li>U+1EE77 ARABIC MATHEMATICAL STRETCHED KHAH: not included in any glyphset definition</li>
+<li>U+1EE79 ARABIC MATHEMATICAL STRETCHED DAD: not included in any glyphset definition</li>
+<li>U+1EE7A ARABIC MATHEMATICAL STRETCHED ZAH: not included in any glyphset definition</li>
+<li>U+1EE7B ARABIC MATHEMATICAL STRETCHED GHAIN: not included in any glyphset definition</li>
+<li>U+1EE7C ARABIC MATHEMATICAL STRETCHED DOTLESS BEH: not included in any glyphset definition</li>
+<li>U+1EE7E ARABIC MATHEMATICAL STRETCHED DOTLESS FEH: not included in any glyphset definition</li>
+<li>U+1EE80 ARABIC MATHEMATICAL LOOPED ALEF: not included in any glyphset definition</li>
+<li>U+1EE81 ARABIC MATHEMATICAL LOOPED BEH: not included in any glyphset definition</li>
+<li>U+1EE82 ARABIC MATHEMATICAL LOOPED JEEM: not included in any glyphset definition</li>
+<li>U+1EE83 ARABIC MATHEMATICAL LOOPED DAL: not included in any glyphset definition</li>
+<li>U+1EE84 ARABIC MATHEMATICAL LOOPED HEH: not included in any glyphset definition</li>
+<li>U+1EE85 ARABIC MATHEMATICAL LOOPED WAW: not included in any glyphset definition</li>
+<li>U+1EE86 ARABIC MATHEMATICAL LOOPED ZAIN: not included in any glyphset definition</li>
+<li>U+1EE87 ARABIC MATHEMATICAL LOOPED HAH: not included in any glyphset definition</li>
+<li>U+1EE88 ARABIC MATHEMATICAL LOOPED TAH: not included in any glyphset definition</li>
+<li>U+1EE89 ARABIC MATHEMATICAL LOOPED YEH: not included in any glyphset definition</li>
+<li>U+1EE8B ARABIC MATHEMATICAL LOOPED LAM: not included in any glyphset definition</li>
+<li>U+1EE8C ARABIC MATHEMATICAL LOOPED MEEM: not included in any glyphset definition</li>
+<li>U+1EE8D ARABIC MATHEMATICAL LOOPED NOON: not included in any glyphset definition</li>
+<li>U+1EE8E ARABIC MATHEMATICAL LOOPED SEEN: not included in any glyphset definition</li>
+<li>U+1EE8F ARABIC MATHEMATICAL LOOPED AIN: not included in any glyphset definition</li>
+<li>U+1EE90 ARABIC MATHEMATICAL LOOPED FEH: not included in any glyphset definition</li>
+<li>U+1EE91 ARABIC MATHEMATICAL LOOPED SAD: not included in any glyphset definition</li>
+<li>U+1EE92 ARABIC MATHEMATICAL LOOPED QAF: not included in any glyphset definition</li>
+<li>U+1EE93 ARABIC MATHEMATICAL LOOPED REH: not included in any glyphset definition</li>
+<li>U+1EE94 ARABIC MATHEMATICAL LOOPED SHEEN: not included in any glyphset definition</li>
+<li>U+1EE95 ARABIC MATHEMATICAL LOOPED TEH: not included in any glyphset definition</li>
+<li>U+1EE96 ARABIC MATHEMATICAL LOOPED THEH: not included in any glyphset definition</li>
+<li>U+1EE97 ARABIC MATHEMATICAL LOOPED KHAH: not included in any glyphset definition</li>
+<li>U+1EE98 ARABIC MATHEMATICAL LOOPED THAL: not included in any glyphset definition</li>
+<li>U+1EE99 ARABIC MATHEMATICAL LOOPED DAD: not included in any glyphset definition</li>
+<li>U+1EE9A ARABIC MATHEMATICAL LOOPED ZAH: not included in any glyphset definition</li>
+<li>U+1EE9B ARABIC MATHEMATICAL LOOPED GHAIN: not included in any glyphset definition</li>
+<li>U+1EEA1 ARABIC MATHEMATICAL DOUBLE-STRUCK BEH: not included in any glyphset definition</li>
+<li>U+1EEA2 ARABIC MATHEMATICAL DOUBLE-STRUCK JEEM: not included in any glyphset definition</li>
+<li>U+1EEA3 ARABIC MATHEMATICAL DOUBLE-STRUCK DAL: not included in any glyphset definition</li>
+<li>U+1EEA5 ARABIC MATHEMATICAL DOUBLE-STRUCK WAW: not included in any glyphset definition</li>
+<li>U+1EEA6 ARABIC MATHEMATICAL DOUBLE-STRUCK ZAIN: not included in any glyphset definition</li>
+<li>U+1EEA7 ARABIC MATHEMATICAL DOUBLE-STRUCK HAH: not included in any glyphset definition</li>
+<li>U+1EEA8 ARABIC MATHEMATICAL DOUBLE-STRUCK TAH: not included in any glyphset definition</li>
+<li>U+1EEA9 ARABIC MATHEMATICAL DOUBLE-STRUCK YEH: not included in any glyphset definition</li>
+<li>U+1EEAB ARABIC MATHEMATICAL DOUBLE-STRUCK LAM: not included in any glyphset definition</li>
+<li>U+1EEAC ARABIC MATHEMATICAL DOUBLE-STRUCK MEEM: not included in any glyphset definition</li>
+<li>U+1EEAD ARABIC MATHEMATICAL DOUBLE-STRUCK NOON: not included in any glyphset definition</li>
+<li>U+1EEAE ARABIC MATHEMATICAL DOUBLE-STRUCK SEEN: not included in any glyphset definition</li>
+<li>U+1EEAF ARABIC MATHEMATICAL DOUBLE-STRUCK AIN: not included in any glyphset definition</li>
+<li>U+1EEB0 ARABIC MATHEMATICAL DOUBLE-STRUCK FEH: not included in any glyphset definition</li>
+<li>U+1EEB1 ARABIC MATHEMATICAL DOUBLE-STRUCK SAD: not included in any glyphset definition</li>
+<li>U+1EEB2 ARABIC MATHEMATICAL DOUBLE-STRUCK QAF: not included in any glyphset definition</li>
+<li>U+1EEB3 ARABIC MATHEMATICAL DOUBLE-STRUCK REH: not included in any glyphset definition</li>
+<li>U+1EEB4 ARABIC MATHEMATICAL DOUBLE-STRUCK SHEEN: not included in any glyphset definition</li>
+<li>U+1EEB5 ARABIC MATHEMATICAL DOUBLE-STRUCK TEH: not included in any glyphset definition</li>
+<li>U+1EEB6 ARABIC MATHEMATICAL DOUBLE-STRUCK THEH: not included in any glyphset definition</li>
+<li>U+1EEB7 ARABIC MATHEMATICAL DOUBLE-STRUCK KHAH: not included in any glyphset definition</li>
+<li>U+1EEB8 ARABIC MATHEMATICAL DOUBLE-STRUCK THAL: not included in any glyphset definition</li>
+<li>U+1EEB9 ARABIC MATHEMATICAL DOUBLE-STRUCK DAD: not included in any glyphset definition</li>
+<li>U+1EEBA ARABIC MATHEMATICAL DOUBLE-STRUCK ZAH: not included in any glyphset definition</li>
+<li>U+1EEBB ARABIC MATHEMATICAL DOUBLE-STRUCK GHAIN: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright 2015 kb-studio (www.k-b-studio.com|tarobish@gmail.com). copyright 2015 lasse fister (lasse@graphicore.de). copyright 2015 sorkin type co (www.sorkintype.com). copyright 2010-2015 khaled hosny (khaledhosny@eglug.org).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://scripts.sil.org/OFL&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://scripts.sil.org/OFL&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<h3>Check METADATA.pb includes production subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/includes_production_subsets&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following subsets are missing [arabic] [code: missing-subsets]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2015 kb-studio (www.k-b-studio.com|tarobish@gmail.com). copyright 2015 lasse fister (lasse@graphicore.de). copyright 2015 sorkin type co (www.sorkintype.com). copyright 2010-2015 khaled hosny (khaledhosny@eglug.org).&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2015 KB-Studio (www.k-b-studio.com|tarobish@gmail.com). Copyright 2015 Lasse Fister (lasse@graphicore.de). Copyright 2015 Sorkin Type Co (www.sorkintype.com). Copyright 2010-2015 Khaled Hosny (khaledhosny@eglug.org).&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2015 KB-Studio (www.k-b-studio.com|tarobish@gmail.com). Copyright 2015 Lasse Fister (lasse@graphicore.de). Copyright 2015 Sorkin Type Co (www.sorkintype.com). Copyright 2010-2015 Khaled Hosny (khaledhosny@eglug.org).&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check for primary_script</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: primary_script field should be 'Arab' but is missing. [code: missing-primary-script]</p>
+</span></li></ul></div></details>
+<h3>Stricter unitsPerEm criteria for Google Fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unitsperem_strict&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font em size (unitsPerEm) is 3000 which may be too large (causing filesize bloat), unless you are sure that the detail level in this font requires that much precision. [code: large-value]</p>
+</span></li></ul></div></details>
+<h3>Are there caret positions declared for every ligature?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + l
+
+- l + f
+
+- f + k
+
+- k + f
+
+- f + j
+
+- j + f
+
+- f + i
+
+- i + f
+
+- f + h
+
+- h + f
+
+- f + b
+
+- b + l
+
+- l + i
+
+- i + k
+
+- k + j
+
+- j + h [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>It seems that KB Studio is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry. [code: profile-not-found]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure Stylistic Sets have description.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/stylisticset_description&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The stylistic set ss01 lacks a description string on the 'name' table. [code: missing-description]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Name table records must not have trailing spaces.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/trailing_spaces&gt;</div>
+
+<details><summary>🔥 Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (1, 0, 0, 5) has trailing spaces that must be removed: 'Version 1.0010 ' [code: trailing-space]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (3, 1, 1033, 5) has trailing spaces that must be removed: 'Version 1.0010 ' [code: trailing-space]</p>
+</span></li></ul></div></details>
+<h3>Font has **proper** whitespace glyph names?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphnames&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Glyph 0x00A0 is called &quot;nbspace&quot;: Change to &quot;uni00A0&quot; [code: not-recommended-00a0]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- Dot.b
+
+- FourDots.b
+
+- Gtilde
+
+- ThreeDots.b
+
+- TwoDots.b
+
+- aAlf.dagger
+
+- aBaa.init_High
+
+- aHeh.medi_PostTooth
+
+- aLam.medi_KafLamAlf
+
+- aMem.fina_KafMemIsol
+
+- aMem.medi_KafMemMedi
+
+- aTwo.above
+
+- aYaa.fina_KafYaaIsol
+
+- aYaaBari.fina_PostToothFina
+
+- damma.mark
+
+- dcroat
+
+- dot.alt1
+
+- f_f_f
+
+- f_i_trk
+
+- five.dnom
+
+- gtilde
+
+- hThreeDots.a
+
+- hamza.above.wavy
+
+- hamzadamma.mark
+
+- i.dot
+
+- iThreeDots.b
+
+- iogonek.dotless
+
+- macron
+
+- middot
+
+- nine.dnom
+
+- nonmarkingreturn
+
+- one.dnom
+
+- overscore
+
+- seven.dnom
+
+- six.dnom
+
+- smalltaa.below
+
+- smallv.above
+
+- smallv.above.inverted
+
+- smallv.below
+
+- smallv.below.inverted
+
+- tildecomb
+
+- tildecomb.cap
+
+- uni0309.cap
+
+- uni030F.cap
+
+- uni0620.medi_YaaBari
+
+- uni0625.fina
+
+- uni0626.init_YaaBari
+
+- uni0626.medi_YaaBari
+
+- uni0628.init_BaaYaaIsol
+
+- uni0628.medi_YaaBari
+
+- uni062A.medi_YaaBari
+
+- uni062B.medi_YaaBari
+
+- uni062C.medi_1LamHaaHaaInit
+
+- uni062C.medi_2LamHaaHaaInit
+
+- uni063D.medi_YaaBari
+
+- uni0644.init_Lellah
+
+- uni0644.medi_Lellah
+
+- uni0646.medi_YaaBari
+
+- uni0647.fina_Lellah
+
+- uni0647.medi_BaaHehMedi
+
+- uni0647.medi_PostTooth
+
+- uni0649.medi_YaaBari
+
+- uni064A.medi_YaaBari
+
+- uni066E.medi_YaaBari
+
+- uni0670.isol
+
+- uni0678.medi_YaaBari
+
+- uni0679.medi_YaaBari
+
+- uni067A.medi_YaaBari
+
+- uni067B.medi_YaaBari
+
+- uni067C.medi_YaaBari
+
+- uni067D.medi_YaaBari
+
+- uni067E.medi_YaaBari
+
+- uni067F.medi_YaaBari
+
+- uni0680.medi_YaaBari
+
+- uni06B9.medi_YaaBari
+
+- uni06BA.medi_YaaBari
+
+- uni06BB.medi_YaaBari
+
+- uni06BC.medi_YaaBari
+
+- uni06BD.medi_YaaBari
+
+- uni06CC.init_LD
+
+- uni06CC.medi_YaaBari
+
+- uni06CE.medi_YaaBari
+
+- uni06D0.medi_YaaBari
+
+- uni06D1.medi_YaaBari
+
+- uni0750.medi_YaaBari
+
+- uni0751.medi_YaaBari
+
+- uni0752.medi_YaaBari
+
+- uni0753.medi_YaaBari
+
+- uni0754.medi_YaaBari
+
+- uni0755.medi_YaaBari
+
+- uni0756.medi_YaaBari
+
+- uni0767.medi_YaaBari
+
+- uni0768.medi_YaaBari
+
+- uni0769.medi_YaaBari
+
+- uni0775.medi_YaaBari
+
+- uni0776.medi_YaaBari
+
+- uni0777.medi_YaaBari
+
+- vTwoDots.b
+
+- zero.dnom
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: oslash	Contours detected: 2	Expected: 3
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: dslash	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0180	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EA	Contours detected: 3	Expected: 2
+
+- Glyph name: uni01EB	Contours detected: 3	Expected: 2
+
+- Glyph name: Oslashacute	Contours detected: 3	Expected: 4
+
+- Glyph name: oslashacute	Contours detected: 3	Expected: 4
+
+- Glyph name: uni0243	Contours detected: 4	Expected: 3
+
+- Glyph name: twothirds	Contours detected: 5	Expected: 1 or 3
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Oslashacute	Contours detected: 3	Expected: 4
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: eogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: oslash	Contours detected: 2	Expected: 3
+
+- Glyph name: oslashacute	Contours detected: 3	Expected: 4
+
+- Glyph name: tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: twothirds	Contours detected: 5	Expected: 1 or 3
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0180	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0243	Contours detected: 4	Expected: 3
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 1148 among a set of 9 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 914:
+greater, less</p>
+<p>Width = 1125:
+multiply
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️⚠️⚠️</span>
+<h3>Check glyphs in mark glyph class are non-spacing.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+aAlf.dagger (unencoded), damma.mark (unencoded), hamza.above.wavy (unencoded), hamza.kaf (unencoded), hamza.wasl (unencoded), hamzadamma.mark (unencoded), smalltaa.above (unencoded), smallv.below (unencoded), smallv.below.inverted (unencoded), uni0610 (U+0610), uni0611 (U+0611), uni0612 (U+0612), uni0613 (U+0613), uni0614 (U+0614), uni0616 (U+0616), uni0617 (U+0617), uni0619 (U+0619), uni064B (U+064B), uni064B.small (unencoded), uni064C (U+064C), uni064C.small (unencoded), uni064D (U+064D), uni064E (U+064E), uni064E.small (unencoded), uni064E.small2 (unencoded), uni064F (U+064F), uni064F.small (unencoded), uni0650 (U+0650), uni0650.small2 (unencoded), uni0651 (U+0651), uni0652 (U+0652), uni0652.small2 (unencoded), uni0656 (U+0656), uni0657 (U+0657), uni0658 (U+0658), uni0659 (U+0659), uni065C (U+065C), uni065D (U+065D), uni065E (U+065E), uni065F (U+065F), uni0670 (U+0670), uni06D6 (U+06D6), uni06D7 (U+06D7), uni06D8 (U+06D8), uni06D9 (U+06D9), uni06DA (U+06DA), uni06DB (U+06DB), uni06DC (U+06DC), uni06DF (U+06DF), uni06E0 (U+06E0), uni06E1 (U+06E1), uni06E2 (U+06E2), uni06E3 (U+06E3), uni06E4 (U+06E4), uni06E7 (U+06E7), uni06E8 (U+06E8), uni06ED (U+06ED), uni08E6 (U+08E6), uni08E9 (U+08E9), uni08F0 (U+08F0), uni08F0.small (unencoded), uni08F1 (U+08F1), uni08F1.small (unencoded) and uni08F2 (U+08F2) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0300 (U+0300), uni0301 (U+0301), uni0302 (U+0302), uni0303 (U+0303), uni0304 (U+0304), uni0305 (U+0305), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni0309 (U+0309), uni030A (U+030A), uni030B (U+030B), uni030C (U+030C), uni030F (U+030F), uni0312 (U+0312), uni0313 (U+0313), uni0315 (U+0315), uni0324 (U+0324), uni0326 (U+0326), uni0327 (U+0327), uni0328 (U+0328), uni032E (U+032E), uni0331 (U+0331), uni08EA (U+08EA), uni08EB (U+08EB), uni08EC (U+08EC), uni08ED (U+08ED), uni08EE (U+08EE), uni08EF (U+08EF), uni08F3 (U+08F3), uni08F6 (U+08F6), uni08F7 (U+08F7), uni08F8 (U+08F8), uni08F9 (U+08F9), uni08FA (U+08FA), uni08FB (U+08FB), uni08FC (U+08FC) and uni08FD (U+08FD) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h3>Check GDEF mark glyph class doesn't have characters that are not marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0674 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('uni0624', 435, -586)
+* ('uni062F', 56, 315)
+* ('uni0630', 56, 315)
+* ('uni0648', 435, -586)
+* ('uni0676', 435, -586)
+* ('uni0677', 435, -586)
+* ('uni0688', 56, 315)
+* ('uni0689', 56, 315)
+* ('uni068A', 56, 315)
+* ('uni068B', 56, 315)
+* ('uni068C', 56, 315)
+* ('uni068D', 56, 315)
+* ('uni068E', 56, 315)
+* ('uni068F', 56, 315)
+* ('uni0690', 56, 315)
+* ('uni06C4', 565, -586)
+* ('uni06C5', 565, -586)
+* ('uni06C6', 435, -586)
+* ('uni06C7', 435, -586)
+* ('uni06C8', 435, -586)
+* ('uni06C9', 435, -586)
+* ('uni06CA', 435, -586)
+* ('uni06CB', 435, -586)
+* ('uni06CF', 435, -586)
+* ('uni06EE', 56, 315)
+* ('uni0759', 56, 315)
+* ('uni075A', 56, 315)
+* ('uni0778', 435, -586)
+* ('uni0779', 435, -586)
+* ('uni08F3', -28, 1465)
+* ('u1EE03', 56, 315)
+* ('u1EE05', 435, -586)
+* ('u1EE18', 56, 315)
+* ('u1EE86', 1107, 156)
+* ('uni06CB.fina', 435, -586)
+* ('uni0624.fina', 435, -586)
+* ('uni06CA.fina', 435, -586)
+* ('uni06CF.fina', 435, -586)
+* ('uni0778.fina', 435, -586)
+* ('uni06C6.fina', 435, -586)
+* ('uni06C7.fina', 435, -587)
+* ('uni06C4.fina', 565, -586)
+* ('uni06C5.fina', 565, -586)
+* ('uni0676.fina', 425, -671)
+* ('uni0677.fina', 435, -586)
+* ('uni06C8.fina', 435, -586)
+* ('uni06C9.fina', 435, -586)
+* ('uni0779.fina', 435, -586) and ('uni0648.fina', 435, -586)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⏩⏩⏩</span>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ Jomhuria-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̋ i̓ j̀ j́ j̃ j̄ j̈ į̀ į́ į̂ į̃ į̄ į̌</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̅ i̇ ỉ ȉ i̒ i̤̅ i̤̇ ỉ̤ i̤̊ i̤̋ ȉ̤ i̤̒ i̤̓ i̥̅ i̥̇ ỉ̥ i̥̊ i̥̋ ȉ̥ i̥̒</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Aghem (Latn, 38,843 speakers), Lithuanian (Latn, 2,357,094 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Navajo (Latn, 166,319 speakers), Dutch (Latn, 31,709,104 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

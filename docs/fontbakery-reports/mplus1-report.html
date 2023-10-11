@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>4</td>
+                <td>21</td>
+                <td>40</td>
+                <td>8</td>
+                <td>167</td>
+            </tr>
+            <tr>
+                <td>1%</td>
+                <td>2%</td>
+                <td>12%</td>
+                <td>22%</td>
+                <td>4%</td>
+                <td>93%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>URLs on DESCRIPTION file must not display http(s) prefix.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/urls&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please remove the &quot;http(s)://&quot; prefix from the link text &quot;https://github.com/coz-m/MPLUS_FONTS&quot; [code: prefix-found]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: cherokee, tai-le, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: cherokee, tifinagh, tai-le, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, tifinagh, coptic</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: gothic, cherokee, tifinagh, coptic</li>
+<li>U+0305 COMBINING OVERLINE: try adding one of: gothic, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, tifinagh, canadian-aboriginal, tai-le, coptic</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: gothic, tai-le, coptic</li>
+<li>U+0309 COMBINING HOOK ABOVE: try adding tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0323 COMBINING DOT BELOW: try adding one of: malayalam, cherokee, tifinagh, coptic</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032E COMBINING BREVE BELOW: not included in any glyphset definition</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: gothic, cherokee, tifinagh</li>
+<li>U+2015 HORIZONTAL BAR: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25A0 BLACK SQUARE: not included in any glyphset definition</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+2E85 CJK RADICAL PERSON: not included in any glyphset definition</li>
+<li>U+2E89 CJK RADICAL KNIFE TWO: not included in any glyphset definition</li>
+<li>U+2E8C CJK RADICAL SMALL ONE: not included in any glyphset definition</li>
+<li>U+2E8D CJK RADICAL SMALL TWO: not included in any glyphset definition</li>
+<li>U+2E8E CJK RADICAL LAME ONE: not included in any glyphset definition</li>
+<li>U+2E90 CJK RADICAL LAME THREE: not included in any glyphset definition</li>
+<li>U+2E92 CJK RADICAL SNAKE: not included in any glyphset definition</li>
+<li>U+2E93 CJK RADICAL THREAD: not included in any glyphset definition</li>
+<li>U+2E94 CJK RADICAL SNOUT ONE: not included in any glyphset definition</li>
+<li>U+2E96 CJK RADICAL HEART ONE: not included in any glyphset definition</li>
+<li>U+2E98 CJK RADICAL HAND: not included in any glyphset definition</li>
+<li>U+2E99 CJK RADICAL RAP: not included in any glyphset definition</li>
+<li>U+2E9F CJK RADICAL MOTHER: not included in any glyphset definition</li>
+<li>U+2EA0 CJK RADICAL CIVILIAN: not included in any glyphset definition</li>
+<li>U+2EA1 CJK RADICAL WATER ONE: not included in any glyphset definition</li>
+<li>U+2EA2 CJK RADICAL WATER TWO: not included in any glyphset definition</li>
+<li>U+2EA3 CJK RADICAL FIRE: not included in any glyphset definition</li>
+<li>U+2EA8 CJK RADICAL DOG: not included in any glyphset definition</li>
+<li>U+2EAB CJK RADICAL EYE: not included in any glyphset definition</li>
+<li>U+2EAD CJK RADICAL SPIRIT TWO: not included in any glyphset definition</li>
+<li>U+2EAE CJK RADICAL BAMBOO: not included in any glyphset definition</li>
+<li>U+2EB2 CJK RADICAL NET TWO: not included in any glyphset definition</li>
+<li>U+2EB9 CJK RADICAL OLD: not included in any glyphset definition</li>
+<li>U+2EBC CJK RADICAL MEAT: not included in any glyphset definition</li>
+<li>U+2EBE CJK RADICAL GRASS ONE: not included in any glyphset definition</li>
+<li>U+2EC2 CJK RADICAL CLOTHES: not included in any glyphset definition</li>
+<li>U+2EC3 CJK RADICAL WEST ONE: not included in any glyphset definition</li>
+<li>U+2EC4 CJK RADICAL WEST TWO: not included in any glyphset definition</li>
+<li>U+2ECA CJK RADICAL FOOT: not included in any glyphset definition</li>
+<li>U+2ECC CJK RADICAL SIMPLIFIED WALK: not included in any glyphset definition</li>
+<li>U+2ECD CJK RADICAL WALK ONE: not included in any glyphset definition</li>
+<li>U+2ED1 CJK RADICAL LONG ONE: not included in any glyphset definition</li>
+<li>U+2ED7 CJK RADICAL RAIN: not included in any glyphset definition</li>
+<li>U+2ED8 CJK RADICAL BLUE: not included in any glyphset definition</li>
+<li>U+2EDF CJK RADICAL EAT THREE: not included in any glyphset definition</li>
+<li>U+2EE8 CJK RADICAL SIMPLIFIED WHEAT: not included in any glyphset definition</li>
+<li>U+2EE9 CJK RADICAL SIMPLIFIED YELLOW: not included in any glyphset definition</li>
+<li>U+2EEB CJK RADICAL J-SIMPLIFIED EVEN: not included in any glyphset definition</li>
+<li>U+2EED CJK RADICAL J-SIMPLIFIED TOOTH: not included in any glyphset definition</li>
+<li>U+2EEF CJK RADICAL J-SIMPLIFIED DRAGON: not included in any glyphset definition</li>
+<li>U+2EF2 CJK RADICAL J-SIMPLIFIED TURTLE: not included in any glyphset definition</li>
+<li>U+2F00 KANGXI RADICAL ONE: not included in any glyphset definition</li>
+<li>U+2F01 KANGXI RADICAL LINE: not included in any glyphset definition</li>
+<li>U+2F02 KANGXI RADICAL DOT: not included in any glyphset definition</li>
+<li>U+2F03 KANGXI RADICAL SLASH: not included in any glyphset definition</li>
+<li>U+2F04 KANGXI RADICAL SECOND: not included in any glyphset definition</li>
+<li>U+2F05 KANGXI RADICAL HOOK: not included in any glyphset definition</li>
+<li>U+2F06 KANGXI RADICAL TWO: not included in any glyphset definition</li>
+<li>U+2F07 KANGXI RADICAL LID: not included in any glyphset definition</li>
+<li>U+2F08 KANGXI RADICAL MAN: not included in any glyphset definition</li>
+<li>U+2F09 KANGXI RADICAL LEGS: not included in any glyphset definition</li>
+<li>U+2F0A KANGXI RADICAL ENTER: not included in any glyphset definition</li>
+<li>U+2F0B KANGXI RADICAL EIGHT: not included in any glyphset definition</li>
+<li>U+2F0C KANGXI RADICAL DOWN BOX: not included in any glyphset definition</li>
+<li>U+2F0D KANGXI RADICAL COVER: not included in any glyphset definition</li>
+<li>U+2F0E KANGXI RADICAL ICE: not included in any glyphset definition</li>
+<li>U+2F0F KANGXI RADICAL TABLE: not included in any glyphset definition</li>
+<li>U+2F10 KANGXI RADICAL OPEN BOX: not included in any glyphset definition</li>
+<li>U+2F11 KANGXI RADICAL KNIFE: not included in any glyphset definition</li>
+<li>U+2F12 KANGXI RADICAL POWER: not included in any glyphset definition</li>
+<li>U+2F13 KANGXI RADICAL WRAP: not included in any glyphset definition</li>
+<li>U+2F14 KANGXI RADICAL SPOON: not included in any glyphset definition</li>
+<li>U+2F15 KANGXI RADICAL RIGHT OPEN BOX: not included in any glyphset definition</li>
+<li>U+2F16 KANGXI RADICAL HIDING ENCLOSURE: not included in any glyphset definition</li>
+<li>U+2F17 KANGXI RADICAL TEN: not included in any glyphset definition</li>
+<li>U+2F18 KANGXI RADICAL DIVINATION: not included in any glyphset definition</li>
+<li>U+2F19 KANGXI RADICAL SEAL: not included in any glyphset definition</li>
+<li>U+2F1A KANGXI RADICAL CLIFF: not included in any glyphset definition</li>
+<li>U+2F1B KANGXI RADICAL PRIVATE: not included in any glyphset definition</li>
+<li>U+2F1C KANGXI RADICAL AGAIN: not included in any glyphset definition</li>
+<li>U+2F1D KANGXI RADICAL MOUTH: not included in any glyphset definition</li>
+<li>U+2F1E KANGXI RADICAL ENCLOSURE: not included in any glyphset definition</li>
+<li>U+2F1F KANGXI RADICAL EARTH: not included in any glyphset definition</li>
+<li>U+2F20 KANGXI RADICAL SCHOLAR: not included in any glyphset definition</li>
+<li>U+2F21 KANGXI RADICAL GO: not included in any glyphset definition</li>
+<li>U+2F22 KANGXI RADICAL GO SLOWLY: not included in any glyphset definition</li>
+<li>U+2F23 KANGXI RADICAL EVENING: not included in any glyphset definition</li>
+<li>U+2F24 KANGXI RADICAL BIG: not included in any glyphset definition</li>
+<li>U+2F25 KANGXI RADICAL WOMAN: not included in any glyphset definition</li>
+<li>U+2F26 KANGXI RADICAL CHILD: not included in any glyphset definition</li>
+<li>U+2F27 KANGXI RADICAL ROOF: not included in any glyphset definition</li>
+<li>U+2F28 KANGXI RADICAL INCH: not included in any glyphset definition</li>
+<li>U+2F29 KANGXI RADICAL SMALL: not included in any glyphset definition</li>
+<li>U+2F2A KANGXI RADICAL LAME: not included in any glyphset definition</li>
+<li>U+2F2B KANGXI RADICAL CORPSE: not included in any glyphset definition</li>
+<li>U+2F2C KANGXI RADICAL SPROUT: not included in any glyphset definition</li>
+<li>U+2F2D KANGXI RADICAL MOUNTAIN: not included in any glyphset definition</li>
+<li>U+2F2E KANGXI RADICAL RIVER: not included in any glyphset definition</li>
+<li>U+2F2F KANGXI RADICAL WORK: not included in any glyphset definition</li>
+<li>U+2F30 KANGXI RADICAL ONESELF: not included in any glyphset definition</li>
+<li>U+2F31 KANGXI RADICAL TURBAN: not included in any glyphset definition</li>
+<li>U+2F32 KANGXI RADICAL DRY: not included in any glyphset definition</li>
+<li>U+2F33 KANGXI RADICAL SHORT THREAD: not included in any glyphset definition</li>
+<li>U+2F34 KANGXI RADICAL DOTTED CLIFF: not included in any glyphset definition</li>
+<li>U+2F35 KANGXI RADICAL LONG STRIDE: not included in any glyphset definition</li>
+<li>U+2F36 KANGXI RADICAL TWO HANDS: not included in any glyphset definition</li>
+<li>U+2F37 KANGXI RADICAL SHOOT: not included in any glyphset definition</li>
+<li>U+2F38 KANGXI RADICAL BOW: not included in any glyphset definition</li>
+<li>U+2F3A KANGXI RADICAL BRISTLE: not included in any glyphset definition</li>
+<li>U+2F3B KANGXI RADICAL STEP: not included in any glyphset definition</li>
+<li>U+2F3C KANGXI RADICAL HEART: not included in any glyphset definition</li>
+<li>U+2F3D KANGXI RADICAL HALBERD: not included in any glyphset definition</li>
+<li>U+2F3E KANGXI RADICAL DOOR: not included in any glyphset definition</li>
+<li>U+2F3F KANGXI RADICAL HAND: not included in any glyphset definition</li>
+<li>U+2F40 KANGXI RADICAL BRANCH: not included in any glyphset definition</li>
+<li>U+2F41 KANGXI RADICAL RAP: not included in any glyphset definition</li>
+<li>U+2F42 KANGXI RADICAL SCRIPT: not included in any glyphset definition</li>
+<li>U+2F43 KANGXI RADICAL DIPPER: not included in any glyphset definition</li>
+<li>U+2F44 KANGXI RADICAL AXE: not included in any glyphset definition</li>
+<li>U+2F45 KANGXI RADICAL SQUARE: not included in any glyphset definition</li>
+<li>U+2F46 KANGXI RADICAL NOT: not included in any glyphset definition</li>
+<li>U+2F47 KANGXI RADICAL SUN: not included in any glyphset definition</li>
+<li>U+2F48 KANGXI RADICAL SAY: not included in any glyphset definition</li>
+<li>U+2F49 KANGXI RADICAL MOON: not included in any glyphset definition</li>
+<li>U+2F4A KANGXI RADICAL TREE: not included in any glyphset definition</li>
+<li>U+2F4B KANGXI RADICAL LACK: not included in any glyphset definition</li>
+<li>U+2F4C KANGXI RADICAL STOP: not included in any glyphset definition</li>
+<li>U+2F4D KANGXI RADICAL DEATH: not included in any glyphset definition</li>
+<li>U+2F4E KANGXI RADICAL WEAPON: not included in any glyphset definition</li>
+<li>U+2F4F KANGXI RADICAL DO NOT: not included in any glyphset definition</li>
+<li>U+2F50 KANGXI RADICAL COMPARE: not included in any glyphset definition</li>
+<li>U+2F51 KANGXI RADICAL FUR: not included in any glyphset definition</li>
+<li>U+2F52 KANGXI RADICAL CLAN: not included in any glyphset definition</li>
+<li>U+2F53 KANGXI RADICAL STEAM: not included in any glyphset definition</li>
+<li>U+2F54 KANGXI RADICAL WATER: not included in any glyphset definition</li>
+<li>U+2F55 KANGXI RADICAL FIRE: not included in any glyphset definition</li>
+<li>U+2F56 KANGXI RADICAL CLAW: not included in any glyphset definition</li>
+<li>U+2F57 KANGXI RADICAL FATHER: not included in any glyphset definition</li>
+<li>U+2F58 KANGXI RADICAL DOUBLE X: not included in any glyphset definition</li>
+<li>U+2F59 KANGXI RADICAL HALF TREE TRUNK: not included in any glyphset definition</li>
+<li>U+2F5A KANGXI RADICAL SLICE: not included in any glyphset definition</li>
+<li>U+2F5B KANGXI RADICAL FANG: not included in any glyphset definition</li>
+<li>U+2F5C KANGXI RADICAL COW: not included in any glyphset definition</li>
+<li>U+2F5D KANGXI RADICAL DOG: not included in any glyphset definition</li>
+<li>U+2F5E KANGXI RADICAL PROFOUND: not included in any glyphset definition</li>
+<li>U+2F5F KANGXI RADICAL JADE: not included in any glyphset definition</li>
+<li>U+2F60 KANGXI RADICAL MELON: not included in any glyphset definition</li>
+<li>U+2F61 KANGXI RADICAL TILE: not included in any glyphset definition</li>
+<li>U+2F62 KANGXI RADICAL SWEET: not included in any glyphset definition</li>
+<li>U+2F63 KANGXI RADICAL LIFE: not included in any glyphset definition</li>
+<li>U+2F64 KANGXI RADICAL USE: not included in any glyphset definition</li>
+<li>U+2F65 KANGXI RADICAL FIELD: not included in any glyphset definition</li>
+<li>U+2F66 KANGXI RADICAL BOLT OF CLOTH: not included in any glyphset definition</li>
+<li>U+2F67 KANGXI RADICAL SICKNESS: not included in any glyphset definition</li>
+<li>U+2F68 KANGXI RADICAL DOTTED TENT: not included in any glyphset definition</li>
+<li>U+2F69 KANGXI RADICAL WHITE: not included in any glyphset definition</li>
+<li>U+2F6A KANGXI RADICAL SKIN: not included in any glyphset definition</li>
+<li>U+2F6B KANGXI RADICAL DISH: not included in any glyphset definition</li>
+<li>U+2F6C KANGXI RADICAL EYE: not included in any glyphset definition</li>
+<li>U+2F6D KANGXI RADICAL SPEAR: not included in any glyphset definition</li>
+<li>U+2F6E KANGXI RADICAL ARROW: not included in any glyphset definition</li>
+<li>U+2F6F KANGXI RADICAL STONE: not included in any glyphset definition</li>
+<li>U+2F70 KANGXI RADICAL SPIRIT: not included in any glyphset definition</li>
+<li>U+2F71 KANGXI RADICAL TRACK: not included in any glyphset definition</li>
+<li>U+2F72 KANGXI RADICAL GRAIN: not included in any glyphset definition</li>
+<li>U+2F73 KANGXI RADICAL CAVE: not included in any glyphset definition</li>
+<li>U+2F74 KANGXI RADICAL STAND: not included in any glyphset definition</li>
+<li>U+2F75 KANGXI RADICAL BAMBOO: not included in any glyphset definition</li>
+<li>U+2F76 KANGXI RADICAL RICE: not included in any glyphset definition</li>
+<li>U+2F77 KANGXI RADICAL SILK: not included in any glyphset definition</li>
+<li>U+2F78 KANGXI RADICAL JAR: not included in any glyphset definition</li>
+<li>U+2F79 KANGXI RADICAL NET: not included in any glyphset definition</li>
+<li>U+2F7A KANGXI RADICAL SHEEP: not included in any glyphset definition</li>
+<li>U+2F7B KANGXI RADICAL FEATHER: not included in any glyphset definition</li>
+<li>U+2F7C KANGXI RADICAL OLD: not included in any glyphset definition</li>
+<li>U+2F7D KANGXI RADICAL AND: not included in any glyphset definition</li>
+<li>U+2F7E KANGXI RADICAL PLOW: not included in any glyphset definition</li>
+<li>U+2F7F KANGXI RADICAL EAR: not included in any glyphset definition</li>
+<li>U+2F80 KANGXI RADICAL BRUSH: not included in any glyphset definition</li>
+<li>U+2F81 KANGXI RADICAL MEAT: not included in any glyphset definition</li>
+<li>U+2F82 KANGXI RADICAL MINISTER: not included in any glyphset definition</li>
+<li>U+2F83 KANGXI RADICAL SELF: not included in any glyphset definition</li>
+<li>U+2F84 KANGXI RADICAL ARRIVE: not included in any glyphset definition</li>
+<li>U+2F85 KANGXI RADICAL MORTAR: not included in any glyphset definition</li>
+<li>U+2F86 KANGXI RADICAL TONGUE: not included in any glyphset definition</li>
+<li>U+2F87 KANGXI RADICAL OPPOSE: not included in any glyphset definition</li>
+<li>U+2F88 KANGXI RADICAL BOAT: not included in any glyphset definition</li>
+<li>U+2F89 KANGXI RADICAL STOPPING: not included in any glyphset definition</li>
+<li>U+2F8A KANGXI RADICAL COLOR: not included in any glyphset definition</li>
+<li>U+2F8B KANGXI RADICAL GRASS: not included in any glyphset definition</li>
+<li>U+2F8C KANGXI RADICAL TIGER: not included in any glyphset definition</li>
+<li>U+2F8D KANGXI RADICAL INSECT: not included in any glyphset definition</li>
+<li>U+2F8E KANGXI RADICAL BLOOD: not included in any glyphset definition</li>
+<li>U+2F8F KANGXI RADICAL WALK ENCLOSURE: not included in any glyphset definition</li>
+<li>U+2F90 KANGXI RADICAL CLOTHES: not included in any glyphset definition</li>
+<li>U+2F91 KANGXI RADICAL WEST: not included in any glyphset definition</li>
+<li>U+2F92 KANGXI RADICAL SEE: not included in any glyphset definition</li>
+<li>U+2F93 KANGXI RADICAL HORN: not included in any glyphset definition</li>
+<li>U+2F94 KANGXI RADICAL SPEECH: not included in any glyphset definition</li>
+<li>U+2F95 KANGXI RADICAL VALLEY: not included in any glyphset definition</li>
+<li>U+2F96 KANGXI RADICAL BEAN: not included in any glyphset definition</li>
+<li>U+2F97 KANGXI RADICAL PIG: not included in any glyphset definition</li>
+<li>U+2F98 KANGXI RADICAL BADGER: not included in any glyphset definition</li>
+<li>U+2F99 KANGXI RADICAL SHELL: not included in any glyphset definition</li>
+<li>U+2F9A KANGXI RADICAL RED: not included in any glyphset definition</li>
+<li>U+2F9B KANGXI RADICAL RUN: not included in any glyphset definition</li>
+<li>U+2F9C KANGXI RADICAL FOOT: not included in any glyphset definition</li>
+<li>U+2F9D KANGXI RADICAL BODY: not included in any glyphset definition</li>
+<li>U+2F9E KANGXI RADICAL CART: not included in any glyphset definition</li>
+<li>U+2F9F KANGXI RADICAL BITTER: not included in any glyphset definition</li>
+<li>U+2FA0 KANGXI RADICAL MORNING: not included in any glyphset definition</li>
+<li>U+2FA1 KANGXI RADICAL WALK: not included in any glyphset definition</li>
+<li>U+2FA2 KANGXI RADICAL CITY: not included in any glyphset definition</li>
+<li>U+2FA3 KANGXI RADICAL WINE: not included in any glyphset definition</li>
+<li>U+2FA4 KANGXI RADICAL DISTINGUISH: not included in any glyphset definition</li>
+<li>U+2FA5 KANGXI RADICAL VILLAGE: not included in any glyphset definition</li>
+<li>U+2FA6 KANGXI RADICAL GOLD: not included in any glyphset definition</li>
+<li>U+2FA7 KANGXI RADICAL LONG: not included in any glyphset definition</li>
+<li>U+2FA8 KANGXI RADICAL GATE: not included in any glyphset definition</li>
+<li>U+2FA9 KANGXI RADICAL MOUND: not included in any glyphset definition</li>
+<li>U+2FAA KANGXI RADICAL SLAVE: not included in any glyphset definition</li>
+<li>U+2FAB KANGXI RADICAL SHORT TAILED BIRD: not included in any glyphset definition</li>
+<li>U+2FAC KANGXI RADICAL RAIN: not included in any glyphset definition</li>
+<li>U+2FAE KANGXI RADICAL WRONG: not included in any glyphset definition</li>
+<li>U+2FAF KANGXI RADICAL FACE: not included in any glyphset definition</li>
+<li>U+2FB0 KANGXI RADICAL LEATHER: not included in any glyphset definition</li>
+<li>U+2FB1 KANGXI RADICAL TANNED LEATHER: not included in any glyphset definition</li>
+<li>U+2FB2 KANGXI RADICAL LEEK: not included in any glyphset definition</li>
+<li>U+2FB3 KANGXI RADICAL SOUND: not included in any glyphset definition</li>
+<li>U+2FB4 KANGXI RADICAL LEAF: not included in any glyphset definition</li>
+<li>U+2FB5 KANGXI RADICAL WIND: not included in any glyphset definition</li>
+<li>U+2FB6 KANGXI RADICAL FLY: not included in any glyphset definition</li>
+<li>U+2FB7 KANGXI RADICAL EAT: not included in any glyphset definition</li>
+<li>U+2FB8 KANGXI RADICAL HEAD: not included in any glyphset definition</li>
+<li>U+2FB9 KANGXI RADICAL FRAGRANT: not included in any glyphset definition</li>
+<li>U+2FBA KANGXI RADICAL HORSE: not included in any glyphset definition</li>
+<li>U+2FBB KANGXI RADICAL BONE: not included in any glyphset definition</li>
+<li>U+2FBC KANGXI RADICAL TALL: not included in any glyphset definition</li>
+<li>U+2FBD KANGXI RADICAL HAIR: not included in any glyphset definition</li>
+<li>U+2FBE KANGXI RADICAL FIGHT: not included in any glyphset definition</li>
+<li>U+2FBF KANGXI RADICAL SACRIFICIAL WINE: not included in any glyphset definition</li>
+<li>U+2FC0 KANGXI RADICAL CAULDRON: not included in any glyphset definition</li>
+<li>U+2FC1 KANGXI RADICAL GHOST: not included in any glyphset definition</li>
+<li>U+2FC2 KANGXI RADICAL FISH: not included in any glyphset definition</li>
+<li>U+2FC3 KANGXI RADICAL BIRD: not included in any glyphset definition</li>
+<li>U+2FC4 KANGXI RADICAL SALT: not included in any glyphset definition</li>
+<li>U+2FC5 KANGXI RADICAL DEER: not included in any glyphset definition</li>
+<li>U+2FC6 KANGXI RADICAL WHEAT: not included in any glyphset definition</li>
+<li>U+2FC7 KANGXI RADICAL HEMP: not included in any glyphset definition</li>
+<li>U+2FC9 KANGXI RADICAL MILLET: not included in any glyphset definition</li>
+<li>U+2FCA KANGXI RADICAL BLACK: not included in any glyphset definition</li>
+<li>U+2FCB KANGXI RADICAL EMBROIDERY: not included in any glyphset definition</li>
+<li>U+2FCC KANGXI RADICAL FROG: not included in any glyphset definition</li>
+<li>U+2FCD KANGXI RADICAL TRIPOD: not included in any glyphset definition</li>
+<li>U+2FCE KANGXI RADICAL DRUM: not included in any glyphset definition</li>
+<li>U+2FCF KANGXI RADICAL RAT: not included in any glyphset definition</li>
+<li>U+2FD0 KANGXI RADICAL NOSE: not included in any glyphset definition</li>
+<li>U+2FD1 KANGXI RADICAL EVEN: not included in any glyphset definition</li>
+<li>U+2FD2 KANGXI RADICAL TOOTH: not included in any glyphset definition</li>
+<li>U+2FD3 KANGXI RADICAL DRAGON: not included in any glyphset definition</li>
+<li>U+2FD4 KANGXI RADICAL TURTLE: not included in any glyphset definition</li>
+<li>U+2FD5 KANGXI RADICAL FLUTE: not included in any glyphset definition</li>
+<li>U+303B VERTICAL IDEOGRAPHIC ITERATION MARK: not included in any glyphset definition</li>
+<li>U+3094 HIRAGANA LETTER VU: not included in any glyphset definition</li>
+<li>U+3099 COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+309A COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+30F7 KATAKANA LETTER VA: not included in any glyphset definition</li>
+<li>U+30F8 KATAKANA LETTER VI: not included in any glyphset definition</li>
+<li>U+30F9 KATAKANA LETTER VE: not included in any glyphset definition</li>
+<li>U+30FA KATAKANA LETTER VO: not included in any glyphset definition</li>
+<li>U+3231 PARENTHESIZED IDEOGRAPH STOCK: not included in any glyphset definition</li>
+<li>U+3232 PARENTHESIZED IDEOGRAPH HAVE: not included in any glyphset definition</li>
+<li>U+471F CJK UNIFIED IDEOGRAPH-471F: not included in any glyphset definition</li>
+<li>U+4E28 CJK UNIFIED IDEOGRAPH-4E28: try adding chinese-simplified</li>
+<li>U+4E44 CJK UNIFIED IDEOGRAPH-4E44: try adding chinese-simplified</li>
+<li>U+4E6D CJK UNIFIED IDEOGRAPH-4E6D: not included in any glyphset definition</li>
+<li>U+4EBB CJK UNIFIED IDEOGRAPH-4EBB: try adding chinese-simplified</li>
+<li>U+4FF1 CJK UNIFIED IDEOGRAPH-4FF1: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+5202 CJK UNIFIED IDEOGRAPH-5202: try adding chinese-simplified</li>
+<li>U+525D CJK UNIFIED IDEOGRAPH-525D: try adding chinese-traditional</li>
+<li>U+5350 CJK UNIFIED IDEOGRAPH-5350: try adding chinese-simplified</li>
+<li>U+541E CJK UNIFIED IDEOGRAPH-541E: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+555E CJK UNIFIED IDEOGRAPH-555E: try adding chinese-traditional</li>
+<li>U+5653 CJK UNIFIED IDEOGRAPH-5653: try adding chinese-traditional</li>
+<li>U+5861 CJK UNIFIED IDEOGRAPH-5861: not included in any glyphset definition</li>
+<li>U+59F8 CJK UNIFIED IDEOGRAPH-59F8: not included in any glyphset definition</li>
+<li>U+5C5B CJK UNIFIED IDEOGRAPH-5C5B: not included in any glyphset definition</li>
+<li>U+5C62 CJK UNIFIED IDEOGRAPH-5C62: try adding chinese-traditional</li>
+<li>U+5CBA CJK UNIFIED IDEOGRAPH-5CBA: not included in any glyphset definition</li>
+<li>U+5E77 CJK UNIFIED IDEOGRAPH-5E77: not included in any glyphset definition</li>
+<li>U+5FB7 CJK UNIFIED IDEOGRAPH-5FB7: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+5FC4 CJK UNIFIED IDEOGRAPH-5FC4: try adding chinese-simplified</li>
+<li>U+624C CJK UNIFIED IDEOGRAPH-624C: try adding chinese-simplified</li>
+<li>U+67F0 CJK UNIFIED IDEOGRAPH-67F0: try adding chinese-simplified</li>
+<li>U+6C35 CJK UNIFIED IDEOGRAPH-6C35: try adding chinese-simplified</li>
+<li>U+6C3A CJK UNIFIED IDEOGRAPH-6C3A: try adding chinese-simplified</li>
+<li>U+6CAA CJK UNIFIED IDEOGRAPH-6CAA: try adding chinese-simplified</li>
+<li>U+6CEE CJK UNIFIED IDEOGRAPH-6CEE: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+6E5C CJK UNIFIED IDEOGRAPH-6E5C: not included in any glyphset definition</li>
+<li>U+7006 CJK UNIFIED IDEOGRAPH-7006: try adding chinese-traditional</li>
+<li>U+706C CJK UNIFIED IDEOGRAPH-706C: try adding chinese-simplified</li>
+<li>U+71C1 CJK UNIFIED IDEOGRAPH-71C1: try adding chinese-traditional</li>
+<li>U+7200 CJK UNIFIED IDEOGRAPH-7200: not included in any glyphset definition</li>
+<li>U+72AD CJK UNIFIED IDEOGRAPH-72AD: not included in any glyphset definition</li>
+<li>U+739F CJK UNIFIED IDEOGRAPH-739F: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+73C9 CJK UNIFIED IDEOGRAPH-73C9: try adding chinese-simplified</li>
+<li>U+7487 CJK UNIFIED IDEOGRAPH-7487: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+74A8 CJK UNIFIED IDEOGRAPH-74A8: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+74DA CJK UNIFIED IDEOGRAPH-74DA: try adding chinese-traditional</li>
+<li>U+7592 CJK UNIFIED IDEOGRAPH-7592: not included in any glyphset definition</li>
+<li>U+7626 CJK UNIFIED IDEOGRAPH-7626: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+793B CJK UNIFIED IDEOGRAPH-793B: not included in any glyphset definition</li>
+<li>U+79B8 CJK UNIFIED IDEOGRAPH-79B8: not included in any glyphset definition</li>
+<li>U+79ED CJK UNIFIED IDEOGRAPH-79ED: try adding chinese-simplified</li>
+<li>U+7E6B CJK UNIFIED IDEOGRAPH-7E6B: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+7F52 CJK UNIFIED IDEOGRAPH-7F52: try adding chinese-simplified</li>
+<li>U+8002 CJK UNIFIED IDEOGRAPH-8002: not included in any glyphset definition</li>
+<li>U+8279 CJK UNIFIED IDEOGRAPH-8279: try adding chinese-simplified</li>
+<li>U+8864 CJK UNIFIED IDEOGRAPH-8864: not included in any glyphset definition</li>
+<li>U+8980 CJK UNIFIED IDEOGRAPH-8980: not included in any glyphset definition</li>
+<li>U+8A01 CJK UNIFIED IDEOGRAPH-8A01: not included in any glyphset definition</li>
+<li>U+8FB5 CJK UNIFIED IDEOGRAPH-8FB5: not included in any glyphset definition</li>
+<li>U+8FB6 CJK UNIFIED IDEOGRAPH-8FB6: not included in any glyphset definition</li>
+<li>U+9099 CJK UNIFIED IDEOGRAPH-9099: try adding chinese-simplified</li>
+<li>U+961D CJK UNIFIED IDEOGRAPH-961D: not included in any glyphset definition</li>
+<li>U+9830 CJK UNIFIED IDEOGRAPH-9830: try adding chinese-traditional</li>
+<li>U+98E0 CJK UNIFIED IDEOGRAPH-98E0: not included in any glyphset definition</li>
+<li>U+9AD9 CJK UNIFIED IDEOGRAPH-9AD9: try adding chinese-simplified</li>
+<li>U+9B87 CJK UNIFIED IDEOGRAPH-9B87: not included in any glyphset definition</li>
+<li>U+9EB5 CJK UNIFIED IDEOGRAPH-9EB5: try adding one of: chinese-simplified, chinese-traditional</li>
+<li>U+FA11 CJK COMPATIBILITY IDEOGRAPH-FA11: not included in any glyphset definition</li>
+<li>U+FA66 CJK COMPATIBILITY IDEOGRAPH-FA66: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FE11 PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC COMMA: not included in any glyphset definition</li>
+<li>U+FE12 PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC FULL STOP: not included in any glyphset definition</li>
+<li>U+FE35 PRESENTATION FORM FOR VERTICAL LEFT PARENTHESIS: try adding chinese-simplified</li>
+<li>U+FE36 PRESENTATION FORM FOR VERTICAL RIGHT PARENTHESIS: try adding chinese-simplified</li>
+<li>U+FE3F PRESENTATION FORM FOR VERTICAL LEFT ANGLE BRACKET: try adding chinese-simplified</li>
+<li>U+FE40 PRESENTATION FORM FOR VERTICAL RIGHT ANGLE BRACKET: try adding chinese-simplified</li>
+<li>U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE42 PRESENTATION FORM FOR VERTICAL RIGHT CORNER BRACKET: try adding mongolian</li>
+<li>U+FE43 PRESENTATION FORM FOR VERTICAL LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE44 PRESENTATION FORM FOR VERTICAL RIGHT WHITE CORNER BRACKET: try adding mongolian</li>
+<li>U+201A2 CJK UNIFIED IDEOGRAPH-201A2: not included in any glyphset definition</li>
+<li>U+20B9F CJK UNIFIED IDEOGRAPH-20B9F: not included in any glyphset definition</li>
+<li>U+20BB7 CJK UNIFIED IDEOGRAPH-20BB7: not included in any glyphset definition</li>
+<li>U+25771 CJK UNIFIED IDEOGRAPH-25771: not included in any glyphset definition</li>
+<li>U+2634C CJK UNIFIED IDEOGRAPH-2634C: not included in any glyphset definition</li>
+<li>U+26ED9 CJK UNIFIED IDEOGRAPH-26ED9: not included in any glyphset definition</li>
+<li>U+27FB7 CJK UNIFIED IDEOGRAPH-27FB7: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>japanese</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 3.9Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The gasp range 0xFFFF value 0x0A should be set to 0x0F. [code: unset-flags]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_name_values&gt;</div>
+
+<details><summary>🔥 MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.name field (&quot;M PLUS 1&quot;) does not match correct font name format (&quot;M PLUS 1 Thin&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+
+<details><summary>🔥 MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: https://github.com/coz-m/MPLUS_FONTS
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check for primary_script</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: primary_script field should be 'Hani' but is missing.
+Make sure that 'Hani' is actually the correct one (out of Jpan, Hani, Hant, Hans). [code: missing-primary-script]</p>
+</span></li></ul></div></details>
+<h3>Font enables smart dropout control in "prep" table instructions?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
+
+<details><summary>🔥 MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<h3>Are there caret positions declared for every ligature?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f
+
+- i + l
+
+- m + p
+
+- p + l
+
+- l + u
+
+- u + s
+
+- s + f
+
+- f + o
+
+- o + n
+
+- n + t
+
+- t + s [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>It seems that Coji Morishita is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry. [code: profile-not-found]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>💥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- _leftarc
+
+- _voicedcombkana_flat
+
+- _voicedcombkana_flat_slim
+
+- _voicedcombkana_flat_slim_short
+
+- uni030C.alt
+
+- uni53C9.fude
+
+- uni53FA.001
+
+- uni54AC.fude
+
+- uni5EFB.fude
+
+- uni633A.fude
+
+- uni65A7.fude
+
+- uni6756.fude
+
+- uni6897.fude
+
+- uni723A.fude
+
+- uni72E1.fude
+
+- uni7526.fude
+
+- uni91DC.fude
+
+- uni9375.fude
+
+- uni9771.fude
+
+- uni97AD.fude
+
+- uni99C1.fude
+
+- uni9BAB.fude
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain chws and vchw features?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
+</span></li></ul></div></details>
+<h3>Detect any interpolation issues in the font.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 1 start point differs in glyph 'uni66C7' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fd60&gt;</p>
+<pre><code>- Contour 1 start point differs in glyph 'uni66C7' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 9 start point differs in glyph 'uni727D' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 5 start point differs in glyph 'uni84D1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 8 start point differs in glyph 'uni8972' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 7 start point differs in glyph 'uni56A2' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fd60&gt;
+
+- Contour 7 start point differs in glyph 'uni56A2' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 1 start point differs in glyph 'uni96F2' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 7 start point differs in glyph 'uni88FD' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 1 start point differs in glyph 'uni85DD' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fd60&gt;
+
+- Contour 1 start point differs in glyph 'uni85DD' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 5 start point differs in glyph 'uni88CF' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 8 start point differs in glyph 'uni88D4' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 8 start point differs in glyph 'uni6A58' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 1 start point differs in glyph 'uni5C62' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 6 start point differs in glyph 'uni8944' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 9 start point differs in glyph 'uni5C61' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fd60&gt;
+
+- Contour 9 start point differs in glyph 'uni5C61' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 11 start point differs in glyph 'uni7E6D' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fd60&gt;
+
+- Contour 11 start point differs in glyph 'uni7E6D' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 2 start point differs in glyph 'uni58DC' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 8 start point differs in glyph 'uni895E' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 1 start point differs in glyph 'uni5957' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt;
+
+- Contour 1 start point differs in glyph 'uni56C8' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x108d24070&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x118c1fdc0&gt; [code: interpolation-issues]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 712 among a set of 3 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 756:
+less, greater</p>
+<p>Width = 822:
+notequal, equal, plusminus</p>
+<p>Width = 747:
+lessequal, greaterequal, logicalnot</p>
+<p>Width = 575:
+multiply</p>
+<p>Width = 754:
+approxequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h3>Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+
+<details><summary>💥 MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>💥 ERROR</span><span class='details_text'><p>Failed with TypeError: cannot unpack non-iterable float object</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️⚠️⚠️</span>
+<h3>Check glyphs in mark glyph class are non-spacing.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+periodcentered (U+00B7) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0305 (U+0305), uni030B (U+030B), uni0324 (U+0324), uni032E (U+032E), uni0331 (U+0331), uni3099 (U+3099) and uni309A (U+309A) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h3>Check GDEF mark glyph class doesn't have characters that are not marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+00B7 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⚠️⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ MPLUS1[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ ị̀ ị́ ị̂ ị̃ ị̄</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̅ i̛̅ i̤̅ i̦̅ i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ i̧̅ i̮̅ i̱̅ j̅ j̛̅ j̣̅ j̤̅ j̦̀ j̦́ j̦̃ j̦̄</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Lithuanian (Latn, 2,357,094 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Belarusian (Cyrl, 10,064,517 speakers), Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>5</td>
+                <td>18</td>
+                <td>64</td>
+                <td>8</td>
+                <td>146</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>3%</td>
+                <td>10%</td>
+                <td>36%</td>
+                <td>4%</td>
+                <td>82%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x02D9 (DOT ABOVE)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0141 (LATIN CAPITAL LETTER L WITH STROKE)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x0160 (LATIN CAPITAL LETTER S WITH CARON)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017D (LATIN CAPITAL LETTER Z WITH CARON)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0142 (LATIN SMALL LETTER L WITH STROKE)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x0161 (LATIN SMALL LETTER S WITH CARON)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017E (LATIN SMALL LETTER Z WITH CARON)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DD (DOUBLE ACUTE ACCENT)
+
+
+- 0x02C7 (CARON)
+
+
+- 0x02D8 (BREVE)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: tai-le, cherokee, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: tifinagh, tai-le, cherokee, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, cherokee, coptic</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, malayalam, coptic, canadian-aboriginal, tifinagh</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: gothic, tai-le, coptic</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+2010 HYPHEN: try adding one of: lisu, arabic, kharoshthi, sundanese, kayah-li, coptic, kaithi, syloti-nagri, cham</li>
+<li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2025 TWO DOT LEADER: try adding phags-pa</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+203B REFERENCE MARK: not included in any glyphset definition</li>
+<li>U+20DD COMBINING ENCLOSING CIRCLE: not included in any glyphset definition</li>
+<li>U+2103 DEGREE CELSIUS: not included in any glyphset definition</li>
+<li>U+2109 DEGREE FAHRENHEIT: not included in any glyphset definition</li>
+<li>U+2121 TELEPHONE SIGN: not included in any glyphset definition</li>
+<li>U+212B ANGSTROM SIGN: not included in any glyphset definition</li>
+<li>U+2160 ROMAN NUMERAL ONE: not included in any glyphset definition</li>
+<li>U+2161 ROMAN NUMERAL TWO: not included in any glyphset definition</li>
+<li>U+2162 ROMAN NUMERAL THREE: not included in any glyphset definition</li>
+<li>U+2163 ROMAN NUMERAL FOUR: not included in any glyphset definition</li>
+<li>U+2164 ROMAN NUMERAL FIVE: not included in any glyphset definition</li>
+<li>U+2165 ROMAN NUMERAL SIX: not included in any glyphset definition</li>
+<li>U+2166 ROMAN NUMERAL SEVEN: not included in any glyphset definition</li>
+<li>U+2167 ROMAN NUMERAL EIGHT: not included in any glyphset definition</li>
+<li>U+2168 ROMAN NUMERAL NINE: not included in any glyphset definition</li>
+<li>U+2169 ROMAN NUMERAL TEN: not included in any glyphset definition</li>
+<li>U+216A ROMAN NUMERAL ELEVEN: not included in any glyphset definition</li>
+<li>U+216B ROMAN NUMERAL TWELVE: not included in any glyphset definition</li>
+<li>U+2170 SMALL ROMAN NUMERAL ONE: not included in any glyphset definition</li>
+<li>U+2171 SMALL ROMAN NUMERAL TWO: not included in any glyphset definition</li>
+<li>U+2172 SMALL ROMAN NUMERAL THREE: not included in any glyphset definition</li>
+<li>U+2173 SMALL ROMAN NUMERAL FOUR: not included in any glyphset definition</li>
+<li>U+2174 SMALL ROMAN NUMERAL FIVE: not included in any glyphset definition</li>
+<li>U+2175 SMALL ROMAN NUMERAL SIX: not included in any glyphset definition</li>
+<li>U+2176 SMALL ROMAN NUMERAL SEVEN: not included in any glyphset definition</li>
+<li>U+2177 SMALL ROMAN NUMERAL EIGHT: not included in any glyphset definition</li>
+<li>U+2178 SMALL ROMAN NUMERAL NINE: not included in any glyphset definition</li>
+<li>U+2179 SMALL ROMAN NUMERAL TEN: not included in any glyphset definition</li>
+<li>U+217A SMALL ROMAN NUMERAL ELEVEN: not included in any glyphset definition</li>
+<li>U+217B SMALL ROMAN NUMERAL TWELVE: not included in any glyphset definition</li>
+<li>U+2190 LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2192 RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21C4 RIGHTWARDS ARROW OVER LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21C5 UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21C6 LEFTWARDS ARROW OVER RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+21D2 RIGHTWARDS DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21D4 LEFT RIGHT DOUBLE ARROW: not included in any glyphset definition</li>
+<li>U+21E6 LEFTWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21E7 UPWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21E8 RIGHTWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+21E9 DOWNWARDS WHITE ARROW: not included in any glyphset definition</li>
+<li>U+2200 FOR ALL: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2203 THERE EXISTS: not included in any glyphset definition</li>
+<li>U+2207 NABLA: not included in any glyphset definition</li>
+<li>U+2208 ELEMENT OF: not included in any glyphset definition</li>
+<li>U+220B CONTAINS AS MEMBER: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221D PROPORTIONAL TO: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+221F RIGHT ANGLE: not included in any glyphset definition</li>
+<li>U+2220 ANGLE: not included in any glyphset definition</li>
+<li>U+2227 LOGICAL AND: not included in any glyphset definition</li>
+<li>U+2228 LOGICAL OR: not included in any glyphset definition</li>
+<li>U+2229 INTERSECTION: not included in any glyphset definition</li>
+<li>U+222A UNION: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+222C DOUBLE INTEGRAL: not included in any glyphset definition</li>
+<li>U+222E CONTOUR INTEGRAL: not included in any glyphset definition</li>
+<li>U+2234 THEREFORE: not included in any glyphset definition</li>
+<li>U+2235 BECAUSE: not included in any glyphset definition</li>
+<li>U+223D REVERSED TILDE: not included in any glyphset definition</li>
+<li>U+2252 APPROXIMATELY EQUAL TO OR THE IMAGE OF: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2261 IDENTICAL TO: not included in any glyphset definition</li>
+<li>U+2266 LESS-THAN OVER EQUAL TO: not included in any glyphset definition</li>
+<li>U+2267 GREATER-THAN OVER EQUAL TO: not included in any glyphset definition</li>
+<li>U+226A MUCH LESS-THAN: not included in any glyphset definition</li>
+<li>U+226B MUCH GREATER-THAN: not included in any glyphset definition</li>
+<li>U+2282 SUBSET OF: not included in any glyphset definition</li>
+<li>U+2283 SUPERSET OF: not included in any glyphset definition</li>
+<li>U+2286 SUBSET OF OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2287 SUPERSET OF OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+22A5 UP TACK: not included in any glyphset definition</li>
+<li>U+22BF RIGHT TRIANGLE: not included in any glyphset definition</li>
+<li>U+2312 ARC: not included in any glyphset definition</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding mongolian</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding mongolian</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding mongolian</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding mongolian</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding mongolian</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding mongolian</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding mongolian</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding mongolian</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding mongolian</li>
+<li>U+2469 CIRCLED NUMBER TEN: try adding mongolian</li>
+<li>U+246A CIRCLED NUMBER ELEVEN: try adding mongolian</li>
+<li>U+246B CIRCLED NUMBER TWELVE: try adding mongolian</li>
+<li>U+246C CIRCLED NUMBER THIRTEEN: try adding mongolian</li>
+<li>U+246D CIRCLED NUMBER FOURTEEN: try adding mongolian</li>
+<li>U+246E CIRCLED NUMBER FIFTEEN: try adding mongolian</li>
+<li>U+246F CIRCLED NUMBER SIXTEEN: try adding mongolian</li>
+<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding mongolian</li>
+<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding mongolian</li>
+<li>U+2472 CIRCLED NUMBER NINETEEN: try adding mongolian</li>
+<li>U+2473 CIRCLED NUMBER TWENTY: try adding mongolian</li>
+<li>U+2474 PARENTHESIZED DIGIT ONE: not included in any glyphset definition</li>
+<li>U+2475 PARENTHESIZED DIGIT TWO: not included in any glyphset definition</li>
+<li>U+2476 PARENTHESIZED DIGIT THREE: not included in any glyphset definition</li>
+<li>U+2477 PARENTHESIZED DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+2478 PARENTHESIZED DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+2479 PARENTHESIZED DIGIT SIX: not included in any glyphset definition</li>
+<li>U+247A PARENTHESIZED DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+247B PARENTHESIZED DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+247C PARENTHESIZED DIGIT NINE: not included in any glyphset definition</li>
+<li>U+247D PARENTHESIZED NUMBER TEN: not included in any glyphset definition</li>
+<li>U+247E PARENTHESIZED NUMBER ELEVEN: not included in any glyphset definition</li>
+<li>U+247F PARENTHESIZED NUMBER TWELVE: not included in any glyphset definition</li>
+<li>U+2480 PARENTHESIZED NUMBER THIRTEEN: not included in any glyphset definition</li>
+<li>U+2481 PARENTHESIZED NUMBER FOURTEEN: not included in any glyphset definition</li>
+<li>U+2482 PARENTHESIZED NUMBER FIFTEEN: not included in any glyphset definition</li>
+<li>U+2483 PARENTHESIZED NUMBER SIXTEEN: not included in any glyphset definition</li>
+<li>U+2484 PARENTHESIZED NUMBER SEVENTEEN: not included in any glyphset definition</li>
+<li>U+2485 PARENTHESIZED NUMBER EIGHTEEN: not included in any glyphset definition</li>
+<li>U+2486 PARENTHESIZED NUMBER NINETEEN: not included in any glyphset definition</li>
+<li>U+2487 PARENTHESIZED NUMBER TWENTY: not included in any glyphset definition</li>
+<li>U+2488 DIGIT ONE FULL STOP: not included in any glyphset definition</li>
+<li>U+2489 DIGIT TWO FULL STOP: not included in any glyphset definition</li>
+<li>U+248A DIGIT THREE FULL STOP: not included in any glyphset definition</li>
+<li>U+248B DIGIT FOUR FULL STOP: not included in any glyphset definition</li>
+<li>U+248C DIGIT FIVE FULL STOP: not included in any glyphset definition</li>
+<li>U+248D DIGIT SIX FULL STOP: not included in any glyphset definition</li>
+<li>U+248E DIGIT SEVEN FULL STOP: not included in any glyphset definition</li>
+<li>U+248F DIGIT EIGHT FULL STOP: not included in any glyphset definition</li>
+<li>U+2490 DIGIT NINE FULL STOP: not included in any glyphset definition</li>
+<li>U+249C PARENTHESIZED LATIN SMALL LETTER A: not included in any glyphset definition</li>
+<li>U+249D PARENTHESIZED LATIN SMALL LETTER B: not included in any glyphset definition</li>
+<li>U+249E PARENTHESIZED LATIN SMALL LETTER C: not included in any glyphset definition</li>
+<li>U+249F PARENTHESIZED LATIN SMALL LETTER D: not included in any glyphset definition</li>
+<li>U+24A0 PARENTHESIZED LATIN SMALL LETTER E: not included in any glyphset definition</li>
+<li>U+24A1 PARENTHESIZED LATIN SMALL LETTER F: not included in any glyphset definition</li>
+<li>U+24A2 PARENTHESIZED LATIN SMALL LETTER G: not included in any glyphset definition</li>
+<li>U+24A3 PARENTHESIZED LATIN SMALL LETTER H: not included in any glyphset definition</li>
+<li>U+24A4 PARENTHESIZED LATIN SMALL LETTER I: not included in any glyphset definition</li>
+<li>U+24A5 PARENTHESIZED LATIN SMALL LETTER J: not included in any glyphset definition</li>
+<li>U+24A6 PARENTHESIZED LATIN SMALL LETTER K: not included in any glyphset definition</li>
+<li>U+24A7 PARENTHESIZED LATIN SMALL LETTER L: not included in any glyphset definition</li>
+<li>U+24A8 PARENTHESIZED LATIN SMALL LETTER M: not included in any glyphset definition</li>
+<li>U+24A9 PARENTHESIZED LATIN SMALL LETTER N: not included in any glyphset definition</li>
+<li>U+24AA PARENTHESIZED LATIN SMALL LETTER O: not included in any glyphset definition</li>
+<li>U+24AB PARENTHESIZED LATIN SMALL LETTER P: not included in any glyphset definition</li>
+<li>U+24AC PARENTHESIZED LATIN SMALL LETTER Q: not included in any glyphset definition</li>
+<li>U+24AD PARENTHESIZED LATIN SMALL LETTER R: not included in any glyphset definition</li>
+<li>U+24AE PARENTHESIZED LATIN SMALL LETTER S: not included in any glyphset definition</li>
+<li>U+24AF PARENTHESIZED LATIN SMALL LETTER T: not included in any glyphset definition</li>
+<li>U+24B0 PARENTHESIZED LATIN SMALL LETTER U: not included in any glyphset definition</li>
+<li>U+24B1 PARENTHESIZED LATIN SMALL LETTER V: not included in any glyphset definition</li>
+<li>U+24B2 PARENTHESIZED LATIN SMALL LETTER W: not included in any glyphset definition</li>
+<li>U+24B3 PARENTHESIZED LATIN SMALL LETTER X: not included in any glyphset definition</li>
+<li>U+24B4 PARENTHESIZED LATIN SMALL LETTER Y: not included in any glyphset definition</li>
+<li>U+24B5 PARENTHESIZED LATIN SMALL LETTER Z: not included in any glyphset definition</li>
+<li>U+2500 BOX DRAWINGS LIGHT HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2501 BOX DRAWINGS HEAVY HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2502 BOX DRAWINGS LIGHT VERTICAL: not included in any glyphset definition</li>
+<li>U+2503 BOX DRAWINGS HEAVY VERTICAL: not included in any glyphset definition</li>
+<li>U+250C BOX DRAWINGS LIGHT DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+250F BOX DRAWINGS HEAVY DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+2510 BOX DRAWINGS LIGHT DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2513 BOX DRAWINGS HEAVY DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2514 BOX DRAWINGS LIGHT UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2517 BOX DRAWINGS HEAVY UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2518 BOX DRAWINGS LIGHT UP AND LEFT: not included in any glyphset definition</li>
+<li>U+251B BOX DRAWINGS HEAVY UP AND LEFT: not included in any glyphset definition</li>
+<li>U+251C BOX DRAWINGS LIGHT VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+251D BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY: not included in any glyphset definition</li>
+<li>U+2520 BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT: not included in any glyphset definition</li>
+<li>U+2523 BOX DRAWINGS HEAVY VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+2524 BOX DRAWINGS LIGHT VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+2525 BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY: not included in any glyphset definition</li>
+<li>U+2528 BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT: not included in any glyphset definition</li>
+<li>U+252B BOX DRAWINGS HEAVY VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+252C BOX DRAWINGS LIGHT DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+252F BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2530 BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+2533 BOX DRAWINGS HEAVY DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2534 BOX DRAWINGS LIGHT UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2537 BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2538 BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+253B BOX DRAWINGS HEAVY UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253C BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253F BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY: not included in any glyphset definition</li>
+<li>U+2542 BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT: not included in any glyphset definition</li>
+<li>U+254B BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+25A0 BLACK SQUARE: not included in any glyphset definition</li>
+<li>U+25A1 WHITE SQUARE: not included in any glyphset definition</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C6 BLACK DIAMOND: not included in any glyphset definition</li>
+<li>U+25C7 WHITE DIAMOND: not included in any glyphset definition</li>
+<li>U+25CB WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+25CE BULLSEYE: not included in any glyphset definition</li>
+<li>U+25CF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25EF LARGE CIRCLE: not included in any glyphset definition</li>
+<li>U+2605 BLACK STAR: not included in any glyphset definition</li>
+<li>U+2606 WHITE STAR: not included in any glyphset definition</li>
+<li>U+260E BLACK TELEPHONE: not included in any glyphset definition</li>
+<li>U+261C WHITE LEFT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261D WHITE UP POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261E WHITE RIGHT POINTING INDEX: not included in any glyphset definition</li>
+<li>U+261F WHITE DOWN POINTING INDEX: not included in any glyphset definition</li>
+<li>U+2640 FEMALE SIGN: not included in any glyphset definition</li>
+<li>U+2642 MALE SIGN: not included in any glyphset definition</li>
+<li>U+2660 BLACK SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2661 WHITE HEART SUIT: not included in any glyphset definition</li>
+<li>U+2662 WHITE DIAMOND SUIT: not included in any glyphset definition</li>
+<li>U+2663 BLACK CLUB SUIT: not included in any glyphset definition</li>
+<li>U+2664 WHITE SPADE SUIT: not included in any glyphset definition</li>
+<li>U+2665 BLACK HEART SUIT: not included in any glyphset definition</li>
+<li>U+2666 BLACK DIAMOND SUIT: not included in any glyphset definition</li>
+<li>U+2667 WHITE CLUB SUIT: not included in any glyphset definition</li>
+<li>U+266A EIGHTH NOTE: not included in any glyphset definition</li>
+<li>U+266D MUSIC FLAT SIGN: not included in any glyphset definition</li>
+<li>U+266F MUSIC SHARP SIGN: not included in any glyphset definition</li>
+<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: not included in any glyphset definition</li>
+<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: not included in any glyphset definition</li>
+<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: not included in any glyphset definition</li>
+<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: not included in any glyphset definition</li>
+<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: not included in any glyphset definition</li>
+<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: not included in any glyphset definition</li>
+<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: not included in any glyphset definition</li>
+<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: not included in any glyphset definition</li>
+<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: not included in any glyphset definition</li>
+<li>U+3004 JAPANESE INDUSTRIAL STANDARD SYMBOL: not included in any glyphset definition</li>
+<li>U+301D REVERSED DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+301F LOW DOUBLE PRIME QUOTATION MARK: not included in any glyphset definition</li>
+<li>U+3020 POSTAL MARK FACE: not included in any glyphset definition</li>
+<li>U+3094 HIRAGANA LETTER VU: not included in any glyphset definition</li>
+<li>U+30F7 KATAKANA LETTER VA: not included in any glyphset definition</li>
+<li>U+30F8 KATAKANA LETTER VI: not included in any glyphset definition</li>
+<li>U+30F9 KATAKANA LETTER VE: not included in any glyphset definition</li>
+<li>U+30FA KATAKANA LETTER VO: not included in any glyphset definition</li>
+<li>U+322A PARENTHESIZED IDEOGRAPH MOON: not included in any glyphset definition</li>
+<li>U+322B PARENTHESIZED IDEOGRAPH FIRE: not included in any glyphset definition</li>
+<li>U+322C PARENTHESIZED IDEOGRAPH WATER: not included in any glyphset definition</li>
+<li>U+322D PARENTHESIZED IDEOGRAPH WOOD: not included in any glyphset definition</li>
+<li>U+322E PARENTHESIZED IDEOGRAPH METAL: not included in any glyphset definition</li>
+<li>U+322F PARENTHESIZED IDEOGRAPH EARTH: not included in any glyphset definition</li>
+<li>U+3230 PARENTHESIZED IDEOGRAPH SUN: not included in any glyphset definition</li>
+<li>U+3231 PARENTHESIZED IDEOGRAPH STOCK: not included in any glyphset definition</li>
+<li>U+3232 PARENTHESIZED IDEOGRAPH HAVE: not included in any glyphset definition</li>
+<li>U+3233 PARENTHESIZED IDEOGRAPH SOCIETY: not included in any glyphset definition</li>
+<li>U+3234 PARENTHESIZED IDEOGRAPH NAME: not included in any glyphset definition</li>
+<li>U+3235 PARENTHESIZED IDEOGRAPH SPECIAL: not included in any glyphset definition</li>
+<li>U+3236 PARENTHESIZED IDEOGRAPH FINANCIAL: not included in any glyphset definition</li>
+<li>U+3237 PARENTHESIZED IDEOGRAPH CONGRATULATION: not included in any glyphset definition</li>
+<li>U+3238 PARENTHESIZED IDEOGRAPH LABOR: not included in any glyphset definition</li>
+<li>U+3239 PARENTHESIZED IDEOGRAPH REPRESENT: not included in any glyphset definition</li>
+<li>U+323A PARENTHESIZED IDEOGRAPH CALL: not included in any glyphset definition</li>
+<li>U+323B PARENTHESIZED IDEOGRAPH STUDY: not included in any glyphset definition</li>
+<li>U+323C PARENTHESIZED IDEOGRAPH SUPERVISE: not included in any glyphset definition</li>
+<li>U+323D PARENTHESIZED IDEOGRAPH ENTERPRISE: not included in any glyphset definition</li>
+<li>U+323E PARENTHESIZED IDEOGRAPH RESOURCE: not included in any glyphset definition</li>
+<li>U+323F PARENTHESIZED IDEOGRAPH ALLIANCE: not included in any glyphset definition</li>
+<li>U+3240 PARENTHESIZED IDEOGRAPH FESTIVAL: not included in any glyphset definition</li>
+<li>U+3242 PARENTHESIZED IDEOGRAPH SELF: not included in any glyphset definition</li>
+<li>U+3243 PARENTHESIZED IDEOGRAPH REACH: not included in any glyphset definition</li>
+<li>U+3296 CIRCLED IDEOGRAPH FINANCIAL: not included in any glyphset definition</li>
+<li>U+3298 CIRCLED IDEOGRAPH LABOR: not included in any glyphset definition</li>
+<li>U+3299 CIRCLED IDEOGRAPH SECRET: not included in any glyphset definition</li>
+<li>U+329D CIRCLED IDEOGRAPH EXCELLENT: not included in any glyphset definition</li>
+<li>U+329E CIRCLED IDEOGRAPH PRINT: not included in any glyphset definition</li>
+<li>U+32A4 CIRCLED IDEOGRAPH HIGH: not included in any glyphset definition</li>
+<li>U+32A5 CIRCLED IDEOGRAPH CENTRE: not included in any glyphset definition</li>
+<li>U+32A6 CIRCLED IDEOGRAPH LOW: not included in any glyphset definition</li>
+<li>U+32A7 CIRCLED IDEOGRAPH LEFT: not included in any glyphset definition</li>
+<li>U+32A8 CIRCLED IDEOGRAPH RIGHT: not included in any glyphset definition</li>
+<li>U+32A9 CIRCLED IDEOGRAPH MEDICINE: not included in any glyphset definition</li>
+<li>U+3300 SQUARE APAATO: not included in any glyphset definition</li>
+<li>U+3303 SQUARE AARU: not included in any glyphset definition</li>
+<li>U+3305 SQUARE INTI: not included in any glyphset definition</li>
+<li>U+330D SQUARE KARORII: not included in any glyphset definition</li>
+<li>U+3314 SQUARE KIRO: not included in any glyphset definition</li>
+<li>U+3315 SQUARE KIROGURAMU: not included in any glyphset definition</li>
+<li>U+3316 SQUARE KIROMEETORU: not included in any glyphset definition</li>
+<li>U+3318 SQUARE GURAMU: not included in any glyphset definition</li>
+<li>U+331E SQUARE KOOPO: not included in any glyphset definition</li>
+<li>U+3322 SQUARE SENTI: not included in any glyphset definition</li>
+<li>U+3323 SQUARE SENTO: not included in any glyphset definition</li>
+<li>U+3326 SQUARE DORU: not included in any glyphset definition</li>
+<li>U+3327 SQUARE TON: not included in any glyphset definition</li>
+<li>U+332A SQUARE HAITU: not included in any glyphset definition</li>
+<li>U+332B SQUARE PAASENTO: not included in any glyphset definition</li>
+<li>U+3331 SQUARE BIRU: not included in any glyphset definition</li>
+<li>U+3333 SQUARE HUIITO: not included in any glyphset definition</li>
+<li>U+3336 SQUARE HEKUTAARU: not included in any glyphset definition</li>
+<li>U+3339 SQUARE HERUTU: not included in any glyphset definition</li>
+<li>U+333B SQUARE PEEZI: not included in any glyphset definition</li>
+<li>U+3342 SQUARE HOON: not included in any glyphset definition</li>
+<li>U+3347 SQUARE MANSYON: not included in any glyphset definition</li>
+<li>U+3349 SQUARE MIRI: not included in any glyphset definition</li>
+<li>U+334A SQUARE MIRIBAARU: not included in any glyphset definition</li>
+<li>U+334D SQUARE MEETORU: not included in any glyphset definition</li>
+<li>U+334E SQUARE YAADO: not included in any glyphset definition</li>
+<li>U+3351 SQUARE RITTORU: not included in any glyphset definition</li>
+<li>U+3357 SQUARE WATTO: not included in any glyphset definition</li>
+<li>U+337B SQUARE ERA NAME HEISEI: not included in any glyphset definition</li>
+<li>U+337C SQUARE ERA NAME SYOUWA: not included in any glyphset definition</li>
+<li>U+337D SQUARE ERA NAME TAISYOU: not included in any glyphset definition</li>
+<li>U+337E SQUARE ERA NAME MEIZI: not included in any glyphset definition</li>
+<li>U+337F SQUARE CORPORATION: not included in any glyphset definition</li>
+<li>U+3385 SQUARE KB: not included in any glyphset definition</li>
+<li>U+3386 SQUARE MB: not included in any glyphset definition</li>
+<li>U+3387 SQUARE GB: not included in any glyphset definition</li>
+<li>U+338E SQUARE MG: not included in any glyphset definition</li>
+<li>U+338F SQUARE KG: not included in any glyphset definition</li>
+<li>U+3390 SQUARE HZ: not included in any glyphset definition</li>
+<li>U+3396 SQUARE ML: not included in any glyphset definition</li>
+<li>U+3397 SQUARE DL: not included in any glyphset definition</li>
+<li>U+3398 SQUARE KL: not included in any glyphset definition</li>
+<li>U+339C SQUARE MM: try adding chinese-simplified</li>
+<li>U+339D SQUARE CM: try adding chinese-simplified</li>
+<li>U+339E SQUARE KM: not included in any glyphset definition</li>
+<li>U+339F SQUARE MM SQUARED: not included in any glyphset definition</li>
+<li>U+33A0 SQUARE CM SQUARED: not included in any glyphset definition</li>
+<li>U+33A1 SQUARE M SQUARED: try adding chinese-simplified</li>
+<li>U+33A2 SQUARE KM SQUARED: not included in any glyphset definition</li>
+<li>U+33A4 SQUARE CM CUBED: not included in any glyphset definition</li>
+<li>U+33A5 SQUARE M CUBED: not included in any glyphset definition</li>
+<li>U+33B0 SQUARE PS: not included in any glyphset definition</li>
+<li>U+33B1 SQUARE NS: not included in any glyphset definition</li>
+<li>U+33B2 SQUARE MU S: not included in any glyphset definition</li>
+<li>U+33B3 SQUARE MS: not included in any glyphset definition</li>
+<li>U+33C4 SQUARE CC: not included in any glyphset definition</li>
+<li>U+33CB SQUARE HP: not included in any glyphset definition</li>
+<li>U+33CD SQUARE KK: not included in any glyphset definition</li>
+<li>U+33D4 SQUARE MB SMALL: not included in any glyphset definition</li>
+<li>U+4E28 CJK UNIFIED IDEOGRAPH-4E28: try adding chinese-simplified</li>
+<li>U+4EE1 CJK UNIFIED IDEOGRAPH-4EE1: try adding chinese-simplified</li>
+<li>U+4EFC CJK UNIFIED IDEOGRAPH-4EFC: not included in any glyphset definition</li>
+<li>U+4F00 CJK UNIFIED IDEOGRAPH-4F00: not included in any glyphset definition</li>
+<li>U+4F03 CJK UNIFIED IDEOGRAPH-4F03: not included in any glyphset definition</li>
+<li>U+4F39 CJK UNIFIED IDEOGRAPH-4F39: not included in any glyphset definition</li>
+<li>U+4F56 CJK UNIFIED IDEOGRAPH-4F56: not included in any glyphset definition</li>
+<li>U+4F8A CJK UNIFIED IDEOGRAPH-4F8A: not included in any glyphset definition</li>
+<li>U+4F92 CJK UNIFIED IDEOGRAPH-4F92: not included in any glyphset definition</li>
+<li>U+4F94 CJK UNIFIED IDEOGRAPH-4F94: not included in any glyphset definition</li>
+<li>U+4F9A CJK UNIFIED IDEOGRAPH-4F9A: not included in any glyphset definition</li>
+<li>U+4FC9 CJK UNIFIED IDEOGRAPH-4FC9: not included in any glyphset definition</li>
+<li>U+4FCD CJK UNIFIED IDEOGRAPH-4FCD: try adding chinese-traditional</li>
+<li>U+4FFF CJK UNIFIED IDEOGRAPH-4FFF: not included in any glyphset definition</li>
+<li>U+501E CJK UNIFIED IDEOGRAPH-501E: not included in any glyphset definition</li>
+<li>U+5022 CJK UNIFIED IDEOGRAPH-5022: try adding chinese-traditional</li>
+<li>U+5040 CJK UNIFIED IDEOGRAPH-5040: not included in any glyphset definition</li>
+<li>U+5042 CJK UNIFIED IDEOGRAPH-5042: not included in any glyphset definition</li>
+<li>U+5046 CJK UNIFIED IDEOGRAPH-5046: not included in any glyphset definition</li>
+<li>U+5070 CJK UNIFIED IDEOGRAPH-5070: not included in any glyphset definition</li>
+<li>U+5094 CJK UNIFIED IDEOGRAPH-5094: not included in any glyphset definition</li>
+<li>U+50D8 CJK UNIFIED IDEOGRAPH-50D8: not included in any glyphset definition</li>
+<li>U+50F4 CJK UNIFIED IDEOGRAPH-50F4: not included in any glyphset definition</li>
+<li>U+514A CJK UNIFIED IDEOGRAPH-514A: not included in any glyphset definition</li>
+<li>U+5164 CJK UNIFIED IDEOGRAPH-5164: not included in any glyphset definition</li>
+<li>U+519D CJK UNIFIED IDEOGRAPH-519D: not included in any glyphset definition</li>
+<li>U+51BE CJK UNIFIED IDEOGRAPH-51BE: not included in any glyphset definition</li>
+<li>U+51EC CJK UNIFIED IDEOGRAPH-51EC: not included in any glyphset definition</li>
+<li>U+5215 CJK UNIFIED IDEOGRAPH-5215: not included in any glyphset definition</li>
+<li>U+529C CJK UNIFIED IDEOGRAPH-529C: not included in any glyphset definition</li>
+<li>U+52A6 CJK UNIFIED IDEOGRAPH-52A6: try adding chinese-traditional</li>
+<li>U+52AF CJK UNIFIED IDEOGRAPH-52AF: not included in any glyphset definition</li>
+<li>U+52C0 CJK UNIFIED IDEOGRAPH-52C0: not included in any glyphset definition</li>
+<li>U+52DB CJK UNIFIED IDEOGRAPH-52DB: try adding chinese-traditional</li>
+<li>U+5300 CJK UNIFIED IDEOGRAPH-5300: try adding chinese-simplified</li>
+<li>U+5307 CJK UNIFIED IDEOGRAPH-5307: not included in any glyphset definition</li>
+<li>U+5324 CJK UNIFIED IDEOGRAPH-5324: not included in any glyphset definition</li>
+<li>U+5372 CJK UNIFIED IDEOGRAPH-5372: not included in any glyphset definition</li>
+<li>U+5393 CJK UNIFIED IDEOGRAPH-5393: not included in any glyphset definition</li>
+<li>U+53B2 CJK UNIFIED IDEOGRAPH-53B2: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+53DD CJK UNIFIED IDEOGRAPH-53DD: not included in any glyphset definition</li>
+<li>U+548A CJK UNIFIED IDEOGRAPH-548A: not included in any glyphset definition</li>
+<li>U+549C CJK UNIFIED IDEOGRAPH-549C: not included in any glyphset definition</li>
+<li>U+54A9 CJK UNIFIED IDEOGRAPH-54A9: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+54FF CJK UNIFIED IDEOGRAPH-54FF: not included in any glyphset definition</li>
+<li>U+5586 CJK UNIFIED IDEOGRAPH-5586: try adding chinese-simplified</li>
+<li>U+5759 CJK UNIFIED IDEOGRAPH-5759: not included in any glyphset definition</li>
+<li>U+5765 CJK UNIFIED IDEOGRAPH-5765: not included in any glyphset definition</li>
+<li>U+57AC CJK UNIFIED IDEOGRAPH-57AC: not included in any glyphset definition</li>
+<li>U+57C7 CJK UNIFIED IDEOGRAPH-57C7: try adding chinese-simplified</li>
+<li>U+57C8 CJK UNIFIED IDEOGRAPH-57C8: not included in any glyphset definition</li>
+<li>U+589E CJK UNIFIED IDEOGRAPH-589E: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+58B2 CJK UNIFIED IDEOGRAPH-58B2: not included in any glyphset definition</li>
+<li>U+590B CJK UNIFIED IDEOGRAPH-590B: try adding chinese-simplified</li>
+<li>U+5953 CJK UNIFIED IDEOGRAPH-5953: not included in any glyphset definition</li>
+<li>U+595B CJK UNIFIED IDEOGRAPH-595B: not included in any glyphset definition</li>
+<li>U+595D CJK UNIFIED IDEOGRAPH-595D: not included in any glyphset definition</li>
+<li>U+5963 CJK UNIFIED IDEOGRAPH-5963: not included in any glyphset definition</li>
+<li>U+59A4 CJK UNIFIED IDEOGRAPH-59A4: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+59BA CJK UNIFIED IDEOGRAPH-59BA: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+5B56 CJK UNIFIED IDEOGRAPH-5B56: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+5BC0 CJK UNIFIED IDEOGRAPH-5BC0: not included in any glyphset definition</li>
+<li>U+5BD8 CJK UNIFIED IDEOGRAPH-5BD8: not included in any glyphset definition</li>
+<li>U+5BEC CJK UNIFIED IDEOGRAPH-5BEC: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+5C1E CJK UNIFIED IDEOGRAPH-5C1E: not included in any glyphset definition</li>
+<li>U+5CA6 CJK UNIFIED IDEOGRAPH-5CA6: try adding chinese-traditional</li>
+<li>U+5CBA CJK UNIFIED IDEOGRAPH-5CBA: not included in any glyphset definition</li>
+<li>U+5CF5 CJK UNIFIED IDEOGRAPH-5CF5: not included in any glyphset definition</li>
+<li>U+5D27 CJK UNIFIED IDEOGRAPH-5D27: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+5D42 CJK UNIFIED IDEOGRAPH-5D42: not included in any glyphset definition</li>
+<li>U+5D53 CJK UNIFIED IDEOGRAPH-5D53: not included in any glyphset definition</li>
+<li>U+5D6D CJK UNIFIED IDEOGRAPH-5D6D: not included in any glyphset definition</li>
+<li>U+5DB8 CJK UNIFIED IDEOGRAPH-5DB8: try adding chinese-traditional</li>
+<li>U+5DB9 CJK UNIFIED IDEOGRAPH-5DB9: not included in any glyphset definition</li>
+<li>U+5DD0 CJK UNIFIED IDEOGRAPH-5DD0: not included in any glyphset definition</li>
+<li>U+5F21 CJK UNIFIED IDEOGRAPH-5F21: not included in any glyphset definition</li>
+<li>U+5F34 CJK UNIFIED IDEOGRAPH-5F34: not included in any glyphset definition</li>
+<li>U+5F45 CJK UNIFIED IDEOGRAPH-5F45: not included in any glyphset definition</li>
+<li>U+5F67 CJK UNIFIED IDEOGRAPH-5F67: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+5FB7 CJK UNIFIED IDEOGRAPH-5FB7: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+5FDE CJK UNIFIED IDEOGRAPH-5FDE: not included in any glyphset definition</li>
+<li>U+605D CJK UNIFIED IDEOGRAPH-605D: not included in any glyphset definition</li>
+<li>U+6085 CJK UNIFIED IDEOGRAPH-6085: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+608A CJK UNIFIED IDEOGRAPH-608A: try adding chinese-simplified</li>
+<li>U+60D5 CJK UNIFIED IDEOGRAPH-60D5: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+60DE CJK UNIFIED IDEOGRAPH-60DE: not included in any glyphset definition</li>
+<li>U+60F2 CJK UNIFIED IDEOGRAPH-60F2: try adding chinese-traditional</li>
+<li>U+6111 CJK UNIFIED IDEOGRAPH-6111: not included in any glyphset definition</li>
+<li>U+6120 CJK UNIFIED IDEOGRAPH-6120: try adding chinese-simplified</li>
+<li>U+6130 CJK UNIFIED IDEOGRAPH-6130: not included in any glyphset definition</li>
+<li>U+6137 CJK UNIFIED IDEOGRAPH-6137: try adding chinese-traditional</li>
+<li>U+6198 CJK UNIFIED IDEOGRAPH-6198: not included in any glyphset definition</li>
+<li>U+6213 CJK UNIFIED IDEOGRAPH-6213: not included in any glyphset definition</li>
+<li>U+62A6 CJK UNIFIED IDEOGRAPH-62A6: not included in any glyphset definition</li>
+<li>U+63F5 CJK UNIFIED IDEOGRAPH-63F5: not included in any glyphset definition</li>
+<li>U+6460 CJK UNIFIED IDEOGRAPH-6460: not included in any glyphset definition</li>
+<li>U+649D CJK UNIFIED IDEOGRAPH-649D: not included in any glyphset definition</li>
+<li>U+64CE CJK UNIFIED IDEOGRAPH-64CE: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+654E CJK UNIFIED IDEOGRAPH-654E: not included in any glyphset definition</li>
+<li>U+6600 CJK UNIFIED IDEOGRAPH-6600: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6609 CJK UNIFIED IDEOGRAPH-6609: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6615 CJK UNIFIED IDEOGRAPH-6615: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+661E CJK UNIFIED IDEOGRAPH-661E: not included in any glyphset definition</li>
+<li>U+6624 CJK UNIFIED IDEOGRAPH-6624: not included in any glyphset definition</li>
+<li>U+662E CJK UNIFIED IDEOGRAPH-662E: not included in any glyphset definition</li>
+<li>U+6631 CJK UNIFIED IDEOGRAPH-6631: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+663B CJK UNIFIED IDEOGRAPH-663B: not included in any glyphset definition</li>
+<li>U+6657 CJK UNIFIED IDEOGRAPH-6657: try adding chinese-simplified</li>
+<li>U+6659 CJK UNIFIED IDEOGRAPH-6659: not included in any glyphset definition</li>
+<li>U+6665 CJK UNIFIED IDEOGRAPH-6665: not included in any glyphset definition</li>
+<li>U+6673 CJK UNIFIED IDEOGRAPH-6673: not included in any glyphset definition</li>
+<li>U+6699 CJK UNIFIED IDEOGRAPH-6699: not included in any glyphset definition</li>
+<li>U+66A0 CJK UNIFIED IDEOGRAPH-66A0: not included in any glyphset definition</li>
+<li>U+66B2 CJK UNIFIED IDEOGRAPH-66B2: not included in any glyphset definition</li>
+<li>U+66BF CJK UNIFIED IDEOGRAPH-66BF: not included in any glyphset definition</li>
+<li>U+66FA CJK UNIFIED IDEOGRAPH-66FA: not included in any glyphset definition</li>
+<li>U+66FB CJK UNIFIED IDEOGRAPH-66FB: not included in any glyphset definition</li>
+<li>U+670E CJK UNIFIED IDEOGRAPH-670E: not included in any glyphset definition</li>
+<li>U+6766 CJK UNIFIED IDEOGRAPH-6766: not included in any glyphset definition</li>
+<li>U+67BB CJK UNIFIED IDEOGRAPH-67BB: not included in any glyphset definition</li>
+<li>U+67C0 CJK UNIFIED IDEOGRAPH-67C0: not included in any glyphset definition</li>
+<li>U+6801 CJK UNIFIED IDEOGRAPH-6801: not included in any glyphset definition</li>
+<li>U+6844 CJK UNIFIED IDEOGRAPH-6844: not included in any glyphset definition</li>
+<li>U+6852 CJK UNIFIED IDEOGRAPH-6852: not included in any glyphset definition</li>
+<li>U+68C8 CJK UNIFIED IDEOGRAPH-68C8: not included in any glyphset definition</li>
+<li>U+68CF CJK UNIFIED IDEOGRAPH-68CF: not included in any glyphset definition</li>
+<li>U+6968 CJK UNIFIED IDEOGRAPH-6968: try adding chinese-traditional</li>
+<li>U+6998 CJK UNIFIED IDEOGRAPH-6998: not included in any glyphset definition</li>
+<li>U+69E2 CJK UNIFIED IDEOGRAPH-69E2: not included in any glyphset definition</li>
+<li>U+6A30 CJK UNIFIED IDEOGRAPH-6A30: not included in any glyphset definition</li>
+<li>U+6A46 CJK UNIFIED IDEOGRAPH-6A46: not included in any glyphset definition</li>
+<li>U+6A6B CJK UNIFIED IDEOGRAPH-6A6B: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6A73 CJK UNIFIED IDEOGRAPH-6A73: not included in any glyphset definition</li>
+<li>U+6A7E CJK UNIFIED IDEOGRAPH-6A7E: try adding chinese-simplified</li>
+<li>U+6AE2 CJK UNIFIED IDEOGRAPH-6AE2: not included in any glyphset definition</li>
+<li>U+6AE4 CJK UNIFIED IDEOGRAPH-6AE4: not included in any glyphset definition</li>
+<li>U+6BD6 CJK UNIFIED IDEOGRAPH-6BD6: try adding chinese-traditional</li>
+<li>U+6C3F CJK UNIFIED IDEOGRAPH-6C3F: not included in any glyphset definition</li>
+<li>U+6C5C CJK UNIFIED IDEOGRAPH-6C5C: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6C6F CJK UNIFIED IDEOGRAPH-6C6F: try adding chinese-traditional</li>
+<li>U+6C86 CJK UNIFIED IDEOGRAPH-6C86: try adding chinese-simplified</li>
+<li>U+6CDA CJK UNIFIED IDEOGRAPH-6CDA: not included in any glyphset definition</li>
+<li>U+6D04 CJK UNIFIED IDEOGRAPH-6D04: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6D6F CJK UNIFIED IDEOGRAPH-6D6F: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6D87 CJK UNIFIED IDEOGRAPH-6D87: try adding chinese-traditional</li>
+<li>U+6D96 CJK UNIFIED IDEOGRAPH-6D96: not included in any glyphset definition</li>
+<li>U+6DAC CJK UNIFIED IDEOGRAPH-6DAC: not included in any glyphset definition</li>
+<li>U+6DCF CJK UNIFIED IDEOGRAPH-6DCF: try adding chinese-traditional</li>
+<li>U+6DF2 CJK UNIFIED IDEOGRAPH-6DF2: not included in any glyphset definition</li>
+<li>U+6DF8 CJK UNIFIED IDEOGRAPH-6DF8: try adding chinese-simplified</li>
+<li>U+6DFC CJK UNIFIED IDEOGRAPH-6DFC: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6E27 CJK UNIFIED IDEOGRAPH-6E27: not included in any glyphset definition</li>
+<li>U+6E39 CJK UNIFIED IDEOGRAPH-6E39: try adding chinese-simplified</li>
+<li>U+6E3C CJK UNIFIED IDEOGRAPH-6E3C: try adding chinese-traditional</li>
+<li>U+6E5C CJK UNIFIED IDEOGRAPH-6E5C: not included in any glyphset definition</li>
+<li>U+6EBF CJK UNIFIED IDEOGRAPH-6EBF: not included in any glyphset definition</li>
+<li>U+6F88 CJK UNIFIED IDEOGRAPH-6F88: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+6FB5 CJK UNIFIED IDEOGRAPH-6FB5: not included in any glyphset definition</li>
+<li>U+6FF5 CJK UNIFIED IDEOGRAPH-6FF5: not included in any glyphset definition</li>
+<li>U+7005 CJK UNIFIED IDEOGRAPH-7005: try adding chinese-traditional</li>
+<li>U+7007 CJK UNIFIED IDEOGRAPH-7007: not included in any glyphset definition</li>
+<li>U+7028 CJK UNIFIED IDEOGRAPH-7028: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7085 CJK UNIFIED IDEOGRAPH-7085: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+70AB CJK UNIFIED IDEOGRAPH-70AB: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+70BB CJK UNIFIED IDEOGRAPH-70BB: not included in any glyphset definition</li>
+<li>U+7104 CJK UNIFIED IDEOGRAPH-7104: not included in any glyphset definition</li>
+<li>U+710F CJK UNIFIED IDEOGRAPH-710F: not included in any glyphset definition</li>
+<li>U+7146 CJK UNIFIED IDEOGRAPH-7146: try adding chinese-traditional</li>
+<li>U+7147 CJK UNIFIED IDEOGRAPH-7147: try adding chinese-traditional</li>
+<li>U+715C CJK UNIFIED IDEOGRAPH-715C: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+71C1 CJK UNIFIED IDEOGRAPH-71C1: try adding chinese-traditional</li>
+<li>U+71FE CJK UNIFIED IDEOGRAPH-71FE: try adding chinese-traditional</li>
+<li>U+72B1 CJK UNIFIED IDEOGRAPH-72B1: not included in any glyphset definition</li>
+<li>U+72BE CJK UNIFIED IDEOGRAPH-72BE: not included in any glyphset definition</li>
+<li>U+7324 CJK UNIFIED IDEOGRAPH-7324: not included in any glyphset definition</li>
+<li>U+7377 CJK UNIFIED IDEOGRAPH-7377: try adding chinese-traditional</li>
+<li>U+73BD CJK UNIFIED IDEOGRAPH-73BD: not included in any glyphset definition</li>
+<li>U+73C9 CJK UNIFIED IDEOGRAPH-73C9: try adding chinese-simplified</li>
+<li>U+73D2 CJK UNIFIED IDEOGRAPH-73D2: not included in any glyphset definition</li>
+<li>U+73D6 CJK UNIFIED IDEOGRAPH-73D6: not included in any glyphset definition</li>
+<li>U+73E3 CJK UNIFIED IDEOGRAPH-73E3: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+73F5 CJK UNIFIED IDEOGRAPH-73F5: not included in any glyphset definition</li>
+<li>U+7407 CJK UNIFIED IDEOGRAPH-7407: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7426 CJK UNIFIED IDEOGRAPH-7426: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7429 CJK UNIFIED IDEOGRAPH-7429: not included in any glyphset definition</li>
+<li>U+742A CJK UNIFIED IDEOGRAPH-742A: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+742E CJK UNIFIED IDEOGRAPH-742E: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7462 CJK UNIFIED IDEOGRAPH-7462: try adding chinese-traditional</li>
+<li>U+7489 CJK UNIFIED IDEOGRAPH-7489: try adding chinese-traditional</li>
+<li>U+749F CJK UNIFIED IDEOGRAPH-749F: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7501 CJK UNIFIED IDEOGRAPH-7501: not included in any glyphset definition</li>
+<li>U+752F CJK UNIFIED IDEOGRAPH-752F: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+756F CJK UNIFIED IDEOGRAPH-756F: try adding chinese-traditional</li>
+<li>U+7682 CJK UNIFIED IDEOGRAPH-7682: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+769B CJK UNIFIED IDEOGRAPH-769B: not included in any glyphset definition</li>
+<li>U+769C CJK UNIFIED IDEOGRAPH-769C: not included in any glyphset definition</li>
+<li>U+769E CJK UNIFIED IDEOGRAPH-769E: not included in any glyphset definition</li>
+<li>U+76A6 CJK UNIFIED IDEOGRAPH-76A6: not included in any glyphset definition</li>
+<li>U+7746 CJK UNIFIED IDEOGRAPH-7746: not included in any glyphset definition</li>
+<li>U+7821 CJK UNIFIED IDEOGRAPH-7821: not included in any glyphset definition</li>
+<li>U+784E CJK UNIFIED IDEOGRAPH-784E: not included in any glyphset definition</li>
+<li>U+7864 CJK UNIFIED IDEOGRAPH-7864: try adding chinese-traditional</li>
+<li>U+787A CJK UNIFIED IDEOGRAPH-787A: not included in any glyphset definition</li>
+<li>U+7930 CJK UNIFIED IDEOGRAPH-7930: not included in any glyphset definition</li>
+<li>U+7994 CJK UNIFIED IDEOGRAPH-7994: try adding chinese-traditional</li>
+<li>U+799B CJK UNIFIED IDEOGRAPH-799B: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7AD1 CJK UNIFIED IDEOGRAPH-7AD1: try adding chinese-traditional</li>
+<li>U+7AE7 CJK UNIFIED IDEOGRAPH-7AE7: not included in any glyphset definition</li>
+<li>U+7AEB CJK UNIFIED IDEOGRAPH-7AEB: not included in any glyphset definition</li>
+<li>U+7B9E CJK UNIFIED IDEOGRAPH-7B9E: not included in any glyphset definition</li>
+<li>U+7D48 CJK UNIFIED IDEOGRAPH-7D48: not included in any glyphset definition</li>
+<li>U+7D5C CJK UNIFIED IDEOGRAPH-7D5C: try adding chinese-traditional</li>
+<li>U+7DA0 CJK UNIFIED IDEOGRAPH-7DA0: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+7DB7 CJK UNIFIED IDEOGRAPH-7DB7: not included in any glyphset definition</li>
+<li>U+7DD6 CJK UNIFIED IDEOGRAPH-7DD6: not included in any glyphset definition</li>
+<li>U+7E52 CJK UNIFIED IDEOGRAPH-7E52: try adding chinese-traditional</li>
+<li>U+7E8A CJK UNIFIED IDEOGRAPH-7E8A: not included in any glyphset definition</li>
+<li>U+7F47 CJK UNIFIED IDEOGRAPH-7F47: not included in any glyphset definition</li>
+<li>U+7FA1 CJK UNIFIED IDEOGRAPH-7FA1: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+8301 CJK UNIFIED IDEOGRAPH-8301: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+8362 CJK UNIFIED IDEOGRAPH-8362: not included in any glyphset definition</li>
+<li>U+837F CJK UNIFIED IDEOGRAPH-837F: not included in any glyphset definition</li>
+<li>U+83C7 CJK UNIFIED IDEOGRAPH-83C7: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+83F6 CJK UNIFIED IDEOGRAPH-83F6: not included in any glyphset definition</li>
+<li>U+8448 CJK UNIFIED IDEOGRAPH-8448: not included in any glyphset definition</li>
+<li>U+84B4 CJK UNIFIED IDEOGRAPH-84B4: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+84DC CJK UNIFIED IDEOGRAPH-84DC: not included in any glyphset definition</li>
+<li>U+8553 CJK UNIFIED IDEOGRAPH-8553: try adding chinese-traditional</li>
+<li>U+8559 CJK UNIFIED IDEOGRAPH-8559: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+856B CJK UNIFIED IDEOGRAPH-856B: not included in any glyphset definition</li>
+<li>U+85B0 CJK UNIFIED IDEOGRAPH-85B0: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+8807 CJK UNIFIED IDEOGRAPH-8807: not included in any glyphset definition</li>
+<li>U+88F5 CJK UNIFIED IDEOGRAPH-88F5: not included in any glyphset definition</li>
+<li>U+891C CJK UNIFIED IDEOGRAPH-891C: not included in any glyphset definition</li>
+<li>U+8A12 CJK UNIFIED IDEOGRAPH-8A12: not included in any glyphset definition</li>
+<li>U+8A37 CJK UNIFIED IDEOGRAPH-8A37: not included in any glyphset definition</li>
+<li>U+8A79 CJK UNIFIED IDEOGRAPH-8A79: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+8AA7 CJK UNIFIED IDEOGRAPH-8AA7: not included in any glyphset definition</li>
+<li>U+8ABE CJK UNIFIED IDEOGRAPH-8ABE: try adding chinese-traditional</li>
+<li>U+8ADF CJK UNIFIED IDEOGRAPH-8ADF: not included in any glyphset definition</li>
+<li>U+8AF6 CJK UNIFIED IDEOGRAPH-8AF6: try adding chinese-traditional</li>
+<li>U+8B53 CJK UNIFIED IDEOGRAPH-8B53: not included in any glyphset definition</li>
+<li>U+8B7F CJK UNIFIED IDEOGRAPH-8B7F: not included in any glyphset definition</li>
+<li>U+8CF0 CJK UNIFIED IDEOGRAPH-8CF0: not included in any glyphset definition</li>
+<li>U+8CF4 CJK UNIFIED IDEOGRAPH-8CF4: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+8D12 CJK UNIFIED IDEOGRAPH-8D12: not included in any glyphset definition</li>
+<li>U+8D76 CJK UNIFIED IDEOGRAPH-8D76: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+8ECF CJK UNIFIED IDEOGRAPH-8ECF: not included in any glyphset definition</li>
+<li>U+9067 CJK UNIFIED IDEOGRAPH-9067: not included in any glyphset definition</li>
+<li>U+90DE CJK UNIFIED IDEOGRAPH-90DE: try adding chinese-simplified</li>
+<li>U+9115 CJK UNIFIED IDEOGRAPH-9115: not included in any glyphset definition</li>
+<li>U+9127 CJK UNIFIED IDEOGRAPH-9127: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+91D7 CJK UNIFIED IDEOGRAPH-91D7: try adding chinese-traditional</li>
+<li>U+91DA CJK UNIFIED IDEOGRAPH-91DA: not included in any glyphset definition</li>
+<li>U+91DE CJK UNIFIED IDEOGRAPH-91DE: not included in any glyphset definition</li>
+<li>U+91E4 CJK UNIFIED IDEOGRAPH-91E4: try adding chinese-traditional</li>
+<li>U+91E5 CJK UNIFIED IDEOGRAPH-91E5: not included in any glyphset definition</li>
+<li>U+91ED CJK UNIFIED IDEOGRAPH-91ED: not included in any glyphset definition</li>
+<li>U+91EE CJK UNIFIED IDEOGRAPH-91EE: not included in any glyphset definition</li>
+<li>U+9206 CJK UNIFIED IDEOGRAPH-9206: not included in any glyphset definition</li>
+<li>U+920A CJK UNIFIED IDEOGRAPH-920A: try adding chinese-traditional</li>
+<li>U+9210 CJK UNIFIED IDEOGRAPH-9210: try adding chinese-traditional</li>
+<li>U+9239 CJK UNIFIED IDEOGRAPH-9239: try adding chinese-traditional</li>
+<li>U+923A CJK UNIFIED IDEOGRAPH-923A: try adding chinese-traditional</li>
+<li>U+923C CJK UNIFIED IDEOGRAPH-923C: not included in any glyphset definition</li>
+<li>U+9240 CJK UNIFIED IDEOGRAPH-9240: try adding chinese-traditional</li>
+<li>U+924E CJK UNIFIED IDEOGRAPH-924E: not included in any glyphset definition</li>
+<li>U+9251 CJK UNIFIED IDEOGRAPH-9251: try adding chinese-traditional</li>
+<li>U+9259 CJK UNIFIED IDEOGRAPH-9259: not included in any glyphset definition</li>
+<li>U+9267 CJK UNIFIED IDEOGRAPH-9267: not included in any glyphset definition</li>
+<li>U+9277 CJK UNIFIED IDEOGRAPH-9277: not included in any glyphset definition</li>
+<li>U+9278 CJK UNIFIED IDEOGRAPH-9278: try adding chinese-traditional</li>
+<li>U+9288 CJK UNIFIED IDEOGRAPH-9288: not included in any glyphset definition</li>
+<li>U+92A7 CJK UNIFIED IDEOGRAPH-92A7: try adding chinese-traditional</li>
+<li>U+92D0 CJK UNIFIED IDEOGRAPH-92D0: try adding chinese-traditional</li>
+<li>U+92D3 CJK UNIFIED IDEOGRAPH-92D3: not included in any glyphset definition</li>
+<li>U+92D5 CJK UNIFIED IDEOGRAPH-92D5: try adding chinese-traditional</li>
+<li>U+92D7 CJK UNIFIED IDEOGRAPH-92D7: not included in any glyphset definition</li>
+<li>U+92D9 CJK UNIFIED IDEOGRAPH-92D9: not included in any glyphset definition</li>
+<li>U+92E0 CJK UNIFIED IDEOGRAPH-92E0: not included in any glyphset definition</li>
+<li>U+92E7 CJK UNIFIED IDEOGRAPH-92E7: not included in any glyphset definition</li>
+<li>U+92F9 CJK UNIFIED IDEOGRAPH-92F9: not included in any glyphset definition</li>
+<li>U+92FB CJK UNIFIED IDEOGRAPH-92FB: not included in any glyphset definition</li>
+<li>U+92FF CJK UNIFIED IDEOGRAPH-92FF: not included in any glyphset definition</li>
+<li>U+9302 CJK UNIFIED IDEOGRAPH-9302: not included in any glyphset definition</li>
+<li>U+931D CJK UNIFIED IDEOGRAPH-931D: not included in any glyphset definition</li>
+<li>U+931E CJK UNIFIED IDEOGRAPH-931E: try adding chinese-traditional</li>
+<li>U+9321 CJK UNIFIED IDEOGRAPH-9321: try adding chinese-traditional</li>
+<li>U+9325 CJK UNIFIED IDEOGRAPH-9325: not included in any glyphset definition</li>
+<li>U+9348 CJK UNIFIED IDEOGRAPH-9348: not included in any glyphset definition</li>
+<li>U+9357 CJK UNIFIED IDEOGRAPH-9357: try adding chinese-simplified</li>
+<li>U+9370 CJK UNIFIED IDEOGRAPH-9370: try adding chinese-traditional</li>
+<li>U+93A4 CJK UNIFIED IDEOGRAPH-93A4: not included in any glyphset definition</li>
+<li>U+93C6 CJK UNIFIED IDEOGRAPH-93C6: not included in any glyphset definition</li>
+<li>U+93DE CJK UNIFIED IDEOGRAPH-93DE: try adding chinese-traditional</li>
+<li>U+93F8 CJK UNIFIED IDEOGRAPH-93F8: not included in any glyphset definition</li>
+<li>U+9431 CJK UNIFIED IDEOGRAPH-9431: not included in any glyphset definition</li>
+<li>U+9445 CJK UNIFIED IDEOGRAPH-9445: not included in any glyphset definition</li>
+<li>U+9448 CJK UNIFIED IDEOGRAPH-9448: not included in any glyphset definition</li>
+<li>U+9592 CJK UNIFIED IDEOGRAPH-9592: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+969D CJK UNIFIED IDEOGRAPH-969D: not included in any glyphset definition</li>
+<li>U+96AF CJK UNIFIED IDEOGRAPH-96AF: not included in any glyphset definition</li>
+<li>U+9733 CJK UNIFIED IDEOGRAPH-9733: not included in any glyphset definition</li>
+<li>U+973B CJK UNIFIED IDEOGRAPH-973B: not included in any glyphset definition</li>
+<li>U+9743 CJK UNIFIED IDEOGRAPH-9743: not included in any glyphset definition</li>
+<li>U+974D CJK UNIFIED IDEOGRAPH-974D: not included in any glyphset definition</li>
+<li>U+974F CJK UNIFIED IDEOGRAPH-974F: not included in any glyphset definition</li>
+<li>U+9751 CJK UNIFIED IDEOGRAPH-9751: try adding chinese-simplified</li>
+<li>U+9755 CJK UNIFIED IDEOGRAPH-9755: not included in any glyphset definition</li>
+<li>U+9857 CJK UNIFIED IDEOGRAPH-9857: try adding chinese-traditional</li>
+<li>U+9865 CJK UNIFIED IDEOGRAPH-9865: try adding chinese-traditional</li>
+<li>U+9927 CJK UNIFIED IDEOGRAPH-9927: not included in any glyphset definition</li>
+<li>U+999E CJK UNIFIED IDEOGRAPH-999E: not included in any glyphset definition</li>
+<li>U+9A4E CJK UNIFIED IDEOGRAPH-9A4E: not included in any glyphset definition</li>
+<li>U+9AD9 CJK UNIFIED IDEOGRAPH-9AD9: try adding chinese-simplified</li>
+<li>U+9ADC CJK UNIFIED IDEOGRAPH-9ADC: not included in any glyphset definition</li>
+<li>U+9B72 CJK UNIFIED IDEOGRAPH-9B72: not included in any glyphset definition</li>
+<li>U+9B75 CJK UNIFIED IDEOGRAPH-9B75: not included in any glyphset definition</li>
+<li>U+9B8F CJK UNIFIED IDEOGRAPH-9B8F: not included in any glyphset definition</li>
+<li>U+9BB1 CJK UNIFIED IDEOGRAPH-9BB1: not included in any glyphset definition</li>
+<li>U+9BBB CJK UNIFIED IDEOGRAPH-9BBB: not included in any glyphset definition</li>
+<li>U+9C00 CJK UNIFIED IDEOGRAPH-9C00: not included in any glyphset definition</li>
+<li>U+9D6B CJK UNIFIED IDEOGRAPH-9D6B: not included in any glyphset definition</li>
+<li>U+9D70 CJK UNIFIED IDEOGRAPH-9D70: try adding chinese-traditional</li>
+<li>U+9E19 CJK UNIFIED IDEOGRAPH-9E19: not included in any glyphset definition</li>
+<li>U+9ED1 CJK UNIFIED IDEOGRAPH-9ED1: try adding one of: chinese-traditional, chinese-simplified</li>
+<li>U+F929 CJK COMPATIBILITY IDEOGRAPH-F929: not included in any glyphset definition</li>
+<li>U+F9DC CJK COMPATIBILITY IDEOGRAPH-F9DC: not included in any glyphset definition</li>
+<li>U+FA0E CJK COMPATIBILITY IDEOGRAPH-FA0E: not included in any glyphset definition</li>
+<li>U+FA0F CJK COMPATIBILITY IDEOGRAPH-FA0F: not included in any glyphset definition</li>
+<li>U+FA10 CJK COMPATIBILITY IDEOGRAPH-FA10: not included in any glyphset definition</li>
+<li>U+FA11 CJK COMPATIBILITY IDEOGRAPH-FA11: not included in any glyphset definition</li>
+<li>U+FA12 CJK COMPATIBILITY IDEOGRAPH-FA12: not included in any glyphset definition</li>
+<li>U+FA13 CJK COMPATIBILITY IDEOGRAPH-FA13: not included in any glyphset definition</li>
+<li>U+FA14 CJK COMPATIBILITY IDEOGRAPH-FA14: not included in any glyphset definition</li>
+<li>U+FA15 CJK COMPATIBILITY IDEOGRAPH-FA15: not included in any glyphset definition</li>
+<li>U+FA16 CJK COMPATIBILITY IDEOGRAPH-FA16: not included in any glyphset definition</li>
+<li>U+FA17 CJK COMPATIBILITY IDEOGRAPH-FA17: not included in any glyphset definition</li>
+<li>U+FA18 CJK COMPATIBILITY IDEOGRAPH-FA18: not included in any glyphset definition</li>
+<li>U+FA19 CJK COMPATIBILITY IDEOGRAPH-FA19: not included in any glyphset definition</li>
+<li>U+FA1A CJK COMPATIBILITY IDEOGRAPH-FA1A: not included in any glyphset definition</li>
+<li>U+FA1B CJK COMPATIBILITY IDEOGRAPH-FA1B: not included in any glyphset definition</li>
+<li>U+FA1C CJK COMPATIBILITY IDEOGRAPH-FA1C: not included in any glyphset definition</li>
+<li>U+FA1D CJK COMPATIBILITY IDEOGRAPH-FA1D: not included in any glyphset definition</li>
+<li>U+FA1E CJK COMPATIBILITY IDEOGRAPH-FA1E: not included in any glyphset definition</li>
+<li>U+FA1F CJK COMPATIBILITY IDEOGRAPH-FA1F: not included in any glyphset definition</li>
+<li>U+FA20 CJK COMPATIBILITY IDEOGRAPH-FA20: not included in any glyphset definition</li>
+<li>U+FA21 CJK COMPATIBILITY IDEOGRAPH-FA21: not included in any glyphset definition</li>
+<li>U+FA22 CJK COMPATIBILITY IDEOGRAPH-FA22: not included in any glyphset definition</li>
+<li>U+FA23 CJK COMPATIBILITY IDEOGRAPH-FA23: not included in any glyphset definition</li>
+<li>U+FA24 CJK COMPATIBILITY IDEOGRAPH-FA24: not included in any glyphset definition</li>
+<li>U+FA25 CJK COMPATIBILITY IDEOGRAPH-FA25: not included in any glyphset definition</li>
+<li>U+FA26 CJK COMPATIBILITY IDEOGRAPH-FA26: not included in any glyphset definition</li>
+<li>U+FA27 CJK COMPATIBILITY IDEOGRAPH-FA27: not included in any glyphset definition</li>
+<li>U+FA28 CJK COMPATIBILITY IDEOGRAPH-FA28: not included in any glyphset definition</li>
+<li>U+FA29 CJK COMPATIBILITY IDEOGRAPH-FA29: not included in any glyphset definition</li>
+<li>U+FA2A CJK COMPATIBILITY IDEOGRAPH-FA2A: not included in any glyphset definition</li>
+<li>U+FA2B CJK COMPATIBILITY IDEOGRAPH-FA2B: not included in any glyphset definition</li>
+<li>U+FA2C CJK COMPATIBILITY IDEOGRAPH-FA2C: not included in any glyphset definition</li>
+<li>U+FA2D CJK COMPATIBILITY IDEOGRAPH-FA2D: not included in any glyphset definition</li>
+<li>U+FE10 PRESENTATION FORM FOR VERTICAL COMMA: not included in any glyphset definition</li>
+<li>U+FE11 PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC COMMA: not included in any glyphset definition</li>
+<li>U+FE12 PRESENTATION FORM FOR VERTICAL IDEOGRAPHIC FULL STOP: not included in any glyphset definition</li>
+<li>U+FE19 PRESENTATION FORM FOR VERTICAL HORIZONTAL ELLIPSIS: not included in any glyphset definition</li>
+<li>U+FE31 PRESENTATION FORM FOR VERTICAL EM DASH: try adding chinese-simplified</li>
+<li>U+FE33 PRESENTATION FORM FOR VERTICAL LOW LINE: not included in any glyphset definition</li>
+<li>U+FE35 PRESENTATION FORM FOR VERTICAL LEFT PARENTHESIS: try adding chinese-simplified</li>
+<li>U+FE36 PRESENTATION FORM FOR VERTICAL RIGHT PARENTHESIS: try adding chinese-simplified</li>
+<li>U+FE37 PRESENTATION FORM FOR VERTICAL LEFT CURLY BRACKET: not included in any glyphset definition</li>
+<li>U+FE38 PRESENTATION FORM FOR VERTICAL RIGHT CURLY BRACKET: not included in any glyphset definition</li>
+<li>U+FE39 PRESENTATION FORM FOR VERTICAL LEFT TORTOISE SHELL BRACKET: try adding chinese-simplified</li>
+<li>U+FE3A PRESENTATION FORM FOR VERTICAL RIGHT TORTOISE SHELL BRACKET: not included in any glyphset definition</li>
+<li>U+FE3B PRESENTATION FORM FOR VERTICAL LEFT BLACK LENTICULAR BRACKET: not included in any glyphset definition</li>
+<li>U+FE3C PRESENTATION FORM FOR VERTICAL RIGHT BLACK LENTICULAR BRACKET: not included in any glyphset definition</li>
+<li>U+FE3D PRESENTATION FORM FOR VERTICAL LEFT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified</li>
+<li>U+FE3E PRESENTATION FORM FOR VERTICAL RIGHT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified</li>
+<li>U+FE3F PRESENTATION FORM FOR VERTICAL LEFT ANGLE BRACKET: try adding chinese-simplified</li>
+<li>U+FE40 PRESENTATION FORM FOR VERTICAL RIGHT ANGLE BRACKET: try adding chinese-simplified</li>
+<li>U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET: try adding one of: mongolian, chinese-simplified</li>
+<li>U+FE42 PRESENTATION FORM FOR VERTICAL RIGHT CORNER BRACKET: try adding mongolian</li>
+<li>U+FE43 PRESENTATION FORM FOR VERTICAL LEFT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified</li>
+<li>U+FE44 PRESENTATION FORM FOR VERTICAL RIGHT WHITE CORNER BRACKET: try adding mongolian</li>
+<li>U+FE47 PRESENTATION FORM FOR VERTICAL LEFT SQUARE BRACKET: not included in any glyphset definition</li>
+<li>U+FE48 PRESENTATION FORM FOR VERTICAL RIGHT SQUARE BRACKET: not included in any glyphset definition</li>
+<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding chinese-simplified</li>
+<li>U+FF07 FULLWIDTH APOSTROPHE: try adding chinese-simplified</li>
+<li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding chinese-simplified</li>
+<li>U+FF61 HALFWIDTH IDEOGRAPHIC FULL STOP: try adding yi</li>
+<li>U+FF62 HALFWIDTH LEFT CORNER BRACKET: try adding yi</li>
+<li>U+FF63 HALFWIDTH RIGHT CORNER BRACKET: try adding yi</li>
+<li>U+FF64 HALFWIDTH IDEOGRAPHIC COMMA: try adding yi</li>
+<li>U+FF65 HALFWIDTH KATAKANA MIDDLE DOT: try adding yi</li>
+<li>U+FF66 HALFWIDTH KATAKANA LETTER WO: not included in any glyphset definition</li>
+<li>U+FF67 HALFWIDTH KATAKANA LETTER SMALL A: not included in any glyphset definition</li>
+<li>U+FF68 HALFWIDTH KATAKANA LETTER SMALL I: not included in any glyphset definition</li>
+<li>U+FF69 HALFWIDTH KATAKANA LETTER SMALL U: not included in any glyphset definition</li>
+<li>U+FF6A HALFWIDTH KATAKANA LETTER SMALL E: not included in any glyphset definition</li>
+<li>U+FF6B HALFWIDTH KATAKANA LETTER SMALL O: not included in any glyphset definition</li>
+<li>U+FF6C HALFWIDTH KATAKANA LETTER SMALL YA: not included in any glyphset definition</li>
+<li>U+FF6D HALFWIDTH KATAKANA LETTER SMALL YU: not included in any glyphset definition</li>
+<li>U+FF6E HALFWIDTH KATAKANA LETTER SMALL YO: not included in any glyphset definition</li>
+<li>U+FF6F HALFWIDTH KATAKANA LETTER SMALL TU: not included in any glyphset definition</li>
+<li>U+FF70 HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK: not included in any glyphset definition</li>
+<li>U+FF71 HALFWIDTH KATAKANA LETTER A: not included in any glyphset definition</li>
+<li>U+FF72 HALFWIDTH KATAKANA LETTER I: not included in any glyphset definition</li>
+<li>U+FF73 HALFWIDTH KATAKANA LETTER U: not included in any glyphset definition</li>
+<li>U+FF74 HALFWIDTH KATAKANA LETTER E: not included in any glyphset definition</li>
+<li>U+FF75 HALFWIDTH KATAKANA LETTER O: not included in any glyphset definition</li>
+<li>U+FF76 HALFWIDTH KATAKANA LETTER KA: not included in any glyphset definition</li>
+<li>U+FF77 HALFWIDTH KATAKANA LETTER KI: not included in any glyphset definition</li>
+<li>U+FF78 HALFWIDTH KATAKANA LETTER KU: not included in any glyphset definition</li>
+<li>U+FF79 HALFWIDTH KATAKANA LETTER KE: not included in any glyphset definition</li>
+<li>U+FF7A HALFWIDTH KATAKANA LETTER KO: not included in any glyphset definition</li>
+<li>U+FF7B HALFWIDTH KATAKANA LETTER SA: not included in any glyphset definition</li>
+<li>U+FF7C HALFWIDTH KATAKANA LETTER SI: not included in any glyphset definition</li>
+<li>U+FF7D HALFWIDTH KATAKANA LETTER SU: not included in any glyphset definition</li>
+<li>U+FF7E HALFWIDTH KATAKANA LETTER SE: not included in any glyphset definition</li>
+<li>U+FF7F HALFWIDTH KATAKANA LETTER SO: not included in any glyphset definition</li>
+<li>U+FF80 HALFWIDTH KATAKANA LETTER TA: not included in any glyphset definition</li>
+<li>U+FF81 HALFWIDTH KATAKANA LETTER TI: not included in any glyphset definition</li>
+<li>U+FF82 HALFWIDTH KATAKANA LETTER TU: not included in any glyphset definition</li>
+<li>U+FF83 HALFWIDTH KATAKANA LETTER TE: not included in any glyphset definition</li>
+<li>U+FF84 HALFWIDTH KATAKANA LETTER TO: not included in any glyphset definition</li>
+<li>U+FF85 HALFWIDTH KATAKANA LETTER NA: not included in any glyphset definition</li>
+<li>U+FF86 HALFWIDTH KATAKANA LETTER NI: not included in any glyphset definition</li>
+<li>U+FF87 HALFWIDTH KATAKANA LETTER NU: not included in any glyphset definition</li>
+<li>U+FF88 HALFWIDTH KATAKANA LETTER NE: not included in any glyphset definition</li>
+<li>U+FF89 HALFWIDTH KATAKANA LETTER NO: not included in any glyphset definition</li>
+<li>U+FF8A HALFWIDTH KATAKANA LETTER HA: not included in any glyphset definition</li>
+<li>U+FF8B HALFWIDTH KATAKANA LETTER HI: not included in any glyphset definition</li>
+<li>U+FF8C HALFWIDTH KATAKANA LETTER HU: not included in any glyphset definition</li>
+<li>U+FF8D HALFWIDTH KATAKANA LETTER HE: not included in any glyphset definition</li>
+<li>U+FF8E HALFWIDTH KATAKANA LETTER HO: not included in any glyphset definition</li>
+<li>U+FF8F HALFWIDTH KATAKANA LETTER MA: not included in any glyphset definition</li>
+<li>U+FF90 HALFWIDTH KATAKANA LETTER MI: not included in any glyphset definition</li>
+<li>U+FF91 HALFWIDTH KATAKANA LETTER MU: not included in any glyphset definition</li>
+<li>U+FF92 HALFWIDTH KATAKANA LETTER ME: not included in any glyphset definition</li>
+<li>U+FF93 HALFWIDTH KATAKANA LETTER MO: not included in any glyphset definition</li>
+<li>U+FF94 HALFWIDTH KATAKANA LETTER YA: not included in any glyphset definition</li>
+<li>U+FF95 HALFWIDTH KATAKANA LETTER YU: not included in any glyphset definition</li>
+<li>U+FF96 HALFWIDTH KATAKANA LETTER YO: not included in any glyphset definition</li>
+<li>U+FF97 HALFWIDTH KATAKANA LETTER RA: not included in any glyphset definition</li>
+<li>U+FF98 HALFWIDTH KATAKANA LETTER RI: not included in any glyphset definition</li>
+<li>U+FF99 HALFWIDTH KATAKANA LETTER RU: not included in any glyphset definition</li>
+<li>U+FF9A HALFWIDTH KATAKANA LETTER RE: not included in any glyphset definition</li>
+<li>U+FF9B HALFWIDTH KATAKANA LETTER RO: not included in any glyphset definition</li>
+<li>U+FF9C HALFWIDTH KATAKANA LETTER WA: not included in any glyphset definition</li>
+<li>U+FF9D HALFWIDTH KATAKANA LETTER N: not included in any glyphset definition</li>
+<li>U+FF9E HALFWIDTH KATAKANA VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+FF9F HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK: not included in any glyphset definition</li>
+<li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
+<li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
+<li>U+FFE4 FULLWIDTH BROKEN BAR: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic</code>, <code>greek</code>, <code>japanese</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check OFL body text is correct.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_body_text&gt;</div>
+
+<details><summary>🔥 ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The OFL.txt body text is incorrect. Please use https://github.com/googlefonts/Unified-Font-Repository/blob/main/OFL.txt as a template. You should only modify the first line. [code: incorrect-ofl-body-text]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 4.1Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The gasp range 0xFFFF value 0x0A should be set to 0x0F. [code: unset-flags]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+
+<details><summary>🔥 ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is</p>
+<p>But font copyright string has: https://github.com/googlefonts/zen-kurenaido
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Font enables smart dropout control in "prep" table instructions?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
+
+<details><summary>🔥 ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Font contains '.notdef' as its first glyph?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_glyphs&gt;</div>
+
+<details><summary>🔥 ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The '.notdef' glyph should contain a drawing, but it is blank. [code: notdef-is-blank]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- brevecombcy
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: A	Contours detected: 1	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: Agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: Aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: AE	Contours detected: 1	Expected: 2
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: ring	Contours detected: 1	Expected: 2
+
+- Glyph name: tilde	Contours detected: 2	Expected: 1
+
+- Glyph name: Alphatonos	Contours detected: 2	Expected: 3
+
+- Glyph name: Alpha	Contours detected: 1	Expected: 2
+
+- Glyph name: Beta	Contours detected: 2	Expected: 3
+
+- Glyph name: beta	Contours detected: 1	Expected: 2
+
+- Glyph name: delta	Contours detected: 1	Expected: 2
+
+- Glyph name: rho	Contours detected: 1	Expected: 2
+
+- Glyph name: sigma	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0410	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0412	Contours detected: 2	Expected: 3
+
+- Glyph name: uni042F	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0432	Contours detected: 2	Expected: 3
+
+- Glyph name: uni044F	Contours detected: 1	Expected: 2
+
+- Glyph name: A	Contours detected: 1	Expected: 2
+
+- Glyph name: AE	Contours detected: 1	Expected: 2
+
+- Glyph name: Aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: Agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: Alpha	Contours detected: 1	Expected: 2
+
+- Glyph name: Alphatonos	Contours detected: 2	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Beta	Contours detected: 2	Expected: 3
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: beta	Contours detected: 1	Expected: 2
+
+- Glyph name: delta	Contours detected: 1	Expected: 2
+
+- Glyph name: rho	Contours detected: 1	Expected: 2
+
+- Glyph name: ring	Contours detected: 1	Expected: 2
+
+- Glyph name: sigma	Contours detected: 1	Expected: 2
+
+- Glyph name: tilde	Contours detected: 2	Expected: 1
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0410	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0412	Contours detected: 2	Expected: 3
+
+- Glyph name: uni042F	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0432	Contours detected: 2	Expected: 3
+
+- Glyph name: uni044F	Contours detected: 1	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain chws and vchw features?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 943 among a set of 23 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 594:
+less, greater</p>
+<p>Width = 554:
+equal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️⚠️⚠️</span>
+<h3>Check glyphs in mark glyph class are non-spacing.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+acute (U+00B4), cedilla (U+00B8), circumflex (U+02C6), dieresis (U+00A8), dieresistonos (U+0385), grave (U+0060), macron (U+00AF), ring (U+02DA), tilde (U+02DC) and tonos (U+0384) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni20DD (U+20DD) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h3>Check GDEF mark glyph class doesn't have characters that are not marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+0060, U+00A8, U+00AF, U+00B4, U+00B8, U+02C6, U+02DA, U+02DC, U+0384 and U+0385 [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⚠️⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ ZenKurenaido-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: j̀ j́ j̃ j̈</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i⃝̀ i⃝́ i⃝̂ i⃝̃ i⃝̇ i⃝̈ i⃝̊ ĵ j̇ j̊ j̧̀ j̧́ ĵ̧ j̧̃ j̧̇ j̧̈ j̧̊ j⃝̀ j⃝́ j⃝̂</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Belarusian (Cyrl, 10,064,517 speakers), Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>8</td>
+                <td>26</td>
+                <td>73</td>
+                <td>15</td>
+                <td>341</td>
+            </tr>
+            <tr>
+                <td>1%</td>
+                <td>2%</td>
+                <td>7%</td>
+                <td>20%</td>
+                <td>4%</td>
+                <td>94%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>All tabular figures must have the same width across the RIBBI-family.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/tnum_horizontal_metrics&gt;</div>
+
+<details><summary>🔥 <strong>Family check</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The most common tabular glyph width is 700. But there are other tabular glyphs with different widths such as the following ones:
+{350: ['period.tnum', 'comma.tnum', 'colon.tnum', 'period.tnum', 'comma.tnum', 'colon.tnum'], 400: ['slash.tnum', 'slash.tnum']}. [code: inconsistent-widths]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02B9 MODIFIER LETTER PRIME: not included in any glyphset definition</li>
+<li>U+02BA MODIFIER LETTER DOUBLE PRIME: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: tai-le, cherokee, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: tifinagh, tai-le, cherokee, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, cherokee, coptic</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: tifinagh, gothic, cherokee, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, tai-le, canadian-aboriginal, malayalam, coptic</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: tai-le, gothic, coptic</li>
+<li>U+0309 COMBINING HOOK ABOVE: try adding tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0323 COMBINING DOT BELOW: try adding one of: tifinagh, malayalam, cherokee, coptic</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032E COMBINING BREVE BELOW: not included in any glyphset definition</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: tifinagh, gothic, cherokee</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
+<li>U+2010 HYPHEN: try adding one of: cham, lisu, kayah-li, kharoshthi, sundanese, kaithi, syloti-nagri, arabic, coptic</li>
+<li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
+<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2080 SUBSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
+<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
+<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
+<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
+<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+2190 LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2192 RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2194 LEFT RIGHT ARROW: not included in any glyphset definition</li>
+<li>U+2195 UP DOWN ARROW: not included in any glyphset definition</li>
+<li>U+2196 NORTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+2197 NORTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2198 SOUTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2199 SOUTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2205 EMPTY SET: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+23F8 DOUBLE VERTICAL BAR: not included in any glyphset definition</li>
+<li>U+25A0 BLACK SQUARE: not included in any glyphset definition</li>
+<li>U+25A1 WHITE SQUARE: not included in any glyphset definition</li>
+<li>U+25AA BLACK SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AB WHITE SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B4 BLACK UP-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B5 WHITE UP-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B8 BLACK RIGHT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B9 WHITE RIGHT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BE BLACK DOWN-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BF WHITE DOWN-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C6 BLACK DIAMOND: not included in any glyphset definition</li>
+<li>U+25C7 WHITE DIAMOND: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+25CB WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: bengali, cham, sinhala, buginese, tai-viet, khmer, kannada, lepcha, mongolian, coptic, mandaic, tagalog, kayah-li, kharoshthi, limbu, new-tai-lue, tifinagh, thai, gurmukhi, tagbanwa, lao, buhid, canadian-aboriginal, chakma, brahmi, gujarati, rejang, malayalam, telugu, batak, tai-le, oriya, balinese, myanmar, kaithi, syloti-nagri, thaana, phags-pa, hanunoo, javanese, sundanese, tamil, devanagari, hebrew, meetei-mayek, tibetan</li>
+<li>U+25CF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25E6 WHITE BULLET: not included in any glyphset definition</li>
+<li>U+2661 WHITE HEART SUIT: not included in any glyphset definition</li>
+<li>U+2665 BLACK HEART SUIT: not included in any glyphset definition</li>
+<li>U+2713 CHECK MARK: not included in any glyphset definition</li>
+<li>U+2714 HEAVY CHECK MARK: not included in any glyphset definition</li>
+<li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+E132 : not included in any glyphset definition</li>
+<li>U+E133 : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic</code>, <code>cyrillic-ext</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02B9 MODIFIER LETTER PRIME: not included in any glyphset definition</li>
+<li>U+02BA MODIFIER LETTER DOUBLE PRIME: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: tai-le, cherokee, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: tifinagh, tai-le, cherokee, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, cherokee, coptic</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: tifinagh, gothic, cherokee, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, tai-le, canadian-aboriginal, malayalam, coptic</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: tai-le, gothic, coptic</li>
+<li>U+0309 COMBINING HOOK ABOVE: try adding tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0323 COMBINING DOT BELOW: try adding one of: tifinagh, malayalam, cherokee, coptic</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032E COMBINING BREVE BELOW: not included in any glyphset definition</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: tifinagh, gothic, cherokee</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
+<li>U+2010 HYPHEN: try adding one of: cham, lisu, kayah-li, kharoshthi, sundanese, kaithi, syloti-nagri, arabic, coptic</li>
+<li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
+<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2080 SUBSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
+<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
+<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
+<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
+<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+2190 LEFTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2192 RIGHTWARDS ARROW: not included in any glyphset definition</li>
+<li>U+2194 LEFT RIGHT ARROW: not included in any glyphset definition</li>
+<li>U+2195 UP DOWN ARROW: not included in any glyphset definition</li>
+<li>U+2196 NORTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+2197 NORTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2198 SOUTH EAST ARROW: not included in any glyphset definition</li>
+<li>U+2199 SOUTH WEST ARROW: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2205 EMPTY SET: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+222B INTEGRAL: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+23F8 DOUBLE VERTICAL BAR: not included in any glyphset definition</li>
+<li>U+25A0 BLACK SQUARE: not included in any glyphset definition</li>
+<li>U+25A1 WHITE SQUARE: not included in any glyphset definition</li>
+<li>U+25AA BLACK SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AB WHITE SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B4 BLACK UP-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B5 WHITE UP-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B8 BLACK RIGHT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25B9 WHITE RIGHT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BE BLACK DOWN-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25BF WHITE DOWN-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: not included in any glyphset definition</li>
+<li>U+25C6 BLACK DIAMOND: not included in any glyphset definition</li>
+<li>U+25C7 WHITE DIAMOND: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+25CB WHITE CIRCLE: not included in any glyphset definition</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: bengali, cham, sinhala, buginese, tai-viet, khmer, kannada, lepcha, mongolian, coptic, mandaic, tagalog, kayah-li, kharoshthi, limbu, new-tai-lue, tifinagh, thai, gurmukhi, tagbanwa, lao, buhid, canadian-aboriginal, chakma, brahmi, gujarati, rejang, malayalam, telugu, batak, tai-le, oriya, balinese, myanmar, kaithi, syloti-nagri, thaana, phags-pa, hanunoo, javanese, sundanese, tamil, devanagari, hebrew, meetei-mayek, tibetan</li>
+<li>U+25CF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25E6 WHITE BULLET: not included in any glyphset definition</li>
+<li>U+2661 WHITE HEART SUIT: not included in any glyphset definition</li>
+<li>U+2665 BLACK HEART SUIT: not included in any glyphset definition</li>
+<li>U+2713 CHECK MARK: not included in any glyphset definition</li>
+<li>U+2714 HEAVY CHECK MARK: not included in any glyphset definition</li>
+<li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+E132 : not included in any glyphset definition</li>
+<li>U+E133 : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic</code>, <code>cyrillic-ext</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 1.2Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 1.4Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_name_values&gt;</div>
+
+<details><summary>🔥 ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.name field (&quot;Shantell Sans&quot;) does not match correct font name format (&quot;Shantell Sans Light&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.name field (&quot;Shantell Sans&quot;) does not match correct font name format (&quot;Shantell Sans Light&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Glyphs are similiar to Google Fonts version?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/production_glyphs_similarity&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* .notdef
+* A
+* A.alt1
+* A.alt2
+* A.alt3
+* AE
+* AEacute
+* Aacute
+* Aacute.alt1
+* Aacute.alt2
+* Abreve
+* Acircumflex
+* Acyr.alt1
+* Acyr.alt2
+* Acyr.alt3
+* Adieresis
+* Adieresis.alt1
+* Adieresis.alt2
+* Agrave
+* Amacron
+* Aogonek
+* Aring
+* Aringacute
+* Atilde
+* Atilde.alt1
+* Atilde.alt2
+* B
+* B.alt1
+* B.alt2
+* B.alt3
+* Becyr.alt1
+* Becyr.alt2
+* Becyr.alt3
+* C
+* C.alt1
+* C.alt2
+* C.alt3
+* Cacute
+* Ccaron
+* Ccedilla
+* Ccedilla.alt1
+* Ccedilla.alt2
+* Ccircumflex
+* Cdotaccent
+* Checyr.alt1
+* Checyr.alt2
+* Checyr.alt3
+* Chetailcyr.alt1
+* Chetailcyr.alt2
+* Chetailcyr.alt3
+* D
+* D.alt1
+* D.alt2
+* D.alt3
+* Dcaron
+* Dcroat
+* Decyr.alt1
+* Decyr.alt2
+* Decyr.alt3
+* Djecyr.alt1
+* Djecyr.alt2
+* Djecyr.alt3
+* Dzecyr.alt1
+* Dzecyr.alt2
+* Dzecyr.alt3
+* Dzhecyr.alt1
+* Dzhecyr.alt2
+* Dzhecyr.alt3
+* E
+* E.alt1
+* E.alt2
+* E.alt3
+* Eacute
+* Eacute.alt1
+* Eacute.alt2
+* Ebreve
+* Ecaron
+* Ecircumflex
+* Edieresis
+* Edotaccent
+* Efcyr.alt1
+* Efcyr.alt2
+* Efcyr.alt3
+* Egrave
+* Egrave.alt1
+* Egrave.alt2
+* Egrave.alt3
+* Elcyr.alt1
+* Elcyr.alt2
+* Elcyr.alt3
+* Emacron
+* Emcyr.alt1
+* Emcyr.alt2
+* Emcyr.alt3
+* Encyr.alt1
+* Encyr.alt2
+* Encyr.alt3
+* Eng
+* Entailcyr.alt1
+* Entailcyr.alt2
+* Entailcyr.alt3
+* Eogonek
+* Ercyr.alt1
+* Ercyr.alt2
+* Ercyr.alt3
+* Ereversedcyr.alt1
+* Ereversedcyr.alt2
+* Ereversedcyr.alt3
+* Escyr.alt1
+* Escyr.alt2
+* Escyr.alt3
+* Eth
+* Eukrcyr.alt1
+* Eukrcyr.alt2
+* Eukrcyr.alt3
+* Euro
+* F
+* F.alt1
+* F.alt2
+* F.alt3
+* Fitacyr.alt1
+* Fitacyr.alt2
+* Fitacyr.alt3
+* G
+* G.alt1
+* G.alt2
+* G.alt3
+* Gbreve
+* Gcaron
+* Gcircumflex
+* Gdotaccent
+* Gecyr.alt1
+* Gecyr.alt2
+* Gecyr.alt3
+* Germandbls.alt1
+* Germandbls.alt2
+* Gestrokecyr.alt1
+* Gestrokecyr.alt2
+* Gestrokecyr.alt3
+* Geupcyr.alt1
+* Geupcyr.alt2
+* Geupcyr.alt3
+* Gjecyr.alt1
+* Gjecyr.alt2
+* Gjecyr.alt3
+* H
+* H.alt1
+* H.alt2
+* H.alt3
+* Hacyr.alt1
+* Hacyr.alt2
+* Hacyr.alt3
+* Hardcyr.alt1
+* Hardcyr.alt2
+* Hardcyr.alt3
+* Hbar
+* Hcircumflex
+* I
+* I.alt1
+* I.alt2
+* I.alt3
+* IJ
+* Iacute
+* Iacute.alt1
+* Iacute.alt2
+* Ibreve
+* Icircumflex
+* Icyr.alt1
+* Icyr.alt2
+* Icyr.alt3
+* Idieresis
+* Idotaccent
+* Iecyr.alt1
+* Iecyr.alt2
+* Iecyr.alt3
+* Iegravecyr.alt1
+* Iegravecyr.alt2
+* Iegravecyr.alt3
+* Igrave
+* Igravecyr.alt1
+* Igravecyr.alt2
+* Igravecyr.alt3
+* Imacron
+* Imacroncyr.alt1
+* Imacroncyr.alt2
+* Imacroncyr.alt3
+* Iocyr.alt1
+* Iocyr.alt2
+* Iocyr.alt3
+* Iogonek
+* Ishortcyr.alt1
+* Ishortcyr.alt2
+* Ishortcyr.alt3
+* Itilde
+* Iukrcyr.alt1
+* Iukrcyr.alt2
+* Iukrcyr.alt3
+* Izhitsacyr.alt1
+* Izhitsacyr.alt2
+* Izhitsacyr.alt3
+* J
+* J.alt1
+* J.alt2
+* J.alt3
+* Jcircumflex
+* Jecyr.alt1
+* Jecyr.alt2
+* Jecyr.alt3
+* K
+* K.alt1
+* K.alt2
+* K.alt3
+* Kacyr.alt1
+* Kacyr.alt2
+* Kacyr.alt3
+* Katailcyr.alt1
+* Katailcyr.alt2
+* Katailcyr.alt3
+* Kjecyr.alt1
+* Kjecyr.alt2
+* Kjecyr.alt3
+* L
+* L.alt1
+* L.alt2
+* L.alt3
+* Lacute
+* Lcaron
+* Ldot
+* Ljecyr.alt1
+* Ljecyr.alt2
+* Ljecyr.alt3
+* Lslash
+* M
+* M.alt1
+* M.alt2
+* M.alt3
+* N
+* N.alt1
+* N.alt2
+* N.alt3
+* Nacute
+* Ncaron
+* Njecyr.alt1
+* Njecyr.alt2
+* Njecyr.alt3
+* Ntilde
+* Ntilde.alt1
+* Ntilde.alt2
+* O
+* O.alt1
+* O.alt2
+* O.alt3
+* OE
+* Oacute
+* Oacute.alt1
+* Oacute.alt2
+* Obarcyr.alt1
+* Obarcyr.alt2
+* Obarcyr.alt3
+* Obreve
+* Ocircumflex
+* Ocyr.alt1
+* Ocyr.alt2
+* Ocyr.alt3
+* Odieresis
+* Odieresis.alt1
+* Odieresis.alt2
+* Ograve
+* Ohorn
+* Ohungarumlaut
+* Omacron
+* Oslash
+* Oslashacute
+* Otilde
+* P
+* P.alt1
+* P.alt2
+* P.alt3
+* Palochkacyr.alt1
+* Palochkacyr.alt2
+* Palochkacyr.alt3
+* Pecyr.alt1
+* Pecyr.alt2
+* Pecyr.alt3
+* Q
+* Q.alt1
+* Q.alt2
+* Q.alt3
+* R
+* R.alt1
+* R.alt2
+* R.alt3
+* Racute
+* Rcaron
+* S
+* S.alt1
+* S.alt2
+* S.alt3
+* Sacute
+* Scaron
+* Scedilla
+* Schwacyr.alt1
+* Schwacyr.alt2
+* Schwacyr.alt3
+* Scircumflex
+* Shacyr.alt1
+* Shacyr.alt2
+* Shacyr.alt3
+* Shchacyr.alt1
+* Shchacyr.alt2
+* Shchacyr.alt3
+* Shhacyr.alt1
+* Shhacyr.alt2
+* Shhacyr.alt3
+* Softcyr.alt1
+* Softcyr.alt2
+* Softcyr.alt3
+* T
+* T.alt1
+* T.alt2
+* T.alt3
+* Tbar
+* Tcaron
+* Tecyr.alt1
+* Tecyr.alt2
+* Tecyr.alt3
+* Thorn
+* Thorn.alt1
+* Thorn.alt2
+* Tsecyr.alt1
+* Tsecyr.alt2
+* Tsecyr.alt3
+* Tshecyr.alt1
+* Tshecyr.alt2
+* Tshecyr.alt3
+* U
+* U.alt1
+* U.alt2
+* U.alt3
+* Uacute
+* Ubreve
+* Ucircumflex
+* Ucyr.alt1
+* Ucyr.alt2
+* Ucyr.alt3
+* Udieresis
+* Udieresis.alt1
+* Udieresis.alt2
+* Ugrave
+* Uhorn
+* Uhungarumlaut
+* Umacron
+* Umacroncyr.alt1
+* Umacroncyr.alt2
+* Umacroncyr.alt3
+* Uogonek
+* Uring
+* Ushortcyr.alt1
+* Ushortcyr.alt2
+* Ushortcyr.alt3
+* Ustraightcyr.alt1
+* Ustraightcyr.alt2
+* Ustraightcyr.alt3
+* Ustraightstrokecyr.alt1
+* Ustraightstrokecyr.alt2
+* Ustraightstrokecyr.alt3
+* Utilde
+* V
+* V.alt1
+* V.alt2
+* V.alt3
+* Vecyr.alt1
+* Vecyr.alt2
+* Vecyr.alt3
+* W
+* W.alt1
+* W.alt2
+* W.alt3
+* Wacute
+* Wcircumflex
+* Wdieresis
+* Wgrave
+* X
+* X.alt1
+* X.alt2
+* X.alt3
+* Xatailcyr.alt1
+* Xatailcyr.alt2
+* Xatailcyr.alt3
+* Y
+* Y.alt1
+* Y.alt2
+* Y.alt3
+* Yacute
+* Yacyr.alt1
+* Yacyr.alt2
+* Yacyr.alt3
+* Yatcyr.alt1
+* Yatcyr.alt2
+* Yatcyr.alt3
+* Ycircumflex
+* Ydieresis
+* Ygrave
+* Ylongcyr.alt1
+* Ylongcyr.alt2
+* Ylongcyr.alt3
+* Yucyr.alt1
+* Yucyr.alt2
+* Yucyr.alt3
+* Yukrcyr.alt1
+* Yukrcyr.alt2
+* Yukrcyr.alt3
+* Z
+* Z.alt1
+* Z.alt2
+* Z.alt3
+* Zacute
+* Zcaron
+* Zdotaccent
+* Zecyr.alt1
+* Zecyr.alt2
+* Zecyr.alt3
+* Zhecyr.alt1
+* Zhecyr.alt2
+* Zhecyr.alt3
+* Zhetailcyr.alt1
+* Zhetailcyr.alt2
+* Zhetailcyr.alt3
+* a
+* a.alt1
+* a.alt2
+* a.alt3
+* aacute
+* aacute.alt1
+* aacute.alt2
+* abreve
+* acircumflex
+* acyr.alt1
+* acyr.alt2
+* acyr.alt3
+* adieresis
+* adieresis.alt1
+* adieresis.alt2
+* ae
+* ae.alt1
+* ae.alt2
+* aeacute
+* agrave
+* amacron
+* ampersand
+* ampersand.alt1
+* ampersand.alt2
+* aogonek
+* approxequal
+* aring
+* aringacute
+* arrowdown
+* arrowleft
+* arrowleftright
+* arrowright
+* arrowup
+* arrowupdown
+* asciicircum
+* asciicircum.alt1
+* asciicircum.alt2
+* asciitilde
+* asciitilde.alt1
+* asciitilde.alt2
+* asterisk
+* asterisk.alt1
+* asterisk.alt2
+* at
+* at.alt1
+* at.alt2
+* at.case
+* atilde
+* atilde.alt1
+* atilde.alt2
+* b
+* b.alt1
+* b.alt2
+* b.alt3
+* backslash
+* backslash.alt1
+* backslash.alt2
+* backslash.case
+* bar
+* bar.alt1
+* bar.alt2
+* becyr.alt1
+* becyr.alt2
+* becyr.alt3
+* braceleft
+* braceleft.alt1
+* braceleft.alt2
+* braceleft.case
+* braceright
+* braceright.alt1
+* braceright.alt2
+* braceright.case
+* bracketangleleft.case
+* bracketangleright.case
+* bracketleft
+* bracketleft.alt1
+* bracketleft.alt2
+* bracketleft.case
+* bracketright
+* bracketright.alt1
+* bracketright.alt2
+* bracketright.case
+* breveacutecomb
+* brevegravecomb
+* brevehookabovecomb
+* brevetildecomb
+* brokenbar
+* c
+* c.alt1
+* c.alt2
+* c.alt3
+* cacute
+* ccaron
+* ccedilla
+* ccedilla.alt1
+* ccedilla.alt2
+* ccircumflex
+* cdotaccent
+* cent
+* checyr.alt1
+* checyr.alt2
+* checyr.alt3
+* chetailcyr.alt1
+* chetailcyr.alt2
+* chetailcyr.alt3
+* circlewhite
+* circumflexacutecomb
+* circumflexgravecomb
+* circumflexhookabovecomb
+* circumflextildecomb
+* colon
+* colon.alt1
+* colon.alt2
+* colon.tnum
+* colonmonetary
+* comma
+* comma.alt1
+* comma.alt2
+* comma.tnum
+* copyright
+* currency
+* d
+* d.alt1
+* d.alt2
+* d.alt3
+* dagger
+* daggerdbl
+* dcaron
+* dcroat
+* decyr.alt1
+* decyr.alt2
+* decyr.alt3
+* degree
+* dieresismacroncomb
+* divide
+* djecyr.alt1
+* djecyr.alt2
+* djecyr.alt3
+* dollar
+* dollar.alt1
+* dollar.alt2
+* dong
+* dotlessi
+* dotmacroncomb
+* dzecyr.alt1
+* dzecyr.alt2
+* dzecyr.alt3
+* dzhecyr.alt1
+* dzhecyr.alt2
+* dzhecyr.alt3
+* e
+* e.alt1
+* e.alt2
+* e.alt3
+* eacute
+* eacute.alt1
+* eacute.alt2
+* ebreve
+* ecaron
+* ecircumflex
+* edieresis
+* edotaccent
+* efcyr.alt1
+* efcyr.alt2
+* efcyr.alt3
+* egrave
+* egrave.alt1
+* egrave.alt2
+* egrave.alt3
+* eight
+* eight.alt1
+* eight.alt2
+* eight.dnom
+* eight.numr
+* eight.tnum
+* eight.tnum.alt1
+* eight.tnum.alt2
+* elcyr.alt1
+* elcyr.alt2
+* elcyr.alt3
+* ellipsis
+* emacron
+* emcyr.alt1
+* emcyr.alt2
+* emcyr.alt3
+* emdash
+* emdash.case
+* emptyset
+* encyr.alt1
+* encyr.alt2
+* encyr.alt3
+* endash
+* endash.alt1
+* endash.alt2
+* endash.case
+* eng
+* entailcyr.alt1
+* entailcyr.alt2
+* entailcyr.alt3
+* eogonek
+* equal
+* equal.alt1
+* equal.alt2
+* ercyr.alt1
+* ercyr.alt2
+* ercyr.alt3
+* ereversedcyr.alt1
+* ereversedcyr.alt2
+* ereversedcyr.alt3
+* escyr.alt1
+* escyr.alt2
+* escyr.alt3
+* estimated
+* eth
+* eth.alt1
+* eth.alt2
+* eukrcyr.alt1
+* eukrcyr.alt2
+* eukrcyr.alt3
+* exclam
+* exclam.alt1
+* exclam.alt2
+* exclamdown
+* exclamdown.case
+* f
+* f.alt1
+* f.alt2
+* f.alt3
+* f_f
+* f_f_i
+* f_f_l
+* fhook
+* fi
+* fitacyr.alt1
+* fitacyr.alt2
+* fitacyr.alt3
+* five
+* five.alt1
+* five.alt2
+* five.dnom
+* five.numr
+* five.tnum
+* fiveeighths
+* fl
+* four
+* four.alt1
+* four.alt2
+* four.dnom
+* four.numr
+* four.tnum
+* fraction
+* g
+* g.alt1
+* g.alt2
+* g.alt3
+* gbreve
+* gcaron
+* gcircumflex
+* gdotaccent
+* gecyr.alt1
+* gecyr.alt2
+* gecyr.alt3
+* germandbls
+* germandbls.alt1
+* germandbls.alt2
+* gestrokecyr.alt1
+* gestrokecyr.alt2
+* gestrokecyr.alt3
+* geupcyr.alt1
+* geupcyr.alt2
+* geupcyr.alt3
+* gjecyr.alt1
+* gjecyr.alt2
+* gjecyr.alt3
+* gmtrdiamondblack
+* gmtrdiamondwhite
+* greater
+* greater.alt1
+* greater.alt2
+* greaterequal
+* guillemotleft
+* guillemotleft.case
+* guillemotright
+* guillemotright.case
+* guilsinglleft
+* guilsinglleft.case
+* guilsinglright
+* guilsinglright.case
+* h
+* h.alt1
+* h.alt2
+* h.alt3
+* hacyr.alt1
+* hacyr.alt2
+* hacyr.alt3
+* hardcyr.alt1
+* hardcyr.alt2
+* hardcyr.alt3
+* hbar
+* hcircumflex
+* hyphen
+* hyphen.alt1
+* hyphen.alt2
+* hyphen.case
+* hyphen.line
+* hyphen_line.10
+* hyphen_line.11
+* hyphen_line.12
+* hyphen_line.13
+* hyphen_line.14
+* hyphen_line.15
+* hyphen_line.16
+* hyphen_line.17
+* hyphen_line.18
+* hyphen_line.19
+* hyphen_line.20
+* hyphen_line.21
+* hyphen_line.22
+* hyphen_line.23
+* hyphen_line.24
+* hyphen_line.25
+* hyphen_line.26
+* hyphen_line.27
+* hyphen_line.28
+* hyphen_line.29
+* hyphen_line.3
+* hyphen_line.30
+* hyphen_line.31
+* hyphen_line.32
+* hyphen_line.33
+* hyphen_line.34
+* hyphen_line.35
+* hyphen_line.36
+* hyphen_line.37
+* hyphen_line.38
+* hyphen_line.39
+* hyphen_line.4
+* hyphen_line.40
+* hyphen_line.41
+* hyphen_line.42
+* hyphen_line.43
+* hyphen_line.44
+* hyphen_line.45
+* hyphen_line.46
+* hyphen_line.47
+* hyphen_line.48
+* hyphen_line.49
+* hyphen_line.5
+* hyphen_line.50
+* hyphen_line.6
+* hyphen_line.7
+* hyphen_line.8
+* hyphen_line.9
+* i
+* i.alt1
+* i.alt2
+* i.alt3
+* i.loclTRK
+* iacute
+* iacute.alt1
+* iacute.alt2
+* ibreve
+* icircumflex
+* icyr.alt1
+* icyr.alt2
+* icyr.alt3
+* idieresis
+* idotless.alt1
+* idotless.alt2
+* idotless.alt3
+* iecyr.alt1
+* iecyr.alt2
+* iecyr.alt3
+* iegravecyr.alt1
+* iegravecyr.alt2
+* iegravecyr.alt3
+* igrave
+* igravecyr.alt1
+* igravecyr.alt2
+* igravecyr.alt3
+* ij
+* imacron
+* imacroncyr.alt1
+* imacroncyr.alt2
+* imacroncyr.alt3
+* infinity
+* integral
+* iocyr.alt1
+* iocyr.alt2
+* iocyr.alt3
+* iogonek
+* ishortcyr.alt1
+* ishortcyr.alt2
+* ishortcyr.alt3
+* itilde
+* iukrcyr.alt1
+* iukrcyr.alt2
+* iukrcyr.alt3
+* izhitsacyr.alt1
+* izhitsacyr.alt2
+* izhitsacyr.alt3
+* j
+* j.alt1
+* j.alt2
+* j.alt3
+* jcircumflex
+* jdotless.alt1
+* jdotless.alt2
+* jdotless.alt3
+* jecyr.alt1
+* jecyr.alt2
+* jecyr.alt3
+* k
+* k.alt1
+* k.alt2
+* k.alt3
+* kacyr.alt1
+* kacyr.alt2
+* kacyr.alt3
+* katailcyr.alt1
+* katailcyr.alt2
+* katailcyr.alt3
+* kjecyr.alt1
+* kjecyr.alt2
+* kjecyr.alt3
+* kra
+* l
+* l.alt1
+* l.alt2
+* l.alt3
+* lacute
+* lcaron
+* ldot
+* less
+* less.alt1
+* less.alt2
+* lessequal
+* lira
+* ljecyr.alt1
+* ljecyr.alt2
+* ljecyr.alt3
+* logicalnot
+* lozenge
+* lslash
+* m
+* m.alt1
+* m.alt2
+* m.alt3
+* macron
+* macroncomb.alt1
+* macroncomb.alt2
+* macroncomb.alt3
+* minus
+* minute
+* multiply
+* n
+* n.alt1
+* n.alt2
+* n.alt3
+* nacute
+* ncaron
+* newsheqel
+* nine
+* nine.alt1
+* nine.alt2
+* nine.dnom
+* nine.numr
+* nine.tnum
+* nine.tnum.alt1
+* nine.tnum.alt2
+* njecyr.alt1
+* njecyr.alt2
+* njecyr.alt3
+* notequal
+* ntilde
+* ntilde.alt1
+* ntilde.alt2
+* numbersign
+* numbersign.alt1
+* numbersign.alt2
+* o
+* o.alt1
+* o.alt2
+* o.alt3
+* oacute
+* oacute.alt1
+* oacute.alt2
+* obarcyr.alt1
+* obarcyr.alt2
+* obarcyr.alt3
+* obreve
+* ocircumflex
+* ocyr.alt1
+* ocyr.alt2
+* ocyr.alt3
+* odieresis
+* odieresis.alt1
+* odieresis.alt2
+* oe
+* ograve
+* ohm
+* ohorn
+* ohungarumlaut
+* omacron
+* one
+* one.alt1
+* one.alt2
+* one.dnom
+* one.numr
+* one.tnum
+* oneeighth
+* onehalf
+* onequarter
+* openbullet
+* openbullet.case
+* ordfeminine
+* ordmasculine
+* oslash
+* oslashacute
+* otilde
+* overlaystrokeshortcmb
+* p
+* p.alt1
+* p.alt2
+* p.alt3
+* palochkacyr.alt1
+* palochkacyr.alt2
+* palochkacyr.alt3
+* paragraph
+* parenleft
+* parenleft.alt1
+* parenleft.alt2
+* parenleft.case
+* parenright
+* parenright.alt1
+* parenright.alt2
+* parenright.case
+* partialdiff
+* pecyr.alt1
+* pecyr.alt2
+* pecyr.alt3
+* percent
+* percent.alt1
+* percent.alt2
+* perthousand
+* pi
+* plus
+* plus.alt1
+* plus.alt2
+* plusminus
+* product
+* q
+* q.alt1
+* q.alt2
+* q.alt3
+* question
+* question.alt1
+* question.alt2
+* questiondown
+* questiondown.case
+* quotedbl
+* quotedbl.alt1
+* quotedbl.alt2
+* quotedblbase
+* quotedblleft
+* quotedblleft.alt1
+* quotedblleft.alt2
+* quotedblright
+* quotedblright.alt1
+* quotedblright.alt2
+* quoteleft
+* quoteleft.alt1
+* quoteleft.alt2
+* quoteright
+* quoteright.alt1
+* quoteright.alt2
+* quotesinglbase
+* r
+* r.alt1
+* r.alt2
+* r.alt3
+* racute
+* radical
+* rcaron
+* registered
+* ring
+* ringacutecomb
+* s
+* s.alt1
+* s.alt2
+* s.alt3
+* sacute
+* scaron
+* scedilla
+* schwacyr.alt1
+* schwacyr.alt2
+* schwacyr.alt3
+* scircumflex
+* second
+* section
+* semicolon
+* semicolon.alt1
+* semicolon.alt2
+* seven
+* seven.alt1
+* seven.alt2
+* seven.dnom
+* seven.numr
+* seven.tnum
+* seven.tnum.alt1
+* seven.tnum.alt2
+* seveneighths
+* shacyr.alt1
+* shacyr.alt2
+* shacyr.alt3
+* shchacyr.alt1
+* shchacyr.alt2
+* shchacyr.alt3
+* shhacyr.alt1
+* shhacyr.alt2
+* shhacyr.alt3
+* six
+* six.alt1
+* six.alt2
+* six.dnom
+* six.numr
+* six.tnum
+* six.tnum.alt1
+* six.tnum.alt2
+* slash
+* slash.alt1
+* slash.alt2
+* slash.case
+* slash.tnum
+* softcyr.alt1
+* softcyr.alt2
+* softcyr.alt3
+* squaresmallblack
+* squaresmallwhite
+* squarewhite
+* sterling
+* summation
+* t
+* t.alt1
+* t.alt2
+* t.alt3
+* tbar
+* tcaron
+* tecyr.alt1
+* tecyr.alt2
+* tecyr.alt3
+* thaibaht
+* thorn
+* thorn.alt1
+* thorn.alt2
+* three
+* three.alt1
+* three.alt2
+* three.dnom
+* three.numr
+* three.tnum
+* three.tnum.alt1
+* three.tnum.alt2
+* threeeighths
+* threequarters
+* tildemacroncomb
+* trademark
+* triangledownblack
+* triangledownsmallblack
+* triangledownsmallwhite
+* triangledownwhite
+* triangleleftblack
+* triangleleftsmallblack
+* triangleleftsmallwhite
+* triangleleftwhite
+* trianglerightsmallblack
+* trianglerightsmallwhite
+* trianglerightwhite
+* triangleupblack
+* triangleupsmallblack
+* triangleupsmallwhite
+* triangleupwhite
+* tsecyr.alt1
+* tsecyr.alt2
+* tsecyr.alt3
+* tshecyr.alt1
+* tshecyr.alt2
+* tshecyr.alt3
+* two
+* two.alt1
+* two.alt2
+* two.dnom
+* two.numr
+* two.tnum
+* two.tnum.alt1
+* two.tnum.alt2
+* u
+* u.alt1
+* u.alt2
+* u.alt3
+* uacute
+* ubreve
+* ucircumflex
+* ucyr.alt1
+* ucyr.alt2
+* ucyr.alt3
+* udieresis
+* udieresis.alt1
+* udieresis.alt2
+* ugrave
+* uhorn
+* uhungarumlaut
+* umacron
+* umacroncyr.alt1
+* umacroncyr.alt2
+* umacroncyr.alt3
+* underscore
+* underscore.alt1
+* underscore.alt2
+* uni00AD
+* uni00B2
+* uni00B3
+* uni00B5
+* uni00B9
+* uni0122
+* uni0123
+* uni0136
+* uni0137
+* uni013B
+* uni013C
+* uni0145
+* uni0146
+* uni0156
+* uni0157
+* uni0162
+* uni0163
+* uni018F
+* uni01C4
+* uni01C5
+* uni01C6
+* uni01C7
+* uni01C8
+* uni01C9
+* uni01CA
+* uni01CB
+* uni01CC
+* uni01CD
+* uni01CE
+* uni01D3
+* uni01D4
+* uni01EA
+* uni01EB
+* uni0200
+* uni0201
+* uni0202
+* uni0203
+* uni0204
+* uni0205
+* uni0206
+* uni0207
+* uni0208
+* uni0209
+* uni020A
+* uni020B
+* uni020C
+* uni020D
+* uni020E
+* uni020F
+* uni0210
+* uni0211
+* uni0212
+* uni0213
+* uni0214
+* uni0215
+* uni0216
+* uni0217
+* uni0218
+* uni0219
+* uni021A
+* uni021B
+* uni022A
+* uni022B
+* uni022C
+* uni022D
+* uni0230
+* uni0231
+* uni0232
+* uni0233
+* uni0237
+* uni0259
+* uni02B9
+* uni02BA
+* uni02BC
+* uni0304
+* uni030A
+* uni030F
+* uni0331
+* uni03A9
+* uni0400
+* uni0401
+* uni0402
+* uni0403
+* uni0404
+* uni0405
+* uni0406
+* uni0407
+* uni0408
+* uni0409
+* uni040A
+* uni040B
+* uni040C
+* uni040D
+* uni040E
+* uni040F
+* uni0410
+* uni0411
+* uni0412
+* uni0413
+* uni0414
+* uni0415
+* uni0416
+* uni0417
+* uni0418
+* uni0419
+* uni041A
+* uni041B
+* uni041C
+* uni041D
+* uni041E
+* uni041F
+* uni0420
+* uni0421
+* uni0422
+* uni0423
+* uni0424
+* uni0424.loclBGR
+* uni0425
+* uni0426
+* uni0427
+* uni0428
+* uni0429
+* uni042A
+* uni042B
+* uni042C
+* uni042D
+* uni042E
+* uni042F
+* uni0430
+* uni0431
+* uni0431.loclSRB
+* uni0432
+* uni0432.loclBGR
+* uni0433
+* uni0433.loclBGR
+* uni0434
+* uni0434.loclBGR
+* uni0435
+* uni0436
+* uni0436.loclBGR
+* uni0437
+* uni0437.loclBGR
+* uni0438
+* uni0439
+* uni043A
+* uni043A.loclBGR
+* uni043B
+* uni043C
+* uni043D
+* uni043E
+* uni043F
+* uni043F.loclBGR
+* uni0440
+* uni0441
+* uni0442
+* uni0442.loclBGR
+* uni0443
+* uni0444
+* uni0445
+* uni0446
+* uni0446.loclBGR
+* uni0447
+* uni0448
+* uni0448.loclBGR
+* uni0449
+* uni0449.loclBGR
+* uni044A
+* uni044B
+* uni044C
+* uni044D
+* uni044E
+* uni044E.loclBGR
+* uni044F
+* uni0450
+* uni0451
+* uni0452
+* uni0453
+* uni0454
+* uni0455
+* uni0456
+* uni0457
+* uni0458
+* uni0459
+* uni045A
+* uni045B
+* uni045C
+* uni045D
+* uni045E
+* uni045F
+* uni0462
+* uni0463
+* uni046A
+* uni046B
+* uni0472
+* uni0473
+* uni0474
+* uni0475
+* uni0490
+* uni0491
+* uni0492
+* uni0493
+* uni0494
+* uni0495
+* uni0496
+* uni0497
+* uni0498
+* uni0499
+* uni049A
+* uni049B
+* uni049C
+* uni049D
+* uni04A0
+* uni04A1
+* uni04A2
+* uni04A3
+* uni04A4
+* uni04A5
+* uni04AA
+* uni04AB
+* uni04AE
+* uni04AF
+* uni04B0
+* uni04B1
+* uni04B2
+* uni04B3
+* uni04B6
+* uni04B7
+* uni04B8
+* uni04B9
+* uni04BA
+* uni04BB
+* uni04C0
+* uni04C1
+* uni04C2
+* uni04CB
+* uni04CC
+* uni04CF
+* uni04D0
+* uni04D1
+* uni04D2
+* uni04D3
+* uni04D4
+* uni04D5
+* uni04D6
+* uni04D7
+* uni04D8
+* uni04D9
+* uni04DC
+* uni04DD
+* uni04DE
+* uni04DF
+* uni04E2
+* uni04E3
+* uni04E4
+* uni04E5
+* uni04E6
+* uni04E7
+* uni04E8
+* uni04E9
+* uni04EE
+* uni04EF
+* uni04F0
+* uni04F1
+* uni04F2
+* uni04F3
+* uni04F4
+* uni04F5
+* uni04F6
+* uni04F7
+* uni04F8
+* uni04F9
+* uni051A
+* uni051B
+* uni051C
+* uni051D
+* uni1E9E
+* uni1EA0
+* uni1EA1
+* uni1EA2
+* uni1EA3
+* uni1EA4
+* uni1EA5
+* uni1EA6
+* uni1EA7
+* uni1EA8
+* uni1EA9
+* uni1EAA
+* uni1EAB
+* uni1EAC
+* uni1EAD
+* uni1EAE
+* uni1EAF
+* uni1EB0
+* uni1EB1
+* uni1EB2
+* uni1EB3
+* uni1EB4
+* uni1EB5
+* uni1EB6
+* uni1EB7
+* uni1EB8
+* uni1EB9
+* uni1EBA
+* uni1EBB
+* uni1EBC
+* uni1EBD
+* uni1EBE
+* uni1EBF
+* uni1EC0
+* uni1EC1
+* uni1EC2
+* uni1EC3
+* uni1EC4
+* uni1EC5
+* uni1EC6
+* uni1EC7
+* uni1EC8
+* uni1EC9
+* uni1ECA
+* uni1ECB
+* uni1ECC
+* uni1ECD
+* uni1ECE
+* uni1ECF
+* uni1ED0
+* uni1ED1
+* uni1ED2
+* uni1ED3
+* uni1ED4
+* uni1ED5
+* uni1ED6
+* uni1ED7
+* uni1ED8
+* uni1ED9
+* uni1EDA
+* uni1EDB
+* uni1EDC
+* uni1EDD
+* uni1EDE
+* uni1EDF
+* uni1EE0
+* uni1EE1
+* uni1EE2
+* uni1EE3
+* uni1EE4
+* uni1EE5
+* uni1EE6
+* uni1EE7
+* uni1EE8
+* uni1EE9
+* uni1EEA
+* uni1EEB
+* uni1EEC
+* uni1EED
+* uni1EEE
+* uni1EEF
+* uni1EF0
+* uni1EF1
+* uni1EF4
+* uni1EF5
+* uni1EF6
+* uni1EF7
+* uni1EF8
+* uni1EF9
+* uni2010
+* uni2052
+* uni2070
+* uni2074
+* uni2075
+* uni2076
+* uni2077
+* uni2078
+* uni2079
+* uni2080
+* uni2081
+* uni2082
+* uni2083
+* uni2084
+* uni2085
+* uni2086
+* uni2087
+* uni2088
+* uni2089
+* uni20A6
+* uni20A8
+* uni20A9
+* uni20AD
+* uni20AE
+* uni20B1
+* uni20B2
+* uni20B4
+* uni20B5
+* uni20B8
+* uni20B9
+* uni20BA
+* uni20BC
+* uni20BD
+* uni20BE
+* uni20BF
+* uni2113
+* uni2116
+* uni2153
+* uni2154
+* uni2196
+* uni2197
+* uni2198
+* uni2199
+* uni2206
+* uni2215
+* uni23F8
+* uni25B6
+* uni2661
+* uni2713
+* uni2714
+* uni27E8
+* uni27E9
+* uniE132
+* uniE133
+* uogonek
+* uring
+* ushortcyr.alt1
+* ushortcyr.alt2
+* ushortcyr.alt3
+* ustraightcyr.alt1
+* ustraightcyr.alt2
+* ustraightcyr.alt3
+* ustraightstrokecyr.alt1
+* ustraightstrokecyr.alt2
+* ustraightstrokecyr.alt3
+* utilde
+* v
+* v.alt1
+* v.alt2
+* v.alt3
+* vecyr.alt1
+* vecyr.alt2
+* vecyr.alt3
+* verticalbardbl
+* w
+* w.alt1
+* w.alt2
+* w.alt3
+* wacute
+* wcircumflex
+* wdieresis
+* wgrave
+* x
+* x.alt1
+* x.alt2
+* x.alt3
+* xatailcyr.alt1
+* xatailcyr.alt2
+* xatailcyr.alt3
+* y
+* y.alt1
+* y.alt2
+* y.alt3
+* yacute
+* yacyr.alt1
+* yacyr.alt2
+* yacyr.alt3
+* yatcyr.alt1
+* yatcyr.alt2
+* yatcyr.alt3
+* ycircumflex
+* ydieresis
+* yen
+* ygrave
+* ylongcyr.alt1
+* ylongcyr.alt2
+* ylongcyr.alt3
+* yucyr.alt1
+* yucyr.alt2
+* yucyr.alt3
+* yukrcyr.alt1
+* yukrcyr.alt2
+* yukrcyr.alt3
+* yukrcyr_yukrcyr
+* z
+* z.alt1
+* z.alt2
+* z.alt3
+* zacute
+* zcaron
+* zdotaccent
+* zecyr.alt1
+* zecyr.alt2
+* zecyr.alt3
+* zero
+* zero.alt1
+* zero.alt2
+* zero.dnom
+* zero.numr
+* zero.tnum
+* zero.tnum_zero
+* zero.zero
+* zhecyr.alt1
+* zhecyr.alt2
+* zhecyr.alt3
+* zhetailcyr.alt1
+* zhetailcyr.alt2 and zhetailcyr.alt3</p>
+</span></li></ul></div></details>
+<h3>Are there caret positions declared for every ligature?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f
+
+- i + l
+
+- hyphen + hyphen
+
+- emdash + emdash
+
+- emdash + hyphen
+
+- hyphen + emdash [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f
+
+- i + l
+
+- hyphen + hyphen
+
+- emdash + emdash
+
+- emdash + hyphen
+
+- hyphen + emdash [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>Validate METADATA.pb axes tags are defined in gf_axisregistry.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/gf_axisregistry_valid_tags&gt;</div>
+
+<details><summary>🔥 ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'BNCE' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'INFM' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'SPAC' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'BNCE' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'INFM' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'SPAC' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Check if category on METADATA.pb matches what can be inferred from the family name.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/category_hints&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Familyname seems to hint at &quot;SANS_SERIF&quot; but METADATA.pb declares it as &quot;['DISPLAY']&quot;. [code: inferred-category]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Familyname seems to hint at &quot;SANS_SERIF&quot; but METADATA.pb declares it as &quot;['DISPLAY']&quot;. [code: inferred-category]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>💥💥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- one.flagless
+
+- uni004A0301
+
+- uni006A0301
+
+- uni030A.A
+
+- uni20A9.001
+
+- zero.dnom_zero
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- one.flagless
+
+- uni004A0301
+
+- uni006A0301
+
+- uni030A.A
+
+- uni20A9.001
+
+- zero.dnom_zero
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Detect any interpolation issues in the font.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3b20&gt;</p>
+<pre><code>- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3bb0&gt;
+
+- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3c40&gt;
+
+- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3cd0&gt;
+
+- Contour 1 start point differs in glyph 'uni045F' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3a30&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3b20&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3b20&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3bb0&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3bb0&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3c40&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3c40&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3cd0&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10a1e3850&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x10dbe3cd0&gt; [code: interpolation-issues]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eaa0&gt;</p>
+<pre><code>- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eaa0&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eb30&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eb30&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ebc0&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ebc0&gt;
+
+- Contour 3 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ec50&gt;
+
+- Contour 4 start point differs in glyph 'uni20B1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ec50&gt;
+
+- Contour 1 start point differs in glyph 'uni046B' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eaa0&gt;
+
+- Contour 1 start point differs in glyph 'uni046B' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eb30&gt;
+
+- Contour 1 start point differs in glyph 'uni046B' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ebc0&gt;
+
+- Contour order differs in glyph 'uni20A9.001': [0, 1, 2, 3] in &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt;, [0, 2, 1, 3] in &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eaa0&gt;.
+
+- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eaa0&gt;
+
+- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eb30&gt;
+
+- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ebc0&gt;
+
+- Contour 3 start point differs in glyph 'uni20A9.001' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ec50&gt;
+
+- Contour 1 start point differs in glyph 'uni045F' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0e9b0&gt;
+
+- Contour 2 start point differs in glyph 'uni20B8' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eaa0&gt;
+
+- Contour 2 start point differs in glyph 'uni20B8' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0eb30&gt;
+
+- Contour 2 start point differs in glyph 'uni20B8' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ebc0&gt;
+
+- Contour 2 start point differs in glyph 'uni20B8' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x101ce6320&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x107f0ec50&gt; [code: interpolation-issues]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+
+<details><summary>💥 ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>💥 ERROR</span><span class='details_text'><p>Failed with TypeError: cannot unpack non-iterable float object</p>
+</span></li></ul></div></details>
+<details><summary>💥 ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>💥 ERROR</span><span class='details_text'><p>Failed with TypeError: cannot unpack non-iterable float object</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.hhea</h2>
+<span class='section__emoji'>🔥</span>
+<h3>Check hhea.caretSlopeRise and hhea.caretSlopeRun</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/caret_slope&gt;</div>
+
+<details><summary>🔥 ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>hhea.caretSlopeRise and hhea.caretSlopeRun do not match with post.italicAngle.
+Got: caretSlopeRise 1000 and caretSlopeRun 190
+Expected: caretSlopeRise 1000 and caretSlopeRun 194 [code: caretslope-mismatch]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️⚠️</span>
+<h3>Check glyphs in mark glyph class are non-spacing.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+overlaystrokeshortcmb (U+0335) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+overlaystrokeshortcmb (U+0335) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.stat</h2>
+<span class='section__emoji'>🔥🔥</span>
+<h3>Ensure 'ital' STAT axis is last. (derived from com.google.fonts/check/italic_axis_last)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_last:googlefonts&gt;</div>
+
+<details><summary>🔥 ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>STAT table 'ital' axis is not the last in the axis order. [code: ital-axis-not-last]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>STAT table 'ital' axis is not the last in the axis order. [code: ital-axis-not-last]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⚠️⏩⏩⏩⏩⏩⏩</span>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ ShantellSans[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̂ į̌ ị̂</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̉ į̊ į̋ į̏ į̑ į̒ į̛̂ į̛̆ į̛̉ į̛̊ į̛̋ į̛̌ į̛̏ į̛̑ į̛̒ į̣̂ į̣̆ į̣̉ į̣̊</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Aghem (Latn, 38,843 speakers), Navajo (Latn, 166,319 speakers), Basaa (Latn, 332,940 speakers), Lithuanian (Latn, 2,357,094 speakers), Igbo (Latn, 27,823,640 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Dutch (Latn, 31,709,104 speakers), Belarusian (Cyrl, 10,064,517 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ ShantellSans-Italic[BNCE,INFM,SPAC,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̂ į̌ ị̂</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̉ į̊ į̋ į̏ į̑ į̒ į̛̂ į̛̆ į̛̉ į̛̊ į̛̋ į̛̌ į̛̏ į̛̑ į̛̒ į̣̂ į̣̆ į̣̉ į̣̊</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers), Belarusian (Cyrl, 10,064,517 speakers), Navajo (Latn, 166,319 speakers), Basaa (Latn, 332,940 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Igbo (Latn, 27,823,640 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

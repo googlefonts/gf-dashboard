@@ -1,0 +1,3935 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>40</td>
+                <td>105</td>
+                <td>302</td>
+                <td>31</td>
+                <td>659</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>4%</td>
+                <td>12%</td>
+                <td>33%</td>
+                <td>3%</td>
+                <td>72%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x0308 (COMBINING DIAERESIS)
+
+
+- 0x0300 (COMBINING GRAVE ACCENT)
+
+
+- 0x0301 (COMBINING ACUTE ACCENT)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0304 (COMBINING MACRON)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0302 (COMBINING CIRCUMFLEX ACCENT)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x030A (COMBINING RING ABOVE)
+
+
+- 0x0303 (COMBINING TILDE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F6BE : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F6BE : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F6BE : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F6BE : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding greek</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: not included in any glyphset definition</li>
+<li>U+2206 INCREMENT: not included in any glyphset definition</li>
+<li>U+220F N-ARY PRODUCT: not included in any glyphset definition</li>
+<li>U+2211 N-ARY SUMMATION: not included in any glyphset definition</li>
+<li>U+221A SQUARE ROOT: not included in any glyphset definition</li>
+<li>U+221E INFINITY: not included in any glyphset definition</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+F6BE : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>devanagari</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2014, indian type foundry (info@indiantypefoundry.com).&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>Font has old ttfautohint applied?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/old_ttfautohint&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>ttfautohint used in font = 1.1; latest = 1.8.4; Need to re-run with the newer version! [code: old-ttfa]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2014 indian type foundry. all rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2014 indian type foundry. all rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2014 indian type foundry. all rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2014 indian type foundry. all rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright 2014 indian type foundry. all rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright 2014 Indian Type Foundry. All rights reserved.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts do not contain any pre-production tables.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Each font in a family must have the same set of vertical metrics values.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/vertical_metrics&gt;</div>
+
+<details><summary>🔥 <strong>Family check</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>sTypoAscender is not the same across the family:
+Karma Light: 945
+Karma Medium: 945
+Karma SemiBold: 950
+Karma Bold: 982
+Karma: 945 [code: sTypoAscender-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>sTypoDescender is not the same across the family:
+Karma Light: -474
+Karma Medium: -548
+Karma SemiBold: -594
+Karma Bold: -646
+Karma: -508 [code: sTypoDescender-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>usWinAscent is not the same across the family:
+Karma Light: 945
+Karma Medium: 945
+Karma SemiBold: 950
+Karma Bold: 982
+Karma: 945 [code: usWinAscent-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>usWinDescent is not the same across the family:
+Karma Light: 474
+Karma Medium: 548
+Karma SemiBold: 594
+Karma Bold: 646
+Karma: 508 [code: usWinDescent-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>ascent is not the same across the family:
+Karma Light: 945
+Karma Medium: 945
+Karma SemiBold: 950
+Karma Bold: 982
+Karma: 945 [code: ascent-mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>descent is not the same across the family:
+Karma Light: -474
+Karma Medium: -548
+Karma SemiBold: -594
+Karma Bold: -646
+Karma: -508 [code: descent-mismatch]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 usWinAscent & usWinDescent.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 982, but got 945 instead [code: ascent]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 646, but got 474 instead [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 982, but got 945 instead [code: ascent]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 646, but got 548 instead [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 982, but got 950 instead [code: ascent]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 646, but got 594 instead [code: descent]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 982, but got 945 instead [code: ascent]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 646, but got 508 instead [code: descent]</p>
+</span></li></ul></div></details>
+<h3>Are there unwanted tables?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.cap
+
+- breve.cap
+
+- caron.cap
+
+- cedilla.cap
+
+- circumflex.cap
+
+- dieresis.cap
+
+- dotaccent.cap
+
+- dvSH_VA.aSimp
+
+- germandbls.cap
+
+- grave.cap
+
+- hungarumlaut.cap
+
+- itfLogo
+
+- itfStar
+
+- macron.cap
+
+- nonmarkingreturn
+
+- ogonek.cap
+
+- ring.cap
+
+- tilde.cap
+
+- uni0326.cap
+
+- uni0915094D0930.aTrad
+
+- uni0918093C094D0930
+
+- uni0918093C094D0930094D
+
+- uni0919093C094D0930
+
+- uni091A093C094D0930
+
+- uni091A093C094D0930094D
+
+- uni091B093C094D0930
+
+- uni091B094D0930094D092F
+
+- uni091D093C094D0930
+
+- uni091D093C094D0930094D
+
+- uni091E093C094D0930
+
+- uni091E093C094D0930094D
+
+- uni091F093C094D0930
+
+- uni0920093C094D0930
+
+- uni0923093C094D0930
+
+- uni0923093C094D0930094D
+
+- uni0924093C094D0930
+
+- uni0924093C094D0930094D
+
+- uni0925093C094D0930
+
+- uni0925093C094D0930094D
+
+- uni0926093C094D0930
+
+- uni0927093C094D0930
+
+- uni0927093C094D0930094D
+
+- uni092A093C094D0930
+
+- uni092A093C094D0930094D
+
+- uni092C093C094D0930
+
+- uni092C093C094D0930094D
+
+- uni092D093C094D0930
+
+- uni092D093C094D0930094D
+
+- uni092E093C094D0930
+
+- uni092E093C094D0930094D
+
+- uni0935093C094D0930
+
+- uni0935093C094D0930094D
+
+- uni093F.a01
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+
+- yacute.alt
+
+- ycircumflex.alt
+
+- ydieresis.alt
+
+- ygrave.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.cap
+
+- breve.cap
+
+- caron.cap
+
+- cedilla.cap
+
+- circumflex.cap
+
+- dieresis.cap
+
+- dotaccent.cap
+
+- dvSH_VA.aSimp
+
+- germandbls.cap
+
+- grave.cap
+
+- hungarumlaut.cap
+
+- itfLogo
+
+- itfStar
+
+- macron.cap
+
+- nonmarkingreturn
+
+- ogonek.cap
+
+- ring.cap
+
+- tilde.cap
+
+- uni0326.cap
+
+- uni0915094D0930.aTrad
+
+- uni0918093C094D0930
+
+- uni0918093C094D0930094D
+
+- uni0919093C094D0930
+
+- uni091A093C094D0930
+
+- uni091A093C094D0930094D
+
+- uni091B093C094D0930
+
+- uni091B094D0930094D092F
+
+- uni091D093C094D0930
+
+- uni091D093C094D0930094D
+
+- uni091E093C094D0930
+
+- uni091E093C094D0930094D
+
+- uni091F093C094D0930
+
+- uni0920093C094D0930
+
+- uni0923093C094D0930
+
+- uni0923093C094D0930094D
+
+- uni0924093C094D0930
+
+- uni0924093C094D0930094D
+
+- uni0925093C094D0930
+
+- uni0925093C094D0930094D
+
+- uni0926093C094D0930
+
+- uni0927093C094D0930
+
+- uni0927093C094D0930094D
+
+- uni092A093C094D0930
+
+- uni092A093C094D0930094D
+
+- uni092C093C094D0930
+
+- uni092C093C094D0930094D
+
+- uni092D093C094D0930
+
+- uni092D093C094D0930094D
+
+- uni092E093C094D0930
+
+- uni092E093C094D0930094D
+
+- uni0935093C094D0930
+
+- uni0935093C094D0930094D
+
+- uni093F.a02
+
+- uni093F.a03
+
+- uni093F.a04
+
+- uni093F.a30
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+
+- yacute.alt
+
+- ycircumflex.alt
+
+- ydieresis.alt
+
+- ygrave.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.cap
+
+- breve.cap
+
+- caron.cap
+
+- cedilla.cap
+
+- circumflex.cap
+
+- dieresis.cap
+
+- dotaccent.cap
+
+- dvSH_VA.aSimp
+
+- germandbls.cap
+
+- grave.cap
+
+- hungarumlaut.cap
+
+- itfLogo
+
+- itfStar
+
+- macron.cap
+
+- nonmarkingreturn
+
+- ogonek.cap
+
+- ring.cap
+
+- tilde.cap
+
+- uni0326.cap
+
+- uni0915094D0930.aTrad
+
+- uni0918093C094D0930
+
+- uni0918093C094D0930094D
+
+- uni0919093C094D0930
+
+- uni091A093C094D0930
+
+- uni091A093C094D0930094D
+
+- uni091B093C094D0930
+
+- uni091B094D0930094D092F
+
+- uni091D093C094D0930
+
+- uni091D093C094D0930094D
+
+- uni091E093C094D0930
+
+- uni091E093C094D0930094D
+
+- uni091F093C094D0930
+
+- uni0920093C094D0930
+
+- uni0923093C094D0930
+
+- uni0923093C094D0930094D
+
+- uni0924093C094D0930
+
+- uni0924093C094D0930094D
+
+- uni0925093C094D0930
+
+- uni0925093C094D0930094D
+
+- uni0926093C094D0930
+
+- uni0927093C094D0930
+
+- uni0927093C094D0930094D
+
+- uni092A093C094D0930
+
+- uni092A093C094D0930094D
+
+- uni092C093C094D0930
+
+- uni092C093C094D0930094D
+
+- uni092D093C094D0930
+
+- uni092D093C094D0930094D
+
+- uni092E093C094D0930
+
+- uni092E093C094D0930094D
+
+- uni0935093C094D0930
+
+- uni0935093C094D0930094D
+
+- uni093F.a02
+
+- uni093F.a03
+
+- uni093F.a04
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+
+- yacute.alt
+
+- ycircumflex.alt
+
+- ydieresis.alt
+
+- ygrave.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.cap
+
+- breve.cap
+
+- caron.cap
+
+- cedilla.cap
+
+- circumflex.cap
+
+- dieresis.cap
+
+- dotaccent.cap
+
+- dvSH_VA.aSimp
+
+- germandbls.cap
+
+- grave.cap
+
+- hungarumlaut.cap
+
+- itfLogo
+
+- itfStar
+
+- macron.cap
+
+- nonmarkingreturn
+
+- ogonek.cap
+
+- ring.cap
+
+- tilde.cap
+
+- uni0326.cap
+
+- uni0915094D0930.aTrad
+
+- uni0918093C094D0930
+
+- uni0918093C094D0930094D
+
+- uni0919093C094D0930
+
+- uni091A093C094D0930
+
+- uni091A093C094D0930094D
+
+- uni091B093C094D0930
+
+- uni091B094D0930094D092F
+
+- uni091D093C094D0930
+
+- uni091D093C094D0930094D
+
+- uni091E093C094D0930
+
+- uni091E093C094D0930094D
+
+- uni091F093C094D0930
+
+- uni0920093C094D0930
+
+- uni0923093C094D0930
+
+- uni0923093C094D0930094D
+
+- uni0924093C094D0930
+
+- uni0924093C094D0930094D
+
+- uni0925093C094D0930
+
+- uni0925093C094D0930094D
+
+- uni0926093C094D0930
+
+- uni0927093C094D0930
+
+- uni0927093C094D0930094D
+
+- uni092A093C094D0930
+
+- uni092A093C094D0930094D
+
+- uni092C093C094D0930
+
+- uni092C093C094D0930094D
+
+- uni092D093C094D0930
+
+- uni092D093C094D0930094D
+
+- uni092E093C094D0930
+
+- uni092E093C094D0930094D
+
+- uni0935093C094D0930
+
+- uni0935093C094D0930094D
+
+- uni093F.a02
+
+- uni093F.a03
+
+- uni093F.a04
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+
+- yacute.alt
+
+- ycircumflex.alt
+
+- ydieresis.alt
+
+- ygrave.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- acute.cap
+
+- breve.cap
+
+- caron.cap
+
+- cedilla.cap
+
+- circumflex.cap
+
+- dieresis.cap
+
+- dotaccent.cap
+
+- dvSH_VA.aSimp
+
+- germandbls.cap
+
+- grave.cap
+
+- hungarumlaut.cap
+
+- itfLogo
+
+- itfStar
+
+- macron.cap
+
+- nonmarkingreturn
+
+- ogonek.cap
+
+- ring.cap
+
+- tilde.cap
+
+- uni0326.cap
+
+- uni0915094D0930.aTrad
+
+- uni0918093C094D0930
+
+- uni0918093C094D0930094D
+
+- uni0919093C094D0930
+
+- uni091A093C094D0930
+
+- uni091A093C094D0930094D
+
+- uni091B093C094D0930
+
+- uni091B094D0930094D092F
+
+- uni091D093C094D0930
+
+- uni091D093C094D0930094D
+
+- uni091E093C094D0930
+
+- uni091E093C094D0930094D
+
+- uni091F093C094D0930
+
+- uni0920093C094D0930
+
+- uni0923093C094D0930
+
+- uni0923093C094D0930094D
+
+- uni0924093C094D0930
+
+- uni0924093C094D0930094D
+
+- uni0925093C094D0930
+
+- uni0925093C094D0930094D
+
+- uni0926093C094D0930
+
+- uni0927093C094D0930
+
+- uni0927093C094D0930094D
+
+- uni092A093C094D0930
+
+- uni092A093C094D0930094D
+
+- uni092C093C094D0930
+
+- uni092C093C094D0930094D
+
+- uni092D093C094D0930
+
+- uni092D093C094D0930094D
+
+- uni092E093C094D0930
+
+- uni092E093C094D0930094D
+
+- uni0935093C094D0930
+
+- uni0935093C094D0930094D
+
+- uni093F.a01
+
+- uni093F.a03
+
+- uni094A0902
+
+- uni094D0928.post
+
+- uni094D092F.post
+
+- uni094D0930.post
+
+- yacute.alt
+
+- ycircumflex.alt
+
+- ydieresis.alt
+
+- ygrave.alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0916093C	Contours detected: 3	Expected: 2 or 4
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0916093C	Contours detected: 3	Expected: 2 or 4
+
+- Glyph name: approxequal	Contours detected: 1	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: approxequal	Contours detected: 1	Expected: 2
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0916093C	Contours detected: 3	Expected: 2 or 4
+
+- Glyph name: approxequal	Contours detected: 3	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: approxequal	Contours detected: 3	Expected: 2
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0916093C	Contours detected: 3	Expected: 2 or 4
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+
+- Glyph name: uni0916093C	Contours detected: 3	Expected: 2 or 4
+
+- Glyph name: approxequal	Contours detected: 3	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 2	Expected: 1
+
+- Glyph name: approxequal	Contours detected: 3	Expected: 2
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+
+- Glyph name: hcircumflex	Contours detected: 1	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uni0916	Contours detected: 2	Expected: 1 or 3
+
+- Glyph name: uni091B	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0936	Contours detected: 1	Expected: 2
+
+- Glyph name: uni0950	Contours detected: 4	Expected: 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 470 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 441:
+less</p>
+<p>Width = 421:
+greater</p>
+<p>Width = 472:
+logicalnot</p>
+<p>Width = 412:
+multiply</p>
+<p>Width = 534:
+approxequal</p>
+<p>Width = 465:
+lessequal</p>
+<p>Width = 460:
+greaterequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 487 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 470:
+less</p>
+<p>Width = 458:
+greater</p>
+<p>Width = 488:
+logicalnot</p>
+<p>Width = 428:
+multiply</p>
+<p>Width = 563:
+approxequal</p>
+<p>Width = 483:
+lessequal</p>
+<p>Width = 481:
+greaterequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 497 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 487:
+less</p>
+<p>Width = 481:
+greater</p>
+<p>Width = 437:
+multiply</p>
+<p>Width = 580:
+approxequal</p>
+<p>Width = 494:
+lessequal</p>
+<p>Width = 493:
+greaterequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 508 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 506:
+less, greater</p>
+<p>Width = 448:
+multiply</p>
+<p>Width = 600:
+approxequal</p>
+<p>Width = 507:
+greaterequal, lessequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 478 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 455:
+less</p>
+<p>Width = 439:
+greater</p>
+<p>Width = 480:
+logicalnot</p>
+<p>Width = 420:
+multiply</p>
+<p>Width = 548:
+approxequal</p>
+<p>Width = 474:
+lessequal</p>
+<p>Width = 470:
+greaterequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h3>Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>dcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>lcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>tcaron is decomposed and therefore could not be checked. Please check manually. [code: decomposed-outline]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.os2</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩</span>
+<h3>Check if OS/2 xAvgCharWidth is correct.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 519 but it should be 648 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 539 but it should be 677 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 551 but it should be 694 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 564 but it should be 714 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 528 but it should be 662 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Check glyphs in mark glyph class are non-spacing.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+acute (U+00B4), acute.cap (unencoded), breve (U+02D8), breve.cap (unencoded), cedilla (U+00B8), cedilla.cap (unencoded), circumflex (U+02C6), circumflex.cap (unencoded), dieresis (U+00A8), dieresis.cap (unencoded), dotaccent (U+02D9), dotaccent.cap (unencoded), macron (U+00AF), macron.cap (unencoded), ogonek (U+02DB), ogonek.cap (unencoded), ring (U+02DA), ring.cap (unencoded), tilde (U+02DC) and tilde.cap (unencoded) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+acute (U+00B4), acute.cap (unencoded), breve (U+02D8), breve.cap (unencoded), cedilla (U+00B8), cedilla.cap (unencoded), circumflex (U+02C6), circumflex.cap (unencoded), dieresis (U+00A8), dieresis.cap (unencoded), dotaccent (U+02D9), dotaccent.cap (unencoded), macron (U+00AF), macron.cap (unencoded), ogonek (U+02DB), ogonek.cap (unencoded), ring (U+02DA), ring.cap (unencoded), tilde (U+02DC) and tilde.cap (unencoded) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+acute (U+00B4), acute.cap (unencoded), breve (U+02D8), breve.cap (unencoded), cedilla (U+00B8), cedilla.cap (unencoded), circumflex (U+02C6), circumflex.cap (unencoded), dieresis (U+00A8), dieresis.cap (unencoded), dotaccent (U+02D9), dotaccent.cap (unencoded), macron (U+00AF), macron.cap (unencoded), ogonek (U+02DB), ogonek.cap (unencoded), ring (U+02DA), ring.cap (unencoded), tilde (U+02DC) and tilde.cap (unencoded) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+acute (U+00B4), acute.cap (unencoded), breve (U+02D8), breve.cap (unencoded), cedilla (U+00B8), cedilla.cap (unencoded), circumflex (U+02C6), circumflex.cap (unencoded), dieresis (U+00A8), dieresis.cap (unencoded), dotaccent (U+02D9), dotaccent.cap (unencoded), macron (U+00AF), macron.cap (unencoded), ogonek (U+02DB), ogonek.cap (unencoded), ring (U+02DA), ring.cap (unencoded), tilde (U+02DC) and tilde.cap (unencoded) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+acute (U+00B4), acute.cap (unencoded), breve (U+02D8), breve.cap (unencoded), cedilla (U+00B8), cedilla.cap (unencoded), circumflex (U+02C6), circumflex.cap (unencoded), dieresis (U+00A8), dieresis.cap (unencoded), dotaccent (U+02D9), dotaccent.cap (unencoded), macron (U+00AF), macron.cap (unencoded), ogonek (U+02DB), ogonek.cap (unencoded), ring (U+02DA), ring.cap (unencoded), tilde (U+02DC) and tilde.cap (unencoded) [code: spacing-mark-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0326 (U+0326), uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0326 (U+0326), uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0326 (U+0326), uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0326 (U+0326), uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0326 (U+0326), uni093C (U+093C), uni0951 (U+0951), uni0952 (U+0952), uni0953 (U+0953) and uni0954 (U+0954) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h3>Check GDEF mark glyph class doesn't have characters that are not marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+00A8, U+00AF, U+00B4, U+00B8, U+02C6, U+02D8, U+02D9, U+02DA, U+02DB and U+02DC [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+00A8, U+00AF, U+00B4, U+00B8, U+02C6, U+02D8, U+02D9, U+02DA, U+02DB and U+02DC [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+00A8, U+00AF, U+00B4, U+00B8, U+02C6, U+02D8, U+02D9, U+02DA, U+02DB and U+02DC [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+00A8, U+00AF, U+00B4, U+00B8, U+02C6, U+02D8, U+02D9, U+02DA, U+02DB and U+02DC [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following non-mark characters should not be in the GDEF mark glyph class:
+U+00A8, U+00AF, U+00B4, U+00B8, U+02C6, U+02D8, U+02D9, U+02DA, U+02DB and U+02DC [code: non-mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 123, 700)
+* ('quotedbl', 85, 689)
+* ('quotedbl', 84, 503)
+* ('quotedbl', 183, 689)
+* ('quotedbl', 182, 503)
+* ('dollar', 224, -108)
+* ('dollar', 224, 686)
+* ('quotesingle', 85, 689)
+* ('quotesingle', 84, 503)
+* ('asterisk', 255, 709)
+* ('comma', 56, -98)
+* ('one', 300, 0)
+* ('two', 34, 17)
+* ('four', 322, 618)
+* ('eight', 44, 193)
+* ('semicolon', 73, -98)
+* ('A', 300, 680)
+* ('A', 590, 0)
+* ('B', 502, 104)
+* ('C', 35, 476)
+* ('G', 35, 481)
+* ('K', 564, 0)
+* ('M', 774, 0)
+* ('O', 591, 190)
+* ('O', 36, 480)
+* ('Q', 36, 480)
+* ('S', 340, 692)
+* ('U', 22, 675)
+* ('V', 2, 675)
+* ('W', 2, 675)
+* ('X', 599, 0)
+* ('Y', 2, 677)
+* ('b', 506, 134)
+* ('c', 38, 341)
+* ('d', 37, 352)
+* ('g', 448, 460)
+* ('h', 588, 0)
+* ('i', 260, 0)
+* ('k', 532, 0)
+* ('l', 254, 0)
+* ('m', 900, 0)
+* ('n', 582, 0)
+* ('o', 461, 138)
+* ('o', 39, 350)
+* ('p', 501, 133)
+* ('q', 38, 351)
+* ('q', 530, -213)
+* ('s', 144, 501)
+* ('s', 363, 197)
+* ('s', 259, -16)
+* ('s', 22, 36)
+* ('t', 22, 485)
+* ('u', 14, 485)
+* ('v', 2, 485)
+* ('w', 2, 485)
+* ('x', 9, 11)
+* ('x', 472, 0)
+* ('y', 481, 474)
+* ('y', 2, 485)
+* ('asciitilde', 175, 344)
+* ('asciitilde', 367, 227)
+* ('exclamdown', 123, -33)
+* ('cent', 261, -112)
+* ('cent', 48, 328)
+* ('cent', 264, 601)
+* ('sterling', 452, 0)
+* ('yen', 7, 611)
+* ('section', 214, 710)
+* ('guillemotleft', 59, 240)
+* ('twosuperior', 33, 293)
+* ('uni00B5', 131, -195)
+* ('paragraph', 516, 677)
+* ('cedilla', 211, -142)
+* ('onesuperior', 224, 307)
+* ('ordmasculine', 45, 542)
+* ('ordmasculine', 293, 421)
+* ('guillemotright', 480, 240)
+* ('Agrave', 590, 0)
+* ('Aacute', 590, 0)
+* ('Acircumflex', 590, 0)
+* ('Acircumflex', 299, 872)
+* ('Atilde', 590, 0)
+* ('Adieresis', 590, 0)
+* ('Aring', 590, 0)
+* ('Ccedilla', 35, 476)
+* ('Ecircumflex', 301, 872)
+* ('Icircumflex', 154, 872)
+* ('Ograve', 591, 190)
+* ('Ograve', 36, 480)
+* ('Oacute', 591, 190)
+* ('Oacute', 36, 480)
+* ('Ocircumflex', 36, 480)
+* ('Ocircumflex', 591, 190)
+* ('Ocircumflex', 330, 872)
+* ('Otilde', 591, 190)
+* ('Otilde', 36, 480)
+* ('Odieresis', 591, 190)
+* ('Odieresis', 36, 480)
+* ('Oslash', 36, 480)
+* ('Oslash', 591, 190)
+* ('Ugrave', 22, 675)
+* ('Uacute', 22, 675)
+* ('Ucircumflex', 22, 675)
+* ('Ucircumflex', 322, 872)
+* ('Udieresis', 22, 675)
+* ('Yacute', 2, 677)
+* ('germandbls', 255, 707)
+* ('acircumflex', 229, 682)
+* ('atilde', 136, 670)
+* ('ae', 164, 501)
+* ('ccedilla', 38, 341)
+* ('ecircumflex', 257, 682)
+* ('igrave', 260, 0)
+* ('icircumflex', 138, 682)
+* ('eth', 37, 331)
+* ('ntilde', 217, 670)
+* ('ntilde', 582, 0)
+* ('ograve', 461, 138)
+* ('ograve', 39, 350)
+* ('oacute', 461, 138)
+* ('oacute', 39, 350)
+* ('ocircumflex', 461, 138)
+* ('ocircumflex', 39, 350)
+* ('ocircumflex', 252, 682)
+* ('otilde', 159, 670)
+* ('otilde', 461, 138)
+* ('otilde', 39, 350)
+* ('odieresis', 461, 138)
+* ('odieresis', 39, 350)
+* ('oslash', 39, 350)
+* ('oslash', 461, 138)
+* ('ugrave', 14, 485)
+* ('uacute', 14, 485)
+* ('ucircumflex', 14, 485)
+* ('ucircumflex', 283, 682)
+* ('udieresis', 14, 485)
+* ('yacute', 481, 474)
+* ('yacute', 2, 485)
+* ('thorn', 501, 133)
+* ('ydieresis', 481, 474)
+* ('ydieresis', 2, 485)
+* ('Amacron', 590, 0)
+* ('Abreve', 590, 0)
+* ('Aogonek', 601, -123)
+* ('Aogonek', 300, 680)
+* ('aogonek', 491, -133)
+* ('Cacute', 35, 476)
+* ('cacute', 38, 341)
+* ('Ccircumflex', 35, 476)
+* ('Ccircumflex', 324, 872)
+* ('ccircumflex', 38, 341)
+* ('ccircumflex', 259, 682)
+* ('Cdotaccent', 35, 476)
+* ('cdotaccent', 38, 341)
+* ('Ccaron', 35, 476)
+* ('ccaron', 38, 341)
+* ('dcaron', 573, 599)
+* ('dcaron', 37, 352)
+* ('dcroat', 37, 352)
+* ('Eogonek', 608, -113)
+* ('eogonek', 429, -98)
+* ('Gcircumflex', 35, 481)
+* ('Gcircumflex', 315, 872)
+* ('gcircumflex', 448, 460)
+* ('gcircumflex', 230, 682)
+* ('Gbreve', 35, 481)
+* ('gbreve', 448, 460)
+* ('Gdotaccent', 35, 481)
+* ('gdotaccent', 448, 460)
+* ('uni0122', 35, 481)
+* ('uni0122', 275, -210)
+* ('uni0123', 448, 460)
+* ('uni0123', 252, 726)
+* ('Hcircumflex', 354, 872)
+* ('hcircumflex', 588, 0)
+* ('hbar', 594, 0)
+* ('itilde', 45, 670)
+* ('Iogonek', 350, -113)
+* ('iogonek', 288, -123)
+* ('dotlessi', 260, 0)
+* ('Jcircumflex', 167, 872)
+* ('jcircumflex', 110, 682)
+* ('uni0136', 564, 0)
+* ('uni0136', 262, -210)
+* ('uni0137', 532, 0)
+* ('uni0137', 273, -207)
+* ('kgreenlandic', 532, 0)
+* ('uni013B', 228, -210)
+* ('uni013C', 254, 0)
+* ('uni013C', 140, -207)
+* ('Lcaron', 340, 751)
+* ('lcaron', 308, 599)
+* ('nacute', 582, 0)
+* ('uni0145', 342, -210)
+* ('uni0146', 582, 0)
+* ('uni0146', 302, -207)
+* ('ncaron', 582, 0)
+* ('Omacron', 591, 190)
+* ('Omacron', 36, 480)
+* ('omacron', 461, 138)
+* ('omacron', 39, 350)
+* ('Obreve', 591, 190)
+* ('Obreve', 36, 480)
+* ('obreve', 461, 138)
+* ('obreve', 39, 350)
+* ('Ohungarumlaut', 591, 190)
+* ('Ohungarumlaut', 36, 480)
+* ('ohungarumlaut', 39, 350)
+* ('OE', 35, 481)
+* ('oe', 38, 349)
+* ('uni0156', 258, -210)
+* ('uni0157', 149, -207)
+* ('sacute', 363, 197)
+* ('sacute', 259, -16)
+* ('sacute', 22, 36)
+* ('Scircumflex', 250, 872)
+* ('scircumflex', 363, 197)
+* ('scircumflex', 259, -16)
+* ('scircumflex', 22, 36)
+* ('scircumflex', 193, 682)
+* ('uni015E', 340, 692)
+* ('uni015F', 22, 37)
+* ('uni015F', 144, 501)
+* ('uni015F', 363, 197)
+* ('scaron', 363, 197)
+* ('scaron', 259, -16)
+* ('scaron', 22, 36)
+* ('uni0162', 278, -210)
+* ('uni0163', 22, 485)
+* ('uni0163', 209, -207)
+* ('tcaron', 22, 485)
+* ('tbar', 22, 485)
+* ('Utilde', 22, 675)
+* ('utilde', 190, 670)
+* ('utilde', 14, 485)
+* ('Umacron', 22, 675)
+* ('umacron', 14, 485)
+* ('Ubreve', 22, 675)
+* ('ubreve', 14, 485)
+* ('Uring', 22, 675)
+* ('uring', 14, 485)
+* ('Uhungarumlaut', 22, 675)
+* ('uhungarumlaut', 14, 485)
+* ('Uogonek', 22, 675)
+* ('uogonek', 584, -113)
+* ('uogonek', 14, 485)
+* ('Wcircumflex', 2, 675)
+* ('Wcircumflex', 481, 872)
+* ('wcircumflex', 2, 485)
+* ('wcircumflex', 365, 682)
+* ('Ycircumflex', 2, 677)
+* ('Ycircumflex', 299, 872)
+* ('ycircumflex', 481, 474)
+* ('ycircumflex', 2, 485)
+* ('ycircumflex', 243, 682)
+* ('Ydieresis', 2, 677)
+* ('uni0218', 340, 692)
+* ('uni0218', 212, -210)
+* ('uni0219', 363, 197)
+* ('uni0219', 22, 36)
+* ('uni0219', 144, 501)
+* ('uni0219', 185, -207)
+* ('uni021A', 278, -210)
+* ('uni021B', 22, 485)
+* ('uni021B', 209, -207)
+* ('circumflex', 269, 682)
+* ('caron', 269, 536)
+* ('ogonek', 344, -123)
+* ('tilde', 160, 670)
+* ('tilde', 352, 553)
+* ('uni0326', -307, -207)
+* ('uni094D', -264, -107)
+* ('uni0964', 205, -21)
+* ('uni0965', 409, -21)
+* ('uni0965', 205, -21)
+* ('uni0967', 332, -132)
+* ('Wgrave', 2, 675)
+* ('wgrave', 2, 485)
+* ('Wacute', 2, 675)
+* ('wacute', 2, 485)
+* ('Wdieresis', 2, 675)
+* ('wdieresis', 2, 485)
+* ('Ygrave', 2, 677)
+* ('ygrave', 481, 474)
+* ('ygrave', 2, 485)
+* ('quoteleft', 113, 681)
+* ('quoteright', 55, 522)
+* ('quotesinglbase', 56, -98)
+* ('quotedblleft', 213, 681)
+* ('quotedblleft', 113, 681)
+* ('quotedblright', 155, 522)
+* ('quotedblright', 55, 522)
+* ('quotedblbase', 155, -85)
+* ('quotedblbase', 55, -85)
+* ('dagger', 442, 470)
+* ('dagger', 250, -155)
+* ('dagger', 58, 508)
+* ('dagger', 249, 692)
+* ('daggerdbl', 442, 275)
+* ('daggerdbl', 250, -155)
+* ('daggerdbl', 58, 313)
+* ('daggerdbl', 58, 508)
+* ('daggerdbl', 249, 692)
+* ('daggerdbl', 442, 470)
+* ('guilsinglleft', 59, 240)
+* ('guilsinglright', 305, 240)
+* ('foursuperior', 211, 623)
+* ('summation', 27, -70)
+* ('radical', 29, 372)
+* ('radical', 250, -75)
+* ('infinity', 626, 474)
+* ('approxequal', 137, 386)
+* ('approxequal', 329, 146)
+* ('fi', 534, 0)
+* ('fl', 528, 0)
+* ('ffi', 808, 0)
+* ('ffl', 802, 0)
+* ('uni094D0928.post', -152, 124)
+* ('uni0915094D0928', 167, -55)
+* ('uni0918094D0928', 181, -47)
+* ('uni091A094D0928', 238, -31)
+* ('uni0925094D0928', 180, -43)
+* ('uni0926094D0928', 154, -130)
+* ('uni0927094D0928', 231, -52)
+* ('uni092C094D0928', 182, -55)
+* ('uni092F094D0928', 189, -52)
+* ('uni0935094D0928', 182, -54)
+* ('uni0926094D092F094D092D', 284, -147)
+* ('uni0927094D0928094D092F', 222, -46)
+* ('dvK_N', 171, -55)
+* ('dvKH_N', 167, -138)
+* ('dvG_N', 179, 10)
+* ('dvGH_N', 196, -42)
+* ('dvC_N', 238, -31)
+* ('dvTH_N', 181, -43)
+* ('dvDH_N', 240, -47)
+* ('dvN_N', 140, 24)
+* ('dvP_N', 183, 20)
+* ('dvB_N', 182, -55)
+* ('dvBH_N', 310, -5)
+* ('dvM_N', 213, 13)
+* ('dvY_N', 189, -52)
+* ('dvV_N', 182, -54)
+* ('dvT_KH_NA', 439, -138)
+* ('ycircumflex.alt', 269, 682)
+* ('germandbls.cap', 253, 692)
+* ('caron.cap', 269, 536)
+* ('cedilla.cap', 211, -142)
+* ('circumflex.cap', 269, 682)
+* ('ogonek.cap', 344, -123) and ('uni0326.cap', -544, -210)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 121, 710)
+* ('quotedbl', 93, 697)
+* ('quotedbl', 97, 487)
+* ('quotedbl', 212, 697)
+* ('quotedbl', 216, 487)
+* ('quotesingle', 91, 697)
+* ('quotesingle', 95, 487)
+* ('comma', 65, -115)
+* ('zero', 372, 626)
+* ('one', 337, 0)
+* ('two', 35, 30)
+* ('four', 335, 624)
+* ('eight', 38, 194)
+* ('semicolon', 76, -123)
+* ('A', 316, 684)
+* ('A', 617, 0)
+* ('B', 532, 107)
+* ('C', 35, 486)
+* ('D', 39, 49)
+* ('E', 39, 679)
+* ('F', 39, 679)
+* ('G', 35, 490)
+* ('H', 39, 679)
+* ('H', 689, 0)
+* ('I', 39, 679)
+* ('I', 283, 0)
+* ('K', 39, 679)
+* ('L', 40, 681)
+* ('M', 823, 0)
+* ('N', 39, 679)
+* ('O', 619, 185)
+* ('O', 36, 492)
+* ('Q', 36, 492)
+* ('S', 364, 696)
+* ('U', 14, 679)
+* ('V', -1, 679)
+* ('W', -1, 679)
+* ('X', 9, 681)
+* ('X', 636, 0)
+* ('Y', -1, 681)
+* ('b', 527, 140)
+* ('b', 11, 638)
+* ('c', 37, 354)
+* ('d', 36, 355)
+* ('e', 442, 393)
+* ('f', 314, 719)
+* ('g', 463, 460)
+* ('h', 610, 0)
+* ('i', 281, 0)
+* ('k', 555, 0)
+* ('l', 278, 0)
+* ('m', 922, 0)
+* ('n', 606, 0)
+* ('o', 481, 132)
+* ('o', 37, 360)
+* ('p', 524, 139)
+* ('q', 36, 354)
+* ('q', 548, -215)
+* ('s', 275, -16)
+* ('s', 23, 37)
+* ('t', 13, 494)
+* ('v', 490, 447)
+* ('v', 2, 464)
+* ('w', 711, 447)
+* ('w', 2, 464)
+* ('x', 8, 494)
+* ('x', 496, 0)
+* ('y', -1, 494)
+* ('asciitilde', 175, 356)
+* ('asciitilde', 441, 223)
+* ('exclamdown', 121, -29)
+* ('cent', 48, 340)
+* ('sterling', 475, 0)
+* ('sterling', 46, 15)
+* ('yen', 8, 615)
+* ('section', 355, 696)
+* ('guillemotleft', 48, 245)
+* ('twosuperior', 34, 301)
+* ('paragraph', 599, 681)
+* ('cedilla', 210, -143)
+* ('guillemotright', 527, 245)
+* ('Agrave', 617, 0)
+* ('Aacute', 617, 0)
+* ('Acircumflex', 617, 0)
+* ('Acircumflex', 318, 882)
+* ('Atilde', 617, 0)
+* ('Adieresis', 617, 0)
+* ('Aring', 617, 0)
+* ('Ccedilla', 35, 486)
+* ('Egrave', 39, 679)
+* ('Eacute', 39, 679)
+* ('Ecircumflex', 39, 679)
+* ('Ecircumflex', 312, 882)
+* ('Edieresis', 39, 679)
+* ('Igrave', 283, 0)
+* ('Iacute', 39, 679)
+* ('Icircumflex', 166, 882)
+* ('Eth', 39, 49)
+* ('Ntilde', 39, 679)
+* ('Ograve', 619, 185)
+* ('Ograve', 36, 492)
+* ('Oacute', 619, 185)
+* ('Oacute', 36, 492)
+* ('Ocircumflex', 36, 492)
+* ('Ocircumflex', 619, 185)
+* ('Ocircumflex', 342, 882)
+* ('Otilde', 619, 185)
+* ('Otilde', 36, 492)
+* ('Odieresis', 619, 185)
+* ('Odieresis', 36, 492)
+* ('Oslash', 36, 492)
+* ('Oslash', 619, 185)
+* ('Ugrave', 14, 679)
+* ('Uacute', 14, 679)
+* ('Ucircumflex', 14, 679)
+* ('Ucircumflex', 332, 882)
+* ('Udieresis', 14, 679)
+* ('Yacute', -1, 681)
+* ('Thorn', 39, 681)
+* ('germandbls', 241, 717)
+* ('acircumflex', 240, 696)
+* ('atilde', 139, 688)
+* ('ae', 745, 392)
+* ('ccedilla', 37, 354)
+* ('egrave', 442, 393)
+* ('eacute', 442, 393)
+* ('ecircumflex', 442, 393)
+* ('ecircumflex', 268, 696)
+* ('edieresis', 442, 393)
+* ('igrave', 281, 0)
+* ('icircumflex', 150, 696)
+* ('eth', 36, 329)
+* ('ntilde', 227, 688)
+* ('ntilde', 606, 0)
+* ('ograve', 481, 132)
+* ('ograve', 37, 360)
+* ('oacute', 481, 132)
+* ('oacute', 37, 360)
+* ('ocircumflex', 481, 132)
+* ('ocircumflex', 37, 360)
+* ('ocircumflex', 264, 696)
+* ('otilde', 164, 688)
+* ('otilde', 481, 132)
+* ('otilde', 37, 360)
+* ('odieresis', 481, 132)
+* ('odieresis', 37, 360)
+* ('oslash', 37, 360)
+* ('ucircumflex', 289, 696)
+* ('yacute', -1, 494)
+* ('thorn', 524, 139)
+* ('ydieresis', -1, 494)
+* ('Amacron', 617, 0)
+* ('Abreve', 617, 0)
+* ('Aogonek', 629, -131)
+* ('Aogonek', 316, 684)
+* ('aogonek', 510, -138)
+* ('Cacute', 35, 486)
+* ('cacute', 37, 354)
+* ('Ccircumflex', 35, 486)
+* ('Ccircumflex', 336, 882)
+* ('ccircumflex', 37, 354)
+* ('ccircumflex', 267, 696)
+* ('Cdotaccent', 35, 486)
+* ('cdotaccent', 37, 354)
+* ('Ccaron', 35, 486)
+* ('ccaron', 37, 354)
+* ('Dcaron', 39, 49)
+* ('dcaron', 618, 611)
+* ('dcaron', 539, 748)
+* ('dcaron', 36, 355)
+* ('Dcroat', 39, 49)
+* ('dcroat', 36, 355)
+* ('Emacron', 39, 679)
+* ('emacron', 442, 393)
+* ('Ebreve', 39, 679)
+* ('ebreve', 442, 393)
+* ('Edotaccent', 39, 679)
+* ('edotaccent', 442, 393)
+* ('Eogonek', 583, -127)
+* ('Eogonek', 39, 679)
+* ('eogonek', 444, -108)
+* ('Ecaron', 39, 679)
+* ('ecaron', 442, 393)
+* ('Gcircumflex', 35, 490)
+* ('Gcircumflex', 337, 882)
+* ('gcircumflex', 463, 460)
+* ('gcircumflex', 232, 696)
+* ('Gbreve', 35, 490)
+* ('gbreve', 463, 460)
+* ('Gdotaccent', 35, 490)
+* ('gdotaccent', 463, 460)
+* ('uni0122', 35, 490)
+* ('uni0122', 284, -251)
+* ('uni0123', 463, 460)
+* ('uni0123', 267, 771)
+* ('Hcircumflex', 39, 679)
+* ('Hcircumflex', 689, 0)
+* ('Hcircumflex', 369, 882)
+* ('hcircumflex', 610, 0)
+* ('Hbar', 39, 679)
+* ('Hbar', 689, 0)
+* ('hbar', 613, 0)
+* ('itilde', 50, 688)
+* ('Iogonek', 339, -125)
+* ('Iogonek', 39, 679)
+* ('iogonek', 300, -133)
+* ('Idotaccent', 39, 679)
+* ('Idotaccent', 283, 0)
+* ('dotlessi', 281, 0)
+* ('IJ', 39, 679)
+* ('Jcircumflex', 207, 882)
+* ('jcircumflex', 130, 696)
+* ('uni0136', 39, 679)
+* ('uni0136', 282, -251)
+* ('uni0137', 555, 0)
+* ('uni0137', 264, -257)
+* ('kgreenlandic', 555, 0)
+* ('Lacute', 40, 681)
+* ('lacute', 278, 0)
+* ('uni013B', 40, 681)
+* ('uni013B', 235, -251)
+* ('uni013C', 278, 0)
+* ('uni013C', 134, -257)
+* ('Lcaron', 40, 681)
+* ('Lcaron', 365, 763)
+* ('lcaron', 348, 611)
+* ('lcaron', 269, 748)
+* ('Ldot', 40, 681)
+* ('Nacute', 39, 679)
+* ('nacute', 606, 0)
+* ('uni0145', 39, 679)
+* ('uni0145', 329, -251)
+* ('uni0146', 606, 0)
+* ('uni0146', 293, -257)
+* ('Ncaron', 39, 679)
+* ('ncaron', 606, 0)
+* ('Eng', 39, 679)
+* ('Omacron', 619, 185)
+* ('Omacron', 36, 492)
+* ('omacron', 481, 132)
+* ('omacron', 37, 360)
+* ('Obreve', 619, 185)
+* ('Obreve', 36, 492)
+* ('obreve', 481, 132)
+* ('obreve', 37, 360)
+* ('Ohungarumlaut', 619, 185)
+* ('Ohungarumlaut', 36, 492)
+* ('ohungarumlaut', 37, 360)
+* ('OE', 35, 489)
+* ('oe', 793, 393)
+* ('oe', 36, 359)
+* ('uni0156', 274, -251)
+* ('uni0157', 146, -257)
+* ('sacute', 275, -16)
+* ('sacute', 23, 37)
+* ('Scircumflex', 267, 882)
+* ('scircumflex', 275, -16)
+* ('scircumflex', 23, 37)
+* ('scircumflex', 210, 696)
+* ('uni015E', 364, 696)
+* ('uni015F', 23, 37)
+* ('scaron', 275, -16)
+* ('scaron', 23, 37)
+* ('uni0162', 280, -251)
+* ('uni0163', 13, 494)
+* ('uni0163', 190, -257)
+* ('tcaron', 13, 494)
+* ('tcaron', 241, 741)
+* ('tbar', 13, 494)
+* ('Utilde', 14, 679)
+* ('utilde', 188, 688)
+* ('Umacron', 14, 679)
+* ('Ubreve', 14, 679)
+* ('Uring', 14, 679)
+* ('Uhungarumlaut', 14, 679)
+* ('Uogonek', 14, 679)
+* ('uogonek', 590, -129)
+* ('Wcircumflex', -1, 679)
+* ('Wcircumflex', 499, 882)
+* ('wcircumflex', 711, 447)
+* ('wcircumflex', 2, 464)
+* ('wcircumflex', 375, 696)
+* ('Ycircumflex', -1, 681)
+* ('Ycircumflex', 316, 882)
+* ('ycircumflex', -1, 494)
+* ('ycircumflex', 269, 696)
+* ('Ydieresis', -1, 681)
+* ('longs', 314, 719)
+* ('florin', 357, 718)
+* ('uni0218', 364, 696)
+* ('uni0218', 220, -251)
+* ('uni0219', 23, 37)
+* ('uni0219', 184, -257)
+* ('uni021A', 280, -251)
+* ('uni021B', 13, 494)
+* ('uni021B', 190, -257)
+* ('circumflex', 271, 696)
+* ('caron', 271, 544)
+* ('ring', 257, 673)
+* ('ogonek', 314, -123)
+* ('tilde', 154, 688)
+* ('tilde', 401, 555)
+* ('uni0326', -273, -257)
+* ('uni094D', -275, -112)
+* ('uni0964', 194, -20)
+* ('uni0965', 413, -20)
+* ('uni0965', 194, -20)
+* ('uni0967', 334, -153)
+* ('Wgrave', -1, 679)
+* ('wgrave', 711, 447)
+* ('wgrave', 2, 464)
+* ('Wacute', -1, 679)
+* ('wacute', 711, 447)
+* ('wacute', 2, 464)
+* ('Wdieresis', -1, 679)
+* ('wdieresis', 711, 447)
+* ('wdieresis', 2, 464)
+* ('Ygrave', -1, 681)
+* ('ygrave', -1, 494)
+* ('quoteleft', 141, 687)
+* ('quoteright', 65, 475)
+* ('quotesinglbase', 65, -115)
+* ('quotedblleft', 275, 687)
+* ('quotedblleft', 141, 687)
+* ('quotedblright', 199, 475)
+* ('quotedblright', 65, 475)
+* ('quotedblbase', 199, -107)
+* ('quotedblbase', 65, -107)
+* ('dagger', 443, 473)
+* ('dagger', 250, -162)
+* ('dagger', 57, 520)
+* ('dagger', 250, 694)
+* ('daggerdbl', 443, 276)
+* ('daggerdbl', 250, -162)
+* ('daggerdbl', 57, 322)
+* ('daggerdbl', 57, 520)
+* ('daggerdbl', 250, 694)
+* ('daggerdbl', 443, 473)
+* ('guilsinglleft', 48, 245)
+* ('guilsinglright', 319, 245)
+* ('foursuperior', 218, 629)
+* ('product', 683, -98)
+* ('product', 39, 679)
+* ('summation', 34, -71)
+* ('radical', 28, 360)
+* ('radical', 241, -70)
+* ('infinity', 630, 485)
+* ('approxequal', 420, 221)
+* ('approxequal', 154, 364)
+* ('ff', 609, 719)
+* ('ff', 314, 719)
+* ('fi', 572, 0)
+* ('fi', 309, 719)
+* ('fl', 339, 720)
+* ('fl', 569, 0)
+* ('ffi', 867, 0)
+* ('ffi', 315, 719)
+* ('ffi', 604, 719)
+* ('ffl', 634, 720)
+* ('ffl', 864, 0)
+* ('uni092D094D', 289, 125)
+* ('uni094D0928.post', -216, 127)
+* ('uni0916094D0928', 146, -196)
+* ('uni0917094D0928', 180, -38)
+* ('uni091A094D0928', 238, -64)
+* ('uni0925094D0928', 220, -75)
+* ('uni0927094D0928', 249, -74)
+* ('uni092C094D0928', 175, -71)
+* ('uni0926094D092D', 313, -164)
+* ('uni0926094D092F094D092D', 319, -199)
+* ('uni0927094D0928094D092F', 245, -72)
+* ('dvK_N', 171, -59)
+* ('dvKH_N', 167, -182)
+* ('dvG_N', 180, -38)
+* ('dvC_N', 237, -59)
+* ('dvTH_N', 220, -75)
+* ('dvDH_N', 254, -71)
+* ('dvB_N', 175, -71)
+* ('dvM_N', 201, -20)
+* ('ycircumflex.alt', 285, 696)
+* ('germandbls.cap', 242, 696)
+* ('caron.cap', 271, 544)
+* ('cedilla.cap', 210, -143)
+* ('circumflex.cap', 271, 696)
+* ('ogonek.cap', 314, -123)
+* ('ring.cap', 257, 673) and ('uni0326.cap', -469, -251)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 119, 715)
+* ('quotedbl', 102, 702)
+* ('quotedbl', 104, 476)
+* ('quotedbl', 234, 702)
+* ('quotedbl', 236, 476)
+* ('quotesingle', 99, 702)
+* ('quotesingle', 101, 476)
+* ('asterisk', 208, 727)
+* ('comma', 71, -124)
+* ('zero', 491, 633)
+* ('one', 34, 523)
+* ('one', 359, 0)
+* ('two', 35, 40)
+* ('four', 345, 629)
+* ('eight', 34, 245)
+* ('semicolon', 78, -137)
+* ('A', 320, 686)
+* ('A', 633, 0)
+* ('B', 550, 109)
+* ('B', 40, 649)
+* ('C', 35, 493)
+* ('D', 39, 56)
+* ('E', 37, 682)
+* ('F', 37, 682)
+* ('G', 35, 494)
+* ('H', 37, 682)
+* ('H', 709, 0)
+* ('I', 37, 682)
+* ('I', 299, 0)
+* ('K', 614, 44)
+* ('K', 37, 682)
+* ('L', 38, 683)
+* ('M', 852, 0)
+* ('N', 37, 682)
+* ('O', 35, 499)
+* ('P', 40, 683)
+* ('Q', 35, 499)
+* ('R', 40, 683)
+* ('S', 374, 699)
+* ('U', 10, 682)
+* ('V', -3, 682)
+* ('W', -3, 682)
+* ('X', 7, 683)
+* ('X', 658, 0)
+* ('Y', -3, 683)
+* ('b', 539, 143)
+* ('b', 9, 637)
+* ('d', 35, 356)
+* ('e', 454, 396)
+* ('g', 471, 461)
+* ('h', 623, 0)
+* ('i', 293, 0)
+* ('j', 94, -231)
+* ('k', 568, 31)
+* ('l', 291, 0)
+* ('m', 935, 0)
+* ('n', 620, 0)
+* ('p', 538, 143)
+* ('q', 35, 356)
+* ('q', 559, -217)
+* ('s', 285, -16)
+* ('v', 0, 499)
+* ('w', 720, 444)
+* ('w', 0, 499)
+* ('x', 7, 448)
+* ('x', 510, 0)
+* ('y', -3, 499)
+* ('asciitilde', 174, 363)
+* ('asciitilde', 459, 223)
+* ('exclamdown', 119, -26)
+* ('cent', 49, 348)
+* ('sterling', 45, 18)
+* ('sterling', 488, 0)
+* ('yen', 9, 617)
+* ('section', 396, 699)
+* ('guillemotleft', 42, 248)
+* ('twosuperior', 34, 309)
+* ('paragraph', 650, 683)
+* ('cedilla', 212, -161)
+* ('onesuperior', 34, 558)
+* ('guillemotright', 553, 248)
+* ('onequarter', 28, 558)
+* ('onehalf', 18, 557)
+* ('Agrave', 633, 0)
+* ('Aacute', 633, 0)
+* ('Acircumflex', 633, 0)
+* ('Acircumflex', 327, 889)
+* ('Atilde', 633, 0)
+* ('Adieresis', 633, 0)
+* ('Aring', 633, 0)
+* ('Ccedilla', 35, 493)
+* ('Egrave', 37, 682)
+* ('Eacute', 37, 682)
+* ('Ecircumflex', 37, 682)
+* ('Ecircumflex', 317, 889)
+* ('Edieresis', 37, 682)
+* ('Igrave', 299, 0)
+* ('Iacute', 37, 682)
+* ('Icircumflex', 171, 889)
+* ('Eth', 39, 56)
+* ('Ntilde', 37, 682)
+* ('Ograve', 35, 499)
+* ('Oacute', 35, 499)
+* ('Ocircumflex', 35, 499)
+* ('Ocircumflex', 348, 889)
+* ('Otilde', 35, 499)
+* ('Odieresis', 35, 499)
+* ('Oslash', 35, 499)
+* ('Ugrave', 10, 682)
+* ('Uacute', 10, 682)
+* ('Ucircumflex', 10, 682)
+* ('Ucircumflex', 337, 889)
+* ('Udieresis', 10, 682)
+* ('Yacute', -3, 683)
+* ('Thorn', 37, 683)
+* ('acircumflex', 245, 706)
+* ('atilde', 140, 698)
+* ('ae', 751, 395)
+* ('ccedilla', 36, 361)
+* ('egrave', 454, 396)
+* ('eacute', 454, 396)
+* ('ecircumflex', 454, 396)
+* ('ecircumflex', 273, 706)
+* ('edieresis', 454, 396)
+* ('igrave', 293, 0)
+* ('icircumflex', 156, 706)
+* ('eth', 35, 327)
+* ('ntilde', 231, 698)
+* ('ntilde', 620, 0)
+* ('ocircumflex', 270, 706)
+* ('otilde', 166, 698)
+* ('ucircumflex', 291, 706)
+* ('yacute', -3, 499)
+* ('thorn', 538, 143)
+* ('ydieresis', -3, 499)
+* ('Amacron', 633, 0)
+* ('Abreve', 633, 0)
+* ('Aogonek', 645, -136)
+* ('Aogonek', 320, 686)
+* ('aogonek', 522, -141)
+* ('Cacute', 35, 493)
+* ('Ccircumflex', 35, 493)
+* ('Ccircumflex', 342, 889)
+* ('ccircumflex', 271, 706)
+* ('Cdotaccent', 35, 493)
+* ('Ccaron', 35, 493)
+* ('Dcaron', 39, 56)
+* ('dcaron', 645, 618)
+* ('dcaron', 553, 762)
+* ('dcaron', 35, 356)
+* ('Dcroat', 39, 56)
+* ('dcroat', 35, 356)
+* ('Emacron', 37, 682)
+* ('emacron', 454, 396)
+* ('Ebreve', 37, 682)
+* ('ebreve', 454, 396)
+* ('Edotaccent', 37, 682)
+* ('edotaccent', 454, 396)
+* ('Eogonek', 37, 682)
+* ('Eogonek', 568, -135)
+* ('eogonek', 454, 396)
+* ('Ecaron', 37, 682)
+* ('ecaron', 454, 396)
+* ('Gcircumflex', 35, 494)
+* ('Gcircumflex', 349, 889)
+* ('gcircumflex', 471, 461)
+* ('gcircumflex', 233, 706)
+* ('Gbreve', 35, 494)
+* ('gbreve', 471, 461)
+* ('Gdotaccent', 35, 494)
+* ('gdotaccent', 471, 461)
+* ('uni0122', 35, 494)
+* ('uni0122', 289, -274)
+* ('uni0123', 471, 461)
+* ('uni0123', 276, 796)
+* ('Hcircumflex', 37, 682)
+* ('Hcircumflex', 709, 0)
+* ('Hcircumflex', 376, 889)
+* ('hcircumflex', 623, 0)
+* ('Hbar', 37, 682)
+* ('Hbar', 709, 0)
+* ('hbar', 625, 0)
+* ('itilde', 51, 698)
+* ('Iogonek', 332, -132)
+* ('Iogonek', 37, 682)
+* ('iogonek', 307, -139)
+* ('Idotaccent', 37, 682)
+* ('Idotaccent', 299, 0)
+* ('dotlessi', 293, 0)
+* ('IJ', 37, 682)
+* ('ij', 394, -231)
+* ('Jcircumflex', 229, 889)
+* ('jcircumflex', 140, 706)
+* ('jcircumflex', 94, -231)
+* ('uni0136', 37, 682)
+* ('uni0136', 614, 44)
+* ('uni0136', 294, -274)
+* ('uni0137', 568, 31)
+* ('uni0137', 259, -286)
+* ('kgreenlandic', 568, 31)
+* ('Lacute', 38, 683)
+* ('lacute', 291, 0)
+* ('uni013B', 38, 683)
+* ('uni013B', 240, -274)
+* ('uni013C', 291, 0)
+* ('uni013C', 131, -286)
+* ('Lcaron', 38, 683)
+* ('Lcaron', 379, 771)
+* ('lcaron', 372, 616)
+* ('lcaron', 280, 762)
+* ('Ldot', 38, 683)
+* ('Nacute', 37, 682)
+* ('nacute', 620, 0)
+* ('uni0145', 37, 682)
+* ('uni0145', 322, -274)
+* ('uni0146', 620, 0)
+* ('uni0146', 288, -286)
+* ('Ncaron', 37, 682)
+* ('ncaron', 620, 0)
+* ('Eng', 37, 682)
+* ('eng', 443, -218)
+* ('Omacron', 35, 499)
+* ('Obreve', 35, 499)
+* ('Ohungarumlaut', 35, 499)
+* ('OE', 35, 494)
+* ('oe', 803, 396)
+* ('Racute', 40, 683)
+* ('uni0156', 40, 683)
+* ('uni0156', 285, -274)
+* ('uni0157', 144, -286)
+* ('Rcaron', 40, 683)
+* ('sacute', 285, -16)
+* ('Scircumflex', 275, 889)
+* ('scircumflex', 285, -16)
+* ('scircumflex', 218, 706)
+* ('uni015E', 374, 699)
+* ('scaron', 285, -16)
+* ('uni0162', 283, -274)
+* ('uni0163', 179, -286)
+* ('tcaron', 252, 758)
+* ('Utilde', 10, 682)
+* ('utilde', 186, 698)
+* ('Umacron', 10, 682)
+* ('Ubreve', 10, 682)
+* ('Uring', 10, 682)
+* ('Uhungarumlaut', 10, 682)
+* ('Uogonek', 10, 682)
+* ('uogonek', 593, -138)
+* ('Wcircumflex', -3, 682)
+* ('Wcircumflex', 509, 889)
+* ('wcircumflex', 720, 444)
+* ('wcircumflex', 0, 499)
+* ('wcircumflex', 380, 706)
+* ('Ycircumflex', -3, 683)
+* ('Ycircumflex', 326, 889)
+* ('ycircumflex', -3, 499)
+* ('ycircumflex', 284, 706)
+* ('Ydieresis', -3, 683)
+* ('florin', 373, 728)
+* ('uni0218', 374, 699)
+* ('uni0218', 225, -274)
+* ('uni0219', 185, -286)
+* ('uni021A', 283, -274)
+* ('uni021B', 179, -286)
+* ('circumflex', 271, 706)
+* ('caron', 271, 547)
+* ('ring', 258, 676)
+* ('ogonek', 296, -123)
+* ('tilde', 149, 698)
+* ('tilde', 406, 558)
+* ('uni0326', -252, -286)
+* ('uni094D', -281, -84)
+* ('uni0964', 187, -21)
+* ('uni0965', 415, -21)
+* ('uni0965', 187, -21)
+* ('Wgrave', -3, 682)
+* ('wgrave', 720, 444)
+* ('wgrave', 0, 499)
+* ('Wacute', -3, 682)
+* ('wacute', 720, 444)
+* ('wacute', 0, 499)
+* ('Wdieresis', -3, 682)
+* ('wdieresis', 720, 444)
+* ('wdieresis', 0, 499)
+* ('Ygrave', -3, 683)
+* ('ygrave', -3, 499)
+* ('quoteleft', 159, 691)
+* ('quoteright', 71, 447)
+* ('quotesinglbase', 71, -124)
+* ('quotedblleft', 313, 691)
+* ('quotedblleft', 159, 691)
+* ('quotedblright', 225, 447)
+* ('quotedblright', 71, 447)
+* ('quotedblbase', 225, -120)
+* ('quotedblbase', 71, -120)
+* ('dagger', 442, 475)
+* ('dagger', 250, -166)
+* ('dagger', 58, 526)
+* ('dagger', 249, 695)
+* ('daggerdbl', 442, 277)
+* ('daggerdbl', 249, -166)
+* ('daggerdbl', 58, 327)
+* ('daggerdbl', 58, 526)
+* ('daggerdbl', 249, 695)
+* ('daggerdbl', 442, 475)
+* ('guilsinglleft', 42, 248)
+* ('guilsinglright', 327, 248)
+* ('foursuperior', 223, 632)
+* ('product', 707, -103)
+* ('product', 37, 682)
+* ('summation', 39, -75)
+* ('radical', 28, 353)
+* ('radical', 247, -70)
+* ('infinity', 633, 491)
+* ('approxequal', 163, 423)
+* ('approxequal', 448, 195)
+* ('dotlessj', 94, -231)
+* ('fi', 596, 0)
+* ('fl', 594, 0)
+* ('ffi', 901, 0)
+* ('ffl', 900, 0)
+* ('uni092D094D', 289, 105)
+* ('uni094D0928.post', -255, 128)
+* ('uni092D094D0928', 329, -46)
+* ('uni092E094D0928', 202, -41)
+* ('uni092F094D0928', 207, -77)
+* ('uni0926094D092D', 337, -194)
+* ('uni0926094D092F094D092D', 339, -231)
+* ('uni0927094D0928094D092F', 260, -87)
+* ('dvKH_N', 166, -208)
+* ('dvP_N', 176, -14)
+* ('dvBH_N', 343, -46)
+* ('dvM_N', 207, -41)
+* ('dvY_N', 207, -77)
+* ('ycircumflex.alt', 293, 706)
+* ('germandbls.cap', 240, 698)
+* ('caron.cap', 271, 547)
+* ('cedilla.cap', 212, -161)
+* ('circumflex.cap', 271, 706)
+* ('ogonek.cap', 296, -123)
+* ('ring.cap', 258, 676) and ('uni0326.cap', -424, -274)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 116, 720)
+* ('quotedbl', 108, 708)
+* ('quotedbl', 112, 465)
+* ('quotedbl', 255, 708)
+* ('quotedbl', 259, 465)
+* ('quotesingle', 104, 708)
+* ('quotesingle', 108, 465)
+* ('asterisk', 196, 736)
+* ('comma', 78, -136)
+* ('zero', 505, 638)
+* ('one', 29, 515)
+* ('one', 380, 61)
+* ('two', 35, 48)
+* ('four', 354, 633)
+* ('semicolon', 81, -155)
+* ('A', 329, 689)
+* ('A', 648, 59)
+* ('B', 38, 647)
+* ('D', 38, 24)
+* ('D', 40, 655)
+* ('E', 38, 626)
+* ('F', 38, 626)
+* ('H', 38, 626)
+* ('H', 728, 59)
+* ('I', 38, 626)
+* ('I', 316, 0)
+* ('K', 636, 52)
+* ('K', 38, 626)
+* ('M', 882, 59)
+* ('N', 38, 626)
+* ('P', 39, 647)
+* ('R', 39, 647)
+* ('U', 8, 626)
+* ('V', -2, 626)
+* ('X', 8, 626)
+* ('X', 682, 0)
+* ('Y', -2, 626)
+* ('b', 554, 147)
+* ('b', 7, 635)
+* ('d', 33, 358)
+* ('e', 468, 400)
+* ('f', 408, 732)
+* ('g', 481, 461)
+* ('h', 27, 634)
+* ('h', 636, 0)
+* ('i', 27, 440)
+* ('i', 306, 0)
+* ('j', 97, -234)
+* ('k', 583, 37)
+* ('k', 27, 635)
+* ('l', 27, 635)
+* ('l', 306, 0)
+* ('m', 27, 434)
+* ('m', 946, 59)
+* ('n', 27, 434)
+* ('n', 636, 0)
+* ('p', 554, 147)
+* ('q', 33, 358)
+* ('q', 570, -218)
+* ('v', -1, 466)
+* ('w', -1, 466)
+* ('x', 4, 452)
+* ('x', 522, 59)
+* ('y', -2, 446)
+* ('exclamdown', 116, -21)
+* ('sterling', 43, 21)
+* ('sterling', 504, 0)
+* ('yen', 10, 620)
+* ('guillemotleft', 35, 252)
+* ('twosuperior', 35, 315)
+* ('paragraph', 707, 651)
+* ('cedilla', 211, -166)
+* ('onesuperior', 29, 554)
+* ('guillemotright', 586, 252)
+* ('onequarter', 29, 554)
+* ('onehalf', 18, 552)
+* ('Agrave', 648, 59)
+* ('Aacute', 648, 59)
+* ('Acircumflex', 648, 59)
+* ('Acircumflex', 341, 896)
+* ('Atilde', 648, 59)
+* ('Adieresis', 648, 59)
+* ('Aring', 648, 59)
+* ('Egrave', 38, 626)
+* ('Eacute', 38, 626)
+* ('Ecircumflex', 38, 626)
+* ('Ecircumflex', 326, 896)
+* ('Edieresis', 38, 626)
+* ('Igrave', 316, 0)
+* ('Iacute', 38, 626)
+* ('Icircumflex', 180, 896)
+* ('Eth', 38, 24)
+* ('Eth', 40, 655)
+* ('Ntilde', 38, 626)
+* ('Ocircumflex', 357, 896)
+* ('Ugrave', 8, 626)
+* ('Uacute', 8, 626)
+* ('Ucircumflex', 8, 626)
+* ('Ucircumflex', 345, 896)
+* ('Udieresis', 8, 626)
+* ('Yacute', -2, 626)
+* ('Thorn', 38, 626)
+* ('acircumflex', 253, 716)
+* ('ae', 757, 398)
+* ('egrave', 468, 400)
+* ('eacute', 468, 400)
+* ('ecircumflex', 468, 400)
+* ('ecircumflex', 282, 716)
+* ('edieresis', 468, 400)
+* ('igrave', 306, 0)
+* ('iacute', 27, 440)
+* ('icircumflex', 166, 716)
+* ('eth', 33, 326)
+* ('ntilde', 27, 434)
+* ('ntilde', 636, 0)
+* ('ocircumflex', 280, 716)
+* ('ucircumflex', 296, 716)
+* ('yacute', -2, 446)
+* ('thorn', 554, 147)
+* ('ydieresis', -2, 446)
+* ('Amacron', 648, 59)
+* ('Abreve', 648, 59)
+* ('Aogonek', 664, -142)
+* ('Aogonek', 329, 689)
+* ('aogonek', 535, -144)
+* ('Ccircumflex', 352, 896)
+* ('ccircumflex', 278, 716)
+* ('Dcaron', 38, 24)
+* ('Dcaron', 40, 655)
+* ('dcaron', 673, 687)
+* ('dcaron', 569, 777)
+* ('dcaron', 33, 358)
+* ('Dcroat', 38, 24)
+* ('Dcroat', 40, 655)
+* ('dcroat', 33, 358)
+* ('Emacron', 38, 626)
+* ('emacron', 468, 400)
+* ('Ebreve', 38, 626)
+* ('ebreve', 468, 400)
+* ('Edotaccent', 38, 626)
+* ('edotaccent', 468, 400)
+* ('Eogonek', 551, -145)
+* ('Eogonek', 38, 626)
+* ('eogonek', 468, 400)
+* ('Ecaron', 38, 626)
+* ('ecaron', 468, 400)
+* ('Gcircumflex', 366, 896)
+* ('gcircumflex', 481, 461)
+* ('gcircumflex', 236, 716)
+* ('gbreve', 481, 461)
+* ('gdotaccent', 481, 461)
+* ('uni0122', 296, -302)
+* ('uni0123', 481, 461)
+* ('uni0123', 285, 827)
+* ('Hcircumflex', 38, 626)
+* ('Hcircumflex', 728, 59)
+* ('Hcircumflex', 388, 896)
+* ('hcircumflex', 27, 634)
+* ('hcircumflex', 636, 0)
+* ('hcircumflex', 420, 716)
+* ('Hbar', 38, 626)
+* ('Hbar', 728, 59)
+* ('hbar', 27, 634)
+* ('hbar', 636, 0)
+* ('Iogonek', 324, -140)
+* ('Iogonek', 38, 626)
+* ('iogonek', 315, -146)
+* ('iogonek', 27, 440)
+* ('Idotaccent', 38, 626)
+* ('Idotaccent', 316, 0)
+* ('dotlessi', 27, 440)
+* ('dotlessi', 306, 0)
+* ('IJ', 38, 626)
+* ('ij', 416, -234)
+* ('ij', 27, 440)
+* ('Jcircumflex', 258, 896)
+* ('jcircumflex', 155, 716)
+* ('jcircumflex', 97, -234)
+* ('uni0136', 38, 626)
+* ('uni0136', 636, 52)
+* ('uni0136', 308, -302)
+* ('uni0137', 27, 635)
+* ('uni0137', 583, 37)
+* ('uni0137', 254, -321)
+* ('kgreenlandic', 583, 37)
+* ('kgreenlandic', 27, 425)
+* ('lacute', 306, 0)
+* ('uni013B', 245, -302)
+* ('uni013C', 27, 635)
+* ('uni013C', 306, 0)
+* ('uni013C', 127, -321)
+* ('Lcaron', 396, 779)
+* ('lcaron', 397, 687)
+* ('lcaron', 293, 777)
+* ('lcaron', 27, 635)
+* ('ldot', 27, 635)
+* ('Nacute', 38, 626)
+* ('nacute', 27, 434)
+* ('nacute', 636, 0)
+* ('uni0145', 38, 626)
+* ('uni0145', 314, -302)
+* ('uni0146', 27, 434)
+* ('uni0146', 636, 0)
+* ('uni0146', 282, -321)
+* ('Ncaron', 38, 626)
+* ('ncaron', 27, 434)
+* ('ncaron', 636, 0)
+* ('Eng', 38, 626)
+* ('eng', 444, -234)
+* ('eng', 27, 434)
+* ('oe', 814, 400)
+* ('Racute', 39, 647)
+* ('uni0156', 39, 647)
+* ('uni0156', 297, -302)
+* ('uni0157', 143, -321)
+* ('Rcaron', 39, 647)
+* ('Scircumflex', 288, 896)
+* ('scircumflex', 231, 716)
+* ('uni0162', 285, -302)
+* ('uni0163', 167, -321)
+* ('tcaron', 265, 777)
+* ('Utilde', 8, 626)
+* ('Umacron', 8, 626)
+* ('Ubreve', 8, 626)
+* ('Uring', 8, 626)
+* ('Uhungarumlaut', 8, 626)
+* ('Uogonek', 8, 626)
+* ('uogonek', 597, -149)
+* ('Wcircumflex', 523, 896)
+* ('wcircumflex', -1, 466)
+* ('wcircumflex', 388, 716)
+* ('Ycircumflex', -2, 626)
+* ('Ycircumflex', 339, 896)
+* ('ycircumflex', -2, 446)
+* ('ycircumflex', 303, 716)
+* ('Ydieresis', -2, 626)
+* ('longs', 408, 732)
+* ('florin', 392, 740)
+* ('uni0218', 231, -302)
+* ('uni0219', 185, -321)
+* ('uni021A', 285, -302)
+* ('uni021B', 167, -321)
+* ('circumflex', 274, 716)
+* ('caron', 274, 552)
+* ('ring', 259, 680)
+* ('ogonek', 275, -123)
+* ('uni0326', -228, -321)
+* ('uni094A', -287, 954)
+* ('wgrave', -1, 466)
+* ('wacute', -1, 466)
+* ('wdieresis', -1, 466)
+* ('Ygrave', -2, 626)
+* ('ygrave', -2, 446)
+* ('quoteleft', 178, 695)
+* ('quoteright', 78, 415)
+* ('quotesinglbase', 78, -136)
+* ('quotedblleft', 355, 695)
+* ('quotedblleft', 178, 695)
+* ('quotedblright', 255, 415)
+* ('quotedblright', 78, 415)
+* ('quotedblbase', 255, -135)
+* ('quotedblbase', 78, -135)
+* ('dagger', 443, 477)
+* ('dagger', 250, -172)
+* ('dagger', 57, 534)
+* ('dagger', 250, 696)
+* ('daggerdbl', 443, 277)
+* ('daggerdbl', 250, -171)
+* ('daggerdbl', 57, 334)
+* ('daggerdbl', 57, 534)
+* ('daggerdbl', 250, 696)
+* ('daggerdbl', 443, 477)
+* ('guilsinglleft', 35, 252)
+* ('guilsinglright', 336, 252)
+* ('foursuperior', 232, 636)
+* ('uni2206', 29, 60)
+* ('product', 732, -109)
+* ('product', 38, 626)
+* ('radical', 26, 331)
+* ('radical', 253, -69)
+* ('dotlessj', 97, -234)
+* ('ff', 728, 732)
+* ('ff', 408, 732)
+* ('fi', 618, 59)
+* ('fi', 338, 731)
+* ('fl', 371, 732)
+* ('fl', 618, 59)
+* ('ffi', 940, 0)
+* ('ffi', 409, 732)
+* ('ffi', 657, 731)
+* ('ffl', 408, 732)
+* ('ffl', 691, 732)
+* ('ffl', 938, 59)
+* ('uni092D094D', 307, 78)
+* ('uni0915094D0928', 124, -91)
+* ('uni092A094D0928', 183, -30)
+* ('uni092B094D0928', 189, -31)
+* ('uni092D094D0928', 350, -65)
+* ('uni092E094D0928', 214, -65)
+* ('uni0926094D092D', 363, -228)
+* ('uni0926094D092F094D092D', 363, -267)
+* ('dvK_N', 124, -91)
+* ('dvP_N', 183, -30)
+* ('dvPH_N', 189, -31)
+* ('dvBH_N', 367, -65)
+* ('dvM_N', 214, -65)
+* ('ycircumflex.alt', 305, 716)
+* ('caron.cap', 274, 552)
+* ('cedilla.cap', 211, -166)
+* ('circumflex.cap', 274, 716)
+* ('ogonek.cap', 275, -123)
+* ('ring.cap', 259, 680) and ('uni0326.cap', -372, -302)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<details><summary>⚠️ Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 122, 704)
+* ('quotedbl', 92, 693)
+* ('quotedbl', 90, 495)
+* ('quotedbl', 200, 693)
+* ('quotedbl', 198, 495)
+* ('dollar', 226, -115)
+* ('dollar', 228, 700)
+* ('quotesingle', 91, 693)
+* ('quotesingle', 89, 495)
+* ('asterisk', 251, 717)
+* ('comma', 60, -106)
+* ('zero', 364, 623)
+* ('one', 317, 0)
+* ('two', 34, 24)
+* ('four', 328, 621)
+* ('eight', 41, 193)
+* ('semicolon', 74, -110)
+* ('A', 307, 682)
+* ('A', 602, 0)
+* ('B', 516, 106)
+* ('C', 35, 481)
+* ('G', 35, 485)
+* ('K', 578, 29)
+* ('L', 40, 679)
+* ('M', 797, 0)
+* ('O', 605, 187)
+* ('O', 36, 485)
+* ('Q', 36, 485)
+* ('S', 352, 694)
+* ('U', 19, 677)
+* ('V', 1, 677)
+* ('W', 942, 664)
+* ('W', 1, 677)
+* ('X', 10, 679)
+* ('X', 616, 0)
+* ('Y', 0, 679)
+* ('b', 516, 136)
+* ('c', 37, 346)
+* ('d', 36, 353)
+* ('e', 431, 390)
+* ('f', 300, 714)
+* ('g', 455, 460)
+* ('h', 598, 0)
+* ('i', 270, 0)
+* ('k', 544, 0)
+* ('l', 265, 0)
+* ('m', 910, 0)
+* ('n', 593, 0)
+* ('o', 471, 136)
+* ('o', 38, 355)
+* ('p', 512, 136)
+* ('q', 37, 352)
+* ('q', 539, -214)
+* ('s', 146, 505)
+* ('s', 373, 203)
+* ('s', 266, -16)
+* ('t', 18, 489)
+* ('v', 476, 449)
+* ('v', 1, 489)
+* ('w', 704, 449)
+* ('w', 1, 489)
+* ('x', 484, 0)
+* ('y', 493, 477)
+* ('y', 1, 489)
+* ('asciitilde', 175, 350)
+* ('asciitilde', 379, 226)
+* ('exclamdown', 122, -30)
+* ('cent', 267, -118)
+* ('cent', 48, 334)
+* ('cent', 269, 608)
+* ('sterling', 463, 0)
+* ('yen', 8, 613)
+* ('section', 367, 695)
+* ('guillemotleft', 54, 242)
+* ('twosuperior', 33, 299)
+* ('paragraph', 556, 679)
+* ('cedilla', 211, -143)
+* ('ordmasculine', 44, 541)
+* ('guillemotright', 502, 242)
+* ('onequarter', 27, 564)
+* ('Agrave', 602, 0)
+* ('Aacute', 602, 0)
+* ('Acircumflex', 602, 0)
+* ('Acircumflex', 310, 877)
+* ('Atilde', 602, 0)
+* ('Adieresis', 602, 0)
+* ('Aring', 602, 0)
+* ('Ccedilla', 35, 481)
+* ('Ecircumflex', 308, 877)
+* ('Icircumflex', 161, 877)
+* ('Ograve', 605, 187)
+* ('Ograve', 36, 485)
+* ('Oacute', 605, 187)
+* ('Oacute', 36, 485)
+* ('Ocircumflex', 36, 485)
+* ('Ocircumflex', 605, 187)
+* ('Ocircumflex', 337, 877)
+* ('Otilde', 605, 187)
+* ('Otilde', 36, 485)
+* ('Odieresis', 605, 187)
+* ('Odieresis', 36, 485)
+* ('Oslash', 36, 485)
+* ('Oslash', 605, 187)
+* ('Ugrave', 19, 677)
+* ('Uacute', 19, 677)
+* ('Ucircumflex', 19, 677)
+* ('Ucircumflex', 329, 877)
+* ('Udieresis', 19, 677)
+* ('Yacute', 0, 679)
+* ('germandbls', 245, 712)
+* ('acircumflex', 236, 689)
+* ('atilde', 138, 679)
+* ('ae', 164, 505)
+* ('ccedilla', 37, 346)
+* ('egrave', 431, 390)
+* ('eacute', 431, 390)
+* ('ecircumflex', 431, 390)
+* ('ecircumflex', 264, 689)
+* ('edieresis', 431, 390)
+* ('igrave', 270, 0)
+* ('icircumflex', 146, 689)
+* ('eth', 36, 330)
+* ('ntilde', 222, 679)
+* ('ntilde', 593, 0)
+* ('ograve', 471, 136)
+* ('ograve', 38, 355)
+* ('oacute', 471, 136)
+* ('oacute', 38, 355)
+* ('ocircumflex', 471, 136)
+* ('ocircumflex', 38, 355)
+* ('ocircumflex', 260, 689)
+* ('otilde', 161, 679)
+* ('otilde', 471, 136)
+* ('otilde', 38, 355)
+* ('odieresis', 471, 136)
+* ('odieresis', 38, 355)
+* ('oslash', 38, 355)
+* ('oslash', 471, 136)
+* ('ucircumflex', 287, 689)
+* ('yacute', 493, 477)
+* ('yacute', 1, 489)
+* ('thorn', 512, 136)
+* ('ydieresis', 493, 477)
+* ('ydieresis', 1, 489)
+* ('Amacron', 602, 0)
+* ('Abreve', 602, 0)
+* ('Aogonek', 614, -127)
+* ('Aogonek', 307, 682)
+* ('aogonek', 500, -135)
+* ('Cacute', 35, 481)
+* ('cacute', 37, 346)
+* ('Ccircumflex', 35, 481)
+* ('Ccircumflex', 332, 877)
+* ('ccircumflex', 37, 346)
+* ('ccircumflex', 265, 689)
+* ('Cdotaccent', 35, 481)
+* ('cdotaccent', 37, 346)
+* ('Ccaron', 35, 481)
+* ('ccaron', 37, 346)
+* ('dcaron', 595, 603)
+* ('dcaron', 527, 736)
+* ('dcaron', 36, 353)
+* ('dcroat', 36, 353)
+* ('emacron', 431, 390)
+* ('ebreve', 431, 390)
+* ('edotaccent', 431, 390)
+* ('Eogonek', 596, -120)
+* ('eogonek', 436, -103)
+* ('ecaron', 431, 390)
+* ('Gcircumflex', 35, 485)
+* ('Gcircumflex', 328, 877)
+* ('gcircumflex', 455, 460)
+* ('gcircumflex', 233, 689)
+* ('Gbreve', 35, 485)
+* ('gbreve', 455, 460)
+* ('Gdotaccent', 35, 485)
+* ('gdotaccent', 455, 460)
+* ('uni0122', 35, 485)
+* ('uni0122', 279, -229)
+* ('uni0123', 455, 460)
+* ('uni0123', 260, 747)
+* ('Hcircumflex', 363, 877)
+* ('hcircumflex', 598, 0)
+* ('hbar', 603, 0)
+* ('itilde', 47, 679)
+* ('Iogonek', 345, -119)
+* ('iogonek', 294, -128)
+* ('dotlessi', 270, 0)
+* ('Jcircumflex', 188, 877)
+* ('jcircumflex', 121, 689)
+* ('uni0136', 578, 29)
+* ('uni0136', 271, -229)
+* ('uni0137', 544, 0)
+* ('uni0137', 268, -231)
+* ('kgreenlandic', 544, 0)
+* ('Lacute', 40, 679)
+* ('uni013B', 40, 679)
+* ('uni013B', 231, -229)
+* ('uni013C', 265, 0)
+* ('uni013C', 137, -231)
+* ('Lcaron', 40, 679)
+* ('Lcaron', 352, 756)
+* ('lcaron', 327, 604)
+* ('lcaron', 260, 736)
+* ('Ldot', 40, 679)
+* ('nacute', 593, 0)
+* ('uni0145', 336, -229)
+* ('uni0146', 593, 0)
+* ('uni0146', 297, -231)
+* ('ncaron', 593, 0)
+* ('Omacron', 605, 187)
+* ('Omacron', 36, 485)
+* ('omacron', 471, 136)
+* ('omacron', 38, 355)
+* ('Obreve', 605, 187)
+* ('Obreve', 36, 485)
+* ('obreve', 471, 136)
+* ('obreve', 38, 355)
+* ('Ohungarumlaut', 605, 187)
+* ('Ohungarumlaut', 36, 485)
+* ('ohungarumlaut', 38, 355)
+* ('OE', 35, 484)
+* ('oe', 37, 354)
+* ('uni0156', 266, -229)
+* ('uni0157', 147, -231)
+* ('sacute', 373, 203)
+* ('sacute', 266, -16)
+* ('Scircumflex', 260, 877)
+* ('scircumflex', 373, 203)
+* ('scircumflex', 266, -16)
+* ('scircumflex', 203, 689)
+* ('uni015E', 352, 694)
+* ('uni015F', 146, 505)
+* ('uni015F', 373, 203)
+* ('scaron', 373, 203)
+* ('scaron', 266, -16)
+* ('uni0162', 279, -229)
+* ('uni0163', 18, 489)
+* ('uni0163', 200, -231)
+* ('tcaron', 18, 489)
+* ('tcaron', 231, 726)
+* ('tbar', 18, 489)
+* ('Utilde', 19, 677)
+* ('utilde', 189, 679)
+* ('Umacron', 19, 677)
+* ('Ubreve', 19, 677)
+* ('Uring', 19, 677)
+* ('Uhungarumlaut', 19, 677)
+* ('Uogonek', 19, 677)
+* ('uogonek', 587, -121)
+* ('Wcircumflex', 942, 664)
+* ('Wcircumflex', 1, 677)
+* ('Wcircumflex', 492, 877)
+* ('wcircumflex', 704, 449)
+* ('wcircumflex', 1, 489)
+* ('wcircumflex', 372, 689)
+* ('Ycircumflex', 0, 679)
+* ('Ycircumflex', 309, 877)
+* ('ycircumflex', 493, 477)
+* ('ycircumflex', 1, 489)
+* ('ycircumflex', 258, 689)
+* ('Ydieresis', 0, 679)
+* ('longs', 300, 714)
+* ('uni0218', 352, 694)
+* ('uni0218', 215, -229)
+* ('uni0219', 373, 203)
+* ('uni0219', 146, 505)
+* ('uni0219', 184, -231)
+* ('uni021A', 279, -229)
+* ('uni021B', 18, 489)
+* ('uni021B', 200, -231)
+* ('circumflex', 272, 689)
+* ('caron', 272, 540)
+* ('ogonek', 330, -123)
+* ('tilde', 157, 679)
+* ('tilde', 354, 555)
+* ('uni0326', -291, -231)
+* ('uni094D', -269, -111)
+* ('uni0964', 199, -21)
+* ('uni0965', 410, -21)
+* ('uni0965', 199, -21)
+* ('uni0967', 332, -142)
+* ('Wgrave', 942, 664)
+* ('Wgrave', 1, 677)
+* ('wgrave', 704, 449)
+* ('wgrave', 1, 489)
+* ('Wacute', 942, 664)
+* ('Wacute', 1, 677)
+* ('wacute', 704, 449)
+* ('wacute', 1, 489)
+* ('Wdieresis', 942, 664)
+* ('Wdieresis', 1, 677)
+* ('wdieresis', 704, 449)
+* ('wdieresis', 1, 489)
+* ('Ygrave', 0, 679)
+* ('ygrave', 493, 477)
+* ('ygrave', 1, 489)
+* ('quoteleft', 126, 684)
+* ('quoteright', 60, 500)
+* ('quotesinglbase', 60, -106)
+* ('quotedblleft', 242, 684)
+* ('quotedblleft', 126, 684)
+* ('quotedblright', 176, 500)
+* ('quotedblright', 60, 500)
+* ('quotedblbase', 176, -96)
+* ('quotedblbase', 60, -96)
+* ('dagger', 442, 471)
+* ('dagger', 251, -158)
+* ('dagger', 58, 514)
+* ('dagger', 252, 693)
+* ('daggerdbl', 442, 275)
+* ('daggerdbl', 249, -158)
+* ('daggerdbl', 58, 318)
+* ('daggerdbl', 58, 514)
+* ('daggerdbl', 252, 693)
+* ('daggerdbl', 442, 471)
+* ('guilsinglleft', 54, 242)
+* ('guilsinglright', 311, 242)
+* ('foursuperior', 218, 626)
+* ('summation', 31, -70)
+* ('radical', 29, 366)
+* ('radical', 260, -76)
+* ('infinity', 628, 479)
+* ('approxequal', 349, 187)
+* ('approxequal', 145, 371)
+* ('ff', 300, 714)
+* ('ff', 585, 714)
+* ('fi', 552, 0)
+* ('fi', 298, 714)
+* ('fl', 325, 715)
+* ('fl', 547, 0)
+* ('ffi', 836, 0)
+* ('ffi', 301, 714)
+* ('ffi', 582, 714)
+* ('ffl', 300, 714)
+* ('ffl', 609, 715)
+* ('ffl', 832, 0)
+* ('uni092D094D', 272, 148)
+* ('uni094D0928.post', -184, 125)
+* ('uni0915094D0928', 167, -62)
+* ('uni0916094D0928', 164, -163)
+* ('uni0918094D0928', 188, -60)
+* ('uni091A094D0928', 238, -47)
+* ('uni0925094D0928', 199, -58)
+* ('uni0926094D0928', 165, -144)
+* ('uni0927094D0928', 240, -62)
+* ('uni092C094D0928', 179, -63)
+* ('uni092F094D0928', 195, -59)
+* ('uni0935094D0928', 180, -62)
+* ('uni0926094D092F094D092D', 301, -172)
+* ('uni0927094D0928094D092F', 234, -58)
+* ('dvK_N', 158, -56)
+* ('dvKH_N', 167, -159)
+* ('dvG_N', 180, -13)
+* ('dvGH_N', 200, -56)
+* ('dvC_N', 238, -44)
+* ('dvTH_N', 200, -58)
+* ('dvDH_N', 247, -58)
+* ('dvN_N', 148, 12)
+* ('dvP_N', 192, 10)
+* ('dvB_N', 179, -63)
+* ('dvY_N', 195, -59)
+* ('dvV_N', 179, -62)
+* ('dvT_KH_NA', 437, -163)
+* ('ycircumflex.alt', 279, 689)
+* ('germandbls.cap', 298, 693)
+* ('caron.cap', 272, 540)
+* ('cedilla.cap', 211, -143)
+* ('circumflex.cap', 272, 689)
+* ('ogonek.cap', 330, -123) and ('uni0326.cap', -509, -229)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>🔥 Karma-Light.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0946
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Medium.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0946
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-SemiBold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0946
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Bold.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0946
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+<details><summary>🔥 Karma-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni0901
+
+- uni0902
+
+- uni0941
+
+- uni0942
+
+- uni0943
+
+- uni0945
+
+- uni0946
+
+- uni0947
+
+- uni0948
+
+- uni094D [code: unattached-dotted-circle-marks]
+</code></pre>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

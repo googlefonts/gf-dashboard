@@ -1,0 +1,2988 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>12</td>
+                <td>16</td>
+                <td>65</td>
+                <td>8</td>
+                <td>140</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>7%</td>
+                <td>9%</td>
+                <td>36%</td>
+                <td>4%</td>
+                <td>77%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Does DESCRIPTION file contain broken links?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/broken_links&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following links are broken in the DESCRIPTION file:
+http://www.dzongkha.gov.bt [code: broken-links]</p>
+</span></li></ul></div></details>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'FYNN' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0141 (LATIN CAPITAL LETTER L WITH STROKE)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x1E9E (LATIN CAPITAL LETTER SHARP S)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0142 (LATIN SMALL LETTER L WITH STROKE)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x030C (COMBINING CARON)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0327 (COMBINING CEDILLA)
+
+
+- 0x0328 (COMBINING OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+0100 LATIN CAPITAL LETTER A WITH MACRON: try adding latin-ext</li>
+<li>U+0101 LATIN SMALL LETTER A WITH MACRON: try adding latin-ext</li>
+<li>U+0112 LATIN CAPITAL LETTER E WITH MACRON: try adding latin-ext</li>
+<li>U+0113 LATIN SMALL LETTER E WITH MACRON: try adding latin-ext</li>
+<li>U+0120 LATIN CAPITAL LETTER G WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0121 LATIN SMALL LETTER G WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+012A LATIN CAPITAL LETTER I WITH MACRON: try adding latin-ext</li>
+<li>U+012B LATIN SMALL LETTER I WITH MACRON: try adding latin-ext</li>
+<li>U+014B LATIN SMALL LETTER ENG: try adding latin-ext</li>
+<li>U+014C LATIN CAPITAL LETTER O WITH MACRON: try adding latin-ext</li>
+<li>U+014D LATIN SMALL LETTER O WITH MACRON: try adding latin-ext</li>
+<li>U+015A LATIN CAPITAL LETTER S WITH ACUTE: try adding latin-ext</li>
+<li>U+015B LATIN SMALL LETTER S WITH ACUTE: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+016A LATIN CAPITAL LETTER U WITH MACRON: try adding latin-ext</li>
+<li>U+016B LATIN SMALL LETTER U WITH MACRON: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+017A LATIN SMALL LETTER Z WITH ACUTE: try adding latin-ext</li>
+<li>U+017C LATIN SMALL LETTER Z WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+0232 LATIN CAPITAL LETTER Y WITH MACRON: try adding latin-ext</li>
+<li>U+0233 LATIN SMALL LETTER Y WITH MACRON: try adding latin-ext</li>
+<li>U+0237 LATIN SMALL LETTER DOTLESS J: try adding latin-ext</li>
+<li>U+0250 LATIN SMALL LETTER TURNED A: not included in any glyphset definition</li>
+<li>U+0251 LATIN SMALL LETTER ALPHA: not included in any glyphset definition</li>
+<li>U+0254 LATIN SMALL LETTER OPEN O: not included in any glyphset definition</li>
+<li>U+0256 LATIN SMALL LETTER D WITH TAIL: not included in any glyphset definition</li>
+<li>U+025B LATIN SMALL LETTER OPEN E: not included in any glyphset definition</li>
+<li>U+025C LATIN SMALL LETTER REVERSED OPEN E: not included in any glyphset definition</li>
+<li>U+025F LATIN SMALL LETTER DOTLESS J WITH STROKE: not included in any glyphset definition</li>
+<li>U+026B LATIN SMALL LETTER L WITH MIDDLE TILDE: not included in any glyphset definition</li>
+<li>U+026F LATIN SMALL LETTER TURNED M: not included in any glyphset definition</li>
+<li>U+0272 LATIN SMALL LETTER N WITH LEFT HOOK: not included in any glyphset definition</li>
+<li>U+0273 LATIN SMALL LETTER N WITH RETROFLEX HOOK: not included in any glyphset definition</li>
+<li>U+0275 LATIN SMALL LETTER BARRED O: not included in any glyphset definition</li>
+<li>U+0279 LATIN SMALL LETTER TURNED R: not included in any glyphset definition</li>
+<li>U+0287 LATIN SMALL LETTER TURNED T: not included in any glyphset definition</li>
+<li>U+0288 LATIN SMALL LETTER T WITH RETROFLEX HOOK: not included in any glyphset definition</li>
+<li>U+0289 LATIN SMALL LETTER U BAR: not included in any glyphset definition</li>
+<li>U+028C LATIN SMALL LETTER TURNED V: not included in any glyphset definition</li>
+<li>U+028D LATIN SMALL LETTER TURNED W: not included in any glyphset definition</li>
+<li>U+0294 LATIN LETTER GLOTTAL STOP: not included in any glyphset definition</li>
+<li>U+0295 LATIN LETTER PHARYNGEAL VOICED FRICATIVE: not included in any glyphset definition</li>
+<li>U+0296 LATIN LETTER INVERTED GLOTTAL STOP: not included in any glyphset definition</li>
+<li>U+029D LATIN SMALL LETTER J WITH CROSSED-TAIL: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02CA MODIFIER LETTER ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: cherokee, coptic, tai-le</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: cherokee, coptic, tai-le, tifinagh</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, tifinagh</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: cherokee, coptic, gothic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, coptic, tifinagh, tai-le, malayalam</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: gothic, coptic, tai-le</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
+<li>U+0320 COMBINING MINUS SIGN BELOW: not included in any glyphset definition</li>
+<li>U+0323 COMBINING DOT BELOW: try adding one of: cherokee, coptic, tifinagh, malayalam</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0325 COMBINING RING BELOW: not included in any glyphset definition</li>
+<li>U+034F COMBINING GRAPHEME JOINER: not included in any glyphset definition</li>
+<li>U+0F98 : not included in any glyphset definition</li>
+<li>U+1E0C LATIN CAPITAL LETTER D WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E0D LATIN SMALL LETTER D WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E24 LATIN CAPITAL LETTER H WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E25 LATIN SMALL LETTER H WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E36 LATIN CAPITAL LETTER L WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E37 LATIN SMALL LETTER L WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E38 LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON: try adding latin-ext</li>
+<li>U+1E39 LATIN SMALL LETTER L WITH DOT BELOW AND MACRON: try adding latin-ext</li>
+<li>U+1E40 LATIN CAPITAL LETTER M WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E41 LATIN SMALL LETTER M WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E42 LATIN CAPITAL LETTER M WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E43 LATIN SMALL LETTER M WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E44 LATIN CAPITAL LETTER N WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E45 LATIN SMALL LETTER N WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E46 LATIN CAPITAL LETTER N WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E47 LATIN SMALL LETTER N WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E5A LATIN CAPITAL LETTER R WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E5B LATIN SMALL LETTER R WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E5C LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON: try adding latin-ext</li>
+<li>U+1E5D LATIN SMALL LETTER R WITH DOT BELOW AND MACRON: try adding latin-ext</li>
+<li>U+1E60 LATIN CAPITAL LETTER S WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E61 LATIN SMALL LETTER S WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+1E62 LATIN CAPITAL LETTER S WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E63 LATIN SMALL LETTER S WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E6C LATIN CAPITAL LETTER T WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E6D LATIN SMALL LETTER T WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E72 LATIN CAPITAL LETTER U WITH DIAERESIS BELOW: try adding latin-ext</li>
+<li>U+1E73 LATIN SMALL LETTER U WITH DIAERESIS BELOW: try adding latin-ext</li>
+<li>U+1E92 LATIN CAPITAL LETTER Z WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E93 LATIN SMALL LETTER Z WITH DOT BELOW: try adding latin-ext</li>
+<li>U+1E96 LATIN SMALL LETTER H WITH LINE BELOW: try adding latin-ext</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+203B REFERENCE MARK: not included in any glyphset definition</li>
+<li>U+20A8 RUPEE SIGN: try adding one of: devanagari, latin-ext</li>
+<li>U+25A1 WHITE SQUARE: not included in any glyphset definition</li>
+<li>U+25AA BLACK SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25AB WHITE SMALL SQUARE: not included in any glyphset definition</li>
+<li>U+25CA LOZENGE: not included in any glyphset definition</li>
+<li>U+25CF BLACK CIRCLE: not included in any glyphset definition</li>
+<li>U+25E6 WHITE BULLET: not included in any glyphset definition</li>
+<li>U+2605 BLACK STAR: not included in any glyphset definition</li>
+<li>U+2606 WHITE STAR: not included in any glyphset definition</li>
+<li>U+262F YIN YANG: not included in any glyphset definition</li>
+<li>U+2630 TRIGRAM FOR HEAVEN: not included in any glyphset definition</li>
+<li>U+2631 TRIGRAM FOR LAKE: not included in any glyphset definition</li>
+<li>U+2632 TRIGRAM FOR FIRE: not included in any glyphset definition</li>
+<li>U+2633 TRIGRAM FOR THUNDER: not included in any glyphset definition</li>
+<li>U+2634 TRIGRAM FOR WIND: not included in any glyphset definition</li>
+<li>U+2635 TRIGRAM FOR WATER: not included in any glyphset definition</li>
+<li>U+2636 TRIGRAM FOR MOUNTAIN: not included in any glyphset definition</li>
+<li>U+2637 TRIGRAM FOR EARTH: not included in any glyphset definition</li>
+<li>U+2638 WHEEL OF DHARMA: not included in any glyphset definition</li>
+<li>U+2740 WHITE FLORETTE: not included in any glyphset definition</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, tai-le, yi, chinese-simplified</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, tai-le, yi, chinese-simplified</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, tai-le, lisu, yi, mongolian, chinese-simplified</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, tai-le, lisu, yi, mongolian, chinese-simplified</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, yi, chinese-simplified</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, yi, chinese-simplified</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, yi, chinese-simplified</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: japanese, phags-pa, chinese-traditional, yi, chinese-simplified</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: yi, phags-pa, chinese-simplified</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: yi, phags-pa, chinese-simplified</li>
+<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+301A LEFT WHITE SQUARE BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+301B RIGHT WHITE SQUARE BRACKET: try adding one of: yi, phags-pa</li>
+<li>U+534D CJK UNIFIED IDEOGRAPH-534D: try adding one of: chinese-traditional, japanese, chinese-simplified</li>
+<li>U+5350 CJK UNIFIED IDEOGRAPH-5350: try adding chinese-simplified</li>
+<li>U+F024 : not included in any glyphset definition</li>
+<li>U+F025 : not included in any glyphset definition</li>
+<li>U+F027 : not included in any glyphset definition</li>
+<li>U+F028 : not included in any glyphset definition</li>
+<li>U+F029 : not included in any glyphset definition</li>
+<li>U+F02A : not included in any glyphset definition</li>
+<li>U+F02B : not included in any glyphset definition</li>
+<li>U+F02C : not included in any glyphset definition</li>
+<li>U+F02D : not included in any glyphset definition</li>
+<li>U+F02E : not included in any glyphset definition</li>
+<li>U+F03B : not included in any glyphset definition</li>
+<li>U+F03C : not included in any glyphset definition</li>
+<li>U+F03D : not included in any glyphset definition</li>
+<li>U+F03E : not included in any glyphset definition</li>
+<li>U+F03F : not included in any glyphset definition</li>
+<li>U+F040 : not included in any glyphset definition</li>
+<li>U+F041 : not included in any glyphset definition</li>
+<li>U+F045 : not included in any glyphset definition</li>
+<li>U+F048 : not included in any glyphset definition</li>
+<li>U+F049 : not included in any glyphset definition</li>
+<li>U+F080 : not included in any glyphset definition</li>
+<li>U+F088 : not included in any glyphset definition</li>
+<li>U+F089 : not included in any glyphset definition</li>
+<li>U+F08A : not included in any glyphset definition</li>
+<li>U+F08B : not included in any glyphset definition</li>
+<li>U+F08C : not included in any glyphset definition</li>
+<li>U+F08D : not included in any glyphset definition</li>
+<li>U+F08E : not included in any glyphset definition</li>
+<li>U+F08F : not included in any glyphset definition</li>
+<li>U+F090 : not included in any glyphset definition</li>
+<li>U+F091 : not included in any glyphset definition</li>
+<li>U+F092 : not included in any glyphset definition</li>
+<li>U+F093 : not included in any glyphset definition</li>
+<li>U+F094 : not included in any glyphset definition</li>
+<li>U+F095 : not included in any glyphset definition</li>
+<li>U+F096 : not included in any glyphset definition</li>
+<li>U+F097 : not included in any glyphset definition</li>
+<li>U+F098 : not included in any glyphset definition</li>
+<li>U+F09D : not included in any glyphset definition</li>
+<li>U+F09E : not included in any glyphset definition</li>
+<li>U+F09F : not included in any glyphset definition</li>
+<li>U+F300 : not included in any glyphset definition</li>
+<li>U+F301 : not included in any glyphset definition</li>
+<li>U+F302 : not included in any glyphset definition</li>
+<li>U+F303 : not included in any glyphset definition</li>
+<li>U+F304 : not included in any glyphset definition</li>
+<li>U+F305 : not included in any glyphset definition</li>
+<li>U+F306 : not included in any glyphset definition</li>
+<li>U+F307 : not included in any glyphset definition</li>
+<li>U+F308 : not included in any glyphset definition</li>
+<li>U+F309 : not included in any glyphset definition</li>
+<li>U+F30A : not included in any glyphset definition</li>
+<li>U+F30B : not included in any glyphset definition</li>
+<li>U+F30C : not included in any glyphset definition</li>
+<li>U+F30D : not included in any glyphset definition</li>
+<li>U+F30E : not included in any glyphset definition</li>
+<li>U+F30F : not included in any glyphset definition</li>
+<li>U+F310 : not included in any glyphset definition</li>
+<li>U+F311 : not included in any glyphset definition</li>
+<li>U+F312 : not included in any glyphset definition</li>
+<li>U+F313 : not included in any glyphset definition</li>
+<li>U+F314 : not included in any glyphset definition</li>
+<li>U+F315 : not included in any glyphset definition</li>
+<li>U+F316 : not included in any glyphset definition</li>
+<li>U+F317 : not included in any glyphset definition</li>
+<li>U+F318 : not included in any glyphset definition</li>
+<li>U+F319 : not included in any glyphset definition</li>
+<li>U+F31A : not included in any glyphset definition</li>
+<li>U+F31B : not included in any glyphset definition</li>
+<li>U+F31C : not included in any glyphset definition</li>
+<li>U+F31D : not included in any glyphset definition</li>
+<li>U+F31E : not included in any glyphset definition</li>
+<li>U+F31F : not included in any glyphset definition</li>
+<li>U+F320 : not included in any glyphset definition</li>
+<li>U+F321 : not included in any glyphset definition</li>
+<li>U+F322 : not included in any glyphset definition</li>
+<li>U+F323 : not included in any glyphset definition</li>
+<li>U+F324 : not included in any glyphset definition</li>
+<li>U+F325 : not included in any glyphset definition</li>
+<li>U+F326 : not included in any glyphset definition</li>
+<li>U+F327 : not included in any glyphset definition</li>
+<li>U+F328 : not included in any glyphset definition</li>
+<li>U+F329 : not included in any glyphset definition</li>
+<li>U+F32A : not included in any glyphset definition</li>
+<li>U+F32B : not included in any glyphset definition</li>
+<li>U+F32C : not included in any glyphset definition</li>
+<li>U+F32D : not included in any glyphset definition</li>
+<li>U+F32E : not included in any glyphset definition</li>
+<li>U+F32F : not included in any glyphset definition</li>
+<li>U+F330 : not included in any glyphset definition</li>
+<li>U+F331 : not included in any glyphset definition</li>
+<li>U+F332 : not included in any glyphset definition</li>
+<li>U+F333 : not included in any glyphset definition</li>
+<li>U+F334 : not included in any glyphset definition</li>
+<li>U+F335 : not included in any glyphset definition</li>
+<li>U+F336 : not included in any glyphset definition</li>
+<li>U+F337 : not included in any glyphset definition</li>
+<li>U+F338 : not included in any glyphset definition</li>
+<li>U+F339 : not included in any glyphset definition</li>
+<li>U+F33A : not included in any glyphset definition</li>
+<li>U+F33B : not included in any glyphset definition</li>
+<li>U+F33C : not included in any glyphset definition</li>
+<li>U+F33D : not included in any glyphset definition</li>
+<li>U+F33E : not included in any glyphset definition</li>
+<li>U+F33F : not included in any glyphset definition</li>
+<li>U+F340 : not included in any glyphset definition</li>
+<li>U+F341 : not included in any glyphset definition</li>
+<li>U+F342 : not included in any glyphset definition</li>
+<li>U+F343 : not included in any glyphset definition</li>
+<li>U+F344 : not included in any glyphset definition</li>
+<li>U+F345 : not included in any glyphset definition</li>
+<li>U+F346 : not included in any glyphset definition</li>
+<li>U+F347 : not included in any glyphset definition</li>
+<li>U+F348 : not included in any glyphset definition</li>
+<li>U+F349 : not included in any glyphset definition</li>
+<li>U+F34A : not included in any glyphset definition</li>
+<li>U+F34B : not included in any glyphset definition</li>
+<li>U+F34C : not included in any glyphset definition</li>
+<li>U+F34D : not included in any glyphset definition</li>
+<li>U+F34E : not included in any glyphset definition</li>
+<li>U+F34F : not included in any glyphset definition</li>
+<li>U+F350 : not included in any glyphset definition</li>
+<li>U+F351 : not included in any glyphset definition</li>
+<li>U+F352 : not included in any glyphset definition</li>
+<li>U+F353 : not included in any glyphset definition</li>
+<li>U+F354 : not included in any glyphset definition</li>
+<li>U+F355 : not included in any glyphset definition</li>
+<li>U+F356 : not included in any glyphset definition</li>
+<li>U+F357 : not included in any glyphset definition</li>
+<li>U+F358 : not included in any glyphset definition</li>
+<li>U+F359 : not included in any glyphset definition</li>
+<li>U+F35A : not included in any glyphset definition</li>
+<li>U+F35B : not included in any glyphset definition</li>
+<li>U+F35C : not included in any glyphset definition</li>
+<li>U+F35D : not included in any glyphset definition</li>
+<li>U+F35E : not included in any glyphset definition</li>
+<li>U+F35F : not included in any glyphset definition</li>
+<li>U+F360 : not included in any glyphset definition</li>
+<li>U+F361 : not included in any glyphset definition</li>
+<li>U+F362 : not included in any glyphset definition</li>
+<li>U+F363 : not included in any glyphset definition</li>
+<li>U+F364 : not included in any glyphset definition</li>
+<li>U+F365 : not included in any glyphset definition</li>
+<li>U+F366 : not included in any glyphset definition</li>
+<li>U+F367 : not included in any glyphset definition</li>
+<li>U+F368 : not included in any glyphset definition</li>
+<li>U+F369 : not included in any glyphset definition</li>
+<li>U+F36A : not included in any glyphset definition</li>
+<li>U+F36B : not included in any glyphset definition</li>
+<li>U+F36C : not included in any glyphset definition</li>
+<li>U+F36D : not included in any glyphset definition</li>
+<li>U+F36E : not included in any glyphset definition</li>
+<li>U+F36F : not included in any glyphset definition</li>
+<li>U+F370 : not included in any glyphset definition</li>
+<li>U+F371 : not included in any glyphset definition</li>
+<li>U+F372 : not included in any glyphset definition</li>
+<li>U+F373 : not included in any glyphset definition</li>
+<li>U+F374 : not included in any glyphset definition</li>
+<li>U+F375 : not included in any glyphset definition</li>
+<li>U+F376 : not included in any glyphset definition</li>
+<li>U+F377 : not included in any glyphset definition</li>
+<li>U+F378 : not included in any glyphset definition</li>
+<li>U+F379 : not included in any glyphset definition</li>
+<li>U+F37A : not included in any glyphset definition</li>
+<li>U+F37B : not included in any glyphset definition</li>
+<li>U+F37C : not included in any glyphset definition</li>
+<li>U+F37D : not included in any glyphset definition</li>
+<li>U+F37E : not included in any glyphset definition</li>
+<li>U+F37F : not included in any glyphset definition</li>
+<li>U+F380 : not included in any glyphset definition</li>
+<li>U+F381 : not included in any glyphset definition</li>
+<li>U+F382 : not included in any glyphset definition</li>
+<li>U+F383 : not included in any glyphset definition</li>
+<li>U+F384 : not included in any glyphset definition</li>
+<li>U+F385 : not included in any glyphset definition</li>
+<li>U+F386 : not included in any glyphset definition</li>
+<li>U+F387 : not included in any glyphset definition</li>
+<li>U+F388 : not included in any glyphset definition</li>
+<li>U+F389 : not included in any glyphset definition</li>
+<li>U+F38A : not included in any glyphset definition</li>
+<li>U+F38B : not included in any glyphset definition</li>
+<li>U+F38C : not included in any glyphset definition</li>
+<li>U+F38D : not included in any glyphset definition</li>
+<li>U+F38E : not included in any glyphset definition</li>
+<li>U+F38F : not included in any glyphset definition</li>
+<li>U+F390 : not included in any glyphset definition</li>
+<li>U+F391 : not included in any glyphset definition</li>
+<li>U+F392 : not included in any glyphset definition</li>
+<li>U+F393 : not included in any glyphset definition</li>
+<li>U+F394 : not included in any glyphset definition</li>
+<li>U+F395 : not included in any glyphset definition</li>
+<li>U+F396 : not included in any glyphset definition</li>
+<li>U+F397 : not included in any glyphset definition</li>
+<li>U+F398 : not included in any glyphset definition</li>
+<li>U+F399 : not included in any glyphset definition</li>
+<li>U+F39A : not included in any glyphset definition</li>
+<li>U+F39B : not included in any glyphset definition</li>
+<li>U+F39C : not included in any glyphset definition</li>
+<li>U+F39D : not included in any glyphset definition</li>
+<li>U+F39E : not included in any glyphset definition</li>
+<li>U+F39F : not included in any glyphset definition</li>
+<li>U+F3A0 : not included in any glyphset definition</li>
+<li>U+F3A1 : not included in any glyphset definition</li>
+<li>U+F3A2 : not included in any glyphset definition</li>
+<li>U+F3A3 : not included in any glyphset definition</li>
+<li>U+F3A4 : not included in any glyphset definition</li>
+<li>U+F3A5 : not included in any glyphset definition</li>
+<li>U+F3A6 : not included in any glyphset definition</li>
+<li>U+F3A7 : not included in any glyphset definition</li>
+<li>U+F3A8 : not included in any glyphset definition</li>
+<li>U+F3A9 : not included in any glyphset definition</li>
+<li>U+F3AA : not included in any glyphset definition</li>
+<li>U+F3AB : not included in any glyphset definition</li>
+<li>U+F3AC : not included in any glyphset definition</li>
+<li>U+F3AD : not included in any glyphset definition</li>
+<li>U+F3AE : not included in any glyphset definition</li>
+<li>U+F3AF : not included in any glyphset definition</li>
+<li>U+F3B0 : not included in any glyphset definition</li>
+<li>U+F3B1 : not included in any glyphset definition</li>
+<li>U+F3B2 : not included in any glyphset definition</li>
+<li>U+F3B3 : not included in any glyphset definition</li>
+<li>U+F3B4 : not included in any glyphset definition</li>
+<li>U+F3B5 : not included in any glyphset definition</li>
+<li>U+F3B6 : not included in any glyphset definition</li>
+<li>U+F3B7 : not included in any glyphset definition</li>
+<li>U+F3B8 : not included in any glyphset definition</li>
+<li>U+F3B9 : not included in any glyphset definition</li>
+<li>U+F3BA : not included in any glyphset definition</li>
+<li>U+F3BB : not included in any glyphset definition</li>
+<li>U+F3BC : not included in any glyphset definition</li>
+<li>U+F3BD : not included in any glyphset definition</li>
+<li>U+F3BE : not included in any glyphset definition</li>
+<li>U+F3BF : not included in any glyphset definition</li>
+<li>U+F3C0 : not included in any glyphset definition</li>
+<li>U+F3C1 : not included in any glyphset definition</li>
+<li>U+F3C2 : not included in any glyphset definition</li>
+<li>U+F3C3 : not included in any glyphset definition</li>
+<li>U+F3C4 : not included in any glyphset definition</li>
+<li>U+F3C5 : not included in any glyphset definition</li>
+<li>U+F3C6 : not included in any glyphset definition</li>
+<li>U+F3C7 : not included in any glyphset definition</li>
+<li>U+F3C8 : not included in any glyphset definition</li>
+<li>U+F3C9 : not included in any glyphset definition</li>
+<li>U+F3CA : not included in any glyphset definition</li>
+<li>U+F3CB : not included in any glyphset definition</li>
+<li>U+F3CC : not included in any glyphset definition</li>
+<li>U+F3CD : not included in any glyphset definition</li>
+<li>U+F3CE : not included in any glyphset definition</li>
+<li>U+F3CF : not included in any glyphset definition</li>
+<li>U+F3D0 : not included in any glyphset definition</li>
+<li>U+F3D1 : not included in any glyphset definition</li>
+<li>U+F3D2 : not included in any glyphset definition</li>
+<li>U+F3D3 : not included in any glyphset definition</li>
+<li>U+F3D4 : not included in any glyphset definition</li>
+<li>U+F3D5 : not included in any glyphset definition</li>
+<li>U+F3D6 : not included in any glyphset definition</li>
+<li>U+F3D7 : not included in any glyphset definition</li>
+<li>U+F3D8 : not included in any glyphset definition</li>
+<li>U+F3D9 : not included in any glyphset definition</li>
+<li>U+F3DA : not included in any glyphset definition</li>
+<li>U+F3DB : not included in any glyphset definition</li>
+<li>U+F3DC : not included in any glyphset definition</li>
+<li>U+F3DD : not included in any glyphset definition</li>
+<li>U+F3DE : not included in any glyphset definition</li>
+<li>U+F3DF : not included in any glyphset definition</li>
+<li>U+F3E0 : not included in any glyphset definition</li>
+<li>U+F3E1 : not included in any glyphset definition</li>
+<li>U+F3E2 : not included in any glyphset definition</li>
+<li>U+F3E3 : not included in any glyphset definition</li>
+<li>U+F3E4 : not included in any glyphset definition</li>
+<li>U+F3E5 : not included in any glyphset definition</li>
+<li>U+F3E6 : not included in any glyphset definition</li>
+<li>U+F3E7 : not included in any glyphset definition</li>
+<li>U+F3E8 : not included in any glyphset definition</li>
+<li>U+F3E9 : not included in any glyphset definition</li>
+<li>U+F3EA : not included in any glyphset definition</li>
+<li>U+F3EB : not included in any glyphset definition</li>
+<li>U+F3EC : not included in any glyphset definition</li>
+<li>U+F3ED : not included in any glyphset definition</li>
+<li>U+F3EE : not included in any glyphset definition</li>
+<li>U+F3EF : not included in any glyphset definition</li>
+<li>U+F3F0 : not included in any glyphset definition</li>
+<li>U+F3F1 : not included in any glyphset definition</li>
+<li>U+F3F2 : not included in any glyphset definition</li>
+<li>U+F3F3 : not included in any glyphset definition</li>
+<li>U+F3F4 : not included in any glyphset definition</li>
+<li>U+F3F5 : not included in any glyphset definition</li>
+<li>U+F3F6 : not included in any glyphset definition</li>
+<li>U+F3F7 : not included in any glyphset definition</li>
+<li>U+F3F8 : not included in any glyphset definition</li>
+<li>U+F3F9 : not included in any glyphset definition</li>
+<li>U+F3FA : not included in any glyphset definition</li>
+<li>U+F3FB : not included in any glyphset definition</li>
+<li>U+F3FC : not included in any glyphset definition</li>
+<li>U+F3FD : not included in any glyphset definition</li>
+<li>U+F3FE : not included in any glyphset definition</li>
+<li>U+F3FF : not included in any glyphset definition</li>
+<li>U+F400 : not included in any glyphset definition</li>
+<li>U+F401 : not included in any glyphset definition</li>
+<li>U+F402 : not included in any glyphset definition</li>
+<li>U+F403 : not included in any glyphset definition</li>
+<li>U+F404 : not included in any glyphset definition</li>
+<li>U+F405 : not included in any glyphset definition</li>
+<li>U+F406 : not included in any glyphset definition</li>
+<li>U+F407 : not included in any glyphset definition</li>
+<li>U+F408 : not included in any glyphset definition</li>
+<li>U+F409 : not included in any glyphset definition</li>
+<li>U+F40A : not included in any glyphset definition</li>
+<li>U+F40B : not included in any glyphset definition</li>
+<li>U+F40C : not included in any glyphset definition</li>
+<li>U+F40D : not included in any glyphset definition</li>
+<li>U+F40E : not included in any glyphset definition</li>
+<li>U+F40F : not included in any glyphset definition</li>
+<li>U+F410 : not included in any glyphset definition</li>
+<li>U+F411 : not included in any glyphset definition</li>
+<li>U+F412 : not included in any glyphset definition</li>
+<li>U+F413 : not included in any glyphset definition</li>
+<li>U+F414 : not included in any glyphset definition</li>
+<li>U+F415 : not included in any glyphset definition</li>
+<li>U+F416 : not included in any glyphset definition</li>
+<li>U+F417 : not included in any glyphset definition</li>
+<li>U+F418 : not included in any glyphset definition</li>
+<li>U+F419 : not included in any glyphset definition</li>
+<li>U+F41A : not included in any glyphset definition</li>
+<li>U+F41B : not included in any glyphset definition</li>
+<li>U+F41C : not included in any glyphset definition</li>
+<li>U+F41D : not included in any glyphset definition</li>
+<li>U+F41E : not included in any glyphset definition</li>
+<li>U+F41F : not included in any glyphset definition</li>
+<li>U+F420 : not included in any glyphset definition</li>
+<li>U+F421 : not included in any glyphset definition</li>
+<li>U+F422 : not included in any glyphset definition</li>
+<li>U+F423 : not included in any glyphset definition</li>
+<li>U+F424 : not included in any glyphset definition</li>
+<li>U+F425 : not included in any glyphset definition</li>
+<li>U+F426 : not included in any glyphset definition</li>
+<li>U+F427 : not included in any glyphset definition</li>
+<li>U+F428 : not included in any glyphset definition</li>
+<li>U+F429 : not included in any glyphset definition</li>
+<li>U+F42A : not included in any glyphset definition</li>
+<li>U+F42B : not included in any glyphset definition</li>
+<li>U+F42C : not included in any glyphset definition</li>
+<li>U+F42D : not included in any glyphset definition</li>
+<li>U+F42E : not included in any glyphset definition</li>
+<li>U+F42F : not included in any glyphset definition</li>
+<li>U+F430 : not included in any glyphset definition</li>
+<li>U+F431 : not included in any glyphset definition</li>
+<li>U+F432 : not included in any glyphset definition</li>
+<li>U+F433 : not included in any glyphset definition</li>
+<li>U+F434 : not included in any glyphset definition</li>
+<li>U+F435 : not included in any glyphset definition</li>
+<li>U+F436 : not included in any glyphset definition</li>
+<li>U+F437 : not included in any glyphset definition</li>
+<li>U+F438 : not included in any glyphset definition</li>
+<li>U+F439 : not included in any glyphset definition</li>
+<li>U+F43A : not included in any glyphset definition</li>
+<li>U+F43B : not included in any glyphset definition</li>
+<li>U+F43C : not included in any glyphset definition</li>
+<li>U+F43D : not included in any glyphset definition</li>
+<li>U+F43E : not included in any glyphset definition</li>
+<li>U+F43F : not included in any glyphset definition</li>
+<li>U+F440 : not included in any glyphset definition</li>
+<li>U+F441 : not included in any glyphset definition</li>
+<li>U+F442 : not included in any glyphset definition</li>
+<li>U+F443 : not included in any glyphset definition</li>
+<li>U+F444 : not included in any glyphset definition</li>
+<li>U+F445 : not included in any glyphset definition</li>
+<li>U+F446 : not included in any glyphset definition</li>
+<li>U+F447 : not included in any glyphset definition</li>
+<li>U+F448 : not included in any glyphset definition</li>
+<li>U+F449 : not included in any glyphset definition</li>
+<li>U+F44A : not included in any glyphset definition</li>
+<li>U+F44B : not included in any glyphset definition</li>
+<li>U+F44C : not included in any glyphset definition</li>
+<li>U+F44D : not included in any glyphset definition</li>
+<li>U+F44E : not included in any glyphset definition</li>
+<li>U+F44F : not included in any glyphset definition</li>
+<li>U+F450 : not included in any glyphset definition</li>
+<li>U+F451 : not included in any glyphset definition</li>
+<li>U+F452 : not included in any glyphset definition</li>
+<li>U+F453 : not included in any glyphset definition</li>
+<li>U+F454 : not included in any glyphset definition</li>
+<li>U+F455 : not included in any glyphset definition</li>
+<li>U+F456 : not included in any glyphset definition</li>
+<li>U+F457 : not included in any glyphset definition</li>
+<li>U+F458 : not included in any glyphset definition</li>
+<li>U+F459 : not included in any glyphset definition</li>
+<li>U+F45A : not included in any glyphset definition</li>
+<li>U+F45B : not included in any glyphset definition</li>
+<li>U+F45C : not included in any glyphset definition</li>
+<li>U+F45D : not included in any glyphset definition</li>
+<li>U+F45E : not included in any glyphset definition</li>
+<li>U+F45F : not included in any glyphset definition</li>
+<li>U+F460 : not included in any glyphset definition</li>
+<li>U+F461 : not included in any glyphset definition</li>
+<li>U+F462 : not included in any glyphset definition</li>
+<li>U+F463 : not included in any glyphset definition</li>
+<li>U+F464 : not included in any glyphset definition</li>
+<li>U+F465 : not included in any glyphset definition</li>
+<li>U+F466 : not included in any glyphset definition</li>
+<li>U+F467 : not included in any glyphset definition</li>
+<li>U+F468 : not included in any glyphset definition</li>
+<li>U+F469 : not included in any glyphset definition</li>
+<li>U+F46A : not included in any glyphset definition</li>
+<li>U+F46B : not included in any glyphset definition</li>
+<li>U+F46C : not included in any glyphset definition</li>
+<li>U+F46D : not included in any glyphset definition</li>
+<li>U+F46E : not included in any glyphset definition</li>
+<li>U+F46F : not included in any glyphset definition</li>
+<li>U+F470 : not included in any glyphset definition</li>
+<li>U+F471 : not included in any glyphset definition</li>
+<li>U+F472 : not included in any glyphset definition</li>
+<li>U+F473 : not included in any glyphset definition</li>
+<li>U+F474 : not included in any glyphset definition</li>
+<li>U+F475 : not included in any glyphset definition</li>
+<li>U+F476 : not included in any glyphset definition</li>
+<li>U+F477 : not included in any glyphset definition</li>
+<li>U+F478 : not included in any glyphset definition</li>
+<li>U+F479 : not included in any glyphset definition</li>
+<li>U+F47A : not included in any glyphset definition</li>
+<li>U+F47B : not included in any glyphset definition</li>
+<li>U+F47C : not included in any glyphset definition</li>
+<li>U+F47D : not included in any glyphset definition</li>
+<li>U+F47E : not included in any glyphset definition</li>
+<li>U+F47F : not included in any glyphset definition</li>
+<li>U+F480 : not included in any glyphset definition</li>
+<li>U+F481 : not included in any glyphset definition</li>
+<li>U+F482 : not included in any glyphset definition</li>
+<li>U+F483 : not included in any glyphset definition</li>
+<li>U+F484 : not included in any glyphset definition</li>
+<li>U+F485 : not included in any glyphset definition</li>
+<li>U+F486 : not included in any glyphset definition</li>
+<li>U+F487 : not included in any glyphset definition</li>
+<li>U+F488 : not included in any glyphset definition</li>
+<li>U+F489 : not included in any glyphset definition</li>
+<li>U+F48A : not included in any glyphset definition</li>
+<li>U+F48B : not included in any glyphset definition</li>
+<li>U+F48C : not included in any glyphset definition</li>
+<li>U+F48D : not included in any glyphset definition</li>
+<li>U+F48E : not included in any glyphset definition</li>
+<li>U+F48F : not included in any glyphset definition</li>
+<li>U+F490 : not included in any glyphset definition</li>
+<li>U+F491 : not included in any glyphset definition</li>
+<li>U+F492 : not included in any glyphset definition</li>
+<li>U+F493 : not included in any glyphset definition</li>
+<li>U+F494 : not included in any glyphset definition</li>
+<li>U+F495 : not included in any glyphset definition</li>
+<li>U+F496 : not included in any glyphset definition</li>
+<li>U+F497 : not included in any glyphset definition</li>
+<li>U+F498 : not included in any glyphset definition</li>
+<li>U+F499 : not included in any glyphset definition</li>
+<li>U+F49A : not included in any glyphset definition</li>
+<li>U+F49B : not included in any glyphset definition</li>
+<li>U+F49C : not included in any glyphset definition</li>
+<li>U+F49D : not included in any glyphset definition</li>
+<li>U+F49E : not included in any glyphset definition</li>
+<li>U+F49F : not included in any glyphset definition</li>
+<li>U+F4A0 : not included in any glyphset definition</li>
+<li>U+F4A1 : not included in any glyphset definition</li>
+<li>U+F4A2 : not included in any glyphset definition</li>
+<li>U+F4A3 : not included in any glyphset definition</li>
+<li>U+F4A4 : not included in any glyphset definition</li>
+<li>U+F4A5 : not included in any glyphset definition</li>
+<li>U+F4A6 : not included in any glyphset definition</li>
+<li>U+F4A7 : not included in any glyphset definition</li>
+<li>U+F4A8 : not included in any glyphset definition</li>
+<li>U+F4A9 : not included in any glyphset definition</li>
+<li>U+F4AA : not included in any glyphset definition</li>
+<li>U+F4AB : not included in any glyphset definition</li>
+<li>U+F4AC : not included in any glyphset definition</li>
+<li>U+F4AD : not included in any glyphset definition</li>
+<li>U+F4AE : not included in any glyphset definition</li>
+<li>U+F4AF : not included in any glyphset definition</li>
+<li>U+F4B0 : not included in any glyphset definition</li>
+<li>U+F4B1 : not included in any glyphset definition</li>
+<li>U+F4B2 : not included in any glyphset definition</li>
+<li>U+F4B3 : not included in any glyphset definition</li>
+<li>U+F4B4 : not included in any glyphset definition</li>
+<li>U+F4B5 : not included in any glyphset definition</li>
+<li>U+F4B6 : not included in any glyphset definition</li>
+<li>U+F4B7 : not included in any glyphset definition</li>
+<li>U+F4B8 : not included in any glyphset definition</li>
+<li>U+F4B9 : not included in any glyphset definition</li>
+<li>U+F4BA : not included in any glyphset definition</li>
+<li>U+F4BB : not included in any glyphset definition</li>
+<li>U+F4BC : not included in any glyphset definition</li>
+<li>U+F4BD : not included in any glyphset definition</li>
+<li>U+F4BE : not included in any glyphset definition</li>
+<li>U+F4BF : not included in any glyphset definition</li>
+<li>U+F4C0 : not included in any glyphset definition</li>
+<li>U+F4C1 : not included in any glyphset definition</li>
+<li>U+F4C2 : not included in any glyphset definition</li>
+<li>U+F4C3 : not included in any glyphset definition</li>
+<li>U+F4C4 : not included in any glyphset definition</li>
+<li>U+F4C5 : not included in any glyphset definition</li>
+<li>U+F4C6 : not included in any glyphset definition</li>
+<li>U+F4C7 : not included in any glyphset definition</li>
+<li>U+F4C8 : not included in any glyphset definition</li>
+<li>U+F4C9 : not included in any glyphset definition</li>
+<li>U+F4CA : not included in any glyphset definition</li>
+<li>U+F4CB : not included in any glyphset definition</li>
+<li>U+F4CC : not included in any glyphset definition</li>
+<li>U+F4CD : not included in any glyphset definition</li>
+<li>U+F4CE : not included in any glyphset definition</li>
+<li>U+F4CF : not included in any glyphset definition</li>
+<li>U+F4D0 : not included in any glyphset definition</li>
+<li>U+F4D1 : not included in any glyphset definition</li>
+<li>U+F4D2 : not included in any glyphset definition</li>
+<li>U+F4D3 : not included in any glyphset definition</li>
+<li>U+F4D4 : not included in any glyphset definition</li>
+<li>U+F4D5 : not included in any glyphset definition</li>
+<li>U+F4D6 : not included in any glyphset definition</li>
+<li>U+F4D7 : not included in any glyphset definition</li>
+<li>U+F4D8 : not included in any glyphset definition</li>
+<li>U+F4D9 : not included in any glyphset definition</li>
+<li>U+F4DA : not included in any glyphset definition</li>
+<li>U+F4DB : not included in any glyphset definition</li>
+<li>U+F4DC : not included in any glyphset definition</li>
+<li>U+F4DD : not included in any glyphset definition</li>
+<li>U+F4DE : not included in any glyphset definition</li>
+<li>U+F4DF : not included in any glyphset definition</li>
+<li>U+F4E0 : not included in any glyphset definition</li>
+<li>U+F4E1 : not included in any glyphset definition</li>
+<li>U+F4E2 : not included in any glyphset definition</li>
+<li>U+F4E3 : not included in any glyphset definition</li>
+<li>U+F4E4 : not included in any glyphset definition</li>
+<li>U+F4E5 : not included in any glyphset definition</li>
+<li>U+F4E6 : not included in any glyphset definition</li>
+<li>U+F4E7 : not included in any glyphset definition</li>
+<li>U+F4E8 : not included in any glyphset definition</li>
+<li>U+F4E9 : not included in any glyphset definition</li>
+<li>U+F4EA : not included in any glyphset definition</li>
+<li>U+F4EB : not included in any glyphset definition</li>
+<li>U+F4EC : not included in any glyphset definition</li>
+<li>U+F4ED : not included in any glyphset definition</li>
+<li>U+F4EE : not included in any glyphset definition</li>
+<li>U+F4EF : not included in any glyphset definition</li>
+<li>U+F4F0 : not included in any glyphset definition</li>
+<li>U+F4F1 : not included in any glyphset definition</li>
+<li>U+F4F2 : not included in any glyphset definition</li>
+<li>U+F4F3 : not included in any glyphset definition</li>
+<li>U+F4F4 : not included in any glyphset definition</li>
+<li>U+F4F5 : not included in any glyphset definition</li>
+<li>U+F4F6 : not included in any glyphset definition</li>
+<li>U+F4F7 : not included in any glyphset definition</li>
+<li>U+F4F8 : not included in any glyphset definition</li>
+<li>U+F4F9 : not included in any glyphset definition</li>
+<li>U+F4FA : not included in any glyphset definition</li>
+<li>U+F4FB : not included in any glyphset definition</li>
+<li>U+F4FC : not included in any glyphset definition</li>
+<li>U+F4FD : not included in any glyphset definition</li>
+<li>U+F4FE : not included in any glyphset definition</li>
+<li>U+F4FF : not included in any glyphset definition</li>
+<li>U+F500 : not included in any glyphset definition</li>
+<li>U+F501 : not included in any glyphset definition</li>
+<li>U+F502 : not included in any glyphset definition</li>
+<li>U+F503 : not included in any glyphset definition</li>
+<li>U+F504 : not included in any glyphset definition</li>
+<li>U+F505 : not included in any glyphset definition</li>
+<li>U+F506 : not included in any glyphset definition</li>
+<li>U+F507 : not included in any glyphset definition</li>
+<li>U+F508 : not included in any glyphset definition</li>
+<li>U+F509 : not included in any glyphset definition</li>
+<li>U+F50A : not included in any glyphset definition</li>
+<li>U+F50B : not included in any glyphset definition</li>
+<li>U+F50C : not included in any glyphset definition</li>
+<li>U+F50D : not included in any glyphset definition</li>
+<li>U+F50E : not included in any glyphset definition</li>
+<li>U+F50F : not included in any glyphset definition</li>
+<li>U+F510 : not included in any glyphset definition</li>
+<li>U+F511 : not included in any glyphset definition</li>
+<li>U+F512 : not included in any glyphset definition</li>
+<li>U+F513 : not included in any glyphset definition</li>
+<li>U+F514 : not included in any glyphset definition</li>
+<li>U+F515 : not included in any glyphset definition</li>
+<li>U+F516 : not included in any glyphset definition</li>
+<li>U+F517 : not included in any glyphset definition</li>
+<li>U+F518 : not included in any glyphset definition</li>
+<li>U+F519 : not included in any glyphset definition</li>
+<li>U+F51A : not included in any glyphset definition</li>
+<li>U+F51B : not included in any glyphset definition</li>
+<li>U+F51C : not included in any glyphset definition</li>
+<li>U+F51D : not included in any glyphset definition</li>
+<li>U+F51E : not included in any glyphset definition</li>
+<li>U+F51F : not included in any glyphset definition</li>
+<li>U+F520 : not included in any glyphset definition</li>
+<li>U+F521 : not included in any glyphset definition</li>
+<li>U+F522 : not included in any glyphset definition</li>
+<li>U+F523 : not included in any glyphset definition</li>
+<li>U+F524 : not included in any glyphset definition</li>
+<li>U+F525 : not included in any glyphset definition</li>
+<li>U+F526 : not included in any glyphset definition</li>
+<li>U+F527 : not included in any glyphset definition</li>
+<li>U+F528 : not included in any glyphset definition</li>
+<li>U+F529 : not included in any glyphset definition</li>
+<li>U+F52A : not included in any glyphset definition</li>
+<li>U+F52B : not included in any glyphset definition</li>
+<li>U+F52C : not included in any glyphset definition</li>
+<li>U+F52D : not included in any glyphset definition</li>
+<li>U+F52E : not included in any glyphset definition</li>
+<li>U+F52F : not included in any glyphset definition</li>
+<li>U+F530 : not included in any glyphset definition</li>
+<li>U+F531 : not included in any glyphset definition</li>
+<li>U+F532 : not included in any glyphset definition</li>
+<li>U+F533 : not included in any glyphset definition</li>
+<li>U+F534 : not included in any glyphset definition</li>
+<li>U+F535 : not included in any glyphset definition</li>
+<li>U+F536 : not included in any glyphset definition</li>
+<li>U+F537 : not included in any glyphset definition</li>
+<li>U+F538 : not included in any glyphset definition</li>
+<li>U+F539 : not included in any glyphset definition</li>
+<li>U+F53A : not included in any glyphset definition</li>
+<li>U+F53B : not included in any glyphset definition</li>
+<li>U+F53C : not included in any glyphset definition</li>
+<li>U+F53D : not included in any glyphset definition</li>
+<li>U+F53E : not included in any glyphset definition</li>
+<li>U+F53F : not included in any glyphset definition</li>
+<li>U+F540 : not included in any glyphset definition</li>
+<li>U+F541 : not included in any glyphset definition</li>
+<li>U+F542 : not included in any glyphset definition</li>
+<li>U+F543 : not included in any glyphset definition</li>
+<li>U+F544 : not included in any glyphset definition</li>
+<li>U+F545 : not included in any glyphset definition</li>
+<li>U+F546 : not included in any glyphset definition</li>
+<li>U+F547 : not included in any glyphset definition</li>
+<li>U+F548 : not included in any glyphset definition</li>
+<li>U+F549 : not included in any glyphset definition</li>
+<li>U+F54A : not included in any glyphset definition</li>
+<li>U+F54B : not included in any glyphset definition</li>
+<li>U+F54C : not included in any glyphset definition</li>
+<li>U+F54D : not included in any glyphset definition</li>
+<li>U+F54E : not included in any glyphset definition</li>
+<li>U+F54F : not included in any glyphset definition</li>
+<li>U+F550 : not included in any glyphset definition</li>
+<li>U+F551 : not included in any glyphset definition</li>
+<li>U+F552 : not included in any glyphset definition</li>
+<li>U+F553 : not included in any glyphset definition</li>
+<li>U+F554 : not included in any glyphset definition</li>
+<li>U+F555 : not included in any glyphset definition</li>
+<li>U+F556 : not included in any glyphset definition</li>
+<li>U+F557 : not included in any glyphset definition</li>
+<li>U+F558 : not included in any glyphset definition</li>
+<li>U+F559 : not included in any glyphset definition</li>
+<li>U+F55A : not included in any glyphset definition</li>
+<li>U+F55B : not included in any glyphset definition</li>
+<li>U+F55C : not included in any glyphset definition</li>
+<li>U+F55D : not included in any glyphset definition</li>
+<li>U+F55E : not included in any glyphset definition</li>
+<li>U+F55F : not included in any glyphset definition</li>
+<li>U+F560 : not included in any glyphset definition</li>
+<li>U+F561 : not included in any glyphset definition</li>
+<li>U+F562 : not included in any glyphset definition</li>
+<li>U+F563 : not included in any glyphset definition</li>
+<li>U+F564 : not included in any glyphset definition</li>
+<li>U+F565 : not included in any glyphset definition</li>
+<li>U+F566 : not included in any glyphset definition</li>
+<li>U+F567 : not included in any glyphset definition</li>
+<li>U+F568 : not included in any glyphset definition</li>
+<li>U+F569 : not included in any glyphset definition</li>
+<li>U+F56A : not included in any glyphset definition</li>
+<li>U+F56B : not included in any glyphset definition</li>
+<li>U+F56C : not included in any glyphset definition</li>
+<li>U+F56D : not included in any glyphset definition</li>
+<li>U+F56E : not included in any glyphset definition</li>
+<li>U+F56F : not included in any glyphset definition</li>
+<li>U+F570 : not included in any glyphset definition</li>
+<li>U+F571 : not included in any glyphset definition</li>
+<li>U+F572 : not included in any glyphset definition</li>
+<li>U+F573 : not included in any glyphset definition</li>
+<li>U+F574 : not included in any glyphset definition</li>
+<li>U+F575 : not included in any glyphset definition</li>
+<li>U+F576 : not included in any glyphset definition</li>
+<li>U+F577 : not included in any glyphset definition</li>
+<li>U+F578 : not included in any glyphset definition</li>
+<li>U+F579 : not included in any glyphset definition</li>
+<li>U+F57A : not included in any glyphset definition</li>
+<li>U+F57B : not included in any glyphset definition</li>
+<li>U+F57C : not included in any glyphset definition</li>
+<li>U+F57D : not included in any glyphset definition</li>
+<li>U+F57E : not included in any glyphset definition</li>
+<li>U+F57F : not included in any glyphset definition</li>
+<li>U+F580 : not included in any glyphset definition</li>
+<li>U+F581 : not included in any glyphset definition</li>
+<li>U+F582 : not included in any glyphset definition</li>
+<li>U+F583 : not included in any glyphset definition</li>
+<li>U+F584 : not included in any glyphset definition</li>
+<li>U+F585 : not included in any glyphset definition</li>
+<li>U+F586 : not included in any glyphset definition</li>
+<li>U+F587 : not included in any glyphset definition</li>
+<li>U+F588 : not included in any glyphset definition</li>
+<li>U+F589 : not included in any glyphset definition</li>
+<li>U+F58A : not included in any glyphset definition</li>
+<li>U+F58B : not included in any glyphset definition</li>
+<li>U+F58C : not included in any glyphset definition</li>
+<li>U+F58D : not included in any glyphset definition</li>
+<li>U+F58E : not included in any glyphset definition</li>
+<li>U+F58F : not included in any glyphset definition</li>
+<li>U+F590 : not included in any glyphset definition</li>
+<li>U+F591 : not included in any glyphset definition</li>
+<li>U+F592 : not included in any glyphset definition</li>
+<li>U+F593 : not included in any glyphset definition</li>
+<li>U+F594 : not included in any glyphset definition</li>
+<li>U+F595 : not included in any glyphset definition</li>
+<li>U+F596 : not included in any glyphset definition</li>
+<li>U+F597 : not included in any glyphset definition</li>
+<li>U+F598 : not included in any glyphset definition</li>
+<li>U+F599 : not included in any glyphset definition</li>
+<li>U+F59A : not included in any glyphset definition</li>
+<li>U+F59B : not included in any glyphset definition</li>
+<li>U+F59C : not included in any glyphset definition</li>
+<li>U+F59D : not included in any glyphset definition</li>
+<li>U+F59E : not included in any glyphset definition</li>
+<li>U+F59F : not included in any glyphset definition</li>
+<li>U+F5A0 : not included in any glyphset definition</li>
+<li>U+F5A1 : not included in any glyphset definition</li>
+<li>U+F5A2 : not included in any glyphset definition</li>
+<li>U+F5A3 : not included in any glyphset definition</li>
+<li>U+F5A4 : not included in any glyphset definition</li>
+<li>U+F5A5 : not included in any glyphset definition</li>
+<li>U+F5A6 : not included in any glyphset definition</li>
+<li>U+F5A7 : not included in any glyphset definition</li>
+<li>U+F5A8 : not included in any glyphset definition</li>
+<li>U+F5A9 : not included in any glyphset definition</li>
+<li>U+F5AA : not included in any glyphset definition</li>
+<li>U+F5AB : not included in any glyphset definition</li>
+<li>U+F5AC : not included in any glyphset definition</li>
+<li>U+F5AD : not included in any glyphset definition</li>
+<li>U+F5AE : not included in any glyphset definition</li>
+<li>U+F5AF : not included in any glyphset definition</li>
+<li>U+F5B0 : not included in any glyphset definition</li>
+<li>U+F5B1 : not included in any glyphset definition</li>
+<li>U+F5B2 : not included in any glyphset definition</li>
+<li>U+F5B3 : not included in any glyphset definition</li>
+<li>U+F5B4 : not included in any glyphset definition</li>
+<li>U+F5B5 : not included in any glyphset definition</li>
+<li>U+F5B6 : not included in any glyphset definition</li>
+<li>U+F5B7 : not included in any glyphset definition</li>
+<li>U+F5B8 : not included in any glyphset definition</li>
+<li>U+F5B9 : not included in any glyphset definition</li>
+<li>U+F5BA : not included in any glyphset definition</li>
+<li>U+F5BB : not included in any glyphset definition</li>
+<li>U+F5BC : not included in any glyphset definition</li>
+<li>U+F5BD : not included in any glyphset definition</li>
+<li>U+F5BE : not included in any glyphset definition</li>
+<li>U+F5BF : not included in any glyphset definition</li>
+<li>U+F5C0 : not included in any glyphset definition</li>
+<li>U+F5C1 : not included in any glyphset definition</li>
+<li>U+F5C2 : not included in any glyphset definition</li>
+<li>U+F5C3 : not included in any glyphset definition</li>
+<li>U+F5C4 : not included in any glyphset definition</li>
+<li>U+F5C5 : not included in any glyphset definition</li>
+<li>U+F5C6 : not included in any glyphset definition</li>
+<li>U+F5C7 : not included in any glyphset definition</li>
+<li>U+F5C8 : not included in any glyphset definition</li>
+<li>U+F5C9 : not included in any glyphset definition</li>
+<li>U+F5CA : not included in any glyphset definition</li>
+<li>U+F5CB : not included in any glyphset definition</li>
+<li>U+F5CC : not included in any glyphset definition</li>
+<li>U+F5CD : not included in any glyphset definition</li>
+<li>U+F5CE : not included in any glyphset definition</li>
+<li>U+F5CF : not included in any glyphset definition</li>
+<li>U+F5D0 : not included in any glyphset definition</li>
+<li>U+F5D1 : not included in any glyphset definition</li>
+<li>U+F5D2 : not included in any glyphset definition</li>
+<li>U+F5D3 : not included in any glyphset definition</li>
+<li>U+F5D4 : not included in any glyphset definition</li>
+<li>U+F5D5 : not included in any glyphset definition</li>
+<li>U+F5D6 : not included in any glyphset definition</li>
+<li>U+F5D7 : not included in any glyphset definition</li>
+<li>U+F5D8 : not included in any glyphset definition</li>
+<li>U+F5D9 : not included in any glyphset definition</li>
+<li>U+F5DA : not included in any glyphset definition</li>
+<li>U+F5DB : not included in any glyphset definition</li>
+<li>U+F5DC : not included in any glyphset definition</li>
+<li>U+F5DD : not included in any glyphset definition</li>
+<li>U+F5DE : not included in any glyphset definition</li>
+<li>U+F5DF : not included in any glyphset definition</li>
+<li>U+F5E0 : not included in any glyphset definition</li>
+<li>U+F5E1 : not included in any glyphset definition</li>
+<li>U+F5E2 : not included in any glyphset definition</li>
+<li>U+F5E3 : not included in any glyphset definition</li>
+<li>U+F5E4 : not included in any glyphset definition</li>
+<li>U+F5E5 : not included in any glyphset definition</li>
+<li>U+F5E6 : not included in any glyphset definition</li>
+<li>U+F5E7 : not included in any glyphset definition</li>
+<li>U+F5E8 : not included in any glyphset definition</li>
+<li>U+F5E9 : not included in any glyphset definition</li>
+<li>U+F5EA : not included in any glyphset definition</li>
+<li>U+F5EB : not included in any glyphset definition</li>
+<li>U+F5EC : not included in any glyphset definition</li>
+<li>U+F5ED : not included in any glyphset definition</li>
+<li>U+F5EE : not included in any glyphset definition</li>
+<li>U+F5EF : not included in any glyphset definition</li>
+<li>U+F5F0 : not included in any glyphset definition</li>
+<li>U+F5F1 : not included in any glyphset definition</li>
+<li>U+F5F2 : not included in any glyphset definition</li>
+<li>U+F5F3 : not included in any glyphset definition</li>
+<li>U+F5F4 : not included in any glyphset definition</li>
+<li>U+F5F5 : not included in any glyphset definition</li>
+<li>U+F5F6 : not included in any glyphset definition</li>
+<li>U+F5F7 : not included in any glyphset definition</li>
+<li>U+F5F8 : not included in any glyphset definition</li>
+<li>U+F5F9 : not included in any glyphset definition</li>
+<li>U+F5FA : not included in any glyphset definition</li>
+<li>U+F5FB : not included in any glyphset definition</li>
+<li>U+F5FC : not included in any glyphset definition</li>
+<li>U+F5FD : not included in any glyphset definition</li>
+<li>U+F5FE : not included in any glyphset definition</li>
+<li>U+F5FF : not included in any glyphset definition</li>
+<li>U+F600 : not included in any glyphset definition</li>
+<li>U+F601 : not included in any glyphset definition</li>
+<li>U+F602 : not included in any glyphset definition</li>
+<li>U+F603 : not included in any glyphset definition</li>
+<li>U+F604 : not included in any glyphset definition</li>
+<li>U+F605 : not included in any glyphset definition</li>
+<li>U+F606 : not included in any glyphset definition</li>
+<li>U+F607 : not included in any glyphset definition</li>
+<li>U+F608 : not included in any glyphset definition</li>
+<li>U+F609 : not included in any glyphset definition</li>
+<li>U+F60A : not included in any glyphset definition</li>
+<li>U+F60B : not included in any glyphset definition</li>
+<li>U+F60C : not included in any glyphset definition</li>
+<li>U+F60D : not included in any glyphset definition</li>
+<li>U+F60E : not included in any glyphset definition</li>
+<li>U+F60F : not included in any glyphset definition</li>
+<li>U+F610 : not included in any glyphset definition</li>
+<li>U+F611 : not included in any glyphset definition</li>
+<li>U+F612 : not included in any glyphset definition</li>
+<li>U+F613 : not included in any glyphset definition</li>
+<li>U+F614 : not included in any glyphset definition</li>
+<li>U+F615 : not included in any glyphset definition</li>
+<li>U+F616 : not included in any glyphset definition</li>
+<li>U+F617 : not included in any glyphset definition</li>
+<li>U+F618 : not included in any glyphset definition</li>
+<li>U+F619 : not included in any glyphset definition</li>
+<li>U+F61A : not included in any glyphset definition</li>
+<li>U+F61B : not included in any glyphset definition</li>
+<li>U+F61C : not included in any glyphset definition</li>
+<li>U+F61D : not included in any glyphset definition</li>
+<li>U+F61E : not included in any glyphset definition</li>
+<li>U+F61F : not included in any glyphset definition</li>
+<li>U+F620 : not included in any glyphset definition</li>
+<li>U+F621 : not included in any glyphset definition</li>
+<li>U+F622 : not included in any glyphset definition</li>
+<li>U+F623 : not included in any glyphset definition</li>
+<li>U+F624 : not included in any glyphset definition</li>
+<li>U+F625 : not included in any glyphset definition</li>
+<li>U+F626 : not included in any glyphset definition</li>
+<li>U+F627 : not included in any glyphset definition</li>
+<li>U+F628 : not included in any glyphset definition</li>
+<li>U+F629 : not included in any glyphset definition</li>
+<li>U+F62A : not included in any glyphset definition</li>
+<li>U+F62B : not included in any glyphset definition</li>
+<li>U+F62C : not included in any glyphset definition</li>
+<li>U+F62D : not included in any glyphset definition</li>
+<li>U+F62E : not included in any glyphset definition</li>
+<li>U+F62F : not included in any glyphset definition</li>
+<li>U+F630 : not included in any glyphset definition</li>
+<li>U+F631 : not included in any glyphset definition</li>
+<li>U+F632 : not included in any glyphset definition</li>
+<li>U+F633 : not included in any glyphset definition</li>
+<li>U+F634 : not included in any glyphset definition</li>
+<li>U+F635 : not included in any glyphset definition</li>
+<li>U+F636 : not included in any glyphset definition</li>
+<li>U+F637 : not included in any glyphset definition</li>
+<li>U+F638 : not included in any glyphset definition</li>
+<li>U+F639 : not included in any glyphset definition</li>
+<li>U+F63A : not included in any glyphset definition</li>
+<li>U+F63B : not included in any glyphset definition</li>
+<li>U+F63C : not included in any glyphset definition</li>
+<li>U+F63D : not included in any glyphset definition</li>
+<li>U+F63E : not included in any glyphset definition</li>
+<li>U+F63F : not included in any glyphset definition</li>
+<li>U+F640 : not included in any glyphset definition</li>
+<li>U+F641 : not included in any glyphset definition</li>
+<li>U+F642 : not included in any glyphset definition</li>
+<li>U+F643 : not included in any glyphset definition</li>
+<li>U+F644 : not included in any glyphset definition</li>
+<li>U+F645 : not included in any glyphset definition</li>
+<li>U+F646 : not included in any glyphset definition</li>
+<li>U+F647 : not included in any glyphset definition</li>
+<li>U+F648 : not included in any glyphset definition</li>
+<li>U+F649 : not included in any glyphset definition</li>
+<li>U+F64A : not included in any glyphset definition</li>
+<li>U+F64B : not included in any glyphset definition</li>
+<li>U+F64C : not included in any glyphset definition</li>
+<li>U+F64D : not included in any glyphset definition</li>
+<li>U+F64E : not included in any glyphset definition</li>
+<li>U+F64F : not included in any glyphset definition</li>
+<li>U+F650 : not included in any glyphset definition</li>
+<li>U+F651 : not included in any glyphset definition</li>
+<li>U+F652 : not included in any glyphset definition</li>
+<li>U+F653 : not included in any glyphset definition</li>
+<li>U+F654 : not included in any glyphset definition</li>
+<li>U+F655 : not included in any glyphset definition</li>
+<li>U+F656 : not included in any glyphset definition</li>
+<li>U+F657 : not included in any glyphset definition</li>
+<li>U+F658 : not included in any glyphset definition</li>
+<li>U+F659 : not included in any glyphset definition</li>
+<li>U+F65A : not included in any glyphset definition</li>
+<li>U+F65B : not included in any glyphset definition</li>
+<li>U+F65C : not included in any glyphset definition</li>
+<li>U+F65D : not included in any glyphset definition</li>
+<li>U+F65E : not included in any glyphset definition</li>
+<li>U+F65F : not included in any glyphset definition</li>
+<li>U+F660 : not included in any glyphset definition</li>
+<li>U+F661 : not included in any glyphset definition</li>
+<li>U+F662 : not included in any glyphset definition</li>
+<li>U+F663 : not included in any glyphset definition</li>
+<li>U+F664 : not included in any glyphset definition</li>
+<li>U+F665 : not included in any glyphset definition</li>
+<li>U+F666 : not included in any glyphset definition</li>
+<li>U+F667 : not included in any glyphset definition</li>
+<li>U+F668 : not included in any glyphset definition</li>
+<li>U+F669 : not included in any glyphset definition</li>
+<li>U+F66A : not included in any glyphset definition</li>
+<li>U+F66B : not included in any glyphset definition</li>
+<li>U+F66C : not included in any glyphset definition</li>
+<li>U+F66D : not included in any glyphset definition</li>
+<li>U+F66E : not included in any glyphset definition</li>
+<li>U+F66F : not included in any glyphset definition</li>
+<li>U+F670 : not included in any glyphset definition</li>
+<li>U+F671 : not included in any glyphset definition</li>
+<li>U+F672 : not included in any glyphset definition</li>
+<li>U+F673 : not included in any glyphset definition</li>
+<li>U+F674 : not included in any glyphset definition</li>
+<li>U+F675 : not included in any glyphset definition</li>
+<li>U+F676 : not included in any glyphset definition</li>
+<li>U+F677 : not included in any glyphset definition</li>
+<li>U+F678 : not included in any glyphset definition</li>
+<li>U+F679 : not included in any glyphset definition</li>
+<li>U+F67A : not included in any glyphset definition</li>
+<li>U+F67B : not included in any glyphset definition</li>
+<li>U+F67C : not included in any glyphset definition</li>
+<li>U+F67D : not included in any glyphset definition</li>
+<li>U+F67E : not included in any glyphset definition</li>
+<li>U+F67F : not included in any glyphset definition</li>
+<li>U+F680 : not included in any glyphset definition</li>
+<li>U+F681 : not included in any glyphset definition</li>
+<li>U+F682 : not included in any glyphset definition</li>
+<li>U+F683 : not included in any glyphset definition</li>
+<li>U+F684 : not included in any glyphset definition</li>
+<li>U+F685 : not included in any glyphset definition</li>
+<li>U+F686 : not included in any glyphset definition</li>
+<li>U+F687 : not included in any glyphset definition</li>
+<li>U+F688 : not included in any glyphset definition</li>
+<li>U+F689 : not included in any glyphset definition</li>
+<li>U+F68A : not included in any glyphset definition</li>
+<li>U+F68B : not included in any glyphset definition</li>
+<li>U+F68C : not included in any glyphset definition</li>
+<li>U+F68D : not included in any glyphset definition</li>
+<li>U+F68E : not included in any glyphset definition</li>
+<li>U+F68F : not included in any glyphset definition</li>
+<li>U+F690 : not included in any glyphset definition</li>
+<li>U+F691 : not included in any glyphset definition</li>
+<li>U+F692 : not included in any glyphset definition</li>
+<li>U+F693 : not included in any glyphset definition</li>
+<li>U+F694 : not included in any glyphset definition</li>
+<li>U+F695 : not included in any glyphset definition</li>
+<li>U+F696 : not included in any glyphset definition</li>
+<li>U+F697 : not included in any glyphset definition</li>
+<li>U+F698 : not included in any glyphset definition</li>
+<li>U+F699 : not included in any glyphset definition</li>
+<li>U+F69A : not included in any glyphset definition</li>
+<li>U+F69B : not included in any glyphset definition</li>
+<li>U+F69C : not included in any glyphset definition</li>
+<li>U+F69D : not included in any glyphset definition</li>
+<li>U+F69E : not included in any glyphset definition</li>
+<li>U+F69F : not included in any glyphset definition</li>
+<li>U+F6A0 : not included in any glyphset definition</li>
+<li>U+F6A1 : not included in any glyphset definition</li>
+<li>U+F6A2 : not included in any glyphset definition</li>
+<li>U+F6A3 : not included in any glyphset definition</li>
+<li>U+F6A4 : not included in any glyphset definition</li>
+<li>U+F6A5 : not included in any glyphset definition</li>
+<li>U+F6A6 : not included in any glyphset definition</li>
+<li>U+F6A7 : not included in any glyphset definition</li>
+<li>U+F6A8 : not included in any glyphset definition</li>
+<li>U+F6A9 : not included in any glyphset definition</li>
+<li>U+F6AA : not included in any glyphset definition</li>
+<li>U+F6AB : not included in any glyphset definition</li>
+<li>U+F6AC : not included in any glyphset definition</li>
+<li>U+F6AD : not included in any glyphset definition</li>
+<li>U+F6AE : not included in any glyphset definition</li>
+<li>U+F6AF : not included in any glyphset definition</li>
+<li>U+F6B0 : not included in any glyphset definition</li>
+<li>U+F6B1 : not included in any glyphset definition</li>
+<li>U+F6B2 : not included in any glyphset definition</li>
+<li>U+F6B3 : not included in any glyphset definition</li>
+<li>U+F6B4 : not included in any glyphset definition</li>
+<li>U+F6B5 : not included in any glyphset definition</li>
+<li>U+F6B6 : not included in any glyphset definition</li>
+<li>U+F6B7 : not included in any glyphset definition</li>
+<li>U+F6B8 : not included in any glyphset definition</li>
+<li>U+F6B9 : not included in any glyphset definition</li>
+<li>U+F6BA : not included in any glyphset definition</li>
+<li>U+F6BB : not included in any glyphset definition</li>
+<li>U+F6BC : not included in any glyphset definition</li>
+<li>U+F6BD : not included in any glyphset definition</li>
+<li>U+F6BE : not included in any glyphset definition</li>
+<li>U+F6BF : not included in any glyphset definition</li>
+<li>U+F6C0 : not included in any glyphset definition</li>
+<li>U+F6C1 : not included in any glyphset definition</li>
+<li>U+F6C2 : not included in any glyphset definition</li>
+<li>U+F6C3 : not included in any glyphset definition</li>
+<li>U+F6C4 : not included in any glyphset definition</li>
+<li>U+F6C5 : not included in any glyphset definition</li>
+<li>U+F6C6 : not included in any glyphset definition</li>
+<li>U+F6C7 : not included in any glyphset definition</li>
+<li>U+F6C8 : not included in any glyphset definition</li>
+<li>U+F6C9 : not included in any glyphset definition</li>
+<li>U+F6CA : not included in any glyphset definition</li>
+<li>U+F6CB : not included in any glyphset definition</li>
+<li>U+F6CC : not included in any glyphset definition</li>
+<li>U+F6CD : not included in any glyphset definition</li>
+<li>U+F6CE : not included in any glyphset definition</li>
+<li>U+F6CF : not included in any glyphset definition</li>
+<li>U+F6D0 : not included in any glyphset definition</li>
+<li>U+F6D1 : not included in any glyphset definition</li>
+<li>U+F6D2 : not included in any glyphset definition</li>
+<li>U+F6D3 : not included in any glyphset definition</li>
+<li>U+F6D4 : not included in any glyphset definition</li>
+<li>U+F6D5 : not included in any glyphset definition</li>
+<li>U+F6D6 : not included in any glyphset definition</li>
+<li>U+F6D7 : not included in any glyphset definition</li>
+<li>U+F6D8 : not included in any glyphset definition</li>
+<li>U+F6D9 : not included in any glyphset definition</li>
+<li>U+F6DA : not included in any glyphset definition</li>
+<li>U+F6DB : not included in any glyphset definition</li>
+<li>U+F6DC : not included in any glyphset definition</li>
+<li>U+F6DD : not included in any glyphset definition</li>
+<li>U+F6DE : not included in any glyphset definition</li>
+<li>U+F6DF : not included in any glyphset definition</li>
+<li>U+F6E0 : not included in any glyphset definition</li>
+<li>U+F6E1 : not included in any glyphset definition</li>
+<li>U+F6E2 : not included in any glyphset definition</li>
+<li>U+F6E3 : not included in any glyphset definition</li>
+<li>U+F6E4 : not included in any glyphset definition</li>
+<li>U+F6E5 : not included in any glyphset definition</li>
+<li>U+F6E6 : not included in any glyphset definition</li>
+<li>U+F6E7 : not included in any glyphset definition</li>
+<li>U+F6E8 : not included in any glyphset definition</li>
+<li>U+F6E9 : not included in any glyphset definition</li>
+<li>U+F6EA : not included in any glyphset definition</li>
+<li>U+F6EB : not included in any glyphset definition</li>
+<li>U+F6EC : not included in any glyphset definition</li>
+<li>U+F6ED : not included in any glyphset definition</li>
+<li>U+F6EE : not included in any glyphset definition</li>
+<li>U+F6EF : not included in any glyphset definition</li>
+<li>U+F6F0 : not included in any glyphset definition</li>
+<li>U+F6F1 : not included in any glyphset definition</li>
+<li>U+F6F2 : not included in any glyphset definition</li>
+<li>U+F6F3 : not included in any glyphset definition</li>
+<li>U+F6F4 : not included in any glyphset definition</li>
+<li>U+F6F5 : not included in any glyphset definition</li>
+<li>U+F6F6 : not included in any glyphset definition</li>
+<li>U+F6F7 : not included in any glyphset definition</li>
+<li>U+F6F8 : not included in any glyphset definition</li>
+<li>U+F6F9 : not included in any glyphset definition</li>
+<li>U+F6FA : not included in any glyphset definition</li>
+<li>U+F6FB : not included in any glyphset definition</li>
+<li>U+F6FC : not included in any glyphset definition</li>
+<li>U+F6FD : not included in any glyphset definition</li>
+<li>U+F6FE : not included in any glyphset definition</li>
+<li>U+F6FF : not included in any glyphset definition</li>
+<li>U+F700 : not included in any glyphset definition</li>
+<li>U+F701 : not included in any glyphset definition</li>
+<li>U+F702 : not included in any glyphset definition</li>
+<li>U+F703 : not included in any glyphset definition</li>
+<li>U+F704 : not included in any glyphset definition</li>
+<li>U+F705 : not included in any glyphset definition</li>
+<li>U+F706 : not included in any glyphset definition</li>
+<li>U+F707 : not included in any glyphset definition</li>
+<li>U+F708 : not included in any glyphset definition</li>
+<li>U+F709 : not included in any glyphset definition</li>
+<li>U+F70A : not included in any glyphset definition</li>
+<li>U+F70B : not included in any glyphset definition</li>
+<li>U+F70C : not included in any glyphset definition</li>
+<li>U+F70D : not included in any glyphset definition</li>
+<li>U+F70E : not included in any glyphset definition</li>
+<li>U+F70F : not included in any glyphset definition</li>
+<li>U+F710 : not included in any glyphset definition</li>
+<li>U+F711 : not included in any glyphset definition</li>
+<li>U+F712 : not included in any glyphset definition</li>
+<li>U+F713 : not included in any glyphset definition</li>
+<li>U+F714 : not included in any glyphset definition</li>
+<li>U+F715 : not included in any glyphset definition</li>
+<li>U+F716 : not included in any glyphset definition</li>
+<li>U+F717 : not included in any glyphset definition</li>
+<li>U+F718 : not included in any glyphset definition</li>
+<li>U+F719 : not included in any glyphset definition</li>
+<li>U+F71A : not included in any glyphset definition</li>
+<li>U+F71B : not included in any glyphset definition</li>
+<li>U+F71C : not included in any glyphset definition</li>
+<li>U+F71D : not included in any glyphset definition</li>
+<li>U+F71E : not included in any glyphset definition</li>
+<li>U+F71F : not included in any glyphset definition</li>
+<li>U+F720 : not included in any glyphset definition</li>
+<li>U+F721 : not included in any glyphset definition</li>
+<li>U+F722 : not included in any glyphset definition</li>
+<li>U+F723 : not included in any glyphset definition</li>
+<li>U+F724 : not included in any glyphset definition</li>
+<li>U+F725 : not included in any glyphset definition</li>
+<li>U+F726 : not included in any glyphset definition</li>
+<li>U+F727 : not included in any glyphset definition</li>
+<li>U+F728 : not included in any glyphset definition</li>
+<li>U+F729 : not included in any glyphset definition</li>
+<li>U+F72A : not included in any glyphset definition</li>
+<li>U+F72B : not included in any glyphset definition</li>
+<li>U+F72C : not included in any glyphset definition</li>
+<li>U+F72D : not included in any glyphset definition</li>
+<li>U+F72E : not included in any glyphset definition</li>
+<li>U+F72F : not included in any glyphset definition</li>
+<li>U+F730 : not included in any glyphset definition</li>
+<li>U+F731 : not included in any glyphset definition</li>
+<li>U+F732 : not included in any glyphset definition</li>
+<li>U+F733 : not included in any glyphset definition</li>
+<li>U+F734 : not included in any glyphset definition</li>
+<li>U+F735 : not included in any glyphset definition</li>
+<li>U+F736 : not included in any glyphset definition</li>
+<li>U+F737 : not included in any glyphset definition</li>
+<li>U+F738 : not included in any glyphset definition</li>
+<li>U+F739 : not included in any glyphset definition</li>
+<li>U+F73A : not included in any glyphset definition</li>
+<li>U+F73B : not included in any glyphset definition</li>
+<li>U+F73C : not included in any glyphset definition</li>
+<li>U+F73D : not included in any glyphset definition</li>
+<li>U+F73E : not included in any glyphset definition</li>
+<li>U+F73F : not included in any glyphset definition</li>
+<li>U+F740 : not included in any glyphset definition</li>
+<li>U+F741 : not included in any glyphset definition</li>
+<li>U+F742 : not included in any glyphset definition</li>
+<li>U+F743 : not included in any glyphset definition</li>
+<li>U+F744 : not included in any glyphset definition</li>
+<li>U+F745 : not included in any glyphset definition</li>
+<li>U+F746 : not included in any glyphset definition</li>
+<li>U+F747 : not included in any glyphset definition</li>
+<li>U+F748 : not included in any glyphset definition</li>
+<li>U+F749 : not included in any glyphset definition</li>
+<li>U+F74A : not included in any glyphset definition</li>
+<li>U+F74B : not included in any glyphset definition</li>
+<li>U+F74C : not included in any glyphset definition</li>
+<li>U+F74D : not included in any glyphset definition</li>
+<li>U+F74E : not included in any glyphset definition</li>
+<li>U+F74F : not included in any glyphset definition</li>
+<li>U+F750 : not included in any glyphset definition</li>
+<li>U+F751 : not included in any glyphset definition</li>
+<li>U+F752 : not included in any glyphset definition</li>
+<li>U+F753 : not included in any glyphset definition</li>
+<li>U+F754 : not included in any glyphset definition</li>
+<li>U+F755 : not included in any glyphset definition</li>
+<li>U+F756 : not included in any glyphset definition</li>
+<li>U+F757 : not included in any glyphset definition</li>
+<li>U+F758 : not included in any glyphset definition</li>
+<li>U+F759 : not included in any glyphset definition</li>
+<li>U+F75A : not included in any glyphset definition</li>
+<li>U+F75B : not included in any glyphset definition</li>
+<li>U+F75C : not included in any glyphset definition</li>
+<li>U+F75D : not included in any glyphset definition</li>
+<li>U+F75E : not included in any glyphset definition</li>
+<li>U+F75F : not included in any glyphset definition</li>
+<li>U+F760 : not included in any glyphset definition</li>
+<li>U+F761 : not included in any glyphset definition</li>
+<li>U+F762 : not included in any glyphset definition</li>
+<li>U+F763 : not included in any glyphset definition</li>
+<li>U+F764 : not included in any glyphset definition</li>
+<li>U+F765 : not included in any glyphset definition</li>
+<li>U+F766 : not included in any glyphset definition</li>
+<li>U+F767 : not included in any glyphset definition</li>
+<li>U+F768 : not included in any glyphset definition</li>
+<li>U+F769 : not included in any glyphset definition</li>
+<li>U+F76A : not included in any glyphset definition</li>
+<li>U+F76B : not included in any glyphset definition</li>
+<li>U+F76C : not included in any glyphset definition</li>
+<li>U+F76D : not included in any glyphset definition</li>
+<li>U+F76E : not included in any glyphset definition</li>
+<li>U+F76F : not included in any glyphset definition</li>
+<li>U+F770 : not included in any glyphset definition</li>
+<li>U+F771 : not included in any glyphset definition</li>
+<li>U+F772 : not included in any glyphset definition</li>
+<li>U+F773 : not included in any glyphset definition</li>
+<li>U+F774 : not included in any glyphset definition</li>
+<li>U+F775 : not included in any glyphset definition</li>
+<li>U+F776 : not included in any glyphset definition</li>
+<li>U+F777 : not included in any glyphset definition</li>
+<li>U+F778 : not included in any glyphset definition</li>
+<li>U+F779 : not included in any glyphset definition</li>
+<li>U+F77A : not included in any glyphset definition</li>
+<li>U+F77B : not included in any glyphset definition</li>
+<li>U+F77C : not included in any glyphset definition</li>
+<li>U+F77D : not included in any glyphset definition</li>
+<li>U+F77E : not included in any glyphset definition</li>
+<li>U+F77F : not included in any glyphset definition</li>
+<li>U+F780 : not included in any glyphset definition</li>
+<li>U+F781 : not included in any glyphset definition</li>
+<li>U+F782 : not included in any glyphset definition</li>
+<li>U+F783 : not included in any glyphset definition</li>
+<li>U+F784 : not included in any glyphset definition</li>
+<li>U+F785 : not included in any glyphset definition</li>
+<li>U+F786 : not included in any glyphset definition</li>
+<li>U+F787 : not included in any glyphset definition</li>
+<li>U+F788 : not included in any glyphset definition</li>
+<li>U+F789 : not included in any glyphset definition</li>
+<li>U+F78A : not included in any glyphset definition</li>
+<li>U+F78B : not included in any glyphset definition</li>
+<li>U+F78C : not included in any glyphset definition</li>
+<li>U+F78D : not included in any glyphset definition</li>
+<li>U+F78E : not included in any glyphset definition</li>
+<li>U+F78F : not included in any glyphset definition</li>
+<li>U+F790 : not included in any glyphset definition</li>
+<li>U+F791 : not included in any glyphset definition</li>
+<li>U+F792 : not included in any glyphset definition</li>
+<li>U+F793 : not included in any glyphset definition</li>
+<li>U+F794 : not included in any glyphset definition</li>
+<li>U+F795 : not included in any glyphset definition</li>
+<li>U+F796 : not included in any glyphset definition</li>
+<li>U+F797 : not included in any glyphset definition</li>
+<li>U+F798 : not included in any glyphset definition</li>
+<li>U+F799 : not included in any glyphset definition</li>
+<li>U+F79A : not included in any glyphset definition</li>
+<li>U+F79B : not included in any glyphset definition</li>
+<li>U+F79C : not included in any glyphset definition</li>
+<li>U+F79D : not included in any glyphset definition</li>
+<li>U+F79E : not included in any glyphset definition</li>
+<li>U+F79F : not included in any glyphset definition</li>
+<li>U+F7A0 : not included in any glyphset definition</li>
+<li>U+F7A1 : not included in any glyphset definition</li>
+<li>U+F7A2 : not included in any glyphset definition</li>
+<li>U+F7A3 : not included in any glyphset definition</li>
+<li>U+F7A4 : not included in any glyphset definition</li>
+<li>U+F7A5 : not included in any glyphset definition</li>
+<li>U+F7A6 : not included in any glyphset definition</li>
+<li>U+F7A7 : not included in any glyphset definition</li>
+<li>U+F7A8 : not included in any glyphset definition</li>
+<li>U+F7A9 : not included in any glyphset definition</li>
+<li>U+F7AA : not included in any glyphset definition</li>
+<li>U+F7AB : not included in any glyphset definition</li>
+<li>U+F7AC : not included in any glyphset definition</li>
+<li>U+F7AD : not included in any glyphset definition</li>
+<li>U+F7AE : not included in any glyphset definition</li>
+<li>U+F7AF : not included in any glyphset definition</li>
+<li>U+F7B0 : not included in any glyphset definition</li>
+<li>U+F7B1 : not included in any glyphset definition</li>
+<li>U+F7B2 : not included in any glyphset definition</li>
+<li>U+F7B3 : not included in any glyphset definition</li>
+<li>U+F7B4 : not included in any glyphset definition</li>
+<li>U+F7B5 : not included in any glyphset definition</li>
+<li>U+F7B6 : not included in any glyphset definition</li>
+<li>U+F7B7 : not included in any glyphset definition</li>
+<li>U+F7B8 : not included in any glyphset definition</li>
+<li>U+F7B9 : not included in any glyphset definition</li>
+<li>U+F7BA : not included in any glyphset definition</li>
+<li>U+F7BB : not included in any glyphset definition</li>
+<li>U+F7BC : not included in any glyphset definition</li>
+<li>U+F7BD : not included in any glyphset definition</li>
+<li>U+F7BE : not included in any glyphset definition</li>
+<li>U+F7BF : not included in any glyphset definition</li>
+<li>U+F7C0 : not included in any glyphset definition</li>
+<li>U+F7C1 : not included in any glyphset definition</li>
+<li>U+F7C2 : not included in any glyphset definition</li>
+<li>U+F7C3 : not included in any glyphset definition</li>
+<li>U+F7C4 : not included in any glyphset definition</li>
+<li>U+F7C5 : not included in any glyphset definition</li>
+<li>U+F7C6 : not included in any glyphset definition</li>
+<li>U+F7C7 : not included in any glyphset definition</li>
+<li>U+F7C8 : not included in any glyphset definition</li>
+<li>U+F7C9 : not included in any glyphset definition</li>
+<li>U+F7CA : not included in any glyphset definition</li>
+<li>U+F7CB : not included in any glyphset definition</li>
+<li>U+F7CC : not included in any glyphset definition</li>
+<li>U+F7CD : not included in any glyphset definition</li>
+<li>U+F7CE : not included in any glyphset definition</li>
+<li>U+F7CF : not included in any glyphset definition</li>
+<li>U+F7D0 : not included in any glyphset definition</li>
+<li>U+F7D1 : not included in any glyphset definition</li>
+<li>U+F7D2 : not included in any glyphset definition</li>
+<li>U+F7D3 : not included in any glyphset definition</li>
+<li>U+F7D4 : not included in any glyphset definition</li>
+<li>U+F7D5 : not included in any glyphset definition</li>
+<li>U+F7D6 : not included in any glyphset definition</li>
+<li>U+F7D7 : not included in any glyphset definition</li>
+<li>U+F7D8 : not included in any glyphset definition</li>
+<li>U+F7D9 : not included in any glyphset definition</li>
+<li>U+F7DA : not included in any glyphset definition</li>
+<li>U+F7DB : not included in any glyphset definition</li>
+<li>U+F7DC : not included in any glyphset definition</li>
+<li>U+F7DD : not included in any glyphset definition</li>
+<li>U+F7DE : not included in any glyphset definition</li>
+<li>U+F7DF : not included in any glyphset definition</li>
+<li>U+F7E0 : not included in any glyphset definition</li>
+<li>U+F7E1 : not included in any glyphset definition</li>
+<li>U+F7E2 : not included in any glyphset definition</li>
+<li>U+F7E3 : not included in any glyphset definition</li>
+<li>U+F7E4 : not included in any glyphset definition</li>
+<li>U+F7E5 : not included in any glyphset definition</li>
+<li>U+F7E6 : not included in any glyphset definition</li>
+<li>U+F7E7 : not included in any glyphset definition</li>
+<li>U+F7E8 : not included in any glyphset definition</li>
+<li>U+F7E9 : not included in any glyphset definition</li>
+<li>U+F7EA : not included in any glyphset definition</li>
+<li>U+F7EB : not included in any glyphset definition</li>
+<li>U+F7EC : not included in any glyphset definition</li>
+<li>U+F7ED : not included in any glyphset definition</li>
+<li>U+F7EE : not included in any glyphset definition</li>
+<li>U+F7EF : not included in any glyphset definition</li>
+<li>U+F7F0 : not included in any glyphset definition</li>
+<li>U+F7F1 : not included in any glyphset definition</li>
+<li>U+F7F2 : not included in any glyphset definition</li>
+<li>U+F7F3 : not included in any glyphset definition</li>
+<li>U+F7F4 : not included in any glyphset definition</li>
+<li>U+F7F5 : not included in any glyphset definition</li>
+<li>U+F7F6 : not included in any glyphset definition</li>
+<li>U+F7F7 : not included in any glyphset definition</li>
+<li>U+F7F8 : not included in any glyphset definition</li>
+<li>U+F7F9 : not included in any glyphset definition</li>
+<li>U+F7FA : not included in any glyphset definition</li>
+<li>U+F7FB : not included in any glyphset definition</li>
+<li>U+F7FC : not included in any glyphset definition</li>
+<li>U+F7FD : not included in any glyphset definition</li>
+<li>U+F7FE : not included in any glyphset definition</li>
+<li>U+F7FF : not included in any glyphset definition</li>
+<li>U+F800 : not included in any glyphset definition</li>
+<li>U+F801 : not included in any glyphset definition</li>
+<li>U+F802 : not included in any glyphset definition</li>
+<li>U+F803 : not included in any glyphset definition</li>
+<li>U+F804 : not included in any glyphset definition</li>
+<li>U+F805 : not included in any glyphset definition</li>
+<li>U+F806 : not included in any glyphset definition</li>
+<li>U+F807 : not included in any glyphset definition</li>
+<li>U+F808 : not included in any glyphset definition</li>
+<li>U+F809 : not included in any glyphset definition</li>
+<li>U+F80A : not included in any glyphset definition</li>
+<li>U+F80B : not included in any glyphset definition</li>
+<li>U+F80C : not included in any glyphset definition</li>
+<li>U+F80D : not included in any glyphset definition</li>
+<li>U+F80E : not included in any glyphset definition</li>
+<li>U+F80F : not included in any glyphset definition</li>
+<li>U+F810 : not included in any glyphset definition</li>
+<li>U+F811 : not included in any glyphset definition</li>
+<li>U+F812 : not included in any glyphset definition</li>
+<li>U+F813 : not included in any glyphset definition</li>
+<li>U+F814 : not included in any glyphset definition</li>
+<li>U+F815 : not included in any glyphset definition</li>
+<li>U+F816 : not included in any glyphset definition</li>
+<li>U+F817 : not included in any glyphset definition</li>
+<li>U+F818 : not included in any glyphset definition</li>
+<li>U+F819 : not included in any glyphset definition</li>
+<li>U+F81A : not included in any glyphset definition</li>
+<li>U+F81B : not included in any glyphset definition</li>
+<li>U+F81C : not included in any glyphset definition</li>
+<li>U+F81D : not included in any glyphset definition</li>
+<li>U+F81E : not included in any glyphset definition</li>
+<li>U+F81F : not included in any glyphset definition</li>
+<li>U+F820 : not included in any glyphset definition</li>
+<li>U+F821 : not included in any glyphset definition</li>
+<li>U+F822 : not included in any glyphset definition</li>
+<li>U+F823 : not included in any glyphset definition</li>
+<li>U+F824 : not included in any glyphset definition</li>
+<li>U+F825 : not included in any glyphset definition</li>
+<li>U+F826 : not included in any glyphset definition</li>
+<li>U+F827 : not included in any glyphset definition</li>
+<li>U+F828 : not included in any glyphset definition</li>
+<li>U+F829 : not included in any glyphset definition</li>
+<li>U+F82A : not included in any glyphset definition</li>
+<li>U+F82B : not included in any glyphset definition</li>
+<li>U+F82C : not included in any glyphset definition</li>
+<li>U+F82D : not included in any glyphset definition</li>
+<li>U+F82E : not included in any glyphset definition</li>
+<li>U+F82F : not included in any glyphset definition</li>
+<li>U+F830 : not included in any glyphset definition</li>
+<li>U+F831 : not included in any glyphset definition</li>
+<li>U+F832 : not included in any glyphset definition</li>
+<li>U+F833 : not included in any glyphset definition</li>
+<li>U+F834 : not included in any glyphset definition</li>
+<li>U+F835 : not included in any glyphset definition</li>
+<li>U+F836 : not included in any glyphset definition</li>
+<li>U+F837 : not included in any glyphset definition</li>
+<li>U+F838 : not included in any glyphset definition</li>
+<li>U+F839 : not included in any glyphset definition</li>
+<li>U+F83A : not included in any glyphset definition</li>
+<li>U+F83B : not included in any glyphset definition</li>
+<li>U+F83C : not included in any glyphset definition</li>
+<li>U+F83D : not included in any glyphset definition</li>
+<li>U+F83E : not included in any glyphset definition</li>
+<li>U+F83F : not included in any glyphset definition</li>
+<li>U+F840 : not included in any glyphset definition</li>
+<li>U+F841 : not included in any glyphset definition</li>
+<li>U+F842 : not included in any glyphset definition</li>
+<li>U+F843 : not included in any glyphset definition</li>
+<li>U+F844 : not included in any glyphset definition</li>
+<li>U+F845 : not included in any glyphset definition</li>
+<li>U+F846 : not included in any glyphset definition</li>
+<li>U+F847 : not included in any glyphset definition</li>
+<li>U+F848 : not included in any glyphset definition</li>
+<li>U+F849 : not included in any glyphset definition</li>
+<li>U+F84A : not included in any glyphset definition</li>
+<li>U+F84B : not included in any glyphset definition</li>
+<li>U+F84C : not included in any glyphset definition</li>
+<li>U+F84D : not included in any glyphset definition</li>
+<li>U+F84E : not included in any glyphset definition</li>
+<li>U+F84F : not included in any glyphset definition</li>
+<li>U+F850 : not included in any glyphset definition</li>
+<li>U+F851 : not included in any glyphset definition</li>
+<li>U+F852 : not included in any glyphset definition</li>
+<li>U+F853 : not included in any glyphset definition</li>
+<li>U+F854 : not included in any glyphset definition</li>
+<li>U+F855 : not included in any glyphset definition</li>
+<li>U+F856 : not included in any glyphset definition</li>
+<li>U+F857 : not included in any glyphset definition</li>
+<li>U+F858 : not included in any glyphset definition</li>
+<li>U+F859 : not included in any glyphset definition</li>
+<li>U+F85A : not included in any glyphset definition</li>
+<li>U+F85B : not included in any glyphset definition</li>
+<li>U+F85C : not included in any glyphset definition</li>
+<li>U+F85D : not included in any glyphset definition</li>
+<li>U+F85E : not included in any glyphset definition</li>
+<li>U+F85F : not included in any glyphset definition</li>
+<li>U+F860 : not included in any glyphset definition</li>
+<li>U+F861 : not included in any glyphset definition</li>
+<li>U+F862 : not included in any glyphset definition</li>
+<li>U+F863 : not included in any glyphset definition</li>
+<li>U+F864 : not included in any glyphset definition</li>
+<li>U+F865 : not included in any glyphset definition</li>
+<li>U+F866 : not included in any glyphset definition</li>
+<li>U+F867 : not included in any glyphset definition</li>
+<li>U+F868 : not included in any glyphset definition</li>
+<li>U+F869 : not included in any glyphset definition</li>
+<li>U+F86A : not included in any glyphset definition</li>
+<li>U+F86B : not included in any glyphset definition</li>
+<li>U+F86C : not included in any glyphset definition</li>
+<li>U+F86D : not included in any glyphset definition</li>
+<li>U+F86E : not included in any glyphset definition</li>
+<li>U+F86F : not included in any glyphset definition</li>
+<li>U+F870 : not included in any glyphset definition</li>
+<li>U+F871 : not included in any glyphset definition</li>
+<li>U+F872 : not included in any glyphset definition</li>
+<li>U+F873 : not included in any glyphset definition</li>
+<li>U+F874 : not included in any glyphset definition</li>
+<li>U+F875 : not included in any glyphset definition</li>
+<li>U+F876 : not included in any glyphset definition</li>
+<li>U+F877 : not included in any glyphset definition</li>
+<li>U+F878 : not included in any glyphset definition</li>
+<li>U+F879 : not included in any glyphset definition</li>
+<li>U+F87A : not included in any glyphset definition</li>
+<li>U+F87B : not included in any glyphset definition</li>
+<li>U+F87C : not included in any glyphset definition</li>
+<li>U+F87D : not included in any glyphset definition</li>
+<li>U+F87E : not included in any glyphset definition</li>
+<li>U+F87F : not included in any glyphset definition</li>
+<li>U+F880 : not included in any glyphset definition</li>
+<li>U+F881 : not included in any glyphset definition</li>
+<li>U+F882 : not included in any glyphset definition</li>
+<li>U+F883 : not included in any glyphset definition</li>
+<li>U+F884 : not included in any glyphset definition</li>
+<li>U+F885 : not included in any glyphset definition</li>
+<li>U+F886 : not included in any glyphset definition</li>
+<li>U+F887 : not included in any glyphset definition</li>
+<li>U+F888 : not included in any glyphset definition</li>
+<li>U+F889 : not included in any glyphset definition</li>
+<li>U+F88A : not included in any glyphset definition</li>
+<li>U+F88B : not included in any glyphset definition</li>
+<li>U+F88C : not included in any glyphset definition</li>
+<li>U+F88D : not included in any glyphset definition</li>
+<li>U+F88E : not included in any glyphset definition</li>
+<li>U+F88F : not included in any glyphset definition</li>
+<li>U+F890 : not included in any glyphset definition</li>
+<li>U+F891 : not included in any glyphset definition</li>
+<li>U+F892 : not included in any glyphset definition</li>
+<li>U+F893 : not included in any glyphset definition</li>
+<li>U+F894 : not included in any glyphset definition</li>
+<li>U+F895 : not included in any glyphset definition</li>
+<li>U+F896 : not included in any glyphset definition</li>
+<li>U+F897 : not included in any glyphset definition</li>
+<li>U+F898 : not included in any glyphset definition</li>
+<li>U+F899 : not included in any glyphset definition</li>
+<li>U+F89A : not included in any glyphset definition</li>
+<li>U+F89B : not included in any glyphset definition</li>
+<li>U+F89C : not included in any glyphset definition</li>
+<li>U+F89D : not included in any glyphset definition</li>
+<li>U+F89E : not included in any glyphset definition</li>
+<li>U+F89F : not included in any glyphset definition</li>
+<li>U+F8A0 : not included in any glyphset definition</li>
+<li>U+F8A1 : not included in any glyphset definition</li>
+<li>U+F8A2 : not included in any glyphset definition</li>
+<li>U+F8A3 : not included in any glyphset definition</li>
+<li>U+F8A4 : not included in any glyphset definition</li>
+<li>U+F8A5 : not included in any glyphset definition</li>
+<li>U+F8A6 : not included in any glyphset definition</li>
+<li>U+F8A7 : not included in any glyphset definition</li>
+<li>U+F8A8 : not included in any glyphset definition</li>
+<li>U+F8A9 : not included in any glyphset definition</li>
+<li>U+F8AA : not included in any glyphset definition</li>
+<li>U+F8AB : not included in any glyphset definition</li>
+<li>U+F8AC : not included in any glyphset definition</li>
+<li>U+F8AD : not included in any glyphset definition</li>
+<li>U+F8AE : not included in any glyphset definition</li>
+<li>U+F8AF : not included in any glyphset definition</li>
+<li>U+F8B0 : not included in any glyphset definition</li>
+<li>U+F8B1 : not included in any glyphset definition</li>
+<li>U+F8B2 : not included in any glyphset definition</li>
+<li>U+F8B3 : not included in any glyphset definition</li>
+<li>U+F8B4 : not included in any glyphset definition</li>
+<li>U+F8B5 : not included in any glyphset definition</li>
+<li>U+F8B6 : not included in any glyphset definition</li>
+<li>U+F8B7 : not included in any glyphset definition</li>
+<li>U+F8B8 : not included in any glyphset definition</li>
+<li>U+F8B9 : not included in any glyphset definition</li>
+<li>U+F8BA : not included in any glyphset definition</li>
+<li>U+F8BB : not included in any glyphset definition</li>
+<li>U+F8BC : not included in any glyphset definition</li>
+<li>U+F8BD : not included in any glyphset definition</li>
+<li>U+F8BE : not included in any glyphset definition</li>
+<li>U+F8BF : not included in any glyphset definition</li>
+<li>U+F8C0 : not included in any glyphset definition</li>
+<li>U+F8C1 : not included in any glyphset definition</li>
+<li>U+F8C2 : not included in any glyphset definition</li>
+<li>U+F8C3 : not included in any glyphset definition</li>
+<li>U+F8C4 : not included in any glyphset definition</li>
+<li>U+F8C5 : not included in any glyphset definition</li>
+<li>U+F8C6 : not included in any glyphset definition</li>
+<li>U+F8C7 : not included in any glyphset definition</li>
+<li>U+F8C8 : not included in any glyphset definition</li>
+<li>U+F8C9 : not included in any glyphset definition</li>
+<li>U+F8CA : not included in any glyphset definition</li>
+<li>U+F8CB : not included in any glyphset definition</li>
+<li>U+F8CC : not included in any glyphset definition</li>
+<li>U+F8CD : not included in any glyphset definition</li>
+<li>U+F8CE : not included in any glyphset definition</li>
+<li>U+F8CF : not included in any glyphset definition</li>
+<li>U+F8D0 : not included in any glyphset definition</li>
+<li>U+F8D1 : not included in any glyphset definition</li>
+<li>U+F8D2 : not included in any glyphset definition</li>
+<li>U+F8D3 : not included in any glyphset definition</li>
+<li>U+F8D4 : not included in any glyphset definition</li>
+<li>U+F8D5 : not included in any glyphset definition</li>
+<li>U+F8D6 : not included in any glyphset definition</li>
+<li>U+F8D7 : not included in any glyphset definition</li>
+<li>U+F8D8 : not included in any glyphset definition</li>
+<li>U+F8D9 : not included in any glyphset definition</li>
+<li>U+F8DA : not included in any glyphset definition</li>
+<li>U+F8DB : not included in any glyphset definition</li>
+<li>U+F8DC : not included in any glyphset definition</li>
+<li>U+F8DD : not included in any glyphset definition</li>
+<li>U+F8DE : not included in any glyphset definition</li>
+<li>U+F8DF : not included in any glyphset definition</li>
+<li>U+F8E0 : not included in any glyphset definition</li>
+<li>U+F8E1 : not included in any glyphset definition</li>
+<li>U+F8E2 : not included in any glyphset definition</li>
+<li>U+F8E3 : not included in any glyphset definition</li>
+<li>U+F8E4 : not included in any glyphset definition</li>
+<li>U+F8E5 : not included in any glyphset definition</li>
+<li>U+F8E6 : not included in any glyphset definition</li>
+<li>U+F8E7 : not included in any glyphset definition</li>
+<li>U+F8E8 : not included in any glyphset definition</li>
+<li>U+F8E9 : not included in any glyphset definition</li>
+<li>U+F8EA : not included in any glyphset definition</li>
+<li>U+F8EB : not included in any glyphset definition</li>
+<li>U+F8EC : not included in any glyphset definition</li>
+<li>U+F8ED : not included in any glyphset definition</li>
+<li>U+F8EE : not included in any glyphset definition</li>
+<li>U+F8EF : not included in any glyphset definition</li>
+<li>U+F8F0 : not included in any glyphset definition</li>
+<li>U+F8F1 : not included in any glyphset definition</li>
+<li>U+F8F2 : not included in any glyphset definition</li>
+<li>U+F8F3 : not included in any glyphset definition</li>
+<li>U+F8F4 : not included in any glyphset definition</li>
+<li>U+F8F5 : not included in any glyphset definition</li>
+<li>U+F8F6 : not included in any glyphset definition</li>
+<li>U+F8F7 : not included in any glyphset definition</li>
+<li>U+F8F8 : not included in any glyphset definition</li>
+<li>U+F8F9 : not included in any glyphset definition</li>
+<li>U+F8FA : not included in any glyphset definition</li>
+<li>U+F8FB : not included in any glyphset definition</li>
+<li>U+F8FC : not included in any glyphset definition</li>
+<li>U+F8FD : not included in any glyphset definition</li>
+<li>U+F8FE : not included in any glyphset definition</li>
+<li>U+F8FF : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding phags-pa</li>
+<li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
+<li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
+<li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
+<li>U+FE04 VARIATION SELECTOR-5: not included in any glyphset definition</li>
+<li>U+FE05 VARIATION SELECTOR-6: not included in any glyphset definition</li>
+<li>U+FE06 VARIATION SELECTOR-7: not included in any glyphset definition</li>
+<li>U+FE07 VARIATION SELECTOR-8: not included in any glyphset definition</li>
+<li>U+FE08 VARIATION SELECTOR-9: not included in any glyphset definition</li>
+<li>U+FE09 VARIATION SELECTOR-10: not included in any glyphset definition</li>
+<li>U+FE0A VARIATION SELECTOR-11: not included in any glyphset definition</li>
+<li>U+FE0B VARIATION SELECTOR-12: not included in any glyphset definition</li>
+<li>U+FE0C VARIATION SELECTOR-13: not included in any glyphset definition</li>
+<li>U+FE0D VARIATION SELECTOR-14: not included in any glyphset definition</li>
+<li>U+FE0E VARIATION SELECTOR-15: not included in any glyphset definition</li>
+<li>U+FE0F VARIATION SELECTOR-16: not included in any glyphset definition</li>
+<li>U+FFF9 INTERLINEAR ANNOTATION ANCHOR: not included in any glyphset definition</li>
+<li>U+FFFA INTERLINEAR ANNOTATION SEPARATOR: not included in any glyphset definition</li>
+<li>U+FFFC OBJECT REPLACEMENT CHARACTER: not included in any glyphset definition</li>
+<li>U+F0010 : not included in any glyphset definition</li>
+<li>U+F0011 : not included in any glyphset definition</li>
+<li>U+F0023 : not included in any glyphset definition</li>
+<li>U+F0031 : not included in any glyphset definition</li>
+<li>U+F0032 : not included in any glyphset definition</li>
+<li>U+F003D : not included in any glyphset definition</li>
+<li>U+F0047 : not included in any glyphset definition</li>
+<li>U+F0052 : not included in any glyphset definition</li>
+<li>U+F0062 : not included in any glyphset definition</li>
+<li>U+F006D : not included in any glyphset definition</li>
+<li>U+F0083 : not included in any glyphset definition</li>
+<li>U+F0093 : not included in any glyphset definition</li>
+<li>U+F00A2 : not included in any glyphset definition</li>
+<li>U+F00B2 : not included in any glyphset definition</li>
+<li>U+F00C3 : not included in any glyphset definition</li>
+<li>U+F00CD : not included in any glyphset definition</li>
+<li>U+F0105 : not included in any glyphset definition</li>
+<li>U+F010C : not included in any glyphset definition</li>
+<li>U+F011F : not included in any glyphset definition</li>
+<li>U+F0120 : not included in any glyphset definition</li>
+<li>U+F0140 : not included in any glyphset definition</li>
+<li>U+F0162 : not included in any glyphset definition</li>
+<li>U+F0193 : not included in any glyphset definition</li>
+<li>U+F0197 : not included in any glyphset definition</li>
+<li>U+F01A5 : not included in any glyphset definition</li>
+<li>U+F01AD : not included in any glyphset definition</li>
+<li>U+F01C8 : not included in any glyphset definition</li>
+<li>U+F01C9 : not included in any glyphset definition</li>
+<li>U+F01CD : not included in any glyphset definition</li>
+<li>U+F01CE : not included in any glyphset definition</li>
+<li>U+F01D0 : not included in any glyphset definition</li>
+<li>U+F01D6 : not included in any glyphset definition</li>
+<li>U+F01D8 : not included in any glyphset definition</li>
+<li>U+F01D9 : not included in any glyphset definition</li>
+<li>U+F01DA : not included in any glyphset definition</li>
+<li>U+F01DB : not included in any glyphset definition</li>
+<li>U+F01DC : not included in any glyphset definition</li>
+<li>U+F01E0 : not included in any glyphset definition</li>
+<li>U+F01FB : not included in any glyphset definition</li>
+<li>U+F02DC : not included in any glyphset definition</li>
+<li>U+F02EF : not included in any glyphset definition</li>
+<li>U+F02FF : not included in any glyphset definition</li>
+<li>U+F030F : not included in any glyphset definition</li>
+<li>U+F031A : not included in any glyphset definition</li>
+<li>U+F0337 : not included in any glyphset definition</li>
+<li>U+F034D : not included in any glyphset definition</li>
+<li>U+F0360 : not included in any glyphset definition</li>
+<li>U+F0363 : not included in any glyphset definition</li>
+<li>U+F037A : not included in any glyphset definition</li>
+<li>U+F038A : not included in any glyphset definition</li>
+<li>U+F0399 : not included in any glyphset definition</li>
+<li>U+F03AA : not included in any glyphset definition</li>
+<li>U+F03B4 : not included in any glyphset definition</li>
+<li>U+F03C2 : not included in any glyphset definition</li>
+<li>U+F03E7 : not included in any glyphset definition</li>
+<li>U+F03F0 : not included in any glyphset definition</li>
+<li>U+F040E : not included in any glyphset definition</li>
+<li>U+F0458 : not included in any glyphset definition</li>
+<li>U+F0467 : not included in any glyphset definition</li>
+<li>U+F0476 : not included in any glyphset definition</li>
+<li>U+F047D : not included in any glyphset definition</li>
+<li>U+F047F : not included in any glyphset definition</li>
+<li>U+F0497 : not included in any glyphset definition</li>
+<li>U+F04A2 : not included in any glyphset definition</li>
+<li>U+F04A8 : not included in any glyphset definition</li>
+<li>U+F04BC : not included in any glyphset definition</li>
+<li>U+F04F0 : not included in any glyphset definition</li>
+<li>U+F04F2 : not included in any glyphset definition</li>
+<li>U+F050C : not included in any glyphset definition</li>
+<li>U+F050D : not included in any glyphset definition</li>
+<li>U+F0533 : not included in any glyphset definition</li>
+<li>U+F0539 : not included in any glyphset definition</li>
+<li>U+F0570 : not included in any glyphset definition</li>
+<li>U+F059E : not included in any glyphset definition</li>
+<li>U+F05A9 : not included in any glyphset definition</li>
+<li>U+F05BD : not included in any glyphset definition</li>
+<li>U+F0604 : not included in any glyphset definition</li>
+<li>U+F0664 : not included in any glyphset definition</li>
+<li>U+F0672 : not included in any glyphset definition</li>
+<li>U+F067B : not included in any glyphset definition</li>
+<li>U+F0686 : not included in any glyphset definition</li>
+<li>U+F0699 : not included in any glyphset definition</li>
+<li>U+F06A8 : not included in any glyphset definition</li>
+<li>U+F06AA : not included in any glyphset definition</li>
+<li>U+F06BA : not included in any glyphset definition</li>
+<li>U+F06C5 : not included in any glyphset definition</li>
+<li>U+F06CC : not included in any glyphset definition</li>
+<li>U+F06FF : not included in any glyphset definition</li>
+<li>U+F0712 : not included in any glyphset definition</li>
+<li>U+F0723 : not included in any glyphset definition</li>
+<li>U+F072E : not included in any glyphset definition</li>
+<li>U+F0731 : not included in any glyphset definition</li>
+<li>U+F076D : not included in any glyphset definition</li>
+<li>U+F0795 : not included in any glyphset definition</li>
+<li>U+F07AB : not included in any glyphset definition</li>
+<li>U+F07C9 : not included in any glyphset definition</li>
+<li>U+F07CD : not included in any glyphset definition</li>
+<li>U+F07DF : not included in any glyphset definition</li>
+<li>U+F07F1 : not included in any glyphset definition</li>
+<li>U+F07FB : not included in any glyphset definition</li>
+<li>U+F07FF : not included in any glyphset definition</li>
+<li>U+F0814 : not included in any glyphset definition</li>
+<li>U+F0815 : not included in any glyphset definition</li>
+<li>U+F0830 : not included in any glyphset definition</li>
+<li>U+F0848 : not included in any glyphset definition</li>
+<li>U+F086F : not included in any glyphset definition</li>
+<li>U+F0877 : not included in any glyphset definition</li>
+<li>U+F089F : not included in any glyphset definition</li>
+<li>U+F08AD : not included in any glyphset definition</li>
+<li>U+F08B7 : not included in any glyphset definition</li>
+<li>U+F08C5 : not included in any glyphset definition</li>
+<li>U+F08CA : not included in any glyphset definition</li>
+<li>U+F08DB : not included in any glyphset definition</li>
+<li>U+F08F0 : not included in any glyphset definition</li>
+<li>U+F092C : not included in any glyphset definition</li>
+<li>U+F0950 : not included in any glyphset definition</li>
+<li>U+F0959 : not included in any glyphset definition</li>
+<li>U+F0966 : not included in any glyphset definition</li>
+<li>U+F097B : not included in any glyphset definition</li>
+<li>U+F0980 : not included in any glyphset definition</li>
+<li>U+F0981 : not included in any glyphset definition</li>
+<li>U+F0988 : not included in any glyphset definition</li>
+<li>U+F0991 : not included in any glyphset definition</li>
+<li>U+F099B : not included in any glyphset definition</li>
+<li>U+F09B0 : not included in any glyphset definition</li>
+<li>U+F09C7 : not included in any glyphset definition</li>
+<li>U+F09E1 : not included in any glyphset definition</li>
+<li>U+F09E8 : not included in any glyphset definition</li>
+<li>U+F09FA : not included in any glyphset definition</li>
+<li>U+F0A04 : not included in any glyphset definition</li>
+<li>U+F0A0F : not included in any glyphset definition</li>
+<li>U+F0A3A : not included in any glyphset definition</li>
+<li>U+F0A55 : not included in any glyphset definition</li>
+<li>U+F0A70 : not included in any glyphset definition</li>
+<li>U+F0A8C : not included in any glyphset definition</li>
+<li>U+F0A97 : not included in any glyphset definition</li>
+<li>U+F0AEA : not included in any glyphset definition</li>
+<li>U+F0AF3 : not included in any glyphset definition</li>
+<li>U+F0B20 : not included in any glyphset definition</li>
+<li>U+F0B34 : not included in any glyphset definition</li>
+<li>U+F0B40 : not included in any glyphset definition</li>
+<li>U+F0B42 : not included in any glyphset definition</li>
+<li>U+F0B4C : not included in any glyphset definition</li>
+<li>U+F0B69 : not included in any glyphset definition</li>
+<li>U+F0B6E : not included in any glyphset definition</li>
+<li>U+F0B76 : not included in any glyphset definition</li>
+<li>U+F0B8C : not included in any glyphset definition</li>
+<li>U+F0BA3 : not included in any glyphset definition</li>
+<li>U+F0BA4 : not included in any glyphset definition</li>
+<li>U+F0BB0 : not included in any glyphset definition</li>
+<li>U+F0BE8 : not included in any glyphset definition</li>
+<li>U+F0C0A : not included in any glyphset definition</li>
+<li>U+F0C12 : not included in any glyphset definition</li>
+<li>U+F0C2F : not included in any glyphset definition</li>
+<li>U+F0C3E : not included in any glyphset definition</li>
+<li>U+F0C48 : not included in any glyphset definition</li>
+<li>U+F0C4A : not included in any glyphset definition</li>
+<li>U+F0C95 : not included in any glyphset definition</li>
+<li>U+F0CA8 : not included in any glyphset definition</li>
+<li>U+F0CBE : not included in any glyphset definition</li>
+<li>U+F0CDB : not included in any glyphset definition</li>
+<li>U+F0CE5 : not included in any glyphset definition</li>
+<li>U+F0D10 : not included in any glyphset definition</li>
+<li>U+F0D26 : not included in any glyphset definition</li>
+<li>U+F0D32 : not included in any glyphset definition</li>
+<li>U+F0D3F : not included in any glyphset definition</li>
+<li>U+F0D57 : not included in any glyphset definition</li>
+<li>U+F0D64 : not included in any glyphset definition</li>
+<li>U+F0D74 : not included in any glyphset definition</li>
+<li>U+F0D82 : not included in any glyphset definition</li>
+<li>U+F0D84 : not included in any glyphset definition</li>
+<li>U+F0D85 : not included in any glyphset definition</li>
+<li>U+F0DA6 : not included in any glyphset definition</li>
+<li>U+F0DB0 : not included in any glyphset definition</li>
+<li>U+F0DF3 : not included in any glyphset definition</li>
+<li>U+F0DFF : not included in any glyphset definition</li>
+<li>U+F0E0F : not included in any glyphset definition</li>
+<li>U+F0E1A : not included in any glyphset definition</li>
+<li>U+F0E1F : not included in any glyphset definition</li>
+<li>U+F0E25 : not included in any glyphset definition</li>
+<li>U+F0E3F : not included in any glyphset definition</li>
+<li>U+F0E4A : not included in any glyphset definition</li>
+<li>U+F0E51 : not included in any glyphset definition</li>
+<li>U+F0E67 : not included in any glyphset definition</li>
+<li>U+F0E79 : not included in any glyphset definition</li>
+<li>U+F0E88 : not included in any glyphset definition</li>
+<li>U+F0E93 : not included in any glyphset definition</li>
+<li>U+F0EA0 : not included in any glyphset definition</li>
+<li>U+F0EAF : not included in any glyphset definition</li>
+<li>U+F0ED1 : not included in any glyphset definition</li>
+<li>U+F0F1F : not included in any glyphset definition</li>
+<li>U+F0F3E : not included in any glyphset definition</li>
+<li>U+F0F4D : not included in any glyphset definition</li>
+<li>U+F0FBB : not included in any glyphset definition</li>
+<li>U+F0FDF : not included in any glyphset definition</li>
+<li>U+F0FF9 : not included in any glyphset definition</li>
+<li>U+F101B : not included in any glyphset definition</li>
+<li>U+F106F : not included in any glyphset definition</li>
+<li>U+F1077 : not included in any glyphset definition</li>
+<li>U+F1078 : not included in any glyphset definition</li>
+<li>U+F1083 : not included in any glyphset definition</li>
+<li>U+F10A2 : not included in any glyphset definition</li>
+<li>U+F10AA : not included in any glyphset definition</li>
+<li>U+F10AE : not included in any glyphset definition</li>
+<li>U+F10D5 : not included in any glyphset definition</li>
+<li>U+F10DD : not included in any glyphset definition</li>
+<li>U+F118E : not included in any glyphset definition</li>
+<li>U+F11F2 : not included in any glyphset definition</li>
+<li>U+F11F7 : not included in any glyphset definition</li>
+<li>U+F11FB : not included in any glyphset definition</li>
+<li>U+F1237 : not included in any glyphset definition</li>
+<li>U+F1273 : not included in any glyphset definition</li>
+<li>U+F1290 : not included in any glyphset definition</li>
+<li>U+F12BC : not included in any glyphset definition</li>
+<li>U+F12BD : not included in any glyphset definition</li>
+<li>U+F12FE : not included in any glyphset definition</li>
+<li>U+F131E : not included in any glyphset definition</li>
+<li>U+F1337 : not included in any glyphset definition</li>
+<li>U+F134C : not included in any glyphset definition</li>
+<li>U+F138F : not included in any glyphset definition</li>
+<li>U+F13A0 : not included in any glyphset definition</li>
+<li>U+F13D7 : not included in any glyphset definition</li>
+<li>U+F13D9 : not included in any glyphset definition</li>
+<li>U+F13F1 : not included in any glyphset definition</li>
+<li>U+F140D : not included in any glyphset definition</li>
+<li>U+F1419 : not included in any glyphset definition</li>
+<li>U+F1425 : not included in any glyphset definition</li>
+<li>U+F1431 : not included in any glyphset definition</li>
+<li>U+F1452 : not included in any glyphset definition</li>
+<li>U+F1483 : not included in any glyphset definition</li>
+<li>U+F1492 : not included in any glyphset definition</li>
+<li>U+F14AC : not included in any glyphset definition</li>
+<li>U+F14B8 : not included in any glyphset definition</li>
+<li>U+F14C2 : not included in any glyphset definition</li>
+<li>U+F14D2 : not included in any glyphset definition</li>
+<li>U+F15BC : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>menu</code>, <code>tibetan</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Substitute copyright, registered and trademark symbols in name table entries.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/unwanted_chars&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>NAMEID #0 contains symbols that should be replaced by '(c)'. [code: unwanted-chars]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>NAMEID #0 contains symbols that should be replaced by '(c)'. [code: unwanted-chars]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;this font software is copyright (c) 2006, christopher j fynn&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check OFL body text is correct.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_body_text&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The OFL.txt body text is incorrect. Please use https://github.com/googlefonts/Unified-Font-Repository/blob/main/OFL.txt as a template. You should only modify the first line. [code: incorrect-ofl-body-text]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 2010, Dzongkha Development Commission (ddc@dzongkha.gov.bt),
+with Reserved Font Name DDC Uchen.</p>
+<p>Font created by Christopher John Fynn
+for the Dzongkha Development Commission</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded,  redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 2010, Dzongkha Development Commission (ddc@dzongkha.gov.bt),
+with Reserved Font Name DDC Uchen.</p>
+<p>Font created by Christopher John Fynn
+for the Dzongkha Development Commission</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded,  redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<h3>Are there non-ASCII characters in ASCII-only NAME table entries?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/ascii_only_entries&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Bad string at [nameID 0, 'mac_roman']: 'b'Font designed by Christopher J. Fynn. \r\nCopyright © 2010 by Dzongkha Development Commission.'' [code: bad-string]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Bad string at [nameID 0, 'utf_16_be']: 'b'Font designed by Christopher J. Fynn. \r\nCopyright © 2010 by Dzongkha Development Commission.'' [code: bad-string]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>There are 2 strings containing non-ASCII characters in the ASCII-only NAME table entries. [code: non-ascii-strings]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;font designed by christopher j. fynn. copyright © 2010 by dzongkha development commission.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Font designed by Christopher J. Fynn.
+Copyright © 2010 by Dzongkha Development Commission.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Font designed by Christopher J. Fynn.
+Copyright © 2010 by Dzongkha Development Commission.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check for primary_script</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: primary_script field should be 'Tibt' but is missing. [code: missing-primary-script]</p>
+</span></li></ul></div></details>
+<h3>Copyright field for this font on METADATA.pb matches all copyright notice entries on the name table ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/copyright&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Font designed by Christopher J. Fynn. Copyright © 2010 by Dzongkha Development Commission.&quot;) differs from a copyright notice entry on the name table: &quot;Font designed by Christopher J. Fynn.
+Copyright © 2010 by Dzongkha Development Commission.&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Font designed by Christopher J. Fynn. Copyright © 2010 by Dzongkha Development Commission.&quot;) differs from a copyright notice entry on the name table: &quot;Font designed by Christopher J. Fynn.
+Copyright © 2010 by Dzongkha Development Commission.&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Name table entries should not contain line-breaks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/line_breaks&gt;</div>
+
+<details><summary>🔥 Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry COPYRIGHT_NOTICE on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry COPYRIGHT_NOTICE on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>It seems that Christopher J. Fynn is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry. [code: profile-not-found]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- Acute
+
+- Breve
+
+- Cedilla
+
+- Hungarumlaut
+
+- Ogonek
+
+- f_f_j
+
+- f_j
+
+- nonmarkingreturn
+
+- uni00610324
+
+- uni00620324
+
+- uni00640324
+
+- uni00650324
+
+- uni00690324
+
+- uni006C0325
+
+- uni006E0302
+
+- uni006F0324
+
+- uni00720325
+
+- uni00790324
+
+- uni00F80324
+
+- uni02560324
+
+- uni0F010F14
+
+- uni0F400F39
+
+- uni0F400F390F740F7C
+
+- uni0F400F740F7AA
+
+- uni0F400FA6
+
+- uni0F400FA7
+
+- uni0F410F390F7C
+
+- uni0F420F390F7C
+
+- uni0F420FB20F740F7C
+
+- uni0F440F390F7C
+
+- uni0F440FB10F7C
+
+- uni0F440FB20F740F7C
+
+- uni0F460F740F7C
+
+- uni0F460FB10F7C
+
+- uni0F490F39
+
+- uni0F4C0FB30F71.b
+
+- uni0F520FA2
+
+- uni0F530F390F7C
+
+- uni0F530F900F7C
+
+- uni0F530F9F0F740F7C
+
+- uni0F530FB20F7C
+
+- uni0F530FB70F390F7C
+
+- uni0F540F390F7A
+
+- uni0F540F390F7C
+
+- uni0F540F510FA80F72
+
+- uni0F540F510FA80F7C
+
+- uni0F540F9F0FB10FAD
+
+- uni0F540F9F0FB10FAD0F710F72
+
+- uni0F550F390F7A
+
+- uni0F550F390F7C
+
+- uni0F550F990F7C
+
+- uni0F560F740F7C
+
+- uni0F560FB10F39
+
+- uni0F570FB10F710F7C
+
+- uni0F580F9F0F7C
+
+- uni0F5A0F740F7C
+
+- uni0F5B0F990FAD
+
+- uni0F5B0F990FB10F72
+
+- uni0F5B0F990FB2
+
+- uni0F5B0F990FB20F710F80
+
+- uni0F5B0F990FB20F80
+
+- uni0F5C0F710F72
+
+- uni0F5D0F39
+
+- uni0F5E0F740F7C
+
+- uni0F600F740F72.calt
+
+- uni0F610F39
+
+- uni0F610FB10F7C
+
+- uni0F617D
+
+- uni0F620F39
+
+- uni0F620F710F800F7E
+
+- uni0F620F900F90
+
+- uni0F620F920FB10F390F7C
+
+- uni0F620FA10F39
+
+- uni0F620FB20F7C
+
+- uni0F630F39
+
+- uni0F630FB10F7C
+
+- uni0F640F910F7C
+
+- uni0F660F9F0FB10F7C
+
+- uni0F660FA10F39
+
+- uni0F660FA30F390F7C
+
+- uni0F71.alt
+
+- uni0F71.alt2
+
+- uni0F71.alt3
+
+- uni0F72.altN
+
+- uni0F720301.altF
+
+- uni0F720F7A.altF
+
+- uni0F720F83.altF
+
+- uni0F75.alt
+
+- uni0F75.alt2
+
+- uni0F75.alt3
+
+- uni0F75.alt4
+
+- uni0F7A0301.altF
+
+- uni0F7A0F7E.altF
+
+- uni0F7A0F7E.altN
+
+- uni0F7A0F83.altF
+
+- uni0F7B.altN
+
+- uni0F7B0F7E.altF
+
+- uni0F7B0F7E.altN
+
+- uni0F7C0301.altF
+
+- uni0F7C0F7E.altF
+
+- uni0F7C0F83.altF
+
+- uni0F7D.altN
+
+- uni0F7D0F7E.altN
+
+- uni0F7E0F7E
+
+- uni0F80.altN
+
+- uni0F800F7E.altF
+
+- uni0F800F7E.altN
+
+- uni0F82.altF
+
+- uni0F83.altF
+
+- uni0F8B0F99
+
+- uni0FB30F71.alt1
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: percent	Contours detected: 4	Expected: 5
+
+- Glyph name: Q	Contours detected: 3	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: acircumflex	Contours detected: 4	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 4	Expected: 3
+
+- Glyph name: ocircumflex	Contours detected: 4	Expected: 3
+
+- Glyph name: ucircumflex	Contours detected: 3	Expected: 2
+
+- Glyph name: circledash	Contours detected: 6	Expected: 16 or 12
+
+- Glyph name: uniFFFC	Contours detected: 18	Expected: 22
+
+- Glyph name: Q	Contours detected: 3	Expected: 2
+
+- Glyph name: acircumflex	Contours detected: 4	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 4	Expected: 3
+
+- Glyph name: fl	Contours detected: 1	Expected: 2
+
+- Glyph name: ocircumflex	Contours detected: 4	Expected: 3
+
+- Glyph name: percent	Contours detected: 4	Expected: 5
+
+- Glyph name: ucircumflex	Contours detected: 3	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: uniFFFC	Contours detected: 18	Expected: 22
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 590 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 592:
+less, greater</p>
+<p>Width = 364:
+equal</p>
+<p>Width = 509:
+logicalnot</p>
+<p>Width = 607:
+plusminus</p>
+<p>Width = 631:
+divide</p>
+<p>Width = 388:
+minus
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.dsig</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does the font have a DSIG table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table. [code: found-DSIG]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+uni0300 (U+0300), uni0301 (U+0301), uni0302 (U+0302), uni0303 (U+0303), uni0304 (U+0304), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni0310 (U+0310), uni0320 (U+0320), uni0323 (U+0323), uni0324 (U+0324), uni0325 (U+0325), uni034F (U+034F), uni0F18 (U+0F18), uni0F19 (U+0F19), uni0F35 (U+0F35), uni0F37 (U+0F37), uni0F39 (U+0F39), uni0F71 (U+0F71), uni0F72 (U+0F72), uni0F73 (U+0F73), uni0F74 (U+0F74), uni0F75 (U+0F75), uni0F76 (U+0F76), uni0F77 (U+0F77), uni0F78 (U+0F78), uni0F79 (U+0F79), uni0F7A (U+0F7A), uni0F7B (U+0F7B), uni0F7C (U+0F7C), uni0F7D (U+0F7D), uni0F7E (U+0F7E), uni0F80 (U+0F80), uni0F81 (U+0F81), uni0F82 (U+0F82), uni0F83 (U+0F83), uni0F84 (U+0F84), uni0F86 (U+0F86), uni0F87 (U+0F87), uni0F8D (U+0F8D), uni0F8E (U+0F8E), uni0F8F (U+0F8F), uni0F90 (U+0F90), uni0F91 (U+0F91), uni0F92 (U+0F92), uni0F93 (U+0F93), uni0F94 (U+0F94), uni0F95 (U+0F95), uni0F96 (U+0F96), uni0F97 (U+0F97), uni0F99 (U+0F99), uni0F9A (U+0F9A), uni0F9B (U+0F9B), uni0F9C (U+0F9C), uni0F9D (U+0F9D), uni0F9E (U+0F9E), uni0F9F (U+0F9F), uni0FA0 (U+0FA0), uni0FA1 (U+0FA1), uni0FA2 (U+0FA2), uni0FA3 (U+0FA3), uni0FA4 (U+0FA4), uni0FA5 (U+0FA5), uni0FA6 (U+0FA6), uni0FA7 (U+0FA7), uni0FA8 (U+0FA8), uni0FA9 (U+0FA9), uni0FAA (U+0FAA), uni0FAB (U+0FAB), uni0FAC (U+0FAC), uni0FAD (U+0FAD), uni0FAE (U+0FAE), uni0FAF (U+0FAF), uni0FB0 (U+0FB0), uni0FB1 (U+0FB1), uni0FB2 (U+0FB2), uni0FB3 (U+0FB3), uni0FB4 (U+0FB4), uni0FB5 (U+0FB5), uni0FB6 (U+0FB6), uni0FB7 (U+0FB7), uni0FB8 (U+0FB8), uni0FB9 (U+0FB9), uni0FBA (U+0FBA), uni0FBB (U+0FBB), uni0FBC (U+0FBC), uni0FC6 (U+0FC6), uniFE00 (U+FE00), uniFE01 (U+FE01), uniFE02 (U+FE02), uniFE03 (U+FE03), uniFE04 (U+FE04), uniFE05 (U+FE05), uniFE06 (U+FE06), uniFE07 (U+FE07), uniFE08 (U+FE08), uniFE09 (U+FE09), uniFE0A (U+FE0A), uniFE0B (U+FE0B), uniFE0C (U+FE0C), uniFE0D (U+FE0D), uniFE0E (U+FE0E) and uniFE0F (U+FE0F) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('uni0254', 151.01837158203125, 500.9990234375)
+* ('uni0254', 216.014404296875, 500.9990234375) and ('uni0254', 259.01177978515625, 500.9990234375)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⏩⏩⏩⏩</span>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ Uchen-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̐ j̀ j́ j̃ j̄ j̈</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ i̇ ĩ̠ i̠̇ i̠̊ i̠̐ ị̃ ị̇ ị̊ ị̐ ĩ̤ i̤̇ i̤̊ i̤̐ ĩ̥ i̥̇ i̥̊ i̥̐ ĵ j̇</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Navajo (Latn, 166,319 speakers), Dutch (Latn, 31,709,104 speakers), Belarusian (Cyrl, 10,064,517 speakers), Aghem (Latn, 38,843 speakers), Lithuanian (Latn, 2,357,094 speakers), Igbo (Latn, 27,823,640 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Basaa (Latn, 332,940 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

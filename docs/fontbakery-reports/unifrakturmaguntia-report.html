@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>26</td>
+                <td>20</td>
+                <td>75</td>
+                <td>7</td>
+                <td>113</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>13%</td>
+                <td>10%</td>
+                <td>39%</td>
+                <td>4%</td>
+                <td>58%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Does DESCRIPTION file contain a upstream Git repo URL?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file. [code: lacks-git-url]</p>
+</span></li></ul></div></details>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value '    ' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Check Google Fonts glyph coverage.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<pre><code>- 0x00F7 (DIVISION SIGN)
+
+
+- 0x030B (COMBINING DOUBLE ACUTE ACCENT)
+
+
+- 0x02D9 (DOT ABOVE)
+
+
+- 0x0102 (LATIN CAPITAL LETTER A WITH BREVE)
+
+
+- 0x0100 (LATIN CAPITAL LETTER A WITH MACRON)
+
+
+- 0x0104 (LATIN CAPITAL LETTER A WITH OGONEK)
+
+
+- 0x0106 (LATIN CAPITAL LETTER C WITH ACUTE)
+
+
+- 0x010C (LATIN CAPITAL LETTER C WITH CARON)
+
+
+- 0x010A (LATIN CAPITAL LETTER C WITH DOT ABOVE)
+
+
+- 0x010E (LATIN CAPITAL LETTER D WITH CARON)
+
+
+- 0x0110 (LATIN CAPITAL LETTER D WITH STROKE)
+
+
+- 0x011A (LATIN CAPITAL LETTER E WITH CARON)
+
+
+- 0x0116 (LATIN CAPITAL LETTER E WITH DOT ABOVE)
+
+
+- 0x0112 (LATIN CAPITAL LETTER E WITH MACRON)
+
+
+- 0x0118 (LATIN CAPITAL LETTER E WITH OGONEK)
+
+
+- 0x011E (LATIN CAPITAL LETTER G WITH BREVE)
+
+
+- 0x0122 (LATIN CAPITAL LETTER G WITH CEDILLA)
+
+
+- 0x0120 (LATIN CAPITAL LETTER G WITH DOT ABOVE)
+
+
+- 0x0126 (LATIN CAPITAL LETTER H WITH STROKE)
+
+
+- 0x0132 (LATIN CAPITAL LIGATURE IJ)
+
+
+- 0x0130 (LATIN CAPITAL LETTER I WITH DOT ABOVE)
+
+
+- 0x012A (LATIN CAPITAL LETTER I WITH MACRON)
+
+
+- 0x012E (LATIN CAPITAL LETTER I WITH OGONEK)
+
+
+- 0x0136 (LATIN CAPITAL LETTER K WITH CEDILLA)
+
+
+- 0x0139 (LATIN CAPITAL LETTER L WITH ACUTE)
+
+
+- 0x013D (LATIN CAPITAL LETTER L WITH CARON)
+
+
+- 0x013B (LATIN CAPITAL LETTER L WITH CEDILLA)
+
+
+- 0x0141 (LATIN CAPITAL LETTER L WITH STROKE)
+
+
+- 0x0143 (LATIN CAPITAL LETTER N WITH ACUTE)
+
+
+- 0x0147 (LATIN CAPITAL LETTER N WITH CARON)
+
+
+- 0x0145 (LATIN CAPITAL LETTER N WITH CEDILLA)
+
+
+- 0x014A (LATIN CAPITAL LETTER ENG)
+
+
+- 0x0150 (LATIN CAPITAL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014C (LATIN CAPITAL LETTER O WITH MACRON)
+
+
+- 0x0154 (LATIN CAPITAL LETTER R WITH ACUTE)
+
+
+- 0x0158 (LATIN CAPITAL LETTER R WITH CARON)
+
+
+- 0x0156 (LATIN CAPITAL LETTER R WITH CEDILLA)
+
+
+- 0x015A (LATIN CAPITAL LETTER S WITH ACUTE)
+
+
+- 0x015E (LATIN CAPITAL LETTER S WITH CEDILLA)
+
+
+- 0x0218 (LATIN CAPITAL LETTER S WITH COMMA BELOW)
+
+
+- 0x0164 (LATIN CAPITAL LETTER T WITH CARON)
+
+
+- 0x021A (LATIN CAPITAL LETTER T WITH COMMA BELOW)
+
+
+- 0x016C (LATIN CAPITAL LETTER U WITH BREVE)
+
+
+- 0x0170 (LATIN CAPITAL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016A (LATIN CAPITAL LETTER U WITH MACRON)
+
+
+- 0x0172 (LATIN CAPITAL LETTER U WITH OGONEK)
+
+
+- 0x016E (LATIN CAPITAL LETTER U WITH RING ABOVE)
+
+
+- 0x1E82 (LATIN CAPITAL LETTER W WITH ACUTE)
+
+
+- 0x0174 (LATIN CAPITAL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E84 (LATIN CAPITAL LETTER W WITH DIAERESIS)
+
+
+- 0x1E80 (LATIN CAPITAL LETTER W WITH GRAVE)
+
+
+- 0x0176 (LATIN CAPITAL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF2 (LATIN CAPITAL LETTER Y WITH GRAVE)
+
+
+- 0x0179 (LATIN CAPITAL LETTER Z WITH ACUTE)
+
+
+- 0x017B (LATIN CAPITAL LETTER Z WITH DOT ABOVE)
+
+
+- 0x0103 (LATIN SMALL LETTER A WITH BREVE)
+
+
+- 0x0101 (LATIN SMALL LETTER A WITH MACRON)
+
+
+- 0x0105 (LATIN SMALL LETTER A WITH OGONEK)
+
+
+- 0x0107 (LATIN SMALL LETTER C WITH ACUTE)
+
+
+- 0x010D (LATIN SMALL LETTER C WITH CARON)
+
+
+- 0x010B (LATIN SMALL LETTER C WITH DOT ABOVE)
+
+
+- 0x010F (LATIN SMALL LETTER D WITH CARON)
+
+
+- 0x0111 (LATIN SMALL LETTER D WITH STROKE)
+
+
+- 0x011B (LATIN SMALL LETTER E WITH CARON)
+
+
+- 0x0117 (LATIN SMALL LETTER E WITH DOT ABOVE)
+
+
+- 0x0113 (LATIN SMALL LETTER E WITH MACRON)
+
+
+- 0x0119 (LATIN SMALL LETTER E WITH OGONEK)
+
+
+- 0x011F (LATIN SMALL LETTER G WITH BREVE)
+
+
+- 0x0123 (LATIN SMALL LETTER G WITH CEDILLA)
+
+
+- 0x0121 (LATIN SMALL LETTER G WITH DOT ABOVE)
+
+
+- 0x0127 (LATIN SMALL LETTER H WITH STROKE)
+
+
+- 0x0131 (LATIN SMALL LETTER DOTLESS I)
+
+
+- 0x0133 (LATIN SMALL LIGATURE IJ)
+
+
+- 0x012B (LATIN SMALL LETTER I WITH MACRON)
+
+
+- 0x012F (LATIN SMALL LETTER I WITH OGONEK)
+
+
+- 0x0237 (LATIN SMALL LETTER DOTLESS J)
+
+
+- 0x0137 (LATIN SMALL LETTER K WITH CEDILLA)
+
+
+- 0x013A (LATIN SMALL LETTER L WITH ACUTE)
+
+
+- 0x013E (LATIN SMALL LETTER L WITH CARON)
+
+
+- 0x013C (LATIN SMALL LETTER L WITH CEDILLA)
+
+
+- 0x0142 (LATIN SMALL LETTER L WITH STROKE)
+
+
+- 0x0144 (LATIN SMALL LETTER N WITH ACUTE)
+
+
+- 0x0148 (LATIN SMALL LETTER N WITH CARON)
+
+
+- 0x0146 (LATIN SMALL LETTER N WITH CEDILLA)
+
+
+- 0x014B (LATIN SMALL LETTER ENG)
+
+
+- 0x0151 (LATIN SMALL LETTER O WITH DOUBLE ACUTE)
+
+
+- 0x014D (LATIN SMALL LETTER O WITH MACRON)
+
+
+- 0x0155 (LATIN SMALL LETTER R WITH ACUTE)
+
+
+- 0x0159 (LATIN SMALL LETTER R WITH CARON)
+
+
+- 0x0157 (LATIN SMALL LETTER R WITH CEDILLA)
+
+
+- 0x015B (LATIN SMALL LETTER S WITH ACUTE)
+
+
+- 0x015F (LATIN SMALL LETTER S WITH CEDILLA)
+
+
+- 0x0219 (LATIN SMALL LETTER S WITH COMMA BELOW)
+
+
+- 0x0165 (LATIN SMALL LETTER T WITH CARON)
+
+
+- 0x021B (LATIN SMALL LETTER T WITH COMMA BELOW)
+
+
+- 0x016D (LATIN SMALL LETTER U WITH BREVE)
+
+
+- 0x0171 (LATIN SMALL LETTER U WITH DOUBLE ACUTE)
+
+
+- 0x016B (LATIN SMALL LETTER U WITH MACRON)
+
+
+- 0x0173 (LATIN SMALL LETTER U WITH OGONEK)
+
+
+- 0x016F (LATIN SMALL LETTER U WITH RING ABOVE)
+
+
+- 0x1E83 (LATIN SMALL LETTER W WITH ACUTE)
+
+
+- 0x0175 (LATIN SMALL LETTER W WITH CIRCUMFLEX)
+
+
+- 0x1E85 (LATIN SMALL LETTER W WITH DIAERESIS)
+
+
+- 0x1E81 (LATIN SMALL LETTER W WITH GRAVE)
+
+
+- 0x0177 (LATIN SMALL LETTER Y WITH CIRCUMFLEX)
+
+
+- 0x1EF3 (LATIN SMALL LETTER Y WITH GRAVE)
+
+
+- 0x017A (LATIN SMALL LETTER Z WITH ACUTE)
+
+
+- 0x017C (LATIN SMALL LETTER Z WITH DOT ABOVE)
+
+
+- 0x2212 (MINUS SIGN)
+
+
+- 0x0307 (COMBINING DOT ABOVE)
+
+
+- 0x0306 (COMBINING BREVE)
+
+
+- 0x0312 (COMBINING TURNED COMMA ABOVE)
+
+
+- 0x0326 (COMBINING COMMA BELOW)
+
+
+- 0x0328 (COMBINING OGONEK)
+
+
+- 0x02DD (DOUBLE ACUTE ACCENT)
+
+
+- 0x02D8 (BREVE)
+
+
+- 0x02DB (OGONEK)
+</code></pre>
+<p>[code: missing-codepoints]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017F LATIN SMALL LETTER LONG S: try adding latin-ext</li>
+<li>U+0192 LATIN SMALL LETTER F WITH HOOK: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: cherokee, coptic, tai-le</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: cherokee, coptic, tai-le, tifinagh</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, tifinagh</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: cherokee, coptic, gothic, tifinagh</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: coptic, tai-le, gothic</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+1E9E LATIN CAPITAL LETTER SHARP S: try adding latin-ext</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: thai, devanagari, cham, arabic, gurmukhi, buginese, new-tai-lue, sinhala, lepcha, tibetan, mongolian, tai-le, malayalam, brahmi, meetei-mayek, tai-viet, tifinagh, kayah-li, kharoshthi, hanunoo, phags-pa, gujarati, sundanese, telugu, chakma, saurashtra, thaana, mandaic, tamil, avestan, tagalog, bengali, javanese, buhid, tai-tham, rejang, balinese, limbu, khmer, syloti-nagri, oriya, kaithi, tagbanwa, batak, kannada, myanmar</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: thai, devanagari, cham, arabic, gurmukhi, buginese, new-tai-lue, sinhala, lepcha, tibetan, mongolian, tai-le, malayalam, brahmi, meetei-mayek, tai-viet, tifinagh, kayah-li, kharoshthi, hanunoo, phags-pa, gujarati, sundanese, telugu, chakma, saurashtra, thaana, mandaic, tamil, avestan, tagalog, bengali, javanese, buhid, tai-tham, rejang, balinese, limbu, syloti-nagri, oriya, kaithi, tagbanwa, batak, kannada, myanmar</li>
+<li>U+2020 DAGGER: try adding latin-ext</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+20B0 GERMAN PENNY SIGN: try adding latin-ext</li>
+<li>U+2114 L B BAR SYMBOL: not included in any glyphset definition</li>
+<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
+<li>U+2133 SCRIPT CAPITAL M: not included in any glyphset definition</li>
+<li>U+2725 FOUR CLUB-SPOKED ASTERISK: not included in any glyphset definition</li>
+<li>U+338F SQUARE KG: not included in any glyphset definition</li>
+<li>U+A75B LATIN SMALL LETTER R ROTUNDA: try adding latin-ext</li>
+<li>U+F520 : not included in any glyphset definition</li>
+<li>U+F522 : not included in any glyphset definition</li>
+<li>U+FB00 LATIN SMALL LIGATURE FF: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+<li>U+FB03 LATIN SMALL LIGATURE FFI: not included in any glyphset definition</li>
+<li>U+FB04 LATIN SMALL LIGATURE FFL: not included in any glyphset definition</li>
+<li>U+FB05 LATIN SMALL LIGATURE LONG S T: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code>, <code>latin</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Check license file has good copyright string.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file is:</p>
+<p>&quot;copyright (c) 2010, j. 'mach' wust, with reserved font name unifrakturmaguntia.&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot; [code: bad-format]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 1 (MACINTOSH) is not specified for that. Value was: &quot;Copyright (c) 2010, j. 'mach' wust, with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009, Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;Copyright (c) 2010, j. 'mach' wust, with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009, Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL</p>
+<hr />
+<h2>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</h2>
+<p>PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.</p>
+<p>The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.</p>
+<p>DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.</p>
+<p>&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).</p>
+<p>&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).</p>
+<p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.</p>
+<p>&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.</p>
+<p>PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:</p>
+<ol>
+<li>
+<p>Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.</p>
+</li>
+<li>
+<p>Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.</p>
+</li>
+<li>
+<p>No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.</p>
+</li>
+<li>
+<p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.</p>
+</li>
+<li>
+<p>The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.</p>
+</li>
+</ol>
+<p>TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.</p>
+<p>DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li></ul></div></details>
+<h3>Version format is correct in 'name' table?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/version_format&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;Version 2010-11-24 &quot; [code: bad-version-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The NameID.VERSION_STRING (nameID=5) value must follow the pattern &quot;Version X.Y&quot; with X.Y greater than or equal to 1.000. Current version string is: &quot;Version 2010-11-24 &quot; [code: bad-version-strings]</p>
+</span></li></ul></div></details>
+<h3>Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The gasp table has a range of 8 that may be unneccessary. [code: non-ffff-range]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The gasp table has a range of 16 that may be unneccessary. [code: non-ffff-range]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The gasp range 0xFFFF value 0x03 should be set to 0x0F. [code: unset-flags]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb subsets should be alphabetically ordered.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['menu', 'latin'] and expected ['latin', 'menu'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.filename and font.post_script_name fields have equivalent values?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_filename_postscript&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font filename = &quot;UnifrakturMaguntia-Book.ttf&quot; does not match post_script_name=&quot;UnifrakturMaguntia&quot;. [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in METADATA.pb</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Copyright notices should match a pattern similar to:
+&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;copyright (c) 2010 j. 'mach' wust (j.mach.wust@gmail.com) with reserved font name unifrakturmaguntia. copyright (c) 2009 peter wiegel (wiegel@peter-wiegel.de). this font software is licensed under the sil open font license, version 1.1.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notices match canonical pattern in fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2010 j. 'mach' wust with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009 Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot; [code: bad-notice-format]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+But instead we have got:
+&quot;Copyright (c) 2010 j. 'mach' wust with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009 Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot; [code: bad-notice-format]</p>
+</span></li></ul></div></details>
+<h3>Copyright notice on METADATA.pb should not contain 'Reserved Font Name'.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/reserved_font_name&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>METADATA.pb: copyright field (&quot;Copyright (c) 2010 j. 'mach' wust (j.mach.wust@gmail.com) with Reserved Font Name UnifrakturMaguntia. Copyright (c) 2009 Peter Wiegel (wiegel@peter-wiegel.de). This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot;) contains &quot;Reserved Font Name&quot;. This is an error except in a few specific rare cases. [code: rfn]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb weight matches postScriptName for static fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_weight_postscript&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb: Mismatch between postScriptName (&quot;UnifrakturMaguntia&quot;) and weight value (400). The name must be ended with &quot;Regular&quot; or &quot;Italic&quot;.</p>
+</span></li></ul></div></details>
+<h3>Check font names are correct</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Font names are incorrect:</p>
+<p>| nameID | current | expected |
+| :--- | :--- | :--- |
+| Family Name | UnifrakturMaguntia | UnifrakturMaguntia Book |
+| Subfamily Name | Book | Regular |
+| Full Name | UnifrakturMaguntia | UnifrakturMaguntia Book Regular |
+| Poscript Name | UnifrakturMaguntia | UnifrakturMaguntiaBook-Regular | [code: bad-names]</p>
+</span></li></ul></div></details>
+<h3>Copyright field for this font on METADATA.pb matches all copyright notice entries on the name table ?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/copyright&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright (c) 2010 j. 'mach' wust (j.mach.wust@gmail.com) with Reserved Font Name UnifrakturMaguntia. Copyright (c) 2009 Peter Wiegel (wiegel@peter-wiegel.de). This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot;) differs from a copyright notice entry on the name table: &quot;Copyright (c) 2010 j. 'mach' wust with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009 Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot; [code: mismatch]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Copyright field for this font on METADATA.pb (&quot;Copyright (c) 2010 j. 'mach' wust (j.mach.wust@gmail.com) with Reserved Font Name UnifrakturMaguntia. Copyright (c) 2009 Peter Wiegel (wiegel@peter-wiegel.de). This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot;) differs from a copyright notice entry on the name table: &quot;Copyright (c) 2010 j. 'mach' wust with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009 Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot; [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Font enables smart dropout control in "prep" table instructions?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the <code>gftools fix-nonhinting</code> script. [code: lacks-smart-dropout]</p>
+</span></li></ul></div></details>
+<h3>Are there caret positions declared for every ligature?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font lacks caret position values for ligature glyphs on its GDEF table. [code: lacks-caret-pos]</p>
+</span></li></ul></div></details>
+<h3>Name table entries should not contain line-breaks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/line_breaks&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry COPYRIGHT_NOTICE on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform MACINTOSH contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry COPYRIGHT_NOTICE on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name entry LICENSE_DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]</p>
+</span></li></ul></div></details>
+<h3>Name table strings must not contain the string 'Reserved Font Name'.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/rfn&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table entry contains &quot;Reserved Font Name&quot;:
+&quot;Copyright (c) 2010 j. 'mach' wust with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009 Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot;</p>
+<p>This is an error except in a few specific rare cases. [code: rfn]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table entry contains &quot;Reserved Font Name&quot;:
+&quot;Copyright (c) 2010 j. 'mach' wust with Reserved Font Name UnifrakturMaguntia.
+Copyright (c) 2009 Peter Wiegel.</p>
+<p>This Font Software is licensed under the SIL Open Font License, Version 1.1.&quot;</p>
+<p>This is an error except in a few specific rare cases. [code: rfn]</p>
+</span></li></ul></div></details>
+<h3>Directory name in GFonts repo structure must match NameID 1 of the regular.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/dirname_matches_nameid_1&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font seems to lack a regular. If family consists of a single-weight non-Regular style only, consider the Google Fonts specs for this case: https://github.com/googlefonts/gf-docs/tree/main/Spec#single-weight-families [code: lacks-regular]</p>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>Check font follows the Google Fonts vertical metric schema</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The sum of hhea.ascender + abs(hhea.descender) + hhea.lineGap is 2120 when it should be at least 2457 [code: bad-hhea-range]</p>
+</span></li></ul></div></details>
+<h3>Ensure METADATA.pb does not use escaped strings.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/escaped_strings&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Found escaped chars at 'mach'. Please use an unicode string instead. [code: escaped-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Found escaped chars at 'j. 'mach' wust'. Please use an unicode string instead. [code: escaped-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Found escaped chars at 'mach'. Please use an unicode string instead. [code: escaped-strings]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Found escaped chars at 'Copyright (c) 2010 j. 'mach' wust (j.mach.wust@gmail.com) with Reserved Font Name UnifrakturMaguntia. Copyright (c) 2009 Peter Wiegel (wiegel@peter-wiegel.de). This Font Software is licensed under the SIL Open Font License, Version 1.1.'. Please use an unicode string instead. [code: escaped-strings]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Designer j. 'mach' wust still does not have an avatar image. Please provide one. [code: missing-avatar]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['/Users/simon/others-repos/fonts/ofl/unifrakturmaguntia/UnifrakturMaguntia-Book.ttf']. [code: missing-os2-fsselection-bit7]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts do not contain any pre-production tables.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file contains the following pre-production tables: FFTM [code: has-debugging-tables]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Name table records must not have trailing spaces.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/trailing_spaces&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (1, 0, 0, 5) has trailing spaces that must be removed: 'Version 2010-11-24 ' [code: trailing-space]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (1, 0, 0, 13) has trailing spaces that must be removed: 'Copyright [...]SOFTWARE.
+' [code: trailing-space]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (3, 1, 1033, 5) has trailing spaces that must be removed: 'Version 2010-11-24 ' [code: trailing-space]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name table record with key = (3, 1, 1033, 13) has trailing spaces that must be removed: 'Copyright [...]SOFTWARE.
+' [code: trailing-space]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 usWinAscent & usWinDescent.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinAscent value should be equal or greater than 1906, but got 1607 instead [code: ascent]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 Metrics match hhea Metrics.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoDescender (-514) and hhea descent (-513) must be equal. [code: descender]</p>
+</span></li></ul></div></details>
+<h3>Are there unwanted tables?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following unwanted font tables were found:</p>
+<ul>
+<li>FFTM - Table contains redundant FontForge timestamp info</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools. [code: unwanted-tables]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- nonmarkingreturn
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: hyphen	Contours detected: 2	Expected: 1
+
+- Glyph name: A	Contours detected: 1	Expected: 2
+
+- Glyph name: F	Contours detected: 2	Expected: 1
+
+- Glyph name: G	Contours detected: 2	Expected: 1
+
+- Glyph name: O	Contours detected: 1	Expected: 2
+
+- Glyph name: Q	Contours detected: 1	Expected: 2
+
+- Glyph name: T	Contours detected: 3	Expected: 1
+
+- Glyph name: V	Contours detected: 2	Expected: 1
+
+- Glyph name: W	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: s	Contours detected: 3	Expected: 1
+
+- Glyph name: v	Contours detected: 2	Expected: 1
+
+- Glyph name: w	Contours detected: 2	Expected: 1
+
+- Glyph name: z	Contours detected: 2	Expected: 1
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: Agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: Aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: AE	Contours detected: 1	Expected: 2
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: Ograve	Contours detected: 2	Expected: 3
+
+- Glyph name: Oacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Ocircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Otilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Odieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: OE	Contours detected: 1	Expected: 2
+
+- Glyph name: scaron	Contours detected: 4	Expected: 2
+
+- Glyph name: zcaron	Contours detected: 3	Expected: 2
+
+- Glyph name: A	Contours detected: 1	Expected: 2
+
+- Glyph name: AE	Contours detected: 1	Expected: 2
+
+- Glyph name: Aacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: Agrave	Contours detected: 2	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Eth	Contours detected: 1	Expected: 2
+
+- Glyph name: F	Contours detected: 2	Expected: 1
+
+- Glyph name: G	Contours detected: 2	Expected: 1
+
+- Glyph name: O	Contours detected: 1	Expected: 2
+
+- Glyph name: OE	Contours detected: 1	Expected: 2
+
+- Glyph name: Oacute	Contours detected: 2	Expected: 3
+
+- Glyph name: Ocircumflex	Contours detected: 2	Expected: 3
+
+- Glyph name: Odieresis	Contours detected: 3	Expected: 4
+
+- Glyph name: Ograve	Contours detected: 2	Expected: 3
+
+- Glyph name: Otilde	Contours detected: 2	Expected: 3
+
+- Glyph name: Q	Contours detected: 1	Expected: 2
+
+- Glyph name: T	Contours detected: 3	Expected: 1
+
+- Glyph name: V	Contours detected: 2	Expected: 1
+
+- Glyph name: W	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: hyphen	Contours detected: 2	Expected: 1
+
+- Glyph name: s	Contours detected: 3	Expected: 1
+
+- Glyph name: scaron	Contours detected: 4	Expected: 2
+
+- Glyph name: uni00AD	Contours detected: 1	Expected: 0
+
+- Glyph name: v	Contours detected: 2	Expected: 1
+
+- Glyph name: w	Contours detected: 2	Expected: 1
+
+- Glyph name: z	Contours detected: 2	Expected: 1
+
+- Glyph name: zcaron	Contours detected: 3	Expected: 2
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Ensure component transforms do not perform scaling or rotation.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The following glyphs had components with scaling or rotation
+or inverted outline direction:</p>
+<ul>
+<li>caron (component circumflex)</li>
+<li>uni030C (component circumflex)
+[code: transformed-components]</li>
+</ul>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 793 among a set of 3 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 810:
+plus</p>
+<p>Width = 591:
+greater, less</p>
+<p>Width = 1024:
+logicalnot
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.head</h2>
+<span class='section__emoji'>🔥⏩⏩</span>
+<h3>Checking font version fields (head and name table).</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_version&gt;</div>
+
+<details><summary>🔥 UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>name version string for platform 1, encoding 0 (&quot;Version 2010-11-24 &quot;), could not be parsed. [code: parse]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>name version string for platform 3, encoding 1 (&quot;Version 2010-11-24 &quot;), could not be parsed. [code: parse]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.os2</h2>
+<span class='section__emoji'>⚠️⏩⏩⏩</span>
+<h3>Check if OS/2 xAvgCharWidth is correct.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 xAvgCharWidth is 1062 but it should be 1084 which corresponds to the average of the widths of all glyphs in the font. [code: xAvgCharWidth-wrong]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0308 (U+0308), uni030A (U+030A), uni030C (U+030C) and uni0327 (U+0327) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gpos</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning information. [code: lacks-kern-info]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.glyf</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check for points out of bounds.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have coordinates which are out of bounds:
+* ('exclam', 412, 145)
+* ('exclam', 238, -29)
+* ('exclam', 69, 143)
+* ('exclam', 239, 1479)
+* ('exclam', 431, 1290)
+* ('exclam', 49, 1288)
+* ('quotedbl', 606, 1460)
+* ('quotedbl', 576, 897)
+* ('quotedbl', 223, 1460)
+* ('quotedbl', 193, 897)
+* ('quotedbl', 49, 1286)
+* ('percent', 187, 18)
+* ('percent', 1330, 1451)
+* ('quotesingle', 207, 1460)
+* ('quotesingle', 177, 897)
+* ('quotesingle', 33, 1286)
+* ('parenleft', 447, 1613)
+* ('parenleft', 485, 1575)
+* ('parenleft', 461, -41)
+* ('parenleft', 448, -53)
+* ('parenright', 68, -59)
+* ('parenright', 30, -21)
+* ('parenright', 54, 1595)
+* ('parenright', 67, 1607)
+* ('asterisk', 341, 1529)
+* ('asterisk', 686, 1328)
+* ('asterisk', 684, 932)
+* ('asterisk', 342, 731)
+* ('asterisk', 0, 932)
+* ('asterisk', -3, 1330)
+* ('comma', 183, 315)
+* ('comma', 153, -248)
+* ('comma', 9, 141)
+* ('hyphen', 613, 806)
+* ('hyphen', 620, 793)
+* ('hyphen', 54, 418)
+* ('period', 200, 315)
+* ('period', 372, 145)
+* ('period', 198, -29)
+* ('period', 29, 143)
+* ('slash', 1040, 1495)
+* ('slash', 117, -87)
+* ('slash', 55, -52)
+* ('slash', 976, 1532)
+* ('one', 21, 1026)
+* ('one', 633, 50)
+* ('two', 882, 399)
+* ('two', 30, 12)
+* ('three', 342, 1424)
+* ('three', 922, 281)
+* ('three', 301, -14)
+* ('three', 31, 287)
+* ('five', 148, 1437)
+* ('five', 799, 1437)
+* ('five', 924, 671)
+* ('five', 924, 281)
+* ('five', 303, -14)
+* ('five', 33, 287)
+* ('six', 896, 707)
+* ('six', 629, -16)
+* ('six', 33, 350)
+* ('seven', 857, 1385)
+* ('eight', 318, 1441)
+* ('eight', 912, 483)
+* ('nine', 34, 731)
+* ('nine', 300, 1455)
+* ('nine', 897, 1087)
+* ('colon', 200, 973)
+* ('colon', 372, 803)
+* ('colon', 29, 801)
+* ('colon', 372, 145)
+* ('colon', 198, -29)
+* ('colon', 29, 143)
+* ('semicolon', 153, -248)
+* ('semicolon', 9, 141)
+* ('semicolon', 200, 973)
+* ('semicolon', 372, 803)
+* ('semicolon', 29, 801)
+* ('less', 563, 938)
+* ('less', 563, 217)
+* ('greater', 8, 218)
+* ('greater', 8, 939)
+* ('question', 842, 1459)
+* ('question', 487, -29)
+* ('at', 1228, 134)
+* ('A', 1625, 192)
+* ('A', 862, -44)
+* ('B', 14, 878)
+* ('B', 343, 1490)
+* ('B', 1002, -37)
+* ('C', 1361, 181)
+* ('C', 51, 1022)
+* ('C', 1018, 1487)
+* ('C', 1367, 1364)
+* ('D', 888, 1497)
+* ('D', 1609, 788)
+* ('D', 898, -78)
+* ('E', 1401, 882)
+* ('E', 52, 1023)
+* ('E', 1019, 1488)
+* ('F', 35, 1113)
+* ('F', 1505, 1295)
+* ('G', 1525, 626)
+* ('G', 546, -56)
+* ('G', 53, 1023)
+* ('G', 1132, 1474)
+* ('H', 24, 174)
+* ('H', 813, 1586)
+* ('H', 1461, 604)
+* ('H', 697, -280)
+* ('I', 717, 1505)
+* ('I', 1323, 1205)
+* ('I', 1356, 345)
+* ('I', 570, -258)
+* ('I', 34, 28)
+* ('J', 713, 1505)
+* ('J', 1408, 217)
+* ('J', 571, -514)
+* ('J', 36, -226)
+* ('K', 334, -47)
+* ('K', 27, 163)
+* ('K', 770, 1458)
+* ('K', 1260, 1457)
+* ('K', 1620, 138)
+* ('K', 1342, -39)
+* ('L', 34, 226)
+* ('L', 1117, 1440)
+* ('L', 1130, 259)
+* ('L', 742, -41)
+* ('M', 1091, 1437)
+* ('M', 2217, 205)
+* ('M', 1918, -34)
+* ('M', 1129, -107)
+* ('M', 445, -51)
+* ('N', 1762, 217)
+* ('N', 1467, -25)
+* ('N', 447, -42)
+* ('O', 692, 1468)
+* ('O', 1495, 757)
+* ('O', 638, -47)
+* ('O', 44, 224)
+* ('P', 1387, 1442)
+* ('P', 1783, 869)
+* ('P', 761, -345)
+* ('Q', 692, 1470)
+* ('Q', 1591, 248)
+* ('Q', 1295, -52)
+* ('Q', 787, -142)
+* ('Q', 43, 225)
+* ('R', 469, 1481)
+* ('R', 1317, 1474)
+* ('R', 1860, 177)
+* ('R', 1576, -33)
+* ('S', 1502, 522)
+* ('S', 50, 359)
+* ('S', 804, 1469)
+* ('T', 786, 1463)
+* ('T', 1493, 1169)
+* ('T', 805, -19)
+* ('U', 585, -126)
+* ('U', 37, 186)
+* ('U', 458, 1432)
+* ('U', 1413, 177)
+* ('U', 1165, -21)
+* ('V', 1205, 1494)
+* ('V', 1707, 1118)
+* ('V', 1768, 548)
+* ('V', 1267, -44)
+* ('W', 41, 1188)
+* ('W', 1152, 1457)
+* ('W', 1459, 1470)
+* ('W', 2154, 590)
+* ('W', 1455, -24)
+* ('W', 962, -41)
+* ('X', 36, 1158)
+* ('X', 1114, 1495)
+* ('X', 1429, 1409)
+* ('X', 1115, -21)
+* ('X', 404, -30)
+* ('Y', 1309, 1501)
+* ('Y', 1706, 1013)
+* ('Y', 1079, -322)
+* ('Z', 529, 1500)
+* ('Z', 1313, 232)
+* ('Z', 813, -276)
+* ('Z', 32, 61)
+* ('backslash', 868, 1288)
+* ('backslash', -331, -97)
+* ('backslash', -385, -51)
+* ('backslash', 812, 1336)
+* ('asciicircum', 780, 888)
+* ('asciicircum', 59, 888)
+* ('a', 291, -44)
+* ('a', 47, 209)
+* ('a', 462, 1052)
+* ('a', 904, 202)
+* ('a', 750, -58)
+* ('b', 44, 1329)
+* ('b', 571, 1412)
+* ('b', 874, 725)
+* ('b', 462, -64)
+* ('c', 47, 745)
+* ('c', 529, 1039)
+* ('c', 683, 142)
+* ('c', 375, -44)
+* ('d', 423, -35)
+* ('d', 268, 1425)
+* ('e', 47, 746)
+* ('e', 532, 1041)
+* ('e', 698, 646)
+* ('e', 375, -43)
+* ('f', 219, 1494)
+* ('f', 602, 1443)
+* ('g', 47, 566)
+* ('g', 467, 1062)
+* ('g', 859, 817)
+* ('g', 908, -95)
+* ('g', 203, -432)
+* ('g', 373, -410)
+* ('h', 42, 1334)
+* ('h', 495, 1434)
+* ('h', 872, 231)
+* ('h', 245, -356)
+* ('i', 26, 802)
+* ('i', 517, 199)
+* ('i', 374, -42)
+* ('j', 476, -279)
+* ('j', 41, -375)
+* ('k', 40, 1328)
+* ('k', 474, 1428)
+* ('k', 621, 1386)
+* ('k', 386, -50)
+* ('k', 40, 837)
+* ('l', 39, 1328)
+* ('l', 470, 1431)
+* ('l', 617, 1389)
+* ('l', 382, -47)
+* ('m', 52, 817)
+* ('m', 194, 1063)
+* ('m', 620, 1062)
+* ('m', 1040, 1072)
+* ('m', 1401, 203)
+* ('n', 48, 798)
+* ('n', 189, 1041)
+* ('n', 624, 1050)
+* ('n', 985, 193)
+* ('n', 842, -48)
+* ('o', 372, -43)
+* ('o', 566, 1049)
+* ('o', 802, 553)
+* ('p', 893, 715)
+* ('p', 162, 1219)
+* ('q', 32, 218)
+* ('q', 447, 1061)
+* ('q', 834, 793)
+* ('r', 396, -42)
+* ('r', 41, 811)
+* ('r', 183, 1055)
+* ('r', 705, 814)
+* ('s', 528, 1276)
+* ('s', 812, 1050)
+* ('s', 405, -36)
+* ('s', 38, 188)
+* ('s', 49, 571)
+* ('s', 524, 1245)
+* ('t', 387, -50)
+* ('t', 25, 854)
+* ('t', 522, 1309)
+* ('u', 984, 206)
+* ('u', 842, -35)
+* ('u', 402, -42)
+* ('u', 47, 812)
+* ('v', -23, 826)
+* ('v', 168, 1161)
+* ('v', 880, 741)
+* ('v', 460, -39)
+* ('w', 1368, 729)
+* ('w', 955, -54)
+* ('w', 320, -50)
+* ('w', 54, 911)
+* ('w', 206, 1204)
+* ('x', 363, -424)
+* ('x', 43, -201)
+* ('x', 244, 1077)
+* ('x', 767, 836)
+* ('y', 920, 236)
+* ('y', 293, -350)
+* ('y', 43, 930)
+* ('y', 200, 1226)
+* ('z', 325, 1063)
+* ('z', 636, 580)
+* ('z', 635, -93)
+* ('z', 47, 438)
+* ('braceleft', 567, -44)
+* ('braceleft', 567, 1591)
+* ('braceright', 62, 1591)
+* ('braceright', 62, -44)
+* ('exclamdown', 28, 912)
+* ('exclamdown', 202, 1086)
+* ('exclamdown', 371, 914)
+* ('exclamdown', 201, -422)
+* ('exclamdown', 9, -233)
+* ('exclamdown', 391, -231)
+* ('cent', 47, 745)
+* ('cent', 847, 870)
+* ('sterling', 1130, 270)
+* ('sterling', 742, -30)
+* ('sterling', 34, 237)
+* ('sterling', 1117, 1451)
+* ('section', 920, 774)
+* ('section', 914, 318)
+* ('section', 61, 691)
+* ('dieresis', 283, 1181)
+* ('dieresis', 173, 1296)
+* ('dieresis', 852, 1451)
+* ('dieresis', 713, 1181)
+* ('ordfeminine', 38, 592)
+* ('ordfeminine', 370, 1267)
+* ('ordfeminine', 723, 587)
+* ('guillemotleft', 959, 938)
+* ('guillemotleft', 959, 217)
+* ('uni00B2', 588, 804)
+* ('uni00B2', 13, 552)
+* ('uni00B3', 612, 774)
+* ('uni00B3', 16, 697)
+* ('uni00B5', 117, -375)
+* ('uni00B5', -30, -333)
+* ('uni00B5', 968, 206)
+* ('periodcentered', 200, 973)
+* ('periodcentered', 372, 803)
+* ('periodcentered', 198, 629)
+* ('periodcentered', 29, 801)
+* ('uni00B9', 4, 1196)
+* ('ordmasculine', 501, 1241)
+* ('guillemotright', 8, 218)
+* ('guillemotright', 8, 939)
+* ('onequarter', 1438, 1298)
+* ('onequarter', 143, 1183)
+* ('onehalf', 143, 1183)
+* ('threequarters', 1438, 1298)
+* ('threequarters', 257, 1429)
+* ('threequarters', 66, 730)
+* ('questiondown', 45, -383)
+* ('questiondown', 431, 1107)
+* ('Agrave', 1625, 192)
+* ('Agrave', 862, -44)
+* ('Aacute', 1625, 192)
+* ('Aacute', 862, -44)
+* ('Acircumflex', 1625, 192)
+* ('Acircumflex', 862, -44)
+* ('Atilde', 1625, 192)
+* ('Atilde', 862, -44)
+* ('Adieresis', 1625, 210)
+* ('Adieresis', 862, -26)
+* ('Aring', 1625, 192)
+* ('Aring', 862, -44)
+* ('AE', 1672, 1488)
+* ('AE', 2105, 261)
+* ('AE', 1717, -39)
+* ('AE', 862, -44)
+* ('Ccedilla', 1361, 181)
+* ('Ccedilla', 51, 1022)
+* ('Ccedilla', 1018, 1487)
+* ('Ccedilla', 1367, 1364)
+* ('Egrave', 1401, 882)
+* ('Egrave', 52, 1023)
+* ('Eacute', 1401, 882)
+* ('Eacute', 52, 1023)
+* ('Ecircumflex', 1401, 882)
+* ('Ecircumflex', 52, 1023)
+* ('Edieresis', 1401, 882)
+* ('Edieresis', 52, 1023)
+* ('Igrave', 1323, 1205)
+* ('Igrave', 1356, 345)
+* ('Igrave', 570, -258)
+* ('Igrave', 34, 28)
+* ('Iacute', 1323, 1205)
+* ('Iacute', 1356, 345)
+* ('Iacute', 570, -258)
+* ('Iacute', 34, 28)
+* ('Icircumflex', 1323, 1205)
+* ('Icircumflex', 1356, 345)
+* ('Icircumflex', 570, -258)
+* ('Icircumflex', 34, 28)
+* ('Idieresis', 1323, 1205)
+* ('Idieresis', 1356, 345)
+* ('Idieresis', 570, -258)
+* ('Idieresis', 34, 28)
+* ('Eth', 888, 1497)
+* ('Eth', 1609, 788)
+* ('Eth', 898, -78)
+* ('Ntilde', 1762, 217)
+* ('Ntilde', 1467, -25)
+* ('Ntilde', 447, -42)
+* ('Ograve', 1495, 757)
+* ('Ograve', 638, -47)
+* ('Ograve', 44, 224)
+* ('Oacute', 1495, 757)
+* ('Oacute', 638, -47)
+* ('Oacute', 44, 224)
+* ('Ocircumflex', 1495, 757)
+* ('Ocircumflex', 638, -47)
+* ('Ocircumflex', 44, 224)
+* ('Otilde', 1495, 757)
+* ('Otilde', 638, -47)
+* ('Otilde', 44, 224)
+* ('Odieresis', 1495, 757)
+* ('Odieresis', 638, -47)
+* ('Odieresis', 44, 224)
+* ('multiply', 596, 912)
+* ('multiply', 700, 808)
+* ('multiply', 701, 414)
+* ('multiply', 596, 309)
+* ('multiply', 202, 309)
+* ('multiply', 97, 414)
+* ('multiply', 98, 808)
+* ('multiply', 202, 912)
+* ('Oslash', 1495, 757)
+* ('Oslash', 341, -87)
+* ('Oslash', 44, 224)
+* ('Oslash', 1200, 1532)
+* ('Ugrave', 585, -126)
+* ('Ugrave', 37, 186)
+* ('Ugrave', 1413, 177)
+* ('Ugrave', 1165, -21)
+* ('Uacute', 585, -126)
+* ('Uacute', 37, 186)
+* ('Uacute', 1413, 177)
+* ('Uacute', 1165, -21)
+* ('Ucircumflex', 585, -126)
+* ('Ucircumflex', 37, 186)
+* ('Ucircumflex', 1413, 177)
+* ('Ucircumflex', 1165, -21)
+* ('Udieresis', 585, -83)
+* ('Udieresis', 37, 229)
+* ('Udieresis', 1413, 220)
+* ('Udieresis', 1165, 22)
+* ('Yacute', 1706, 1013)
+* ('Yacute', 1079, -322)
+* ('Thorn', 1783, 659)
+* ('Thorn', 761, -345)
+* ('germandbls', 230, 1494)
+* ('germandbls', 949, 294)
+* ('germandbls', 368, -390)
+* ('agrave', 291, -44)
+* ('agrave', 47, 209)
+* ('agrave', 904, 202)
+* ('agrave', 750, -58)
+* ('aacute', 291, -44)
+* ('aacute', 47, 209)
+* ('aacute', 904, 202)
+* ('aacute', 750, -58)
+* ('acircumflex', 291, -44)
+* ('acircumflex', 47, 209)
+* ('acircumflex', 904, 202)
+* ('acircumflex', 750, -58)
+* ('atilde', 291, -44)
+* ('atilde', 47, 209)
+* ('atilde', 904, 202)
+* ('atilde', 750, -58)
+* ('adieresis', 291, 3)
+* ('adieresis', 47, 256)
+* ('adieresis', 904, 249)
+* ('adieresis', 750, -11)
+* ('aring', 291, -44)
+* ('aring', 47, 209)
+* ('aring', 904, 202)
+* ('aring', 750, -58)
+* ('ae', 291, -44)
+* ('ae', 47, 209)
+* ('ae', 462, 1052)
+* ('ae', 975, 1041)
+* ('ae', 1141, 646)
+* ('ae', 818, -43)
+* ('ccedilla', 47, 745)
+* ('ccedilla', 529, 1039)
+* ('ccedilla', 683, 142)
+* ('egrave', 47, 746)
+* ('egrave', 698, 646)
+* ('egrave', 375, -43)
+* ('eacute', 47, 746)
+* ('eacute', 698, 646)
+* ('eacute', 375, -43)
+* ('ecircumflex', 47, 746)
+* ('ecircumflex', 698, 646)
+* ('ecircumflex', 375, -43)
+* ('edieresis', 710, 1426)
+* ('edieresis', 47, 746)
+* ('edieresis', 375, -43)
+* ('igrave', 517, 199)
+* ('igrave', 374, -42)
+* ('iacute', 26, 802)
+* ('iacute', 517, 199)
+* ('iacute', 374, -42)
+* ('icircumflex', 26, 802)
+* ('icircumflex', 374, -42)
+* ('idieresis', 374, -42)
+* ('idieresis', 9, 1258)
+* ('idieresis', 535, 1407)
+* ('eth', 268, 1425)
+* ('eth', 423, -35)
+* ('ntilde', 48, 798)
+* ('ntilde', 985, 193)
+* ('ntilde', 842, -48)
+* ('ograve', 372, -43)
+* ('ograve', 802, 553)
+* ('oacute', 372, -43)
+* ('oacute', 802, 553)
+* ('ocircumflex', 372, -43)
+* ('ocircumflex', 802, 553)
+* ('otilde', 372, -43)
+* ('otilde', 802, 553)
+* ('odieresis', 372, -9)
+* ('odieresis', 802, 587)
+* ('oslash', 802, 553)
+* ('oslash', 116, -67)
+* ('oslash', 696, 1075)
+* ('ugrave', 984, 206)
+* ('ugrave', 842, -35)
+* ('ugrave', 402, -42)
+* ('ugrave', 47, 812)
+* ('uacute', 984, 206)
+* ('uacute', 842, -35)
+* ('uacute', 402, -42)
+* ('uacute', 47, 812)
+* ('ucircumflex', 984, 206)
+* ('ucircumflex', 842, -35)
+* ('ucircumflex', 402, -42)
+* ('ucircumflex', 47, 812)
+* ('udieresis', 984, 206)
+* ('udieresis', 842, -35)
+* ('udieresis', 402, -42)
+* ('udieresis', 47, 812)
+* ('yacute', 920, 236)
+* ('yacute', 293, -350)
+* ('yacute', 43, 930)
+* ('thorn', 450, 1431)
+* ('thorn', 893, 715)
+* ('ydieresis', 920, 236)
+* ('ydieresis', 293, -350)
+* ('ydieresis', 43, 930)
+* ('OE', 2250, 882)
+* ('OE', 638, -47)
+* ('OE', 44, 224)
+* ('OE', 1868, 1488)
+* ('oe', 372, -43)
+* ('oe', 566, 1049)
+* ('oe', 1245, 646)
+* ('oe', 922, -43)
+* ('Scaron', 575, 1867)
+* ('Scaron', 1038, 1867)
+* ('Scaron', 1502, 522)
+* ('Scaron', 50, 359)
+* ('scaron', 141, 1640)
+* ('scaron', 604, 1640)
+* ('scaron', 812, 1050)
+* ('scaron', 405, -36)
+* ('scaron', 38, 188)
+* ('scaron', 49, 571)
+* ('Ydieresis', 1706, 1013)
+* ('Ydieresis', 1079, -322)
+* ('Zcaron', 467, 1897)
+* ('Zcaron', 930, 1897)
+* ('Zcaron', 1313, 232)
+* ('Zcaron', 813, -276)
+* ('Zcaron', 32, 61)
+* ('zcaron', 107, 1478)
+* ('zcaron', 570, 1478)
+* ('zcaron', 636, 580)
+* ('zcaron', 635, -93)
+* ('zcaron', 47, 438)
+* ('longs', 233, 1494)
+* ('longs', 596, 1452)
+* ('longs', 622, 1445)
+* ('longs', 269, -343)
+* ('florin', 219, 1494)
+* ('florin', 606, 1441)
+* ('florin', 41, -375)
+* ('florin', -105, -372)
+* ('circumflex', 660, 1090)
+* ('circumflex', 197, 1090)
+* ('caron', 197, 1447)
+* ('caron', 660, 1447)
+* ('uni0302', -197, 1090)
+* ('uni0302', -660, 1090)
+* ('uni0308', -660, 1181)
+* ('uni0308', -770, 1296)
+* ('uni0308', -91, 1451)
+* ('uni0308', -230, 1181)
+* ('uni030C', -660, 1447)
+* ('uni030C', -197, 1447)
+* ('uni1E9E', 556, 1498)
+* ('uni1E9E', 881, 1504)
+* ('uni1E9E', 1266, -102)
+* ('uni1E9E', 761, -507)
+* ('uni1E9E', -20, -170)
+* ('quoteleft', 196, 897)
+* ('quoteleft', 226, 1460)
+* ('quoteleft', 370, 1071)
+* ('quoteright', 222, 1460)
+* ('quoteright', 192, 897)
+* ('quoteright', 48, 1286)
+* ('quotesinglbase', 193, 315)
+* ('quotesinglbase', 163, -248)
+* ('quotesinglbase', 19, 141)
+* ('quotedblleft', 209, 897)
+* ('quotedblleft', 239, 1460)
+* ('quotedblleft', 592, 897)
+* ('quotedblleft', 622, 1460)
+* ('quotedblleft', 766, 1071)
+* ('quotedblright', 605, 1460)
+* ('quotedblright', 575, 897)
+* ('quotedblright', 222, 1460)
+* ('quotedblright', 192, 897)
+* ('quotedblright', 48, 1286)
+* ('quotedblbase', 568, 315)
+* ('quotedblbase', 538, -248)
+* ('quotedblbase', 189, 315)
+* ('quotedblbase', 159, -248)
+* ('quotedblbase', 15, 141)
+* ('dagger', 879, 1040)
+* ('dagger', 459, -333)
+* ('dagger', 35, 1040)
+* ('dagger', 459, 1465)
+* ('daggerdbl', 879, 1040)
+* ('daggerdbl', 879, 44)
+* ('daggerdbl', 455, -381)
+* ('daggerdbl', 35, 44)
+* ('daggerdbl', 35, 1040)
+* ('daggerdbl', 459, 1465)
+* ('bullet', 300, 919)
+* ('bullet', 558, 664)
+* ('bullet', 297, 403)
+* ('bullet', 43, 661)
+* ('ellipsis', 200, 315)
+* ('ellipsis', 198, -29)
+* ('ellipsis', 29, 143)
+* ('ellipsis', 611, 315)
+* ('ellipsis', 609, -29)
+* ('ellipsis', 1022, 315)
+* ('ellipsis', 1194, 145)
+* ('ellipsis', 1020, -29)
+* ('perthousand', 187, 18)
+* ('perthousand', 1330, 1451)
+* ('guilsinglleft', 563, 938)
+* ('guilsinglleft', 563, 217)
+* ('guilsinglright', 8, 218)
+* ('guilsinglright', 8, 939)
+* ('Euro', 39, 578)
+* ('afii61352', -43, 237)
+* ('afii61352', 952, -28)
+* ('uni2725', 924, 670)
+* ('uni2725', 453, 193)
+* ('uni2725', -22, 670)
+* ('uni2725', 453, 1141)
+* ('uniA75B', 543, 248)
+* ('uniA75B', 357, -15)
+* ('uniA75B', 43, 193)
+* ('uniA75B', 38, 833)
+* ('uniA75B', 181, 1077)
+* ('uniFB00', 219, 1494)
+* ('uniFB00', 689, 1494)
+* ('uniFB00', 1073, 1442)
+* ('uniFB00', 725, -343)
+* ('uniFB00', 255, -343)
+* ('uniFB01', 219, 1494)
+* ('uniFB01', 984, 228)
+* ('uniFB01', 255, -343)
+* ('uniFB02', 219, 1494)
+* ('uniFB02', 873, 1460)
+* ('uniFB02', 255, -343)
+* ('uniFB03', 219, 1494)
+* ('uniFB03', 689, 1494)
+* ('uniFB03', 1457, 228)
+* ('uniFB03', 725, -343)
+* ('uniFB03', 255, -343)
+* ('uniFB04', 688, 1494)
+* ('uniFB04', 1342, 1460)
+* ('uniFB04', 725, -343)
+* ('uniFB04', 255, -343)
+* ('uniFB04', 219, 1494)
+* ('uniFB05', 233, 1494)
+* ('uniFB05', 269, -343)
+* ('m_uni0304', 52, 830)
+* ('m_uni0304', 1401, 228)
+* ('n_uni0304', 48, 833)
+* ('n_uni0304', 985, 228)
+* ('n_uni0304', 842, -13)
+* ('longs_h', 233, 1494)
+* ('longs_h', 596, 1452)
+* ('longs_h', 1309, 231)
+* ('longs_h', 682, -356)
+* ('longs_i', 233, 1494)
+* ('longs_i', 621, 1458)
+* ('longs_i', 269, -343)
+* ('longs_i', 948, 199)
+* ('longs_l', 233, 1494)
+* ('longs_l', 596, 1452)
+* ('longs_l', 1048, 1389)
+* ('longs_l', 269, -343)
+* ('longs_longs', -7, 945)
+* ('longs_longs', 234, 1494)
+* ('longs_longs', 706, 1482)
+* ('longs_longs', 1033, 1454)
+* ('longs_longs', 1061, 1443)
+* ('longs_longs', 705, -343)
+* ('longs_longs', 270, -343)
+* ('longs_longs_i', 705, -343)
+* ('longs_longs_i', 270, -343)
+* ('longs_longs_i', -7, 945)
+* ('longs_longs_i', 234, 1494)
+* ('longs_longs_i', 702, 1482)
+* ('longs_longs_i', 1056, 1458)
+* ('longs_longs_i', 1383, 199)
+* ('longs_longs_l', 705, -343)
+* ('longs_longs_l', 270, -343)
+* ('longs_longs_l', -7, 945)
+* ('longs_longs_l', 234, 1494)
+* ('longs_longs_l', 722, 1477)
+* ('longs_longs_l', 1032, 1452)
+* ('longs_longs_l', 1484, 1389)
+* ('c_k', 1018, -18)
+* ('c_k', 350, -14)
+* ('c_k', 47, 790)
+* ('c_k', 1109, 1460)
+* ('c_k', 1256, 1418)
+* ('f_j', 969, -279)
+* ('f_j', 534, -375)
+* ('f_j', 219, 1494)
+* ('f_t', 219, 1494)
+* ('f_t', 584, 1452)
+* ('f_t', 255, -343)
+* ('f_f_t', 725, -343)
+* ('f_f_t', 255, -343)
+* ('f_f_t', 219, 1494)
+* ('f_f_t', 689, 1494)
+* ('t_t', 387, -18)
+* ('t_t', 25, 886)
+* ('t_t', 522, 1341)
+* ('t_t', 1008, 1341)
+* ('t_t', 873, -18)
+* ('t_z', 25, 886)
+* ('t_z', 522, 1341)
+* ('t_z', 1006, 294)
+* ('t_z', 425, -390)
+* ('c_h', 68, 789)
+* ('c_h', 1143, 1461)
+* ('c_h', 1520, 258)
+* ('c_h', 892, -331)
+* ('l_l', 39, 1357)
+* ('l_l', 470, 1460)
+* ('l_l', 967, 1460)
+* ('l_l', 1114, 1418)
+* ('l_l', 879, -18)
+* ('l_l', 382, -18)
+* ('longs_c_h', 233, 1494)
+* ('longs_c_h', 1576, 1461)
+* ('longs_c_h', 1953, 258)
+* ('longs_k', 269, -343)
+* ('longs_k', 233, 1494)
+* ('longs_k', 596, 1452)
+* ('longs_k', 1083, 1386)
+* ('longs_s', 228, 1503)
+* ('longs_s', 269, -343)
+* ('longs_s', 1243, 1050)
+* ('longs_longs_k', 1032, 1452)
+* ('longs_longs_k', 1519, 1386)
+* ('longs_longs_k', 705, -343)
+* ('longs_longs_k', 270, -343)
+* ('longs_longs_k', -7, 945)
+* ('longs_longs_k', 234, 1494)
+* ('longs_longs_k', 706, 1482)
+* ('longs_longs_t', 705, -343)
+* ('longs_longs_t', 270, -343)
+* ('longs_longs_t', -7, 945)
+* ('longs_longs_t', 234, 1494) and ('longs_longs_t', 698, 1484)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message. [code: points-out-of-bounds]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⏩⏩⏩⏩</span>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ UnifrakturMaguntia-Book.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ j̀ j́ j̃ j̄ j̈</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ ī ǐ ĩ̧ ī̧ i̧̊ ǐ̧ ĵ j̊ ǰ j̧̀ j̧́ ĵ̧ j̧̃ j̧̄ j̧̈ j̧̊ ǰ̧</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Basaa (Latn, 332,940 speakers), Belarusian (Cyrl, 10,064,517 speakers), Navajo (Latn, 166,319 speakers), Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>

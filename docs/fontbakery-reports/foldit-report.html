@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>12</td>
+                <td>40</td>
+                <td>8</td>
+                <td>177</td>
+            </tr>
+            <tr>
+                <td>1%</td>
+                <td>2%</td>
+                <td>7%</td>
+                <td>23%</td>
+                <td>5%</td>
+                <td>101%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.9.2</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>DESCRIPTION.en_us.html should end in a linebreak.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it. [code: missing-eof-linebreak]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02B9 MODIFIER LETTER PRIME: not included in any glyphset definition</li>
+<li>U+02BA MODIFIER LETTER DOUBLE PRIME: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh</li>
+<li>U+02D8 BREVE: try adding canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0300 COMBINING GRAVE ACCENT: try adding one of: tai-le, cherokee, coptic</li>
+<li>U+0301 COMBINING ACUTE ACCENT: try adding one of: tai-le, cherokee, coptic, tifinagh</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, tifinagh</li>
+<li>U+0303 COMBINING TILDE: not included in any glyphset definition</li>
+<li>U+0304 COMBINING MACRON: try adding one of: gothic, cherokee, coptic, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, tai-le, canadian-aboriginal, coptic, malayalam</li>
+<li>U+0308 COMBINING DIAERESIS: try adding one of: tai-le, gothic, coptic</li>
+<li>U+0309 COMBINING HOOK ABOVE: try adding tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: not included in any glyphset definition</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0323 COMBINING DOT BELOW: try adding one of: tifinagh, cherokee, coptic, malayalam</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032E COMBINING BREVE BELOW: not included in any glyphset definition</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: cherokee, gothic, tifinagh</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+2010 HYPHEN: try adding one of: syloti-nagri, sundanese, lisu, arabic, coptic, kaithi, kayah-li, cham, kharoshthi</li>
+<li>U+2021 DOUBLE DAGGER: not included in any glyphset definition</li>
+<li>U+2030 PER MILLE SIGN: not included in any glyphset definition</li>
+<li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
+<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
+<li>U+2219 BULLET OPERATOR: try adding tai-tham</li>
+<li>U+2248 ALMOST EQUAL TO: not included in any glyphset definition</li>
+<li>U+2260 NOT EQUAL TO: not included in any glyphset definition</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: not included in any glyphset definition</li>
+<li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>vietnamese</code>, <code>menu</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb subsets should be alphabetically ordered.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
+
+<details><summary>🔥 Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb subsets are not sorted in alphabetical order: Got ['latin', 'latin-ext', 'vietnamese', 'menu'] and expected ['latin', 'latin-ext', 'menu', 'vietnamese'] [code: not-sorted]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb font.name field contains font name in right format?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_name_values&gt;</div>
+
+<details><summary>🔥 Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>METADATA.pb font.name field (&quot;Foldit&quot;) does not match correct font name format (&quot;Foldit Thin&quot;). [code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+
+<details><summary>🔥 Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Value of repository_url field is https://github.com/SophiaDesign/Foldit</p>
+<p>But font copyright string has: https://www.github.com/sophiadesign/GF-Foldit
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3>Glyphs are similiar to Google Fonts version?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/production_glyphs_similarity&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* A
+* A.color0
+* A.color1
+* A.color2
+* A.color3
+* AE
+* AE.color0
+* AE.color1
+* AE.color2
+* AE.color3
+* AE.color4
+* AE.color5
+* AE.color6
+* AEacute
+* AEacute.color0
+* AEacute.color1
+* AEacute.color2
+* AEacute.color3
+* AEacute.color4
+* AEacute.color5
+* AEacute.color6
+* Aacute
+* Aacute.color0
+* Aacute.color1
+* Aacute.color2
+* Aacute.color3
+* Abreve
+* Abreve.color0
+* Abreve.color1
+* Abreve.color2
+* Abreve.color3
+* Acircumflex
+* Acircumflex.color0
+* Acircumflex.color1
+* Acircumflex.color2
+* Acircumflex.color3
+* Adieresis
+* Adieresis.color0
+* Adieresis.color1
+* Adieresis.color2
+* Adieresis.color3
+* Agrave
+* Agrave.color0
+* Agrave.color1
+* Agrave.color2
+* Agrave.color3
+* Amacron
+* Amacron.color0
+* Amacron.color1
+* Amacron.color2
+* Amacron.color3
+* Aogonek
+* Aogonek.color0
+* Aogonek.color1
+* Aogonek.color2
+* Aogonek.color3
+* Aring
+* Aring.color0
+* Aring.color1
+* Aring.color2
+* Aring.color3
+* Aringacute
+* Aringacute.color1
+* Aringacute.color2
+* Aringacute.color3
+* Aringacute.color4
+* Atilde
+* Atilde.color0
+* Atilde.color1
+* Atilde.color2
+* Atilde.color3
+* B
+* B.color0
+* B.color1
+* B.color2
+* B.color3
+* B.color5
+* C
+* C.color0
+* C.color1
+* C.color2
+* Cacute
+* Cacute.color0
+* Cacute.color1
+* Cacute.color2
+* Ccaron
+* Ccaron.color0
+* Ccaron.color1
+* Ccaron.color2
+* Ccedilla
+* Ccedilla.color0
+* Ccedilla.color1
+* Ccedilla.color2
+* Ccircumflex
+* Ccircumflex.color0
+* Ccircumflex.color1
+* Ccircumflex.color2
+* Cdotaccent
+* Cdotaccent.color0
+* Cdotaccent.color1
+* Cdotaccent.color2
+* D
+* D.color0
+* D.color1
+* D.color2
+* D.color3
+* Dcaron
+* Dcaron.color0
+* Dcaron.color1
+* Dcaron.color2
+* Dcaron.color3
+* Dcroat
+* Dcroat.color0
+* Dcroat.color1
+* Dcroat.color2
+* Dcroat.color3
+* Dcroat.color4
+* E
+* E.color0
+* E.color1
+* E.color2
+* E.color3
+* Eacute
+* Eacute.color0
+* Eacute.color1
+* Eacute.color2
+* Eacute.color3
+* Ebreve
+* Ebreve.color0
+* Ebreve.color1
+* Ebreve.color2
+* Ebreve.color3
+* Ecaron
+* Ecaron.color0
+* Ecaron.color1
+* Ecaron.color2
+* Ecaron.color3
+* Ecircumflex
+* Ecircumflex.color0
+* Ecircumflex.color1
+* Ecircumflex.color2
+* Ecircumflex.color3
+* Edieresis
+* Edieresis.color0
+* Edieresis.color1
+* Edieresis.color2
+* Edieresis.color3
+* Edotaccent
+* Edotaccent.color0
+* Edotaccent.color1
+* Edotaccent.color2
+* Edotaccent.color3
+* Egrave
+* Egrave.color0
+* Egrave.color1
+* Egrave.color2
+* Egrave.color3
+* Emacron
+* Emacron.color0
+* Emacron.color1
+* Emacron.color2
+* Emacron.color3
+* Eng
+* Eng.color0
+* Eng.color1
+* Eng.color2
+* Eng.color3
+* Eogonek
+* Eogonek.color0
+* Eogonek.color1
+* Eogonek.color2
+* Eogonek.color3
+* Eth
+* Eth.color0
+* Eth.color1
+* Eth.color2
+* Eth.color3
+* Eth.color4
+* Euro
+* Euro.color2
+* Euro.color3
+* Euro.color4
+* F
+* F.color0
+* F.color1
+* F.color2
+* F.color3
+* G
+* G.color0
+* G.color1
+* G.color2
+* G.color3
+* G.color4
+* Gbreve
+* Gbreve.color0
+* Gbreve.color1
+* Gbreve.color2
+* Gbreve.color3
+* Gbreve.color4
+* Gcaron
+* Gcaron.color0
+* Gcaron.color1
+* Gcaron.color2
+* Gcaron.color3
+* Gcaron.color4
+* Gcircumflex
+* Gcircumflex.color0
+* Gcircumflex.color1
+* Gcircumflex.color2
+* Gcircumflex.color3
+* Gcircumflex.color4
+* Gdotaccent
+* Gdotaccent.color0
+* Gdotaccent.color1
+* Gdotaccent.color2
+* Gdotaccent.color3
+* Gdotaccent.color4
+* H
+* H.color0
+* H.color1
+* H.color2
+* Hbar
+* Hbar.color0
+* Hbar.color1
+* Hbar.color2
+* Hbar.color3
+* Hcircumflex
+* Hcircumflex.color0
+* Hcircumflex.color1
+* Hcircumflex.color2
+* I
+* I.color0
+* I.color1
+* I.color2
+* I.color3
+* I.color4
+* IJ
+* IJ.color0
+* IJ.color1
+* IJ.color2
+* IJ.color3
+* IJ.color5
+* IJ.color6
+* IJ.color7
+* Iacute
+* Iacute.color0
+* Iacute.color1
+* Iacute.color2
+* Iacute.color3
+* Iacute.color4
+* Iacute_J.loclNLD
+* Iacute_J.loclNLD.color0
+* Iacute_J.loclNLD.color1
+* Iacute_J.loclNLD.color2
+* Iacute_J.loclNLD.color3
+* Iacute_J.loclNLD.color4
+* Iacute_J.loclNLD.color6
+* Iacute_J.loclNLD.color7
+* Iacute_J.loclNLD.color8
+* Ibreve
+* Ibreve.color0
+* Ibreve.color1
+* Ibreve.color2
+* Ibreve.color3
+* Ibreve.color4
+* Icircumflex
+* Icircumflex.color0
+* Icircumflex.color1
+* Icircumflex.color2
+* Icircumflex.color3
+* Icircumflex.color4
+* Idieresis
+* Idieresis.color0
+* Idieresis.color1
+* Idieresis.color2
+* Idieresis.color3
+* Idieresis.color4
+* Idotaccent
+* Idotaccent.color0
+* Idotaccent.color1
+* Idotaccent.color2
+* Idotaccent.color3
+* Idotaccent.color4
+* Igrave
+* Igrave.color0
+* Igrave.color1
+* Igrave.color2
+* Igrave.color3
+* Igrave.color4
+* Imacron
+* Imacron.color0
+* Imacron.color1
+* Imacron.color2
+* Imacron.color3
+* Imacron.color4
+* Iogonek
+* Iogonek.color0
+* Iogonek.color1
+* Iogonek.color2
+* Iogonek.color3
+* Iogonek.color4
+* Itilde
+* Itilde.color0
+* Itilde.color1
+* Itilde.color2
+* Itilde.color3
+* Itilde.color4
+* J
+* J.color0
+* J.color1
+* J.color2
+* Jcircumflex
+* Jcircumflex.color0
+* Jcircumflex.color1
+* Jcircumflex.color2
+* K
+* K.color0
+* K.color1
+* K.color2
+* K.color3
+* L
+* L.color0
+* L.color1
+* Lacute
+* Lacute.color0
+* Lacute.color1
+* Lcaron
+* Lcaron.color0
+* Lcaron.color1
+* Ldot
+* Ldot.color0
+* Ldot.color1
+* Lslash
+* Lslash.color0
+* Lslash.color1
+* Lslash.color2
+* M
+* M.color0
+* M.color1
+* M.color2
+* M.color3
+* N
+* N.color0
+* N.color1
+* N.color2
+* Nacute
+* Nacute.color0
+* Nacute.color1
+* Nacute.color2
+* Ncaron
+* Ncaron.color0
+* Ncaron.color1
+* Ncaron.color2
+* Ntilde
+* Ntilde.color0
+* Ntilde.color1
+* Ntilde.color2
+* O
+* O.color0
+* O.color1
+* O.color2
+* O.color3
+* OE
+* OE.color0
+* OE.color1
+* OE.color2
+* OE.color3
+* OE.color4
+* OE.color5
+* OE.color6
+* Oacute
+* Oacute.color0
+* Oacute.color1
+* Oacute.color2
+* Oacute.color3
+* Obreve
+* Obreve.color0
+* Obreve.color1
+* Obreve.color2
+* Obreve.color3
+* Ocircumflex
+* Ocircumflex.color0
+* Ocircumflex.color1
+* Ocircumflex.color2
+* Ocircumflex.color3
+* Odieresis
+* Odieresis.color0
+* Odieresis.color1
+* Odieresis.color2
+* Odieresis.color3
+* Ograve
+* Ograve.color0
+* Ograve.color1
+* Ograve.color2
+* Ograve.color3
+* Ohorn
+* Ohorn.color0
+* Ohorn.color1
+* Ohorn.color2
+* Ohorn.color3
+* Ohungarumlaut
+* Ohungarumlaut.color0
+* Ohungarumlaut.color1
+* Ohungarumlaut.color2
+* Ohungarumlaut.color3
+* Omacron
+* Omacron.color0
+* Omacron.color1
+* Omacron.color2
+* Omacron.color3
+* Oslash
+* Oslash.color0
+* Oslash.color1
+* Oslash.color2
+* Oslash.color3
+* Oslash.color4
+* Oslashacute
+* Oslashacute.color0
+* Oslashacute.color1
+* Oslashacute.color2
+* Oslashacute.color3
+* Oslashacute.color4
+* Otilde
+* Otilde.color0
+* Otilde.color1
+* Otilde.color2
+* Otilde.color3
+* P
+* P.color0
+* P.color1
+* P.color2
+* P.color3
+* Q
+* Q.color0
+* Q.color1
+* Q.color2
+* Q.color3
+* R
+* R.color0
+* R.color1
+* R.color2
+* R.color3
+* R.color4
+* Racute
+* Racute.color0
+* Racute.color1
+* Racute.color2
+* Racute.color3
+* Racute.color4
+* Rcaron
+* Rcaron.color0
+* Rcaron.color1
+* Rcaron.color2
+* Rcaron.color3
+* Rcaron.color4
+* S
+* S.color0
+* S.color1
+* S.color2
+* S.color3
+* S.color4
+* Sacute
+* Sacute.color0
+* Sacute.color1
+* Sacute.color2
+* Sacute.color3
+* Sacute.color4
+* Scaron
+* Scaron.color0
+* Scaron.color1
+* Scaron.color2
+* Scaron.color3
+* Scaron.color4
+* Scedilla
+* Scedilla.color0
+* Scedilla.color1
+* Scedilla.color2
+* Scedilla.color3
+* Scedilla.color4
+* Scircumflex
+* Scircumflex.color0
+* Scircumflex.color1
+* Scircumflex.color2
+* Scircumflex.color3
+* Scircumflex.color4
+* T
+* T.color0
+* T.color1
+* T.color2
+* Tbar
+* Tbar.color0
+* Tbar.color1
+* Tbar.color2
+* Tbar.color3
+* Tcaron
+* Tcaron.color0
+* Tcaron.color1
+* Tcaron.color2
+* Thorn
+* Thorn.color0
+* Thorn.color1
+* Thorn.color2
+* Thorn.color3
+* U
+* U.color0
+* U.color1
+* U.color2
+* Uacute
+* Uacute.color0
+* Uacute.color1
+* Uacute.color2
+* Ubreve
+* Ubreve.color0
+* Ubreve.color1
+* Ubreve.color2
+* Ucircumflex
+* Ucircumflex.color0
+* Ucircumflex.color1
+* Ucircumflex.color2
+* Udieresis
+* Udieresis.color0
+* Udieresis.color1
+* Udieresis.color2
+* Ugrave
+* Ugrave.color0
+* Ugrave.color1
+* Ugrave.color2
+* Uhorn
+* Uhorn.color0
+* Uhorn.color1
+* Uhorn.color2
+* Uhungarumlaut
+* Uhungarumlaut.color0
+* Uhungarumlaut.color1
+* Uhungarumlaut.color2
+* Umacron
+* Umacron.color0
+* Umacron.color1
+* Umacron.color2
+* Uogonek
+* Uogonek.color0
+* Uogonek.color1
+* Uogonek.color2
+* Uring
+* Uring.color0
+* Uring.color1
+* Uring.color2
+* Utilde
+* Utilde.color0
+* Utilde.color1
+* Utilde.color2
+* V
+* V.color0
+* V.color1
+* W
+* W.color0
+* W.color1
+* W.color2
+* W.color3
+* Wacute
+* Wacute.color0
+* Wacute.color1
+* Wacute.color2
+* Wacute.color3
+* Wcircumflex
+* Wcircumflex.color0
+* Wcircumflex.color1
+* Wcircumflex.color2
+* Wcircumflex.color3
+* Wdieresis
+* Wdieresis.color0
+* Wdieresis.color1
+* Wdieresis.color2
+* Wdieresis.color3
+* Wgrave
+* Wgrave.color0
+* Wgrave.color1
+* Wgrave.color2
+* Wgrave.color3
+* X
+* X.color0
+* X.color1
+* X.color2
+* X.color3
+* Y
+* Y.color0
+* Y.color1
+* Y.color2
+* Yacute
+* Yacute.color0
+* Yacute.color1
+* Yacute.color2
+* Ycircumflex
+* Ycircumflex.color0
+* Ycircumflex.color1
+* Ycircumflex.color2
+* Ydieresis
+* Ydieresis.color0
+* Ydieresis.color1
+* Ydieresis.color2
+* Ygrave
+* Ygrave.color0
+* Ygrave.color1
+* Ygrave.color2
+* Z
+* Z.color0
+* Z.color1
+* Z.color2
+* Zacute
+* Zacute.color0
+* Zacute.color1
+* Zacute.color2
+* Zcaron
+* Zcaron.color0
+* Zcaron.color1
+* Zcaron.color2
+* Zdotaccent
+* Zdotaccent.color0
+* Zdotaccent.color1
+* Zdotaccent.color2
+* a
+* a.color0
+* a.color1
+* a.color2
+* a.color3
+* aacute
+* aacute.color0
+* aacute.color1
+* aacute.color2
+* aacute.color3
+* aacute.color4
+* abreve
+* abreve.color0
+* abreve.color1
+* abreve.color2
+* abreve.color3
+* acircumflex
+* acircumflex.color0
+* acircumflex.color1
+* acircumflex.color2
+* acircumflex.color3
+* acute
+* acutecomb
+* adieresis
+* adieresis.color0
+* adieresis.color1
+* adieresis.color2
+* adieresis.color3
+* ae
+* ae.color0
+* ae.color1
+* ae.color2
+* ae.color3
+* ae.color4
+* ae.color5
+* ae.color7
+* aeacute
+* aeacute.color0
+* aeacute.color1
+* aeacute.color2
+* aeacute.color3
+* aeacute.color4
+* aeacute.color5
+* aeacute.color7
+* aeacute.color8
+* agrave
+* agrave.color0
+* agrave.color1
+* agrave.color2
+* agrave.color3
+* amacron
+* amacron.color0
+* amacron.color1
+* amacron.color2
+* amacron.color3
+* ampersand
+* ampersand.color1
+* ampersand.color2
+* ampersand.color3
+* ampersand.color4
+* ampersand.color5
+* ampersand.color6
+* ampersand.color7
+* aogonek
+* aogonek.color0
+* aogonek.color1
+* aogonek.color2
+* aogonek.color3
+* approxequal
+* approxequal.color0
+* approxequal.color1
+* approxequal.color4
+* approxequal.color5
+* aring
+* aring.color0
+* aring.color1
+* aring.color2
+* aring.color3
+* aringacute
+* aringacute.color1
+* aringacute.color2
+* aringacute.color3
+* aringacute.color4
+* asciicircum
+* asciicircum.color0
+* asciicircum.color1
+* asciitilde
+* asciitilde.color0
+* asciitilde.color1
+* asciitilde.color2
+* asterisk
+* asterisk.color2
+* at
+* at.color0
+* at.color3
+* at.color4
+* at.color5
+* atilde
+* atilde.color0
+* atilde.color1
+* atilde.color2
+* atilde.color3
+* b
+* b.color0
+* b.color1
+* b.color2
+* b.color3
+* backslash
+* bar
+* braceleft
+* braceleft.color0
+* braceleft.color2
+* braceleft.color3
+* braceleft.color4
+* braceright
+* braceright.color0
+* braceright.color1
+* braceright.color2
+* braceright.color4
+* bracketleft
+* bracketleft.color0
+* bracketleft.color1
+* bracketleft.color2
+* bracketright
+* bracketright.color0
+* bracketright.color1
+* bracketright.color2
+* breve
+* brokenbar
+* brokenbar.color0
+* brokenbar.color1
+* bullet
+* c
+* c.color0
+* c.color1
+* c.color2
+* cacute
+* cacute.color0
+* cacute.color1
+* cacute.color2
+* cacute.color3
+* caron
+* ccaron
+* ccaron.color0
+* ccaron.color1
+* ccaron.color2
+* ccedilla
+* ccedilla.color0
+* ccedilla.color1
+* ccedilla.color2
+* ccircumflex
+* ccircumflex.color0
+* ccircumflex.color1
+* ccircumflex.color2
+* cdotaccent
+* cdotaccent.color0
+* cdotaccent.color1
+* cdotaccent.color2
+* cedilla
+* cent
+* cent.color2
+* cent.color3
+* cent.color4
+* circumflex
+* colon
+* colonmonetary
+* colonmonetary.color1
+* colonmonetary.color2
+* colonmonetary.color4
+* comma
+* copyright
+* copyright.color0
+* copyright.color3
+* copyright.color4
+* currency
+* currency.color0
+* currency.color2
+* currency.color3
+* currency.color6
+* d
+* d.color0
+* d.color1
+* d.color2
+* d.color3
+* d.color4
+* dagger
+* dagger.color0
+* dagger.color3
+* daggerdbl
+* daggerdbl.color0
+* daggerdbl.color4
+* daggerdbl.color6
+* dcaron
+* dcaron.color0
+* dcaron.color1
+* dcaron.color2
+* dcaron.color3
+* dcaron.color4
+* dcroat
+* dcroat.color0
+* dcroat.color1
+* dcroat.color2
+* dcroat.color3
+* dcroat.color4
+* dcroat.color5
+* degree
+* divide
+* divide.color0
+* dollar
+* dollar.color0
+* dollar.color1
+* dollar.color2
+* dollar.color3
+* dollar.color4
+* dollar.color5
+* dong
+* dong.color0
+* dong.color2
+* dong.color3
+* dong.color4
+* dong.color5
+* dotlessi
+* e
+* e.color0
+* e.color1
+* e.color3
+* e.color4
+* eacute
+* eacute.color0
+* eacute.color1
+* eacute.color3
+* eacute.color4
+* eacute.color5
+* ebreve
+* ebreve.color0
+* ebreve.color1
+* ebreve.color3
+* ebreve.color4
+* ecaron
+* ecaron.color0
+* ecaron.color1
+* ecaron.color3
+* ecaron.color4
+* ecircumflex
+* ecircumflex.color0
+* ecircumflex.color1
+* ecircumflex.color3
+* ecircumflex.color4
+* edieresis
+* edieresis.color0
+* edieresis.color1
+* edieresis.color3
+* edieresis.color4
+* edotaccent
+* edotaccent.color0
+* edotaccent.color1
+* edotaccent.color3
+* edotaccent.color4
+* egrave
+* egrave.color0
+* egrave.color1
+* egrave.color3
+* egrave.color4
+* eight
+* eight.color0
+* eight.color1
+* eight.color2
+* eight.color3
+* eight.color4
+* eight.color5
+* eight.color6
+* eight.lf
+* eight.lf.color0
+* eight.lf.color1
+* eight.lf.color2
+* eight.lf.color3
+* eight.lf.color4
+* eight.lf.color5
+* eight.lf.color6
+* ellipsis
+* emacron
+* emacron.color0
+* emacron.color1
+* emacron.color3
+* emacron.color4
+* emdash
+* endash
+* eng
+* eng.color0
+* eng.color2
+* eng.color3
+* eogonek
+* eogonek.color0
+* eogonek.color1
+* eogonek.color3
+* eogonek.color4
+* equal
+* equal.color0
+* equal.color1
+* eth
+* eth.color0
+* eth.color1
+* eth.color2
+* eth.color3
+* eth.color4
+* eth.color5
+* exclam
+* exclam.color0
+* exclamdown
+* exclamdown.color0
+* f
+* f.color0
+* f.color1
+* f.color2
+* f.color3
+* f_f
+* f_f.color0
+* f_f.color1
+* f_f.color2
+* f_f.color3
+* f_f.color4
+* f_f.color5
+* f_f.color6
+* f_f.color7
+* f_f_i
+* f_f_i.color0
+* f_f_i.color1
+* f_f_i.color2
+* f_f_i.color3
+* f_f_i.color4
+* f_f_i.color5
+* f_f_i.color6
+* f_f_i.color7
+* f_f_i.color8
+* f_f_l
+* f_f_l.color0
+* f_f_l.color1
+* f_f_l.color2
+* f_f_l.color3
+* f_f_l.color4
+* f_f_l.color5
+* f_f_l.color6
+* f_f_l.color7
+* f_f_l.color8
+* f_f_l.color9
+* fi
+* fi.color0
+* fi.color1
+* fi.color2
+* fi.color3
+* fi.color4
+* five
+* five.color0
+* five.color1
+* five.color2
+* five.color3
+* five.color4
+* five.lf
+* five.lf.color0
+* five.lf.color1
+* five.lf.color2
+* five.lf.color3
+* five.lf.color4
+* fl
+* fl.color0
+* fl.color1
+* fl.color2
+* fl.color3
+* fl.color4
+* fl.color5
+* florin
+* florin.color0
+* florin.color1
+* florin.color2
+* florin.color4
+* florin.color5
+* four
+* four.color0
+* four.color1
+* four.color2
+* four.lf
+* four.lf.color0
+* four.lf.color1
+* four.lf.color2
+* fraction
+* franc
+* franc.color1
+* franc.color2
+* franc.color3
+* franc.color4
+* g
+* g.color0
+* g.color1
+* g.color2
+* g.color3
+* g.color4
+* gbreve
+* gbreve.color0
+* gbreve.color1
+* gbreve.color2
+* gbreve.color3
+* gbreve.color4
+* gcaron
+* gcaron.color0
+* gcaron.color1
+* gcaron.color2
+* gcaron.color3
+* gcaron.color4
+* gcircumflex
+* gcircumflex.color0
+* gcircumflex.color1
+* gcircumflex.color2
+* gcircumflex.color3
+* gcircumflex.color4
+* gdotaccent
+* gdotaccent.color0
+* gdotaccent.color1
+* gdotaccent.color2
+* gdotaccent.color3
+* gdotaccent.color4
+* germandbls
+* germandbls.color0
+* germandbls.color1
+* germandbls.color3
+* germandbls.color4
+* germandbls.color5
+* greater
+* greater.color0
+* greater.color1
+* greaterequal
+* greaterequal.color0
+* greaterequal.color1
+* greaterequal.color2
+* guillemotleft
+* guillemotleft.color0
+* guillemotleft.color1
+* guillemotleft.color2
+* guillemotleft.color3
+* guillemotright
+* guillemotright.color0
+* guillemotright.color1
+* guillemotright.color2
+* guillemotright.color3
+* guilsinglleft
+* guilsinglleft.color0
+* guilsinglleft.color1
+* guilsinglright
+* guilsinglright.color0
+* guilsinglright.color1
+* h
+* h.color0
+* h.color1
+* h.color2
+* hbar
+* hbar.color0
+* hbar.color1
+* hbar.color2
+* hbar.color3
+* hcircumflex
+* hcircumflex.color0
+* hcircumflex.color1
+* hcircumflex.color2
+* hookabovecomb
+* hookabovecomb.case
+* hungarumlaut
+* hyphen
+* i
+* i.color0
+* i.loclTRK
+* i.loclTRK.color0
+* iacute
+* iacute.color0
+* iacute.color1
+* iacute_j.loclNLD
+* iacute_j.loclNLD.color0
+* iacute_j.loclNLD.color1
+* iacute_j.loclNLD.color2
+* iacute_j.loclNLD.color3
+* iacute_j.loclNLD.color4
+* ibreve
+* ibreve.color1
+* icircumflex
+* icircumflex.color0
+* idieresis
+* idieresis.color1
+* igrave
+* igrave.color0
+* ij
+* ij.color0
+* ij.color2
+* ij.color3
+* imacron
+* imacron.color1
+* iogonek
+* iogonek.color0
+* itilde
+* itilde.color0
+* j
+* j.color0
+* jcircumflex
+* jcircumflex.color0
+* k
+* k.color0
+* k.color1
+* k.color2
+* k.color3
+* kgreenlandic
+* kgreenlandic.color0
+* kgreenlandic.color1
+* kgreenlandic.color2
+* kgreenlandic.color3
+* l
+* l.color0
+* l.color1
+* lacute
+* lacute.color0
+* lacute.color1
+* lcaron
+* lcaron.color0
+* lcaron.color1
+* ldot
+* ldot.color0
+* ldot.color1
+* less
+* less.color0
+* less.color1
+* lessequal
+* lessequal.color0
+* lessequal.color1
+* lessequal.color2
+* lira
+* lira.color0
+* lira.color1
+* lira.color4
+* logicalnot
+* logicalnot.color0
+* lslash
+* lslash.color0
+* lslash.color1
+* lslash.color2
+* m
+* m.color0
+* m.color1
+* m.color2
+* m.color3
+* m.color4
+* minus
+* minute
+* multiply
+* multiply.color0
+* multiply.color1
+* multiply.color2
+* multiply.color3
+* n
+* n.color0
+* n.color1
+* n.color2
+* nacute
+* nacute.color0
+* nacute.color1
+* nacute.color2
+* nacute.color3
+* ncaron
+* ncaron.color0
+* ncaron.color1
+* ncaron.color2
+* nine
+* nine.color0
+* nine.color1
+* nine.color2
+* nine.color3
+* nine.color4
+* nine.lf
+* nine.lf.color0
+* nine.lf.color1
+* nine.lf.color2
+* nine.lf.color3
+* nine.lf.color4
+* notequal
+* notequal.color0
+* notequal.color1
+* notequal.color2
+* ntilde
+* ntilde.color0
+* ntilde.color1
+* ntilde.color2
+* numbersign
+* numbersign.color0
+* numbersign.color1
+* numbersign.color2
+* numbersign.color3
+* o
+* o.color0
+* o.color1
+* o.color2
+* o.color3
+* oacute
+* oacute.color0
+* oacute.color1
+* oacute.color2
+* oacute.color3
+* oacute.color4
+* obreve
+* obreve.color0
+* obreve.color1
+* obreve.color2
+* obreve.color3
+* ocircumflex
+* ocircumflex.color0
+* ocircumflex.color1
+* ocircumflex.color2
+* ocircumflex.color3
+* odieresis
+* odieresis.color0
+* odieresis.color1
+* odieresis.color2
+* odieresis.color3
+* oe
+* oe.color0
+* oe.color1
+* oe.color2
+* oe.color3
+* oe.color5
+* oe.color6
+* oe.color7
+* ogonek
+* ograve
+* ograve.color0
+* ograve.color1
+* ograve.color2
+* ograve.color3
+* ohorn
+* ohorn.color0
+* ohorn.color1
+* ohorn.color2
+* ohorn.color3
+* ohungarumlaut
+* ohungarumlaut.color0
+* ohungarumlaut.color1
+* ohungarumlaut.color2
+* ohungarumlaut.color3
+* omacron
+* omacron.color0
+* omacron.color1
+* omacron.color2
+* omacron.color3
+* one
+* one.color0
+* one.color1
+* one.color2
+* one.color3
+* one.lf
+* one.lf.color0
+* one.lf.color1
+* one.lf.color2
+* one.lf.color3
+* onehalf
+* onehalf.color0
+* onehalf.color4
+* onehalf.color6
+* onehalf.color7
+* onequarter
+* onequarter.color0
+* onequarter.color4
+* onequarter.color6
+* ordfeminine
+* ordmasculine
+* oslash
+* oslash.color0
+* oslash.color1
+* oslash.color2
+* oslash.color3
+* oslash.color4
+* oslashacute
+* oslashacute.color0
+* oslashacute.color1
+* oslashacute.color2
+* oslashacute.color3
+* oslashacute.color4
+* oslashacute.color5
+* otilde
+* otilde.color0
+* otilde.color1
+* otilde.color2
+* otilde.color3
+* p
+* p.color0
+* p.color1
+* p.color2
+* p.color3
+* p.color4
+* paragraph
+* paragraph.color0
+* paragraph.color1
+* paragraph.color2
+* paragraph.color3
+* paragraph.color4
+* parenleft
+* parenleft.color0
+* parenleft.color1
+* parenleft.color2
+* parenright
+* parenright.color0
+* parenright.color1
+* parenright.color2
+* percent
+* percent.color0
+* percent.color1
+* percent.color2
+* percent.color3
+* percent.color4
+* percent.color5
+* percent.color6
+* percent.color7
+* percent.color8
+* perthousand
+* perthousand.color0
+* perthousand.color1
+* perthousand.color10
+* perthousand.color11
+* perthousand.color12
+* perthousand.color2
+* perthousand.color3
+* perthousand.color4
+* perthousand.color5
+* perthousand.color6
+* perthousand.color7
+* perthousand.color8
+* perthousand.color9
+* peseta
+* peseta.color0
+* peseta.color1
+* peseta.color3
+* peseta.color4
+* plus
+* plus.color2
+* plus.color3
+* plusminus
+* plusminus.color0
+* plusminus.color1
+* plusminus.color3
+* plusminus.color4
+* q
+* q.color0
+* q.color1
+* q.color2
+* q.color3
+* question
+* question.color0
+* question.color1
+* question.color3
+* question.color4
+* questiondown
+* questiondown.color0
+* questiondown.color1
+* questiondown.color2
+* questiondown.color3
+* quotedbl
+* quotedblbase
+* quotedblleft
+* quotedblright
+* quoteleft
+* quoteright
+* quotesinglbase
+* quotesingle
+* r
+* r.color0
+* r.color1
+* racute
+* racute.color0
+* racute.color1
+* racute.color2
+* rcaron
+* rcaron.color0
+* rcaron.color1
+* registered
+* registered.color0
+* ring
+* s
+* s.color0
+* s.color1
+* s.color2
+* sacute
+* sacute.color0
+* sacute.color1
+* sacute.color2
+* sacute.color3
+* scaron
+* scaron.color0
+* scaron.color1
+* scaron.color2
+* scedilla
+* scedilla.color0
+* scedilla.color1
+* scedilla.color2
+* scircumflex
+* scircumflex.color0
+* scircumflex.color1
+* scircumflex.color2
+* second
+* second.color0
+* second.color1
+* section
+* section.color0
+* section.color2
+* section.color3
+* section.color4
+* section.color5
+* semicolon
+* seven
+* seven.color0
+* seven.color1
+* seven.lf
+* seven.lf.color0
+* seven.lf.color1
+* six
+* six.color0
+* six.color1
+* six.color2
+* six.color3
+* six.color4
+* six.color5
+* six.lf
+* six.lf.color0
+* six.lf.color1
+* six.lf.color2
+* six.lf.color3
+* six.lf.color4
+* six.lf.color5
+* slash
+* sterling
+* sterling.color0
+* sterling.color1
+* sterling.color2
+* sterling.color3
+* t
+* t.color0
+* t.color1
+* t.color2
+* t.color3
+* tbar
+* tbar.color1
+* tbar.color2
+* tbar.color3
+* tbar.color4
+* tcaron
+* tcaron.color0
+* tcaron.color1
+* tcaron.color2
+* tcaron.color3
+* thorn
+* thorn.color0
+* thorn.color1
+* thorn.color2
+* thorn.color3
+* thorn.color4
+* three
+* three.color0
+* three.color1
+* three.color2
+* three.color3
+* three.color4
+* three.lf
+* three.lf.color0
+* three.lf.color1
+* three.lf.color2
+* three.lf.color3
+* three.lf.color4
+* threequarters
+* threequarters.color5
+* threequarters.color7
+* tilde
+* tildecomb
+* tildecomb.case
+* trademark
+* trademark.color2
+* trademark.color6
+* two
+* two.color0
+* two.color1
+* two.color2
+* two.lf
+* two.lf.color0
+* two.lf.color1
+* two.lf.color2
+* u
+* u.color0
+* u.color1
+* u.color2
+* uacute
+* uacute.color0
+* uacute.color1
+* uacute.color2
+* uacute.color3
+* ubreve
+* ubreve.color0
+* ubreve.color1
+* ubreve.color2
+* ucircumflex
+* ucircumflex.color0
+* ucircumflex.color1
+* ucircumflex.color2
+* udieresis
+* udieresis.color0
+* udieresis.color1
+* udieresis.color2
+* ugrave
+* ugrave.color0
+* ugrave.color1
+* ugrave.color2
+* uhorn
+* uhorn.color0
+* uhorn.color1
+* uhorn.color2
+* uhungarumlaut
+* uhungarumlaut.color0
+* uhungarumlaut.color1
+* uhungarumlaut.color2
+* umacron
+* umacron.color0
+* umacron.color1
+* umacron.color2
+* underscore
+* uni00AD
+* uni00B2
+* uni00B2.color1
+* uni00B2.color2
+* uni00B3
+* uni00B5
+* uni00B5.color0
+* uni00B5.color3
+* uni00B9
+* uni00B9.color0
+* uni0122
+* uni0122.color0
+* uni0122.color1
+* uni0122.color2
+* uni0122.color3
+* uni0122.color4
+* uni0123
+* uni0123.color0
+* uni0123.color1
+* uni0123.color2
+* uni0123.color3
+* uni0123.color4
+* uni0136
+* uni0136.color0
+* uni0136.color1
+* uni0136.color2
+* uni0136.color3
+* uni0137
+* uni0137.color0
+* uni0137.color1
+* uni0137.color2
+* uni0137.color3
+* uni013B
+* uni013B.color0
+* uni013B.color1
+* uni013C
+* uni013C.color0
+* uni013C.color1
+* uni0145
+* uni0145.color0
+* uni0145.color1
+* uni0145.color2
+* uni0146
+* uni0146.color0
+* uni0146.color1
+* uni0146.color2
+* uni0156
+* uni0156.color0
+* uni0156.color1
+* uni0156.color2
+* uni0156.color3
+* uni0156.color4
+* uni0157
+* uni0157.color0
+* uni0157.color1
+* uni0162
+* uni0162.color0
+* uni0162.color1
+* uni0162.color2
+* uni0163
+* uni0163.color0
+* uni0163.color1
+* uni0163.color2
+* uni0163.color3
+* uni018F
+* uni018F.color0
+* uni018F.color1
+* uni018F.color2
+* uni018F.color3
+* uni018F.color4
+* uni01C4
+* uni01C4.color0
+* uni01C4.color1
+* uni01C4.color2
+* uni01C4.color3
+* uni01C4.color4
+* uni01C4.color5
+* uni01C4.color6
+* uni01C5
+* uni01C5.color0
+* uni01C5.color1
+* uni01C5.color2
+* uni01C5.color3
+* uni01C5.color4
+* uni01C5.color5
+* uni01C5.color6
+* uni01C6
+* uni01C6.color0
+* uni01C6.color1
+* uni01C6.color2
+* uni01C6.color3
+* uni01C6.color4
+* uni01C6.color5
+* uni01C6.color6
+* uni01C6.color7
+* uni01C7
+* uni01C7.color0
+* uni01C7.color1
+* uni01C7.color2
+* uni01C7.color3
+* uni01C7.color4
+* uni01C8
+* uni01C8.color0
+* uni01C8.color1
+* uni01C8.color2
+* uni01C9
+* uni01C9.color0
+* uni01C9.color1
+* uni01C9.color2
+* uni01CA
+* uni01CA.color0
+* uni01CA.color1
+* uni01CA.color2
+* uni01CA.color3
+* uni01CA.color4
+* uni01CA.color5
+* uni01CB
+* uni01CB.color0
+* uni01CB.color1
+* uni01CB.color2
+* uni01CB.color3
+* uni01CC
+* uni01CC.color0
+* uni01CC.color1
+* uni01CC.color2
+* uni01CC.color3
+* uni01CD
+* uni01CD.color0
+* uni01CD.color1
+* uni01CD.color2
+* uni01CD.color3
+* uni01CE
+* uni01CE.color0
+* uni01CE.color1
+* uni01CE.color2
+* uni01CE.color3
+* uni01EA
+* uni01EA.color0
+* uni01EA.color1
+* uni01EA.color2
+* uni01EA.color3
+* uni01EB
+* uni01EB.color0
+* uni01EB.color1
+* uni01EB.color2
+* uni01EB.color3
+* uni0200
+* uni0200.color0
+* uni0200.color1
+* uni0200.color2
+* uni0200.color3
+* uni0201
+* uni0201.color0
+* uni0201.color1
+* uni0201.color2
+* uni0201.color3
+* uni0202
+* uni0202.color0
+* uni0202.color1
+* uni0202.color2
+* uni0202.color3
+* uni0203
+* uni0203.color0
+* uni0203.color1
+* uni0203.color2
+* uni0203.color3
+* uni0204
+* uni0204.color0
+* uni0204.color1
+* uni0204.color2
+* uni0204.color3
+* uni0205
+* uni0205.color0
+* uni0205.color1
+* uni0205.color3
+* uni0205.color4
+* uni0206
+* uni0206.color0
+* uni0206.color1
+* uni0206.color2
+* uni0206.color3
+* uni0207
+* uni0207.color0
+* uni0207.color1
+* uni0207.color3
+* uni0207.color4
+* uni0208
+* uni0208.color0
+* uni0208.color1
+* uni0208.color2
+* uni0208.color3
+* uni0208.color4
+* uni0209
+* uni0209.color1
+* uni020A
+* uni020A.color0
+* uni020A.color1
+* uni020A.color2
+* uni020A.color3
+* uni020A.color4
+* uni020B
+* uni020B.color1
+* uni020C
+* uni020C.color0
+* uni020C.color1
+* uni020C.color2
+* uni020C.color3
+* uni020D
+* uni020D.color0
+* uni020D.color1
+* uni020D.color2
+* uni020D.color3
+* uni020E
+* uni020E.color0
+* uni020E.color1
+* uni020E.color2
+* uni020E.color3
+* uni020F
+* uni020F.color0
+* uni020F.color1
+* uni020F.color2
+* uni020F.color3
+* uni0210
+* uni0210.color0
+* uni0210.color1
+* uni0210.color2
+* uni0210.color3
+* uni0210.color4
+* uni0211
+* uni0211.color0
+* uni0211.color1
+* uni0212
+* uni0212.color0
+* uni0212.color1
+* uni0212.color2
+* uni0212.color3
+* uni0212.color4
+* uni0213
+* uni0213.color0
+* uni0213.color1
+* uni0214
+* uni0214.color0
+* uni0214.color1
+* uni0214.color2
+* uni0215
+* uni0215.color0
+* uni0215.color1
+* uni0215.color2
+* uni0216
+* uni0216.color0
+* uni0216.color1
+* uni0216.color2
+* uni0217
+* uni0217.color0
+* uni0217.color1
+* uni0217.color2
+* uni0218
+* uni0218.color0
+* uni0218.color1
+* uni0218.color2
+* uni0218.color3
+* uni0218.color4
+* uni0219
+* uni0219.color0
+* uni0219.color1
+* uni0219.color2
+* uni021A
+* uni021A.color0
+* uni021A.color1
+* uni021A.color2
+* uni021B
+* uni021B.color0
+* uni021B.color1
+* uni021B.color2
+* uni021B.color3
+* uni022A
+* uni022A.color0
+* uni022A.color1
+* uni022A.color2
+* uni022A.color3
+* uni022B
+* uni022B.color0
+* uni022B.color1
+* uni022B.color2
+* uni022B.color3
+* uni022C
+* uni022C.color0
+* uni022C.color1
+* uni022C.color2
+* uni022C.color3
+* uni022D
+* uni022D.color0
+* uni022D.color1
+* uni022D.color2
+* uni022D.color3
+* uni0230
+* uni0230.color0
+* uni0230.color1
+* uni0230.color2
+* uni0230.color3
+* uni0231
+* uni0231.color0
+* uni0231.color1
+* uni0231.color2
+* uni0231.color3
+* uni0232
+* uni0232.color0
+* uni0232.color1
+* uni0232.color2
+* uni0233
+* uni0233.color0
+* uni0233.color1
+* uni0233.color2
+* uni0233.color3
+* uni0237
+* uni0237.color0
+* uni0259
+* uni0259.color0
+* uni0259.color1
+* uni0259.color2
+* uni0259.color4
+* uni02B9
+* uni02BA
+* uni02BA.color0
+* uni02BA.color1
+* uni02BC
+* uni0302
+* uni0302.case
+* uni03020300
+* uni03020300.case
+* uni03020301
+* uni03020301.case
+* uni03020303
+* uni03020303.case
+* uni03020309
+* uni03020309.case
+* uni0306
+* uni0306.case
+* uni03060300
+* uni03060300.case
+* uni03060301
+* uni03060301.case
+* uni03060303
+* uni03060303.case
+* uni03060309
+* uni03060309.case
+* uni030A
+* uni030A.case
+* uni030B
+* uni030B.case
+* uni030C
+* uni030C.case
+* uni030F
+* uni030F.case
+* uni0311
+* uni0311.case
+* uni031B
+* uni031B.case
+* uni0327
+* uni0328
+* uni032E
+* uni0335
+* uni1E9E
+* uni1E9E.color0
+* uni1E9E.color2
+* uni1E9E.color3
+* uni1E9E.color4
+* uni1E9E.color5
+* uni1EA0
+* uni1EA0.color0
+* uni1EA0.color1
+* uni1EA0.color2
+* uni1EA0.color3
+* uni1EA1
+* uni1EA1.color0
+* uni1EA1.color1
+* uni1EA1.color2
+* uni1EA1.color3
+* uni1EA2
+* uni1EA2.color0
+* uni1EA2.color1
+* uni1EA2.color2
+* uni1EA2.color3
+* uni1EA3
+* uni1EA3.color0
+* uni1EA3.color1
+* uni1EA3.color2
+* uni1EA3.color3
+* uni1EA4
+* uni1EA4.color0
+* uni1EA4.color1
+* uni1EA4.color2
+* uni1EA4.color3
+* uni1EA5
+* uni1EA5.color0
+* uni1EA5.color1
+* uni1EA5.color2
+* uni1EA5.color3
+* uni1EA6
+* uni1EA6.color0
+* uni1EA6.color1
+* uni1EA6.color2
+* uni1EA6.color3
+* uni1EA7
+* uni1EA7.color0
+* uni1EA7.color1
+* uni1EA7.color2
+* uni1EA7.color3
+* uni1EA8
+* uni1EA8.color0
+* uni1EA8.color1
+* uni1EA8.color2
+* uni1EA8.color3
+* uni1EA9
+* uni1EA9.color0
+* uni1EA9.color1
+* uni1EA9.color2
+* uni1EA9.color3
+* uni1EAA
+* uni1EAA.color0
+* uni1EAA.color1
+* uni1EAA.color2
+* uni1EAA.color3
+* uni1EAB
+* uni1EAB.color0
+* uni1EAB.color1
+* uni1EAB.color2
+* uni1EAB.color3
+* uni1EAC
+* uni1EAC.color0
+* uni1EAC.color1
+* uni1EAC.color2
+* uni1EAC.color3
+* uni1EAD
+* uni1EAD.color0
+* uni1EAD.color1
+* uni1EAD.color2
+* uni1EAD.color3
+* uni1EAE
+* uni1EAE.color0
+* uni1EAE.color1
+* uni1EAE.color2
+* uni1EAE.color3
+* uni1EAF
+* uni1EAF.color0
+* uni1EAF.color1
+* uni1EAF.color2
+* uni1EAF.color3
+* uni1EB0
+* uni1EB0.color0
+* uni1EB0.color1
+* uni1EB0.color2
+* uni1EB0.color3
+* uni1EB1
+* uni1EB1.color0
+* uni1EB1.color1
+* uni1EB1.color2
+* uni1EB1.color3
+* uni1EB2
+* uni1EB2.color0
+* uni1EB2.color1
+* uni1EB2.color2
+* uni1EB2.color3
+* uni1EB3
+* uni1EB3.color0
+* uni1EB3.color1
+* uni1EB3.color2
+* uni1EB3.color3
+* uni1EB4
+* uni1EB4.color0
+* uni1EB4.color1
+* uni1EB4.color2
+* uni1EB4.color3
+* uni1EB5
+* uni1EB5.color0
+* uni1EB5.color1
+* uni1EB5.color2
+* uni1EB5.color3
+* uni1EB6
+* uni1EB6.color0
+* uni1EB6.color1
+* uni1EB6.color2
+* uni1EB6.color3
+* uni1EB7
+* uni1EB7.color0
+* uni1EB7.color1
+* uni1EB7.color2
+* uni1EB7.color3
+* uni1EB8
+* uni1EB8.color0
+* uni1EB8.color1
+* uni1EB8.color2
+* uni1EB8.color3
+* uni1EB9
+* uni1EB9.color0
+* uni1EB9.color1
+* uni1EB9.color3
+* uni1EB9.color4
+* uni1EBA
+* uni1EBA.color0
+* uni1EBA.color1
+* uni1EBA.color2
+* uni1EBA.color3
+* uni1EBB
+* uni1EBB.color0
+* uni1EBB.color1
+* uni1EBB.color3
+* uni1EBB.color4
+* uni1EBC
+* uni1EBC.color0
+* uni1EBC.color1
+* uni1EBC.color2
+* uni1EBC.color3
+* uni1EBD
+* uni1EBD.color0
+* uni1EBD.color1
+* uni1EBD.color3
+* uni1EBD.color4
+* uni1EBE
+* uni1EBE.color0
+* uni1EBE.color1
+* uni1EBE.color2
+* uni1EBE.color3
+* uni1EBF
+* uni1EBF.color0
+* uni1EBF.color1
+* uni1EBF.color3
+* uni1EBF.color4
+* uni1EC0
+* uni1EC0.color0
+* uni1EC0.color1
+* uni1EC0.color2
+* uni1EC0.color3
+* uni1EC1
+* uni1EC1.color0
+* uni1EC1.color1
+* uni1EC1.color3
+* uni1EC1.color4
+* uni1EC2
+* uni1EC2.color0
+* uni1EC2.color1
+* uni1EC2.color2
+* uni1EC2.color3
+* uni1EC3
+* uni1EC3.color0
+* uni1EC3.color1
+* uni1EC3.color3
+* uni1EC3.color4
+* uni1EC4
+* uni1EC4.color0
+* uni1EC4.color1
+* uni1EC4.color2
+* uni1EC4.color3
+* uni1EC5
+* uni1EC5.color0
+* uni1EC5.color1
+* uni1EC5.color3
+* uni1EC5.color4
+* uni1EC6
+* uni1EC6.color0
+* uni1EC6.color1
+* uni1EC6.color2
+* uni1EC6.color3
+* uni1EC7
+* uni1EC7.color0
+* uni1EC7.color1
+* uni1EC7.color3
+* uni1EC7.color4
+* uni1EC8
+* uni1EC8.color0
+* uni1EC8.color1
+* uni1EC8.color2
+* uni1EC8.color3
+* uni1EC8.color4
+* uni1EC9
+* uni1EC9.color1
+* uni1ECA
+* uni1ECA.color0
+* uni1ECA.color1
+* uni1ECA.color2
+* uni1ECA.color3
+* uni1ECA.color4
+* uni1ECB
+* uni1ECB.color0
+* uni1ECC
+* uni1ECC.color0
+* uni1ECC.color1
+* uni1ECC.color2
+* uni1ECC.color3
+* uni1ECD
+* uni1ECD.color0
+* uni1ECD.color1
+* uni1ECD.color2
+* uni1ECD.color3
+* uni1ECE
+* uni1ECE.color0
+* uni1ECE.color1
+* uni1ECE.color2
+* uni1ECE.color3
+* uni1ECF
+* uni1ECF.color0
+* uni1ECF.color1
+* uni1ECF.color2
+* uni1ECF.color3
+* uni1ED0
+* uni1ED0.color0
+* uni1ED0.color1
+* uni1ED0.color2
+* uni1ED0.color3
+* uni1ED1
+* uni1ED1.color0
+* uni1ED1.color1
+* uni1ED1.color2
+* uni1ED1.color3
+* uni1ED2
+* uni1ED2.color0
+* uni1ED2.color1
+* uni1ED2.color2
+* uni1ED2.color3
+* uni1ED3
+* uni1ED3.color0
+* uni1ED3.color1
+* uni1ED3.color2
+* uni1ED3.color3
+* uni1ED4
+* uni1ED4.color0
+* uni1ED4.color1
+* uni1ED4.color2
+* uni1ED4.color3
+* uni1ED5
+* uni1ED5.color0
+* uni1ED5.color1
+* uni1ED5.color2
+* uni1ED5.color3
+* uni1ED6
+* uni1ED6.color0
+* uni1ED6.color1
+* uni1ED6.color2
+* uni1ED6.color3
+* uni1ED7
+* uni1ED7.color0
+* uni1ED7.color1
+* uni1ED7.color2
+* uni1ED7.color3
+* uni1ED8
+* uni1ED8.color0
+* uni1ED8.color1
+* uni1ED8.color2
+* uni1ED8.color3
+* uni1ED9
+* uni1ED9.color0
+* uni1ED9.color1
+* uni1ED9.color2
+* uni1ED9.color3
+* uni1EDA
+* uni1EDA.color0
+* uni1EDA.color1
+* uni1EDA.color2
+* uni1EDA.color3
+* uni1EDB
+* uni1EDB.color0
+* uni1EDB.color1
+* uni1EDB.color2
+* uni1EDB.color3
+* uni1EDB.color6
+* uni1EDC
+* uni1EDC.color0
+* uni1EDC.color1
+* uni1EDC.color2
+* uni1EDC.color3
+* uni1EDD
+* uni1EDD.color0
+* uni1EDD.color1
+* uni1EDD.color2
+* uni1EDD.color3
+* uni1EDE
+* uni1EDE.color0
+* uni1EDE.color1
+* uni1EDE.color2
+* uni1EDE.color3
+* uni1EDF
+* uni1EDF.color0
+* uni1EDF.color1
+* uni1EDF.color2
+* uni1EDF.color3
+* uni1EE0
+* uni1EE0.color0
+* uni1EE0.color1
+* uni1EE0.color2
+* uni1EE0.color3
+* uni1EE1
+* uni1EE1.color0
+* uni1EE1.color1
+* uni1EE1.color2
+* uni1EE1.color3
+* uni1EE2
+* uni1EE2.color0
+* uni1EE2.color1
+* uni1EE2.color2
+* uni1EE2.color3
+* uni1EE3
+* uni1EE3.color0
+* uni1EE3.color1
+* uni1EE3.color2
+* uni1EE3.color3
+* uni1EE4
+* uni1EE4.color0
+* uni1EE4.color1
+* uni1EE4.color2
+* uni1EE5
+* uni1EE5.color0
+* uni1EE5.color1
+* uni1EE5.color2
+* uni1EE6
+* uni1EE6.color0
+* uni1EE6.color1
+* uni1EE6.color2
+* uni1EE7
+* uni1EE7.color0
+* uni1EE7.color1
+* uni1EE7.color2
+* uni1EE8
+* uni1EE8.color0
+* uni1EE8.color1
+* uni1EE8.color2
+* uni1EE9
+* uni1EE9.color0
+* uni1EE9.color1
+* uni1EE9.color2
+* uni1EE9.color5
+* uni1EEA
+* uni1EEA.color0
+* uni1EEA.color1
+* uni1EEA.color2
+* uni1EEB
+* uni1EEB.color0
+* uni1EEB.color1
+* uni1EEB.color2
+* uni1EEC
+* uni1EEC.color0
+* uni1EEC.color1
+* uni1EEC.color2
+* uni1EED
+* uni1EED.color0
+* uni1EED.color1
+* uni1EED.color2
+* uni1EEE
+* uni1EEE.color0
+* uni1EEE.color1
+* uni1EEE.color2
+* uni1EEF
+* uni1EEF.color0
+* uni1EEF.color1
+* uni1EEF.color2
+* uni1EF0
+* uni1EF0.color0
+* uni1EF0.color1
+* uni1EF0.color2
+* uni1EF1
+* uni1EF1.color0
+* uni1EF1.color1
+* uni1EF1.color2
+* uni1EF4
+* uni1EF4.color0
+* uni1EF4.color1
+* uni1EF4.color2
+* uni1EF5
+* uni1EF5.color0
+* uni1EF5.color1
+* uni1EF5.color2
+* uni1EF5.color3
+* uni1EF6
+* uni1EF6.color0
+* uni1EF6.color1
+* uni1EF6.color2
+* uni1EF7
+* uni1EF7.color0
+* uni1EF7.color1
+* uni1EF7.color2
+* uni1EF7.color3
+* uni1EF8
+* uni1EF8.color0
+* uni1EF8.color1
+* uni1EF8.color2
+* uni1EF9
+* uni1EF9.color0
+* uni1EF9.color1
+* uni1EF9.color2
+* uni1EF9.color3
+* uni2010
+* uni2052
+* uni2052.color0
+* uni2074
+* uni2074.color1
+* uni20A6
+* uni20A6.color0
+* uni20A6.color1
+* uni20A6.color4
+* uni20A9
+* uni20A9.color0
+* uni20A9.color1
+* uni20A9.color4
+* uni20A9.color5
+* uni20AD
+* uni20AD.color0
+* uni20AD.color1
+* uni20AD.color2
+* uni20AD.color3
+* uni20AD.color4
+* uni20B1
+* uni20B1.color0
+* uni20B1.color1
+* uni20B1.color4
+* uni20B1.color5
+* uni20B2
+* uni20B2.color0
+* uni20B2.color1
+* uni20B2.color2
+* uni20B2.color3
+* uni20B2.color4
+* uni20B2.color5
+* uni20B5
+* uni20B5.color0
+* uni20B5.color1
+* uni20B5.color2
+* uni20B5.color3
+* uni20B9
+* uni20B9.color0
+* uni20B9.color1
+* uni20B9.color3
+* uni20B9.color4
+* uni20B9.color5
+* uni20BA
+* uni20BA.color0
+* uni20BA.color2
+* uni20BA.color4
+* uni20BC
+* uni20BC.color0
+* uni20BC.color1
+* uni20BC.color2
+* uni20BC.color3
+* uni20BD
+* uni20BD.color0
+* uni20BD.color3
+* uni20BD.color4
+* uni20BD.color5
+* uni2116
+* uni2116.color0
+* uni2116.color1
+* uni2116.color2
+* uni2116.color3
+* uni2116.color5
+* uni2116.color6
+* uni2116.color7
+* uni2215
+* uni2219
+* uni27E8
+* uni27E8.color0
+* uni27E8.color1
+* uni27E9
+* uni27E9.color0
+* uni27E9.color1
+* uogonek
+* uogonek.color0
+* uogonek.color1
+* uogonek.color2
+* uring
+* uring.color0
+* uring.color1
+* uring.color2
+* utilde
+* utilde.color0
+* utilde.color1
+* utilde.color2
+* v
+* v.color0
+* v.color1
+* v.color2
+* w
+* w.color0
+* w.color1
+* w.color2
+* w.color3
+* w.color4
+* wacute
+* wacute.color0
+* wacute.color1
+* wacute.color2
+* wacute.color3
+* wacute.color4
+* wacute.color5
+* wcircumflex
+* wcircumflex.color0
+* wcircumflex.color1
+* wcircumflex.color2
+* wcircumflex.color3
+* wcircumflex.color4
+* wdieresis
+* wdieresis.color0
+* wdieresis.color1
+* wdieresis.color2
+* wdieresis.color3
+* wdieresis.color4
+* wgrave
+* wgrave.color0
+* wgrave.color1
+* wgrave.color2
+* wgrave.color3
+* wgrave.color4
+* x
+* x.color0
+* x.color1
+* x.color2
+* x.color3
+* y
+* y.color0
+* y.color1
+* y.color2
+* y.color3
+* yacute
+* yacute.color0
+* yacute.color1
+* yacute.color2
+* yacute.color3
+* yacute.color4
+* ycircumflex
+* ycircumflex.color0
+* ycircumflex.color1
+* ycircumflex.color2
+* ycircumflex.color3
+* ydieresis
+* ydieresis.color0
+* ydieresis.color1
+* ydieresis.color2
+* ydieresis.color3
+* yen
+* yen.color2
+* yen.color3
+* yen.color4
+* ygrave
+* ygrave.color0
+* ygrave.color1
+* ygrave.color2
+* ygrave.color3
+* z
+* z.color0
+* z.color1
+* z.color2
+* zacute
+* zacute.color0
+* zacute.color1
+* zacute.color2
+* zacute.color3
+* zcaron
+* zcaron.color0
+* zcaron.color1
+* zcaron.color2
+* zdotaccent
+* zdotaccent.color0
+* zdotaccent.color1
+* zdotaccent.color2
+* zero
+* zero.color0
+* zero.color1
+* zero.color2
+* zero.color3
+* zero.color4
+* zero.lf
+* zero.lf.color0
+* zero.lf.color1
+* zero.lf.color2
+* zero.lf.color3 and zero.lf.color4</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f
+
+- i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>A static fonts directory with at least two fonts must accompany variable fonts</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider adding a subdirectory called &quot;static/&quot; and including in it static font files. [code: missing]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>💥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- uni004A0301
+
+- uni006A0301
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Detect any interpolation issues in the font.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 0 start point differs in glyph 'uni1EC9.color0' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19e40&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19c90&gt;</p>
+<pre><code>- Contour 0 start point differs in glyph 'notequal.color1' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19e40&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19c90&gt;
+
+- Contour 1 start point differs in glyph 'notequal' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19e40&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19c90&gt;
+
+- Contour 0 start point differs in glyph 'uni1EC9' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19e40&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x106e19c90&gt; [code: interpolation-issues]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 297 among a set of 4 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 217:
+plus</p>
+<p>Width = 238:
+less</p>
+<p>Width = 296:
+equal, notequal, divide</p>
+<p>Width = 268:
+greater</p>
+<p>Width = 256:
+multiply</p>
+<p>Width = 267:
+minus</p>
+<p>Width = 299:
+approxequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h3>Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+
+<details><summary>💥 Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>💥 ERROR</span><span class='details_text'><p>Failed with TypeError: cannot unpack non-iterable float object</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⚠️⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+<details><summary>⚠️ Foldit[wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ ị̀ ị́ ị̂ ị̃ ị̄</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ j̦̀ j̦́ j̦̃ j̦̄ j̦̆ j̦̇ j̦̈ j̦̉ j̦̊ j̦̋ ǰ̦ j̦̏ j̦̑ j̦̒ į̆</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Navajo (Latn, 166,319 speakers), Dutch (Latn, 31,709,104 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Belarusian (Cyrl, 10,064,517 speakers), Basaa (Latn, 332,940 speakers), Lithuanian (Latn, 2,357,094 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>
