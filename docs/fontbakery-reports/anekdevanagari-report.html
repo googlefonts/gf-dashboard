@@ -549,8 +549,8 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, cherokee, coptic, math</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, coptic, math, canadian-aboriginal, tifinagh, old-permic, syriac, malayalam</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, tifinagh, cherokee</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, tifinagh, canadian-aboriginal, syriac, old-permic, math, malayalam</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
@@ -572,7 +572,7 @@ definitions.</p>
 <li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
 <li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
 <li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: yi, symbols, tai-tham, math</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, math, symbols, yi</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
 </ul>
@@ -1810,8 +1810,8 @@ FONT_FAMILY_NAME = 'Anek Devanagari Medium' / SUBFAMILY_NAME = 'Regular'</p>
 <h3>Detect any interpolation issues in the font.</h3>
 <div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
 
-<details><summary>⚠️ AnekDevanagari[wdth,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 0 start point differs in glyph 'MaBa.dv' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7fa330c5c2d0&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7fa330c2aa50&gt;</p>
-<pre><code>- Contour 0 start point differs in glyph 'MaBhaHalant.dv' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7fa330c5c2d0&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7fa330c2aa50&gt; [code: interpolation-issues]
+<details><summary>⚠️ AnekDevanagari[wdth,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Interpolation issues were found in the font: 	- Contour 0 start point differs in glyph 'MaBhaHalant.dv' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f3c2cce80d0&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f3c2968a950&gt;</p>
+<pre><code>- Contour 0 start point differs in glyph 'MaBa.dv' between location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f3c2cce80d0&gt; and location &lt;fontTools.ttLib.ttGlyphSet._TTGlyphSetGlyf object at 0x7f3c2968a950&gt; [code: interpolation-issues]
 </code></pre>
 </span></li></ul></div></details>
 <h3>Check math signs have the same width.</h3>
@@ -1822,7 +1822,7 @@ The following math glyphs have a different width, though:</p>
 <p>Width = 1029:
 greater, less</p>
 <p>Width = 1031:
-equal, plusminus</p>
+plusminus, equal</p>
 <p>Width = 1018:
 logicalnot</p>
 <p>Width = 958:
@@ -1905,7 +1905,7 @@ U+0060, U+00A8, U+00AF, U+00B4, U+00B7, U+00B8, U+02C6, U+02DA and U+02DC [code:
 
 <details><summary>⚠️ AnekDevanagari[wdth,wght].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: j̀ j́ j̃ j̄ j̈</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̇ i̧̇ ĵ j̇ j̊ j̧̇</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Avokaya (Latn, 100,000 speakers), Navajo (Latn, 166,319 speakers), Basaa (Latn, 332,940 speakers), Lugbara (Latn, 2,200,000 speakers), Ma’di (Latn, 584,000 speakers), Koonzime (Latn, 40,000 speakers), Kom (Latn, 360,685 speakers), Belarusian (Cyrl, 10,064,517 speakers), Dan (Latn, 1,099,244 speakers), Nateni (Latn, 100,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers), Ejagham (Latn, 120,000 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers). [code: soft-dotted]</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Dan (Latn, 1,099,244 speakers), Koonzime (Latn, 40,000 speakers), Igbo (Latn, 27,823,640 speakers), Basaa (Latn, 332,940 speakers), Avokaya (Latn, 100,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Kom (Latn, 360,685 speakers), Ejagham (Latn, 120,000 speakers), Ebira (Latn, 2,200,000 speakers), Dutch (Latn, 31,709,104 speakers), Ma’di (Latn, 584,000 speakers), Navajo (Latn, 166,319 speakers), Belarusian (Cyrl, 10,064,517 speakers), Aghem (Latn, 38,843 speakers), Nateni (Latn, 100,000 speakers), Lugbara (Latn, 2,200,000 speakers), Lithuanian (Latn, 2,357,094 speakers). [code: soft-dotted]</p>
 </span></li></ul></div></details>
                         </main>
                     </body>
