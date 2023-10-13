@@ -1,19 +1,21 @@
-import sys
-import os
+import datetime
 import glob
-import anybadge
-import humanize
+import itertools
 import json
-import tqdm
-import time
-import re
-import github
+import os
 import subprocess
-from googlefonts import GoogleFont
+import time
+from pathlib import Path
+
+import anybadge
+import fontbakery
+from packaging.version import parse as parse_version
+import humanize
+import tqdm
 from gftools.push.servers import GFServers
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import datetime
-import itertools
+
+from googlefonts import GoogleFont
 
 FONTBAKERY_BLACKLISTED = ["handjet", "adobeblank"]
 
@@ -39,13 +41,14 @@ reports_this_session = 100
 def fontbakery_needs_update(directory, last_update: datetime.datetime):
     global reports_this_session
     basedir = os.path.basename(directory)
-    report_file = "docs/fontbakery-reports/" + basedir + "-report.html"
+    report_file = Path("docs/fontbakery-reports/" + basedir + "-report.json")
     if basedir in FONTBAKERY_BLACKLISTED:
         return False
-    if (
-        os.path.exists(report_file)
-        and os.path.getmtime(report_file) > last_update.timestamp()
-    ):
+    if report_file.exists():
+        report = json.load(open(report_file))
+        if "fontbakery_version" in report and parse_version(report["fontbakery_version"]) < parse_version(fontbakery.__version__):
+            return True
+    if report_file.exists() and report_file.stat().st_mtime > last_update.timestamp():
         return False
     reports_this_session -= 1
     return reports_this_session >= 0
@@ -55,6 +58,11 @@ def run_fontbakery(directory):
     inputs = glob.glob(directory + "/*")
     basedir = os.path.basename(directory)
     os.makedirs("docs/fontbakery-reports/" + basedir, exist_ok=True)
+    json_file = Path(f"docs/fontbakery-reports/{basedir}-report.json")
+    if json_file.exists():
+        previous_json_time = json_file.stat().st_mtime
+    else:
+        previous_json_time = None
     args = [
         "fontbakery",
         f"check-googlefonts",
@@ -69,11 +77,17 @@ def run_fontbakery(directory):
         "--html",
         f"docs/fontbakery-reports/{basedir}-report.html",
         "--json",
-        f"docs/fontbakery-reports/{basedir}-report.json",
+        json_file,
         *inputs,
     ]
     args = " ".join(args)
     result = subprocess.run(args, shell=True, capture_output=True)
+    if json_file.exists and (
+        previous_json_time is None or json_file.stat().st_mtime > previous_json_time
+    ):
+        report = json.load(open(json_file))
+        report["fontbakery_version"] = fontbakery.__version__
+        json.dump(report, open(json_file, "w"))
 
 
 def fontbakery_fails(basedir):
