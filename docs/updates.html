@@ -114,15 +114,16 @@
                         if (!(date in movesbydate)) {
                             movesbydate[date] = []
                         }
-                        movesbydate[date].push([name, server])
+                        var version = move["version"].replace(/;.*/, "").replace("Version", "version");
+                        movesbydate[date].push([name, version, server])
                     }
                 }
             }
             for (var date of Object.keys(movesbydate).sort().reverse()) {
                 $("#main").append("<h5>" + date + "</h5>")
                 ul = $("<ul/>")
-                for (var [name, server] of movesbydate[date].sort()) {
-                    ul.append($(`<li class="${server}"> ${name} → ${server} </li>`))
+                for (var [name, version, server] of movesbydate[date].sort()) {
+                    ul.append($(`<li> <span class="${server}">${name}</span> ${version} → <span class="${server}">${server}</span> </li>`))
                 }
                 $("#main").append(ul)
             }
