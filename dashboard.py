@@ -7,9 +7,10 @@ import subprocess
 import time
 from pathlib import Path
 from collections import Counter, defaultdict
+from urllib.parse import quote
 
-import anybadge
 import fontbakery
+import htmlmin
 from packaging.version import parse as parse_version
 from shaperglot.languages import Languages
 from gflanguages import LoadScripts
@@ -21,6 +22,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from googlefonts import GoogleFont
 
 FONTBAKERY_BLACKLISTED = ["handjet", "adobeblank"]
+
+BASE_URL = "https://simoncozens.github.io/gf-dashboard/"
 
 TESTING = False
 
@@ -123,14 +126,8 @@ def fontbakery_badges(basedir):
     for badge in glob.glob(f"docs/fontbakery-reports/{basedir}/*.json"):
         if "Shaping" in badge:
             continue
-        result = json.load(open(badge))
-        color = result["color"].replace("bright", "light")
-        try:
-            anybadge.Color[color.upper()]
-        except KeyError:
-            color = "lightgrey"
-        badge = anybadge.Badge(result["label"], result["message"], default_color=color)
-        fb_badges.append(badge)
+        url = BASE_URL + "fontbakery-reports/" + basedir + "/" + os.path.basename(badge)
+        fb_badges.append(f"https://img.shields.io/endpoint?url="+quote(url, safe=""))
     return fb_badges
 
 
@@ -229,16 +226,20 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
         gf.fontbakery_report = os.path.basename(directory) + "-report.html"
     gf.fb_badges = fontbakery_badges(os.path.basename(directory))
     gf.fb_fails = fontbakery_fails(os.path.basename(directory))
-    gf.version_badges = [anybadge.Badge("google/fonts", tidy_version(gf.dev_version))]
+    gf.version_badges = [
+        f"https://img.shields.io/badge/google/fonts-{tidy_version(gf.dev_version)}-green"
+    ]
     color = "green"
+    last_version = tidy_version(gf.dev_version)
     for s in servers:
         if gf.server_versions.get(s.name):
             version = tidy_version(gf.server_versions[s.name])
-            if str(version) < str(gf.version_badges[-1].value).strip():
+            if str(version) < str(last_version).strip():
                 color = "orange"
             gf.version_badges.append(
-                anybadge.Badge(s.name, version, default_color=color)
+                f"https://img.shields.io/badge/{s.name}-{version}-{color}"
             )
+            last_version = version
     gf.build_badges = []
     if gf.seems_gfr:
         workflows = list(gf.upstream_gh.get_workflows())
@@ -246,7 +247,7 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
             runs = list(workflow.get_runs())
             if runs and len(runs) > 0:
                 gf.build_badges.append(
-                    anybadge.Badge(workflow.name, runs[0].conclusion)
+                    f"https://img.shields.io/badge/{workflow.name}-{runs[0].conclusion}"
                 )
 
     gf.languages = rearrange_languages(gf.supported_languages)
@@ -266,7 +267,6 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
         classes.append("inpipeline")
     gf.classes = " ".join(classes)
     # Downstream versions if noto
-    # Version history
     fonts.append(gf)
     if TESTING and len(fonts) > 15:
         break
@@ -283,5 +283,7 @@ def ago(dt):
 env = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
 env.filters["ago"] = ago
 template = env.get_template("index.html")
+html = template.render(fonts=fonts, BASE_URL=BASE_URL)
+html = htmlmin.minify(html)
 with open("docs/index.html", "w") as f:
-    f.write(template.render(fonts=fonts))
+    f.write(html)
