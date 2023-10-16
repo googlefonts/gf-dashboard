@@ -144,7 +144,9 @@ def rearrange_history(history):
     new_history = []
     for server, moves in history.items():
         # Ignore the first move
-        for move in moves[1:]:
+        for move in moves:
+            if "1970-01-01" in move["date"]:
+                continue
             new_history.append(
                 {
                     "date": datetime.datetime.fromisoformat(move["date"]),
