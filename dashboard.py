@@ -35,8 +35,8 @@ repo_url = (
     os.environ.get("GITHUB_SERVER_URL", "https://github.com/") + "/" + github_repo
 )
 
-if os.path.exists("versionhistory.json"):
-    versionhistory = json.load(open("versionhistory.json"))
+if os.path.exists("docs/versionhistory.json"):
+    versionhistory = json.load(open("docs/versionhistory.json"))
 else:
     versionhistory = {}
 
@@ -212,7 +212,7 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
                     "date": datetime.datetime.now().isoformat(),
                 }
             )
-    json.dump(versionhistory, open("versionhistory.json", "w"), indent=2)
+    json.dump(versionhistory, open("docs/versionhistory.json", "w"), indent=2)
 
     gf.version_history = rearrange_history(versionhistory[gf.metadata.name])
 
