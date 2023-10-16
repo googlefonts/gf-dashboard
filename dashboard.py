@@ -237,6 +237,16 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     _ = gf.releases
     time.sleep(2)
 
+    classes = []
+    if len(list(gf.open_pulls)):
+        classes.append("openpr")
+    if gf.new_releases_since_update:
+        classes.append("newrelease")
+    if "production" not in gf.server_versions or (
+        gf.server_versions["production"] != gf.dev_version
+        ):
+        classes.append("inpipeline")
+    gf.classes = " ".join(classes)
     # Downstream versions if noto
     # Version history
     fonts.append(gf)

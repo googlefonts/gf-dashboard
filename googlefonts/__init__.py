@@ -166,8 +166,7 @@ class GoogleFont:
     @cached_property
     def new_releases_since_update(self):
         # XXX Check also version numbers
-        return list(filter(lambda x: x.published_at, self.releases))
-        # return list(filter(lambda x: x.published_at and x.published_at > self.last_updated, self.releases))
+        return list(filter(lambda x: x.published_at and x.published_at > self.last_updated, self.releases))
 
     @cached_property
     def seems_gfr(self):

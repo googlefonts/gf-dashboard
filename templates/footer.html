@@ -1,15 +1,27 @@
 </body>
 <script>
+function refreshVisibility() {
+    var search = $('#searchbar').val().replace(" ", "_").replace("]", "").replace("'", "");
+    if (search) {
+        $(".afont").hide();
+        $(".afont[id*='" + search + "' i]").show();
+    } else {
+        $(".afont").show();
+    }
+    if ($("#openprcheck").is(':checked')) {
+        $(".afont").not(".openpr").hide();
+    }
+    if ($("#newreleasecheck").is(':checked')) {
+        $(".afont").not(".newrelease").hide();
+    }
+    if ($("#inpipelinecheck").is(':checked')) {
+        $(".afont").not(".inpipeline").hide();
+    }
+};
+
 $(function() {
-    $("#searchbar").on("input", function() {
-        var search = $('#searchbar').val().replace(" ", "_").replace("]", "").replace("'", "");
-        if (search) {
-            $(".afont").hide();
-            $(".afont[id*='" + search + "' i]").show();
-        } else {
-            $(".afont").show();
-        }
-    });
+    $("#searchbar").on("input", refreshVisibility)
+    $('.filter').change(refreshVisibility)
 });
 </script>
 
