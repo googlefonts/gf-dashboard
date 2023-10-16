@@ -10,6 +10,8 @@ from fontTools.ttLib import TTFont
 from gflanguages import LoadLanguages
 from gftools.util.google_fonts import (GetExemplarFont, LanguageComments,
                                        Metadata, WriteProto)
+from shaperglot.checker import Checker
+from shaperglot.languages import Languages
 from github3api import GitHubAPI
 from github import Auth, Github
 
@@ -24,6 +26,8 @@ from collections import defaultdict
 from datetime import datetime,timedelta,timezone
 
 import tqdm
+
+langs = Languages()
 
 GH_URL_RE = r"https?:\/\/.*?github\.com/(\S+)\/(\S+)(\/|$)"
 # GITHUB = Github()
@@ -230,3 +234,13 @@ class GoogleFont:
         except Exception as e:
             raise e
             return None
+
+    @cached_property
+    def supported_languages(self):
+        checker = Checker(self.exemplar)
+        supported = []
+        for lang in sorted(langs.keys()):
+            if checker.check(langs[lang]).is_success:
+                supported.append(lang)
+        return sorted(supported)
+

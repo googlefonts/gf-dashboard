@@ -8,23 +8,38 @@
     <div class="card-body collapse show" id="{{font.html_id}}_fontinfocard">
         <table class="table">
             <tr>
-                <th>Designer</th>
+                <th class="col-3" scope="col">Designer</th>
                 <td>{{font.metadata.designer}}</td>
             </tr>
             <tr>
-                <th>Subsets</th>
+                <th class="col-3" scope="col">Subsets</th>
                 <td>{{font.metadata.subsets | join(", ")}}</td>
             </tr>
             <tr>
-                <th>Codepoints</th>
-                <td>{{font.codepoints}}</td>
+                <th class="col-3" scope="col">Languages</th>
+                {% if (font.languages | length) == 1 and (font.metadata.languages | length) == 0 %}
+                <td>{{font.languages[0]}}</td>
+                {% else %}
+                <td>
+                    <ul>
+                        {% for lang in font.metadata.languages %}
+                        <li> Defined language in metadata: {{lang}}</li>
+                        {% endfor %}
+                        {% for langreport in font.languages %}
+                        <li>
+                            {{ langreport }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                {% endif %}
             </tr>
             <tr>
-                <th>First seen</th>
+                <th class="col-3" scope="col">First seen</th>
                 <td>{{font.metadata.date_added}}</td>
             </tr>
             <tr>
-                <th>Last updated</th>
+                <th class="col-3" scope="col">Last updated</th>
                 <td>{{font.recent_commits[0]["committedDate"].strftime("%Y-%m-%d") }} ({{font.recent_commits[0]["committedDate"] |ago}} ago)</td>
         </table>
     </div>

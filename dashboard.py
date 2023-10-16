@@ -6,10 +6,13 @@ import os
 import subprocess
 import time
 from pathlib import Path
+from collections import Counter, defaultdict
 
 import anybadge
 import fontbakery
 from packaging.version import parse as parse_version
+from shaperglot.languages import Languages
+from gflanguages import LoadScripts
 import humanize
 import tqdm
 from gftools.push.servers import GFServers
@@ -21,6 +24,8 @@ FONTBAKERY_BLACKLISTED = ["handjet", "adobeblank"]
 
 TESTING = False
 
+langs = Languages()
+scripts = LoadScripts()
 servers = GFServers.open(".gf_server_data.json")
 servers.update()
 gfpath = os.environ["GF_PATH"]
@@ -150,6 +155,31 @@ def rearrange_history(history):
     return sorted(new_history, key=lambda x: x["date"], reverse=True)
 
 
+script_langs = defaultdict(set)
+for lang in langs.keys():
+    script_langs[langs[lang]["script"]].add(langs[lang]["name"])
+
+def rearrange_languages(languages):
+    supported_langs_by_script = defaultdict(set)
+    report = []
+    for lang in languages:
+        lang = langs[lang]
+        supported_langs_by_script[lang["script"]].add(lang["name"])
+    for script, thislangs in supported_langs_by_script.items():
+        expected = script_langs[script]
+        percent = len(thislangs)/len(expected)*100
+        result = ("%i%% (%i/%i) of languages using the %s script" %
+            (percent, len(thislangs), len(expected), scripts[script].name))
+        missing = expected - thislangs
+        if len(missing) > 0 and len(missing) < 10:
+            result += f" (Missing {'; '.join(missing)})"
+        elif percent < 100 and len(thislangs) < 10:
+            result += f" (Supports {'; '.join(thislangs)})"
+        report.append(result)
+    return report
+
+
+
 for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     if "noto" in directory:
         continue
@@ -217,25 +247,11 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
                     anybadge.Badge(workflow.name, runs[0].conclusion)
                 )
 
-    # Codepoints
-
-    groups = (
-        list(x)
-        for _, x in itertools.groupby(
-            gf.encoded_codepoints, lambda x, c=itertools.count(): x - next(c)
-        )
-    )
-    gf.codepoints = ", ".join(
-        "-".join(map(lambda c: "U+%04X" % c, (item[0], item[-1])[: len(item)]))
-        for item in groups
-    )
-    if len(gf.codepoints) > 1000:
-        gf.codepoints = "%s codepoints" % len(gf.encoded_codepoints)
+    gf.languages = rearrange_languages(gf.supported_languages)
     # Prime the pump
     _ = gf.recent_commits
     _ = gf.recent_pulls
     _ = gf.releases
-    time.sleep(2)
 
     classes = []
     if len(list(gf.open_pulls)):
