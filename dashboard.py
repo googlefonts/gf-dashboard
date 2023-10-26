@@ -85,7 +85,7 @@ def run_fontbakery(directory):
         "--html",
         f"docs/fontbakery-reports/{basedir}-report.html",
         "--json",
-        json_file,
+        str(json_file),
         *inputs,
     ]
     args = " ".join(args)
