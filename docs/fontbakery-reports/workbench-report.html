@@ -130,9 +130,9 @@ ul {
                 <td>0</td>
                 <td>7</td>
                 <td>0</td>
-                <td>50</td>
+                <td>51</td>
                 <td>10</td>
-                <td>180</td>
+                <td>179</td>
             </tr>
             <tr>
                 <td>0%</td>
@@ -140,7 +140,7 @@ ul {
                 <td>0%</td>
                 <td>36%</td>
                 <td>7%</td>
-                <td>129%</td>
+                <td>128%</td>
             </tr>
             </table>
             
@@ -163,7 +163,7 @@ ul {
     <p>(but other kinds of bug reports and/or feature requests
        are also always welcome, of course!)</p>
 
-    <p>FontBakery version: 0.10.3</p>
+    <p>FontBakery version: 0.10.4</p>
     
 <h2>Section: Google Fonts</h2>
 <span class='section__emoji'>🔥🔥🔥🔥🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
@@ -568,8 +568,12 @@ https://fonts.google.com/specimen/Sixtyfour (status code: 404) [code: broken-lin
 <h3><div style='color:#88c'>EXPERIMENTAL CHECK - Since 2023/Nov/02</div>Shapes languages in all GF glyphsets.</h3>
 <div class='check__idlabel'>Check ID: com.google.fonts/check/glyphsets/shape_languages</div>
 
-<details><summary>🔥 Workbench[BLED,SCAN].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>GF_Latin_Kernel/kl_Latn (Kalaallisut): [FAIL: Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̃, ◌̊] [code: failed-language-shaping]</p>
-</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>GF_Latin_Kernel/zu_Latn (Zulu): [FAIL: Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̃, ◌̄, ◌̆, ◌̈, ◌̊, ◌̧] [code: failed-language-shaping]</p>
+<details><summary>🔥 Workbench[BLED,SCAN].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>GF_Latin_Kernel glyphset:</p>
+<p>| Language | FAIL messages |
+| :--- | :--- |
+| kl_Latn (Kalaallisut) | Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̃, ◌̊ |
+| zu_Latn (Zulu) | Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̃, ◌̄, ◌̆, ◌̈, ◌̊, ◌̧ |</p>
+<p>[code: failed-language-shaping]</p>
 </span></li></ul></div></details>
 <h3>Check a font's STAT table contains compulsory Axis Values.</h3>
 <div class='check__idlabel'>Check ID: com.google.fonts/check/STAT</div>
@@ -589,13 +593,13 @@ https://fonts.google.com/specimen/Sixtyfour (status code: 404) [code: broken-lin
 </ul>
 <p>| Name | current | expected |
 | :--- | :--- | :--- |
-| Delicate | SCAN=-53.0, BLED=0.0 | N/A |
+| Overlapping | SCAN=37.0, BLED=0.0 | N/A |
+| Slight | SCAN=-45.0, BLED=0.0 | N/A |
 | Touching | SCAN=21.0, BLED=0.0 | N/A |
+| Maximum | SCAN=100.0, BLED=0.0 | N/A |
+| Delicate | SCAN=-53.0, BLED=0.0 | N/A |
 | Evenly | SCAN=-27.0, BLED=0.0 | N/A |
 | Overexposed | SCAN=67.0, BLED=0.0 | N/A |
-| Slight | SCAN=-45.0, BLED=0.0 | N/A |
-| Maximum | SCAN=100.0, BLED=0.0 | N/A |
-| Overlapping | SCAN=37.0, BLED=0.0 | N/A |
 | Regular | SCAN=0.0, BLED=0.0 | SCAN=0.0, BLED=0.0 | [code: bad-fvar-instances]</p>
 </span></li></ul></div></details>
 <h3>Check font follows the Google Fonts vertical metric schema</h3>
@@ -603,11 +607,19 @@ https://fonts.google.com/specimen/Sixtyfour (status code: 404) [code: broken-lin
 
 <details><summary>🔥 Workbench[BLED,SCAN].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The sum of hhea.ascender + abs(hhea.descender) + hhea.lineGap is 1024 when it should be at least 1228 [code: bad-hhea-range]</p>
 </span></li></ul></div></details>
-<h3>Validate METADATA.pb axes tags are defined in gf_axisregistry.</h3>
-<div class='check__idlabel'>Check ID: com.google.fonts/check/metadata/gf_axisregistry_valid_tags</div>
+<h3>Validate STAT particle names and values match the fallback names in GFAxisRegistry.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/STAT/gf_axisregistry</div>
 
-<details><summary>🔥 Workbench[BLED,SCAN].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'BLED' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
-</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The font variation axis 'SCAN' is not yet registered on Google Fonts Axis Registry. [code: bad-axis-tag]</p>
+<details><summary>🔥 Workbench[BLED,SCAN].ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Delicate' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Slight' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Evenly' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Close' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Touching' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Overlapping' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Overexposed' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'SCAN', the name 'Maximum' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'BLED', the name 'Moderate' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>On the font variation axis 'BLED', the name 'Strong' is not among the expected ones (Default) according to the Google Fonts Axis Registry. [code: invalid-name]</p>
 </span></li></ul></div></details>
                         </main>
                     </body>
