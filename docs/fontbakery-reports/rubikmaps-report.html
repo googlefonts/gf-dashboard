@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>4</td>
+                <td>12</td>
+                <td>64</td>
+                <td>9</td>
+                <td>158</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>2%</td>
+                <td>7%</td>
+                <td>35%</td>
+                <td>5%</td>
+                <td>87%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.10.4</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Checking OS/2 achVendID.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/vendor_id</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/metadata/unreachable_subsetting</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
+<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+207D SUPERSCRIPT LEFT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+207E SUPERSCRIPT RIGHT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+2080 SUBSCRIPT ZERO: not included in any glyphset definition</li>
+<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
+<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
+<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
+<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
+<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+208D SUBSCRIPT LEFT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+208E SUBSCRIPT RIGHT PARENTHESIS: not included in any glyphset definition</li>
+<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic</code>, <code>cyrillic-ext</code>, <code>hebrew</code>, <code>latin</code>, <code>latin-ext</code>, <code>math</code>, <code>menu</code>, <code>symbols</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Ensure files are not too large.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/file_size</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Font file is 2.2Mb; ideally it should be less than 1.0Mb [code: large-font]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Check URL on copyright string is the same as in repository_url field.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/metadata/consistent_repo_urls</div>
+
+<details><summary>🔥 RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Repository URL is https://github.com/NaN-xyz/Rubik-Filtered</p>
+<p>But: OFL text has 'https:/' and HTML description has 'github.com/NaN-xyz/Glyph-Filters'
+[code: mismatch]</p>
+</span></li></ul></div></details>
+<h3><div style='color:#88c'>EXPERIMENTAL CHECK - Since 2023/Nov/02</div>Shapes languages in all GF glyphsets.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/glyphsets/shape_languages</div>
+
+<details><summary>🔥 RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>GF_Latin_Core glyphset:</p>
+<p>| Language | FAIL messages |
+| :--- | :--- |
+| haw_Latn (Hawaiian) | Some base glyphs were missing: ʻ |
+|  ^  | Shaper produced a .notdef |
+| mh_Latn (Marshallese) | Some base glyphs were missing: Ḷ, ḷ, Ṃ, ṃ, Ṇ, ṇ, Ọ, ọ |
+|  ^  | Some mark glyphs were missing: ◌̣ |
+|  ^  | Shaper produced a .notdef |
+| scn_Latn (Sicilian) | Some base glyphs were missing: Ḍ, ḍ |
+|  ^  | Shaper produced a .notdef |
+| teo_Latn (Teso) | Some base glyphs were missing: Ɔ, Ɛ, Ɨ, Ʉ, ɔ, ɛ, ɨ, ʉ, ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᵘ, ᶤ, ᶶ, ⁱ |
+|  ^  | Shaper produced a .notdef |</p>
+<p>[code: failed-language-shaping]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>GF_Cyrillic_Plus glyphset:</p>
+<p>| Language | FAIL messages |
+| :--- | :--- |
+| tg_Cyrl (Tajik) | Some base glyphs were missing: ҳ |
+|  ^  | Shaper produced a .notdef |
+| uz_Cyrl (Uzbek (Cyrillic)) | Some base glyphs were missing: ҳ |
+|  ^  | Shaper produced a .notdef |</p>
+<p>[code: failed-language-shaping]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GF_Latin_Core glyphset:</p>
+<p>| Language | FAIL messages |
+| :--- | :--- |
+| lg_Latn (Ganda) | No variant glyphs were found for Eng |
+| dyo_Latn (Jola-Fonyi) | No variant glyphs were found for Eng |
+| ny_Latn (Nyanja) | No variant glyphs were found for Eng |
+| wo_Latn (Wolof) | No variant glyphs were found for Eng |</p>
+<p>[code: warning-language-shaping]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GF_Cyrillic_Plus glyphset:</p>
+<p>| Language | FAIL messages |
+| :--- | :--- |
+| ku_Cyrl (Kurdish) | No exemplar glyphs were defined for language Kurdish |</p>
+<p>[code: warning-language-shaping]</p>
+</span></li></ul></div></details>
+<h3>Is there kerning info for non-ligated sequences?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/kerning_for_non_ligated_sequences</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- f + f
+
+- f + i
+
+- i + f
+
+- f + l
+
+- l + f
+
+- i + l [code: lacks-kern-info]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Check font follows the Google Fonts vertical metric schema</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/vertical_metrics</div>
+
+<details><summary>🔥 RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The sum of hhea.ascender + abs(hhea.descender) + hhea.lineGap is 1185 when it should be at least 1200 [code: bad-hhea-range]</p>
+</span></li></ul></div></details>
+<h3>METADATA.pb: Designers are listed correctly on the Google Fonts catalog?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/metadata/designer_profiles</div>
+
+<details><summary>🔥 RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Designer Luke Prowse still does not have an avatar image. Please provide one. [code: missing-avatar]</p>
+</span></li></ul></div></details>
+<h3>On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/description/family_update</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently. [code: description-not-updated]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/meta/script_lang_tags</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check font contains no unreachable glyphs</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/unreachable_glyphs</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- LineHorizontalComponent
+
+- LineVerticalComponent
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/contour_count</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: exclam	Contours detected: 164	Expected: 2
+
+- Glyph name: quotedbl	Contours detected: 34	Expected: 2
+
+- Glyph name: numbersign	Contours detected: 256	Expected: 2
+
+- Glyph name: dollar	Contours detected: 474	Expected: 1, 3 or 5
+
+- Glyph name: percent	Contours detected: 336	Expected: 5
+
+- Glyph name: ampersand	Contours detected: 280	Expected: 1, 2 or 3
+
+- Glyph name: quotesingle	Contours detected: 27	Expected: 1
+
+- Glyph name: parenleft	Contours detected: 262	Expected: 1
+
+- Glyph name: parenright	Contours detected: 205	Expected: 1
+
+- Glyph name: asterisk	Contours detected: 145	Expected: 1 or 4
+
+- Glyph name: plus	Contours detected: 183	Expected: 1
+
+- Glyph name: comma	Contours detected: 80	Expected: 1
+
+- Glyph name: hyphen	Contours detected: 70	Expected: 1
+
+- Glyph name: period	Contours detected: 20	Expected: 1
+
+- Glyph name: slash	Contours detected: 215	Expected: 1
+
+- Glyph name: zero	Contours detected: 432	Expected: 2 or 3
+
+- Glyph name: one	Contours detected: 277	Expected: 1
+
+- Glyph name: two	Contours detected: 371	Expected: 1
+
+- Glyph name: three	Contours detected: 411	Expected: 1
+
+- Glyph name: four	Contours detected: 344	Expected: 1 or 2
+
+- Glyph name: five	Contours detected: 406	Expected: 1
+
+- Glyph name: six	Contours detected: 407	Expected: 1 or 2
+
+- Glyph name: seven	Contours detected: 291	Expected: 1
+
+- Glyph name: eight	Contours detected: 452	Expected: 3
+
+- Glyph name: nine	Contours detected: 316	Expected: 1 or 2
+
+- Glyph name: colon	Contours detected: 107	Expected: 2
+
+- Glyph name: semicolon	Contours detected: 154	Expected: 2
+
+- Glyph name: less	Contours detected: 183	Expected: 1
+
+- Glyph name: equal	Contours detected: 119	Expected: 2
+
+- Glyph name: greater	Contours detected: 120	Expected: 1
+
+- Glyph name: question	Contours detected: 285	Expected: 2
+
+- Glyph name: at	Contours detected: 212	Expected: 2
+
+- Glyph name: A	Contours detected: 352	Expected: 2
+
+- Glyph name: B	Contours detected: 301	Expected: 2 or 3
+
+- Glyph name: C	Contours detected: 374	Expected: 1
+
+- Glyph name: D	Contours detected: 420	Expected: 2
+
+- Glyph name: E	Contours detected: 255	Expected: 1
+
+- Glyph name: F	Contours detected: 325	Expected: 1
+
+- Glyph name: G	Contours detected: 394	Expected: 1
+
+- Glyph name: H	Contours detected: 525	Expected: 1
+
+- Glyph name: I	Contours detected: 187	Expected: 1
+
+- Glyph name: J	Contours detected: 336	Expected: 1
+
+- Glyph name: K	Contours detected: 450	Expected: 1 or 2
+
+- Glyph name: L	Contours detected: 286	Expected: 1
+
+- Glyph name: M	Contours detected: 228	Expected: 1
+
+- Glyph name: N	Contours detected: 418	Expected: 1
+
+- Glyph name: O	Contours detected: 474	Expected: 2
+
+- Glyph name: P	Contours detected: 283	Expected: 1 or 2
+
+- Glyph name: Q	Contours detected: 431	Expected: 2
+
+- Glyph name: R	Contours detected: 457	Expected: 1 or 2
+
+- Glyph name: S	Contours detected: 217	Expected: 1
+
+- Glyph name: T	Contours detected: 255	Expected: 1
+
+- Glyph name: U	Contours detected: 366	Expected: 1
+
+- Glyph name: V	Contours detected: 290	Expected: 1
+
+- Glyph name: W	Contours detected: 547	Expected: 1 or 2
+
+- Glyph name: X	Contours detected: 356	Expected: 1
+
+- Glyph name: Y	Contours detected: 261	Expected: 1
+
+- Glyph name: Z	Contours detected: 408	Expected: 1
+
+- Glyph name: bracketleft	Contours detected: 339	Expected: 1
+
+- Glyph name: backslash	Contours detected: 134	Expected: 1
+
+- Glyph name: bracketright	Contours detected: 240	Expected: 1
+
+- Glyph name: asciicircum	Contours detected: 16	Expected: 1
+
+- Glyph name: underscore	Contours detected: 66	Expected: 1
+
+- Glyph name: grave	Contours detected: 6	Expected: 1
+
+- Glyph name: a	Contours detected: 229	Expected: 2
+
+- Glyph name: b	Contours detected: 345	Expected: 2
+
+- Glyph name: c	Contours detected: 239	Expected: 1
+
+- Glyph name: d	Contours detected: 465	Expected: 2
+
+- Glyph name: e	Contours detected: 198	Expected: 2
+
+- Glyph name: f	Contours detected: 307	Expected: 1
+
+- Glyph name: g	Contours detected: 331	Expected: 2 or 3
+
+- Glyph name: h	Contours detected: 353	Expected: 1
+
+- Glyph name: i	Contours detected: 116	Expected: 2
+
+- Glyph name: j	Contours detected: 208	Expected: 2
+
+- Glyph name: k	Contours detected: 298	Expected: 1 or 2
+
+- Glyph name: l	Contours detected: 248	Expected: 1
+
+- Glyph name: m	Contours detected: 289	Expected: 1
+
+- Glyph name: n	Contours detected: 257	Expected: 1
+
+- Glyph name: o	Contours detected: 250	Expected: 2
+
+- Glyph name: p	Contours detected: 338	Expected: 2
+
+- Glyph name: q	Contours detected: 397	Expected: 2
+
+- Glyph name: r	Contours detected: 200	Expected: 1
+
+- Glyph name: s	Contours detected: 162	Expected: 1
+
+- Glyph name: t	Contours detected: 207	Expected: 1
+
+- Glyph name: u	Contours detected: 362	Expected: 1
+
+- Glyph name: v	Contours detected: 163	Expected: 1
+
+- Glyph name: w	Contours detected: 233	Expected: 1
+
+- Glyph name: x	Contours detected: 207	Expected: 1
+
+- Glyph name: y	Contours detected: 290	Expected: 1
+
+- Glyph name: z	Contours detected: 198	Expected: 1
+
+- Glyph name: braceleft	Contours detected: 250	Expected: 1
+
+- Glyph name: bar	Contours detected: 235	Expected: 1
+
+- Glyph name: braceright	Contours detected: 272	Expected: 1
+
+- Glyph name: asciitilde	Contours detected: 100	Expected: 1
+
+- Glyph name: exclamdown	Contours detected: 148	Expected: 2
+
+- Glyph name: cent	Contours detected: 278	Expected: 1 or 2
+
+- Glyph name: sterling	Contours detected: 317	Expected: 1 or 2
+
+- Glyph name: currency	Contours detected: 167	Expected: 2
+
+- Glyph name: yen	Contours detected: 231	Expected: 1 or 2
+
+- Glyph name: brokenbar	Contours detected: 154	Expected: 2
+
+- Glyph name: section	Contours detected: 505	Expected: 2
+
+- Glyph name: dieresis	Contours detected: 5	Expected: 2
+
+- Glyph name: copyright	Contours detected: 254	Expected: 3
+
+- Glyph name: ordfeminine	Contours detected: 63	Expected: 2 or 3
+
+- Glyph name: guillemotleft	Contours detected: 203	Expected: 2
+
+- Glyph name: logicalnot	Contours detected: 62	Expected: 1
+
+- Glyph name: uni00AD	Contours detected: 70	Expected: 0
+
+- Glyph name: registered	Contours detected: 315	Expected: 3 or 4
+
+- Glyph name: macron	Contours detected: 34	Expected: 1
+
+- Glyph name: degree	Contours detected: 79	Expected: 2
+
+- Glyph name: plusminus	Contours detected: 245	Expected: 1 or 2
+
+- Glyph name: uni00B2	Contours detected: 98	Expected: 1
+
+- Glyph name: uni00B3	Contours detected: 77	Expected: 1
+
+- Glyph name: acute	Contours detected: 11	Expected: 1
+
+- Glyph name: uni00B5	Contours detected: 373	Expected: 1
+
+- Glyph name: paragraph	Contours detected: 264	Expected: 1, 2 or 3
+
+- Glyph name: periodcentered	Contours detected: 78	Expected: 1
+
+- Glyph name: cedilla	Contours detected: 2	Expected: 1
+
+- Glyph name: uni00B9	Contours detected: 17	Expected: 1
+
+- Glyph name: ordmasculine	Contours detected: 27	Expected: 2 or 3
+
+- Glyph name: guillemotright	Contours detected: 228	Expected: 2
+
+- Glyph name: onequarter	Contours detected: 173	Expected: 3 or 4
+
+- Glyph name: onehalf	Contours detected: 238	Expected: 3
+
+- Glyph name: threequarters	Contours detected: 233	Expected: 3 or 4
+
+- Glyph name: questiondown	Contours detected: 214	Expected: 2
+
+- Glyph name: Agrave	Contours detected: 386	Expected: 3
+
+- Glyph name: Aacute	Contours detected: 355	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 372	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 370	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 369	Expected: 4
+
+- Glyph name: Aring	Contours detected: 353	Expected: 3 or 4
+
+- Glyph name: AE	Contours detected: 496	Expected: 2
+
+- Glyph name: Ccedilla	Contours detected: 466	Expected: 1 or 2
+
+- Glyph name: Egrave	Contours detected: 289	Expected: 2
+
+- Glyph name: Eacute	Contours detected: 258	Expected: 2
+
+- Glyph name: Ecircumflex	Contours detected: 275	Expected: 2
+
+- Glyph name: Edieresis	Contours detected: 272	Expected: 3
+
+- Glyph name: Igrave	Contours detected: 221	Expected: 2
+
+- Glyph name: Iacute	Contours detected: 190	Expected: 2
+
+- Glyph name: Icircumflex	Contours detected: 207	Expected: 2
+
+- Glyph name: Idieresis	Contours detected: 204	Expected: 3
+
+- Glyph name: Eth	Contours detected: 371	Expected: 2
+
+- Glyph name: Ntilde	Contours detected: 436	Expected: 2
+
+- Glyph name: Ograve	Contours detected: 508	Expected: 3
+
+- Glyph name: Oacute	Contours detected: 477	Expected: 3
+
+- Glyph name: Ocircumflex	Contours detected: 494	Expected: 3
+
+- Glyph name: Otilde	Contours detected: 492	Expected: 3
+
+- Glyph name: Odieresis	Contours detected: 491	Expected: 4
+
+- Glyph name: multiply	Contours detected: 158	Expected: 1
+
+- Glyph name: Oslash	Contours detected: 568	Expected: 2 or 3
+
+- Glyph name: Ugrave	Contours detected: 400	Expected: 2
+
+- Glyph name: Uacute	Contours detected: 369	Expected: 2
+
+- Glyph name: Ucircumflex	Contours detected: 386	Expected: 2
+
+- Glyph name: Udieresis	Contours detected: 383	Expected: 3
+
+- Glyph name: Yacute	Contours detected: 264	Expected: 2
+
+- Glyph name: Thorn	Contours detected: 363	Expected: 1 or 2
+
+- Glyph name: germandbls	Contours detected: 307	Expected: 1
+
+- Glyph name: agrave	Contours detected: 235	Expected: 3
+
+- Glyph name: aacute	Contours detected: 240	Expected: 3
+
+- Glyph name: acircumflex	Contours detected: 254	Expected: 3
+
+- Glyph name: atilde	Contours detected: 251	Expected: 3
+
+- Glyph name: adieresis	Contours detected: 234	Expected: 4
+
+- Glyph name: aring	Contours detected: 230	Expected: 4
+
+- Glyph name: ae	Contours detected: 307	Expected: 3
+
+- Glyph name: ccedilla	Contours detected: 237	Expected: 1 or 2
+
+- Glyph name: egrave	Contours detected: 204	Expected: 3
+
+- Glyph name: eacute	Contours detected: 209	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 223	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 203	Expected: 4
+
+- Glyph name: igrave	Contours detected: 102	Expected: 2
+
+- Glyph name: iacute	Contours detected: 107	Expected: 2
+
+- Glyph name: icircumflex	Contours detected: 121	Expected: 2
+
+- Glyph name: idieresis	Contours detected: 101	Expected: 3
+
+- Glyph name: eth	Contours detected: 312	Expected: 2
+
+- Glyph name: ntilde	Contours detected: 279	Expected: 2
+
+- Glyph name: ograve	Contours detected: 256	Expected: 3
+
+- Glyph name: oacute	Contours detected: 261	Expected: 3
+
+- Glyph name: ocircumflex	Contours detected: 275	Expected: 3
+
+- Glyph name: otilde	Contours detected: 272	Expected: 3
+
+- Glyph name: odieresis	Contours detected: 255	Expected: 4
+
+- Glyph name: divide	Contours detected: 188	Expected: 3
+
+- Glyph name: oslash	Contours detected: 303	Expected: 3
+
+- Glyph name: ugrave	Contours detected: 368	Expected: 2
+
+- Glyph name: uacute	Contours detected: 373	Expected: 2
+
+- Glyph name: ucircumflex	Contours detected: 387	Expected: 2
+
+- Glyph name: udieresis	Contours detected: 367	Expected: 3
+
+- Glyph name: yacute	Contours detected: 301	Expected: 2
+
+- Glyph name: thorn	Contours detected: 494	Expected: 2
+
+- Glyph name: ydieresis	Contours detected: 295	Expected: 3
+
+- Glyph name: Amacron	Contours detected: 364	Expected: 3
+
+- Glyph name: amacron	Contours detected: 263	Expected: 3
+
+- Glyph name: Abreve	Contours detected: 387	Expected: 3
+
+- Glyph name: abreve	Contours detected: 243	Expected: 3
+
+- Glyph name: Aogonek	Contours detected: 574	Expected: 2 or 3
+
+- Glyph name: aogonek	Contours detected: 265	Expected: 2
+
+- Glyph name: Cacute	Contours detected: 377	Expected: 2
+
+- Glyph name: cacute	Contours detected: 250	Expected: 2
+
+- Glyph name: Ccircumflex	Contours detected: 394	Expected: 2
+
+- Glyph name: ccircumflex	Contours detected: 264	Expected: 2
+
+- Glyph name: Cdotaccent	Contours detected: 392	Expected: 2
+
+- Glyph name: cdotaccent	Contours detected: 240	Expected: 2
+
+- Glyph name: Ccaron	Contours detected: 387	Expected: 2
+
+- Glyph name: ccaron	Contours detected: 256	Expected: 2
+
+- Glyph name: Dcaron	Contours detected: 433	Expected: 3
+
+- Glyph name: dcaron	Contours detected: 478	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 482	Expected: 2
+
+- Glyph name: dcroat	Contours detected: 295	Expected: 2
+
+- Glyph name: Emacron	Contours detected: 267	Expected: 2
+
+- Glyph name: emacron	Contours detected: 232	Expected: 3
+
+- Glyph name: Ebreve	Contours detected: 290	Expected: 2
+
+- Glyph name: ebreve	Contours detected: 212	Expected: 3
+
+- Glyph name: Edotaccent	Contours detected: 273	Expected: 2
+
+- Glyph name: edotaccent	Contours detected: 199	Expected: 3
+
+- Glyph name: Eogonek	Contours detected: 255	Expected: 1 or 2
+
+- Glyph name: eogonek	Contours detected: 237	Expected: 2
+
+- Glyph name: Ecaron	Contours detected: 268	Expected: 2
+
+- Glyph name: ecaron	Contours detected: 215	Expected: 3
+
+- Glyph name: Gcircumflex	Contours detected: 414	Expected: 2
+
+- Glyph name: gcircumflex	Contours detected: 356	Expected: 3 or 4
+
+- Glyph name: Gbreve	Contours detected: 429	Expected: 2
+
+- Glyph name: gbreve	Contours detected: 345	Expected: 3 or 4
+
+- Glyph name: Gdotaccent	Contours detected: 412	Expected: 2
+
+- Glyph name: gdotaccent	Contours detected: 332	Expected: 3 or 4
+
+- Glyph name: uni0122	Contours detected: 415	Expected: 2
+
+- Glyph name: uni0123	Contours detected: 351	Expected: 3 or 4
+
+- Glyph name: Hcircumflex	Contours detected: 545	Expected: 2
+
+- Glyph name: hcircumflex	Contours detected: 378	Expected: 2
+
+- Glyph name: Hbar	Contours detected: 499	Expected: 2
+
+- Glyph name: hbar	Contours detected: 336	Expected: 1
+
+- Glyph name: Itilde	Contours detected: 205	Expected: 2
+
+- Glyph name: itilde	Contours detected: 118	Expected: 2
+
+- Glyph name: Imacron	Contours detected: 199	Expected: 2
+
+- Glyph name: imacron	Contours detected: 130	Expected: 2
+
+- Glyph name: Ibreve	Contours detected: 222	Expected: 2
+
+- Glyph name: ibreve	Contours detected: 110	Expected: 2
+
+- Glyph name: Iogonek	Contours detected: 280	Expected: 1 or 2
+
+- Glyph name: iogonek	Contours detected: 167	Expected: 2 or 3
+
+- Glyph name: Idotaccent	Contours detected: 205	Expected: 2
+
+- Glyph name: dotlessi	Contours detected: 96	Expected: 1
+
+- Glyph name: IJ	Contours detected: 419	Expected: 1 or 2
+
+- Glyph name: ij	Contours detected: 324	Expected: 3 or 4
+
+- Glyph name: Jcircumflex	Contours detected: 356	Expected: 2
+
+- Glyph name: jcircumflex	Contours detected: 195	Expected: 2
+
+- Glyph name: uni0136	Contours detected: 471	Expected: 2 or 3
+
+- Glyph name: uni0137	Contours detected: 318	Expected: 2 or 3
+
+- Glyph name: kgreenlandic	Contours detected: 296	Expected: 1 or 2
+
+- Glyph name: Lacute	Contours detected: 289	Expected: 2
+
+- Glyph name: lacute	Contours detected: 259	Expected: 2
+
+- Glyph name: uni013B	Contours detected: 307	Expected: 2
+
+- Glyph name: uni013C	Contours detected: 268	Expected: 2
+
+- Glyph name: Lcaron	Contours detected: 299	Expected: 2
+
+- Glyph name: lcaron	Contours detected: 261	Expected: 2
+
+- Glyph name: Ldot	Contours detected: 287	Expected: 2
+
+- Glyph name: ldot	Contours detected: 249	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 258	Expected: 1
+
+- Glyph name: lslash	Contours detected: 229	Expected: 1
+
+- Glyph name: Nacute	Contours detected: 421	Expected: 2
+
+- Glyph name: nacute	Contours detected: 268	Expected: 2
+
+- Glyph name: uni0145	Contours detected: 439	Expected: 2
+
+- Glyph name: uni0146	Contours detected: 277	Expected: 2
+
+- Glyph name: Ncaron	Contours detected: 431	Expected: 2
+
+- Glyph name: ncaron	Contours detected: 274	Expected: 2
+
+- Glyph name: napostrophe	Contours detected: 277	Expected: 2
+
+- Glyph name: Eng	Contours detected: 488	Expected: 1
+
+- Glyph name: eng	Contours detected: 420	Expected: 1
+
+- Glyph name: Omacron	Contours detected: 486	Expected: 3
+
+- Glyph name: omacron	Contours detected: 284	Expected: 3
+
+- Glyph name: Obreve	Contours detected: 509	Expected: 3
+
+- Glyph name: obreve	Contours detected: 264	Expected: 3
+
+- Glyph name: Ohungarumlaut	Contours detected: 521	Expected: 4
+
+- Glyph name: ohungarumlaut	Contours detected: 252	Expected: 4
+
+- Glyph name: OE	Contours detected: 546	Expected: 2
+
+- Glyph name: oe	Contours detected: 431	Expected: 3
+
+- Glyph name: Racute	Contours detected: 460	Expected: 3
+
+- Glyph name: racute	Contours detected: 211	Expected: 2
+
+- Glyph name: uni0156	Contours detected: 478	Expected: 3
+
+- Glyph name: uni0157	Contours detected: 220	Expected: 2
+
+- Glyph name: Rcaron	Contours detected: 470	Expected: 3
+
+- Glyph name: rcaron	Contours detected: 217	Expected: 2
+
+- Glyph name: Sacute	Contours detected: 220	Expected: 2
+
+- Glyph name: sacute	Contours detected: 173	Expected: 2
+
+- Glyph name: Scircumflex	Contours detected: 237	Expected: 2
+
+- Glyph name: scircumflex	Contours detected: 187	Expected: 2
+
+- Glyph name: Scedilla	Contours detected: 443	Expected: 1 or 2
+
+- Glyph name: scedilla	Contours detected: 220	Expected: 1 or 2
+
+- Glyph name: Scaron	Contours detected: 230	Expected: 2
+
+- Glyph name: scaron	Contours detected: 179	Expected: 2
+
+- Glyph name: Tcaron	Contours detected: 268	Expected: 2
+
+- Glyph name: tcaron	Contours detected: 220	Expected: 2
+
+- Glyph name: Tbar	Contours detected: 291	Expected: 1
+
+- Glyph name: tbar	Contours detected: 196	Expected: 1
+
+- Glyph name: Utilde	Contours detected: 384	Expected: 2
+
+- Glyph name: utilde	Contours detected: 384	Expected: 2
+
+- Glyph name: Umacron	Contours detected: 378	Expected: 2
+
+- Glyph name: umacron	Contours detected: 396	Expected: 2
+
+- Glyph name: Ubreve	Contours detected: 401	Expected: 2
+
+- Glyph name: ubreve	Contours detected: 376	Expected: 2
+
+- Glyph name: Uring	Contours detected: 367	Expected: 3
+
+- Glyph name: uring	Contours detected: 363	Expected: 3
+
+- Glyph name: Uhungarumlaut	Contours detected: 413	Expected: 3
+
+- Glyph name: uhungarumlaut	Contours detected: 364	Expected: 3
+
+- Glyph name: Uogonek	Contours detected: 473	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 279	Expected: 1
+
+- Glyph name: Wcircumflex	Contours detected: 567	Expected: 2
+
+- Glyph name: wcircumflex	Contours detected: 258	Expected: 2
+
+- Glyph name: Ycircumflex	Contours detected: 281	Expected: 2
+
+- Glyph name: ycircumflex	Contours detected: 315	Expected: 2
+
+- Glyph name: Ydieresis	Contours detected: 278	Expected: 3
+
+- Glyph name: Zacute	Contours detected: 411	Expected: 2
+
+- Glyph name: zacute	Contours detected: 209	Expected: 2
+
+- Glyph name: Zdotaccent	Contours detected: 426	Expected: 2
+
+- Glyph name: zdotaccent	Contours detected: 199	Expected: 2
+
+- Glyph name: Zcaron	Contours detected: 421	Expected: 2
+
+- Glyph name: zcaron	Contours detected: 215	Expected: 2
+
+- Glyph name: longs	Contours detected: 142	Expected: 1
+
+- Glyph name: florin	Contours detected: 346	Expected: 1
+
+- Glyph name: AEacute	Contours detected: 499	Expected: 3
+
+- Glyph name: aeacute	Contours detected: 318	Expected: 4
+
+- Glyph name: Oslashacute	Contours detected: 571	Expected: 4
+
+- Glyph name: oslashacute	Contours detected: 314	Expected: 4
+
+- Glyph name: uni0218	Contours detected: 238	Expected: 2
+
+- Glyph name: uni0219	Contours detected: 182	Expected: 2
+
+- Glyph name: uni021A	Contours detected: 276	Expected: 2
+
+- Glyph name: uni021B	Contours detected: 227	Expected: 2
+
+- Glyph name: uni0237	Contours detected: 170	Expected: 1
+
+- Glyph name: uni02BC	Contours detected: 20	Expected: 1
+
+- Glyph name: circumflex	Contours detected: 25	Expected: 1
+
+- Glyph name: caron	Contours detected: 17	Expected: 1
+
+- Glyph name: breve	Contours detected: 14	Expected: 1
+
+- Glyph name: ring	Contours detected: 1	Expected: 2
+
+- Glyph name: ogonek	Contours detected: 81	Expected: 1
+
+- Glyph name: tilde	Contours detected: 22	Expected: 1
+
+- Glyph name: gravecomb	Contours detected: 6	Expected: 1
+
+- Glyph name: acutecomb	Contours detected: 11	Expected: 1
+
+- Glyph name: uni0302	Contours detected: 25	Expected: 1
+
+- Glyph name: tildecomb	Contours detected: 22	Expected: 1
+
+- Glyph name: uni0304	Contours detected: 34	Expected: 1
+
+- Glyph name: uni0306	Contours detected: 14	Expected: 1
+
+- Glyph name: uni0308	Contours detected: 5	Expected: 2
+
+- Glyph name: uni030A	Contours detected: 1	Expected: 2
+
+- Glyph name: uni030C	Contours detected: 17	Expected: 1
+
+- Glyph name: uni0312	Contours detected: 20	Expected: 1
+
+- Glyph name: uni0326	Contours detected: 20	Expected: 1
+
+- Glyph name: uni0327	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0328	Contours detected: 81	Expected: 1
+
+- Glyph name: uni0335	Contours detected: 16	Expected: 1
+
+- Glyph name: uni0337	Contours detected: 53	Expected: 1
+
+- Glyph name: uni0338	Contours detected: 94	Expected: 1
+
+- Glyph name: uni0400	Contours detected: 289	Expected: 2
+
+- Glyph name: uni0401	Contours detected: 260	Expected: 3
+
+- Glyph name: uni0402	Contours detected: 286	Expected: 1
+
+- Glyph name: uni0403	Contours detected: 236	Expected: 2
+
+- Glyph name: uni0404	Contours detected: 400	Expected: 1
+
+- Glyph name: uni0405	Contours detected: 217	Expected: 1
+
+- Glyph name: uni0406	Contours detected: 187	Expected: 1
+
+- Glyph name: uni0407	Contours detected: 192	Expected: 3
+
+- Glyph name: uni0408	Contours detected: 336	Expected: 1
+
+- Glyph name: uni0409	Contours detected: 612	Expected: 2
+
+- Glyph name: uni040A	Contours detected: 492	Expected: 2
+
+- Glyph name: uni040B	Contours detected: 368	Expected: 1
+
+- Glyph name: uni040C	Contours detected: 345	Expected: 2
+
+- Glyph name: uni040D	Contours detected: 536	Expected: 2
+
+- Glyph name: uni040E	Contours detected: 266	Expected: 2
+
+- Glyph name: uni040F	Contours detected: 411	Expected: 1
+
+- Glyph name: uni0410	Contours detected: 352	Expected: 2
+
+- Glyph name: uni0411	Contours detected: 471	Expected: 2
+
+- Glyph name: uni0412	Contours detected: 301	Expected: 3
+
+- Glyph name: uni0413	Contours detected: 233	Expected: 1
+
+- Glyph name: uni0414	Contours detected: 334	Expected: 2
+
+- Glyph name: uni0415	Contours detected: 255	Expected: 1
+
+- Glyph name: uni0416	Contours detected: 779	Expected: 1
+
+- Glyph name: uni0417	Contours detected: 343	Expected: 1
+
+- Glyph name: uni0418	Contours detected: 502	Expected: 1
+
+- Glyph name: uni0419	Contours detected: 517	Expected: 2
+
+- Glyph name: uni041A	Contours detected: 342	Expected: 1
+
+- Glyph name: uni041B	Contours detected: 429	Expected: 1
+
+- Glyph name: uni041C	Contours detected: 228	Expected: 1
+
+- Glyph name: uni041D	Contours detected: 525	Expected: 1
+
+- Glyph name: uni041E	Contours detected: 474	Expected: 2
+
+- Glyph name: uni041F	Contours detected: 443	Expected: 1
+
+- Glyph name: uni0420	Contours detected: 283	Expected: 1 or 2
+
+- Glyph name: uni0421	Contours detected: 374	Expected: 1
+
+- Glyph name: uni0422	Contours detected: 255	Expected: 1
+
+- Glyph name: uni0423	Contours detected: 251	Expected: 1
+
+- Glyph name: uni0424	Contours detected: 595	Expected: 3
+
+- Glyph name: uni0425	Contours detected: 356	Expected: 1
+
+- Glyph name: uni0426	Contours detected: 451	Expected: 1
+
+- Glyph name: uni0427	Contours detected: 339	Expected: 1
+
+- Glyph name: uni0428	Contours detected: 640	Expected: 1
+
+- Glyph name: uni0429	Contours detected: 459	Expected: 1
+
+- Glyph name: uni042A	Contours detected: 455	Expected: 2
+
+- Glyph name: uni042B	Contours detected: 520	Expected: 3
+
+- Glyph name: uni042C	Contours detected: 231	Expected: 2
+
+- Glyph name: uni042D	Contours detected: 335	Expected: 1
+
+- Glyph name: uni042E	Contours detected: 585	Expected: 2
+
+- Glyph name: uni042F	Contours detected: 435	Expected: 2
+
+- Glyph name: uni0430	Contours detected: 229	Expected: 2
+
+- Glyph name: uni0431	Contours detected: 262	Expected: 2
+
+- Glyph name: uni0432	Contours detected: 349	Expected: 3
+
+- Glyph name: uni0433	Contours detected: 91	Expected: 1
+
+- Glyph name: uni0434	Contours detected: 433	Expected: 2
+
+- Glyph name: uni0435	Contours detected: 198	Expected: 2
+
+- Glyph name: uni0436	Contours detected: 454	Expected: 1
+
+- Glyph name: uni0437	Contours detected: 176	Expected: 1
+
+- Glyph name: uni0438	Contours detected: 293	Expected: 1
+
+- Glyph name: uni0439	Contours detected: 324	Expected: 2
+
+- Glyph name: uni043A	Contours detected: 278	Expected: 1
+
+- Glyph name: uni043B	Contours detected: 276	Expected: 1
+
+- Glyph name: uni043C	Contours detected: 309	Expected: 1
+
+- Glyph name: uni043D	Contours detected: 222	Expected: 1
+
+- Glyph name: uni043E	Contours detected: 250	Expected: 2
+
+- Glyph name: uni043F	Contours detected: 188	Expected: 1
+
+- Glyph name: uni0440	Contours detected: 338	Expected: 2
+
+- Glyph name: uni0441	Contours detected: 239	Expected: 1
+
+- Glyph name: uni0442	Contours detected: 159	Expected: 1
+
+- Glyph name: uni0443	Contours detected: 352	Expected: 1
+
+- Glyph name: uni0444	Contours detected: 434	Expected: 3
+
+- Glyph name: uni0445	Contours detected: 207	Expected: 1
+
+- Glyph name: uni0446	Contours detected: 338	Expected: 1
+
+- Glyph name: uni0447	Contours detected: 298	Expected: 1
+
+- Glyph name: uni0448	Contours detected: 302	Expected: 1
+
+- Glyph name: uni0449	Contours detected: 384	Expected: 1
+
+- Glyph name: uni044A	Contours detected: 237	Expected: 2
+
+- Glyph name: uni044B	Contours detected: 273	Expected: 3
+
+- Glyph name: uni044C	Contours detected: 222	Expected: 2
+
+- Glyph name: uni044D	Contours detected: 141	Expected: 1
+
+- Glyph name: uni044E	Contours detected: 354	Expected: 2
+
+- Glyph name: uni044F	Contours detected: 230	Expected: 2
+
+- Glyph name: uni0450	Contours detected: 204	Expected: 3
+
+- Glyph name: uni0451	Contours detected: 203	Expected: 4
+
+- Glyph name: uni0452	Contours detected: 463	Expected: 1
+
+- Glyph name: uni0453	Contours detected: 102	Expected: 2
+
+- Glyph name: uni0454	Contours detected: 221	Expected: 1
+
+- Glyph name: uni0455	Contours detected: 162	Expected: 1
+
+- Glyph name: uni0456	Contours detected: 116	Expected: 2
+
+- Glyph name: uni0457	Contours detected: 101	Expected: 3
+
+- Glyph name: uni0458	Contours detected: 208	Expected: 2
+
+- Glyph name: uni0459	Contours detected: 272	Expected: 2
+
+- Glyph name: uni045A	Contours detected: 270	Expected: 2
+
+- Glyph name: uni045B	Contours detected: 438	Expected: 1
+
+- Glyph name: uni045C	Contours detected: 289	Expected: 2
+
+- Glyph name: uni045D	Contours detected: 299	Expected: 2
+
+- Glyph name: uni045E	Contours detected: 383	Expected: 2
+
+- Glyph name: uni045F	Contours detected: 349	Expected: 1 or 2
+
+- Glyph name: uni0462	Contours detected: 250	Expected: 2
+
+- Glyph name: uni0463	Contours detected: 288	Expected: 2
+
+- Glyph name: uni046A	Contours detected: 584	Expected: 2
+
+- Glyph name: uni046B	Contours detected: 301	Expected: 2
+
+- Glyph name: uni0472	Contours detected: 478	Expected: 3
+
+- Glyph name: uni0473	Contours detected: 250	Expected: 3
+
+- Glyph name: uni0474	Contours detected: 332	Expected: 1
+
+- Glyph name: uni0475	Contours detected: 246	Expected: 1
+
+- Glyph name: uni0490	Contours detected: 409	Expected: 1
+
+- Glyph name: uni0491	Contours detected: 157	Expected: 1
+
+- Glyph name: uni0492	Contours detected: 210	Expected: 1
+
+- Glyph name: uni0493	Contours detected: 107	Expected: 1
+
+- Glyph name: uni0494	Contours detected: 338	Expected: 1
+
+- Glyph name: uni0495	Contours detected: 256	Expected: 1
+
+- Glyph name: uni0496	Contours detected: 603	Expected: 1 or 2
+
+- Glyph name: uni0497	Contours detected: 467	Expected: 1 or 2
+
+- Glyph name: uni0498	Contours detected: 320	Expected: 1 or 2
+
+- Glyph name: uni0499	Contours detected: 166	Expected: 1 or 2
+
+- Glyph name: uni049A	Contours detected: 368	Expected: 1 or 2
+
+- Glyph name: uni049B	Contours detected: 403	Expected: 1 or 2
+
+- Glyph name: uni049C	Contours detected: 322	Expected: 1
+
+- Glyph name: uni049D	Contours detected: 209	Expected: 1
+
+- Glyph name: uni04A0	Contours detected: 270	Expected: 1
+
+- Glyph name: uni04A1	Contours detected: 243	Expected: 1
+
+- Glyph name: uni04A2	Contours detected: 454	Expected: 1 or 2
+
+- Glyph name: uni04A3	Contours detected: 323	Expected: 1 or 2
+
+- Glyph name: uni04A4	Contours detected: 418	Expected: 1
+
+- Glyph name: uni04A5	Contours detected: 293	Expected: 1
+
+- Glyph name: uni04AA	Contours detected: 418	Expected: 1 or 2
+
+- Glyph name: uni04AB	Contours detected: 244	Expected: 1 or 2
+
+- Glyph name: Ustraitcy	Contours detected: 345	Expected: 1
+
+- Glyph name: ustraitcy	Contours detected: 240	Expected: 1
+
+- Glyph name: Ustraitstrokecy	Contours detected: 333	Expected: 1
+
+- Glyph name: ustraitstrokecy	Contours detected: 256	Expected: 1
+
+- Glyph name: uni04B6	Contours detected: 445	Expected: 1 or 2
+
+- Glyph name: uni04B7	Contours detected: 347	Expected: 1 or 2
+
+- Glyph name: uni04B8	Contours detected: 320	Expected: 1
+
+- Glyph name: uni04B9	Contours detected: 211	Expected: 1
+
+- Glyph name: uni04BA	Contours detected: 305	Expected: 1
+
+- Glyph name: uni04BB	Contours detected: 353	Expected: 1
+
+- Glyph name: uni04C0	Contours detected: 187	Expected: 1
+
+- Glyph name: uni04C1	Contours detected: 794	Expected: 2
+
+- Glyph name: uni04C2	Contours detected: 485	Expected: 2
+
+- Glyph name: uni04CB	Contours detected: 365	Expected: 1 or 2
+
+- Glyph name: uni04CC	Contours detected: 317	Expected: 1 or 2
+
+- Glyph name: uni04CF	Contours detected: 248	Expected: 1
+
+- Glyph name: uni04D0	Contours detected: 367	Expected: 3
+
+- Glyph name: uni04D1	Contours detected: 260	Expected: 3
+
+- Glyph name: uni04D2	Contours detected: 357	Expected: 4
+
+- Glyph name: uni04D3	Contours detected: 234	Expected: 4
+
+- Glyph name: uni04D4	Contours detected: 496	Expected: 2
+
+- Glyph name: uni04D5	Contours detected: 307	Expected: 3
+
+- Glyph name: uni04D6	Contours detected: 270	Expected: 2
+
+- Glyph name: uni04D7	Contours detected: 229	Expected: 3
+
+- Glyph name: uni04D8	Contours detected: 318	Expected: 2
+
+- Glyph name: uni04D9	Contours detected: 290	Expected: 2
+
+- Glyph name: uni04DC	Contours detected: 784	Expected: 3
+
+- Glyph name: uni04DD	Contours detected: 459	Expected: 3
+
+- Glyph name: uni04DE	Contours detected: 348	Expected: 3
+
+- Glyph name: uni04DF	Contours detected: 181	Expected: 3
+
+- Glyph name: uni04E2	Contours detected: 536	Expected: 2
+
+- Glyph name: uni04E3	Contours detected: 327	Expected: 2
+
+- Glyph name: uni04E4	Contours detected: 507	Expected: 3
+
+- Glyph name: uni04E5	Contours detected: 298	Expected: 3
+
+- Glyph name: uni04E6	Contours detected: 479	Expected: 4
+
+- Glyph name: uni04E7	Contours detected: 255	Expected: 4
+
+- Glyph name: uni04E8	Contours detected: 461	Expected: 3
+
+- Glyph name: uni04E9	Contours detected: 250	Expected: 3
+
+- Glyph name: uni04EE	Contours detected: 285	Expected: 2
+
+- Glyph name: uni04EF	Contours detected: 386	Expected: 2
+
+- Glyph name: uni04F0	Contours detected: 256	Expected: 3
+
+- Glyph name: uni04F1	Contours detected: 357	Expected: 3
+
+- Glyph name: uni04F2	Contours detected: 253	Expected: 3
+
+- Glyph name: uni04F3	Contours detected: 354	Expected: 3
+
+- Glyph name: uni04F4	Contours detected: 344	Expected: 3
+
+- Glyph name: uni04F5	Contours detected: 303	Expected: 3
+
+- Glyph name: uni04F6	Contours detected: 344	Expected: 1 or 2
+
+- Glyph name: uni04F7	Contours detected: 214	Expected: 1 or 2
+
+- Glyph name: uni04F8	Contours detected: 525	Expected: 5
+
+- Glyph name: uni04F9	Contours detected: 278	Expected: 5
+
+- Glyph name: uni051A	Contours detected: 431	Expected: 2
+
+- Glyph name: uni051B	Contours detected: 397	Expected: 2
+
+- Glyph name: uni051C	Contours detected: 547	Expected: 1
+
+- Glyph name: uni051D	Contours detected: 233	Expected: 1
+
+- Glyph name: uni0524	Contours detected: 355	Expected: 1
+
+- Glyph name: uni0525	Contours detected: 311	Expected: 1
+
+- Glyph name: Wgrave	Contours detected: 581	Expected: 2
+
+- Glyph name: wgrave	Contours detected: 239	Expected: 2
+
+- Glyph name: Wacute	Contours detected: 550	Expected: 2
+
+- Glyph name: wacute	Contours detected: 244	Expected: 2
+
+- Glyph name: Wdieresis	Contours detected: 564	Expected: 3
+
+- Glyph name: wdieresis	Contours detected: 238	Expected: 3
+
+- Glyph name: uni1E9E	Contours detected: 431	Expected: 1
+
+- Glyph name: Ygrave	Contours detected: 295	Expected: 2
+
+- Glyph name: ygrave	Contours detected: 296	Expected: 2
+
+- Glyph name: endash	Contours detected: 53	Expected: 1
+
+- Glyph name: emdash	Contours detected: 135	Expected: 1
+
+- Glyph name: quoteleft	Contours detected: 75	Expected: 1
+
+- Glyph name: quoteright	Contours detected: 27	Expected: 1
+
+- Glyph name: quotesinglbase	Contours detected: 77	Expected: 1
+
+- Glyph name: quotedblleft	Contours detected: 86	Expected: 2
+
+- Glyph name: quotedblright	Contours detected: 136	Expected: 2
+
+- Glyph name: quotedblbase	Contours detected: 120	Expected: 2
+
+- Glyph name: dagger	Contours detected: 175	Expected: 1 or 2
+
+- Glyph name: daggerdbl	Contours detected: 398	Expected: 1 or 3
+
+- Glyph name: bullet	Contours detected: 89	Expected: 1
+
+- Glyph name: ellipsis	Contours detected: 132	Expected: 3
+
+- Glyph name: perthousand	Contours detected: 412	Expected: 6 or 7
+
+- Glyph name: guilsinglleft	Contours detected: 70	Expected: 1
+
+- Glyph name: guilsinglright	Contours detected: 56	Expected: 1
+
+- Glyph name: fraction	Contours detected: 123	Expected: 1
+
+- Glyph name: uni2070	Contours detected: 69	Expected: 2 or 3
+
+- Glyph name: uni2074	Contours detected: 33	Expected: 1 or 2
+
+- Glyph name: uni2075	Contours detected: 156	Expected: 1
+
+- Glyph name: uni2076	Contours detected: 34	Expected: 2
+
+- Glyph name: uni2077	Contours detected: 58	Expected: 1
+
+- Glyph name: uni2078	Contours detected: 146	Expected: 3
+
+- Glyph name: uni2079	Contours detected: 34	Expected: 2
+
+- Glyph name: uni207D	Contours detected: 37	Expected: 1
+
+- Glyph name: uni207E	Contours detected: 59	Expected: 1
+
+- Glyph name: uni2080	Contours detected: 69	Expected: 2 or 3
+
+- Glyph name: uni2081	Contours detected: 17	Expected: 1
+
+- Glyph name: uni2082	Contours detected: 98	Expected: 1
+
+- Glyph name: uni2083	Contours detected: 77	Expected: 1
+
+- Glyph name: uni2084	Contours detected: 33	Expected: 1 or 2
+
+- Glyph name: uni2085	Contours detected: 156	Expected: 1
+
+- Glyph name: uni2086	Contours detected: 34	Expected: 2
+
+- Glyph name: uni2087	Contours detected: 58	Expected: 1
+
+- Glyph name: uni2088	Contours detected: 146	Expected: 3
+
+- Glyph name: uni2089	Contours detected: 34	Expected: 2
+
+- Glyph name: uni208D	Contours detected: 37	Expected: 1
+
+- Glyph name: uni208E	Contours detected: 59	Expected: 1
+
+- Glyph name: uni20AA	Contours detected: 506	Expected: 2
+
+- Glyph name: Euro	Contours detected: 487	Expected: 1 or 2
+
+- Glyph name: uni20AE	Contours detected: 213	Expected: 1
+
+- Glyph name: uni20B4	Contours detected: 313	Expected: 1 or 2
+
+- Glyph name: uni20B8	Contours detected: 222	Expected: 2
+
+- Glyph name: uni20B9	Contours detected: 278	Expected: 1
+
+- Glyph name: uni20BD	Contours detected: 433	Expected: 2
+
+- Glyph name: uni2116	Contours detected: 545	Expected: 3 or 4
+
+- Glyph name: trademark	Contours detected: 76	Expected: 2
+
+- Glyph name: estimated	Contours detected: 314	Expected: 2
+
+- Glyph name: uni2153	Contours detected: 217	Expected: 3
+
+- Glyph name: uni2154	Contours detected: 298	Expected: 1 or 3
+
+- Glyph name: oneeighth	Contours detected: 286	Expected: 5
+
+- Glyph name: threeeighths	Contours detected: 346	Expected: 5
+
+- Glyph name: fiveeighths	Contours detected: 425	Expected: 5
+
+- Glyph name: seveneighths	Contours detected: 327	Expected: 5
+
+- Glyph name: partialdiff	Contours detected: 306	Expected: 2
+
+- Glyph name: uni2206	Contours detected: 275	Expected: 2
+
+- Glyph name: product	Contours detected: 478	Expected: 1
+
+- Glyph name: summation	Contours detected: 460	Expected: 1
+
+- Glyph name: minus	Contours detected: 40	Expected: 1
+
+- Glyph name: uni2215	Contours detected: 215	Expected: 1
+
+- Glyph name: radical	Contours detected: 269	Expected: 1
+
+- Glyph name: infinity	Contours detected: 260	Expected: 3
+
+- Glyph name: integral	Contours detected: 206	Expected: 1
+
+- Glyph name: approxequal	Contours detected: 140	Expected: 2
+
+- Glyph name: notequal	Contours detected: 142	Expected: 1
+
+- Glyph name: lessequal	Contours detected: 141	Expected: 2
+
+- Glyph name: greaterequal	Contours detected: 155	Expected: 2
+
+- Glyph name: lozenge	Contours detected: 328	Expected: 2
+
+- Glyph name: fi	Contours detected: 364	Expected: 1, 2 or 3
+
+- Glyph name: fl	Contours detected: 306	Expected: 1 or 2
+
+- Glyph name: A	Contours detected: 352	Expected: 2
+
+- Glyph name: AE	Contours detected: 496	Expected: 2
+
+- Glyph name: AEacute	Contours detected: 499	Expected: 3
+
+- Glyph name: Aacute	Contours detected: 355	Expected: 3
+
+- Glyph name: Abreve	Contours detected: 387	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 372	Expected: 3
+
+- Glyph name: Adieresis	Contours detected: 369	Expected: 4
+
+- Glyph name: Agrave	Contours detected: 386	Expected: 3
+
+- Glyph name: Amacron	Contours detected: 364	Expected: 3
+
+- Glyph name: Aogonek	Contours detected: 574	Expected: 2 or 3
+
+- Glyph name: Aring	Contours detected: 353	Expected: 3 or 4
+
+- Glyph name: Atilde	Contours detected: 370	Expected: 3
+
+- Glyph name: B	Contours detected: 301	Expected: 2 or 3
+
+- Glyph name: C	Contours detected: 374	Expected: 1
+
+- Glyph name: Cacute	Contours detected: 377	Expected: 2
+
+- Glyph name: Ccaron	Contours detected: 387	Expected: 2
+
+- Glyph name: Ccedilla	Contours detected: 466	Expected: 1 or 2
+
+- Glyph name: Ccircumflex	Contours detected: 394	Expected: 2
+
+- Glyph name: Cdotaccent	Contours detected: 392	Expected: 2
+
+- Glyph name: D	Contours detected: 420	Expected: 2
+
+- Glyph name: Dcaron	Contours detected: 433	Expected: 3
+
+- Glyph name: Dcroat	Contours detected: 482	Expected: 2
+
+- Glyph name: E	Contours detected: 255	Expected: 1
+
+- Glyph name: Eacute	Contours detected: 258	Expected: 2
+
+- Glyph name: Ebreve	Contours detected: 290	Expected: 2
+
+- Glyph name: Ecaron	Contours detected: 268	Expected: 2
+
+- Glyph name: Ecircumflex	Contours detected: 275	Expected: 2
+
+- Glyph name: Edieresis	Contours detected: 272	Expected: 3
+
+- Glyph name: Edotaccent	Contours detected: 273	Expected: 2
+
+- Glyph name: Egrave	Contours detected: 289	Expected: 2
+
+- Glyph name: Emacron	Contours detected: 267	Expected: 2
+
+- Glyph name: Eng	Contours detected: 488	Expected: 1
+
+- Glyph name: Eogonek	Contours detected: 255	Expected: 1 or 2
+
+- Glyph name: Eth	Contours detected: 371	Expected: 2
+
+- Glyph name: Euro	Contours detected: 487	Expected: 1 or 2
+
+- Glyph name: F	Contours detected: 325	Expected: 1
+
+- Glyph name: G	Contours detected: 394	Expected: 1
+
+- Glyph name: Gbreve	Contours detected: 429	Expected: 2
+
+- Glyph name: Gcircumflex	Contours detected: 414	Expected: 2
+
+- Glyph name: Gdotaccent	Contours detected: 412	Expected: 2
+
+- Glyph name: H	Contours detected: 525	Expected: 1
+
+- Glyph name: Hbar	Contours detected: 499	Expected: 2
+
+- Glyph name: Hcircumflex	Contours detected: 545	Expected: 2
+
+- Glyph name: I	Contours detected: 187	Expected: 1
+
+- Glyph name: IJ	Contours detected: 419	Expected: 1 or 2
+
+- Glyph name: Iacute	Contours detected: 190	Expected: 2
+
+- Glyph name: Ibreve	Contours detected: 222	Expected: 2
+
+- Glyph name: Icircumflex	Contours detected: 207	Expected: 2
+
+- Glyph name: Idieresis	Contours detected: 204	Expected: 3
+
+- Glyph name: Idotaccent	Contours detected: 205	Expected: 2
+
+- Glyph name: Igrave	Contours detected: 221	Expected: 2
+
+- Glyph name: Imacron	Contours detected: 199	Expected: 2
+
+- Glyph name: Iogonek	Contours detected: 280	Expected: 1 or 2
+
+- Glyph name: Itilde	Contours detected: 205	Expected: 2
+
+- Glyph name: J	Contours detected: 336	Expected: 1
+
+- Glyph name: Jcircumflex	Contours detected: 356	Expected: 2
+
+- Glyph name: K	Contours detected: 450	Expected: 1 or 2
+
+- Glyph name: L	Contours detected: 286	Expected: 1
+
+- Glyph name: Lacute	Contours detected: 289	Expected: 2
+
+- Glyph name: Lcaron	Contours detected: 299	Expected: 2
+
+- Glyph name: Ldot	Contours detected: 287	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 258	Expected: 1
+
+- Glyph name: M	Contours detected: 228	Expected: 1
+
+- Glyph name: N	Contours detected: 418	Expected: 1
+
+- Glyph name: Nacute	Contours detected: 421	Expected: 2
+
+- Glyph name: Ncaron	Contours detected: 431	Expected: 2
+
+- Glyph name: Ntilde	Contours detected: 436	Expected: 2
+
+- Glyph name: O	Contours detected: 474	Expected: 2
+
+- Glyph name: OE	Contours detected: 546	Expected: 2
+
+- Glyph name: Oacute	Contours detected: 477	Expected: 3
+
+- Glyph name: Ocircumflex	Contours detected: 494	Expected: 3
+
+- Glyph name: Odieresis	Contours detected: 491	Expected: 4
+
+- Glyph name: Ograve	Contours detected: 508	Expected: 3
+
+- Glyph name: Ohungarumlaut	Contours detected: 521	Expected: 4
+
+- Glyph name: Omacron	Contours detected: 486	Expected: 3
+
+- Glyph name: Oslash	Contours detected: 568	Expected: 2 or 3
+
+- Glyph name: Oslashacute	Contours detected: 571	Expected: 4
+
+- Glyph name: Otilde	Contours detected: 492	Expected: 3
+
+- Glyph name: P	Contours detected: 283	Expected: 1 or 2
+
+- Glyph name: Q	Contours detected: 431	Expected: 2
+
+- Glyph name: R	Contours detected: 457	Expected: 1 or 2
+
+- Glyph name: Racute	Contours detected: 460	Expected: 3
+
+- Glyph name: Rcaron	Contours detected: 470	Expected: 3
+
+- Glyph name: S	Contours detected: 217	Expected: 1
+
+- Glyph name: Sacute	Contours detected: 220	Expected: 2
+
+- Glyph name: Scaron	Contours detected: 230	Expected: 2
+
+- Glyph name: Scircumflex	Contours detected: 237	Expected: 2
+
+- Glyph name: T	Contours detected: 255	Expected: 1
+
+- Glyph name: Tbar	Contours detected: 291	Expected: 1
+
+- Glyph name: Tcaron	Contours detected: 268	Expected: 2
+
+- Glyph name: Thorn	Contours detected: 363	Expected: 1 or 2
+
+- Glyph name: U	Contours detected: 366	Expected: 1
+
+- Glyph name: Uacute	Contours detected: 369	Expected: 2
+
+- Glyph name: Ubreve	Contours detected: 401	Expected: 2
+
+- Glyph name: Ucircumflex	Contours detected: 386	Expected: 2
+
+- Glyph name: Udieresis	Contours detected: 383	Expected: 3
+
+- Glyph name: Ugrave	Contours detected: 400	Expected: 2
+
+- Glyph name: Uhungarumlaut	Contours detected: 413	Expected: 3
+
+- Glyph name: Umacron	Contours detected: 378	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 473	Expected: 1
+
+- Glyph name: Uring	Contours detected: 367	Expected: 3
+
+- Glyph name: Utilde	Contours detected: 384	Expected: 2
+
+- Glyph name: V	Contours detected: 290	Expected: 1
+
+- Glyph name: W	Contours detected: 547	Expected: 1 or 2
+
+- Glyph name: Wacute	Contours detected: 550	Expected: 2
+
+- Glyph name: Wcircumflex	Contours detected: 567	Expected: 2
+
+- Glyph name: Wdieresis	Contours detected: 564	Expected: 3
+
+- Glyph name: Wgrave	Contours detected: 581	Expected: 2
+
+- Glyph name: X	Contours detected: 356	Expected: 1
+
+- Glyph name: Y	Contours detected: 261	Expected: 1
+
+- Glyph name: Yacute	Contours detected: 264	Expected: 2
+
+- Glyph name: Ycircumflex	Contours detected: 281	Expected: 2
+
+- Glyph name: Ydieresis	Contours detected: 278	Expected: 3
+
+- Glyph name: Ygrave	Contours detected: 295	Expected: 2
+
+- Glyph name: Z	Contours detected: 408	Expected: 1
+
+- Glyph name: Zacute	Contours detected: 411	Expected: 2
+
+- Glyph name: Zcaron	Contours detected: 421	Expected: 2
+
+- Glyph name: Zdotaccent	Contours detected: 426	Expected: 2
+
+- Glyph name: a	Contours detected: 229	Expected: 2
+
+- Glyph name: aacute	Contours detected: 240	Expected: 3
+
+- Glyph name: abreve	Contours detected: 243	Expected: 3
+
+- Glyph name: acircumflex	Contours detected: 254	Expected: 3
+
+- Glyph name: acute	Contours detected: 11	Expected: 1
+
+- Glyph name: adieresis	Contours detected: 234	Expected: 4
+
+- Glyph name: ae	Contours detected: 307	Expected: 3
+
+- Glyph name: aeacute	Contours detected: 318	Expected: 4
+
+- Glyph name: agrave	Contours detected: 235	Expected: 3
+
+- Glyph name: amacron	Contours detected: 263	Expected: 3
+
+- Glyph name: ampersand	Contours detected: 280	Expected: 1, 2 or 3
+
+- Glyph name: aogonek	Contours detected: 265	Expected: 2
+
+- Glyph name: approxequal	Contours detected: 140	Expected: 2
+
+- Glyph name: aring	Contours detected: 230	Expected: 4
+
+- Glyph name: asciicircum	Contours detected: 16	Expected: 1
+
+- Glyph name: asciitilde	Contours detected: 100	Expected: 1
+
+- Glyph name: asterisk	Contours detected: 145	Expected: 1 or 4
+
+- Glyph name: at	Contours detected: 212	Expected: 2
+
+- Glyph name: atilde	Contours detected: 251	Expected: 3
+
+- Glyph name: b	Contours detected: 345	Expected: 2
+
+- Glyph name: backslash	Contours detected: 134	Expected: 1
+
+- Glyph name: bar	Contours detected: 235	Expected: 1
+
+- Glyph name: braceleft	Contours detected: 250	Expected: 1
+
+- Glyph name: braceright	Contours detected: 272	Expected: 1
+
+- Glyph name: bracketleft	Contours detected: 339	Expected: 1
+
+- Glyph name: bracketright	Contours detected: 240	Expected: 1
+
+- Glyph name: breve	Contours detected: 14	Expected: 1
+
+- Glyph name: brokenbar	Contours detected: 154	Expected: 2
+
+- Glyph name: bullet	Contours detected: 89	Expected: 1
+
+- Glyph name: c	Contours detected: 239	Expected: 1
+
+- Glyph name: cacute	Contours detected: 250	Expected: 2
+
+- Glyph name: caron	Contours detected: 17	Expected: 1
+
+- Glyph name: ccaron	Contours detected: 256	Expected: 2
+
+- Glyph name: ccedilla	Contours detected: 237	Expected: 1 or 2
+
+- Glyph name: ccircumflex	Contours detected: 264	Expected: 2
+
+- Glyph name: cdotaccent	Contours detected: 240	Expected: 2
+
+- Glyph name: cedilla	Contours detected: 2	Expected: 1
+
+- Glyph name: cent	Contours detected: 278	Expected: 1 or 2
+
+- Glyph name: circumflex	Contours detected: 25	Expected: 1
+
+- Glyph name: colon	Contours detected: 107	Expected: 2
+
+- Glyph name: comma	Contours detected: 80	Expected: 1
+
+- Glyph name: copyright	Contours detected: 254	Expected: 3
+
+- Glyph name: currency	Contours detected: 167	Expected: 2
+
+- Glyph name: d	Contours detected: 465	Expected: 2
+
+- Glyph name: dagger	Contours detected: 175	Expected: 1 or 2
+
+- Glyph name: daggerdbl	Contours detected: 398	Expected: 1 or 3
+
+- Glyph name: dcaron	Contours detected: 478	Expected: 3
+
+- Glyph name: dcroat	Contours detected: 295	Expected: 2
+
+- Glyph name: degree	Contours detected: 79	Expected: 2
+
+- Glyph name: dieresis	Contours detected: 5	Expected: 2
+
+- Glyph name: divide	Contours detected: 188	Expected: 3
+
+- Glyph name: dollar	Contours detected: 474	Expected: 1, 3 or 5
+
+- Glyph name: dotlessi	Contours detected: 96	Expected: 1
+
+- Glyph name: e	Contours detected: 198	Expected: 2
+
+- Glyph name: eacute	Contours detected: 209	Expected: 3
+
+- Glyph name: ebreve	Contours detected: 212	Expected: 3
+
+- Glyph name: ecaron	Contours detected: 215	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 223	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 203	Expected: 4
+
+- Glyph name: edotaccent	Contours detected: 199	Expected: 3
+
+- Glyph name: egrave	Contours detected: 204	Expected: 3
+
+- Glyph name: eight	Contours detected: 452	Expected: 3
+
+- Glyph name: ellipsis	Contours detected: 132	Expected: 3
+
+- Glyph name: emacron	Contours detected: 232	Expected: 3
+
+- Glyph name: emdash	Contours detected: 135	Expected: 1
+
+- Glyph name: endash	Contours detected: 53	Expected: 1
+
+- Glyph name: eng	Contours detected: 420	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 237	Expected: 2
+
+- Glyph name: equal	Contours detected: 119	Expected: 2
+
+- Glyph name: estimated	Contours detected: 314	Expected: 2
+
+- Glyph name: eth	Contours detected: 312	Expected: 2
+
+- Glyph name: exclam	Contours detected: 164	Expected: 2
+
+- Glyph name: exclamdown	Contours detected: 148	Expected: 2
+
+- Glyph name: f	Contours detected: 307	Expected: 1
+
+- Glyph name: fi	Contours detected: 364	Expected: 3
+
+- Glyph name: five	Contours detected: 406	Expected: 1
+
+- Glyph name: fiveeighths	Contours detected: 425	Expected: 5
+
+- Glyph name: fl	Contours detected: 306	Expected: 2
+
+- Glyph name: four	Contours detected: 344	Expected: 1 or 2
+
+- Glyph name: fraction	Contours detected: 123	Expected: 1
+
+- Glyph name: g	Contours detected: 331	Expected: 2 or 3
+
+- Glyph name: gbreve	Contours detected: 345	Expected: 3 or 4
+
+- Glyph name: gcircumflex	Contours detected: 356	Expected: 3 or 4
+
+- Glyph name: gdotaccent	Contours detected: 332	Expected: 3 or 4
+
+- Glyph name: germandbls	Contours detected: 307	Expected: 1
+
+- Glyph name: grave	Contours detected: 6	Expected: 1
+
+- Glyph name: greater	Contours detected: 120	Expected: 1
+
+- Glyph name: greaterequal	Contours detected: 155	Expected: 2
+
+- Glyph name: guillemotleft	Contours detected: 203	Expected: 2
+
+- Glyph name: guillemotright	Contours detected: 228	Expected: 2
+
+- Glyph name: guilsinglleft	Contours detected: 70	Expected: 1
+
+- Glyph name: guilsinglright	Contours detected: 56	Expected: 1
+
+- Glyph name: h	Contours detected: 353	Expected: 1
+
+- Glyph name: hbar	Contours detected: 336	Expected: 1
+
+- Glyph name: hcircumflex	Contours detected: 378	Expected: 2
+
+- Glyph name: hyphen	Contours detected: 70	Expected: 1
+
+- Glyph name: i	Contours detected: 116	Expected: 2
+
+- Glyph name: iacute	Contours detected: 107	Expected: 2
+
+- Glyph name: ibreve	Contours detected: 110	Expected: 2
+
+- Glyph name: icircumflex	Contours detected: 121	Expected: 2
+
+- Glyph name: idieresis	Contours detected: 101	Expected: 3
+
+- Glyph name: igrave	Contours detected: 102	Expected: 2
+
+- Glyph name: ij	Contours detected: 324	Expected: 3 or 4
+
+- Glyph name: imacron	Contours detected: 130	Expected: 2
+
+- Glyph name: infinity	Contours detected: 260	Expected: 3
+
+- Glyph name: integral	Contours detected: 206	Expected: 1
+
+- Glyph name: iogonek	Contours detected: 167	Expected: 2 or 3
+
+- Glyph name: itilde	Contours detected: 118	Expected: 2
+
+- Glyph name: j	Contours detected: 208	Expected: 2
+
+- Glyph name: jcircumflex	Contours detected: 195	Expected: 2
+
+- Glyph name: k	Contours detected: 298	Expected: 1 or 2
+
+- Glyph name: kgreenlandic	Contours detected: 296	Expected: 1 or 2
+
+- Glyph name: l	Contours detected: 248	Expected: 1
+
+- Glyph name: lacute	Contours detected: 259	Expected: 2
+
+- Glyph name: lcaron	Contours detected: 261	Expected: 2
+
+- Glyph name: ldot	Contours detected: 249	Expected: 2
+
+- Glyph name: less	Contours detected: 183	Expected: 1
+
+- Glyph name: lessequal	Contours detected: 141	Expected: 2
+
+- Glyph name: logicalnot	Contours detected: 62	Expected: 1
+
+- Glyph name: longs	Contours detected: 142	Expected: 1
+
+- Glyph name: lozenge	Contours detected: 328	Expected: 2
+
+- Glyph name: lslash	Contours detected: 229	Expected: 1
+
+- Glyph name: m	Contours detected: 289	Expected: 1
+
+- Glyph name: macron	Contours detected: 34	Expected: 1
+
+- Glyph name: minus	Contours detected: 40	Expected: 1
+
+- Glyph name: multiply	Contours detected: 158	Expected: 1
+
+- Glyph name: n	Contours detected: 257	Expected: 1
+
+- Glyph name: nacute	Contours detected: 268	Expected: 2
+
+- Glyph name: napostrophe	Contours detected: 277	Expected: 2
+
+- Glyph name: ncaron	Contours detected: 274	Expected: 2
+
+- Glyph name: nine	Contours detected: 316	Expected: 1 or 2
+
+- Glyph name: notequal	Contours detected: 142	Expected: 1
+
+- Glyph name: ntilde	Contours detected: 279	Expected: 2
+
+- Glyph name: numbersign	Contours detected: 256	Expected: 2
+
+- Glyph name: o	Contours detected: 250	Expected: 2
+
+- Glyph name: oacute	Contours detected: 261	Expected: 3
+
+- Glyph name: ocircumflex	Contours detected: 275	Expected: 3
+
+- Glyph name: odieresis	Contours detected: 255	Expected: 4
+
+- Glyph name: oe	Contours detected: 431	Expected: 3
+
+- Glyph name: ogonek	Contours detected: 81	Expected: 1
+
+- Glyph name: ograve	Contours detected: 256	Expected: 3
+
+- Glyph name: ohungarumlaut	Contours detected: 252	Expected: 4
+
+- Glyph name: omacron	Contours detected: 284	Expected: 3
+
+- Glyph name: one	Contours detected: 277	Expected: 1
+
+- Glyph name: oneeighth	Contours detected: 286	Expected: 5
+
+- Glyph name: onehalf	Contours detected: 238	Expected: 3
+
+- Glyph name: onequarter	Contours detected: 173	Expected: 3 or 4
+
+- Glyph name: ordfeminine	Contours detected: 63	Expected: 2 or 3
+
+- Glyph name: ordmasculine	Contours detected: 27	Expected: 2 or 3
+
+- Glyph name: oslash	Contours detected: 303	Expected: 3
+
+- Glyph name: oslashacute	Contours detected: 314	Expected: 4
+
+- Glyph name: otilde	Contours detected: 272	Expected: 3
+
+- Glyph name: p	Contours detected: 338	Expected: 2
+
+- Glyph name: paragraph	Contours detected: 264	Expected: 1, 2 or 3
+
+- Glyph name: parenleft	Contours detected: 262	Expected: 1
+
+- Glyph name: parenright	Contours detected: 205	Expected: 1
+
+- Glyph name: partialdiff	Contours detected: 306	Expected: 2
+
+- Glyph name: percent	Contours detected: 336	Expected: 5
+
+- Glyph name: period	Contours detected: 20	Expected: 1
+
+- Glyph name: periodcentered	Contours detected: 78	Expected: 1
+
+- Glyph name: perthousand	Contours detected: 412	Expected: 6 or 7
+
+- Glyph name: plus	Contours detected: 183	Expected: 1
+
+- Glyph name: plusminus	Contours detected: 245	Expected: 1 or 2
+
+- Glyph name: product	Contours detected: 478	Expected: 1
+
+- Glyph name: q	Contours detected: 397	Expected: 2
+
+- Glyph name: question	Contours detected: 285	Expected: 2
+
+- Glyph name: questiondown	Contours detected: 214	Expected: 2
+
+- Glyph name: quotedbl	Contours detected: 34	Expected: 2
+
+- Glyph name: quotedblbase	Contours detected: 120	Expected: 2
+
+- Glyph name: quotedblleft	Contours detected: 86	Expected: 2
+
+- Glyph name: quotedblright	Contours detected: 136	Expected: 2
+
+- Glyph name: quoteleft	Contours detected: 75	Expected: 1
+
+- Glyph name: quoteright	Contours detected: 27	Expected: 1
+
+- Glyph name: quotesinglbase	Contours detected: 77	Expected: 1
+
+- Glyph name: quotesingle	Contours detected: 27	Expected: 1
+
+- Glyph name: r	Contours detected: 200	Expected: 1
+
+- Glyph name: racute	Contours detected: 211	Expected: 2
+
+- Glyph name: radical	Contours detected: 269	Expected: 1
+
+- Glyph name: rcaron	Contours detected: 217	Expected: 2
+
+- Glyph name: registered	Contours detected: 315	Expected: 3 or 4
+
+- Glyph name: ring	Contours detected: 1	Expected: 2
+
+- Glyph name: s	Contours detected: 162	Expected: 1
+
+- Glyph name: sacute	Contours detected: 173	Expected: 2
+
+- Glyph name: scaron	Contours detected: 179	Expected: 2
+
+- Glyph name: scircumflex	Contours detected: 187	Expected: 2
+
+- Glyph name: section	Contours detected: 505	Expected: 2
+
+- Glyph name: semicolon	Contours detected: 154	Expected: 2
+
+- Glyph name: seven	Contours detected: 291	Expected: 1
+
+- Glyph name: seveneighths	Contours detected: 327	Expected: 5
+
+- Glyph name: six	Contours detected: 407	Expected: 1 or 2
+
+- Glyph name: slash	Contours detected: 215	Expected: 1
+
+- Glyph name: sterling	Contours detected: 317	Expected: 1 or 2
+
+- Glyph name: summation	Contours detected: 460	Expected: 1
+
+- Glyph name: t	Contours detected: 207	Expected: 1
+
+- Glyph name: tbar	Contours detected: 196	Expected: 1
+
+- Glyph name: tcaron	Contours detected: 220	Expected: 2
+
+- Glyph name: thorn	Contours detected: 494	Expected: 2
+
+- Glyph name: three	Contours detected: 411	Expected: 1
+
+- Glyph name: threeeighths	Contours detected: 346	Expected: 5
+
+- Glyph name: threequarters	Contours detected: 233	Expected: 3 or 4
+
+- Glyph name: tilde	Contours detected: 22	Expected: 1
+
+- Glyph name: trademark	Contours detected: 76	Expected: 2
+
+- Glyph name: two	Contours detected: 371	Expected: 1
+
+- Glyph name: u	Contours detected: 362	Expected: 1
+
+- Glyph name: uacute	Contours detected: 373	Expected: 2
+
+- Glyph name: ubreve	Contours detected: 376	Expected: 2
+
+- Glyph name: ucircumflex	Contours detected: 387	Expected: 2
+
+- Glyph name: udieresis	Contours detected: 367	Expected: 3
+
+- Glyph name: ugrave	Contours detected: 368	Expected: 2
+
+- Glyph name: uhungarumlaut	Contours detected: 364	Expected: 3
+
+- Glyph name: umacron	Contours detected: 396	Expected: 2
+
+- Glyph name: underscore	Contours detected: 66	Expected: 1
+
+- Glyph name: uni00AD	Contours detected: 70	Expected: 0
+
+- Glyph name: uni00B5	Contours detected: 373	Expected: 1
+
+- Glyph name: uni0122	Contours detected: 415	Expected: 2
+
+- Glyph name: uni0123	Contours detected: 351	Expected: 3 or 4
+
+- Glyph name: uni0136	Contours detected: 471	Expected: 2 or 3
+
+- Glyph name: uni0137	Contours detected: 318	Expected: 2 or 3
+
+- Glyph name: uni013B	Contours detected: 307	Expected: 2
+
+- Glyph name: uni013C	Contours detected: 268	Expected: 2
+
+- Glyph name: uni0145	Contours detected: 439	Expected: 2
+
+- Glyph name: uni0146	Contours detected: 277	Expected: 2
+
+- Glyph name: uni0156	Contours detected: 478	Expected: 3
+
+- Glyph name: uni0157	Contours detected: 220	Expected: 2
+
+- Glyph name: uni0218	Contours detected: 238	Expected: 2
+
+- Glyph name: uni0219	Contours detected: 182	Expected: 2
+
+- Glyph name: uni021A	Contours detected: 276	Expected: 2
+
+- Glyph name: uni021B	Contours detected: 227	Expected: 2
+
+- Glyph name: uni0237	Contours detected: 170	Expected: 1
+
+- Glyph name: uni02BC	Contours detected: 20	Expected: 1
+
+- Glyph name: uni0302	Contours detected: 25	Expected: 1
+
+- Glyph name: uni0304	Contours detected: 34	Expected: 1
+
+- Glyph name: uni0306	Contours detected: 14	Expected: 1
+
+- Glyph name: uni0308	Contours detected: 5	Expected: 2
+
+- Glyph name: uni030A	Contours detected: 1	Expected: 2
+
+- Glyph name: uni030C	Contours detected: 17	Expected: 1
+
+- Glyph name: uni0312	Contours detected: 20	Expected: 1
+
+- Glyph name: uni0326	Contours detected: 20	Expected: 1
+
+- Glyph name: uni0327	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0328	Contours detected: 81	Expected: 1
+
+- Glyph name: uni0335	Contours detected: 16	Expected: 1
+
+- Glyph name: uni0337	Contours detected: 53	Expected: 1
+
+- Glyph name: uni0338	Contours detected: 94	Expected: 1
+
+- Glyph name: uni0400	Contours detected: 289	Expected: 2
+
+- Glyph name: uni0401	Contours detected: 260	Expected: 3
+
+- Glyph name: uni0402	Contours detected: 286	Expected: 1
+
+- Glyph name: uni0403	Contours detected: 236	Expected: 2
+
+- Glyph name: uni0404	Contours detected: 400	Expected: 1
+
+- Glyph name: uni0405	Contours detected: 217	Expected: 1
+
+- Glyph name: uni0406	Contours detected: 187	Expected: 1
+
+- Glyph name: uni0407	Contours detected: 192	Expected: 3
+
+- Glyph name: uni0408	Contours detected: 336	Expected: 1
+
+- Glyph name: uni0409	Contours detected: 612	Expected: 2
+
+- Glyph name: uni040A	Contours detected: 492	Expected: 2
+
+- Glyph name: uni040B	Contours detected: 368	Expected: 1
+
+- Glyph name: uni040C	Contours detected: 345	Expected: 2
+
+- Glyph name: uni040D	Contours detected: 536	Expected: 2
+
+- Glyph name: uni040E	Contours detected: 266	Expected: 2
+
+- Glyph name: uni040F	Contours detected: 411	Expected: 1
+
+- Glyph name: uni0410	Contours detected: 352	Expected: 2
+
+- Glyph name: uni0411	Contours detected: 471	Expected: 2
+
+- Glyph name: uni0412	Contours detected: 301	Expected: 3
+
+- Glyph name: uni0413	Contours detected: 233	Expected: 1
+
+- Glyph name: uni0414	Contours detected: 334	Expected: 2
+
+- Glyph name: uni0415	Contours detected: 255	Expected: 1
+
+- Glyph name: uni0416	Contours detected: 779	Expected: 1
+
+- Glyph name: uni0417	Contours detected: 343	Expected: 1
+
+- Glyph name: uni0418	Contours detected: 502	Expected: 1
+
+- Glyph name: uni0419	Contours detected: 517	Expected: 2
+
+- Glyph name: uni041A	Contours detected: 342	Expected: 1
+
+- Glyph name: uni041B	Contours detected: 429	Expected: 1
+
+- Glyph name: uni041C	Contours detected: 228	Expected: 1
+
+- Glyph name: uni041D	Contours detected: 525	Expected: 1
+
+- Glyph name: uni041E	Contours detected: 474	Expected: 2
+
+- Glyph name: uni041F	Contours detected: 443	Expected: 1
+
+- Glyph name: uni0420	Contours detected: 283	Expected: 1 or 2
+
+- Glyph name: uni0421	Contours detected: 374	Expected: 1
+
+- Glyph name: uni0422	Contours detected: 255	Expected: 1
+
+- Glyph name: uni0423	Contours detected: 251	Expected: 1
+
+- Glyph name: uni0424	Contours detected: 595	Expected: 3
+
+- Glyph name: uni0425	Contours detected: 356	Expected: 1
+
+- Glyph name: uni0426	Contours detected: 451	Expected: 1
+
+- Glyph name: uni0427	Contours detected: 339	Expected: 1
+
+- Glyph name: uni0428	Contours detected: 640	Expected: 1
+
+- Glyph name: uni0429	Contours detected: 459	Expected: 1
+
+- Glyph name: uni042A	Contours detected: 455	Expected: 2
+
+- Glyph name: uni042B	Contours detected: 520	Expected: 3
+
+- Glyph name: uni042C	Contours detected: 231	Expected: 2
+
+- Glyph name: uni042D	Contours detected: 335	Expected: 1
+
+- Glyph name: uni042E	Contours detected: 585	Expected: 2
+
+- Glyph name: uni042F	Contours detected: 435	Expected: 2
+
+- Glyph name: uni0430	Contours detected: 229	Expected: 2
+
+- Glyph name: uni0431	Contours detected: 262	Expected: 2
+
+- Glyph name: uni0432	Contours detected: 349	Expected: 3
+
+- Glyph name: uni0433	Contours detected: 91	Expected: 1
+
+- Glyph name: uni0434	Contours detected: 433	Expected: 2
+
+- Glyph name: uni0435	Contours detected: 198	Expected: 2
+
+- Glyph name: uni0436	Contours detected: 454	Expected: 1
+
+- Glyph name: uni0437	Contours detected: 176	Expected: 1
+
+- Glyph name: uni0438	Contours detected: 293	Expected: 1
+
+- Glyph name: uni0439	Contours detected: 324	Expected: 2
+
+- Glyph name: uni043A	Contours detected: 278	Expected: 1
+
+- Glyph name: uni043B	Contours detected: 276	Expected: 1
+
+- Glyph name: uni043C	Contours detected: 309	Expected: 1
+
+- Glyph name: uni043D	Contours detected: 222	Expected: 1
+
+- Glyph name: uni043E	Contours detected: 250	Expected: 2
+
+- Glyph name: uni043F	Contours detected: 188	Expected: 1
+
+- Glyph name: uni0440	Contours detected: 338	Expected: 2
+
+- Glyph name: uni0441	Contours detected: 239	Expected: 1
+
+- Glyph name: uni0442	Contours detected: 159	Expected: 1
+
+- Glyph name: uni0443	Contours detected: 352	Expected: 1
+
+- Glyph name: uni0444	Contours detected: 434	Expected: 3
+
+- Glyph name: uni0445	Contours detected: 207	Expected: 1
+
+- Glyph name: uni0446	Contours detected: 338	Expected: 1
+
+- Glyph name: uni0447	Contours detected: 298	Expected: 1
+
+- Glyph name: uni0448	Contours detected: 302	Expected: 1
+
+- Glyph name: uni0449	Contours detected: 384	Expected: 1
+
+- Glyph name: uni044A	Contours detected: 237	Expected: 2
+
+- Glyph name: uni044B	Contours detected: 273	Expected: 3
+
+- Glyph name: uni044C	Contours detected: 222	Expected: 2
+
+- Glyph name: uni044D	Contours detected: 141	Expected: 1
+
+- Glyph name: uni044E	Contours detected: 354	Expected: 2
+
+- Glyph name: uni044F	Contours detected: 230	Expected: 2
+
+- Glyph name: uni0450	Contours detected: 204	Expected: 3
+
+- Glyph name: uni0451	Contours detected: 203	Expected: 4
+
+- Glyph name: uni0452	Contours detected: 463	Expected: 1
+
+- Glyph name: uni0453	Contours detected: 102	Expected: 2
+
+- Glyph name: uni0454	Contours detected: 221	Expected: 1
+
+- Glyph name: uni0455	Contours detected: 162	Expected: 1
+
+- Glyph name: uni0456	Contours detected: 116	Expected: 2
+
+- Glyph name: uni0457	Contours detected: 101	Expected: 3
+
+- Glyph name: uni0458	Contours detected: 208	Expected: 2
+
+- Glyph name: uni0459	Contours detected: 272	Expected: 2
+
+- Glyph name: uni045A	Contours detected: 270	Expected: 2
+
+- Glyph name: uni045B	Contours detected: 438	Expected: 1
+
+- Glyph name: uni045C	Contours detected: 289	Expected: 2
+
+- Glyph name: uni045D	Contours detected: 299	Expected: 2
+
+- Glyph name: uni045E	Contours detected: 383	Expected: 2
+
+- Glyph name: uni045F	Contours detected: 349	Expected: 1 or 2
+
+- Glyph name: uni0462	Contours detected: 250	Expected: 2
+
+- Glyph name: uni0463	Contours detected: 288	Expected: 2
+
+- Glyph name: uni046A	Contours detected: 584	Expected: 2
+
+- Glyph name: uni046B	Contours detected: 301	Expected: 2
+
+- Glyph name: uni0472	Contours detected: 478	Expected: 3
+
+- Glyph name: uni0473	Contours detected: 250	Expected: 3
+
+- Glyph name: uni0474	Contours detected: 332	Expected: 1
+
+- Glyph name: uni0475	Contours detected: 246	Expected: 1
+
+- Glyph name: uni0490	Contours detected: 409	Expected: 1
+
+- Glyph name: uni0491	Contours detected: 157	Expected: 1
+
+- Glyph name: uni0492	Contours detected: 210	Expected: 1
+
+- Glyph name: uni0493	Contours detected: 107	Expected: 1
+
+- Glyph name: uni0494	Contours detected: 338	Expected: 1
+
+- Glyph name: uni0495	Contours detected: 256	Expected: 1
+
+- Glyph name: uni0496	Contours detected: 603	Expected: 1 or 2
+
+- Glyph name: uni0497	Contours detected: 467	Expected: 1 or 2
+
+- Glyph name: uni0498	Contours detected: 320	Expected: 1 or 2
+
+- Glyph name: uni0499	Contours detected: 166	Expected: 1 or 2
+
+- Glyph name: uni049A	Contours detected: 368	Expected: 1 or 2
+
+- Glyph name: uni049B	Contours detected: 403	Expected: 1 or 2
+
+- Glyph name: uni049C	Contours detected: 322	Expected: 1
+
+- Glyph name: uni049D	Contours detected: 209	Expected: 1
+
+- Glyph name: uni04A0	Contours detected: 270	Expected: 1
+
+- Glyph name: uni04A1	Contours detected: 243	Expected: 1
+
+- Glyph name: uni04A2	Contours detected: 454	Expected: 1 or 2
+
+- Glyph name: uni04A3	Contours detected: 323	Expected: 1 or 2
+
+- Glyph name: uni04A4	Contours detected: 418	Expected: 1
+
+- Glyph name: uni04A5	Contours detected: 293	Expected: 1
+
+- Glyph name: uni04AA	Contours detected: 418	Expected: 1 or 2
+
+- Glyph name: uni04AB	Contours detected: 244	Expected: 1 or 2
+
+- Glyph name: uni04B6	Contours detected: 445	Expected: 1 or 2
+
+- Glyph name: uni04B7	Contours detected: 347	Expected: 1 or 2
+
+- Glyph name: uni04B8	Contours detected: 320	Expected: 1
+
+- Glyph name: uni04B9	Contours detected: 211	Expected: 1
+
+- Glyph name: uni04BA	Contours detected: 305	Expected: 1
+
+- Glyph name: uni04BB	Contours detected: 353	Expected: 1
+
+- Glyph name: uni04C0	Contours detected: 187	Expected: 1
+
+- Glyph name: uni04C1	Contours detected: 794	Expected: 2
+
+- Glyph name: uni04C2	Contours detected: 485	Expected: 2
+
+- Glyph name: uni04CB	Contours detected: 365	Expected: 1 or 2
+
+- Glyph name: uni04CC	Contours detected: 317	Expected: 1 or 2
+
+- Glyph name: uni04CF	Contours detected: 248	Expected: 1
+
+- Glyph name: uni04D0	Contours detected: 367	Expected: 3
+
+- Glyph name: uni04D1	Contours detected: 260	Expected: 3
+
+- Glyph name: uni04D2	Contours detected: 357	Expected: 4
+
+- Glyph name: uni04D3	Contours detected: 234	Expected: 4
+
+- Glyph name: uni04D4	Contours detected: 496	Expected: 2
+
+- Glyph name: uni04D5	Contours detected: 307	Expected: 3
+
+- Glyph name: uni04D6	Contours detected: 270	Expected: 2
+
+- Glyph name: uni04D7	Contours detected: 229	Expected: 3
+
+- Glyph name: uni04D8	Contours detected: 318	Expected: 2
+
+- Glyph name: uni04D9	Contours detected: 290	Expected: 2
+
+- Glyph name: uni04DC	Contours detected: 784	Expected: 3
+
+- Glyph name: uni04DD	Contours detected: 459	Expected: 3
+
+- Glyph name: uni04DE	Contours detected: 348	Expected: 3
+
+- Glyph name: uni04DF	Contours detected: 181	Expected: 3
+
+- Glyph name: uni04E2	Contours detected: 536	Expected: 2
+
+- Glyph name: uni04E3	Contours detected: 327	Expected: 2
+
+- Glyph name: uni04E4	Contours detected: 507	Expected: 3
+
+- Glyph name: uni04E5	Contours detected: 298	Expected: 3
+
+- Glyph name: uni04E6	Contours detected: 479	Expected: 4
+
+- Glyph name: uni04E7	Contours detected: 255	Expected: 4
+
+- Glyph name: uni04E8	Contours detected: 461	Expected: 3
+
+- Glyph name: uni04E9	Contours detected: 250	Expected: 3
+
+- Glyph name: uni04EE	Contours detected: 285	Expected: 2
+
+- Glyph name: uni04EF	Contours detected: 386	Expected: 2
+
+- Glyph name: uni04F0	Contours detected: 256	Expected: 3
+
+- Glyph name: uni04F1	Contours detected: 357	Expected: 3
+
+- Glyph name: uni04F2	Contours detected: 253	Expected: 3
+
+- Glyph name: uni04F3	Contours detected: 354	Expected: 3
+
+- Glyph name: uni04F4	Contours detected: 344	Expected: 3
+
+- Glyph name: uni04F5	Contours detected: 303	Expected: 3
+
+- Glyph name: uni04F6	Contours detected: 344	Expected: 1 or 2
+
+- Glyph name: uni04F7	Contours detected: 214	Expected: 1 or 2
+
+- Glyph name: uni04F8	Contours detected: 525	Expected: 5
+
+- Glyph name: uni04F9	Contours detected: 278	Expected: 5
+
+- Glyph name: uni051A	Contours detected: 431	Expected: 2
+
+- Glyph name: uni051B	Contours detected: 397	Expected: 2
+
+- Glyph name: uni051C	Contours detected: 547	Expected: 1
+
+- Glyph name: uni051D	Contours detected: 233	Expected: 1
+
+- Glyph name: uni0524	Contours detected: 355	Expected: 1
+
+- Glyph name: uni0525	Contours detected: 311	Expected: 1
+
+- Glyph name: uni1E9E	Contours detected: 431	Expected: 1
+
+- Glyph name: uni20AA	Contours detected: 506	Expected: 2
+
+- Glyph name: uni20AE	Contours detected: 213	Expected: 1
+
+- Glyph name: uni20B4	Contours detected: 313	Expected: 1 or 2
+
+- Glyph name: uni20B8	Contours detected: 222	Expected: 2
+
+- Glyph name: uni20B9	Contours detected: 278	Expected: 1
+
+- Glyph name: uni20BD	Contours detected: 433	Expected: 2
+
+- Glyph name: uni2116	Contours detected: 545	Expected: 3 or 4
+
+- Glyph name: uni2206	Contours detected: 275	Expected: 2
+
+- Glyph name: uni2215	Contours detected: 215	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 279	Expected: 1
+
+- Glyph name: uring	Contours detected: 363	Expected: 3
+
+- Glyph name: utilde	Contours detected: 384	Expected: 2
+
+- Glyph name: v	Contours detected: 163	Expected: 1
+
+- Glyph name: w	Contours detected: 233	Expected: 1
+
+- Glyph name: wacute	Contours detected: 244	Expected: 2
+
+- Glyph name: wcircumflex	Contours detected: 258	Expected: 2
+
+- Glyph name: wdieresis	Contours detected: 238	Expected: 3
+
+- Glyph name: wgrave	Contours detected: 239	Expected: 2
+
+- Glyph name: x	Contours detected: 207	Expected: 1
+
+- Glyph name: y	Contours detected: 290	Expected: 1
+
+- Glyph name: yacute	Contours detected: 301	Expected: 2
+
+- Glyph name: ycircumflex	Contours detected: 315	Expected: 2
+
+- Glyph name: ydieresis	Contours detected: 295	Expected: 3
+
+- Glyph name: yen	Contours detected: 231	Expected: 1 or 2
+
+- Glyph name: ygrave	Contours detected: 296	Expected: 2
+
+- Glyph name: z	Contours detected: 198	Expected: 1
+
+- Glyph name: zacute	Contours detected: 209	Expected: 2
+
+- Glyph name: zcaron	Contours detected: 215	Expected: 2
+
+- Glyph name: zdotaccent	Contours detected: 199	Expected: 2
+
+- Glyph name: zero	Contours detected: 432	Expected: 2 or 3
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain a soft hyphen?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/soft_hyphen</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character. [code: softhyphen]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/math_signs_width</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 538 among a set of 2 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 594:
+plus</p>
+<p>Width = 563:
+equal</p>
+<p>Width = 564:
+logicalnot</p>
+<p>Width = 576:
+plusminus</p>
+<p>Width = 639:
+multiply</p>
+<p>Width = 517:
+divide</p>
+<p>Width = 642:
+minus</p>
+<p>Width = 551:
+approxequal, notequal</p>
+<p>Width = 556:
+greaterequal, lessequal
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⚠️⏩⏩⏩</span>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/dotted_circle</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/soft_dotted</div>
+
+<details><summary>⚠️ RubikMaps-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ і́</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̦̒ j̦̒ į̆ į̇ į̈ į̊ į̋ į̒ į̦̒ į̧̒ į̨̒ į̵̀ į̵́ į̵̂ į̵̃ į̵̄ į̵̆ į̵̇ į̵̈ į̵̊</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Ukrainian (Cyrl, 29,273,587 speakers), Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers), Belarusian (Cyrl, 10,064,517 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Kom (Latn, 360,685 speakers), Nateni (Latn, 100,000 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Lugbara (Latn, 2,200,000 speakers), Basaa (Latn, 332,940 speakers), Koonzime (Latn, 40,000 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers), Dan (Latn, 1,099,244 speakers), Ma’di (Latn, 584,000 speakers), Avokaya (Latn, 100,000 speakers), Gulay (Latn, 250,478 speakers), Mango (Latn, 77,000 speakers), Ejagham (Latn, 120,000 speakers), Sar (Latn, 500,000 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>
