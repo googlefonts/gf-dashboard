@@ -1,12 +1,10 @@
 import datetime
 import glob
-import itertools
 import json
 import os
 import subprocess
-import time
 from pathlib import Path
-from collections import Counter, defaultdict
+from collections import defaultdict
 from urllib.parse import quote
 
 import fontbakery
@@ -32,9 +30,7 @@ scripts = LoadScripts()
 server_data = Path("docs/servers.json")
 
 if not server_data.exists():
-    print(
-        f"{server_data} not found. Generating file. This may take a while"
-    )
+    print(f"{server_data} not found. Generating file. This may take a while")
     servers = GFServers()
 else:
     servers = GFServers.open(server_data)
@@ -84,7 +80,7 @@ def run_fontbakery(directory):
         previous_json_time = None
     args = [
         "fontbakery",
-        f"check-googlefonts",
+        "check-googlefonts",
         "-F",
         "-l",
         "WARN",
@@ -138,7 +134,7 @@ def fontbakery_badges(basedir):
         if "Shaping" in badge:
             continue
         url = BASE_URL + "fontbakery-reports/" + basedir + "/" + os.path.basename(badge)
-        fb_badges.append(f"https://img.shields.io/endpoint?url="+quote(url, safe=""))
+        fb_badges.append("https://img.shields.io/endpoint?url=" + quote(url, safe=""))
     return fb_badges
 
 
@@ -169,6 +165,7 @@ script_langs = defaultdict(set)
 for lang in langs.keys():
     script_langs[langs[lang]["script"]].add(langs[lang]["name"])
 
+
 def rearrange_languages(languages):
     supported_langs_by_script = defaultdict(set)
     report = []
@@ -177,9 +174,13 @@ def rearrange_languages(languages):
         supported_langs_by_script[lang["script"]].add(lang["name"])
     for script, thislangs in supported_langs_by_script.items():
         expected = script_langs[script]
-        percent = len(thislangs)/len(expected)*100
-        result = ("%i%% (%i/%i) of languages using the %s script" %
-            (percent, len(thislangs), len(expected), scripts[script].name))
+        percent = len(thislangs) / len(expected) * 100
+        result = "%i%% (%i/%i) of languages using the %s script" % (
+            percent,
+            len(thislangs),
+            len(expected),
+            scripts[script].name,
+        )
         missing = expected - thislangs
         if len(missing) > 0 and len(missing) < 10:
             result += f" (Missing {'; '.join(missing)})"
@@ -274,7 +275,7 @@ for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
         classes.append("newrelease")
     if "production" not in gf.server_versions or (
         gf.server_versions["production"] != gf.dev_version
-        ):
+    ):
         classes.append("inpipeline")
     gf.classes = " ".join(classes)
     # Downstream versions if noto
