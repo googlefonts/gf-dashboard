@@ -210,7 +210,6 @@ def rearrange_languages(languages):
     return report
 
 
-
 for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
     if "noto" in directory:
         continue
