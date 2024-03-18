@@ -106,7 +106,9 @@ def run_fontbakery(directory):
     args = " ".join(args)
     result = subprocess.run(args, shell=True, capture_output=True)
     if result.stderr:
-        print(f"::warning file={basedir}, title=Fontbakery error::{result.stderr.decode("utf-8")}")
+        print(
+            f"::warning file={basedir}, title=Fontbakery error::{result.stderr.decode('utf-8')}"
+        )
         print(result.stderr.decode("utf-8"))
     if json_file.exists and (
         previous_json_time is None or json_file.stat().st_mtime > previous_json_time
