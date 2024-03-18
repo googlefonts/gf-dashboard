@@ -60,8 +60,16 @@ def fontbakery_needs_update(directory, last_update: datetime.datetime):
     if basedir in FONTBAKERY_BLACKLISTED:
         return False
     if report_file.exists():
-        report = json.load(open(report_file))
-        if "fontbakery_version" in report and parse_version(report["fontbakery_version"]) < parse_version(fontbakery.__version__):
+        try:
+            report = json.load(open(report_file))
+        except json.JSONDecodeError as e:
+            print(
+                f"::warning file={report_file},title=Fontbakery report failed to parse::{e}"
+            )
+
+        if "fontbakery_version" in report and parse_version(
+            report["fontbakery_version"]
+        ) < parse_version(fontbakery.__version__):
             return True
     if report_file.exists() and report_file.stat().st_mtime > last_update.timestamp():
         return False
@@ -97,12 +105,18 @@ def run_fontbakery(directory):
     ]
     args = " ".join(args)
     result = subprocess.run(args, shell=True, capture_output=True)
+    if result.stderr:
+        print(f"::warning file={basedir}, title=Fontbakery error::{result.stderr.decode("utf-8")}")
+        print(result.stderr.decode("utf-8"))
     if json_file.exists and (
         previous_json_time is None or json_file.stat().st_mtime > previous_json_time
     ):
-        report = json.load(open(json_file))
-        report["fontbakery_version"] = fontbakery.__version__
-        json.dump(report, open(json_file, "w"))
+        try:
+            report = json.load(open(json_file))
+            report["fontbakery_version"] = fontbakery.__version__
+            json.dump(report, open(json_file, "w"))
+        except json.JSONDecodeError as e:
+            pass  # We will report it later
 
 
 def fontbakery_fails(basedir):
@@ -110,7 +124,11 @@ def fontbakery_fails(basedir):
     file = f"docs/fontbakery-reports/{basedir}-report.json"
     if not os.path.exists(file):
         return []
-    report = json.load(open(file))
+    try:
+        report = json.load(open(file))
+    except json.JSONDecodeError as e:
+        print(f"::warning file={file},title=Fontbakery report failed to parse::{e}")
+
     failset = set()
     for section in report["sections"]:
         for check in section["checks"]:
