@@ -272,20 +272,20 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>1</td>
+        <td>9</td>
+        <td>19</td>
+        <td>102</td>
         <td>7</td>
-        <td>17</td>
-        <td>111</td>
-        <td>8</td>
-        <td>108</td>
+        <td>107</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
+        <td>4%</td>
+        <td>8%</td>
+        <td>42%</td>
         <td>3%</td>
-        <td>7%</td>
         <td>44%</td>
-        <td>3%</td>
-        <td>43%</td>
     </tr>
 </table>
         
@@ -310,1338 +310,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.12.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ☠🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Checking file is named canonically.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/canonical_filename&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Expected &quot;Lobster-Regular.ttf. Got Pushster-Regular.ttf.</p>
-
-                            
-                             [code: bad-filename]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Does DESCRIPTION file contain a upstream Git repo URL?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file.</p>
-
-                            
-                             [code: lacks-git-url]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check METADATA.pb parse correctly.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/parses&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        Pushster-Regular.ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/pushster failed to parse.
-TRACEBACK:
-25:1 : Message type &quot;google.fonts_public.FamilyProto&quot; has no field named &quot;primary_language&quot;.</p>
-
-                
-                 [code: parsing-error]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Checking OS/2 achVendID.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OS/2 VendorID value 'IMPA' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
-
-                            
-                             [code: unknown]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Could not parse metadata.pb file</p>
-
-                            
-                             [code: unparsable-metadata]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check copyright namerecords match license file.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider updating the url from '<a href="https://scripts.sil.org/OFL">https://scripts.sil.org/OFL</a>' to '<a href="https://openfontlicense.org">https://openfontlicense.org</a>'.</p>
-
-                            
-                             [code: old-url]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    License URL matches License text on name table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13]</p>
-
-                            
-                             [code: http-in-description]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⏩ SKIP
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Could not infer the font license. Please ensure NameID 13 (LICENSE DESCRIPTION) is properly set.</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">nl_Latn (Dutch)</td>
-<td align="left">Shaper didn't attach acutecomb to j.end</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">Shaper didn't attach acutecomb to J</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    PPEM must be an integer on hinted fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/integer_ppem_if_hinted&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This is a hinted font, so it must have bit 3 set on the flags of the head table, so that PPEM values will be rounded into an integer value.</p>
-<p>This can be accomplished by using the 'gftools fix-hinting' command:</p>
-<pre><code># create virtualenv
-python3 -m venv venv
-# activate virtualenv
-source venv/bin/activate
-# install gftools
-pip install git+https://www.github.com/googlefonts/tools
-</code></pre>
-
-                            
-                             [code: bad-flags]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    Are there caret positions declared for every ligature?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font lacks caret position values for ligature glyphs on its GDEF table.</p>
-
-                            
-                             [code: lacks-caret-pos]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    Is there kerning info for non-ligated sequences?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- E + x
-
-- F + i
-
-- I + J
-
-- T + h
-
-- h + i
-
-- a + x
-
-- x + z
-
-- b + s
-
-- s + x
-
-- x + s
-
-- s + z
-
-- z + s
-
-- c + x
-
-- e + x
-
-- eacute + x
-
-- f + f
-
-- f + i
-
-- i + f
-
-- f + l
-
-- l + f
-
-- f + t
-
-- t + i
-
-- i + x
-
-- x + i
-
-- i + z
-
-- z + l
-
-- l + x
-
-- x + l
-
-- l + z
-
-- z + f
-
-- i + l
-
-- l + t
-
-- t + u
-
-- u + x
-
-- g + p
-
-- p + x
-
-- i + j
-
-- j + x
-
-- iacute + x
-
-- m + x
-
-- n + z
-
-- o + s
-
-- z + ae
-
-- ae + s
-
-- oacute + s
-
-- r + x
-
-- t + x
-
-- u + v
-
-- v + x
-
-- y + p
-
-- uni0415 + uni0437
-
-- uni0437 + uni0445
-
-- uni0401 + uni0437
-
-- uni0421 + uni0437
-
-- uni0404 + uni0437
-
-- uni0430 + uni0445
-
-- uni0445 + uni0447
-
-- uni0431 + uni0433
-
-- uni0433 + uni0453
-
-- uni0453 + uni0451
-
-- uni0451 + uni0436
-
-- uni0436 + uni0439
-
-- uni0439 + uni045E
-
-- uni045E + uni044D
-
-- uni044D + uni0456
-
-- uni0456 + uni0457
-
-- uni0457 + uni0458
-
-- uni0432 + uni0433
-
-- uni0453 + uni0436
-
-- uni0436 + uni0437
-
-- uni0433 + uni0437
-
-- uni0453 + uni0437
-
-- uni0434 + uni0447
-
-- uni0447 + uni0458
-
-- uni0435 + uni0437
-
-- uni0451 + uni0437
-
-- uni0436 + uni0447
-
-- uni0437 + uni0437
-
-- uni0438 + uni0447
-
-- uni0439 + uni0447
-
-- uni043A + uni0447
-
-- uni045C + uni0447
-
-- uni043B + uni0447
-
-- uni043C + uni0447
-
-- uni043D + uni0447
-
-- uni043E + uni0433
-
-- uni0437 + uni043B
-
-- uni043B + uni043C
-
-- uni043C + uni0445
-
-- uni0445 + uni0459
-
-- uni0459 + uni044D
-
-- uni043F + uni0447
-
-- uni0440 + uni0437
-
-- uni0441 + uni0437
-
-- uni0447 + uni044A
-
-- uni0442 + uni0447
-
-- uni0443 + uni0447
-
-- uni045E + uni0447
-
-- uni0444 + uni0437
-
-- uni0447 + uni0447
-
-- uni0448 + uni0447
-
-- uni045F + uni0447
-
-- uni044B + uni0447
-
-- uni0455 + uni0437
-
-- uni0454 + uni0437
-
-- uni044D + uni0437
-
-- uni0456 + uni0447
-
-- uni0457 + uni0447
-
-- uni0447 + uni0457
-
-- uni0458 + uni0447
-
-- uni045B + uni0447
-
-- uni044E + uni0433
-
-- uni044F + uni0447
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Name table strings must not contain the string &#39;Reserved Font Name&#39;.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/rfn&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Name table entry contains &quot;Reserved Font Name&quot; for a family name (&quot;Lobster&quot;) that differs from the currently used family name (Pushster), which is fine.</p>
-
-                            
-                             [code: legacy-familyname]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Name table entry contains &quot;Reserved Font Name&quot; for a family name (&quot;Lobster&quot;) that differs from the currently used family name (Pushster), which is fine.</p>
-
-                            
-                             [code: legacy-familyname]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Directory name in GFonts repo structure must match NameID 1 of the regular.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/dirname_matches_nameid_1&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Family name on the name table ('Lobster') does not match directory name in the repo structure ('pushster'). Expected 'lobster'.</p>
-
-                            
-                             [code: mismatch]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
-Please consider mentioning note-worthy improvements made to the family recently.</p>
-
-                            
-                             [code: description-not-updated]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -1689,11 +363,29 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
         <h3>
     
-    Check font contains no unreachable glyphs
+    Does the font have a DSIG table?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
 
 
 
@@ -1720,62 +412,11 @@ Please consider mentioning note-worthy improvements made to the family recently.
                             </span>
 
                             <span class='details_text'>
-                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- Napostrophe
-
-- Tdieresis
-
-- caroncomb.alt
-
-- dotbelow
-
-- dotlessi.end
-
-- eight.demoninator
-
-- eight.numerator
-
-- five.demoninator
-
-- five.numerator
-
-- four.demoninator
-
-- four.numerator
-
-- nine.demoninator
-
-- nine.numerator
-
-- one.demoninator
-
-- one.numerator
-
-- seven.demoninator
-
-- seven.numerator
-
-- six.demoninator
-
-- six.numerator
-
-- three.demoninator
-
-- three.numerator
-
-- two.demoninator
-
-- two.numerator
-
-- uni0457.end
-
-- zero.demoninator
-
-- zero.numerator
-</code></pre>
+                            <p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table.</p>
 
                             
-                             [code: unreachable-glyphs]
+                             [code: found-DSIG]
                             
                             </span>
                         </li>
@@ -1783,6 +424,238 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 </ul>
             </div>
         </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check for points out of bounds.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have coordinates which are out of bounds:
+* ('uni04B1', 456, 467)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message.</p>
+
+                            
+                             [code: points-out-of-bounds]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️
+</span>
+
+    
+        <h3>
+    
+    Check accent of Lcaron, dcaron, lcaron, tcaron
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ✅ PASS
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Looks good!</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2254,103 +1127,9 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
 
     
-        <h3>
-    
-    Does the font contain a soft hyphen?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font has a 'Soft Hyphen' character.</p>
-
-                            
-                             [code: softhyphen]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure component transforms do not perform scaling or rotation.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs had components with scaling or rotation
-or inverted outline direction:</p>
-<ul>
-<li>uni04F9 (component uni044B)</li>
-<li>uni04F9 (component uni0308)</li>
-<li>uni27E9 (component uni27E8)</li>
-</ul>
-
-                            
-                             [code: transformed-components]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -2442,11 +1221,17 @@ notequal</p>
     
 
     
+
+    
+
+    
+
+    
         <h3>
     
-    Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)
+    Does the font contain a soft hyphen?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
 
 
 
@@ -2473,64 +1258,10 @@ notequal</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+                            <p>This font has a 'Soft Hyphen' character.</p>
 
                             
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Looks good!</p>
-
+                             [code: softhyphen]
                             
                             </span>
                         </li>
@@ -2544,36 +1275,71 @@ notequal</p>
 
     
 
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.dsig</h2>
-<span class='section__emoji'>
-    ⚠️
-</span>
+    
+
+    
 
     
         <h3>
     
-    Does the font have a DSIG table?
+    Ensure component transforms do not perform scaling or rotation.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs had components with scaling or rotation
+or inverted outline direction:</p>
+<ul>
+<li>uni04F9 (component uni044B)</li>
+<li>uni04F9 (component uni0308)</li>
+<li>uni27E9 (component uni27E8)</li>
+</ul>
+
+                            
+                             [code: transformed-components]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check font contains no unreachable glyphs
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
 
 
 
@@ -2600,76 +1366,62 @@ notequal</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
-The current recommendation is to completely remove the DSIG table.</p>
+                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- Napostrophe
+
+- Tdieresis
+
+- caroncomb.alt
+
+- dotbelow
+
+- dotlessi.end
+
+- eight.demoninator
+
+- eight.numerator
+
+- five.demoninator
+
+- five.numerator
+
+- four.demoninator
+
+- four.numerator
+
+- nine.demoninator
+
+- nine.numerator
+
+- one.demoninator
+
+- one.numerator
+
+- seven.demoninator
+
+- seven.numerator
+
+- six.demoninator
+
+- six.numerator
+
+- three.demoninator
+
+- three.numerator
+
+- two.demoninator
+
+- two.numerator
+
+- uni0457.end
+
+- zero.demoninator
+
+- zero.numerator
+</code></pre>
 
                             
-                             [code: found-DSIG]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.glyf</h2>
-<span class='section__emoji'>
-    ⚠️
-</span>
-
-    
-
-    
-        <h3>
-    
-    Check for points out of bounds.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs have coordinates which are out of bounds:
-* ('uni04B1', 456, 467)</p>
-<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message.</p>
-
-                            
-                             [code: points-out-of-bounds]
+                             [code: unreachable-glyphs]
                             
                             </span>
                         </li>
@@ -2683,12 +1435,16 @@ The current recommendation is to completely remove the DSIG table.</p>
 
     
 
-            
-        
-            
-        
-            
-        
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
@@ -2784,8 +1540,8 @@ The current recommendation is to completely remove the DSIG table.</p>
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ ị̀ ị́ ị̂ ị̃ ị̄</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̉ į̊ į̋ į̏ į̑ į̛̀ į̛́ į̛̂ į̛̃ į̛̄ į̛̆ į̛̇ į̛̈ į̛̉ į̛̊ į̛̋ į̛̌</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: South Central Banda (Latn, 244,000 speakers), Mfumte (Latn, 79,000 speakers), Yala (Latn, 200,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Mango (Latn, 77,000 speakers), Koonzime (Latn, 40,000 speakers), Dii (Latn, 71,000 speakers), Ebira (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Nzakara (Latn, 50,000 speakers), Ekpeye (Latn, 226,000 speakers), Basaa (Latn, 332,940 speakers), Zapotec (Latn, 490,000 speakers), Avokaya (Latn, 100,000 speakers), Nateni (Latn, 100,000 speakers), Cicipu (Latn, 44,000 speakers), Southern Kisi (Latn, 360,000 speakers), Sar (Latn, 500,000 speakers), Gulay (Latn, 250,478 speakers), Makaa (Latn, 221,000 speakers), Ejagham (Latn, 120,000 speakers), Mundani (Latn, 34,000 speakers), Fur (Latn, 1,230,163 speakers), Ma’di (Latn, 584,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Kom (Latn, 360,685 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Aghem (Latn, 38,843 speakers), Dutch (Latn, 31,709,104 speakers), Ngbaka (Latn, 1,020,000 speakers), Dan (Latn, 1,099,244 speakers), Lugbara (Latn, 2,200,000 speakers).</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Koonzime (Latn, 40,000 speakers), Avokaya (Latn, 100,000 speakers), Dan (Latn, 1,099,244 speakers), Basaa (Latn, 332,940 speakers), Ngbaka (Latn, 1,020,000 speakers), Nzakara (Latn, 50,000 speakers), Gulay (Latn, 250,478 speakers), Kom (Latn, 360,685 speakers), Fur (Latn, 1,230,163 speakers), Makaa (Latn, 221,000 speakers), Ebira (Latn, 2,200,000 speakers), Ejagham (Latn, 120,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Dii (Latn, 71,000 speakers), Dutch (Latn, 31,709,104 speakers), Lugbara (Latn, 2,200,000 speakers), Yala (Latn, 200,000 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Mango (Latn, 77,000 speakers), South Central Banda (Latn, 244,000 speakers), Aghem (Latn, 38,843 speakers), Mfumte (Latn, 79,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers), Zapotec (Latn, 490,000 speakers), Southern Kisi (Latn, 360,000 speakers), Nateni (Latn, 100,000 speakers), Navajo (Latn, 166,319 speakers), Ma’di (Latn, 584,000 speakers), Mundani (Latn, 34,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Igbo (Latn, 27,823,640 speakers), Ekpeye (Latn, 226,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -2796,6 +1552,1527 @@ The current recommendation is to completely remove the DSIG table.</p>
                 </ul>
             </div>
         </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+        <h3>
+    
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
+    
+    Validate location, size and resolution of article images.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>There are 2 image files in the <code>article</code> directory and they should be moved to an <code>article/images</code> subdirectory:</p>
+<pre><code>- /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/pushster/article/tofu.png
+
+- /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/pushster/article/suspect.png
+</code></pre>
+
+                            
+                             [code: misplaced-image-files]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ☠🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check METADATA.pb parse correctly.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/parses&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+        ☠
+        Pushster-Regular.ttf
+        
+        <ul>
+        
+            <li class='details_item'>
+                <span class='details_indicator'>
+                ☠ FATAL
+                </span>
+
+                <span class='details_text'>
+                <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/pushster failed to parse.
+TRACEBACK:
+25:1 : Message type &quot;google.fonts_public.FamilyProto&quot; has no field named &quot;primary_language&quot;.</p>
+
+                
+                 [code: parsing-error]
+                
+                </span>
+            </li>
+        
+        </ul>
+    
+
+</div>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Could not parse metadata.pb file</p>
+
+                            
+                             [code: unparsable-metadata]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    🔥
+</span>
+
+    
+        <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_Latin_Core glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Language</th>
+<th align="left">FAIL messages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">nl_Latn (Dutch)</td>
+<td align="left">Shaper didn't attach acutecomb to j.end</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">Shaper didn't attach acutecomb to J</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: failed-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥🔥🔥⚠️⚠️
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently.</p>
+
+                            
+                             [code: description-not-updated]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+        <h3>
+    
+    Does DESCRIPTION file contain a upstream Git repo URL?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please host your font project on a public Git repo (such as GitHub or GitLab) and place a link in the DESCRIPTION.en_us.html file.</p>
+
+                            
+                             [code: lacks-git-url]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check for presence of an ARTICLE.en_us.html file
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/has_article&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font has both a DESCRIPTION.en_us.html file and an ARTICLE.en_us.html file. In this case the description must be empty.</p>
+
+                            
+                             [code: description-and-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Name table checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check copyright namerecords match license file.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider updating the url from '<a href="https://scripts.sil.org/OFL">https://scripts.sil.org/OFL</a>' to '<a href="https://openfontlicense.org">https://openfontlicense.org</a>'.</p>
+
+                            
+                             [code: old-url]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+        <h3>
+    
+    License URL matches License text on name table?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=1, enc=0, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13]</p>
+
+                            
+                             [code: http-in-description]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⏩ SKIP
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Could not infer the font license. Please ensure NameID 13 (LICENSE DESCRIPTION) is properly set.</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Name table strings must not contain the string &#39;Reserved Font Name&#39;.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/rfn&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Name table entry contains &quot;Reserved Font Name&quot; for a family name (&quot;Lobster&quot;) that differs from the currently used family name (Pushster), which is fine.</p>
+
+                            
+                             [code: legacy-familyname]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Name table entry contains &quot;Reserved Font Name&quot; for a family name (&quot;Lobster&quot;) that differs from the currently used family name (Pushster), which is fine.</p>
+
+                            
+                             [code: legacy-familyname]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Repository Checks</h2>
+<span class='section__emoji'>
+    🔥⏩
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    Directory name in GFonts repo structure must match NameID 1 of the regular.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/dirname_matches_nameid_1&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                
+                Family Check
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Family name on the name table ('Lobster') does not match directory name in the repo structure ('pushster'). Expected 'lobster'.</p>
+
+                            
+                             [code: mismatch]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+        <h3>
+    
+    Checking file is named canonically.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/canonical_filename&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Expected &quot;Lobster-Regular.ttf. Got Pushster-Regular.ttf.</p>
+
+                            
+                             [code: bad-filename]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    PPEM must be an integer on hinted fonts.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/integer_ppem_if_hinted&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This is a hinted font, so it must have bit 3 set on the flags of the head table, so that PPEM values will be rounded into an integer value.</p>
+<p>This can be accomplished by using the 'gftools fix-hinting' command:</p>
+<pre><code># create virtualenv
+python3 -m venv venv
+# activate virtualenv
+source venv/bin/activate
+# install gftools
+pip install git+https://www.github.com/googlefonts/tools
+</code></pre>
+
+                            
+                             [code: bad-flags]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+        <h3>
+    
+    Is there kerning info for non-ligated sequences?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
+<pre><code>- E + x
+
+- F + i
+
+- I + J
+
+- T + h
+
+- T + i
+
+- a + x
+
+- a + z
+
+- b + s
+
+- c + x
+
+- c + z
+
+- e + x
+
+- e + z
+
+- eacute + x
+
+- f + f
+
+- f + i
+
+- f + l
+
+- f + t
+
+- f + u
+
+- f + x
+
+- g + p
+
+- g + x
+
+- g + z
+
+- i + j
+
+- i + x
+
+- i + z
+
+- iacute + x
+
+- iacute + z
+
+- j + x
+
+- j + z
+
+- l + x
+
+- l + z
+
+- m + x
+
+- m + z
+
+- n + z
+
+- o + ae
+
+- o + s
+
+- o + x
+
+- oacute + s
+
+- oacute + x
+
+- r + x
+
+- r + z
+
+- s + x
+
+- s + z
+
+- t + x
+
+- t + z
+
+- u + v
+
+- u + x
+
+- uni0401 + uni0437
+
+- uni0401 + uni0445
+
+- uni0404 + uni0437
+
+- uni0404 + uni0445
+
+- uni0415 + uni0437
+
+- uni0415 + uni0445
+
+- uni0421 + uni0437
+
+- uni0421 + uni0445
+
+- uni0430 + uni0445
+
+- uni0430 + uni0447
+
+- uni0431 + uni0433
+
+- uni0431 + uni0436
+
+- uni0431 + uni0439
+
+- uni0431 + uni044D
+
+- uni0431 + uni0451
+
+- uni0431 + uni0453
+
+- uni0431 + uni0456
+
+- uni0431 + uni0457
+
+- uni0431 + uni0458
+
+- uni0431 + uni045E
+
+- uni0432 + uni0433
+
+- uni0432 + uni0436
+
+- uni0432 + uni0437
+
+- uni0432 + uni0445
+
+- uni0432 + uni0453
+
+- uni0433 + uni0437
+
+- uni0433 + uni0445
+
+- uni0433 + uni0447
+
+- uni0434 + uni0447
+
+- uni0434 + uni0458
+
+- uni0435 + uni0437
+
+- uni0435 + uni0445
+
+- uni0435 + uni0447
+
+- uni0436 + uni0447
+
+- uni0437 + uni0437
+
+- uni0438 + uni0447
+
+- uni0439 + uni0447
+
+- uni043A + uni0447
+
+- uni043B + uni0447
+
+- uni043C + uni0447
+
+- uni043D + uni0447
+
+- uni043E + uni0433
+
+- uni043E + uni0436
+
+- uni043E + uni0437
+
+- uni043E + uni043B
+
+- uni043E + uni043C
+
+- uni043E + uni0445
+
+- uni043E + uni044D
+
+- uni043E + uni0453
+
+- uni043E + uni0459
+
+- uni043F + uni0447
+
+- uni0440 + uni0437
+
+- uni0441 + uni0437
+
+- uni0441 + uni0445
+
+- uni0441 + uni0447
+
+- uni0441 + uni044A
+
+- uni0442 + uni0447
+
+- uni0443 + uni0447
+
+- uni0443 + uni0458
+
+- uni0444 + uni0437
+
+- uni0445 + uni0447
+
+- uni0445 + uni044A
+
+- uni0447 + uni0447
+
+- uni0448 + uni0447
+
+- uni044B + uni0447
+
+- uni044D + uni0437
+
+- uni044E + uni0433
+
+- uni044E + uni0436
+
+- uni044E + uni0437
+
+- uni044E + uni043B
+
+- uni044E + uni043C
+
+- uni044E + uni0445
+
+- uni044E + uni044D
+
+- uni044E + uni0453
+
+- uni044E + uni0459
+
+- uni044F + uni0447
+
+- uni0451 + uni0437
+
+- uni0451 + uni0445
+
+- uni0451 + uni0447
+
+- uni0453 + uni0437
+
+- uni0453 + uni0445
+
+- uni0453 + uni0447
+
+- uni0454 + uni0437
+
+- uni0454 + uni0445
+
+- uni0454 + uni0447
+
+- uni0455 + uni0437
+
+- uni0455 + uni0445
+
+- uni0455 + uni0447
+
+- uni0456 + uni0447
+
+- uni0457 + uni0447
+
+- uni0457 + uni0457
+
+- uni0458 + uni0447
+
+- uni0458 + uni0458
+
+- uni045B + uni0447
+
+- uni045B + uni0458
+
+- uni045C + uni0447
+
+- uni045E + uni0447
+
+- uni045E + uni0458
+
+- uni045F + uni0447
+
+- y + p
+
+- y + x
+
+- y + z
+</code></pre>
+
+                            
+                             [code: lacks-kern-info]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+        <h3>
+    
+    Are there caret positions declared for every ligature?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font lacks caret position values for ligature glyphs on its GDEF table.</p>
+
+                            
+                             [code: lacks-caret-pos]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Checking OS/2 achVendID.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>OS/2 VendorID value 'IMPA' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+
+                            
+                             [code: unknown]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
     
 
     

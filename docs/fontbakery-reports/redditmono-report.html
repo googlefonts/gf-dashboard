@@ -272,18 +272,18 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>6</td>
-        <td>8</td>
-        <td>46</td>
+        <td>7</td>
         <td>9</td>
-        <td>183</td>
+        <td>40</td>
+        <td>9</td>
+        <td>180</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>2%</td>
         <td>3%</td>
-        <td>18%</td>
+        <td>4%</td>
+        <td>16%</td>
         <td>4%</td>
         <td>73%</td>
     </tr>
@@ -310,12 +310,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.12.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -363,11 +363,21 @@ immediately.
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
         <h3>
     
-    Checking OS/2 achVendID.
+    Checking correctness of monospaced metadata.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/monospace&gt;</div>
 
 
 
@@ -394,10 +404,25 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+                            <p>The OpenType spec recomments at <a href="https://learn.microsoft.com/en-us/typography/opentype/spec/recom#hhea-table">https://learn.microsoft.com/en-us/typography/opentype/spec/recom#hhea-table</a> that hhea.numberOfHMetrics be set to 3 but this font has 1082 instead.
+Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https://github.com/fonttools/fonttools/issues/3014</a> to decide whether this makes sense for your font.</p>
 
                             
-                             [code: unknown]
+                             [code: bad-numberOfHMetrics]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Font is monospaced but 10 glyphs (0.90%) have a different width. You should check the widths of: ['f_f', 'f_f_i', 'f_f_l', 'fi', 'fi.ss02', 'fl', 'fl.ss01', 'r_slash.dlig', 'uni2008', 'uni200B']</p>
+
+                            
+                             [code: mono-outliers]
                             
                             </span>
                         </li>
@@ -405,6 +430,538 @@ immediately.
                 </ul>
             </div>
         </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⚠️⏩⏩⏩⏩⏩ℹ️
+</span>
+
+    
+        <h3>
+    
+    Check accent of Lcaron, dcaron, lcaron, tcaron
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                RedditMono[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ✅ PASS
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Looks good!</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Ensure the font supports case swapping for all its glyphs.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/case_mapping&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                RedditMono[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs lack their case-swapping counterparts:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Glyph present in the font</th>
+<th align="left">Missing case-swapping counterpart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">U+01F5: LATIN SMALL LETTER G WITH ACUTE</td>
+<td align="left">U+01F4: LATIN CAPITAL LETTER G WITH ACUTE</td>
+</tr>
+<tr>
+<td align="left">U+1E39: LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</td>
+<td align="left">U+1E38: LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: missing-case-counterparts]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check font contains no unreachable glyphs
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                RedditMono[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- NULL
+
+- eight.sinf
+
+- eight.subs
+
+- eight.sups
+
+- five.sinf
+
+- five.subs
+
+- five.sups
+
+- four.sinf
+
+- four.subs
+
+- four.sups
+
+- nine.sinf
+
+- nine.subs
+
+- nine.sups
+
+- one.sinf
+
+- one.subs
+
+- one.sups
+
+- seven.sinf
+
+- seven.subs
+
+- seven.sups
+
+- six.sinf
+
+- six.subs
+
+- six.sups
+
+- three.sinf
+
+- three.subs
+
+- three.sups
+
+- two.sinf
+
+- two.subs
+
+- two.sups
+
+- uni0250.ss02
+
+- uni0305.case
+
+- zero.sinf
+
+- zero.subs
+
+- zero.sups
+</code></pre>
+
+                            
+                             [code: unreachable-glyphs]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+        <h3>
+    
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
+    
+    Validate location, size and resolution of article images.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                RedditMono[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/redditmono does not have an article.</p>
+
+                            
+                             [code: lacks-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -451,14 +1008,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+000D : try adding one of: mandaic, znamenny, music, sundanese, runic, samaritan, hanifi-rohingya, hebrew, nushu, ethiopic, tai-le, nyiakeng-puachue-hmong, sinhala, chakma, buhid, inscriptional-parthian, javanese, saurashtra, grantha, psalter-pahlavi, mro, georgian, cham, egyptian-hieroglyphs, glagolitic, gothic, dogra, old-hungarian, tagbanwa, vithkuqi, wancho, lao, osmanya, gunjala-gondi, old-italic, tirhuta, yi, old-turkic, thai, old-uyghur, greek, buginese, adlam, meetei-mayek, yezidi, tai-tham, hanunoo, anatolian-hieroglyphs, linear-b, medefaidrin, nabataean, cyrillic, ugaritic, syriac, takri, cherokee, toto, brahmi, braille, siddham, old-north-arabian, signwriting, inscriptional-pahlavi, bamum, greek-ext, armenian, pau-cin-hau, ottoman-siyaq-numbers, elbasan, zanabazar-square, old-sogdian, canadian-aboriginal, sharada, imperial-aramaic, elymaic, tai-viet, nko, masaram-gondi, multani, deseret, balinese, kawi, myanmar, nag-mundari, osage, old-permic, rejang, tangsa, khitan-small-script, math, lisu, warang-citi, lycian, cypro-minoan, ahom, old-south-arabian, thaana, symbols, khudawadi, bassa-vah, carian, japanese, coptic, kaithi, khojki, tibetan, tangut, meroitic, marchen, lydian, meroitic-hieroglyphs, phoenician, new-tai-lue, kayah-li, mayan-numerals, meroitic-cursive, sogdian, korean, sora-sompeng, chorasmian, bhaiksuki, bengali, tagalog, gurmukhi, kharoshthi, modi, caucasian-albanian, ogham, mende-kikakui, cypriot, vai, tifinagh, hatran, arabic, tamil-supplement, cyrillic-ext, newa, palmyrene, makasar, chinese-simplified, indic-siyaq-numbers, limbu, devanagari, chinese-hongkong, old-persian, shavian, miao, tamil, mongolian, batak, nandinagari, ol-chiki, telugu, pahawh-hmong, cuneiform, phags-pa, syloti-nagri, lepcha, chinese-traditional, linear-a, kannada, mahajani, avestan, dives-akuru, duployan, soyombo, khmer, malayalam, gujarati, manichaean, oriya</li>
-<li>U+0020 SPACE: try adding one of: mandaic, znamenny, music, sundanese, runic, samaritan, hanifi-rohingya, hebrew, nushu, ethiopic, tai-le, nyiakeng-puachue-hmong, sinhala, chakma, buhid, inscriptional-parthian, javanese, saurashtra, grantha, psalter-pahlavi, mro, georgian, cham, egyptian-hieroglyphs, glagolitic, gothic, dogra, old-hungarian, tagbanwa, vithkuqi, wancho, lao, osmanya, gunjala-gondi, old-italic, tirhuta, yi, old-turkic, thai, old-uyghur, greek, buginese, adlam, meetei-mayek, yezidi, tai-tham, hanunoo, anatolian-hieroglyphs, linear-b, medefaidrin, nabataean, cyrillic, ugaritic, syriac, takri, cherokee, toto, brahmi, braille, siddham, old-north-arabian, signwriting, inscriptional-pahlavi, bamum, greek-ext, armenian, pau-cin-hau, ottoman-siyaq-numbers, elbasan, zanabazar-square, old-sogdian, canadian-aboriginal, sharada, imperial-aramaic, elymaic, tai-viet, nko, masaram-gondi, multani, deseret, balinese, kawi, myanmar, nag-mundari, osage, old-permic, rejang, tangsa, khitan-small-script, math, lisu, warang-citi, lycian, cypro-minoan, ahom, old-south-arabian, thaana, symbols, khudawadi, bassa-vah, carian, japanese, coptic, kaithi, khojki, tibetan, tangut, meroitic, marchen, lydian, meroitic-hieroglyphs, phoenician, new-tai-lue, kayah-li, mayan-numerals, meroitic-cursive, sogdian, korean, sora-sompeng, chorasmian, bhaiksuki, bengali, tagalog, gurmukhi, kharoshthi, modi, caucasian-albanian, ogham, mende-kikakui, cypriot, vai, tifinagh, hatran, arabic, tamil-supplement, cyrillic-ext, newa, palmyrene, makasar, chinese-simplified, indic-siyaq-numbers, limbu, devanagari, chinese-hongkong, old-persian, shavian, miao, tamil, mongolian, batak, nandinagari, ol-chiki, telugu, pahawh-hmong, cuneiform, phags-pa, syloti-nagri, lepcha, chinese-traditional, linear-a, kannada, mahajani, avestan, dives-akuru, duployan, soyombo, khmer, malayalam, gujarati, manichaean, oriya</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: mandaic, znamenny, music, sundanese, runic, samaritan, hanifi-rohingya, hebrew, nushu, ethiopic, tai-le, nyiakeng-puachue-hmong, sinhala, chakma, buhid, inscriptional-parthian, javanese, saurashtra, grantha, psalter-pahlavi, mro, georgian, cham, egyptian-hieroglyphs, glagolitic, gothic, dogra, old-hungarian, tagbanwa, vithkuqi, wancho, lao, osmanya, gunjala-gondi, old-italic, tirhuta, yi, old-turkic, thai, old-uyghur, greek, buginese, adlam, meetei-mayek, yezidi, tai-tham, hanunoo, anatolian-hieroglyphs, linear-b, medefaidrin, nabataean, cyrillic, ugaritic, syriac, takri, cherokee, toto, brahmi, braille, siddham, old-north-arabian, signwriting, inscriptional-pahlavi, bamum, greek-ext, armenian, pau-cin-hau, ottoman-siyaq-numbers, elbasan, zanabazar-square, old-sogdian, canadian-aboriginal, sharada, imperial-aramaic, elymaic, tai-viet, nko, masaram-gondi, multani, deseret, balinese, kawi, myanmar, nag-mundari, osage, old-permic, rejang, tangsa, khitan-small-script, math, lisu, warang-citi, lycian, cypro-minoan, ahom, old-south-arabian, thaana, symbols, khudawadi, bassa-vah, carian, japanese, coptic, kaithi, khojki, tibetan, tangut, meroitic, marchen, lydian, meroitic-hieroglyphs, phoenician, new-tai-lue, kayah-li, mayan-numerals, meroitic-cursive, sogdian, korean, sora-sompeng, chorasmian, bhaiksuki, bengali, tagalog, gurmukhi, kharoshthi, modi, caucasian-albanian, ogham, mende-kikakui, cypriot, vai, tifinagh, hatran, arabic, tamil-supplement, cyrillic-ext, newa, palmyrene, makasar, chinese-simplified, indic-siyaq-numbers, limbu, devanagari, chinese-hongkong, old-persian, shavian, miao, tamil, mongolian, batak, nandinagari, ol-chiki, telugu, pahawh-hmong, cuneiform, phags-pa, syloti-nagri, lepcha, chinese-traditional, linear-a, kannada, mahajani, avestan, dives-akuru, duployan, soyombo, khmer, malayalam, gujarati, manichaean, oriya</li>
 <li>U+02B9 MODIFIER LETTER PRIME: not included in any glyphset definition</li>
 <li>U+02BA MODIFIER LETTER DOUBLE PRIME: not included in any glyphset definition</li>
 <li>U+02BE MODIFIER LETTER RIGHT HALF RING: not included in any glyphset definition</li>
 <li>U+02BF MODIFIER LETTER LEFT HALF RING: not included in any glyphset definition</li>
-<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
+<li>U+02C7 CARON: try adding one of: yi, tifinagh, canadian-aboriginal</li>
 <li>U+02C8 MODIFIER LETTER VERTICAL LINE: not included in any glyphset definition</li>
 <li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
 <li>U+02CA MODIFIER LETTER ACUTE ACCENT: not included in any glyphset definition</li>
@@ -469,30 +1023,30 @@ definitions.</p>
 <li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
 <li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, math, tifinagh</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, canadian-aboriginal, old-permic, syriac, math, malayalam, tai-le, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, canadian-aboriginal, tifinagh, tai-le, math, old-permic, coptic</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
 <li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, syriac</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, cherokee</li>
 <li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: gothic, syriac, cherokee, caucasian-albanian, tifinagh</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: syriac, caucasian-albanian, cherokee, tifinagh, gothic</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+035C COMBINING DOUBLE BREVE BELOW: not included in any glyphset definition</li>
 <li>U+0361 COMBINING DOUBLE INVERTED BREVE: try adding coptic</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, arabic, syloti-nagri, yi, coptic, kaithi, kayah-li, sundanese, kharoshthi, cham, hebrew, sora-sompeng, lisu</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, arabic, syloti-nagri</li>
+<li>U+2010 HYPHEN: try adding one of: sundanese, kharoshthi, lisu, kayah-li, hebrew, kaithi, arabic, cham, sora-sompeng, syloti-nagri, armenian, yi, coptic</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: syloti-nagri, yi, arabic</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
@@ -527,20 +1081,20 @@ definitions.</p>
 <li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
 <li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
 <li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
 <li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
 <li>U+2205 EMPTY SET: try adding math</li>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: yi, math, symbols, tai-tham</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, symbols, yi, math</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -552,17 +1106,17 @@ definitions.</p>
 <li>U+25A0 BLACK SQUARE: try adding symbols</li>
 <li>U+25A1 WHITE SQUARE: try adding symbols</li>
 <li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C6 BLACK DIAMOND: try adding symbols</li>
 <li>U+25C7 WHITE DIAMOND: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: mandaic, music, sundanese, hanifi-rohingya, hebrew, tai-le, sinhala, chakma, buhid, javanese, saurashtra, grantha, psalter-pahlavi, cham, dogra, tagbanwa, wancho, lao, gunjala-gondi, tirhuta, yi, thai, buginese, adlam, meetei-mayek, tai-tham, hanunoo, syriac, takri, brahmi, siddham, armenian, elbasan, zanabazar-square, canadian-aboriginal, sharada, tai-viet, nko, masaram-gondi, balinese, osage, myanmar, rejang, old-permic, math, warang-citi, ahom, thaana, symbols, khudawadi, bassa-vah, coptic, kaithi, khojki, tibetan, marchen, new-tai-lue, kayah-li, sogdian, bhaiksuki, bengali, tagalog, gurmukhi, kharoshthi, modi, caucasian-albanian, mende-kikakui, tifinagh, newa, limbu, devanagari, miao, tamil, mongolian, batak, telugu, pahawh-hmong, phags-pa, syloti-nagri, lepcha, kannada, mahajani, duployan, soyombo, khmer, malayalam, gujarati, manichaean, oriya</li>
+<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: takri, tai-viet, newa, warang-citi, math, telugu, mandaic, tai-tham, yi, mongolian, tibetan, siddham, dogra, manichaean, osage, tirhuta, hanunoo, zanabazar-square, gurmukhi, kannada, limbu, mahajani, brahmi, bengali, tagbanwa, mende-kikakui, music, gujarati, syriac, canadian-aboriginal, malayalam, adlam, javanese, phags-pa, soyombo, tagalog, devanagari, sharada, kharoshthi, grantha, miao, syloti-nagri, armenian, balinese, psalter-pahlavi, hanifi-rohingya, bhaiksuki, buhid, cham, elbasan, duployan, sinhala, tai-le, oriya, meetei-mayek, myanmar, ahom, gunjala-gondi, khudawadi, kayah-li, tamil, khojki, hebrew, thai, buginese, thaana, new-tai-lue, symbols, sogdian, pahawh-hmong, marchen, chakma, coptic, lao, modi, saurashtra, caucasian-albanian, wancho, khmer, lepcha, masaram-gondi, batak, sundanese, nko, rejang, tifinagh, bassa-vah, kaithi, old-permic</li>
 <li>U+2605 BLACK STAR: try adding symbols</li>
 <li>U+2606 WHITE STAR: try adding symbols</li>
 <li>U+2661 WHITE HEART SUIT: try adding symbols</li>
@@ -593,15 +1147,11 @@ definitions.</p>
     
 
     
-
-    
-
-    
         <h3>
     
-    Check license file has good copyright string.
+    Copyright notices match canonical pattern in METADATA.pb
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
 
 
 
@@ -628,13 +1178,13 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>First line in license file is:</p>
-<p>&quot;reddit sans&quot;</p>
-<p>which does not match the expected format, similar to:</p>
-<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot;</p>
+                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
+<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
+<p>But instead we have got:</p>
+<p>&quot;copyright (c) 2020-2023, reddit, inc. (<a href="https://github.com/reddit/redditsans">https://github.com/reddit/redditsans</a>)&quot;</p>
 
                             
-                             [code: bad-format]
+                             [code: bad-notice-format]
                             
                             </span>
                         </li>
@@ -645,6 +1195,119 @@ definitions.</p>
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Name table checks</h2>
+<span class='section__emoji'>
+    🔥⏩
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check copyright namerecords match license file.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                RedditMono[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: <a href="https://openfontlicense.org/">https://openfontlicense.org/</a>&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: <a href="https://openfontlicense.org">https://openfontlicense.org</a>&quot;</p>
+
+                            
+                             [code: wrong]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Repository Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩
+</span>
 
     
         <h3>
@@ -850,9 +1513,9 @@ definitions.</p>
     
         <h3>
     
-    Check copyright namerecords match license file.
+    Check license file has good copyright string.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
 
 
 
@@ -879,124 +1542,13 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: <a href="https://openfontlicense.org/">https://openfontlicense.org/</a>&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: <a href="https://openfontlicense.org">https://openfontlicense.org</a>&quot;</p>
+                            <p>First line in license file is:</p>
+<p>&quot;reddit sans&quot;</p>
+<p>which does not match the expected format, similar to:</p>
+<p>&quot;Copyright 2022 The Familyname Project Authors (git url)&quot;</p>
 
                             
-                             [code: wrong]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Copyright notices match canonical pattern in METADATA.pb
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                RedditMono[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
-<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
-<p>But instead we have got:</p>
-<p>&quot;copyright (c) 2020-2023, reddit, inc. (<a href="https://github.com/reddit/redditsans">https://github.com/reddit/redditsans</a>)&quot;</p>
-
-                            
-                             [code: bad-notice-format]
+                             [code: bad-format]
                             
                             </span>
                         </li>
@@ -1004,6 +1556,44 @@ definitions.</p>
                 </ul>
             </div>
         </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1054,60 +1644,6 @@ definitions.</p>
                 </ul>
             </div>
         </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -1240,95 +1776,6 @@ definitions.</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                RedditMono[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that Stephen Hutchings is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
         <h3>
     
     Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
@@ -1399,30 +1846,6 @@ definitions.</p>
 
     
 
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -1454,9 +1877,9 @@ definitions.</p>
     
         <h3>
     
-    Check font contains no unreachable glyphs
+    Checking OS/2 achVendID.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
 
 
 
@@ -1483,76 +1906,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- NULL
-
-- eight.sinf
-
-- eight.subs
-
-- eight.sups
-
-- five.sinf
-
-- five.subs
-
-- five.sups
-
-- four.sinf
-
-- four.subs
-
-- four.sups
-
-- nine.sinf
-
-- nine.subs
-
-- nine.sups
-
-- one.sinf
-
-- one.subs
-
-- one.sups
-
-- seven.sinf
-
-- seven.subs
-
-- seven.sups
-
-- six.sinf
-
-- six.subs
-
-- six.sups
-
-- three.sinf
-
-- three.subs
-
-- three.sups
-
-- two.sinf
-
-- two.subs
-
-- two.sups
-
-- uni0250.ss02
-
-- uni0305.case
-
-- zero.sinf
-
-- zero.subs
-
-- zero.sups
-</code></pre>
+                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
 
                             
-                             [code: unreachable-glyphs]
+                             [code: unknown]
                             
                             </span>
                         </li>
@@ -1570,274 +1927,6 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                RedditMono[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Looks good!</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jan/19</div>
-    
-    Ensure the font supports case swapping for all its glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/case_mapping&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                RedditMono[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs lack their case-swapping counterparts:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Glyph present in the font</th>
-<th align="left">Missing case-swapping counterpart</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">U+01F5: LATIN SMALL LETTER G WITH ACUTE</td>
-<td align="left">U+01F4: LATIN CAPITAL LETTER G WITH ACUTE</td>
-</tr>
-<tr>
-<td align="left">U+1E39: LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</td>
-<td align="left">U+1E38: LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: missing-case-counterparts]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.name</h2>
-<span class='section__emoji'>
-    ⚠️⏩⏩
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Checking correctness of monospaced metadata.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/monospace&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                RedditMono[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The OpenType spec recomments at <a href="https://learn.microsoft.com/en-us/typography/opentype/spec/recom#hhea-table">https://learn.microsoft.com/en-us/typography/opentype/spec/recom#hhea-table</a> that hhea.numberOfHMetrics be set to 3 but this font has 1082 instead.
-Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https://github.com/fonttools/fonttools/issues/3014</a> to decide whether this makes sense for your font.</p>
-
-                            
-                             [code: bad-numberOfHMetrics]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Font is monospaced but 10 glyphs (0.90%) have a different width. You should check the widths of: ['f_f', 'f_f_i', 'f_f_l', 'fi', 'fi.ss02', 'fl', 'fl.ss01', 'r_slash.dlig', 'uni2008', 'uni200B']</p>
-
-                            
-                             [code: mono-outliers]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
             
         
     </main>

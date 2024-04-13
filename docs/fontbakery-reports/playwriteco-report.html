@@ -272,20 +272,20 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>0</td>
+        <td>2</td>
+        <td>10</td>
+        <td>49</td>
         <td>8</td>
-        <td>52</td>
-        <td>8</td>
-        <td>184</td>
+        <td>176</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>0%</td>
+        <td>1%</td>
+        <td>4%</td>
+        <td>20%</td>
         <td>3%</td>
-        <td>21%</td>
-        <td>3%</td>
-        <td>73%</td>
+        <td>72%</td>
     </tr>
 </table>
         
@@ -310,12 +310,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.12.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -369,11 +369,17 @@ immediately.
     
 
     
+
+    
+
+    
+
+    
         <h3>
     
-    Check for codepoints not covered by METADATA subsets.
+    Check if OS/2 xAvgCharWidth is correct.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
 
 
 
@@ -400,95 +406,10 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+000D : try adding one of: tai-le, meroitic, gujarati, hanifi-rohingya, sinhala, balinese, palmyrene, grantha, vithkuqi, sogdian, yi, makasar, carian, mayan-numerals, tifinagh, takri, lisu, new-tai-lue, mahajani, buginese, sharada, tamil, kayah-li, chorasmian, soyombo, deseret, dives-akuru, rejang, lao, manichaean, samaritan, myanmar, mende-kikakui, bassa-vah, kharoshthi, cypriot, meroitic-cursive, inscriptional-parthian, psalter-pahlavi, tirhuta, devanagari, osmanya, lycian, ogham, thai, marchen, siddham, mro, khmer, ottoman-siyaq-numbers, glagolitic, syloti-nagri, old-italic, old-turkic, pau-cin-hau, nag-mundari, thaana, buhid, chakma, cherokee, avestan, gunjala-gondi, hebrew, music, phags-pa, zanabazar-square, old-south-arabian, oriya, coptic, malayalam, syriac, nabataean, lydian, old-north-arabian, japanese, osage, cypro-minoan, duployan, tagalog, mandaic, bamum, dogra, hanunoo, linear-a, modi, old-permic, kawi, limbu, meroitic-hieroglyphs, tangsa, znamenny, chinese-hongkong, old-uyghur, tamil-supplement, nko, georgian, brahmi, batak, cyrillic, mongolian, nushu, pahawh-hmong, ugaritic, caucasian-albanian, signwriting, kaithi, tagbanwa, elymaic, vai, khudawadi, toto, inscriptional-pahlavi, adlam, nyiakeng-puachue-hmong, multani, runic, old-sogdian, linear-b, tangut, cham, gothic, warang-citi, anatolian-hieroglyphs, indic-siyaq-numbers, cyrillic-ext, imperial-aramaic, medefaidrin, sora-sompeng, gurmukhi, cuneiform, old-hungarian, yezidi, newa, arabic, kannada, khojki, sundanese, khitan-small-script, ethiopic, chinese-traditional, old-persian, elbasan, ahom, armenian, tai-tham, korean, shavian, tibetan, egyptian-hieroglyphs, wancho, greek-ext, telugu, canadian-aboriginal, lepcha, javanese, saurashtra, chinese-simplified, meetei-mayek, greek, bhaiksuki, bengali, nandinagari, miao, ol-chiki, braille, masaram-gondi, tai-viet, phoenician, hatran</li>
-<li>U+0020 SPACE: try adding one of: tai-le, meroitic, gujarati, hanifi-rohingya, sinhala, balinese, palmyrene, grantha, vithkuqi, sogdian, yi, makasar, carian, mayan-numerals, tifinagh, takri, lisu, new-tai-lue, mahajani, buginese, sharada, tamil, kayah-li, chorasmian, soyombo, deseret, dives-akuru, rejang, lao, manichaean, samaritan, myanmar, mende-kikakui, bassa-vah, kharoshthi, cypriot, meroitic-cursive, inscriptional-parthian, psalter-pahlavi, tirhuta, devanagari, osmanya, lycian, ogham, thai, marchen, siddham, mro, khmer, ottoman-siyaq-numbers, glagolitic, syloti-nagri, old-italic, old-turkic, pau-cin-hau, nag-mundari, thaana, buhid, chakma, cherokee, avestan, gunjala-gondi, hebrew, music, phags-pa, zanabazar-square, old-south-arabian, oriya, coptic, malayalam, syriac, nabataean, lydian, old-north-arabian, japanese, osage, cypro-minoan, duployan, tagalog, mandaic, bamum, dogra, hanunoo, linear-a, modi, old-permic, kawi, limbu, meroitic-hieroglyphs, tangsa, znamenny, chinese-hongkong, old-uyghur, tamil-supplement, nko, georgian, brahmi, batak, cyrillic, mongolian, nushu, pahawh-hmong, ugaritic, caucasian-albanian, signwriting, kaithi, tagbanwa, elymaic, vai, khudawadi, toto, inscriptional-pahlavi, adlam, nyiakeng-puachue-hmong, multani, runic, old-sogdian, linear-b, tangut, cham, gothic, warang-citi, anatolian-hieroglyphs, indic-siyaq-numbers, cyrillic-ext, imperial-aramaic, medefaidrin, sora-sompeng, gurmukhi, cuneiform, old-hungarian, yezidi, newa, arabic, kannada, khojki, sundanese, khitan-small-script, ethiopic, chinese-traditional, old-persian, elbasan, ahom, armenian, tai-tham, korean, shavian, tibetan, egyptian-hieroglyphs, wancho, greek-ext, telugu, canadian-aboriginal, lepcha, javanese, saurashtra, chinese-simplified, meetei-mayek, greek, bhaiksuki, bengali, nandinagari, miao, ol-chiki, braille, masaram-gondi, tai-viet, phoenician, hatran</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: tai-le, meroitic, gujarati, hanifi-rohingya, sinhala, balinese, palmyrene, grantha, vithkuqi, sogdian, yi, makasar, carian, mayan-numerals, tifinagh, takri, lisu, new-tai-lue, mahajani, buginese, sharada, tamil, kayah-li, chorasmian, soyombo, deseret, dives-akuru, rejang, lao, manichaean, samaritan, myanmar, mende-kikakui, bassa-vah, kharoshthi, cypriot, meroitic-cursive, inscriptional-parthian, psalter-pahlavi, tirhuta, devanagari, osmanya, lycian, ogham, thai, marchen, siddham, mro, khmer, ottoman-siyaq-numbers, glagolitic, syloti-nagri, old-italic, old-turkic, pau-cin-hau, nag-mundari, thaana, buhid, chakma, cherokee, avestan, gunjala-gondi, hebrew, music, phags-pa, zanabazar-square, old-south-arabian, oriya, coptic, malayalam, syriac, nabataean, lydian, old-north-arabian, japanese, osage, cypro-minoan, duployan, tagalog, mandaic, bamum, dogra, hanunoo, linear-a, modi, old-permic, kawi, limbu, meroitic-hieroglyphs, tangsa, znamenny, chinese-hongkong, old-uyghur, tamil-supplement, nko, georgian, brahmi, batak, cyrillic, mongolian, nushu, pahawh-hmong, ugaritic, caucasian-albanian, signwriting, kaithi, tagbanwa, elymaic, vai, khudawadi, toto, inscriptional-pahlavi, adlam, nyiakeng-puachue-hmong, multani, runic, old-sogdian, linear-b, tangut, cham, gothic, warang-citi, anatolian-hieroglyphs, indic-siyaq-numbers, cyrillic-ext, imperial-aramaic, medefaidrin, sora-sompeng, gurmukhi, cuneiform, old-hungarian, yezidi, newa, arabic, kannada, khojki, sundanese, khitan-small-script, ethiopic, chinese-traditional, old-persian, elbasan, ahom, armenian, tai-tham, korean, shavian, tibetan, egyptian-hieroglyphs, wancho, greek-ext, telugu, canadian-aboriginal, lepcha, javanese, saurashtra, chinese-simplified, meetei-mayek, greek, bhaiksuki, bengali, nandinagari, miao, ol-chiki, braille, masaram-gondi, tai-viet, phoenician, hatran</li>
-<li>U+02C7 CARON: try adding one of: yi, tifinagh, canadian-aboriginal</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
-<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
-<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
-<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>math</code>, <code>menu</code>, <code>symbols</code>, <code>vietnamese</code></p>
+                            <p>OS/2 xAvgCharWidth is 645 but it should be 676 which corresponds to the average of the widths of all glyphs in the font.</p>
 
                             
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check copyright namerecords match license file.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCO[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider updating the url from '<a href="https://scripts.sil.org/OFL">https://scripts.sil.org/OFL</a>' to '<a href="https://openfontlicense.org">https://openfontlicense.org</a>'.</p>
-
-                            
-                             [code: old-url]
+                             [code: xAvgCharWidth-wrong]
                             
                             </span>
                         </li>
@@ -525,141 +446,11 @@ definitions.</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
         <h3>
     
-    Check font follows the Google Fonts vertical metric schema
+    Check for points out of bounds.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
 
 
 
@@ -686,10 +477,300 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>We recommend the absolute sum of the hhea metrics should be between 1.2-1.5x of the font's upm. This font has 1.977x (1977)</p>
+                            <p>The following glyphs have coordinates which are out of bounds:
+* ('Aacute', 753, 1290)
+* ('Aacute', 759, 1290)
+* ('Aacute', 769, 1290)
+* ('uni01CD', 849, 1287)
+* ('uni01CD', 861, 1287)
+* ('uni01CD', 535, 1287)
+* ('uni01CD', 545, 1287)
+* ('uni01CD', 555, 1287)
+* ('uni01CD', 841, 1287)
+* ('Acircumflex', 697, 1287)
+* ('Acircumflex', 713, 1287)
+* ('Acircumflex', 726, 1287)
+* ('AEacute', 1116, 1290)
+* ('AEacute', 1122, 1290)
+* ('AEacute', 1132, 1290)
+* ('Agrave', 578, 1290)
+* ('Agrave', 587, 1290)
+* ('Agrave', 594, 1290)
+* ('Amacron', 537, 1226)
+* ('Amacron', 555, 1226)
+* ('Amacron', 824, 1226)
+* ('Amacron', 844, 1226)
+* ('uni1EAC', 697, 1287)
+* ('uni1EAC', 713, 1287)
+* ('uni1EAC', 726, 1287)
+* ('uni1EA6', 799, 1440)
+* ('uni1EA6', 811, 1440)
+* ('uni1EA6', 817, 1440)
+* ('uni1EAA', 858, 1458)
+* ('uni1EAA', 894, 1458)
+* ('uni1EAA', 911, 1458)
+* ('uni1EA2', 697, 1317)
+* ('uni1EA2', 745, 1317)
+* ('uni1EA2', 668, 1317)
+* ('Cacute', 851, 1290)
+* ('Cacute', 857, 1290)
+* ('Cacute', 867, 1290)
+* ('Ccaron', 948, 1287)
+* ('Ccaron', 960, 1287)
+* ('Ccaron', 634, 1287)
+* ('Ccaron', 644, 1287)
+* ('Ccaron', 654, 1287)
+* ('Ccaron', 940, 1287)
+* ('Ccircumflex', 796, 1287)
+* ('Ccircumflex', 812, 1287)
+* ('Ccircumflex', 825, 1287)
+* ('Dcaron', 908, 1287)
+* ('Dcaron', 920, 1287)
+* ('Dcaron', 594, 1287)
+* ('Dcaron', 604, 1287)
+* ('Dcaron', 614, 1287)
+* ('Dcaron', 900, 1287)
+* ('Eacute', 775, 1290)
+* ('Eacute', 781, 1290)
+* ('Eacute', 791, 1290)
+* ('Ecaron', 871, 1287)
+* ('Ecaron', 883, 1287)
+* ('Ecaron', 557, 1287)
+* ('Ecaron', 567, 1287)
+* ('Ecaron', 577, 1287)
+* ('Ecaron', 863, 1287)
+* ('Ecircumflex', 719, 1287)
+* ('Ecircumflex', 735, 1287)
+* ('Ecircumflex', 748, 1287)
+* ('Egrave', 600, 1290)
+* ('Egrave', 609, 1290)
+* ('Egrave', 616, 1290)
+* ('Emacron', 559, 1226)
+* ('Emacron', 577, 1226)
+* ('Emacron', 846, 1226)
+* ('Emacron', 866, 1226)
+* ('uni1EC6', 719, 1287)
+* ('uni1EC6', 735, 1287)
+* ('uni1EC6', 748, 1287)
+* ('uni1EC0', 821, 1440)
+* ('uni1EC0', 833, 1440)
+* ('uni1EC0', 839, 1440)
+* ('uni1EC4', 880, 1458)
+* ('uni1EC4', 916, 1458)
+* ('uni1EC4', 933, 1458)
+* ('uni1EBA', 719, 1317)
+* ('uni1EBA', 767, 1317)
+* ('uni1EBA', 690, 1317)
+* ('Gcircumflex', 798, 1287)
+* ('Gcircumflex', 814, 1287)
+* ('Gcircumflex', 827, 1287)
+* ('Hcircumflex', 799, 1287)
+* ('Hcircumflex', 815, 1287)
+* ('Hcircumflex', 828, 1287)
+* ('Iacute', 556, 1290)
+* ('Iacute', 562, 1290)
+* ('Iacute', 572, 1290)
+* ('uni01CF', 652, 1287)
+* ('uni01CF', 664, 1287)
+* ('uni01CF', 338, 1287)
+* ('uni01CF', 348, 1287)
+* ('uni01CF', 358, 1287)
+* ('uni01CF', 644, 1287)
+* ('Icircumflex', 500, 1287)
+* ('Icircumflex', 516, 1287)
+* ('Icircumflex', 529, 1287)
+* ('Igrave', 381, 1290)
+* ('Igrave', 390, 1290)
+* ('Igrave', 397, 1290)
+* ('Imacron', 340, 1226)
+* ('Imacron', 358, 1226)
+* ('Imacron', 627, 1226)
+* ('Imacron', 647, 1226)
+* ('uni1EC8', 500, 1317)
+* ('uni1EC8', 548, 1317)
+* ('uni1EC8', 471, 1317)
+* ('IJacute', 556, 1290)
+* ('IJacute', 562, 1290)
+* ('IJacute', 572, 1290)
+* ('IJacute', 1308, 1290)
+* ('IJacute', 1314, 1290)
+* ('IJacute', 1324, 1290)
+* ('Jcircumflex', 872, 1287)
+* ('Jcircumflex', 888, 1287)
+* ('Jcircumflex', 901, 1287)
+* ('Lacute', 563, 1290)
+* ('Lacute', 569, 1290)
+* ('Lacute', 579, 1290)
+* ('Nacute', 874, 1290)
+* ('Nacute', 880, 1290)
+* ('Nacute', 890, 1290)
+* ('Ncaron', 971, 1287)
+* ('Ncaron', 983, 1287)
+* ('Ncaron', 657, 1287)
+* ('Ncaron', 667, 1287)
+* ('Ncaron', 677, 1287)
+* ('Ncaron', 963, 1287)
+* ('Oacute', 868, 1290)
+* ('Oacute', 874, 1290)
+* ('Oacute', 884, 1290)
+* ('uni01D1', 965, 1287)
+* ('uni01D1', 977, 1287)
+* ('uni01D1', 651, 1287)
+* ('uni01D1', 661, 1287)
+* ('uni01D1', 671, 1287)
+* ('uni01D1', 957, 1287)
+* ('Ocircumflex', 813, 1287)
+* ('Ocircumflex', 829, 1287)
+* ('Ocircumflex', 842, 1287)
+* ('Ograve', 693, 1290)
+* ('Ograve', 702, 1290)
+* ('Ograve', 709, 1290)
+* ('Ohungarumlaut', 793, 1290)
+* ('Ohungarumlaut', 799, 1290)
+* ('Ohungarumlaut', 809, 1290)
+* ('Ohungarumlaut', 990, 1290)
+* ('Ohungarumlaut', 996, 1290)
+* ('Ohungarumlaut', 1006, 1290)
+* ('Omacron', 653, 1226)
+* ('Omacron', 671, 1226)
+* ('Omacron', 940, 1226)
+* ('Omacron', 960, 1226)
+* ('uni1ED8', 813, 1287)
+* ('uni1ED8', 829, 1287)
+* ('uni1ED8', 842, 1287)
+* ('uni1ED2', 915, 1440)
+* ('uni1ED2', 927, 1440)
+* ('uni1ED2', 933, 1440)
+* ('uni1ED6', 974, 1458)
+* ('uni1ED6', 1010, 1458)
+* ('uni1ED6', 1027, 1458)
+* ('uni1ECE', 813, 1317)
+* ('uni1ECE', 861, 1317)
+* ('uni1ECE', 784, 1317)
+* ('uni1EDA', 868, 1290)
+* ('uni1EDA', 874, 1290)
+* ('uni1EDA', 884, 1290)
+* ('uni1EDC', 693, 1290)
+* ('uni1EDC', 702, 1290)
+* ('uni1EDC', 709, 1290)
+* ('uni1EDE', 813, 1317)
+* ('uni1EDE', 861, 1317)
+* ('uni1EDE', 784, 1317)
+* ('Racute', 764, 1290)
+* ('Racute', 770, 1290)
+* ('Racute', 780, 1290)
+* ('Rcaron', 861, 1287)
+* ('Rcaron', 873, 1287)
+* ('Rcaron', 547, 1287)
+* ('Rcaron', 557, 1287)
+* ('Rcaron', 567, 1287)
+* ('Rcaron', 853, 1287)
+* ('Sacute', 703, 1290)
+* ('Sacute', 709, 1290)
+* ('Sacute', 719, 1290)
+* ('Scaron', 800, 1287)
+* ('Scaron', 812, 1287)
+* ('Scaron', 486, 1287)
+* ('Scaron', 496, 1287)
+* ('Scaron', 506, 1287)
+* ('Scaron', 792, 1287)
+* ('Scircumflex', 648, 1287)
+* ('Scircumflex', 664, 1287)
+* ('Scircumflex', 677, 1287)
+* ('Tcaron', 855, 1287)
+* ('Tcaron', 867, 1287)
+* ('Tcaron', 541, 1287)
+* ('Tcaron', 551, 1287)
+* ('Tcaron', 561, 1287)
+* ('Tcaron', 847, 1287)
+* ('Uacute', 833, 1290)
+* ('Uacute', 839, 1290)
+* ('Uacute', 849, 1290)
+* ('uni01D3', 930, 1287)
+* ('uni01D3', 942, 1287)
+* ('uni01D3', 616, 1287)
+* ('uni01D3', 626, 1287)
+* ('uni01D3', 636, 1287)
+* ('uni01D3', 922, 1287)
+* ('Ucircumflex', 778, 1287)
+* ('Ucircumflex', 794, 1287)
+* ('Ucircumflex', 807, 1287)
+* ('Ugrave', 658, 1290)
+* ('Ugrave', 667, 1290)
+* ('Ugrave', 674, 1290)
+* ('Uhungarumlaut', 758, 1290)
+* ('Uhungarumlaut', 764, 1290)
+* ('Uhungarumlaut', 774, 1290)
+* ('Uhungarumlaut', 955, 1290)
+* ('Uhungarumlaut', 961, 1290)
+* ('Uhungarumlaut', 971, 1290)
+* ('Umacron', 618, 1226)
+* ('Umacron', 636, 1226)
+* ('Umacron', 905, 1226)
+* ('Umacron', 925, 1226)
+* ('uni1EE6', 778, 1317)
+* ('uni1EE6', 826, 1317)
+* ('uni1EE6', 749, 1317)
+* ('uni1EE8', 833, 1290)
+* ('uni1EE8', 839, 1290)
+* ('uni1EE8', 849, 1290)
+* ('uni1EEA', 658, 1290)
+* ('uni1EEA', 667, 1290)
+* ('uni1EEA', 674, 1290)
+* ('uni1EEC', 778, 1317)
+* ('uni1EEC', 826, 1317)
+* ('uni1EEC', 749, 1317)
+* ('Wacute', 1029, 1290)
+* ('Wacute', 1035, 1290)
+* ('Wacute', 1045, 1290)
+* ('Wcircumflex', 974, 1287)
+* ('Wcircumflex', 990, 1287)
+* ('Wcircumflex', 1003, 1287)
+* ('Wgrave', 854, 1290)
+* ('Wgrave', 863, 1290)
+* ('Wgrave', 870, 1290)
+* ('Yacute', 693, 1290)
+* ('Yacute', 699, 1290)
+* ('Yacute', 709, 1290)
+* ('Ycircumflex', 638, 1287)
+* ('Ycircumflex', 654, 1287)
+* ('Ycircumflex', 667, 1287)
+* ('Ygrave', 518, 1290)
+* ('Ygrave', 527, 1290)
+* ('Ygrave', 534, 1290)
+* ('uni1EF6', 638, 1317)
+* ('uni1EF6', 686, 1317)
+* ('uni1EF6', 609, 1317)
+* ('Zacute', 675, 1290)
+* ('Zacute', 681, 1290)
+* ('Zacute', 691, 1290)
+* ('Zcaron', 772, 1287)
+* ('Zcaron', 784, 1287)
+* ('Zcaron', 458, 1287)
+* ('Zcaron', 468, 1287)
+* ('Zcaron', 478, 1287)
+* ('Zcaron', 764, 1287)
+* ('hcircumflex', 467, 1287)
+* ('hcircumflex', 483, 1287)
+* ('hcircumflex', 496, 1287)
+* ('lacute', 512, 1290)
+* ('lacute', 518, 1290)
+* ('lacute', 528, 1290)
+* ('ntilde', 631, 790)
+* ('otilde', 605, 790)
+* ('uni1ED7', 661, 1028)
+* ('utilde', 636, 790)
+* ('uni1EF9', 643, 790)
+* ('v.mlp.med_n_', 605, 462)
+* ('v.mlp.med_n_', 605, 423)
+* ('v.mlp.med_n_', 605, 377)
+* ('w.mlp.med_n_', 889, 461)
+* ('w.mlp.med_n_', 889, 423)
+* ('w.mlp.med_n_', 889, 377) and ('w.mlp.fin_n_', 1044, 408)</p>
+<p>This happens a lot when points are not extremes, which is usually bad. However, fixing this alert by adding points on extremes may do more harm than good, especially with italics, calligraphic-script, handwriting, rounded and other fonts. So it is common to ignore this message.</p>
 
                             
-                             [code: bad-hhea-range]
+                             [code: points-out-of-bounds]
                             
                             </span>
                         </li>
@@ -719,114 +800,6 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure variable fonts include an avar table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_avar_table&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCO[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This variable font does not have an avar table.</p>
-
-                            
-                             [code: missing-avar]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCO[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -858,9 +831,11 @@ definitions.</p>
             
         
             
-                <h2>Universal</h2>
+        
+            
+                <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩ℹ️
 </span>
 
     
@@ -893,6 +868,63 @@ definitions.</p>
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Does the font contain a soft hyphen?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font has a 'Soft Hyphen' character.</p>
+
+                            
+                             [code: softhyphen]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -1055,11 +1087,33 @@ definitions.</p>
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    🔥
+</span>
+
+    
         <h3>
     
-    Does the font contain a soft hyphen?
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
+    
+    Validate location, size and resolution of article images.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
 
 
 
@@ -1073,7 +1127,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                🔥
                 PlaywriteCO[wght].ttf
                 
             </summary>
@@ -1086,10 +1140,44 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>This font has a 'Soft Hyphen' character.</p>
+                            <p>There are 3 image files in the <code>article</code> directory and they should be moved to an <code>article/images</code> subdirectory:</p>
+<pre><code>- /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/playwriteco/article/Playwrite-Colombia_1.jpg
+
+- /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/playwriteco/article/Playwrite-Colombia_3.jpg
+
+- /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/playwriteco/article/Playwrite-Colombia_2.jpg
+</code></pre>
 
                             
-                             [code: softhyphen]
+                             [code: misplaced-image-files]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p><code>/home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/playwriteco/article/Playwrite-Colombia_1.jpg</code> has <code>1195058 bytes</code>, but the maximum filesize for raster images is <code>819200 bytes</code>.</p>
+
+                            
+                             [code: filesize]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p><code>/home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/playwriteco/article/Playwrite-Colombia_2.jpg</code> has <code>1247053 bytes</code>, but the maximum filesize for raster images is <code>819200 bytes</code>.</p>
+
+                            
+                             [code: filesize]
                             
                             </span>
                         </li>
@@ -1101,44 +1189,12 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
             
         
             
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.os2</h2>
+                <h2>Metadata Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩
+    ⚠️⏩⏩⏩ℹ️
 </span>
 
     
@@ -1148,11 +1204,89 @@ definitions.</p>
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
         <h3>
     
-    Check if OS/2 xAvgCharWidth is correct.
+    Check for codepoints not covered by METADATA subsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
 
 
 
@@ -1179,10 +1313,165 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>OS/2 xAvgCharWidth is 645 but it should be 676 which corresponds to the average of the widths of all glyphs in the font.</p>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh, yi</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
+<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>math</code>, <code>menu</code>, <code>symbols</code>, <code>vietnamese</code></p>
 
                             
-                             [code: xAvgCharWidth-wrong]
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩⏩⏩⏩⏩⏩⏩
+</span>
+
+    
+
+    
+        <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
                             
                             </span>
                         </li>
@@ -1207,27 +1496,327 @@ definitions.</p>
             
         
             
-        
+                <h2>Name table checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check copyright namerecords match license file.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider updating the url from '<a href="https://scripts.sil.org/OFL">https://scripts.sil.org/OFL</a>' to '<a href="https://openfontlicense.org">https://openfontlicense.org</a>'.</p>
+
+                            
+                             [code: old-url]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Ensure variable fonts include an avar table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_avar_table&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This variable font does not have an avar table.</p>
+
+                            
+                             [code: missing-avar]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+        <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check font follows the Google Fonts vertical metric schema
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>We recommend the absolute sum of the hhea metrics should be between 1.2-1.5x of the font's upm. This font has 1.977x (1977)</p>
+
+                            
+                             [code: bad-hhea-range]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
             
         
     </main>

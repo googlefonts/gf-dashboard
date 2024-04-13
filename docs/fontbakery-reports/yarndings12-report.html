@@ -272,20 +272,20 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>3</td>
+        <td>4</td>
+        <td>10</td>
+        <td>71</td>
         <td>7</td>
-        <td>74</td>
-        <td>7</td>
-        <td>161</td>
+        <td>153</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>1%</td>
-        <td>3%</td>
+        <td>2%</td>
+        <td>4%</td>
         <td>29%</td>
         <td>3%</td>
-        <td>64%</td>
+        <td>62%</td>
     </tr>
 </table>
         
@@ -310,13 +310,29 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.12.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -365,9 +381,9 @@ immediately.
     
         <h3>
     
-    Checking OS/2 achVendID.
+    Checking unitsPerEm value is reasonable.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unitsperem&gt;</div>
 
 
 
@@ -394,10 +410,10 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+                            <p>In order to optimize performance on some legacy renderers, the value of unitsPerEm at the head table should idealy be a power of between 16 to 16384. And values of 1000 and 2000 are also common and may be just fine as well. But we got 1040 instead.</p>
 
                             
-                             [code: unknown]
+                             [code: suboptimal]
                             
                             </span>
                         </li>
@@ -405,6 +421,1048 @@ immediately.
                 </ul>
             </div>
         </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GPOS table lacks kerning information.</p>
+
+                            
+                             [code: lacks-kern-info]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check if each glyph has the recommended amount of contours.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: exclam	Contours detected: 112	Expected: 2
+
+- Glyph name: quotedbl	Contours detected: 57	Expected: 2
+
+- Glyph name: numbersign	Contours detected: 28	Expected: 2
+
+- Glyph name: quotesingle	Contours detected: 40	Expected: 1
+
+- Glyph name: parenleft	Contours detected: 50	Expected: 1
+
+- Glyph name: parenright	Contours detected: 44	Expected: 1
+
+- Glyph name: asterisk	Contours detected: 28	Expected: 1 or 4
+
+- Glyph name: plus	Contours detected: 51	Expected: 1
+
+- Glyph name: comma	Contours detected: 49	Expected: 1
+
+- Glyph name: hyphen	Contours detected: 20	Expected: 1
+
+- Glyph name: period	Contours detected: 21	Expected: 1
+
+- Glyph name: slash	Contours detected: 28	Expected: 1
+
+- Glyph name: zero	Contours detected: 45	Expected: 2 or 3
+
+- Glyph name: one	Contours detected: 36	Expected: 1
+
+- Glyph name: two	Contours detected: 45	Expected: 1
+
+- Glyph name: three	Contours detected: 52	Expected: 1
+
+- Glyph name: four	Contours detected: 64	Expected: 1 or 2
+
+- Glyph name: five	Contours detected: 48	Expected: 1
+
+- Glyph name: six	Contours detected: 61	Expected: 1 or 2
+
+- Glyph name: seven	Contours detected: 64	Expected: 1
+
+- Glyph name: eight	Contours detected: 73	Expected: 3
+
+- Glyph name: nine	Contours detected: 64	Expected: 1 or 2
+
+- Glyph name: colon	Contours detected: 40	Expected: 2
+
+- Glyph name: semicolon	Contours detected: 24	Expected: 2
+
+- Glyph name: less	Contours detected: 48	Expected: 1
+
+- Glyph name: equal	Contours detected: 48	Expected: 2
+
+- Glyph name: greater	Contours detected: 56	Expected: 1
+
+- Glyph name: question	Contours detected: 60	Expected: 2
+
+- Glyph name: A	Contours detected: 40	Expected: 2
+
+- Glyph name: B	Contours detected: 64	Expected: 2 or 3
+
+- Glyph name: C	Contours detected: 60	Expected: 1
+
+- Glyph name: D	Contours detected: 92	Expected: 2
+
+- Glyph name: E	Contours detected: 68	Expected: 1
+
+- Glyph name: F	Contours detected: 64	Expected: 1
+
+- Glyph name: G	Contours detected: 60	Expected: 1
+
+- Glyph name: H	Contours detected: 84	Expected: 1
+
+- Glyph name: I	Contours detected: 92	Expected: 1
+
+- Glyph name: J	Contours detected: 64	Expected: 1
+
+- Glyph name: K	Contours detected: 29	Expected: 1 or 2
+
+- Glyph name: L	Contours detected: 53	Expected: 1
+
+- Glyph name: M	Contours detected: 37	Expected: 1
+
+- Glyph name: N	Contours detected: 25	Expected: 1
+
+- Glyph name: O	Contours detected: 82	Expected: 2
+
+- Glyph name: P	Contours detected: 72	Expected: 1 or 2
+
+- Glyph name: Q	Contours detected: 60	Expected: 2
+
+- Glyph name: R	Contours detected: 49	Expected: 1 or 2
+
+- Glyph name: S	Contours detected: 80	Expected: 1
+
+- Glyph name: T	Contours detected: 81	Expected: 1
+
+- Glyph name: U	Contours detected: 76	Expected: 1
+
+- Glyph name: V	Contours detected: 80	Expected: 1
+
+- Glyph name: W	Contours detected: 76	Expected: 1 or 2
+
+- Glyph name: X	Contours detected: 52	Expected: 1
+
+- Glyph name: Y	Contours detected: 40	Expected: 1
+
+- Glyph name: Z	Contours detected: 28	Expected: 1
+
+- Glyph name: bracketleft	Contours detected: 106	Expected: 1
+
+- Glyph name: backslash	Contours detected: 28	Expected: 1
+
+- Glyph name: bracketright	Contours detected: 106	Expected: 1
+
+- Glyph name: underscore	Contours detected: 18	Expected: 1
+
+- Glyph name: a	Contours detected: 57	Expected: 2
+
+- Glyph name: b	Contours detected: 68	Expected: 2
+
+- Glyph name: c	Contours detected: 66	Expected: 1
+
+- Glyph name: d	Contours detected: 72	Expected: 2
+
+- Glyph name: e	Contours detected: 80	Expected: 2
+
+- Glyph name: f	Contours detected: 48	Expected: 1
+
+- Glyph name: g	Contours detected: 47	Expected: 2 or 3
+
+- Glyph name: h	Contours detected: 74	Expected: 1
+
+- Glyph name: i	Contours detected: 48	Expected: 2
+
+- Glyph name: j	Contours detected: 49	Expected: 2
+
+- Glyph name: k	Contours detected: 29	Expected: 1 or 2
+
+- Glyph name: l	Contours detected: 61	Expected: 1
+
+- Glyph name: m	Contours detected: 57	Expected: 1
+
+- Glyph name: n	Contours detected: 85	Expected: 1
+
+- Glyph name: o	Contours detected: 48	Expected: 2
+
+- Glyph name: p	Contours detected: 45	Expected: 2
+
+- Glyph name: q	Contours detected: 64	Expected: 2
+
+- Glyph name: r	Contours detected: 48	Expected: 1
+
+- Glyph name: s	Contours detected: 69	Expected: 1
+
+- Glyph name: t	Contours detected: 61	Expected: 1
+
+- Glyph name: u	Contours detected: 98	Expected: 1
+
+- Glyph name: v	Contours detected: 98	Expected: 1
+
+- Glyph name: w	Contours detected: 92	Expected: 1
+
+- Glyph name: x	Contours detected: 102	Expected: 1
+
+- Glyph name: y	Contours detected: 91	Expected: 1
+
+- Glyph name: z	Contours detected: 68	Expected: 1
+
+- Glyph name: braceleft	Contours detected: 92	Expected: 1
+
+- Glyph name: braceright	Contours detected: 92	Expected: 1
+
+- Glyph name: periodcentered	Contours detected: 50	Expected: 1
+
+- Glyph name: endash	Contours detected: 41	Expected: 1
+
+- Glyph name: emdash	Contours detected: 36	Expected: 1
+
+- Glyph name: bullet	Contours detected: 50	Expected: 1
+
+- Glyph name: A	Contours detected: 40	Expected: 2
+
+- Glyph name: B	Contours detected: 64	Expected: 2 or 3
+
+- Glyph name: C	Contours detected: 60	Expected: 1
+
+- Glyph name: D	Contours detected: 92	Expected: 2
+
+- Glyph name: E	Contours detected: 68	Expected: 1
+
+- Glyph name: F	Contours detected: 64	Expected: 1
+
+- Glyph name: G	Contours detected: 60	Expected: 1
+
+- Glyph name: H	Contours detected: 84	Expected: 1
+
+- Glyph name: I	Contours detected: 92	Expected: 1
+
+- Glyph name: J	Contours detected: 64	Expected: 1
+
+- Glyph name: K	Contours detected: 29	Expected: 1 or 2
+
+- Glyph name: L	Contours detected: 53	Expected: 1
+
+- Glyph name: M	Contours detected: 37	Expected: 1
+
+- Glyph name: N	Contours detected: 25	Expected: 1
+
+- Glyph name: O	Contours detected: 82	Expected: 2
+
+- Glyph name: P	Contours detected: 72	Expected: 1 or 2
+
+- Glyph name: Q	Contours detected: 60	Expected: 2
+
+- Glyph name: R	Contours detected: 49	Expected: 1 or 2
+
+- Glyph name: S	Contours detected: 80	Expected: 1
+
+- Glyph name: T	Contours detected: 81	Expected: 1
+
+- Glyph name: U	Contours detected: 76	Expected: 1
+
+- Glyph name: V	Contours detected: 80	Expected: 1
+
+- Glyph name: W	Contours detected: 76	Expected: 1 or 2
+
+- Glyph name: X	Contours detected: 52	Expected: 1
+
+- Glyph name: Y	Contours detected: 40	Expected: 1
+
+- Glyph name: Z	Contours detected: 28	Expected: 1
+
+- Glyph name: a	Contours detected: 57	Expected: 2
+
+- Glyph name: asterisk	Contours detected: 28	Expected: 1 or 4
+
+- Glyph name: b	Contours detected: 68	Expected: 2
+
+- Glyph name: backslash	Contours detected: 28	Expected: 1
+
+- Glyph name: braceleft	Contours detected: 92	Expected: 1
+
+- Glyph name: braceright	Contours detected: 92	Expected: 1
+
+- Glyph name: bracketleft	Contours detected: 106	Expected: 1
+
+- Glyph name: bracketright	Contours detected: 106	Expected: 1
+
+- Glyph name: bullet	Contours detected: 50	Expected: 1
+
+- Glyph name: c	Contours detected: 66	Expected: 1
+
+- Glyph name: colon	Contours detected: 40	Expected: 2
+
+- Glyph name: comma	Contours detected: 49	Expected: 1
+
+- Glyph name: d	Contours detected: 72	Expected: 2
+
+- Glyph name: e	Contours detected: 80	Expected: 2
+
+- Glyph name: eight	Contours detected: 73	Expected: 3
+
+- Glyph name: emdash	Contours detected: 36	Expected: 1
+
+- Glyph name: endash	Contours detected: 41	Expected: 1
+
+- Glyph name: equal	Contours detected: 48	Expected: 2
+
+- Glyph name: exclam	Contours detected: 112	Expected: 2
+
+- Glyph name: f	Contours detected: 48	Expected: 1
+
+- Glyph name: five	Contours detected: 48	Expected: 1
+
+- Glyph name: four	Contours detected: 64	Expected: 1 or 2
+
+- Glyph name: g	Contours detected: 47	Expected: 2 or 3
+
+- Glyph name: greater	Contours detected: 56	Expected: 1
+
+- Glyph name: h	Contours detected: 74	Expected: 1
+
+- Glyph name: hyphen	Contours detected: 20	Expected: 1
+
+- Glyph name: i	Contours detected: 48	Expected: 2
+
+- Glyph name: j	Contours detected: 49	Expected: 2
+
+- Glyph name: k	Contours detected: 29	Expected: 1 or 2
+
+- Glyph name: l	Contours detected: 61	Expected: 1
+
+- Glyph name: less	Contours detected: 48	Expected: 1
+
+- Glyph name: m	Contours detected: 57	Expected: 1
+
+- Glyph name: n	Contours detected: 85	Expected: 1
+
+- Glyph name: nine	Contours detected: 64	Expected: 1 or 2
+
+- Glyph name: numbersign	Contours detected: 28	Expected: 2
+
+- Glyph name: o	Contours detected: 48	Expected: 2
+
+- Glyph name: one	Contours detected: 36	Expected: 1
+
+- Glyph name: p	Contours detected: 45	Expected: 2
+
+- Glyph name: parenleft	Contours detected: 50	Expected: 1
+
+- Glyph name: parenright	Contours detected: 44	Expected: 1
+
+- Glyph name: period	Contours detected: 21	Expected: 1
+
+- Glyph name: periodcentered	Contours detected: 50	Expected: 1
+
+- Glyph name: plus	Contours detected: 51	Expected: 1
+
+- Glyph name: q	Contours detected: 64	Expected: 2
+
+- Glyph name: question	Contours detected: 60	Expected: 2
+
+- Glyph name: quotedbl	Contours detected: 57	Expected: 2
+
+- Glyph name: quotesingle	Contours detected: 40	Expected: 1
+
+- Glyph name: r	Contours detected: 48	Expected: 1
+
+- Glyph name: s	Contours detected: 69	Expected: 1
+
+- Glyph name: semicolon	Contours detected: 24	Expected: 2
+
+- Glyph name: seven	Contours detected: 64	Expected: 1
+
+- Glyph name: six	Contours detected: 61	Expected: 1 or 2
+
+- Glyph name: slash	Contours detected: 28	Expected: 1
+
+- Glyph name: t	Contours detected: 61	Expected: 1
+
+- Glyph name: three	Contours detected: 52	Expected: 1
+
+- Glyph name: two	Contours detected: 45	Expected: 1
+
+- Glyph name: u	Contours detected: 98	Expected: 1
+
+- Glyph name: underscore	Contours detected: 18	Expected: 1
+
+- Glyph name: v	Contours detected: 98	Expected: 1
+
+- Glyph name: w	Contours detected: 92	Expected: 1
+
+- Glyph name: x	Contours detected: 102	Expected: 1
+
+- Glyph name: y	Contours detected: 91	Expected: 1
+
+- Glyph name: z	Contours detected: 68	Expected: 1
+
+- Glyph name: zero	Contours detected: 45	Expected: 2 or 3
+</code></pre>
+
+                            
+                             [code: contour-count]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check math signs have the same width.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The most common width is 715 among a set of 3 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 780:
+greater</p>
+
+                            
+                             [code: width-outliers]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+        <h3>
+    
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
+    
+    Validate location, size and resolution of article images.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/yarndings12 does not have an article.</p>
+
+                            
+                             [code: lacks-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+200A HAIR SPACE: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>math</code>, <code>menu</code>, <code>symbols</code></p>
+
+                            
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    🔥
+</span>
+
+    
+        <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>No GF glyphset was found to be supported &gt;80%, so language shaping support couldn't get checked.</p>
+
+                            
+                             [code: no-glyphset-supported]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⚠️⏩⏩⏩
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Yarndings12-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently.</p>
+
+                            
+                             [code: description-not-updated]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1139,407 +2197,6 @@ immediately.
     
 
     
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Yarndings12-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: ol-chiki, hebrew, gunjala-gondi, inscriptional-pahlavi, nandinagari, chinese-hongkong, sora-sompeng, saurashtra, bassa-vah, warang-citi, cherokee, masaram-gondi, nushu, meroitic, sundanese, osage, newa, elymaic, palmyrene, cyrillic-ext, lycian, tamil, chorasmian, tirhuta, mro, znamenny, dogra, elbasan, khitan-small-script, sharada, duployan, adlam, meroitic-cursive, nyiakeng-puachue-hmong, meetei-mayek, khudawadi, signwriting, osmanya, limbu, ottoman-siyaq-numbers, imperial-aramaic, lepcha, phags-pa, old-permic, tagalog, thaana, batak, music, japanese, lao, lydian, braille, indic-siyaq-numbers, mandaic, hanifi-rohingya, cham, meroitic-hieroglyphs, vietnamese, chinese-simplified, cypriot, nabataean, shavian, tamil-supplement, khmer, kharoshthi, medefaidrin, cypro-minoan, myanmar, samaritan, manichaean, soyombo, mende-kikakui, tifinagh, lisu, hatran, old-turkic, cuneiform, bamum, kannada, cyrillic, mongolian, old-persian, ethiopic, modi, makasar, tangut, zanabazar-square, carian, buginese, tagbanwa, korean, canadian-aboriginal, inscriptional-parthian, thai, tai-le, yi, nko, takri, khojki, ugaritic, mayan-numerals, greek, dives-akuru, kayah-li, old-south-arabian, psalter-pahlavi, brahmi, gothic, greek-ext, runic, linear-a, vai, armenian, new-tai-lue, syriac, malayalam, kaithi, georgian, old-italic, linear-b, multani, phoenician, bhaiksuki, pau-cin-hau, tibetan, avestan, anatolian-hieroglyphs, gurmukhi, tangsa, arabic, bengali, gujarati, tai-tham, old-uyghur, caucasian-albanian, deseret, hanunoo, tai-viet, buhid, toto, old-sogdian, old-north-arabian, coptic, kawi, sinhala, mahajani, latin-ext, yezidi, chinese-traditional, egyptian-hieroglyphs, sogdian, pahawh-hmong, nag-mundari, syloti-nagri, marchen, devanagari, telugu, siddham, rejang, old-hungarian, balinese, miao, wancho, ahom, vithkuqi, javanese, glagolitic, chakma, ogham, grantha, oriya</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: ol-chiki, hebrew, gunjala-gondi, inscriptional-pahlavi, nandinagari, chinese-hongkong, sora-sompeng, saurashtra, bassa-vah, warang-citi, cherokee, masaram-gondi, nushu, meroitic, sundanese, osage, newa, elymaic, palmyrene, cyrillic-ext, lycian, tamil, chorasmian, tirhuta, mro, znamenny, dogra, elbasan, khitan-small-script, sharada, duployan, adlam, meroitic-cursive, nyiakeng-puachue-hmong, meetei-mayek, khudawadi, signwriting, osmanya, limbu, ottoman-siyaq-numbers, imperial-aramaic, lepcha, phags-pa, old-permic, tagalog, thaana, batak, music, japanese, lao, lydian, braille, indic-siyaq-numbers, mandaic, hanifi-rohingya, cham, meroitic-hieroglyphs, vietnamese, chinese-simplified, cypriot, nabataean, shavian, tamil-supplement, khmer, kharoshthi, medefaidrin, cypro-minoan, myanmar, samaritan, manichaean, soyombo, mende-kikakui, tifinagh, lisu, hatran, old-turkic, cuneiform, bamum, kannada, cyrillic, mongolian, old-persian, ethiopic, modi, makasar, tangut, zanabazar-square, carian, buginese, tagbanwa, korean, canadian-aboriginal, inscriptional-parthian, thai, tai-le, yi, nko, takri, khojki, ugaritic, mayan-numerals, greek, dives-akuru, kayah-li, old-south-arabian, psalter-pahlavi, brahmi, gothic, greek-ext, runic, linear-a, vai, armenian, new-tai-lue, syriac, malayalam, kaithi, georgian, old-italic, linear-b, multani, phoenician, bhaiksuki, pau-cin-hau, tibetan, avestan, anatolian-hieroglyphs, gurmukhi, tangsa, arabic, bengali, gujarati, tai-tham, old-uyghur, caucasian-albanian, deseret, hanunoo, tai-viet, buhid, toto, old-sogdian, old-north-arabian, coptic, kawi, sinhala, mahajani, latin-ext, yezidi, chinese-traditional, egyptian-hieroglyphs, sogdian, pahawh-hmong, nag-mundari, syloti-nagri, marchen, devanagari, telugu, siddham, rejang, old-hungarian, balinese, miao, wancho, ahom, vithkuqi, javanese, glagolitic, chakma, ogham, grantha, oriya</li>
-<li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>math</code>, <code>menu</code>, <code>symbols</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Yarndings12-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>No GF glyphset was found to be supported &gt;80%, so language shaping support couldn't get checked.</p>
-
-                            
-                             [code: no-glyphset-supported]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OK.</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check font follows the Google Fonts vertical metric schema
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Yarndings12-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The sum of hhea.ascender + abs(hhea.descender) + hhea.lineGap is 1040 when it should be at least 1248</p>
-
-                            
-                             [code: bad-hhea-range]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Yarndings12-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
-Please consider mentioning note-worthy improvements made to the family recently.</p>
-
-                            
-                             [code: description-not-updated]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
 
     
 
@@ -1620,32 +2277,6 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
     
 
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -1677,9 +2308,9 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <h3>
     
-    Check if each glyph has the recommended amount of contours.
+    Checking OS/2 achVendID.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
 
 
 
@@ -1706,371 +2337,10 @@ Please consider mentioning note-worthy improvements made to the family recently.
                             </span>
 
                             <span class='details_text'>
-                            <p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
-<p>The following glyphs do not have the recommended number of contours:</p>
-<pre><code>- Glyph name: exclam	Contours detected: 112	Expected: 2
-
-- Glyph name: quotedbl	Contours detected: 57	Expected: 2
-
-- Glyph name: numbersign	Contours detected: 28	Expected: 2
-
-- Glyph name: quotesingle	Contours detected: 40	Expected: 1
-
-- Glyph name: parenleft	Contours detected: 50	Expected: 1
-
-- Glyph name: parenright	Contours detected: 44	Expected: 1
-
-- Glyph name: asterisk	Contours detected: 28	Expected: 1 or 4
-
-- Glyph name: plus	Contours detected: 51	Expected: 1
-
-- Glyph name: comma	Contours detected: 49	Expected: 1
-
-- Glyph name: hyphen	Contours detected: 20	Expected: 1
-
-- Glyph name: period	Contours detected: 21	Expected: 1
-
-- Glyph name: slash	Contours detected: 28	Expected: 1
-
-- Glyph name: zero	Contours detected: 45	Expected: 2 or 3
-
-- Glyph name: one	Contours detected: 36	Expected: 1
-
-- Glyph name: two	Contours detected: 45	Expected: 1
-
-- Glyph name: three	Contours detected: 52	Expected: 1
-
-- Glyph name: four	Contours detected: 64	Expected: 1 or 2
-
-- Glyph name: five	Contours detected: 48	Expected: 1
-
-- Glyph name: six	Contours detected: 61	Expected: 1 or 2
-
-- Glyph name: seven	Contours detected: 64	Expected: 1
-
-- Glyph name: eight	Contours detected: 73	Expected: 3
-
-- Glyph name: nine	Contours detected: 64	Expected: 1 or 2
-
-- Glyph name: colon	Contours detected: 40	Expected: 2
-
-- Glyph name: semicolon	Contours detected: 24	Expected: 2
-
-- Glyph name: less	Contours detected: 48	Expected: 1
-
-- Glyph name: equal	Contours detected: 48	Expected: 2
-
-- Glyph name: greater	Contours detected: 56	Expected: 1
-
-- Glyph name: question	Contours detected: 60	Expected: 2
-
-- Glyph name: A	Contours detected: 40	Expected: 2
-
-- Glyph name: B	Contours detected: 64	Expected: 2 or 3
-
-- Glyph name: C	Contours detected: 60	Expected: 1
-
-- Glyph name: D	Contours detected: 92	Expected: 2
-
-- Glyph name: E	Contours detected: 68	Expected: 1
-
-- Glyph name: F	Contours detected: 64	Expected: 1
-
-- Glyph name: G	Contours detected: 60	Expected: 1
-
-- Glyph name: H	Contours detected: 84	Expected: 1
-
-- Glyph name: I	Contours detected: 92	Expected: 1
-
-- Glyph name: J	Contours detected: 64	Expected: 1
-
-- Glyph name: K	Contours detected: 29	Expected: 1 or 2
-
-- Glyph name: L	Contours detected: 53	Expected: 1
-
-- Glyph name: M	Contours detected: 37	Expected: 1
-
-- Glyph name: N	Contours detected: 25	Expected: 1
-
-- Glyph name: O	Contours detected: 82	Expected: 2
-
-- Glyph name: P	Contours detected: 72	Expected: 1 or 2
-
-- Glyph name: Q	Contours detected: 60	Expected: 2
-
-- Glyph name: R	Contours detected: 49	Expected: 1 or 2
-
-- Glyph name: S	Contours detected: 80	Expected: 1
-
-- Glyph name: T	Contours detected: 81	Expected: 1
-
-- Glyph name: U	Contours detected: 76	Expected: 1
-
-- Glyph name: V	Contours detected: 80	Expected: 1
-
-- Glyph name: W	Contours detected: 76	Expected: 1 or 2
-
-- Glyph name: X	Contours detected: 52	Expected: 1
-
-- Glyph name: Y	Contours detected: 40	Expected: 1
-
-- Glyph name: Z	Contours detected: 28	Expected: 1
-
-- Glyph name: bracketleft	Contours detected: 106	Expected: 1
-
-- Glyph name: backslash	Contours detected: 28	Expected: 1
-
-- Glyph name: bracketright	Contours detected: 106	Expected: 1
-
-- Glyph name: underscore	Contours detected: 18	Expected: 1
-
-- Glyph name: a	Contours detected: 57	Expected: 2
-
-- Glyph name: b	Contours detected: 68	Expected: 2
-
-- Glyph name: c	Contours detected: 66	Expected: 1
-
-- Glyph name: d	Contours detected: 72	Expected: 2
-
-- Glyph name: e	Contours detected: 80	Expected: 2
-
-- Glyph name: f	Contours detected: 48	Expected: 1
-
-- Glyph name: g	Contours detected: 47	Expected: 2 or 3
-
-- Glyph name: h	Contours detected: 74	Expected: 1
-
-- Glyph name: i	Contours detected: 48	Expected: 2
-
-- Glyph name: j	Contours detected: 49	Expected: 2
-
-- Glyph name: k	Contours detected: 29	Expected: 1 or 2
-
-- Glyph name: l	Contours detected: 61	Expected: 1
-
-- Glyph name: m	Contours detected: 57	Expected: 1
-
-- Glyph name: n	Contours detected: 85	Expected: 1
-
-- Glyph name: o	Contours detected: 48	Expected: 2
-
-- Glyph name: p	Contours detected: 45	Expected: 2
-
-- Glyph name: q	Contours detected: 64	Expected: 2
-
-- Glyph name: r	Contours detected: 48	Expected: 1
-
-- Glyph name: s	Contours detected: 69	Expected: 1
-
-- Glyph name: t	Contours detected: 61	Expected: 1
-
-- Glyph name: u	Contours detected: 98	Expected: 1
-
-- Glyph name: v	Contours detected: 98	Expected: 1
-
-- Glyph name: w	Contours detected: 92	Expected: 1
-
-- Glyph name: x	Contours detected: 102	Expected: 1
-
-- Glyph name: y	Contours detected: 91	Expected: 1
-
-- Glyph name: z	Contours detected: 68	Expected: 1
-
-- Glyph name: braceleft	Contours detected: 92	Expected: 1
-
-- Glyph name: braceright	Contours detected: 92	Expected: 1
-
-- Glyph name: periodcentered	Contours detected: 50	Expected: 1
-
-- Glyph name: endash	Contours detected: 41	Expected: 1
-
-- Glyph name: emdash	Contours detected: 36	Expected: 1
-
-- Glyph name: bullet	Contours detected: 50	Expected: 1
-
-- Glyph name: A	Contours detected: 40	Expected: 2
-
-- Glyph name: B	Contours detected: 64	Expected: 2 or 3
-
-- Glyph name: C	Contours detected: 60	Expected: 1
-
-- Glyph name: D	Contours detected: 92	Expected: 2
-
-- Glyph name: E	Contours detected: 68	Expected: 1
-
-- Glyph name: F	Contours detected: 64	Expected: 1
-
-- Glyph name: G	Contours detected: 60	Expected: 1
-
-- Glyph name: H	Contours detected: 84	Expected: 1
-
-- Glyph name: I	Contours detected: 92	Expected: 1
-
-- Glyph name: J	Contours detected: 64	Expected: 1
-
-- Glyph name: K	Contours detected: 29	Expected: 1 or 2
-
-- Glyph name: L	Contours detected: 53	Expected: 1
-
-- Glyph name: M	Contours detected: 37	Expected: 1
-
-- Glyph name: N	Contours detected: 25	Expected: 1
-
-- Glyph name: O	Contours detected: 82	Expected: 2
-
-- Glyph name: P	Contours detected: 72	Expected: 1 or 2
-
-- Glyph name: Q	Contours detected: 60	Expected: 2
-
-- Glyph name: R	Contours detected: 49	Expected: 1 or 2
-
-- Glyph name: S	Contours detected: 80	Expected: 1
-
-- Glyph name: T	Contours detected: 81	Expected: 1
-
-- Glyph name: U	Contours detected: 76	Expected: 1
-
-- Glyph name: V	Contours detected: 80	Expected: 1
-
-- Glyph name: W	Contours detected: 76	Expected: 1 or 2
-
-- Glyph name: X	Contours detected: 52	Expected: 1
-
-- Glyph name: Y	Contours detected: 40	Expected: 1
-
-- Glyph name: Z	Contours detected: 28	Expected: 1
-
-- Glyph name: a	Contours detected: 57	Expected: 2
-
-- Glyph name: asterisk	Contours detected: 28	Expected: 1 or 4
-
-- Glyph name: b	Contours detected: 68	Expected: 2
-
-- Glyph name: backslash	Contours detected: 28	Expected: 1
-
-- Glyph name: braceleft	Contours detected: 92	Expected: 1
-
-- Glyph name: braceright	Contours detected: 92	Expected: 1
-
-- Glyph name: bracketleft	Contours detected: 106	Expected: 1
-
-- Glyph name: bracketright	Contours detected: 106	Expected: 1
-
-- Glyph name: bullet	Contours detected: 50	Expected: 1
-
-- Glyph name: c	Contours detected: 66	Expected: 1
-
-- Glyph name: colon	Contours detected: 40	Expected: 2
-
-- Glyph name: comma	Contours detected: 49	Expected: 1
-
-- Glyph name: d	Contours detected: 72	Expected: 2
-
-- Glyph name: e	Contours detected: 80	Expected: 2
-
-- Glyph name: eight	Contours detected: 73	Expected: 3
-
-- Glyph name: emdash	Contours detected: 36	Expected: 1
-
-- Glyph name: endash	Contours detected: 41	Expected: 1
-
-- Glyph name: equal	Contours detected: 48	Expected: 2
-
-- Glyph name: exclam	Contours detected: 112	Expected: 2
-
-- Glyph name: f	Contours detected: 48	Expected: 1
-
-- Glyph name: five	Contours detected: 48	Expected: 1
-
-- Glyph name: four	Contours detected: 64	Expected: 1 or 2
-
-- Glyph name: g	Contours detected: 47	Expected: 2 or 3
-
-- Glyph name: greater	Contours detected: 56	Expected: 1
-
-- Glyph name: h	Contours detected: 74	Expected: 1
-
-- Glyph name: hyphen	Contours detected: 20	Expected: 1
-
-- Glyph name: i	Contours detected: 48	Expected: 2
-
-- Glyph name: j	Contours detected: 49	Expected: 2
-
-- Glyph name: k	Contours detected: 29	Expected: 1 or 2
-
-- Glyph name: l	Contours detected: 61	Expected: 1
-
-- Glyph name: less	Contours detected: 48	Expected: 1
-
-- Glyph name: m	Contours detected: 57	Expected: 1
-
-- Glyph name: n	Contours detected: 85	Expected: 1
-
-- Glyph name: nine	Contours detected: 64	Expected: 1 or 2
-
-- Glyph name: numbersign	Contours detected: 28	Expected: 2
-
-- Glyph name: o	Contours detected: 48	Expected: 2
-
-- Glyph name: one	Contours detected: 36	Expected: 1
-
-- Glyph name: p	Contours detected: 45	Expected: 2
-
-- Glyph name: parenleft	Contours detected: 50	Expected: 1
-
-- Glyph name: parenright	Contours detected: 44	Expected: 1
-
-- Glyph name: period	Contours detected: 21	Expected: 1
-
-- Glyph name: periodcentered	Contours detected: 50	Expected: 1
-
-- Glyph name: plus	Contours detected: 51	Expected: 1
-
-- Glyph name: q	Contours detected: 64	Expected: 2
-
-- Glyph name: question	Contours detected: 60	Expected: 2
-
-- Glyph name: quotedbl	Contours detected: 57	Expected: 2
-
-- Glyph name: quotesingle	Contours detected: 40	Expected: 1
-
-- Glyph name: r	Contours detected: 48	Expected: 1
-
-- Glyph name: s	Contours detected: 69	Expected: 1
-
-- Glyph name: semicolon	Contours detected: 24	Expected: 2
-
-- Glyph name: seven	Contours detected: 64	Expected: 1
-
-- Glyph name: six	Contours detected: 61	Expected: 1 or 2
-
-- Glyph name: slash	Contours detected: 28	Expected: 1
-
-- Glyph name: t	Contours detected: 61	Expected: 1
-
-- Glyph name: three	Contours detected: 52	Expected: 1
-
-- Glyph name: two	Contours detected: 45	Expected: 1
-
-- Glyph name: u	Contours detected: 98	Expected: 1
-
-- Glyph name: underscore	Contours detected: 18	Expected: 1
-
-- Glyph name: v	Contours detected: 98	Expected: 1
-
-- Glyph name: w	Contours detected: 92	Expected: 1
-
-- Glyph name: x	Contours detected: 102	Expected: 1
-
-- Glyph name: y	Contours detected: 91	Expected: 1
-
-- Glyph name: z	Contours detected: 68	Expected: 1
-
-- Glyph name: zero	Contours detected: 45	Expected: 2 or 3
-</code></pre>
+                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
 
                             
-                             [code: contour-count]
+                             [code: unknown]
                             
                             </span>
                         </li>
@@ -2078,22 +2348,6 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 </ul>
             </div>
         </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -2101,9 +2355,9 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <h3>
     
-    Check math signs have the same width.
+    Check font follows the Google Fonts vertical metric schema
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
 
 
 
@@ -2117,7 +2371,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                🔥
                 Yarndings12-Regular.ttf
                 
             </summary>
@@ -2126,17 +2380,14 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            🔥 FAIL
                             </span>
 
                             <span class='details_text'>
-                            <p>The most common width is 715 among a set of 3 math glyphs.
-The following math glyphs have a different width, though:</p>
-<p>Width = 780:
-greater</p>
+                            <p>The sum of hhea.ascender + abs(hhea.descender) + hhea.lineGap is 1040 when it should be at least 1248</p>
 
                             
-                             [code: width-outliers]
+                             [code: bad-hhea-range]
                             
                             </span>
                         </li>
@@ -2152,99 +2403,6 @@ greater</p>
 
     
 
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.gpos</h2>
-<span class='section__emoji'>
-    ⚠️
-</span>
-
-    
-        <h3>
-    
-    Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Yarndings12-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning information.</p>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
             
         
     </main>

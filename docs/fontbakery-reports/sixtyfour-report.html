@@ -273,16 +273,16 @@ you're checking.</p>
         <td>0</td>
         <td>0</td>
         <td>5</td>
-        <td>2</td>
-        <td>51</td>
-        <td>10</td>
-        <td>184</td>
+        <td>4</td>
+        <td>48</td>
+        <td>9</td>
+        <td>179</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>2%</td>
-        <td>1%</td>
+        <td>2%</td>
         <td>20%</td>
         <td>4%</td>
         <td>73%</td>
@@ -310,12 +310,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.12.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -352,6 +352,814 @@ immediately.
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to a name ID whose string is equal to the string of either name ID 2 or 17, and its postScriptNameID value is set to a name ID whose string is equal to the string of name ID 6.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_default_instance_nameids&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Sixtyfour[BLED,SCAN].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>'Close' instance has the same coordinates as the default instance; its subfamily name should be 'Regular'</p>
+
+                            
+                             [code: invalid-default-instance-subfamily-name]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+        <h3>
+    
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
+    
+    Validate location, size and resolution of article images.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Sixtyfour[BLED,SCAN].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/sixtyfour does not have an article.</p>
+
+                            
+                             [code: lacks-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Sixtyfour[BLED,SCAN].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+2501 BOX DRAWINGS HEAVY HORIZONTAL: not included in any glyphset definition</li>
+<li>U+2503 BOX DRAWINGS HEAVY VERTICAL: not included in any glyphset definition</li>
+<li>U+250F BOX DRAWINGS HEAVY DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+2513 BOX DRAWINGS HEAVY DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+2517 BOX DRAWINGS HEAVY UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+251B BOX DRAWINGS HEAVY UP AND LEFT: not included in any glyphset definition</li>
+<li>U+2523 BOX DRAWINGS HEAVY VERTICAL AND RIGHT: not included in any glyphset definition</li>
+<li>U+252B BOX DRAWINGS HEAVY VERTICAL AND LEFT: not included in any glyphset definition</li>
+<li>U+2533 BOX DRAWINGS HEAVY DOWN AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+253B BOX DRAWINGS HEAVY UP AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+254B BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
+<li>U+256D BOX DRAWINGS LIGHT ARC DOWN AND RIGHT: not included in any glyphset definition</li>
+<li>U+256E BOX DRAWINGS LIGHT ARC DOWN AND LEFT: not included in any glyphset definition</li>
+<li>U+256F BOX DRAWINGS LIGHT ARC UP AND LEFT: not included in any glyphset definition</li>
+<li>U+2570 BOX DRAWINGS LIGHT ARC UP AND RIGHT: not included in any glyphset definition</li>
+<li>U+2571 BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT: not included in any glyphset definition</li>
+<li>U+2572 BOX DRAWINGS LIGHT DIAGONAL UPPER LEFT TO LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+2573 BOX DRAWINGS LIGHT DIAGONAL CROSS: not included in any glyphset definition</li>
+<li>U+2580 UPPER HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2581 LOWER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2582 LOWER ONE QUARTER BLOCK: not included in any glyphset definition</li>
+<li>U+2583 LOWER THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2584 LOWER HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2585 LOWER FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2586 LOWER THREE QUARTERS BLOCK: not included in any glyphset definition</li>
+<li>U+2587 LOWER SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+2588 FULL BLOCK: not included in any glyphset definition</li>
+<li>U+2589 LEFT SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258A LEFT THREE QUARTERS BLOCK: not included in any glyphset definition</li>
+<li>U+258B LEFT FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258C LEFT HALF BLOCK: not included in any glyphset definition</li>
+<li>U+258D LEFT THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
+<li>U+258E LEFT ONE QUARTER BLOCK: not included in any glyphset definition</li>
+<li>U+258F LEFT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2590 RIGHT HALF BLOCK: not included in any glyphset definition</li>
+<li>U+2593 DARK SHADE: not included in any glyphset definition</li>
+<li>U+2594 UPPER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2595 RIGHT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
+<li>U+2596 QUADRANT LOWER LEFT: not included in any glyphset definition</li>
+<li>U+2597 QUADRANT LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+2598 QUADRANT UPPER LEFT: not included in any glyphset definition</li>
+<li>U+2599 QUADRANT UPPER LEFT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259A QUADRANT UPPER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259B QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
+<li>U+259C QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+259D QUADRANT UPPER RIGHT: not included in any glyphset definition</li>
+<li>U+259E QUADRANT UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
+<li>U+259F QUADRANT UPPER RIGHT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
+<li>U+E000 : not included in any glyphset definition</li>
+<li>U+E001 : not included in any glyphset definition</li>
+<li>U+E002 : not included in any glyphset definition</li>
+<li>U+E003 : not included in any glyphset definition</li>
+<li>U+E004 : not included in any glyphset definition</li>
+<li>U+E005 : not included in any glyphset definition</li>
+<li>U+E006 : not included in any glyphset definition</li>
+<li>U+E007 : not included in any glyphset definition</li>
+<li>U+E008 : not included in any glyphset definition</li>
+<li>U+E009 : not included in any glyphset definition</li>
+<li>U+E00A : not included in any glyphset definition</li>
+<li>U+E00B : not included in any glyphset definition</li>
+<li>U+E00C : not included in any glyphset definition</li>
+<li>U+E00D : not included in any glyphset definition</li>
+<li>U+E00E : not included in any glyphset definition</li>
+<li>U+E00F : not included in any glyphset definition</li>
+<li>U+E010 : not included in any glyphset definition</li>
+<li>U+E011 : not included in any glyphset definition</li>
+<li>U+E012 : not included in any glyphset definition</li>
+<li>U+E013 : not included in any glyphset definition</li>
+<li>U+E014 : not included in any glyphset definition</li>
+<li>U+E015 : not included in any glyphset definition</li>
+<li>U+E016 : not included in any glyphset definition</li>
+<li>U+E017 : not included in any glyphset definition</li>
+<li>U+E018 : not included in any glyphset definition</li>
+<li>U+E019 : not included in any glyphset definition</li>
+<li>U+E01A : not included in any glyphset definition</li>
+<li>U+E01B : not included in any glyphset definition</li>
+<li>U+E01C : not included in any glyphset definition</li>
+<li>U+E01D : not included in any glyphset definition</li>
+<li>U+E01E : not included in any glyphset definition</li>
+<li>U+E01F : not included in any glyphset definition</li>
+<li>U+E020 : not included in any glyphset definition</li>
+<li>U+E021 : not included in any glyphset definition</li>
+<li>U+E022 : not included in any glyphset definition</li>
+<li>U+E023 : not included in any glyphset definition</li>
+<li>U+E024 : not included in any glyphset definition</li>
+<li>U+E025 : not included in any glyphset definition</li>
+<li>U+E026 : not included in any glyphset definition</li>
+<li>U+E027 : not included in any glyphset definition</li>
+<li>U+E028 : not included in any glyphset definition</li>
+<li>U+E029 : not included in any glyphset definition</li>
+<li>U+E02A : not included in any glyphset definition</li>
+<li>U+E02B : not included in any glyphset definition</li>
+<li>U+E02C : not included in any glyphset definition</li>
+<li>U+E02D : not included in any glyphset definition</li>
+<li>U+E02E : not included in any glyphset definition</li>
+<li>U+E02F : not included in any glyphset definition</li>
+<li>U+E030 : not included in any glyphset definition</li>
+<li>U+E031 : not included in any glyphset definition</li>
+<li>U+E032 : not included in any glyphset definition</li>
+<li>U+E033 : not included in any glyphset definition</li>
+<li>U+E034 : not included in any glyphset definition</li>
+<li>U+E035 : not included in any glyphset definition</li>
+<li>U+E036 : not included in any glyphset definition</li>
+<li>U+E037 : not included in any glyphset definition</li>
+<li>U+E038 : not included in any glyphset definition</li>
+<li>U+E039 : not included in any glyphset definition</li>
+<li>U+E03A : not included in any glyphset definition</li>
+<li>U+E03B : not included in any glyphset definition</li>
+<li>U+E03C : not included in any glyphset definition</li>
+<li>U+E03D : not included in any glyphset definition</li>
+<li>U+E03E : not included in any glyphset definition</li>
+<li>U+E03F : not included in any glyphset definition</li>
+<li>U+E040 : not included in any glyphset definition</li>
+<li>U+E041 : not included in any glyphset definition</li>
+<li>U+E042 : not included in any glyphset definition</li>
+<li>U+E043 : not included in any glyphset definition</li>
+<li>U+E044 : not included in any glyphset definition</li>
+<li>U+E045 : not included in any glyphset definition</li>
+<li>U+E046 : not included in any glyphset definition</li>
+<li>U+E047 : not included in any glyphset definition</li>
+<li>U+E048 : not included in any glyphset definition</li>
+<li>U+E049 : not included in any glyphset definition</li>
+<li>U+E04A : not included in any glyphset definition</li>
+<li>U+E04B : not included in any glyphset definition</li>
+<li>U+E04C : not included in any glyphset definition</li>
+<li>U+E04D : not included in any glyphset definition</li>
+<li>U+E04E : not included in any glyphset definition</li>
+<li>U+E04F : not included in any glyphset definition</li>
+<li>U+E050 : not included in any glyphset definition</li>
+<li>U+E051 : not included in any glyphset definition</li>
+<li>U+E052 : not included in any glyphset definition</li>
+<li>U+E053 : not included in any glyphset definition</li>
+<li>U+E054 : not included in any glyphset definition</li>
+<li>U+E055 : not included in any glyphset definition</li>
+<li>U+E056 : not included in any glyphset definition</li>
+<li>U+E057 : not included in any glyphset definition</li>
+<li>U+E058 : not included in any glyphset definition</li>
+<li>U+E059 : not included in any glyphset definition</li>
+<li>U+E05A : not included in any glyphset definition</li>
+<li>U+E05B : not included in any glyphset definition</li>
+<li>U+E05C : not included in any glyphset definition</li>
+<li>U+E05D : not included in any glyphset definition</li>
+<li>U+E05E : not included in any glyphset definition</li>
+<li>U+E05F : not included in any glyphset definition</li>
+<li>U+E060 : not included in any glyphset definition</li>
+<li>U+E061 : not included in any glyphset definition</li>
+<li>U+E062 : not included in any glyphset definition</li>
+<li>U+E063 : not included in any glyphset definition</li>
+<li>U+E064 : not included in any glyphset definition</li>
+<li>U+E065 : not included in any glyphset definition</li>
+<li>U+E066 : not included in any glyphset definition</li>
+<li>U+E067 : not included in any glyphset definition</li>
+<li>U+E068 : not included in any glyphset definition</li>
+<li>U+E069 : not included in any glyphset definition</li>
+<li>U+E06A : not included in any glyphset definition</li>
+<li>U+E06B : not included in any glyphset definition</li>
+<li>U+E06C : not included in any glyphset definition</li>
+<li>U+E06D : not included in any glyphset definition</li>
+<li>U+E06E : not included in any glyphset definition</li>
+<li>U+E06F : not included in any glyphset definition</li>
+<li>U+E070 : not included in any glyphset definition</li>
+<li>U+E071 : not included in any glyphset definition</li>
+<li>U+E072 : not included in any glyphset definition</li>
+<li>U+E073 : not included in any glyphset definition</li>
+<li>U+E074 : not included in any glyphset definition</li>
+<li>U+E075 : not included in any glyphset definition</li>
+<li>U+E076 : not included in any glyphset definition</li>
+<li>U+E077 : not included in any glyphset definition</li>
+<li>U+E078 : not included in any glyphset definition</li>
+<li>U+E079 : not included in any glyphset definition</li>
+<li>U+E07A : not included in any glyphset definition</li>
+<li>U+E07B : not included in any glyphset definition</li>
+<li>U+E07C : not included in any glyphset definition</li>
+<li>U+E07D : not included in any glyphset definition</li>
+<li>U+E07E : not included in any glyphset definition</li>
+<li>U+E07F : not included in any glyphset definition</li>
+<li>U+E080 : not included in any glyphset definition</li>
+<li>U+E081 : not included in any glyphset definition</li>
+<li>U+E082 : not included in any glyphset definition</li>
+<li>U+E083 : not included in any glyphset definition</li>
+<li>U+E084 : not included in any glyphset definition</li>
+<li>U+E085 : not included in any glyphset definition</li>
+<li>U+E086 : not included in any glyphset definition</li>
+<li>U+E087 : not included in any glyphset definition</li>
+<li>U+E088 : not included in any glyphset definition</li>
+<li>U+E089 : not included in any glyphset definition</li>
+<li>U+E08A : not included in any glyphset definition</li>
+<li>U+E08B : not included in any glyphset definition</li>
+<li>U+E08C : not included in any glyphset definition</li>
+<li>U+E08D : not included in any glyphset definition</li>
+<li>U+E08E : not included in any glyphset definition</li>
+<li>U+E08F : not included in any glyphset definition</li>
+<li>U+E090 : not included in any glyphset definition</li>
+<li>U+E091 : not included in any glyphset definition</li>
+<li>U+E092 : not included in any glyphset definition</li>
+<li>U+E093 : not included in any glyphset definition</li>
+<li>U+E094 : not included in any glyphset definition</li>
+<li>U+E095 : not included in any glyphset definition</li>
+<li>U+E096 : not included in any glyphset definition</li>
+<li>U+E097 : not included in any glyphset definition</li>
+<li>U+E098 : not included in any glyphset definition</li>
+<li>U+E099 : not included in any glyphset definition</li>
+<li>U+E09A : not included in any glyphset definition</li>
+<li>U+E09B : not included in any glyphset definition</li>
+<li>U+E09C : not included in any glyphset definition</li>
+<li>U+E09D : not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>math</code>, <code>menu</code>, <code>symbols</code></p>
+
+                            
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Name table checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩
+</span>
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check copyright namerecords match license file.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Sixtyfour[BLED,SCAN].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Please consider updating the url from '<a href="https://scripts.sil.org/OFL">https://scripts.sil.org/OFL</a>' to '<a href="https://openfontlicense.org">https://openfontlicense.org</a>'.</p>
+
+                            
+                             [code: old-url]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check variable font instances
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fvar_instances&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Sixtyfour[BLED,SCAN].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>fvar instances are incorrect:</p>
+<ul>
+<li>Add missing instances</li>
+<li>Delete additional instances</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">current</th>
+<th align="left">expected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Slight</td>
+<td align="left">SCAN=-45.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Overlapping</td>
+<td align="left">SCAN=37.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Maximum</td>
+<td align="left">SCAN=100.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Overexposed</td>
+<td align="left">SCAN=67.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Touching</td>
+<td align="left">SCAN=21.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Evenly</td>
+<td align="left">SCAN=-27.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Delicate</td>
+<td align="left">SCAN=-53.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Close</td>
+<td align="left">SCAN=0.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Regular</td>
+<td align="left">N/A</td>
+<td align="left">SCAN=0.0, BLED=0.0</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: bad-fvar-instances]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -767,643 +1575,6 @@ immediately.
     
 
     
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Sixtyfour[BLED,SCAN].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0000 : try adding one of: cyrillic, wancho, osmanya, indic-siyaq-numbers, meetei-mayek, sundanese, tagalog, old-south-arabian, hanunoo, ugaritic, makasar, thaana, armenian, mandaic, lycian, ottoman-siyaq-numbers, carian, coptic, greek, gurmukhi, lao, signwriting, elbasan, braille, old-sogdian, hatran, khudawadi, syriac, tai-tham, kaithi, chinese-traditional, tifinagh, buginese, imperial-aramaic, linear-b, hanifi-rohingya, kawi, mayan-numerals, vai, old-italic, warang-citi, marchen, chinese-simplified, duployan, cyrillic-ext, old-hungarian, znamenny, nyiakeng-puachue-hmong, nko, tirhuta, old-permic, khojki, egyptian-hieroglyphs, tamil, anatolian-hieroglyphs, palmyrene, dives-akuru, sinhala, deseret, ethiopic, greek-ext, mahajani, yi, bengali, glagolitic, adlam, meroitic-cursive, ol-chiki, bhaiksuki, malayalam, old-turkic, osage, kayah-li, thai, vietnamese, bamum, mende-kikakui, multani, masaram-gondi, pau-cin-hau, phags-pa, tangut, gujarati, kharoshthi, old-persian, tamil-supplement, sharada, avestan, sogdian, newa, phoenician, chakma, tagbanwa, toto, sora-sompeng, kannada, mro, dogra, meroitic-hieroglyphs, lydian, nandinagari, cuneiform, japanese, nag-mundari, bassa-vah, buhid, zanabazar-square, shavian, cypriot, tibetan, arabic, takri, korean, caucasian-albanian, balinese, grantha, limbu, cypro-minoan, hebrew, javanese, brahmi, mongolian, canadian-aboriginal, tangsa, inscriptional-parthian, yezidi, ahom, telugu, tai-viet, lisu, pahawh-hmong, psalter-pahlavi, saurashtra, siddham, elymaic, rejang, myanmar, khitan-small-script, modi, runic, medefaidrin, tai-le, gunjala-gondi, miao, vithkuqi, lepcha, old-uyghur, chorasmian, devanagari, cham, batak, syloti-nagri, samaritan, cherokee, manichaean, old-north-arabian, chinese-hongkong, oriya, music, soyombo, ogham, linear-a, georgian, inscriptional-pahlavi, gothic, nabataean, new-tai-lue, meroitic, khmer, nushu</li>
-<li>U+000D : try adding one of: cyrillic, wancho, osmanya, indic-siyaq-numbers, meetei-mayek, sundanese, tagalog, old-south-arabian, hanunoo, ugaritic, makasar, thaana, armenian, mandaic, lycian, ottoman-siyaq-numbers, carian, coptic, greek, gurmukhi, lao, signwriting, elbasan, braille, old-sogdian, hatran, khudawadi, syriac, tai-tham, kaithi, chinese-traditional, tifinagh, buginese, imperial-aramaic, linear-b, hanifi-rohingya, kawi, mayan-numerals, vai, old-italic, warang-citi, marchen, chinese-simplified, duployan, cyrillic-ext, old-hungarian, znamenny, nyiakeng-puachue-hmong, nko, tirhuta, old-permic, khojki, egyptian-hieroglyphs, tamil, anatolian-hieroglyphs, palmyrene, dives-akuru, sinhala, deseret, ethiopic, greek-ext, mahajani, yi, bengali, glagolitic, adlam, meroitic-cursive, ol-chiki, bhaiksuki, malayalam, old-turkic, osage, kayah-li, thai, vietnamese, bamum, mende-kikakui, multani, masaram-gondi, pau-cin-hau, phags-pa, tangut, gujarati, kharoshthi, old-persian, tamil-supplement, sharada, avestan, sogdian, newa, phoenician, chakma, tagbanwa, toto, sora-sompeng, kannada, mro, dogra, meroitic-hieroglyphs, lydian, nandinagari, cuneiform, japanese, nag-mundari, bassa-vah, buhid, zanabazar-square, shavian, cypriot, tibetan, arabic, takri, korean, caucasian-albanian, balinese, grantha, limbu, cypro-minoan, hebrew, javanese, brahmi, mongolian, canadian-aboriginal, tangsa, inscriptional-parthian, yezidi, ahom, telugu, tai-viet, lisu, pahawh-hmong, psalter-pahlavi, saurashtra, siddham, elymaic, rejang, myanmar, khitan-small-script, modi, runic, medefaidrin, tai-le, gunjala-gondi, miao, vithkuqi, lepcha, old-uyghur, chorasmian, devanagari, cham, batak, syloti-nagri, samaritan, cherokee, manichaean, old-north-arabian, chinese-hongkong, oriya, music, soyombo, ogham, linear-a, georgian, inscriptional-pahlavi, gothic, nabataean, new-tai-lue, meroitic, khmer, nushu</li>
-<li>U+0020 SPACE: try adding one of: cyrillic, wancho, osmanya, indic-siyaq-numbers, meetei-mayek, sundanese, tagalog, old-south-arabian, hanunoo, ugaritic, makasar, thaana, armenian, mandaic, lycian, ottoman-siyaq-numbers, carian, coptic, greek, gurmukhi, lao, signwriting, elbasan, braille, old-sogdian, hatran, khudawadi, syriac, tai-tham, kaithi, chinese-traditional, tifinagh, buginese, imperial-aramaic, linear-b, hanifi-rohingya, kawi, mayan-numerals, vai, old-italic, warang-citi, marchen, chinese-simplified, duployan, cyrillic-ext, old-hungarian, znamenny, nyiakeng-puachue-hmong, nko, tirhuta, old-permic, khojki, egyptian-hieroglyphs, tamil, anatolian-hieroglyphs, palmyrene, dives-akuru, sinhala, deseret, ethiopic, greek-ext, mahajani, yi, bengali, glagolitic, adlam, meroitic-cursive, ol-chiki, bhaiksuki, malayalam, old-turkic, osage, kayah-li, thai, vietnamese, bamum, mende-kikakui, multani, masaram-gondi, pau-cin-hau, phags-pa, tangut, gujarati, kharoshthi, old-persian, tamil-supplement, sharada, avestan, sogdian, newa, phoenician, chakma, tagbanwa, toto, sora-sompeng, kannada, mro, dogra, meroitic-hieroglyphs, lydian, nandinagari, cuneiform, japanese, nag-mundari, bassa-vah, buhid, zanabazar-square, shavian, cypriot, tibetan, arabic, takri, korean, caucasian-albanian, balinese, grantha, limbu, cypro-minoan, hebrew, javanese, brahmi, mongolian, canadian-aboriginal, tangsa, inscriptional-parthian, yezidi, ahom, telugu, tai-viet, lisu, pahawh-hmong, psalter-pahlavi, saurashtra, siddham, elymaic, rejang, myanmar, khitan-small-script, modi, runic, medefaidrin, tai-le, gunjala-gondi, miao, vithkuqi, lepcha, old-uyghur, chorasmian, devanagari, cham, batak, syloti-nagri, samaritan, cherokee, manichaean, old-north-arabian, chinese-hongkong, oriya, music, soyombo, ogham, linear-a, georgian, inscriptional-pahlavi, gothic, nabataean, new-tai-lue, meroitic, khmer, nushu</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: cyrillic, wancho, osmanya, indic-siyaq-numbers, meetei-mayek, sundanese, tagalog, old-south-arabian, hanunoo, ugaritic, makasar, thaana, armenian, mandaic, lycian, ottoman-siyaq-numbers, carian, coptic, greek, gurmukhi, lao, signwriting, elbasan, braille, old-sogdian, hatran, khudawadi, syriac, tai-tham, kaithi, chinese-traditional, tifinagh, buginese, imperial-aramaic, linear-b, hanifi-rohingya, kawi, mayan-numerals, vai, old-italic, warang-citi, marchen, chinese-simplified, duployan, cyrillic-ext, old-hungarian, znamenny, nyiakeng-puachue-hmong, nko, tirhuta, old-permic, khojki, egyptian-hieroglyphs, tamil, anatolian-hieroglyphs, palmyrene, dives-akuru, sinhala, deseret, ethiopic, greek-ext, mahajani, yi, bengali, glagolitic, adlam, meroitic-cursive, ol-chiki, bhaiksuki, malayalam, old-turkic, osage, kayah-li, thai, vietnamese, bamum, mende-kikakui, multani, masaram-gondi, pau-cin-hau, phags-pa, tangut, gujarati, kharoshthi, old-persian, tamil-supplement, sharada, avestan, sogdian, newa, phoenician, chakma, tagbanwa, toto, sora-sompeng, kannada, mro, dogra, meroitic-hieroglyphs, lydian, nandinagari, cuneiform, japanese, nag-mundari, bassa-vah, buhid, zanabazar-square, shavian, cypriot, tibetan, arabic, takri, korean, caucasian-albanian, balinese, grantha, limbu, cypro-minoan, hebrew, javanese, brahmi, mongolian, canadian-aboriginal, tangsa, inscriptional-parthian, yezidi, ahom, telugu, tai-viet, lisu, pahawh-hmong, psalter-pahlavi, saurashtra, siddham, elymaic, rejang, myanmar, khitan-small-script, modi, runic, medefaidrin, tai-le, gunjala-gondi, miao, vithkuqi, lepcha, old-uyghur, chorasmian, devanagari, cham, batak, syloti-nagri, samaritan, cherokee, manichaean, old-north-arabian, chinese-hongkong, oriya, music, soyombo, ogham, linear-a, georgian, inscriptional-pahlavi, gothic, nabataean, new-tai-lue, meroitic, khmer, nushu</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
-<li>U+2501 BOX DRAWINGS HEAVY HORIZONTAL: not included in any glyphset definition</li>
-<li>U+2503 BOX DRAWINGS HEAVY VERTICAL: not included in any glyphset definition</li>
-<li>U+250F BOX DRAWINGS HEAVY DOWN AND RIGHT: not included in any glyphset definition</li>
-<li>U+2513 BOX DRAWINGS HEAVY DOWN AND LEFT: not included in any glyphset definition</li>
-<li>U+2517 BOX DRAWINGS HEAVY UP AND RIGHT: not included in any glyphset definition</li>
-<li>U+251B BOX DRAWINGS HEAVY UP AND LEFT: not included in any glyphset definition</li>
-<li>U+2523 BOX DRAWINGS HEAVY VERTICAL AND RIGHT: not included in any glyphset definition</li>
-<li>U+252B BOX DRAWINGS HEAVY VERTICAL AND LEFT: not included in any glyphset definition</li>
-<li>U+2533 BOX DRAWINGS HEAVY DOWN AND HORIZONTAL: not included in any glyphset definition</li>
-<li>U+253B BOX DRAWINGS HEAVY UP AND HORIZONTAL: not included in any glyphset definition</li>
-<li>U+254B BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
-<li>U+256D BOX DRAWINGS LIGHT ARC DOWN AND RIGHT: not included in any glyphset definition</li>
-<li>U+256E BOX DRAWINGS LIGHT ARC DOWN AND LEFT: not included in any glyphset definition</li>
-<li>U+256F BOX DRAWINGS LIGHT ARC UP AND LEFT: not included in any glyphset definition</li>
-<li>U+2570 BOX DRAWINGS LIGHT ARC UP AND RIGHT: not included in any glyphset definition</li>
-<li>U+2571 BOX DRAWINGS LIGHT DIAGONAL UPPER RIGHT TO LOWER LEFT: not included in any glyphset definition</li>
-<li>U+2572 BOX DRAWINGS LIGHT DIAGONAL UPPER LEFT TO LOWER RIGHT: not included in any glyphset definition</li>
-<li>U+2573 BOX DRAWINGS LIGHT DIAGONAL CROSS: not included in any glyphset definition</li>
-<li>U+2580 UPPER HALF BLOCK: not included in any glyphset definition</li>
-<li>U+2581 LOWER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
-<li>U+2582 LOWER ONE QUARTER BLOCK: not included in any glyphset definition</li>
-<li>U+2583 LOWER THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
-<li>U+2584 LOWER HALF BLOCK: not included in any glyphset definition</li>
-<li>U+2585 LOWER FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
-<li>U+2586 LOWER THREE QUARTERS BLOCK: not included in any glyphset definition</li>
-<li>U+2587 LOWER SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
-<li>U+2588 FULL BLOCK: not included in any glyphset definition</li>
-<li>U+2589 LEFT SEVEN EIGHTHS BLOCK: not included in any glyphset definition</li>
-<li>U+258A LEFT THREE QUARTERS BLOCK: not included in any glyphset definition</li>
-<li>U+258B LEFT FIVE EIGHTHS BLOCK: not included in any glyphset definition</li>
-<li>U+258C LEFT HALF BLOCK: not included in any glyphset definition</li>
-<li>U+258D LEFT THREE EIGHTHS BLOCK: not included in any glyphset definition</li>
-<li>U+258E LEFT ONE QUARTER BLOCK: not included in any glyphset definition</li>
-<li>U+258F LEFT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
-<li>U+2590 RIGHT HALF BLOCK: not included in any glyphset definition</li>
-<li>U+2593 DARK SHADE: not included in any glyphset definition</li>
-<li>U+2594 UPPER ONE EIGHTH BLOCK: not included in any glyphset definition</li>
-<li>U+2595 RIGHT ONE EIGHTH BLOCK: not included in any glyphset definition</li>
-<li>U+2596 QUADRANT LOWER LEFT: not included in any glyphset definition</li>
-<li>U+2597 QUADRANT LOWER RIGHT: not included in any glyphset definition</li>
-<li>U+2598 QUADRANT UPPER LEFT: not included in any glyphset definition</li>
-<li>U+2599 QUADRANT UPPER LEFT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
-<li>U+259A QUADRANT UPPER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
-<li>U+259B QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
-<li>U+259C QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER RIGHT: not included in any glyphset definition</li>
-<li>U+259D QUADRANT UPPER RIGHT: not included in any glyphset definition</li>
-<li>U+259E QUADRANT UPPER RIGHT AND LOWER LEFT: not included in any glyphset definition</li>
-<li>U+259F QUADRANT UPPER RIGHT AND LOWER LEFT AND LOWER RIGHT: not included in any glyphset definition</li>
-<li>U+E000 : not included in any glyphset definition</li>
-<li>U+E001 : not included in any glyphset definition</li>
-<li>U+E002 : not included in any glyphset definition</li>
-<li>U+E003 : not included in any glyphset definition</li>
-<li>U+E004 : not included in any glyphset definition</li>
-<li>U+E005 : not included in any glyphset definition</li>
-<li>U+E006 : not included in any glyphset definition</li>
-<li>U+E007 : not included in any glyphset definition</li>
-<li>U+E008 : not included in any glyphset definition</li>
-<li>U+E009 : not included in any glyphset definition</li>
-<li>U+E00A : not included in any glyphset definition</li>
-<li>U+E00B : not included in any glyphset definition</li>
-<li>U+E00C : not included in any glyphset definition</li>
-<li>U+E00D : not included in any glyphset definition</li>
-<li>U+E00E : not included in any glyphset definition</li>
-<li>U+E00F : not included in any glyphset definition</li>
-<li>U+E010 : not included in any glyphset definition</li>
-<li>U+E011 : not included in any glyphset definition</li>
-<li>U+E012 : not included in any glyphset definition</li>
-<li>U+E013 : not included in any glyphset definition</li>
-<li>U+E014 : not included in any glyphset definition</li>
-<li>U+E015 : not included in any glyphset definition</li>
-<li>U+E016 : not included in any glyphset definition</li>
-<li>U+E017 : not included in any glyphset definition</li>
-<li>U+E018 : not included in any glyphset definition</li>
-<li>U+E019 : not included in any glyphset definition</li>
-<li>U+E01A : not included in any glyphset definition</li>
-<li>U+E01B : not included in any glyphset definition</li>
-<li>U+E01C : not included in any glyphset definition</li>
-<li>U+E01D : not included in any glyphset definition</li>
-<li>U+E01E : not included in any glyphset definition</li>
-<li>U+E01F : not included in any glyphset definition</li>
-<li>U+E020 : not included in any glyphset definition</li>
-<li>U+E021 : not included in any glyphset definition</li>
-<li>U+E022 : not included in any glyphset definition</li>
-<li>U+E023 : not included in any glyphset definition</li>
-<li>U+E024 : not included in any glyphset definition</li>
-<li>U+E025 : not included in any glyphset definition</li>
-<li>U+E026 : not included in any glyphset definition</li>
-<li>U+E027 : not included in any glyphset definition</li>
-<li>U+E028 : not included in any glyphset definition</li>
-<li>U+E029 : not included in any glyphset definition</li>
-<li>U+E02A : not included in any glyphset definition</li>
-<li>U+E02B : not included in any glyphset definition</li>
-<li>U+E02C : not included in any glyphset definition</li>
-<li>U+E02D : not included in any glyphset definition</li>
-<li>U+E02E : not included in any glyphset definition</li>
-<li>U+E02F : not included in any glyphset definition</li>
-<li>U+E030 : not included in any glyphset definition</li>
-<li>U+E031 : not included in any glyphset definition</li>
-<li>U+E032 : not included in any glyphset definition</li>
-<li>U+E033 : not included in any glyphset definition</li>
-<li>U+E034 : not included in any glyphset definition</li>
-<li>U+E035 : not included in any glyphset definition</li>
-<li>U+E036 : not included in any glyphset definition</li>
-<li>U+E037 : not included in any glyphset definition</li>
-<li>U+E038 : not included in any glyphset definition</li>
-<li>U+E039 : not included in any glyphset definition</li>
-<li>U+E03A : not included in any glyphset definition</li>
-<li>U+E03B : not included in any glyphset definition</li>
-<li>U+E03C : not included in any glyphset definition</li>
-<li>U+E03D : not included in any glyphset definition</li>
-<li>U+E03E : not included in any glyphset definition</li>
-<li>U+E03F : not included in any glyphset definition</li>
-<li>U+E040 : not included in any glyphset definition</li>
-<li>U+E041 : not included in any glyphset definition</li>
-<li>U+E042 : not included in any glyphset definition</li>
-<li>U+E043 : not included in any glyphset definition</li>
-<li>U+E044 : not included in any glyphset definition</li>
-<li>U+E045 : not included in any glyphset definition</li>
-<li>U+E046 : not included in any glyphset definition</li>
-<li>U+E047 : not included in any glyphset definition</li>
-<li>U+E048 : not included in any glyphset definition</li>
-<li>U+E049 : not included in any glyphset definition</li>
-<li>U+E04A : not included in any glyphset definition</li>
-<li>U+E04B : not included in any glyphset definition</li>
-<li>U+E04C : not included in any glyphset definition</li>
-<li>U+E04D : not included in any glyphset definition</li>
-<li>U+E04E : not included in any glyphset definition</li>
-<li>U+E04F : not included in any glyphset definition</li>
-<li>U+E050 : not included in any glyphset definition</li>
-<li>U+E051 : not included in any glyphset definition</li>
-<li>U+E052 : not included in any glyphset definition</li>
-<li>U+E053 : not included in any glyphset definition</li>
-<li>U+E054 : not included in any glyphset definition</li>
-<li>U+E055 : not included in any glyphset definition</li>
-<li>U+E056 : not included in any glyphset definition</li>
-<li>U+E057 : not included in any glyphset definition</li>
-<li>U+E058 : not included in any glyphset definition</li>
-<li>U+E059 : not included in any glyphset definition</li>
-<li>U+E05A : not included in any glyphset definition</li>
-<li>U+E05B : not included in any glyphset definition</li>
-<li>U+E05C : not included in any glyphset definition</li>
-<li>U+E05D : not included in any glyphset definition</li>
-<li>U+E05E : not included in any glyphset definition</li>
-<li>U+E05F : not included in any glyphset definition</li>
-<li>U+E060 : not included in any glyphset definition</li>
-<li>U+E061 : not included in any glyphset definition</li>
-<li>U+E062 : not included in any glyphset definition</li>
-<li>U+E063 : not included in any glyphset definition</li>
-<li>U+E064 : not included in any glyphset definition</li>
-<li>U+E065 : not included in any glyphset definition</li>
-<li>U+E066 : not included in any glyphset definition</li>
-<li>U+E067 : not included in any glyphset definition</li>
-<li>U+E068 : not included in any glyphset definition</li>
-<li>U+E069 : not included in any glyphset definition</li>
-<li>U+E06A : not included in any glyphset definition</li>
-<li>U+E06B : not included in any glyphset definition</li>
-<li>U+E06C : not included in any glyphset definition</li>
-<li>U+E06D : not included in any glyphset definition</li>
-<li>U+E06E : not included in any glyphset definition</li>
-<li>U+E06F : not included in any glyphset definition</li>
-<li>U+E070 : not included in any glyphset definition</li>
-<li>U+E071 : not included in any glyphset definition</li>
-<li>U+E072 : not included in any glyphset definition</li>
-<li>U+E073 : not included in any glyphset definition</li>
-<li>U+E074 : not included in any glyphset definition</li>
-<li>U+E075 : not included in any glyphset definition</li>
-<li>U+E076 : not included in any glyphset definition</li>
-<li>U+E077 : not included in any glyphset definition</li>
-<li>U+E078 : not included in any glyphset definition</li>
-<li>U+E079 : not included in any glyphset definition</li>
-<li>U+E07A : not included in any glyphset definition</li>
-<li>U+E07B : not included in any glyphset definition</li>
-<li>U+E07C : not included in any glyphset definition</li>
-<li>U+E07D : not included in any glyphset definition</li>
-<li>U+E07E : not included in any glyphset definition</li>
-<li>U+E07F : not included in any glyphset definition</li>
-<li>U+E080 : not included in any glyphset definition</li>
-<li>U+E081 : not included in any glyphset definition</li>
-<li>U+E082 : not included in any glyphset definition</li>
-<li>U+E083 : not included in any glyphset definition</li>
-<li>U+E084 : not included in any glyphset definition</li>
-<li>U+E085 : not included in any glyphset definition</li>
-<li>U+E086 : not included in any glyphset definition</li>
-<li>U+E087 : not included in any glyphset definition</li>
-<li>U+E088 : not included in any glyphset definition</li>
-<li>U+E089 : not included in any glyphset definition</li>
-<li>U+E08A : not included in any glyphset definition</li>
-<li>U+E08B : not included in any glyphset definition</li>
-<li>U+E08C : not included in any glyphset definition</li>
-<li>U+E08D : not included in any glyphset definition</li>
-<li>U+E08E : not included in any glyphset definition</li>
-<li>U+E08F : not included in any glyphset definition</li>
-<li>U+E090 : not included in any glyphset definition</li>
-<li>U+E091 : not included in any glyphset definition</li>
-<li>U+E092 : not included in any glyphset definition</li>
-<li>U+E093 : not included in any glyphset definition</li>
-<li>U+E094 : not included in any glyphset definition</li>
-<li>U+E095 : not included in any glyphset definition</li>
-<li>U+E096 : not included in any glyphset definition</li>
-<li>U+E097 : not included in any glyphset definition</li>
-<li>U+E098 : not included in any glyphset definition</li>
-<li>U+E099 : not included in any glyphset definition</li>
-<li>U+E09A : not included in any glyphset definition</li>
-<li>U+E09B : not included in any glyphset definition</li>
-<li>U+E09C : not included in any glyphset definition</li>
-<li>U+E09D : not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>math</code>, <code>menu</code>, <code>symbols</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check copyright namerecords match license file.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Sixtyfour[BLED,SCAN].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Please consider updating the url from '<a href="https://scripts.sil.org/OFL">https://scripts.sil.org/OFL</a>' to '<a href="https://openfontlicense.org">https://openfontlicense.org</a>'.</p>
-
-                            
-                             [code: old-url]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check a font&#39;s STAT table contains compulsory Axis Values.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Sixtyfour[BLED,SCAN].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Compulsory STAT Axis Values are incorrect:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Name</th>
-<th align="left">Axis</th>
-<th align="left">Current Value</th>
-<th align="left">Current Flags</th>
-<th align="left">Current LinkedValue</th>
-<th align="left">Expected Value</th>
-<th align="left">Expected Flags</th>
-<th align="left">Expected LinkedValue</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Regular</td>
-<td align="left">wght</td>
-<td align="left">N/A</td>
-<td align="left">N/A</td>
-<td align="left">N/A</td>
-<td align="left">400.0</td>
-<td align="left">0</td>
-<td align="left">700.0</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: bad-axis-values]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    Check variable font instances
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fvar_instances&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Sixtyfour[BLED,SCAN].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>fvar instances are incorrect:</p>
-<ul>
-<li>Add missing instances</li>
-<li>Delete additional instances</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">Name</th>
-<th align="left">current</th>
-<th align="left">expected</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Delicate</td>
-<td align="left">SCAN=-53.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Close</td>
-<td align="left">SCAN=0.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Overlapping</td>
-<td align="left">SCAN=37.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Maximum</td>
-<td align="left">SCAN=100.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Slight</td>
-<td align="left">SCAN=-45.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Overexposed</td>
-<td align="left">SCAN=67.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Evenly</td>
-<td align="left">SCAN=-27.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Touching</td>
-<td align="left">SCAN=21.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Regular</td>
-<td align="left">N/A</td>
-<td align="left">SCAN=0.0, BLED=0.0</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: bad-fvar-instances]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 
@@ -1646,139 +1817,6 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.fvar</h2>
-<span class='section__emoji'>
-    🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to a name ID whose string is equal to the string of either name ID 2 or 17, and its postScriptNameID value is set to a name ID whose string is equal to the string of name ID 6.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_default_instance_nameids&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Sixtyfour[BLED,SCAN].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>'Close' instance has the same coordinates as the default instance; its subfamily name should be 'Regular'</p>
-
-                            
-                             [code: invalid-default-instance-subfamily-name]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
             
         
     </main>

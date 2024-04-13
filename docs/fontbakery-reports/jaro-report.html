@@ -271,19 +271,19 @@ you're checking.</p>
     </tr>
     <tr>
         <td>0</td>
-        <td>1</td>
-        <td>5</td>
+        <td>0</td>
+        <td>6</td>
+        <td>11</td>
+        <td>41</td>
         <td>9</td>
-        <td>45</td>
-        <td>9</td>
-        <td>183</td>
+        <td>178</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>2%</td>
         <td>4%</td>
-        <td>18%</td>
+        <td>17%</td>
         <td>4%</td>
         <td>73%</td>
     </tr>
@@ -310,12 +310,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.12.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ☠🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -343,71 +343,6 @@ immediately.
     
 
     
-        <h3>
-    
-    DESCRIPTION.en_us.html must have more than 200 bytes.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
-
-                            
-                             [code: too-short]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 
@@ -416,9 +351,9 @@ immediately.
     
         <h3>
     
-    Check for codepoints not covered by METADATA subsets.
+    The variable font &#39;opsz&#39; (Optical Size) axis coordinate should be between 10 and 16 on the &#39;Regular&#39; instance.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_opsz_coord&gt;</div>
 
 
 
@@ -445,164 +380,95 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: ol-chiki, tamil, adlam, yi, nabataean, kayah-li, grantha, mandaic, sogdian, kawi, ugaritic, old-persian, old-north-arabian, thaana, devanagari, multani, egyptian-hieroglyphs, nag-mundari, mongolian, cypro-minoan, hanunoo, ogham, sundanese, arabic, tirhuta, gunjala-gondi, avestan, palmyrene, cyrillic-ext, chinese-simplified, elymaic, gurmukhi, meroitic-cursive, cuneiform, makasar, pau-cin-hau, runic, balinese, greek, bhaiksuki, tibetan, kaithi, armenian, sora-sompeng, linear-b, tagbanwa, old-turkic, braille, buhid, soyombo, chakma, math, meroitic-hieroglyphs, yezidi, miao, nko, rejang, cyrillic, old-sogdian, gujarati, samaritan, ahom, lepcha, lao, shavian, osmanya, masaram-gondi, ethiopic, cypriot, tangsa, marchen, inscriptional-parthian, syriac, tifinagh, hatran, khmer, lydian, old-hungarian, vithkuqi, znamenny, syloti-nagri, old-permic, hanifi-rohingya, thai, saurashtra, tai-viet, lycian, carian, bassa-vah, new-tai-lue, dogra, vai, glagolitic, osage, symbols, phoenician, meroitic, gothic, tai-le, toto, korean, cham, brahmi, malayalam, myanmar, siddham, phags-pa, japanese, buginese, deseret, khojki, meetei-mayek, duployan, newa, telugu, old-uyghur, tagalog, kannada, oriya, psalter-pahlavi, limbu, hebrew, old-south-arabian, takri, dives-akuru, georgian, canadian-aboriginal, caucasian-albanian, coptic, mahajani, warang-citi, imperial-aramaic, tangut, indic-siyaq-numbers, ottoman-siyaq-numbers, old-italic, chorasmian, wancho, bengali, tamil-supplement, nyiakeng-puachue-hmong, mayan-numerals, lisu, sharada, anatolian-hieroglyphs, batak, nushu, music, greek-ext, sinhala, kharoshthi, zanabazar-square, inscriptional-pahlavi, mende-kikakui, mro, tai-tham, chinese-hongkong, pahawh-hmong, bamum, khitan-small-script, modi, elbasan, medefaidrin, khudawadi, cherokee, nandinagari, javanese, linear-a, chinese-traditional, manichaean, signwriting</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: ol-chiki, tamil, adlam, yi, nabataean, kayah-li, grantha, mandaic, sogdian, kawi, ugaritic, old-persian, old-north-arabian, thaana, devanagari, multani, egyptian-hieroglyphs, nag-mundari, mongolian, cypro-minoan, hanunoo, ogham, sundanese, arabic, tirhuta, gunjala-gondi, avestan, palmyrene, cyrillic-ext, chinese-simplified, elymaic, gurmukhi, meroitic-cursive, cuneiform, makasar, pau-cin-hau, runic, balinese, greek, bhaiksuki, tibetan, kaithi, armenian, sora-sompeng, linear-b, tagbanwa, old-turkic, braille, buhid, soyombo, chakma, math, meroitic-hieroglyphs, yezidi, miao, nko, rejang, cyrillic, old-sogdian, gujarati, samaritan, ahom, lepcha, lao, shavian, osmanya, masaram-gondi, ethiopic, cypriot, tangsa, marchen, inscriptional-parthian, syriac, tifinagh, hatran, khmer, lydian, old-hungarian, vithkuqi, znamenny, syloti-nagri, old-permic, hanifi-rohingya, thai, saurashtra, tai-viet, lycian, carian, bassa-vah, new-tai-lue, dogra, vai, glagolitic, osage, symbols, phoenician, meroitic, gothic, tai-le, toto, korean, cham, brahmi, malayalam, myanmar, siddham, phags-pa, japanese, buginese, deseret, khojki, meetei-mayek, duployan, newa, telugu, old-uyghur, tagalog, kannada, oriya, psalter-pahlavi, limbu, hebrew, old-south-arabian, takri, dives-akuru, georgian, canadian-aboriginal, caucasian-albanian, coptic, mahajani, warang-citi, imperial-aramaic, tangut, indic-siyaq-numbers, ottoman-siyaq-numbers, old-italic, chorasmian, wancho, bengali, tamil-supplement, nyiakeng-puachue-hmong, mayan-numerals, lisu, sharada, anatolian-hieroglyphs, batak, nushu, music, greek-ext, sinhala, kharoshthi, zanabazar-square, inscriptional-pahlavi, mende-kikakui, mro, tai-tham, chinese-hongkong, pahawh-hmong, bamum, khitan-small-script, modi, elbasan, medefaidrin, khudawadi, cherokee, nandinagari, javanese, linear-a, chinese-traditional, manichaean, signwriting</li>
-<li>U+02B0 MODIFIER LETTER SMALL H: not included in any glyphset definition</li>
-<li>U+02B7 MODIFIER LETTER SMALL W: not included in any glyphset definition</li>
-<li>U+02B8 MODIFIER LETTER SMALL Y: not included in any glyphset definition</li>
-<li>U+02B9 MODIFIER LETTER PRIME: not included in any glyphset definition</li>
-<li>U+02BE MODIFIER LETTER RIGHT HALF RING: not included in any glyphset definition</li>
-<li>U+02BF MODIFIER LETTER LEFT HALF RING: not included in any glyphset definition</li>
-<li>U+02C0 MODIFIER LETTER GLOTTAL STOP: not included in any glyphset definition</li>
-<li>U+02C7 CARON: try adding one of: tifinagh, yi, canadian-aboriginal</li>
-<li>U+02C8 MODIFIER LETTER VERTICAL LINE: not included in any glyphset definition</li>
-<li>U+02CA MODIFIER LETTER ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+02CB MODIFIER LETTER GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+02D7 MODIFIER LETTER MINUS SIGN: not included in any glyphset definition</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+02EE MODIFIER LETTER DOUBLE APOSTROPHE: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, malayalam, canadian-aboriginal, coptic, syriac, tifinagh, old-permic, math</li>
-<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+030D COMBINING VERTICAL LINE ABOVE: not included in any glyphset definition</li>
-<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
-<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
-<li>U+0313 COMBINING COMMA ABOVE: try adding old-permic</li>
-<li>U+0315 COMBINING COMMA ABOVE RIGHT: not included in any glyphset definition</li>
-<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0320 COMBINING MINUS SIGN BELOW: try adding syriac</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, syriac</li>
-<li>U+0325 COMBINING RING BELOW: try adding syriac</li>
-<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
-<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding syriac</li>
-<li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+032F COMBINING INVERTED BREVE BELOW: not included in any glyphset definition</li>
-<li>U+0330 COMBINING TILDE BELOW: try adding one of: cherokee, math, syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: gothic, cherokee, syriac, caucasian-albanian, tifinagh</li>
-<li>U+0332 COMBINING LOW LINE: not included in any glyphset definition</li>
-<li>U+0334 COMBINING TILDE OVERLAY: not included in any glyphset definition</li>
-<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0358 COMBINING DOT ABOVE RIGHT: try adding osage</li>
-<li>U+0361 COMBINING DOUBLE INVERTED BREVE: try adding coptic</li>
-<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: greek, elbasan, math</li>
-<li>U+03A7 GREEK CAPITAL LETTER CHI: try adding one of: greek, elbasan, math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, elbasan, math</li>
-<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
-<li>U+03C7 GREEK SMALL LETTER CHI: try adding one of: greek, math</li>
-<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
-<li>U+1D58 MODIFIER LETTER SMALL U: not included in any glyphset definition</li>
-<li>U+1D5B MODIFIER LETTER SMALL V: not included in any glyphset definition</li>
-<li>U+1D7D LATIN SMALL LETTER P WITH STROKE: not included in any glyphset definition</li>
-<li>U+1D7E LATIN SMALL CAPITAL LETTER U WITH STROKE: not included in any glyphset definition</li>
-<li>U+1DBB MODIFIER LETTER SMALL Z: not included in any glyphset definition</li>
-<li>U+1DBF MODIFIER LETTER SMALL THETA: not included in any glyphset definition</li>
-<li>U+1DC4 COMBINING MACRON-ACUTE: not included in any glyphset definition</li>
-<li>U+1DC5 COMBINING GRAVE-MACRON: not included in any glyphset definition</li>
-<li>U+1DC6 COMBINING MACRON-GRAVE: not included in any glyphset definition</li>
-<li>U+1DC7 COMBINING ACUTE-MACRON: not included in any glyphset definition</li>
-<li>U+1DCA COMBINING LATIN SMALL LETTER R BELOW: not included in any glyphset definition</li>
-<li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
-<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
-<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
-<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
-<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
-<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
-<li>U+207F SUPERSCRIPT LATIN SMALL LETTER N: not included in any glyphset definition</li>
-<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
-<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
-<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
-<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
-<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
-<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
-<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
-<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
-<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
-<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
-<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
-<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
-<li>U+2144 TURNED SANS-SERIF CAPITAL Y: not included in any glyphset definition</li>
-<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
-<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
-<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
-<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
-<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
-<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
-<li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
-<li>U+2205 EMPTY SET: try adding math</li>
-<li>U+2206 INCREMENT: try adding math</li>
-<li>U+220F N-ARY PRODUCT: try adding math</li>
-<li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+221A SQUARE ROOT: try adding math</li>
-<li>U+221E INFINITY: try adding math</li>
-<li>U+222B INTEGRAL: try adding math</li>
-<li>U+2248 ALMOST EQUAL TO: try adding math</li>
-<li>U+2260 NOT EQUAL TO: try adding math</li>
-<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
-<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
-<li>U+25A0 BLACK SQUARE: try adding symbols</li>
-<li>U+25A1 WHITE SQUARE: try adding symbols</li>
-<li>U+25AA BLACK SMALL SQUARE: try adding symbols</li>
-<li>U+25AB WHITE SMALL SQUARE: try adding symbols</li>
-<li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: symbols, math</li>
-<li>U+25B4 BLACK UP-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25B5 WHITE UP-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: symbols, math</li>
-<li>U+25B8 BLACK RIGHT-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25B9 WHITE RIGHT-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: symbols, math</li>
-<li>U+25BE BLACK DOWN-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25BF WHITE DOWN-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: symbols, math</li>
-<li>U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
-<li>U+25C6 BLACK DIAMOND: try adding symbols</li>
-<li>U+25C7 WHITE DIAMOND: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: tamil, adlam, yi, kayah-li, grantha, mandaic, sogdian, thaana, devanagari, mongolian, hanunoo, sundanese, tirhuta, gunjala-gondi, gurmukhi, tibetan, balinese, bhaiksuki, kaithi, armenian, tagbanwa, buhid, soyombo, chakma, math, miao, nko, rejang, gujarati, ahom, lepcha, lao, masaram-gondi, marchen, syriac, tifinagh, khmer, syloti-nagri, old-permic, hanifi-rohingya, thai, saurashtra, tai-viet, bassa-vah, new-tai-lue, dogra, osage, symbols, tai-le, cham, brahmi, malayalam, myanmar, siddham, phags-pa, khojki, buginese, meetei-mayek, newa, telugu, duployan, tagalog, kannada, oriya, psalter-pahlavi, limbu, hebrew, takri, canadian-aboriginal, caucasian-albanian, coptic, mahajani, warang-citi, wancho, bengali, sharada, batak, music, sinhala, kharoshthi, zanabazar-square, mende-kikakui, tai-tham, pahawh-hmong, modi, elbasan, khudawadi, javanese, manichaean</li>
-<li>U+25CF BLACK CIRCLE: try adding symbols</li>
-<li>U+25E6 WHITE BULLET: try adding symbols</li>
-<li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
-<li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
-<li>U+AB53 LATIN SMALL LETTER CHI: not included in any glyphset definition</li>
-<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
-<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
+                            <p>The &quot;opsz&quot; (Optical Size) coordinate on the &quot;Regular&quot; instance is recommended to be a value in the range 10 to 16. Got 6.0 instead.</p>
 
                             
-                             [code: unreachable-subsetting]
+                             [code: opsz-out-of-range]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GPOS table lacks kerning information.</p>
+
+                            
+                             [code: lacks-kern-info]
                             
                             </span>
                         </li>
@@ -672,6 +538,98 @@ definitions.</p>
 
     
 
+            
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check math signs have the same width.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The most common width is 710 among a set of 7 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 677:
+less, lessequal, greater</p>
+<p>Width = 707:
+multiply</p>
+<p>Width = 1178:
+approxequal</p>
+<p>Width = 627:
+greaterequal</p>
+
+                            
+                             [code: width-outliers]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -701,6 +659,204 @@ definitions.</p>
     
 
     
+        <h3>
+    
+    Check font contains no unreachable glyphs
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- Ccaron.czech
+
+- IJ_acutecomb
+
+- Iacute.czech
+
+- Lamda
+
+- dotlessi_ogonek
+</code></pre>
+
+                            
+                             [code: unreachable-glyphs]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Shaping Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩⏩
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i᷆ i᷇ į̀ į́ į̂ į̃ į̄ į̌ ɨ̀ ɨ́ ɨ̂ ɨ̃ ɨ̄ ɨ̈ ɨ̋ ɨ̌ ɨ̏ ɨ̧̀ ɨ̧́ ɨ̧̂ ɨ̧̌ ɨ̱̀ ɨ̱́ ɨ̱̈ ị̀ ị́ ị̂ ị̃ ị̄</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i᷄ i᷅ i̛᷄ i̛᷅ i̛᷆ i̛᷇ i̠᷄ i̠᷅ i̠᷆ i̠᷇ i̤᷄ i̤᷅ i̤᷆ i̤᷇ i̥᷄ i̥᷅ i̥᷆ i̥᷇ i̦᷄ i̦᷅</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: South Central Banda (Latn, 244,000 speakers), Gulay (Latn, 250,478 speakers), Cicipu (Latn, 44,000 speakers), Sar (Latn, 500,000 speakers), Ebira (Latn, 2,200,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Zapotec (Latn, 490,000 speakers), Mango (Latn, 77,000 speakers), Dutch (Latn, 31,709,104 speakers), Yala (Latn, 200,000 speakers), Nzakara (Latn, 50,000 speakers), Navajo (Latn, 166,319 speakers), Ma’di (Latn, 584,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Ngbaka (Latn, 1,020,000 speakers), Nateni (Latn, 100,000 speakers), Ekpeye (Latn, 226,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Avokaya (Latn, 100,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Mundani (Latn, 34,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Makaa (Latn, 221,000 speakers), Mfumte (Latn, 79,000 speakers), Ejagham (Latn, 120,000 speakers), Aghem (Latn, 38,843 speakers), Koonzime (Latn, 40,000 speakers), Igbo (Latn, 27,823,640 speakers), Lugbara (Latn, 2,200,000 speakers), Basaa (Latn, 332,940 speakers), Dii (Latn, 71,000 speakers), Bafut (Latn, 158,146 speakers), Fur (Latn, 1,230,163 speakers), Kom (Latn, 360,685 speakers), Southern Kisi (Latn, 360,000 speakers), Dan (Latn, 1,099,244 speakers).</p>
+
+                            
+                             [code: soft-dotted]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+        <h3>
+    
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
+    
+    Validate location, size and resolution of article images.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/jaro does not have an article.</p>
+
+                            
+                             [code: lacks-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    🔥🔥⚠️⏩⏩⏩ℹ️
+</span>
 
     
 
@@ -767,6 +923,364 @@ definitions.</p>
     
 
     
+
+    
+        <h3>
+    
+    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>It seems that Agyei Archer is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
+
+                            
+                             [code: profile-not-found]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Designer name at METADATA.pb (Celine Hurka) is not the same as listed on the designers catalog (Céline Hurka) available at <a href="https://raw.githubusercontent.com/google/fonts/master/catalog/designers/celinehurka/info.pb">https://raw.githubusercontent.com/google/fonts/master/catalog/designers/celinehurka/info.pb</a></p>
+
+                            
+                             [code: mismatch]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>It seems that Mirko Velimirović is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
+
+                            
+                             [code: profile-not-found]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02B0 MODIFIER LETTER SMALL H: not included in any glyphset definition</li>
+<li>U+02B7 MODIFIER LETTER SMALL W: not included in any glyphset definition</li>
+<li>U+02B8 MODIFIER LETTER SMALL Y: not included in any glyphset definition</li>
+<li>U+02B9 MODIFIER LETTER PRIME: not included in any glyphset definition</li>
+<li>U+02BE MODIFIER LETTER RIGHT HALF RING: not included in any glyphset definition</li>
+<li>U+02BF MODIFIER LETTER LEFT HALF RING: not included in any glyphset definition</li>
+<li>U+02C0 MODIFIER LETTER GLOTTAL STOP: not included in any glyphset definition</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi</li>
+<li>U+02C8 MODIFIER LETTER VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+02CA MODIFIER LETTER ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+02CB MODIFIER LETTER GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+02D7 MODIFIER LETTER MINUS SIGN: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+02EE MODIFIER LETTER DOUBLE APOSTROPHE: not included in any glyphset definition</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, tifinagh, math, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, malayalam, math, old-permic, syriac, tai-le, coptic, canadian-aboriginal</li>
+<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030D COMBINING VERTICAL LINE ABOVE: not included in any glyphset definition</li>
+<li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
+<li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0313 COMBINING COMMA ABOVE: try adding old-permic</li>
+<li>U+0315 COMBINING COMMA ABOVE RIGHT: not included in any glyphset definition</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0320 COMBINING MINUS SIGN BELOW: try adding syriac</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, syriac</li>
+<li>U+0325 COMBINING RING BELOW: try adding syriac</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding syriac</li>
+<li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
+<li>U+032F COMBINING INVERTED BREVE BELOW: not included in any glyphset definition</li>
+<li>U+0330 COMBINING TILDE BELOW: try adding one of: cherokee, syriac, math</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: cherokee, tifinagh, syriac, gothic, caucasian-albanian</li>
+<li>U+0332 COMBINING LOW LINE: not included in any glyphset definition</li>
+<li>U+0334 COMBINING TILDE OVERLAY: not included in any glyphset definition</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0358 COMBINING DOT ABOVE RIGHT: try adding osage</li>
+<li>U+0361 COMBINING DOUBLE INVERTED BREVE: try adding coptic</li>
+<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: greek, math, elbasan</li>
+<li>U+03A7 GREEK CAPITAL LETTER CHI: try adding one of: greek, math, elbasan</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, math, elbasan</li>
+<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
+<li>U+03C7 GREEK SMALL LETTER CHI: try adding one of: greek, math</li>
+<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
+<li>U+1D58 MODIFIER LETTER SMALL U: not included in any glyphset definition</li>
+<li>U+1D5B MODIFIER LETTER SMALL V: not included in any glyphset definition</li>
+<li>U+1D7D LATIN SMALL LETTER P WITH STROKE: not included in any glyphset definition</li>
+<li>U+1D7E LATIN SMALL CAPITAL LETTER U WITH STROKE: not included in any glyphset definition</li>
+<li>U+1DBB MODIFIER LETTER SMALL Z: not included in any glyphset definition</li>
+<li>U+1DBF MODIFIER LETTER SMALL THETA: not included in any glyphset definition</li>
+<li>U+1DC4 COMBINING MACRON-ACUTE: not included in any glyphset definition</li>
+<li>U+1DC5 COMBINING GRAVE-MACRON: not included in any glyphset definition</li>
+<li>U+1DC6 COMBINING MACRON-GRAVE: not included in any glyphset definition</li>
+<li>U+1DC7 COMBINING ACUTE-MACRON: not included in any glyphset definition</li>
+<li>U+1DCA COMBINING LATIN SMALL LETTER R BELOW: not included in any glyphset definition</li>
+<li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
+<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+207F SUPERSCRIPT LATIN SMALL LETTER N: not included in any glyphset definition</li>
+<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
+<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
+<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
+<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
+<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
+<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
+<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
+<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
+<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
+<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
+<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
+<li>U+2144 TURNED SANS-SERIF CAPITAL Y: not included in any glyphset definition</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
+<li>U+2205 EMPTY SET: try adding math</li>
+<li>U+2206 INCREMENT: try adding math</li>
+<li>U+220F N-ARY PRODUCT: try adding math</li>
+<li>U+2211 N-ARY SUMMATION: try adding math</li>
+<li>U+221A SQUARE ROOT: try adding math</li>
+<li>U+221E INFINITY: try adding math</li>
+<li>U+222B INTEGRAL: try adding math</li>
+<li>U+2248 ALMOST EQUAL TO: try adding math</li>
+<li>U+2260 NOT EQUAL TO: try adding math</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
+<li>U+25A0 BLACK SQUARE: try adding symbols</li>
+<li>U+25A1 WHITE SQUARE: try adding symbols</li>
+<li>U+25AA BLACK SMALL SQUARE: try adding symbols</li>
+<li>U+25AB WHITE SMALL SQUARE: try adding symbols</li>
+<li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B4 BLACK UP-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25B5 WHITE UP-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B8 BLACK RIGHT-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25B9 WHITE RIGHT-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25BE BLACK DOWN-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25BF WHITE DOWN-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
+<li>U+25C6 BLACK DIAMOND: try adding symbols</li>
+<li>U+25C7 WHITE DIAMOND: try adding symbols</li>
+<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CB WHITE CIRCLE: try adding symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: oriya, tirhuta, chakma, syloti-nagri, gujarati, gurmukhi, tifinagh, takri, armenian, masaram-gondi, sundanese, coptic, psalter-pahlavi, mahajani, duployan, zanabazar-square, bassa-vah, tai-tham, tagbanwa, canadian-aboriginal, grantha, nko, devanagari, khojki, meetei-mayek, pahawh-hmong, yi, javanese, miao, buhid, bengali, sharada, kayah-li, balinese, tibetan, kaithi, wancho, new-tai-lue, phags-pa, adlam, tagalog, osage, mandaic, sinhala, thai, khudawadi, dogra, rejang, gunjala-gondi, old-permic, bhaiksuki, thaana, tai-le, hebrew, caucasian-albanian, elbasan, brahmi, batak, marchen, newa, buginese, syriac, lepcha, kharoshthi, hanifi-rohingya, sogdian, mongolian, myanmar, cham, soyombo, telugu, music, lao, ahom, saurashtra, manichaean, limbu, siddham, mende-kikakui, tamil, tai-viet, warang-citi, symbols, kannada, khmer, hanunoo, malayalam, math, modi</li>
+<li>U+25CF BLACK CIRCLE: try adding symbols</li>
+<li>U+25E6 WHITE BULLET: try adding symbols</li>
+<li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
+<li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
+<li>U+AB53 LATIN SMALL LETTER CHI: not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
+
+                            
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    🔥
+</span>
+
+    
         <h3>
     
     Shapes languages in all GF glyphsets.
@@ -808,139 +1322,27 @@ definitions.</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">lia_Latn (Limba, West-Central)</td>
+<td align="left">kkj_Latn (Kako)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">naw_Latn (Nawuri)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mev_Latn (Mano)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kpo_Latn (Ikposo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bcw_Latn (Bana)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">emk_Latn (Maninkakan, Eastern)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tpm_Latn (Tampulma)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">taq_Latn (Tamasheq, Latin)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bud_Latn (Ntcham)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dur_Latn (Dii)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">agq_Latn (Aghem)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kqs_Latn (Kissi, Northern)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nyb_Latn (Nyangbo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">xwe_Latn (Gbe, Xwela)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kvf_Latn (Kabalai)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">khq_Latn (Koyra Chiini)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sef_Latn (Cebaara Senoufo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lmp_Latn (Limbum)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">vag_Latn (Vagla)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nnw_Latn (Southern Nuni)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gna_Latn (Kaansa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lg_Latn (Ganda)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mur_Latn (Murle)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gov_Latn (Goo)</td>
-<td align="left">Some base glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
+<td align="left">dnj_Latn (Dan)</td>
+<td align="left">Some base glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, ɤ̄, ɤ̋, ɤ̏, Ɤ, Ɤ̀, Ɤ́, Ɤ̂, Ɤ̄, Ɤ̋, Ɤ̏</td>
 </tr>
 <tr>
 <td align="left">^</td>
 <td align="left">Shaper produced a .notdef</td>
 </tr>
 <tr>
-<td align="left">kao_Latn (Xaasongaxango)</td>
+<td align="left">^</td>
+<td align="left">Shaper produced a .notdef</td>
+</tr>
+<tr>
+<td align="left">^</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">mbu_Latn (Mbula-Bwazza)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">xon_Latn (Konkomba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dyu_Latn (Dyula)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mnk_Latn (Mandinka)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">shz_Latn (Syenara Senoufo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nus_Latn (Nuer)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">spp_Latn (Sénoufo, Supyire)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dje_Latn (Zarma)</td>
+<td align="left">dts_Latn (Dogon, Toro So)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -948,323 +1350,31 @@ definitions.</p>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">biv_Latn (Birifor, Southern)</td>
+<td align="left">cou_Latn (Wamey)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">nfu_Latn (Mfumte)</td>
+<td align="left">fub_Latn (Fulfulde, Adamawa)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">idu_Latn (Idoma)</td>
+<td align="left">kao_Latn (Xaasongaxango)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">xuo_Latn (Kuo)</td>
+<td align="left">nyb_Latn (Nyangbo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">nko_Latn (Nkonya)</td>
+<td align="left">dur_Latn (Dii)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">xsm_Latn (Kasem)</td>
+<td align="left">gud_Latn (Dida, Yocoboué)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">teo_Latn (Teso)</td>
-<td align="left">Some base glyphs were missing: ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᶤ, ᶶ, ⁱ</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">Shaper produced a .notdef</td>
-</tr>
-<tr>
-<td align="left">wo_Latn (Wolof)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">myk_Latn (Mamara Senoufo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ewo_Latn (Ewondo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">toq_Latn (Toposa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mnf_Latn (Mundani)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dno_Latn (Ndrulo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ig_Latn (Igbo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gnd_Latn (Zulgo-Gemzek)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nmz_Latn (Nawdm)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mgc_Latn (Morokodo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">avn_Latn (Avatime)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">pug_Latn (Phuie)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ee_Latn (Ewe)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mcp_Latn (Makaa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bfd_Latn (Bafut)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mfq_Latn (Moba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bum_Latn (Bulu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bsc_Latn (Bassari)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gde_Latn (Gude)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ach_Latn (Acoli)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bbj_Latn (Ghomala)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fuc_Latn (Pulaar)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tem_Latn (Timne)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dtm_Latn (Tomo Kan Dogon)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sig_Latn (Paasaal)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ahs_Latn (Ashe)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lam_Latn (Lamba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fod_Latn (Foodo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dow_Latn (Doyayo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ses_Latn (Koyraboro Senni)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mcn_Latn (Masana)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nza_Latn (Tigon Mbembe)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ted_Latn (Krumen, Tepo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">byv_Latn (Medumba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nnh_Latn (Ngiemboon)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kqp_Latn (Kimré)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bqj_Latn (Bandial)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tod_Latn (Toma)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">pbi_Latn (Parkwa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mls_Latn (Masalit)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fuq_Latn (Central-Eastern Niger Fulfulde)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">adj_Latn (Adioukrou)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kyf_Latn (Kouya)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nhb_Latn (Beng)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">muy_Latn (Muyang)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ybb_Latn (Yemba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lee_Latn (Lyélé)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mas_Latn (Masai)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mfi_Latn (Wandala)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">moa_Latn (Mwan)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bex_Latn (Jur Modo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bbo_Latn (Northern Bobo Madaré)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">snf_Latn (Noon)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bfa_Latn (Bari)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">boz_Latn (Tiéyaxo Bozo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lig_Latn (Ligbi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kdh_Latn (Tem)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sxw_Latn (Saxwe Gbe)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">hag_Latn (Hanga)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">csk_Latn (Jola-Kasa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fan_Latn (Fang)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bze_Latn (Jenaama Bozo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kyq_Latn (Kenga)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">blo_Latn (Anii)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ife_Latn (Ifè)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ahl_Latn (Igo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mbo_Latn (Mbo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nym_Latn (Nyamwezi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ntr_Latn (Delo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bza_Latn (Bandi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nmg_Latn (Kwasio)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gng_Latn (Ngangam)</td>
+<td align="left">lgg_Latn (Lugbara)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -1272,123 +1382,11 @@ definitions.</p>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">cou_Latn (Wamey)</td>
+<td align="left">nhu_Latn (Noone)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">ndv_Latn (Ndut)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mfv_Latn (Mandjak)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tcd_Latn (Tafi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ken_Latn (Kenyang)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">saf_Latn (Safaliba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tuq_Latn (Tedaga)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">laj_Latn (Lango [Uganda])</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bsp_Latn (Baga Sitemu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ddn_Latn (Dendi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ktj_Latn (Krumen, Plapo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">pnz_Latn (Pana (Central African Republic))</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sav_Latn (Saafi-Saafi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bss_Latn (Akoose)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bm_Latn (Bambara)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">yas_Latn (Nugunu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">cko_Latn (Anufo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mdt_Latn (Mbere)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">keu_Latn (Akebu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">etu_Latn (Ejagham)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">cae_Latn (Lehar)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">daa_Latn (Dangaléat)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bas_Latn (Basaa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dag_Latn (Dagbani)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">anv_Latn (Denya)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ndz_Latn (Ndogo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">wan_Latn (Wan)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mcu_Latn (Mambila, Cameroon)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">xed_Latn (Hdi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ncu_Latn (Chumburung)</td>
+<td align="left">mcn_Latn (Masana)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -1400,19 +1398,403 @@ definitions.</p>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
+<td align="left">bkm_Latn (Kom)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">xuo_Latn (Kuo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ee_Latn (Ewe)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mgo_Latn (Metaʼ)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sbd_Latn (Southern Samo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bqj_Latn (Bandial)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bjt_Latn (Balanta-Ganja)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ksf_Latn (Bafia)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">laj_Latn (Lango [Uganda])</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tem_Latn (Timne)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nnh_Latn (Ngiemboon)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">wo_Latn (Wolof)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kpo_Latn (Ikposo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tod_Latn (Toma)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">fan_Latn (Fang)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">xwe_Latn (Gbe, Xwela)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">yas_Latn (Nugunu)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">keu_Latn (Akebu)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lmp_Latn (Limbum)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kbp_Latn (Kabiyé)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bfa_Latn (Bari)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sig_Latn (Paasaal)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">agq_Latn (Aghem)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">loq_Latn (Lobala)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mor_Latn (Moro)</td>
+<td align="left">Some base glyphs were missing: Ꟈ, ꟈ</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">Shaper produced a .notdef</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">vai_Latn (Vai (Latin))</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">krs_Latn (Gbaya (Sudan))</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">neb_Latn (Toura)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">cme_Latn (Cerma)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">rub_Latn (Gungu)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dyi_Latn (Sénoufo, Djimini)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">muy_Latn (Muyang)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tuq_Latn (Tedaga)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ach_Latn (Acoli)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">god_Latn (Godié)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gnd_Latn (Zulgo-Gemzek)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">twq_Latn (Tasawaq)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ozm_Latn (Koonzime)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dno_Latn (Ndrulo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">wan_Latn (Wan)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lem_Latn (Nomaande)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nhb_Latn (Beng)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sld_Latn (Sissala)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lam_Latn (Lamba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">taq_Latn (Tamasheq, Latin)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">pnz_Latn (Pana (Central African Republic))</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dop_Latn (Lukpa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ahs_Latn (Ashe)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">avu_Latn (Avokaya)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">fue_Latn (Fulfulde, Borgu)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mbu_Latn (Mbula-Bwazza)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bas_Latn (Basaa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nmz_Latn (Nawdm)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
 <td align="left">bzx_Latn (Bozo, Hainyaxo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">acd_Latn (Gikyode)</td>
+<td align="left">dow_Latn (Doyayo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">fmp_Latn (Fe’fe’)</td>
+<td align="left">mgc_Latn (Morokodo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">kus_Latn (Kusaal)</td>
+<td align="left">gmm_Latn (Gbaya-Mbodomo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nus_Latn (Nuer)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">byv_Latn (Medumba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dzg_Latn (Dazaga)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">csk_Latn (Jola-Kasa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">fod_Latn (Foodo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ktj_Latn (Krumen, Plapo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">wwa_Latn (Waama)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bud_Latn (Ntcham)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mnk_Latn (Mandinka)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bsp_Latn (Baga Sitemu)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nym_Latn (Nyamwezi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lee_Latn (Lyélé)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ny_Latn (Nyanja)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lun_Latn (Lunda)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">meq_Latn (Merey)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dje_Latn (Zarma)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sav_Latn (Saafi-Saafi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nmg_Latn (Kwasio)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bib_Latn (Bissa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mfd_Latn (Mendankwe-Nkwen)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ttq_Latn (Tawallammat Tamajaq)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bzw_Latn (Basa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mmu_Latn (Mmaala)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">fuh_Latn (Fulfulde, Western Niger)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gna_Latn (Kaansa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bav_Latn (Vengo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">spp_Latn (Sénoufo, Supyire)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mls_Latn (Masalit)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">hag_Latn (Hanga)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bm_Latn (Bambara)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gkp_Latn (Kpelle, Guinea)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mfi_Latn (Wandala)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">jgo_Latn (Ngomba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">xed_Latn (Hdi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tcd_Latn (Tafi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bcw_Latn (Bana)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nfu_Latn (Mfumte)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">teo_Latn (Teso)</td>
+<td align="left">Some base glyphs were missing: ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᶤ, ᶶ, ⁱ</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">Shaper produced a .notdef</td>
+</tr>
+<tr>
+<td align="left">dyu_Latn (Dyula)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kye_Latn (Krache)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -1436,127 +1818,15 @@ definitions.</p>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">vai_Latn (Vai (Latin))</td>
+<td align="left">agc_Latn (Agatu)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">kzr_Latn (Karang)</td>
+<td align="left">nnw_Latn (Southern Nuni)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">ajg_Latn (Aja)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bib_Latn (Bissa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">maw_Latn (Mampruli)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">vut_Latn (Vute)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gur_Latn (Frafra)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ffm_Latn (Maasina Fulfulde)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dts_Latn (Dogon, Toro So)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tvu_Latn (Tunen)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lns_Latn (Lamnso’)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fuh_Latn (Fulfulde, Western Niger)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mwk_Latn (Kita Maninkakan)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">cme_Latn (Cerma)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nku_Latn (Kulango, Bouna)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fvr_Latn (Fur)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lok_Latn (Loko)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ksf_Latn (Bafia)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">log_Latn (Logo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">neb_Latn (Toura)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fue_Latn (Fulfulde, Borgu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">krs_Latn (Gbaya (Sudan))</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dgi_Latn (Northern Dagara)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bim_Latn (Bimoba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">meq_Latn (Merey)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bjt_Latn (Balanta-Ganja)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kye_Latn (Krache)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tnr_Latn (Ménik)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gud_Latn (Dida, Yocoboué)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">pil_Latn (Yom)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fuf_Latn (Pular)</td>
+<td align="left">tik_Latn (Tikar)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -1564,71 +1834,39 @@ definitions.</p>
 <td align="left">Some mark glyphs were missing: ◌͟</td>
 </tr>
 <tr>
-<td align="left">god_Latn (Godié)</td>
+<td align="left">fuq_Latn (Central-Eastern Niger Fulfulde)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">knp_Latn (Kwanja)</td>
+<td align="left">bex_Latn (Jur Modo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">kmy_Latn (Koma)</td>
+<td align="left">lok_Latn (Loko)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">sld_Latn (Sissala)</td>
+<td align="left">anv_Latn (Denya)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">gux_Latn (Gourmanchéma)</td>
+<td align="left">log_Latn (Logo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">lem_Latn (Nomaande)</td>
+<td align="left">nko_Latn (Nkonya)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">wci_Latn (Gbe, Waci)</td>
+<td align="left">fuf_Latn (Pular)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">mgo_Latn (Metaʼ)</td>
+<td align="left">soy_Latn (Miyobe)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">kbp_Latn (Kabiyé)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bkm_Latn (Kom)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">knf_Latn (Mankanya)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ttq_Latn (Tawallammat Tamajaq)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bqv_Latn (Koro Wachi)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nfr_Latn (Nafaanra)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ikx_Latn (Ik)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dzg_Latn (Dazaga)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ny_Latn (Nyanja)</td>
+<td align="left">yam_Latn (Yamba)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -1636,11 +1874,459 @@ definitions.</p>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">dua_Latn (Duala)</td>
+<td align="left">fvr_Latn (Fur)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ig_Latn (Igbo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">daa_Latn (Dangaléat)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mcp_Latn (Makaa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ife_Latn (Ifè)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">cae_Latn (Lehar)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ade_Latn (Adele)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bax_Latn (Bamun, Latin)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dtm_Latn (Tomo Kan Dogon)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gde_Latn (Gude)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gur_Latn (Frafra)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tpm_Latn (Tampulma)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nuv_Latn (Nuni, Northern)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ncu_Latn (Chumburung)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bza_Latn (Bandi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kia_Latn (Kim)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ajg_Latn (Aja)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ewo_Latn (Ewondo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bsc_Latn (Bassari)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ted_Latn (Krumen, Tepo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">vag_Latn (Vagla)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">xon_Latn (Konkomba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mwk_Latn (Kita Maninkakan)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ken_Latn (Kenyang)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dgi_Latn (Northern Dagara)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mdj_Latn (Mangbetu)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
 <td align="left">las_Latn (Lama (Togo))</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">fuc_Latn (Pulaar)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">fmp_Latn (Fe’fe’)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mbo_Latn (Mbo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ndv_Latn (Ndut)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lg_Latn (Ganda)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ndz_Latn (Ndogo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nku_Latn (Kulango, Bouna)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sxw_Latn (Saxwe Gbe)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bbo_Latn (Northern Bobo Madaré)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">nza_Latn (Tigon Mbembe)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">emk_Latn (Maninkakan, Eastern)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ikx_Latn (Ik)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">biv_Latn (Birifor, Southern)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">myk_Latn (Mamara Senoufo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gux_Latn (Gourmanchéma)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">saf_Latn (Safaliba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">khq_Latn (Koyra Chiini)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mev_Latn (Mano)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bqv_Latn (Koro Wachi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bfd_Latn (Bafut)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ntr_Latn (Delo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lia_Latn (Limba, West-Central)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">boz_Latn (Tiéyaxo Bozo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">snf_Latn (Noon)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dag_Latn (Dagbani)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kqp_Latn (Kimré)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">pug_Latn (Phuie)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lns_Latn (Lamnso’)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ses_Latn (Koyraboro Senni)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sok_Latn (Sokoro)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">naw_Latn (Nawuri)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kzc_Latn (Bondoukou Kulango)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">knp_Latn (Kwanja)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bze_Latn (Jenaama Bozo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ybb_Latn (Yemba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ekm_Latn (Elip)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bim_Latn (Bimoba)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">pil_Latn (Yom)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">adj_Latn (Adioukrou)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bbj_Latn (Ghomala)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kyf_Latn (Kouya)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">cko_Latn (Anufo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kyq_Latn (Kenga)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gej_Latn (Gen)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mfv_Latn (Mandjak)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">srr_Latn (Serer)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gng_Latn (Ngangam)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gjn_Latn (Gonja)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ahl_Latn (Igo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ddn_Latn (Dendi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">azo_Latn (Awing)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">knf_Latn (Mankanya)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sil_Latn (Sisaala, Tumulung)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mcu_Latn (Mambila, Cameroon)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">blo_Latn (Anii)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bss_Latn (Akoose)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">toq_Latn (Toposa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kzr_Latn (Karang)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">pbi_Latn (Parkwa)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">ffm_Latn (Maasina Fulfulde)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dua_Latn (Duala)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mas_Latn (Masai)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">dip_Latn (Dinka, Northeastern)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mnf_Latn (Mundani)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">bum_Latn (Bulu)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kmy_Latn (Koma)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">sef_Latn (Cebaara Senoufo)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kvf_Latn (Kabalai)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kdh_Latn (Tem)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">etu_Latn (Ejagham)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">maw_Latn (Mampruli)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mur_Latn (Murle)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tvu_Latn (Tunen)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">lig_Latn (Ligbi)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">acd_Latn (Gikyode)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">yav_Latn (Yangben)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">wci_Latn (Gbe, Waci)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">tnr_Latn (Ménik)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kus_Latn (Kusaal)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">kqs_Latn (Kissi, Northern)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">gov_Latn (Goo)</td>
+<td align="left">Some base glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">Shaper produced a .notdef</td>
+</tr>
+<tr>
+<td align="left">gaa_Latn (Ga)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">moa_Latn (Mwan)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mua_Latn (Mundang)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">xsm_Latn (Kasem)</td>
+<td align="left">The locl feature did not affect Eng</td>
+</tr>
+<tr>
+<td align="left">mdt_Latn (Mbere)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
@@ -1652,199 +2338,27 @@ definitions.</p>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">jgo_Latn (Ngomba)</td>
+<td align="left">mfq_Latn (Moba)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
+<td align="left">avn_Latn (Avatime)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">lun_Latn (Lunda)</td>
+<td align="left">vut_Latn (Vute)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">azo_Latn (Awing)</td>
+<td align="left">shz_Latn (Syenara Senoufo)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">bzw_Latn (Basa)</td>
+<td align="left">idu_Latn (Idoma)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 <tr>
-<td align="left">kzc_Latn (Bondoukou Kulango)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">fub_Latn (Fulfulde, Adamawa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mfd_Latn (Mendankwe-Nkwen)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sbd_Latn (Southern Samo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">lgg_Latn (Lugbara)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mdj_Latn (Mangbetu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mor_Latn (Moro)</td>
-<td align="left">Some base glyphs were missing: Ꟈ, ꟈ</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">Shaper produced a .notdef</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kkj_Latn (Kako)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">yav_Latn (Yangben)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sil_Latn (Sisaala, Tumulung)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">kia_Latn (Kim)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ozm_Latn (Koonzime)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">agc_Latn (Agatu)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">wwa_Latn (Waama)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gjn_Latn (Gonja)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">avu_Latn (Avokaya)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">srr_Latn (Serer)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nhu_Latn (Noone)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gej_Latn (Gen)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dyi_Latn (Sénoufo, Djimini)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bav_Latn (Vengo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">twq_Latn (Tasawaq)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ade_Latn (Adele)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mua_Latn (Mundang)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dnj_Latn (Dan)</td>
-<td align="left">Some base glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, ɤ̄, ɤ̋, ɤ̏, Ɤ, Ɤ̀, Ɤ́, Ɤ̂, Ɤ̄, Ɤ̋, Ɤ̏</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">Shaper produced a .notdef</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">Shaper produced a .notdef</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gmm_Latn (Gbaya-Mbodomo)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">gaa_Latn (Ga)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">yam_Latn (Yamba)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dip_Latn (Dinka, Northeastern)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">tik_Latn (Tikar)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">ekm_Latn (Elip)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">sok_Latn (Sokoro)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">dop_Latn (Lukpa)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">mmu_Latn (Mmaala)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">bax_Latn (Bamun, Latin)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">soy_Latn (Miyobe)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">nuv_Latn (Nuni, Northern)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">loq_Latn (Lobala)</td>
-<td align="left">The locl feature did not affect Eng</td>
-</tr>
-<tr>
-<td align="left">rub_Latn (Gungu)</td>
+<td align="left">nfr_Latn (Nafaanra)</td>
 <td align="left">The locl feature did not affect Eng</td>
 </tr>
 </tbody>
@@ -1872,52 +2386,8 @@ definitions.</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">gov_Latn (Goo)</td>
-<td align="left">Some auxiliary glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
-</tr>
-<tr>
-<td align="left">teo_Latn (Teso)</td>
-<td align="left">Some auxiliary glyphs were missing: ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᶤ, ᶶ, ⁱ</td>
-</tr>
-<tr>
-<td align="left">mgy_Latn (Mbunga)</td>
-<td align="left">No exemplar glyphs were defined for language Mbunga</td>
-</tr>
-<tr>
-<td align="left">tod_Latn (Toma)</td>
-<td align="left">No variant glyphs were found for uni028B</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">No variant glyphs were found for uni01B2</td>
-</tr>
-<tr>
 <td align="left">syi_Latn (Seki)</td>
 <td align="left">No exemplar glyphs were defined for language Seki</td>
-</tr>
-<tr>
-<td align="left">ggn_Latn (Eastern Gurung, Latin)</td>
-<td align="left">No exemplar glyphs were defined for language Eastern Gurung, Latin</td>
-</tr>
-<tr>
-<td align="left">udu_Latn (Uduk)</td>
-<td align="left">Some auxiliary glyphs were missing: T͟H, t͟h</td>
-</tr>
-<tr>
-<td align="left">cch_Latn (Atsam)</td>
-<td align="left">No exemplar glyphs were defined for language Atsam</td>
-</tr>
-<tr>
-<td align="left">mor_Latn (Moro)</td>
-<td align="left">Some auxiliary glyphs were missing: Ꟈ, ꟈ</td>
-</tr>
-<tr>
-<td align="left">kfo_Latn (Koro)</td>
-<td align="left">No exemplar glyphs were defined for language Koro</td>
-</tr>
-<tr>
-<td align="left">hna_Latn (Mina)</td>
-<td align="left">No exemplar glyphs were defined for language Mina</td>
 </tr>
 <tr>
 <td align="left">dnj_Latn (Dan)</td>
@@ -1928,6 +2398,50 @@ definitions.</p>
 <td align="left">No variant glyphs were found for uni0181</td>
 </tr>
 <tr>
+<td align="left">tod_Latn (Toma)</td>
+<td align="left">No variant glyphs were found for uni028B</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">No variant glyphs were found for uni01B2</td>
+</tr>
+<tr>
+<td align="left">cch_Latn (Atsam)</td>
+<td align="left">No exemplar glyphs were defined for language Atsam</td>
+</tr>
+<tr>
+<td align="left">mor_Latn (Moro)</td>
+<td align="left">Some auxiliary glyphs were missing: Ꟈ, ꟈ</td>
+</tr>
+<tr>
+<td align="left">mgy_Latn (Mbunga)</td>
+<td align="left">No exemplar glyphs were defined for language Mbunga</td>
+</tr>
+<tr>
+<td align="left">amo_Latn (Amo)</td>
+<td align="left">No exemplar glyphs were defined for language Amo</td>
+</tr>
+<tr>
+<td align="left">teo_Latn (Teso)</td>
+<td align="left">Some auxiliary glyphs were missing: ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᶤ, ᶶ, ⁱ</td>
+</tr>
+<tr>
+<td align="left">hna_Latn (Mina)</td>
+<td align="left">No exemplar glyphs were defined for language Mina</td>
+</tr>
+<tr>
+<td align="left">udu_Latn (Uduk)</td>
+<td align="left">Some auxiliary glyphs were missing: T͟H, t͟h</td>
+</tr>
+<tr>
+<td align="left">kfo_Latn (Koro)</td>
+<td align="left">No exemplar glyphs were defined for language Koro</td>
+</tr>
+<tr>
+<td align="left">gov_Latn (Goo)</td>
+<td align="left">Some auxiliary glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
+</tr>
+<tr>
 <td align="left">gaa_Latn (Ga)</td>
 <td align="left">No variant glyphs were found for uni01A9</td>
 </tr>
@@ -1936,8 +2450,8 @@ definitions.</p>
 <td align="left">No variant glyphs were found for uni01B7</td>
 </tr>
 <tr>
-<td align="left">amo_Latn (Amo)</td>
-<td align="left">No exemplar glyphs were defined for language Amo</td>
+<td align="left">ggn_Latn (Eastern Gurung, Latin)</td>
+<td align="left">No exemplar glyphs were defined for language Eastern Gurung, Latin</td>
 </tr>
 </tbody>
 </table>
@@ -1955,9 +2469,170 @@ definitions.</p>
 
     
 
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥🔥⚠️ℹ️
+</span>
+
     
 
     
+        <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                🔥
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
 
     
 
@@ -2069,6 +2744,126 @@ definitions.</p>
     
 
     
+        <h3>
+    
+    Ensure variable fonts include an avar table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_avar_table&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This variable font does not have an avar table.</p>
+
+                            
+                             [code: missing-avar]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+        <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Jaro[opsz].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -2146,675 +2941,6 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-        <h3>
-    
-    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that Agyei Archer is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Designer name at METADATA.pb (Celine Hurka) is not the same as listed on the designers catalog (Céline Hurka) available at <a href="https://raw.githubusercontent.com/google/fonts/master/catalog/designers/celinehurka/info.pb">https://raw.githubusercontent.com/google/fonts/master/catalog/designers/celinehurka/info.pb</a></p>
-
-                            
-                             [code: mismatch]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that Mirko Velimirović is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure variable fonts include an avar table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_avar_table&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This variable font does not have an avar table.</p>
-
-                            
-                             [code: missing-avar]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    The font has tags in the GF Tags spreadsheet
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        Jaro[opsz].ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check font contains no unreachable glyphs
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- Ccaron.czech
-
-- IJ_acutecomb
-
-- Iacute.czech
-
-- Lamda
-
-- dotlessi_ogonek
-</code></pre>
-
-                            
-                             [code: unreachable-glyphs]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check math signs have the same width.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The most common width is 710 among a set of 7 math glyphs.
-The following math glyphs have a different width, though:</p>
-<p>Width = 677:
-less, greater, lessequal</p>
-<p>Width = 707:
-multiply</p>
-<p>Width = 1178:
-approxequal</p>
-<p>Width = 627:
-greaterequal</p>
-
-                            
-                             [code: width-outliers]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.gpos</h2>
-<span class='section__emoji'>
-    ⚠️
-</span>
-
-    
-        <h3>
-    
-    Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning information.</p>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.fvar</h2>
-<span class='section__emoji'>
-    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    The variable font &#39;opsz&#39; (Optical Size) axis coordinate should be between 10 and 16 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_opsz_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The &quot;opsz&quot; (Optical Size) coordinate on the &quot;Regular&quot; instance is recommended to be a value in the range 10 to 16. Got 6.0 instead.</p>
-
-                            
-                             [code: opsz-out-of-range]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-                <h2>Shaping Checks</h2>
-<span class='section__emoji'>
-    ⚠️⏩⏩⏩
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Jaro[opsz].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i᷆ i᷇ į̀ į́ į̂ į̃ į̄ į̌ ɨ̀ ɨ́ ɨ̂ ɨ̃ ɨ̄ ɨ̈ ɨ̋ ɨ̌ ɨ̏ ɨ̧̀ ɨ̧́ ɨ̧̂ ɨ̧̌ ɨ̱̀ ɨ̱́ ɨ̱̈ ị̀ ị́ ị̂ ị̃ ị̄</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i᷄ i᷅ i̛᷄ i̛᷅ i̛᷆ i̛᷇ i̠᷄ i̠᷅ i̠᷆ i̠᷇ i̤᷄ i̤᷅ i̤᷆ i̤᷇ i̥᷄ i̥᷅ i̥᷆ i̥᷇ i̦᷄ i̦᷅</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Zapotec (Latn, 490,000 speakers), Ebira (Latn, 2,200,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Nateni (Latn, 100,000 speakers), Cicipu (Latn, 44,000 speakers), Mango (Latn, 77,000 speakers), Ma’di (Latn, 584,000 speakers), Ekpeye (Latn, 226,000 speakers), Navajo (Latn, 166,319 speakers), Lithuanian (Latn, 2,357,094 speakers), Nzakara (Latn, 50,000 speakers), South Central Banda (Latn, 244,000 speakers), Yala (Latn, 200,000 speakers), Gulay (Latn, 250,478 speakers), Dutch (Latn, 31,709,104 speakers), Ngbaka (Latn, 1,020,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Fur (Latn, 1,230,163 speakers), Dii (Latn, 71,000 speakers), Aghem (Latn, 38,843 speakers), Basaa (Latn, 332,940 speakers), Koonzime (Latn, 40,000 speakers), Bafut (Latn, 158,146 speakers), Makaa (Latn, 221,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ejagham (Latn, 120,000 speakers), Kom (Latn, 360,685 speakers), Dan (Latn, 1,099,244 speakers), Igbo (Latn, 27,823,640 speakers), Lugbara (Latn, 2,200,000 speakers), Avokaya (Latn, 100,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Mfumte (Latn, 79,000 speakers), Mundani (Latn, 34,000 speakers), Southern Kisi (Latn, 360,000 speakers).</p>
-
-                            
-                             [code: soft-dotted]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
