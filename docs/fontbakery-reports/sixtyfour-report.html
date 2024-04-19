@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.1</p>
+<p>FontBakery version: 0.12.2</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -686,7 +686,7 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2126 OHM SIGN: not included in any glyphset definition</li>
@@ -937,9 +937,107 @@ definitions.</p>
     
 
     
+        <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
 
     
 
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -1104,18 +1202,8 @@ definitions.</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">Overexposed</td>
-<td align="left">SCAN=67.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Overlapping</td>
-<td align="left">SCAN=37.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Slight</td>
-<td align="left">SCAN=-45.0, BLED=0.0</td>
+<td align="left">Delicate</td>
+<td align="left">SCAN=-53.0, BLED=0.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
@@ -1124,23 +1212,33 @@ definitions.</p>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Maximum</td>
-<td align="left">SCAN=100.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
 <td align="left">Touching</td>
 <td align="left">SCAN=21.0, BLED=0.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Delicate</td>
-<td align="left">SCAN=-53.0, BLED=0.0</td>
+<td align="left">Overlapping</td>
+<td align="left">SCAN=37.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Overexposed</td>
+<td align="left">SCAN=67.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Slight</td>
+<td align="left">SCAN=-45.0, BLED=0.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
 <td align="left">Close</td>
 <td align="left">SCAN=0.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Maximum</td>
+<td align="left">SCAN=100.0, BLED=0.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
