@@ -148,11 +148,12 @@ class GoogleFont:
             if m:
                 owner, repo = m[1], m[2]
                 repo = repo.replace(".git", "")
+                if repo.endswith("/"):
+                    repo = repo[:-1]
                 return owner, repo
 
-
     def save_metadata(self):
-        WriteProto(self.metadata, self.root('METADATA.pb'), comments=LANGUAGE_COMMENTS)
+        WriteProto(self.metadata, self.root("METADATA.pb"), comments=LANGUAGE_COMMENTS)
 
     @cached_property
     def upstream_gh(self):
