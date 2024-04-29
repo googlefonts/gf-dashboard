@@ -8,8 +8,12 @@ import yaml
 from fontTools.misc.timeTools import epoch_diff
 from fontTools.ttLib import TTFont
 from gflanguages import LoadLanguages
-from gftools.util.google_fonts import (GetExemplarFont, LanguageComments,
-                                       Metadata, WriteProto)
+from gftools.util.google_fonts import (
+    GetExemplarFont,
+    LanguageComments,
+    Metadata,
+    WriteProto,
+)
 from shaperglot.checker import Checker
 from shaperglot.languages import Languages
 from github3api import GitHubAPI
@@ -23,7 +27,7 @@ except ImportError:
     from yaml import Loader, Dumper
 
 from collections import defaultdict
-from datetime import datetime,timedelta,timezone
+from datetime import datetime, timedelta, timezone
 
 import tqdm
 
@@ -37,7 +41,9 @@ LANGUAGE_COMMENTS = LanguageComments(LoadLanguages())
 A_YEAR_AGO = datetime.now(timezone.utc) - timedelta(days=365)
 GF_REPO = GITHUB.get_repo("google/fonts")
 
-GRAPHQL_CLIENT = GitHubAPI(bearer_token= os.environ["GITHUB_TOKEN"], cabundle=certifi.where())
+GRAPHQL_CLIENT = GitHubAPI(
+    bearer_token=os.environ["GITHUB_TOKEN"], cabundle=certifi.where()
+)
 
 
 RECENT_COMMITS_QUERY = """
@@ -65,6 +71,7 @@ query($path: String!) {
 }
 """
 
+
 class GoogleFont:
     has_open_prs = None
 
@@ -77,7 +84,7 @@ class GoogleFont:
 
     def root(self, path: str) -> Path:
         return self.fullpath / path
-    
+
     @property
     def open_pulls(self):
         if GoogleFont.has_open_prs is None:
@@ -127,7 +134,7 @@ class GoogleFont:
         POTENTIAL_REPOS = [
             self.metadata.source.repository_url,
             self.upstream.get("repository_url"),
-            self.upstream.get("archive")
+            self.upstream.get("archive"),
         ]
 
         copyright = re.search(r"\((.*)\)", self.metadata.fonts[0].copyright)
@@ -170,7 +177,12 @@ class GoogleFont:
     @cached_property
     def new_releases_since_update(self):
         # XXX Check also version numbers
-        return list(filter(lambda x: x.published_at and x.published_at > self.last_updated, self.releases))
+        return list(
+            filter(
+                lambda x: x.published_at and x.published_at > self.last_updated,
+                self.releases,
+            )
+        )
 
     @cached_property
     def seems_gfr(self):
@@ -180,8 +192,10 @@ class GoogleFont:
         try:
             sources = repo.get_contents("sources")
             configs = [
-                p for p in sources
-                if p.path.startswith("sources/conf") and (p.path.endswith(".yaml") or p.path.endswith(".yml"))
+                p
+                for p in sources
+                if p.path.startswith("sources/conf")
+                and (p.path.endswith(".yaml") or p.path.endswith(".yml"))
             ]
             if configs:
                 return True
@@ -191,8 +205,8 @@ class GoogleFont:
     @cached_property
     def recent_commits(self):
         try:
-            result = GRAPHQL_CLIENT.graphql(RECENT_COMMITS_QUERY,
-                {"path": self.directory}
+            result = GRAPHQL_CLIENT.graphql(
+                RECENT_COMMITS_QUERY, {"path": self.directory}
             )
             result = result["data"]["repository"]["ref"]["target"]["history"]["edges"]
             result = [x["node"] for x in result]
@@ -209,7 +223,8 @@ class GoogleFont:
     @cached_property
     def recent_pulls(self):
         try:
-            result = GRAPHQL_CLIENT.graphql("""
+            result = GRAPHQL_CLIENT.graphql(
+                """
 {
   search(query: "is:pr repo:google/fonts %s/", type: ISSUE, first: 100) {
     edges {
@@ -225,7 +240,10 @@ class GoogleFont:
     }
   }
 }
-"""  % self.directory, {})
+"""
+                % self.directory,
+                {},
+            )
             result = result["data"]["search"]["edges"]
             result = [x["node"] for x in result]
             for x in result:
@@ -243,4 +261,3 @@ class GoogleFont:
             if checker.check(langs[lang]).is_success:
                 supported.append(lang)
         return sorted(supported)
-
