@@ -14,7 +14,7 @@ from progress import GitRemoteProgress
 repos = json.load(open("cache.json", "r"))
 
 upstream_repos = len([r for r in repos.values() if r.get("has_upstream")])
-gfr_repos = {k:v for k,v in repos.items() if v.get("is_gfr") }
+gfr_repos = {k: v for k, v in repos.items() if v.get("is_gfr") or v.get("sources")}
 
 failed = []
 succeeded = []
@@ -43,17 +43,24 @@ with Progress(
             )
             progress.update(clone_task, visible=False)
         progress.update(buildall_task, advance=1)
-        build_task = progress.add_task("[green]Build "+name, total=1)
-        progress.console.print("[bright_black]Building "+name+"...")
+        build_task = progress.add_task("[green]Build " + name, total=1)
+        progress.console.print("[bright_black]Building " + name + "...")
         os.chdir(builddir)
-        sources = glob.glob("sources/*.y*l")
-        if not sources:
-            progress.console.print(f"[red]{name} has no sources!")
-            failed.append(name)
-            continue
-        buildcmd = ["gftools-builder", sources[0]]
-        
-        process = subprocess.Popen(buildcmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if upstream.get("sources"):
+            sources = upstream["sources"]
+        else:
+            sources = glob.glob("sources/*.y*l")
+            if not sources:
+                progress.console.print(f"[red]{name} has no sources!")
+                failed.append(name)
+                continue
+            sources = [sources[0]]
+        buildcmd = ["gftools-builder"] + sources
+        progress.console.print("[bright_black]Building " + " ".join(buildcmd) + "...")
+
+        process = subprocess.Popen(
+            buildcmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        )
         sel = selectors.DefaultSelector()
         sel.register(process.stdout, selectors.EVENT_READ)
         sel.register(process.stderr, selectors.EVENT_READ)
