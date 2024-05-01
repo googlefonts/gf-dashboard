@@ -73,8 +73,12 @@ with Progress(
                 if not line:
                     ok = False
                     break
-                if key.fileobj is process.stdout and (m := re.match(r"^\[(\d+)/(\d+)\]", line.decode("utf8"))):
-                    progress.update(build_task, completed=int(m.group(1)), total=int(m.group(2)))
+                if key.fileobj is process.stdout and (
+                    m := re.match(r"^\[(\d+)/(\d+)\]", line.decode("utf8"))
+                ):
+                    progress.update(
+                        build_task, completed=int(m.group(1)), total=int(m.group(2))
+                    )
                 elif key.fileobj is process.stderr:
                     stderrlines.append(line)
                 else:
@@ -84,12 +88,12 @@ with Progress(
             for line in stdoutlines:
                 progress.console.print(line.decode("utf-8"), end="")
             for line in stderrlines:
-                progress.console.print("[red]"+line.decode("utf8"), end="")
-            
+                progress.console.print("[red]" + line.decode("utf8"), end="")
+
             failed.append(name)
-            progress.console.print("[red]Error building "+name)
+            progress.console.print("[red]Error building " + name)
         else:
-            progress.console.print("[green]Built "+name)
+            progress.console.print("[green]Built " + name)
             succeeded.append(name)
         os.chdir("../..")
         progress.update(build_task, advance=1, visible=False)
