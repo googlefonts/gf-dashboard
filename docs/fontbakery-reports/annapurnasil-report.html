@@ -270,20 +270,20 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>4</td>
         <td>0</td>
-        <td>0</td>
-        <td>16</td>
-        <td>28</td>
+        <td>18</td>
+        <td>27</td>
         <td>120</td>
         <td>17</td>
-        <td>288</td>
+        <td>285</td>
     </tr>
     <tr>
+        <td>1%</td>
         <td>0%</td>
-        <td>0%</td>
-        <td>3%</td>
+        <td>4%</td>
         <td>6%</td>
-        <td>26%</td>
+        <td>25%</td>
         <td>4%</td>
         <td>61%</td>
     </tr>
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.4</p>
+<p>FontBakery version: 0.12.5</p>
         
             
         
@@ -319,7 +319,7 @@ immediately.
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -1671,198 +1671,6 @@ approxequal, notequal, lessequal, greaterequal</p>
     
 
     
-        <h3>
-    
-    Check font contains no unreachable glyphs
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                AnnapurnaSIL-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- BarClubLeft
-
-- BarH670
-
-- BarTopShort
-
-- BarVertical
-
-- BarVertical400
-
-- BarVertical560
-
-- Candra
-
-- Dda.Comp
-
-- Dda.small
-
-- DogLeg
-
-- DogLegShort
-
-- Dot200
-
-- Dot240
-
-- DotLarge
-
-- Flame
-
-- FractionBar
-
-- GlobalMask
-
-- HookLeft
-
-- LaCurves
-
-- LoopLeftClosed
-
-- LoopRightOpen
-
-- LoopRtAngle
-
-- NineTail
-
-- Scratch
-
-- Sha.comp
-
-- ThreeTail
-
-- VowelI.comp
-
-- _BarTopShortExt
-
-- nonmarkingreturn
-</code></pre>
-
-                            
-                             [code: unreachable-glyphs]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                AnnapurnaSIL-Bold.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- BarClubLeft
-
-- BarH670
-
-- BarTopShort
-
-- BarVertical
-
-- BarVertical400
-
-- BarVertical560
-
-- Candra
-
-- Dda.Comp
-
-- Dda.small
-
-- DogLeg
-
-- DogLegShort
-
-- Dot200
-
-- Dot240
-
-- DotLarge
-
-- Flame
-
-- FractionBar
-
-- GlobalMask
-
-- HookLeft
-
-- LaCurves
-
-- LoopLeftClosed
-
-- LoopRightOpen
-
-- LoopRtAngle
-
-- NineTail
-
-- Scratch
-
-- Sha.comp
-
-- ThreeTail
-
-- VowelI.comp
-
-- _BarTopShortExt
-
-- nonmarkingreturn
-</code></pre>
-
-                            
-                             [code: unreachable-glyphs]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
 
     
 
@@ -1957,15 +1765,219 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
             
         
             
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️
+</span>
+
+    
+        <h3>
+    
+    Check the direction of the outermost contour in each glyph
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_direction&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                AnnapurnaSIL-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have a counter-clockwise outer contour:</p>
+<pre><code>* ordmasculine (U+00BA) has a counter-clockwise outer contour
+
+* uni0935093C094D.half (U+E165) has a counter-clockwise outer contour
+
+* uni0935093C094D0930094D.half (U+E167) has a counter-clockwise outer contour
+
+* uni0935094D.half (U+E168) has a counter-clockwise outer contour
+
+* uni0935094D0930094D.half (U+E16A) has a counter-clockwise outer contour
+
+* uni0970 (U+0970) has a counter-clockwise outer contour
+
+* uniFFFD (U+FFFD) has a counter-clockwise outer contour
+
+* uniFFFD (U+FFFD) has a counter-clockwise outer contour
+</code></pre>
+
+                            
+                             [code: ccw-outer-contour]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                AnnapurnaSIL-Bold.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have a counter-clockwise outer contour:</p>
+<pre><code>* Oslash (U+00D8) has a counter-clockwise outer contour
+
+* Oslash (U+00D8) has a counter-clockwise outer contour
+
+* uni0926094D0927 (U+E0F3) has a counter-clockwise outer contour
+
+* uni0938093C094D0930 (U+E183) has a counter-clockwise outer contour
+
+* uni0967 (U+0967) has a counter-clockwise outer contour
+
+* uni09672044096A (U+E1FA) has a counter-clockwise outer contour
+
+* uniA836 (U+A836) has a counter-clockwise outer contour
+
+* uniA837 (U+A837) has a counter-clockwise outer contour
+
+* uniA8E1 (U+A8E1) has a counter-clockwise outer contour
+
+* uniFFFD (U+FFFD) has a counter-clockwise outer contour
+
+* uniFFFD (U+FFFD) has a counter-clockwise outer contour
+</code></pre>
+
+                            
+                             [code: ccw-outer-contour]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩⏩⏩⏩
+    🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩
 </span>
 
     
 
     
 
+    
+
+    
+        <h3>
+    
+    Ensure dotted circle glyph is present and can attach marks.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                AnnapurnaSIL-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni094D0930.rakar
+</code></pre>
+
+                            
+                             [code: unattached-dotted-circle-marks]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                🔥
+                AnnapurnaSIL-Bold.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- uni094D0930.rakar
+</code></pre>
+
+                            
+                             [code: unattached-dotted-circle-marks]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -2006,7 +2018,7 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̐ j̀ j́ j̃ j̄ j̈</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̅ ĭ i̇ ǐ ị̅ ị̆ ị̇ ị̊ ị̌ ị̐ i̥̅ ĭ̥ i̥̇ i̥̊ ǐ̥ i̥̐ i̧̅ ĭ̧ i̧̇ i̧̊</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Makaa (Latn, 221,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Southern Kisi (Latn, 360,000 speakers), Mundani (Latn, 34,000 speakers), Nateni (Latn, 100,000 speakers), Mango (Latn, 77,000 speakers), Dan (Latn, 1,099,244 speakers), Ekpeye (Latn, 226,000 speakers), Ma’di (Latn, 584,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers), Mfumte (Latn, 79,000 speakers), Lugbara (Latn, 2,200,000 speakers), South Central Banda (Latn, 244,000 speakers), Fur (Latn, 1,230,163 speakers), Yala (Latn, 200,000 speakers), Aghem (Latn, 38,843 speakers), Sar (Latn, 500,000 speakers), Nzakara (Latn, 50,000 speakers), Gulay (Latn, 250,478 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ngbaka (Latn, 1,020,000 speakers), Avokaya (Latn, 100,000 speakers), Navajo (Latn, 166,319 speakers), Kom (Latn, 360,685 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Zapotec (Latn, 490,000 speakers), Dii (Latn, 71,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Basaa (Latn, 332,940 speakers), Dutch (Latn, 31,709,104 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Ejagham (Latn, 120,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Yala (Latn, 200,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Dan (Latn, 1,099,244 speakers), Basaa (Latn, 332,940 speakers), Makaa (Latn, 221,000 speakers), Gulay (Latn, 250,478 speakers), Ngbaka (Latn, 1,020,000 speakers), Mango (Latn, 77,000 speakers), Zapotec (Latn, 490,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Koonzime (Latn, 40,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Mfumte (Latn, 79,000 speakers), Mundani (Latn, 34,000 speakers), Dii (Latn, 71,000 speakers), Ekpeye (Latn, 226,000 speakers), Nzakara (Latn, 50,000 speakers), Ma’di (Latn, 584,000 speakers), Dutch (Latn, 31,709,104 speakers), Vute (Latn, 21,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Bafut (Latn, 158,146 speakers), Nateni (Latn, 100,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ejagham (Latn, 120,000 speakers), Sar (Latn, 500,000 speakers), Cicipu (Latn, 44,000 speakers), Avokaya (Latn, 100,000 speakers), Fur (Latn, 1,230,163 speakers), South Central Banda (Latn, 244,000 speakers), Aghem (Latn, 38,843 speakers), Lugbara (Latn, 2,200,000 speakers), Kom (Latn, 360,685 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Lithuanian (Latn, 2,357,094 speakers), Ebira (Latn, 2,200,000 speakers), Southern Kisi (Latn, 360,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -2037,7 +2049,7 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̐ j̀ j́ j̃ j̄ j̈</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̅ ĭ i̇ ǐ ị̅ ị̆ ị̇ ị̊ ị̌ ị̐ i̥̅ ĭ̥ i̥̇ i̥̊ ǐ̥ i̥̐ i̧̅ ĭ̧ i̧̇ i̧̊</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Makaa (Latn, 221,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Southern Kisi (Latn, 360,000 speakers), Mundani (Latn, 34,000 speakers), Nateni (Latn, 100,000 speakers), Mango (Latn, 77,000 speakers), Dan (Latn, 1,099,244 speakers), Ekpeye (Latn, 226,000 speakers), Ma’di (Latn, 584,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers), Mfumte (Latn, 79,000 speakers), Lugbara (Latn, 2,200,000 speakers), South Central Banda (Latn, 244,000 speakers), Fur (Latn, 1,230,163 speakers), Yala (Latn, 200,000 speakers), Aghem (Latn, 38,843 speakers), Sar (Latn, 500,000 speakers), Nzakara (Latn, 50,000 speakers), Gulay (Latn, 250,478 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ngbaka (Latn, 1,020,000 speakers), Avokaya (Latn, 100,000 speakers), Navajo (Latn, 166,319 speakers), Kom (Latn, 360,685 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Zapotec (Latn, 490,000 speakers), Dii (Latn, 71,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Basaa (Latn, 332,940 speakers), Dutch (Latn, 31,709,104 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Ejagham (Latn, 120,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Yala (Latn, 200,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Dan (Latn, 1,099,244 speakers), Basaa (Latn, 332,940 speakers), Makaa (Latn, 221,000 speakers), Gulay (Latn, 250,478 speakers), Ngbaka (Latn, 1,020,000 speakers), Mango (Latn, 77,000 speakers), Zapotec (Latn, 490,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Koonzime (Latn, 40,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Mfumte (Latn, 79,000 speakers), Mundani (Latn, 34,000 speakers), Dii (Latn, 71,000 speakers), Ekpeye (Latn, 226,000 speakers), Nzakara (Latn, 50,000 speakers), Ma’di (Latn, 584,000 speakers), Dutch (Latn, 31,709,104 speakers), Vute (Latn, 21,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Bafut (Latn, 158,146 speakers), Nateni (Latn, 100,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ejagham (Latn, 120,000 speakers), Sar (Latn, 500,000 speakers), Cicipu (Latn, 44,000 speakers), Avokaya (Latn, 100,000 speakers), Fur (Latn, 1,230,163 speakers), South Central Banda (Latn, 244,000 speakers), Aghem (Latn, 38,843 speakers), Lugbara (Latn, 2,200,000 speakers), Kom (Latn, 360,685 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Lithuanian (Latn, 2,357,094 speakers), Ebira (Latn, 2,200,000 speakers), Southern Kisi (Latn, 360,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -2409,7 +2421,7 @@ definitions.</p>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
 <li>U+0325 COMBINING RING BELOW: try adding syriac</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
@@ -2424,7 +2436,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, hebrew, kharoshthi, cham, coptic, syloti-nagri, arabic, kayah-li, sundanese, sora-sompeng, yi, kaithi, lisu</li>
+<li>U+2010 HYPHEN: try adding one of: kharoshthi, cham, hebrew, kayah-li, arabic, lisu, sora-sompeng, coptic, kaithi, sundanese, yi, armenian, syloti-nagri</li>
 <li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, yi, syloti-nagri</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
@@ -2432,7 +2444,7 @@ definitions.</p>
 <li>U+2027 HYPHENATION POINT: not included in any glyphset definition</li>
 <li>U+2028 LINE SEPARATOR: not included in any glyphset definition</li>
 <li>U+2029 PARAGRAPH SEPARATOR: not included in any glyphset definition</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: yi, mongolian</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: mongolian, yi</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2060 WORD JOINER: not included in any glyphset definition</li>
 <li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
@@ -2444,7 +2456,7 @@ definitions.</p>
 <li>U+2126 OHM SIGN: not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, manichaean, phags-pa</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: manichaean, yi, phags-pa</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -2507,7 +2519,7 @@ definitions.</p>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
 <li>U+0325 COMBINING RING BELOW: try adding syriac</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
@@ -2522,7 +2534,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, hebrew, kharoshthi, cham, coptic, syloti-nagri, arabic, kayah-li, sundanese, sora-sompeng, yi, kaithi, lisu</li>
+<li>U+2010 HYPHEN: try adding one of: kharoshthi, cham, hebrew, kayah-li, arabic, lisu, sora-sompeng, coptic, kaithi, sundanese, yi, armenian, syloti-nagri</li>
 <li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, yi, syloti-nagri</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
@@ -2530,7 +2542,7 @@ definitions.</p>
 <li>U+2027 HYPHENATION POINT: not included in any glyphset definition</li>
 <li>U+2028 LINE SEPARATOR: not included in any glyphset definition</li>
 <li>U+2029 PARAGRAPH SEPARATOR: not included in any glyphset definition</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: yi, mongolian</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: mongolian, yi</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2060 WORD JOINER: not included in any glyphset definition</li>
 <li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
@@ -2542,7 +2554,7 @@ definitions.</p>
 <li>U+2126 OHM SIGN: not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, manichaean, phags-pa</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: manichaean, yi, phags-pa</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -3246,7 +3258,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
             
                 <h2>Font File Checks</h2>
 <span class='section__emoji'>
-    🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    💥💥💥💥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
 </span>
 
     
@@ -3374,7 +3386,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                💥
                 AnnapurnaSIL-Regular.ttf
                 
             </summary>
@@ -3383,14 +3395,94 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>Regular missing from full name</p>
+                            <p>Failed with TypeError: cannot pickle 'generator' object</p>
+<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
+    subresults = list(subresults)
+                 ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/name.py&quot;, line 189, in com_google_fonts_check_font_names
+    expected_names = expected_font_names(ttFont, ttFonts)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/conditions.py&quot;, line 490, in expected_font_names
+    font_cp = deepcopy(ttFont)
+              ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 161, in deepcopy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+
+</code></pre>
 
                             
-                             [code: lacks-regular]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3400,6 +3492,113 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
+        <details>
+            <summary>
+                💥
+                AnnapurnaSIL-Bold.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with TypeError: cannot pickle 'generator' object</p>
+<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
+    subresults = list(subresults)
+                 ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/name.py&quot;, line 189, in com_google_fonts_check_font_names
+    expected_names = expected_font_names(ttFont, ttFonts)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/conditions.py&quot;, line 490, in expected_font_names
+    font_cp = deepcopy(ttFont)
+              ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 161, in deepcopy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -3724,6 +3923,242 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
     
 
+    
+
+    
+        <h3>
+    
+    Check the OS/2 usWeightClass is appropriate for the font&#39;s best SubFamily name.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/usweightclass&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                💥
+                AnnapurnaSIL-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with TypeError: cannot pickle 'generator' object</p>
+<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
+    subresults = list(subresults)
+                 ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/os2.py&quot;, line 251, in com_google_fonts_check_usweightclass
+    expected_names = expected_font_names(font.ttFont, ttFonts)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/conditions.py&quot;, line 490, in expected_font_names
+    font_cp = deepcopy(ttFont)
+              ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 161, in deepcopy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                💥
+                AnnapurnaSIL-Bold.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with TypeError: cannot pickle 'generator' object</p>
+<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
+    subresults = list(subresults)
+                 ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/os2.py&quot;, line 251, in com_google_fonts_check_usweightclass
+    expected_names = expected_font_names(font.ttFont, ttFonts)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/googlefonts/conditions.py&quot;, line 490, in expected_font_names
+    font_cp = deepcopy(ttFont)
+              ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
+    append(deepcopy(a, memo))
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 161, in deepcopy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     

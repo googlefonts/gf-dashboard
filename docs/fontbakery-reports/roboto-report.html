@@ -270,7 +270,7 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>0</td>
+        <td>2</td>
         <td>0</td>
         <td>28</td>
         <td>29</td>
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.4</p>
+<p>FontBakery version: 0.12.5</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -707,7 +707,7 @@ uni0488 (U+0488) and uni0489 (U+0489)</p>
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    💥💥🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -1123,7 +1123,7 @@ plus</p>
 <p>Width = 1124:
 notequal, equal</p>
 <p>Width = 1071:
-greater, greaterequal</p>
+greaterequal, greater</p>
 <p>Width = 1134:
 logicalnot</p>
 <p>Width = 1095:
@@ -1321,6 +1321,112 @@ approxequal</p>
     
 
     
+        <h3>
+    
+    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jan/30</div>
+    
+    Check tabular widths don&#39;t have kerning.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/tabular_kerning&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                💥
+                Roboto-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with KeyError: 'gid20'</p>
+<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
+    subresults = list(subresults)
+                 ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2560, in com_google_fonts_check_tabular_kerning
+    kerning = get_kerning([a, b])
+              ^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2486, in get_kerning
+    text = &quot;&quot;.join([chr(unicode_for_glyphs[glyph]) for glyph in glyph_list])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2486, in &lt;listcomp&gt;
+    text = &quot;&quot;.join([chr(unicode_for_glyphs[glyph]) for glyph in glyph_list])
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                💥
+                Roboto[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with KeyError: 'gid20'</p>
+<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
+    subresults = list(subresults)
+                 ^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2560, in com_google_fonts_check_tabular_kerning
+    kerning = get_kerning([a, b])
+              ^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2486, in get_kerning
+    text = &quot;&quot;.join([chr(unicode_for_glyphs[glyph]) for glyph in glyph_list])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2486, in &lt;listcomp&gt;
+    text = &quot;&quot;.join([chr(unicode_for_glyphs[glyph]) for glyph in glyph_list])
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
 
     
 
@@ -1343,9 +1449,141 @@ approxequal</p>
             
         
             
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️
+</span>
+
+    
+        <h3>
+    
+    Check the direction of the outermost contour in each glyph
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_direction&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Roboto-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have a counter-clockwise outer contour:</p>
+<pre><code>* copyright (U+00A9) has a counter-clockwise outer contour
+
+* currency (U+00A4) has a counter-clockwise outer contour
+
+* glyph00517 (U+E02C) has a counter-clockwise outer contour
+
+* glyph00517 (U+E02C) has a counter-clockwise outer contour
+
+* glyph00517 (U+E02C) has a counter-clockwise outer contour
+
+* glyph00519 (U+E02E) has a counter-clockwise outer contour
+
+* glyph00519 (U+E02E) has a counter-clockwise outer contour
+
+* glyph00532 (U+E03B) has a counter-clockwise outer contour
+
+* glyph00532 (U+E03B) has a counter-clockwise outer contour
+
+* glyph00544 (U+E047) has a counter-clockwise outer contour
+
+* glyph00544 (U+E047) has a counter-clockwise outer contour
+
+* registered (U+00AE) has a counter-clockwise outer contour
+</code></pre>
+
+                            
+                             [code: ccw-outer-contour]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Roboto[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have a counter-clockwise outer contour:</p>
+<pre><code>* copyright (U+00A9) has a counter-clockwise outer contour
+
+* currency (U+00A4) has a counter-clockwise outer contour
+
+* glyph00517 (U+E02C) has a counter-clockwise outer contour
+
+* glyph00517 (U+E02C) has a counter-clockwise outer contour
+
+* glyph00517 (U+E02C) has a counter-clockwise outer contour
+
+* glyph00519 (U+E02E) has a counter-clockwise outer contour
+
+* glyph00519 (U+E02E) has a counter-clockwise outer contour
+
+* glyph00532 (U+E03B) has a counter-clockwise outer contour
+
+* glyph00544 (U+E047) has a counter-clockwise outer contour
+
+* glyph00544 (U+E047) has a counter-clockwise outer contour
+
+* registered (U+00AE) has a counter-clockwise outer contour
+</code></pre>
+
+                            
+                             [code: ccw-outer-contour]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -1430,84 +1668,6 @@ approxequal</p>
         </details>
     
 
-    
-
-    
-        <h3>
-    
-    Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Roboto-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: j̣̀ j̣́ j̣̃ j̣̉ j̣̏ j̣҃ j̣҄ j̣҅ j̣҆ į̣̀ į̣́ į̣̃ į̣̉ į̣̏ į̣҃ į̣҄ į̣҅ į̣҆ і̣̀ і̣́</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Southern Kisi (Latn, 360,000 speakers), Ekpeye (Latn, 226,000 speakers), Mfumte (Latn, 79,000 speakers), Mango (Latn, 77,000 speakers), Bafut (Latn, 158,146 speakers), Kom (Latn, 360,685 speakers), Igbo (Latn, 27,823,640 speakers), Avokaya (Latn, 100,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ejagham (Latn, 120,000 speakers), Dan (Latn, 1,099,244 speakers), Yala (Latn, 200,000 speakers), Dii (Latn, 71,000 speakers), Navajo (Latn, 166,319 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Nzakara (Latn, 50,000 speakers), Makaa (Latn, 221,000 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ma’di (Latn, 584,000 speakers), Nateni (Latn, 100,000 speakers), Cicipu (Latn, 44,000 speakers), Basaa (Latn, 332,940 speakers), Ebira (Latn, 2,200,000 speakers), Dutch (Latn, 31,709,104 speakers), Zapotec (Latn, 490,000 speakers), Lithuanian (Latn, 2,357,094 speakers), South Central Banda (Latn, 244,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Mundani (Latn, 34,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Gulay (Latn, 250,478 speakers), Sar (Latn, 500,000 speakers), Fur (Latn, 1,230,163 speakers).</p>
-
-                            
-                             [code: soft-dotted]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Roboto[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: j̣̀ j̣́ j̣̃ j̣̉ j̣̏ j̣҃ j̣҄ j̣҅ j̣҆ į̣̀ į̣́ į̣̃ į̣̉ į̣̏ į̣҃ į̣҄ į̣҅ į̣҆ і̣̀ і̣́</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Southern Kisi (Latn, 360,000 speakers), Ekpeye (Latn, 226,000 speakers), Mfumte (Latn, 79,000 speakers), Mango (Latn, 77,000 speakers), Bafut (Latn, 158,146 speakers), Kom (Latn, 360,685 speakers), Igbo (Latn, 27,823,640 speakers), Avokaya (Latn, 100,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ejagham (Latn, 120,000 speakers), Dan (Latn, 1,099,244 speakers), Yala (Latn, 200,000 speakers), Dii (Latn, 71,000 speakers), Navajo (Latn, 166,319 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Nzakara (Latn, 50,000 speakers), Makaa (Latn, 221,000 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ma’di (Latn, 584,000 speakers), Nateni (Latn, 100,000 speakers), Cicipu (Latn, 44,000 speakers), Basaa (Latn, 332,940 speakers), Ebira (Latn, 2,200,000 speakers), Dutch (Latn, 31,709,104 speakers), Zapotec (Latn, 490,000 speakers), Lithuanian (Latn, 2,357,094 speakers), South Central Banda (Latn, 244,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Mundani (Latn, 34,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Gulay (Latn, 250,478 speakers), Sar (Latn, 500,000 speakers), Fur (Latn, 1,230,163 speakers).</p>
-
-                            
-                             [code: soft-dotted]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -1886,11 +2046,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh, yi</li>
+<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
 <li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
 <li>U+02F3 MODIFIER LETTER LOW RING: not included in any glyphset definition</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
@@ -1903,8 +2063,8 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, cham, arabic, sundanese, kharoshthi, syloti-nagri, coptic, sora-sompeng, yi, kayah-li, kaithi, hebrew, lisu</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, yi, syloti-nagri</li>
+<li>U+2010 HYPHEN: try adding one of: yi, cham, syloti-nagri, arabic, kharoshthi, kayah-li, lisu, armenian, coptic, sundanese, kaithi, sora-sompeng, hebrew</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, syloti-nagri, arabic</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2017 DOUBLE LOW LINE: not included in any glyphset definition</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
@@ -1991,11 +2151,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh, yi</li>
+<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
 <li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
 <li>U+02F3 MODIFIER LETTER LOW RING: not included in any glyphset definition</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
@@ -2008,8 +2168,8 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, cham, arabic, sundanese, kharoshthi, syloti-nagri, coptic, sora-sompeng, yi, kayah-li, kaithi, hebrew, lisu</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, yi, syloti-nagri</li>
+<li>U+2010 HYPHEN: try adding one of: yi, cham, syloti-nagri, arabic, kharoshthi, kayah-li, lisu, armenian, coptic, sundanese, kaithi, sora-sompeng, hebrew</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, syloti-nagri, arabic</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2017 DOUBLE LOW LINE: not included in any glyphset definition</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
@@ -4362,28 +4522,8 @@ Please consider mentioning note-worthy improvements made to the family recently.
 </thead>
 <tbody>
 <tr>
-<td align="left">Condensed Light Italic</td>
-<td align="left">wght=300.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed Black Italic</td>
-<td align="left">wght=900.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed ExtraBold Italic</td>
-<td align="left">wght=800.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed Medium Italic</td>
-<td align="left">wght=500.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed Thin Italic</td>
-<td align="left">wght=100.0, wdth=75.0</td>
+<td align="left">Condensed Bold Italic</td>
+<td align="left">wght=700.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
@@ -4392,18 +4532,38 @@ Please consider mentioning note-worthy improvements made to the family recently.
 <td align="left">N/A</td>
 </tr>
 <tr>
+<td align="left">Condensed SemiBold Italic</td>
+<td align="left">wght=600.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Condensed Thin Italic</td>
+<td align="left">wght=100.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
 <td align="left">Condensed ExtraLight Italic</td>
 <td align="left">wght=200.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Condensed Bold Italic</td>
-<td align="left">wght=700.0, wdth=75.0</td>
+<td align="left">Condensed Medium Italic</td>
+<td align="left">wght=500.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Condensed SemiBold Italic</td>
-<td align="left">wght=600.0, wdth=75.0</td>
+<td align="left">Condensed Light Italic</td>
+<td align="left">wght=300.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Condensed ExtraBold Italic</td>
+<td align="left">wght=800.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Condensed Black Italic</td>
+<td align="left">wght=900.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
@@ -4495,33 +4655,13 @@ Please consider mentioning note-worthy improvements made to the family recently.
 </thead>
 <tbody>
 <tr>
-<td align="left">Condensed SemiBold</td>
-<td align="left">wght=600.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed Medium</td>
-<td align="left">wght=500.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
 <td align="left">Condensed ExtraBold</td>
 <td align="left">wght=800.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Condensed Thin</td>
-<td align="left">wght=100.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed Light</td>
-<td align="left">wght=300.0, wdth=75.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Condensed Black</td>
-<td align="left">wght=900.0, wdth=75.0</td>
+<td align="left">Condensed SemiBold</td>
+<td align="left">wght=600.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
@@ -4530,13 +4670,33 @@ Please consider mentioning note-worthy improvements made to the family recently.
 <td align="left">N/A</td>
 </tr>
 <tr>
+<td align="left">Condensed Medium</td>
+<td align="left">wght=500.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Condensed Thin</td>
+<td align="left">wght=100.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
 <td align="left">Condensed Bold</td>
 <td align="left">wght=700.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
+<td align="left">Condensed Black</td>
+<td align="left">wght=900.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
 <td align="left">Condensed ExtraLight</td>
 <td align="left">wght=200.0, wdth=75.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Condensed Light</td>
+<td align="left">wght=300.0, wdth=75.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
