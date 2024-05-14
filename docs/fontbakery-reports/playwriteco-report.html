@@ -272,11 +272,11 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>2</td>
-        <td>9</td>
+        <td>3</td>
+        <td>10</td>
         <td>49</td>
         <td>8</td>
-        <td>178</td>
+        <td>177</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.5</p>
+<p>FontBakery version: 0.12.6</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -835,8 +835,10 @@ immediately.
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩⏩⏩ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩ℹ️
 </span>
+
+    
 
     
 
@@ -937,6 +939,149 @@ immediately.
 
     
 
+    
+
+    
+        <h3>
+    
+    Check font contains no unreachable glyphs
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- A.cur_locl
+
+- A.dec_locl
+
+- F.cur_locl
+
+- G.cur_locl
+
+- G.cur_ro
+
+- G_locl
+
+- G_locl.au
+
+- IJacute
+
+- I_locl
+
+- M_locl
+
+- M_locl.au
+
+- Q.cur_locl
+
+- Q.dec_pt
+
+- Q_locl
+
+- Q_locl.ini
+
+- T.cur_locl
+
+- U_locl.au
+
+- X.dec_locl
+
+- X.dec_ro
+
+- Y_locl
+
+- Z.dec_locl
+
+- b.jmc_dk
+
+- caroncomb_locl
+
+- cnct.ful_t.lop_de_e
+
+- cnct.mod_e_z.ful
+
+- f.alt1.mrr
+
+- f.ful_de
+
+- f.ful_pe
+
+- f.ful_pl
+
+- four.alt1
+
+- i.loclTRK
+
+- ijacute
+
+- k.lop_pe
+
+- l.alt1.lop
+
+- nine.alt1
+
+- one.alt1
+
+- p.mrr_ca
+
+- q.jmc_ar
+
+- q.mod_au
+
+- seven.alt1
+
+- t.lop_de
+
+- t.lop_ee
+
+- uni0312.case
+
+- v.ful_at
+
+- w.ful_at
+
+- x.cnt_de
+
+- x.cnt_ro
+
+- y_de
+
+- z.mod_ro
+</code></pre>
+
+                            
+                             [code: unreachable-glyphs]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     
@@ -1231,7 +1376,7 @@ definitions.</p>
             
                 <h2>Description Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️⏩⏩⏩⏩⏩⏩⏩⏩
+    🔥🔥⚠️⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -1244,6 +1389,51 @@ definitions.</p>
 
     
 
+    
+
+    
+        <h3>
+    
+    Check for presence of an ARTICLE.en_us.html file
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/has_article&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                PlaywriteCO[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font has both a DESCRIPTION.en_us.html file and an ARTICLE.en_us.html file. In this case the description must be deleted.</p>
+
+                            
+                             [code: description-and-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
 
     

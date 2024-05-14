@@ -273,9 +273,9 @@ you're checking.</p>
         <td>0</td>
         <td>0</td>
         <td>5</td>
+        <td>11</td>
+        <td>43</td>
         <td>10</td>
-        <td>44</td>
-        <td>9</td>
         <td>178</td>
     </tr>
     <tr>
@@ -283,7 +283,7 @@ you're checking.</p>
         <td>0%</td>
         <td>2%</td>
         <td>4%</td>
-        <td>18%</td>
+        <td>17%</td>
         <td>4%</td>
         <td>72%</td>
     </tr>
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.5</p>
+<p>FontBakery version: 0.12.6</p>
         
             
         
@@ -319,8 +319,10 @@ immediately.
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩⏩⏩ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩ℹ️
 </span>
+
+    
 
     
 
@@ -443,6 +445,63 @@ lessequal, greaterequal</p>
     
 
     
+        <h3>
+    
+    Check font contains no unreachable glyphs
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Danfo[ELSH].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- _part.cut
+
+- dotlessi_ogonek
+
+- hookleft.part
+
+- hookright.part
+
+- rightHorn.part
+
+- u1FA9D.part
+</code></pre>
+
+                            
+                             [code: unreachable-glyphs]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
 
     
 
@@ -497,7 +556,7 @@ lessequal, greaterequal</p>
 
                             <span class='details_text'>
                             <p>The following glyphs have a counter-clockwise outer contour:</p>
-<pre><code>* _part.cut (U+E0C1) has a counter-clockwise outer contour
+<pre><code>* _part.cut has a counter-clockwise outer contour
 
 * infinity (U+221E) has a counter-clockwise outer contour
 
@@ -672,7 +731,7 @@ lessequal, greaterequal</p>
             
                 <h2>Metadata Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️⚠️⏩⏩⏩ℹ️
+    🔥⚠️⚠️⏩⏩ℹ️
 </span>
 
     
@@ -905,12 +964,12 @@ definitions.</p>
 <li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
 <li>U+02EE MODIFIER LETTER DOUBLE APOSTROPHE: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, tifinagh, math, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, malayalam, canadian-aboriginal, tifinagh, syriac, old-permic, math</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tifinagh, old-permic, malayalam, syriac, math, canadian-aboriginal, tai-le</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+030D COMBINING VERTICAL LINE ABOVE: not included in any glyphset definition</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
 <li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
@@ -919,7 +978,7 @@ definitions.</p>
 <li>U+0313 COMBINING COMMA ABOVE: try adding old-permic</li>
 <li>U+0315 COMBINING COMMA ABOVE RIGHT: not included in any glyphset definition</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, cherokee</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, syriac</li>
 <li>U+0325 COMBINING RING BELOW: try adding syriac</li>
 <li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
@@ -927,17 +986,17 @@ definitions.</p>
 <li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding syriac</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
 <li>U+032F COMBINING INVERTED BREVE BELOW: not included in any glyphset definition</li>
-<li>U+0330 COMBINING TILDE BELOW: try adding one of: syriac, cherokee, math</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: gothic, cherokee, caucasian-albanian, tifinagh, syriac</li>
+<li>U+0330 COMBINING TILDE BELOW: try adding one of: math, cherokee, syriac</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, tifinagh, syriac, cherokee, gothic</li>
 <li>U+0332 COMBINING LOW LINE: not included in any glyphset definition</li>
 <li>U+0334 COMBINING TILDE OVERLAY: not included in any glyphset definition</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0358 COMBINING DOT ABOVE RIGHT: try adding osage</li>
-<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: elbasan, greek, math</li>
-<li>U+03A7 GREEK CAPITAL LETTER CHI: try adding one of: elbasan, greek, math</li>
-<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
-<li>U+03C7 GREEK SMALL LETTER CHI: try adding one of: greek, math</li>
+<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: elbasan, math, greek</li>
+<li>U+03A7 GREEK CAPITAL LETTER CHI: try adding one of: elbasan, math, greek</li>
+<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: math, greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: math, greek, yi</li>
+<li>U+03C7 GREEK SMALL LETTER CHI: try adding one of: math, greek</li>
 <li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
 <li>U+1D58 MODIFIER LETTER SMALL U: not included in any glyphset definition</li>
 <li>U+1D5B MODIFIER LETTER SMALL V: not included in any glyphset definition</li>
@@ -1021,10 +1080,10 @@ definitions.</p>
 <li>U+25E6 WHITE BULLET: try adding symbols</li>
 <li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
 <li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: chinese-traditional, phags-pa, chinese-simplified, tai-le, yi, chinese-hongkong, japanese</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: chinese-traditional, phags-pa, chinese-simplified, tai-le, yi, chinese-hongkong, japanese</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: chinese-simplified, chinese-traditional, japanese, yi, chinese-hongkong, tai-le, phags-pa</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: chinese-simplified, chinese-traditional, japanese, yi, chinese-hongkong, tai-le, phags-pa</li>
 <li>U+AB53 LATIN SMALL LETTER CHI: not included in any glyphset definition</li>
-<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: japanese, chinese-simplified</li>
+<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: chinese-simplified, japanese</li>
 </ul>
 <p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
 
@@ -8671,7 +8730,7 @@ definitions.</p>
             
                 <h2>Description Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️ℹ️
+    🔥⚠️ℹ️ℹ️
 </span>
 
     
@@ -8783,13 +8842,13 @@ definitions.</p>
 <td align="left">ELSH=0.0</td>
 </tr>
 <tr>
-<td align="left">Comb</td>
-<td align="left">ELSH=50.0</td>
+<td align="left">Claw</td>
+<td align="left">ELSH=100.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Claw</td>
-<td align="left">ELSH=100.0</td>
+<td align="left">Comb</td>
+<td align="left">ELSH=50.0</td>
 <td align="left">N/A</td>
 </tr>
 </tbody>

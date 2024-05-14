@@ -275,7 +275,7 @@ you're checking.</p>
         <td>3</td>
         <td>10</td>
         <td>39</td>
-        <td>9</td>
+        <td>10</td>
         <td>184</td>
     </tr>
     <tr>
@@ -285,7 +285,7 @@ you're checking.</p>
         <td>4%</td>
         <td>16%</td>
         <td>4%</td>
-        <td>75%</td>
+        <td>74%</td>
     </tr>
 </table>
         
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.5</p>
+<p>FontBakery version: 0.12.6</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -675,21 +675,21 @@ immediately.
 
                             <span class='details_text'>
                             <p>Interpolation issues were found in the font:</p>
-<pre><code>- Contour 1 start point differs in glyph 'section' between location wght=100 and location wght=900
-
-- Contour 0 point 0 in glyph 'glyph00838' has a kink between location wght=100 and location wght=900
-
-- Contour 0 in glyph 'glyph00788': becomes underweight between wght=100 and wght=900.
+<pre><code>- Contour 0 in glyph 'glyph00788': becomes underweight between wght=100 and wght=900.
 
 - Contour 0 in glyph 'glyph00840': becomes underweight between wght=100 and wght=900.
 
-- Contour 0 point 22 in glyph 'glyph00770' has a kink between location wght=100 and location wght=900
+- Contour 0 point 0 in glyph 'glyph00838' has a kink between location wght=100 and location wght=900
 
-- Contour 0 start point differs in glyph 'glyph00849' between location wght=100 and location wght=900
+- Contour 0 point 22 in glyph 'glyph00770' has a kink between location wght=100 and location wght=900
 
 - Contour 0 start point differs in glyph 'glyph00793' between location wght=100 and location wght=900
 
 - Contour 0 start point differs in glyph 'glyph00836' between location wght=100 and location wght=900
+
+- Contour 0 start point differs in glyph 'glyph00849' between location wght=100 and location wght=900
+
+- Contour 1 start point differs in glyph 'section' between location wght=100 and location wght=900
 </code></pre>
 
                             
@@ -701,6 +701,8 @@ immediately.
                 </ul>
             </div>
         </details>
+    
+
     
 
     
@@ -744,7 +746,7 @@ immediately.
                             <p>The most common width is 550 among a set of 2 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 540:
-lessequal, less</p>
+less, lessequal</p>
 <p>Width = 530:
 greater, greaterequal</p>
 <p>Width = 489:
@@ -831,13 +833,13 @@ notequal</p>
 <pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
     subresults = list(subresults)
                  ^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2560, in com_google_fonts_check_tabular_kerning
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2535, in com_google_fonts_check_tabular_kerning
     kerning = get_kerning([a, b])
               ^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2486, in get_kerning
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2461, in get_kerning
     text = &quot;&quot;.join([chr(unicode_for_glyphs[glyph]) for glyph in glyph_list])
                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2486, in &lt;listcomp&gt;
+  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2461, in &lt;listcomp&gt;
     text = &quot;&quot;.join([chr(unicode_for_glyphs[glyph]) for glyph in glyph_list])
                         ~~~~~~~~~~~~~~~~~~^^^^^^^
 
@@ -915,7 +917,7 @@ notequal</p>
 
                             <span class='details_text'>
                             <p>The following glyphs have a counter-clockwise outer contour:</p>
-<pre><code>* glyph00835 (U+E063) has a counter-clockwise outer contour
+<pre><code>* glyph00835 has a counter-clockwise outer contour
 </code></pre>
 
                             
@@ -1174,7 +1176,7 @@ definitions.</p>
 <li>U+02BE MODIFIER LETTER RIGHT HALF RING: not included in any glyphset definition</li>
 <li>U+02BF MODIFIER LETTER LEFT HALF RING: not included in any glyphset definition</li>
 <li>U+02C0 MODIFIER LETTER GLOTTAL STOP: not included in any glyphset definition</li>
-<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, yi, canadian-aboriginal</li>
 <li>U+02C8 MODIFIER LETTER VERTICAL LINE: not included in any glyphset definition</li>
 <li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
 <li>U+02CA MODIFIER LETTER ACUTE ACCENT: not included in any glyphset definition</li>
@@ -1190,9 +1192,9 @@ definitions.</p>
 <li>U+02EE MODIFIER LETTER DOUBLE APOSTROPHE: not included in any glyphset definition</li>
 <li>U+02FB MODIFIER LETTER BEGIN LOW TONE: not included in any glyphset definition</li>
 <li>U+02FC MODIFIER LETTER END LOW TONE: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, tifinagh, math</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, syriac, coptic, tifinagh, tai-le, old-permic, math, canadian-aboriginal</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, canadian-aboriginal, syriac, tifinagh, old-permic, math, malayalam</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
 <li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
@@ -1205,7 +1207,7 @@ definitions.</p>
 <li>U+0315 COMBINING COMMA ABOVE RIGHT: not included in any glyphset definition</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
 <li>U+0320 COMBINING MINUS SIGN BELOW: try adding syriac</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, cherokee</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, syriac</li>
 <li>U+0325 COMBINING RING BELOW: try adding syriac</li>
 <li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
@@ -1213,8 +1215,8 @@ definitions.</p>
 <li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding syriac</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
 <li>U+032F COMBINING INVERTED BREVE BELOW: not included in any glyphset definition</li>
-<li>U+0330 COMBINING TILDE BELOW: try adding one of: syriac, cherokee, math</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: syriac, cherokee, gothic, tifinagh, caucasian-albanian</li>
+<li>U+0330 COMBINING TILDE BELOW: try adding one of: cherokee, syriac, math</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: cherokee, caucasian-albanian, syriac, tifinagh, gothic</li>
 <li>U+0332 COMBINING LOW LINE: not included in any glyphset definition</li>
 <li>U+0334 COMBINING TILDE OVERLAY: not included in any glyphset definition</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
@@ -1258,9 +1260,9 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: modi, chakma, tagbanwa, khmer, batak, balinese, tifinagh, buginese, devanagari, meetei-mayek, gurmukhi, kayah-li, myanmar, hebrew, sogdian, thai, telugu, khudawadi, cham, kaithi, buhid, takri, bhaiksuki, malayalam, kharoshthi, khojki, tamil, thaana, nko, yi, tibetan, new-tai-lue, tai-le, gunjala-gondi, lepcha, bengali, kannada, brahmi, arabic, phags-pa, sharada, siddham, tagalog, mahajani, duployan, warang-citi, hatran, lao, masaram-gondi, psalter-pahlavi, limbu, saurashtra, mongolian, grantha, newa, tai-tham, hanunoo, mandaic, tai-viet, zanabazar-square, sinhala, syriac, gujarati, rejang, tirhuta, manichaean, avestan, sundanese, oriya, pahawh-hmong, javanese, hanifi-rohingya, dogra, syloti-nagri</li>
-<li>U+200D ZERO WIDTH JOINER: try adding one of: modi, chakma, old-hungarian, khmer, tagbanwa, batak, balinese, tifinagh, buginese, devanagari, meetei-mayek, gurmukhi, kayah-li, myanmar, hebrew, sogdian, thai, telugu, khudawadi, cham, kaithi, buhid, takri, bhaiksuki, malayalam, kharoshthi, khojki, tamil, thaana, nko, yi, tibetan, new-tai-lue, tai-le, gunjala-gondi, lepcha, bengali, kannada, brahmi, arabic, phags-pa, sharada, siddham, tagalog, mahajani, duployan, warang-citi, lao, masaram-gondi, psalter-pahlavi, limbu, saurashtra, mongolian, grantha, newa, tai-tham, hanunoo, mandaic, tai-viet, zanabazar-square, sinhala, syriac, gujarati, rejang, tirhuta, manichaean, avestan, sundanese, oriya, pahawh-hmong, javanese, hanifi-rohingya, dogra, syloti-nagri</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, syloti-nagri, arabic</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: kayah-li, batak, takri, gujarati, mandaic, limbu, mongolian, oriya, syriac, khojki, hanifi-rohingya, mahajani, myanmar, sharada, thai, balinese, tirhuta, chakma, avestan, siddham, grantha, tai-le, tai-tham, brahmi, dogra, phags-pa, arabic, hatran, manichaean, masaram-gondi, hanunoo, kaithi, buginese, duployan, javanese, tibetan, devanagari, tifinagh, hebrew, psalter-pahlavi, sogdian, bhaiksuki, sinhala, kannada, kharoshthi, gunjala-gondi, new-tai-lue, sundanese, tai-viet, tamil, modi, pahawh-hmong, warang-citi, yi, cham, buhid, tagalog, meetei-mayek, telugu, nko, malayalam, gurmukhi, khmer, lao, newa, saurashtra, syloti-nagri, zanabazar-square, thaana, khudawadi, rejang, lepcha, bengali, tagbanwa</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: kayah-li, batak, takri, gujarati, mandaic, limbu, mongolian, oriya, syriac, khojki, hanifi-rohingya, mahajani, myanmar, sharada, thai, balinese, tirhuta, chakma, avestan, siddham, grantha, tai-le, tai-tham, brahmi, dogra, phags-pa, arabic, manichaean, masaram-gondi, hanunoo, kaithi, buginese, duployan, javanese, tibetan, devanagari, tifinagh, hebrew, psalter-pahlavi, sogdian, bhaiksuki, sinhala, kannada, kharoshthi, gunjala-gondi, new-tai-lue, sundanese, tai-viet, tamil, modi, pahawh-hmong, warang-citi, yi, cham, buhid, tagalog, meetei-mayek, telugu, nko, malayalam, gurmukhi, khmer, lao, newa, saurashtra, syloti-nagri, zanabazar-square, thaana, old-hungarian, khudawadi, rejang, lepcha, bengali, tagbanwa</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: syloti-nagri, yi, arabic</li>
 <li>U+2016 DOUBLE VERTICAL LINE: not included in any glyphset definition</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+202F NARROW NO-BREAK SPACE: try adding one of: yi, mongolian</li>
@@ -1327,7 +1329,7 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: modi, khmer, balinese, old-permic, canadian-aboriginal, elbasan, kaithi, new-tai-lue, tai-le, lepcha, phags-pa, kannada, mahajani, psalter-pahlavi, limbu, tai-viet, osage, adlam, javanese, mende-kikakui, dogra, buginese, meetei-mayek, kayah-li, sogdian, telugu, khudawadi, tamil, marchen, bhaiksuki, wancho, math, tagalog, symbols, duployan, music, masaram-gondi, saurashtra, coptic, sinhala, syriac, gujarati, manichaean, oriya, syloti-nagri, tifinagh, myanmar, takri, cham, khojki, yi, sharada, brahmi, mongolian, newa, zanabazar-square, hanunoo, mandaic, sundanese, hebrew, caucasian-albanian, armenian, tai-tham, chakma, tagbanwa, batak, devanagari, thai, gurmukhi, miao, buhid, ahom, malayalam, kharoshthi, thaana, nko, tibetan, gunjala-gondi, bengali, siddham, warang-citi, lao, grantha, bassa-vah, rejang, tirhuta, pahawh-hmong, hanifi-rohingya, soyombo</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: thai, khojki, hanifi-rohingya, tai-tham, brahmi, manichaean, masaram-gondi, hanunoo, tibetan, buginese, bhaiksuki, gunjala-gondi, modi, buhid, wancho, syloti-nagri, adlam, khudawadi, rejang, coptic, gujarati, mahajani, chakma, math, canadian-aboriginal, dogra, tifinagh, devanagari, psalter-pahlavi, sogdian, sinhala, sundanese, tamil, new-tai-lue, elbasan, tagalog, zanabazar-square, lepcha, mende-kikakui, marchen, tai-le, takri, mandaic, symbols, tirhuta, balinese, grantha, phags-pa, duployan, hebrew, kharoshthi, tai-viet, pahawh-hmong, khmer, bengali, tagbanwa, batak, osage, syriac, limbu, mongolian, music, oriya, myanmar, sharada, bassa-vah, ahom, siddham, kaithi, javanese, armenian, kannada, caucasian-albanian, miao, warang-citi, yi, cham, soyombo, meetei-mayek, telugu, nko, malayalam, gurmukhi, lao, newa, saurashtra, thaana, old-permic, kayah-li</li>
 <li>U+A717 MODIFIER LETTER DOT VERTICAL BAR: not included in any glyphset definition</li>
 <li>U+A718 MODIFIER LETTER DOT SLASH: not included in any glyphset definition</li>
 <li>U+A719 MODIFIER LETTER DOT HORIZONTAL BAR: not included in any glyphset definition</li>
@@ -8881,7 +8883,7 @@ definitions.</p>
             
                 <h2>Description Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️ℹ️
+    🔥⚠️ℹ️ℹ️
 </span>
 
     
