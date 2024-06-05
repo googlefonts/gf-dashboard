@@ -270,22 +270,22 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>6</td>
+        <td>4</td>
         <td>0</td>
-        <td>16</td>
-        <td>29</td>
+        <td>14</td>
+        <td>27</td>
         <td>120</td>
         <td>19</td>
-        <td>283</td>
+        <td>282</td>
     </tr>
     <tr>
         <td>1%</td>
         <td>0%</td>
         <td>3%</td>
         <td>6%</td>
-        <td>25%</td>
+        <td>26%</td>
         <td>4%</td>
-        <td>60%</td>
+        <td>61%</td>
     </tr>
 </table>
         
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.6</p>
+<p>FontBakery version: 0.12.7</p>
         
             
         
@@ -319,7 +319,7 @@ immediately.
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    💥💥🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -1525,7 +1525,7 @@ immediately.
                             <p>The most common width is 1535 among a set of 9 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 1843:
-notequal, approxequal, lessequal, greaterequal</p>
+approxequal, notequal, greaterequal, lessequal</p>
 
                             
                              [code: width-outliers]
@@ -1557,7 +1557,7 @@ notequal, approxequal, lessequal, greaterequal</p>
                             <p>The most common width is 1535 among a set of 9 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 1843:
-notequal, approxequal, lessequal, greaterequal</p>
+approxequal, notequal, greaterequal, lessequal</p>
 
                             
                              [code: width-outliers]
@@ -1664,238 +1664,6 @@ notequal, approxequal, lessequal, greaterequal</p>
 
     
 
-    
-
-    
-        <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jan/30</div>
-    
-    Check tabular widths don&#39;t have kerning.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/tabular_kerning&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                💥
-                AnnapurnaSIL-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            💥 ERROR
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Failed with TypeError: cannot pickle 'generator' object</p>
-<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
-    subresults = list(subresults)
-                 ^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2403, in com_google_fonts_check_tabular_kerning
-    ttFont_copy = copy.deepcopy(ttFont)
-                  ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
-    append(deepcopy(a, memo))
-           ^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
-    append(deepcopy(a, memo))
-           ^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 161, in deepcopy
-    rv = reductor(4)
-         ^^^^^^^^^^^
-
-</code></pre>
-
-                            
-                             [code: failed-check]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                💥
-                AnnapurnaSIL-Bold.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            💥 ERROR
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Failed with TypeError: cannot pickle 'generator' object</p>
-<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 213, in _run_check
-    subresults = list(subresults)
-                 ^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/fontbakery/checks/universal/__init__.py&quot;, line 2403, in com_google_fonts_check_tabular_kerning
-    ttFont_copy = copy.deepcopy(ttFont)
-                  ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
-    append(deepcopy(a, memo))
-           ^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 172, in deepcopy
-    y = _reconstruct(x, memo, *rv)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 271, in _reconstruct
-    state = deepcopy(state, memo)
-            ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 231, in _deepcopy_dict
-    y[deepcopy(key, memo)] = deepcopy(value, memo)
-                             ^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 146, in deepcopy
-    y = copier(x, memo)
-        ^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 206, in _deepcopy_list
-    append(deepcopy(a, memo))
-           ^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/copy.py&quot;, line 161, in deepcopy
-    rv = reductor(4)
-         ^^^^^^^^^^^
-
-</code></pre>
-
-                            
-                             [code: failed-check]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -2191,128 +1959,6 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
             
         
             
-                <h2>Outline Checks</h2>
-<span class='section__emoji'>
-    ⚠️⚠️
-</span>
-
-    
-        <h3>
-    
-    Check the direction of the outermost contour in each glyph
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_direction&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                AnnapurnaSIL-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs have a counter-clockwise outer contour:</p>
-<pre><code>* ordmasculine (U+00BA) has a counter-clockwise outer contour
-
-* uni0935093C094D.half has a counter-clockwise outer contour
-
-* uni0935093C094D0930094D.half has a counter-clockwise outer contour
-
-* uni0935094D.half has a counter-clockwise outer contour
-
-* uni0935094D0930094D.half has a counter-clockwise outer contour
-
-* uni0970 (U+0970) has a counter-clockwise outer contour
-
-* uniFFFD (U+FFFD) has a counter-clockwise outer contour
-
-* uniFFFD (U+FFFD) has a counter-clockwise outer contour
-</code></pre>
-
-                            
-                             [code: ccw-outer-contour]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                AnnapurnaSIL-Bold.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs have a counter-clockwise outer contour:</p>
-<pre><code>* Oslash (U+00D8) has a counter-clockwise outer contour
-
-* Oslash (U+00D8) has a counter-clockwise outer contour
-
-* uni0926094D0927 has a counter-clockwise outer contour
-
-* uni0938093C094D0930 has a counter-clockwise outer contour
-
-* uni0967 (U+0967) has a counter-clockwise outer contour
-
-* uni09672044096A has a counter-clockwise outer contour
-
-* uniA836 (U+A836) has a counter-clockwise outer contour
-
-* uniA837 (U+A837) has a counter-clockwise outer contour
-
-* uniA8E1 (U+A8E1) has a counter-clockwise outer contour
-
-* uniFFFD (U+FFFD) has a counter-clockwise outer contour
-
-* uniFFFD (U+FFFD) has a counter-clockwise outer contour
-</code></pre>
-
-                            
-                             [code: ccw-outer-contour]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-            
         
             
                 <h2>Shaping Checks</h2>
@@ -2364,7 +2010,7 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̐ j̀ j́ j̃ j̄ j̈</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̅ ĭ i̇ ǐ ị̅ ị̆ ị̇ ị̊ ị̌ ị̐ i̥̅ ĭ̥ i̥̇ i̥̊ ǐ̥ i̥̐ i̧̅ ĭ̧ i̧̇ i̧̊</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Gulay (Latn, 250,478 speakers), Mango (Latn, 77,000 speakers), Basaa (Latn, 332,940 speakers), Koonzime (Latn, 40,000 speakers), Aghem (Latn, 38,843 speakers), Vute (Latn, 21,000 speakers), South Central Banda (Latn, 244,000 speakers), Dan (Latn, 1,099,244 speakers), Sar (Latn, 500,000 speakers), Ekpeye (Latn, 226,000 speakers), Nzakara (Latn, 50,000 speakers), Yala (Latn, 200,000 speakers), Mfumte (Latn, 79,000 speakers), Mundani (Latn, 34,000 speakers), Navajo (Latn, 166,319 speakers), Southern Kisi (Latn, 360,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ejagham (Latn, 120,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ebira (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ma’di (Latn, 584,000 speakers), Igbo (Latn, 27,823,640 speakers), Avokaya (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Cicipu (Latn, 44,000 speakers), Kom (Latn, 360,685 speakers), Dii (Latn, 71,000 speakers), Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers), Fur (Latn, 1,230,163 speakers), Zapotec (Latn, 490,000 speakers), Nateni (Latn, 100,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Southern Kisi (Latn, 360,000 speakers), Ma’di (Latn, 584,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Lugbara (Latn, 2,200,000 speakers), Mfumte (Latn, 79,000 speakers), Ekpeye (Latn, 226,000 speakers), Igbo (Latn, 27,823,640 speakers), Fur (Latn, 1,230,163 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ebira (Latn, 2,200,000 speakers), Avokaya (Latn, 100,000 speakers), Aghem (Latn, 38,843 speakers), Dutch (Latn, 31,709,104 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Yala (Latn, 200,000 speakers), Vute (Latn, 21,000 speakers), Nateni (Latn, 100,000 speakers), Nzakara (Latn, 50,000 speakers), Gulay (Latn, 250,478 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Dii (Latn, 71,000 speakers), Mundani (Latn, 34,000 speakers), Sar (Latn, 500,000 speakers), Koonzime (Latn, 40,000 speakers), Zapotec (Latn, 490,000 speakers), Mango (Latn, 77,000 speakers), Dan (Latn, 1,099,244 speakers), Kom (Latn, 360,685 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ejagham (Latn, 120,000 speakers), Basaa (Latn, 332,940 speakers), South Central Banda (Latn, 244,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Navajo (Latn, 166,319 speakers), Ngbaka (Latn, 1,020,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -2395,7 +2041,7 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̐ j̀ j́ j̃ j̄ j̈</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̅ ĭ i̇ ǐ ị̅ ị̆ ị̇ ị̊ ị̌ ị̐ i̥̅ ĭ̥ i̥̇ i̥̊ ǐ̥ i̥̐ i̧̅ ĭ̧ i̧̇ i̧̊</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Gulay (Latn, 250,478 speakers), Mango (Latn, 77,000 speakers), Basaa (Latn, 332,940 speakers), Koonzime (Latn, 40,000 speakers), Aghem (Latn, 38,843 speakers), Vute (Latn, 21,000 speakers), South Central Banda (Latn, 244,000 speakers), Dan (Latn, 1,099,244 speakers), Sar (Latn, 500,000 speakers), Ekpeye (Latn, 226,000 speakers), Nzakara (Latn, 50,000 speakers), Yala (Latn, 200,000 speakers), Mfumte (Latn, 79,000 speakers), Mundani (Latn, 34,000 speakers), Navajo (Latn, 166,319 speakers), Southern Kisi (Latn, 360,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ejagham (Latn, 120,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ebira (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ma’di (Latn, 584,000 speakers), Igbo (Latn, 27,823,640 speakers), Avokaya (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Cicipu (Latn, 44,000 speakers), Kom (Latn, 360,685 speakers), Dii (Latn, 71,000 speakers), Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers), Fur (Latn, 1,230,163 speakers), Zapotec (Latn, 490,000 speakers), Nateni (Latn, 100,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Southern Kisi (Latn, 360,000 speakers), Ma’di (Latn, 584,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Lugbara (Latn, 2,200,000 speakers), Mfumte (Latn, 79,000 speakers), Ekpeye (Latn, 226,000 speakers), Igbo (Latn, 27,823,640 speakers), Fur (Latn, 1,230,163 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ebira (Latn, 2,200,000 speakers), Avokaya (Latn, 100,000 speakers), Aghem (Latn, 38,843 speakers), Dutch (Latn, 31,709,104 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Yala (Latn, 200,000 speakers), Vute (Latn, 21,000 speakers), Nateni (Latn, 100,000 speakers), Nzakara (Latn, 50,000 speakers), Gulay (Latn, 250,478 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Dii (Latn, 71,000 speakers), Mundani (Latn, 34,000 speakers), Sar (Latn, 500,000 speakers), Koonzime (Latn, 40,000 speakers), Zapotec (Latn, 490,000 speakers), Mango (Latn, 77,000 speakers), Dan (Latn, 1,099,244 speakers), Kom (Latn, 360,685 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ejagham (Latn, 120,000 speakers), Basaa (Latn, 332,940 speakers), South Central Banda (Latn, 244,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Navajo (Latn, 166,319 speakers), Ngbaka (Latn, 1,020,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -2423,7 +2069,7 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
     
     <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
     
-    Validate location, size and resolution of article images.
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
 <div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
 
@@ -2503,7 +2149,7 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
             
                 <h2>Metadata Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    🔥🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -2716,8 +2362,6 @@ uni0915094D0937094D.half.archaic, uni0915094D0937094D0930094D.half, uni0919094D0
     
 
     
-
-    
         <h3>
     
     Check for codepoints not covered by METADATA subsets.
@@ -2782,7 +2426,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: sundanese, cham, sora-sompeng, lisu, syloti-nagri, hebrew, coptic, kaithi, kharoshthi, yi, arabic, armenian, kayah-li</li>
+<li>U+2010 HYPHEN: try adding one of: arabic, coptic, kayah-li, cham, armenian, kaithi, kharoshthi, sora-sompeng, yi, syloti-nagri, sundanese, hebrew, lisu</li>
 <li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, syloti-nagri, yi</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
@@ -2790,7 +2434,7 @@ definitions.</p>
 <li>U+2027 HYPHENATION POINT: not included in any glyphset definition</li>
 <li>U+2028 LINE SEPARATOR: not included in any glyphset definition</li>
 <li>U+2029 PARAGRAPH SEPARATOR: not included in any glyphset definition</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: mongolian, yi</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: yi, mongolian</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2060 WORD JOINER: not included in any glyphset definition</li>
 <li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
@@ -2802,7 +2446,7 @@ definitions.</p>
 <li>U+2126 OHM SIGN: not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: manichaean, phags-pa, yi</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: phags-pa, manichaean, yi</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -2880,7 +2524,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
 <li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+2010 HYPHEN: try adding one of: sundanese, cham, sora-sompeng, lisu, syloti-nagri, hebrew, coptic, kaithi, kharoshthi, yi, arabic, armenian, kayah-li</li>
+<li>U+2010 HYPHEN: try adding one of: arabic, coptic, kayah-li, cham, armenian, kaithi, kharoshthi, sora-sompeng, yi, syloti-nagri, sundanese, hebrew, lisu</li>
 <li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, syloti-nagri, yi</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
@@ -2888,7 +2532,7 @@ definitions.</p>
 <li>U+2027 HYPHENATION POINT: not included in any glyphset definition</li>
 <li>U+2028 LINE SEPARATOR: not included in any glyphset definition</li>
 <li>U+2029 PARAGRAPH SEPARATOR: not included in any glyphset definition</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: mongolian, yi</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: yi, mongolian</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2060 WORD JOINER: not included in any glyphset definition</li>
 <li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
@@ -2900,7 +2544,7 @@ definitions.</p>
 <li>U+2126 OHM SIGN: not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: manichaean, phags-pa, yi</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: phags-pa, manichaean, yi</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -2936,90 +2580,6 @@ definitions.</p>
     
 
     
-        <h3>
-    
-    Copyright notices match canonical pattern in METADATA.pb
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                AnnapurnaSIL-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
-<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
-<p>But instead we have got:</p>
-<p>&quot;copyright (c) 2007-2023 by sil international&quot;</p>
-
-                            
-                             [code: bad-notice-format]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                🔥
-                AnnapurnaSIL-Bold.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
-<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
-<p>But instead we have got:</p>
-<p>&quot;copyright (c) 2007-2023 by sil international&quot;</p>
-
-                            
-                             [code: bad-notice-format]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
 
     
 
@@ -3036,59 +2596,6 @@ definitions.</p>
 <span class='section__emoji'>
     🔥⚠️⚠️⚠️ℹ️ℹ️ℹ️ℹ️
 </span>
-
-    
-
-    
-        <h3>
-    
-    DESCRIPTION.en_us.html should end in a linebreak.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                METADATA.pb
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
-
-                            
-                             [code: missing-eof-linebreak]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
 
     
 
@@ -3172,59 +2679,6 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    DESCRIPTION.en_us.html must have more than 200 bytes.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                METADATA.pb
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
-
-                            
-                             [code: too-short]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -3662,7 +3116,24 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
                             <span class='details_text'>
                             <p>Name Table entry: Copyright notices should match a pattern similar to:</p>
-<p>&quot;Copyright 2019 The Familyname Project Authors (git url)&quot;</p>
+<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
+<p>But instead we have got:</p>
+<p>&quot;Copyright (c) 2007-2023 by SIL International&quot;</p>
+
+                            
+                             [code: bad-notice-format]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
+<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
 <p>But instead we have got:</p>
 <p>&quot;Copyright (c) 2007-2023 by SIL International&quot;</p>
 
@@ -3694,7 +3165,24 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
                             <span class='details_text'>
                             <p>Name Table entry: Copyright notices should match a pattern similar to:</p>
-<p>&quot;Copyright 2019 The Familyname Project Authors (git url)&quot;</p>
+<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
+<p>But instead we have got:</p>
+<p>&quot;Copyright (c) 2007-2023 by SIL International&quot;</p>
+
+                            
+                             [code: bad-notice-format]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
+<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
 <p>But instead we have got:</p>
 <p>&quot;Copyright (c) 2007-2023 by SIL International&quot;</p>
 
@@ -4233,8 +3721,6 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 </ul>
             </div>
         </details>
-    
-
     
 
     

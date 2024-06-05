@@ -272,18 +272,18 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>2</td>
+        <td>1</td>
         <td>10</td>
         <td>38</td>
         <td>9</td>
-        <td>188</td>
+        <td>185</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>1%</td>
+        <td>0%</td>
         <td>4%</td>
-        <td>15%</td>
+        <td>16%</td>
         <td>4%</td>
         <td>76%</td>
     </tr>
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.6</p>
+<p>FontBakery version: 0.12.7</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -501,72 +501,13 @@ Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https:/
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️⏩⏩⏩⏩⏩ℹ️
+    ⚠️⏩⏩⏩⏩⏩ℹ️
 </span>
 
     
 
     
 
-    
-
-    
-        <h3>
-    
-    Ensure the font supports case swapping for all its glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/case_mapping&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                KodeMono[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs lack their case-swapping counterparts:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Glyph present in the font</th>
-<th align="left">Missing case-swapping counterpart</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">U+24C0: CIRCLED LATIN CAPITAL LETTER K</td>
-<td align="left">U+24DA: CIRCLED LATIN SMALL LETTER K</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: missing-case-counterparts]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -1333,8 +1274,6 @@ Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https:/
 
 * percent (U+0025) has a counter-clockwise outer contour
 
-* percent (U+0025) has a counter-clockwise outer contour
-
 * perthousand (U+2030) has a counter-clockwise outer contour
 
 * perthousand (U+2030) has a counter-clockwise outer contour
@@ -1701,15 +1640,11 @@ Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https:/
 
 * uniEE03 (U+EE03) has a counter-clockwise outer contour
 
-* uniEE03 (U+EE03) has a counter-clockwise outer contour
-
 * uniEE04 (U+EE04) has a counter-clockwise outer contour
 
 * uniEE04 (U+EE04) has a counter-clockwise outer contour
 
 * uniEE04 (U+EE04) has a counter-clockwise outer contour
-
-* uniEE05 (U+EE05) has a counter-clockwise outer contour
 
 * uniEE05 (U+EE05) has a counter-clockwise outer contour
 
@@ -1808,7 +1743,7 @@ Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https:/
     
     <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
     
-    Validate location, size and resolution of article images.
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
 <div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
 
@@ -1943,8 +1878,6 @@ Please read <a href="https://github.com/fonttools/fonttools/issues/3014">https:/
     
 
     
-
-    
         <h3>
     
     Check for codepoints not covered by METADATA subsets.
@@ -1982,18 +1915,18 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, yi, canadian-aboriginal</li>
 <li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, coptic, cherokee, tifinagh</li>
-<li>U+0305 COMBINING OVERLINE: try adding one of: glagolitic, elbasan, math, coptic, gothic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, math, tifinagh</li>
+<li>U+0305 COMBINING OVERLINE: try adding one of: glagolitic, math, elbasan, gothic, coptic</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, malayalam, syriac, tai-le, math, coptic, tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, syriac, math, canadian-aboriginal, tai-le, old-permic, tifinagh, coptic</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+030D COMBINING VERTICAL LINE ABOVE: not included in any glyphset definition</li>
 <li>U+030E COMBINING DOUBLE VERTICAL LINE ABOVE: not included in any glyphset definition</li>
 <li>U+0310 COMBINING CANDRABINDU: not included in any glyphset definition</li>
@@ -2009,14 +1942,14 @@ definitions.</p>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding syriac</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, cherokee, tifinagh, syriac, gothic</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, syriac, gothic, tifinagh, cherokee</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
 <li>U+0338 COMBINING LONG SOLIDUS OVERLAY: not included in any glyphset definition</li>
 <li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: greek, math, elbasan</li>
 <li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
 <li>U+2017 DOUBLE LOW LINE: not included in any glyphset definition</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
@@ -2044,14 +1977,14 @@ definitions.</p>
 <li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
 <li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
 <li>U+215F FRACTION NUMERATOR ONE: not included in any glyphset definition</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
 <li>U+2200 FOR ALL: try adding math</li>
 <li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
@@ -2075,8 +2008,8 @@ definitions.</p>
 <li>U+252C BOX DRAWINGS LIGHT DOWN AND HORIZONTAL: not included in any glyphset definition</li>
 <li>U+2534 BOX DRAWINGS LIGHT UP AND HORIZONTAL: not included in any glyphset definition</li>
 <li>U+253C BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL: not included in any glyphset definition</li>
-<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: kayah-li, sharada, kharoshthi, kaithi, marchen, chakma, wancho, malayalam, coptic, mahajani, syriac, elbasan, batak, ahom, tibetan, grantha, tagbanwa, armenian, kannada, adlam, caucasian-albanian, psalter-pahlavi, newa, thaana, khmer, oriya, soyombo, tamil, osage, tagalog, devanagari, thai, lepcha, dogra, math, saurashtra, takri, mende-kikakui, duployan, khojki, hanunoo, siddham, tai-tham, lao, new-tai-lue, tifinagh, meetei-mayek, zanabazar-square, tai-viet, tirhuta, cham, myanmar, javanese, phags-pa, modi, syloti-nagri, sogdian, gujarati, hanifi-rohingya, hebrew, khudawadi, old-permic, buhid, bhaiksuki, miao, bassa-vah, buginese, bengali, mandaic, canadian-aboriginal, mongolian, tai-le, sinhala, yi, sundanese, brahmi, limbu, music, telugu, nko, manichaean, gunjala-gondi, rejang, balinese, masaram-gondi, warang-citi, gurmukhi, symbols, pahawh-hmong</li>
+<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: lao, yi, gujarati, newa, phags-pa, bhaiksuki, elbasan, meetei-mayek, tifinagh, sinhala, khojki, mende-kikakui, syriac, brahmi, pahawh-hmong, takri, tamil, thai, kannada, khudawadi, sharada, wancho, kaithi, canadian-aboriginal, dogra, mahajani, duployan, thaana, tirhuta, masaram-gondi, caucasian-albanian, buhid, armenian, mongolian, ahom, symbols, miao, rejang, music, limbu, gurmukhi, old-permic, psalter-pahlavi, balinese, batak, telugu, khmer, oriya, syloti-nagri, coptic, tai-tham, sundanese, nko, hebrew, myanmar, tai-le, kayah-li, bengali, adlam, zanabazar-square, math, mandaic, tagalog, devanagari, tibetan, javanese, gunjala-gondi, new-tai-lue, saurashtra, modi, sogdian, marchen, lepcha, warang-citi, buginese, bassa-vah, soyombo, malayalam, siddham, grantha, tagbanwa, cham, hanunoo, manichaean, chakma, kharoshthi, tai-viet, hanifi-rohingya, osage</li>
 <li>U+EE00 : not included in any glyphset definition</li>
 <li>U+EE01 : not included in any glyphset definition</li>
 <li>U+EE02 : not included in any glyphset definition</li>
@@ -2110,8 +2043,6 @@ definitions.</p>
 
     
 
-    
-
             
         
             
@@ -2125,107 +2056,9 @@ definitions.</p>
     
 
     
-        <h3>
-    
-    DESCRIPTION.en_us.html should end in a linebreak.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                METADATA.pb
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
-
-                            
-                             [code: missing-eof-linebreak]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    DESCRIPTION.en_us.html must have more than 200 bytes.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                METADATA.pb
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
-
-                            
-                             [code: too-short]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -2458,8 +2291,6 @@ definitions.</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     

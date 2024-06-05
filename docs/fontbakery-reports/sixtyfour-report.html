@@ -276,14 +276,14 @@ you're checking.</p>
         <td>5</td>
         <td>48</td>
         <td>10</td>
-        <td>179</td>
+        <td>175</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>2%</td>
         <td>2%</td>
-        <td>19%</td>
+        <td>20%</td>
         <td>4%</td>
         <td>72%</td>
     </tr>
@@ -310,7 +310,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.6</p>
+<p>FontBakery version: 0.12.7</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -693,8 +693,6 @@ immediately.
 * Agrave (U+00C0) has a counter-clockwise outer contour
 
 * Agrave (U+00C0) has a counter-clockwise outer contour
-
-* Aring (U+00C5) has a counter-clockwise outer contour
 
 * Aring (U+00C5) has a counter-clockwise outer contour
 
@@ -9643,7 +9641,7 @@ immediately.
     
     <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
     
-    Validate location, size and resolution of article images.
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
 <div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
 
@@ -9694,8 +9692,6 @@ immediately.
 <span class='section__emoji'>
     ⚠️⏩⏩
 </span>
-
-    
 
     
 
@@ -10053,8 +10049,6 @@ definitions.</p>
 
     
 
-    
-
             
         
             
@@ -10068,107 +10062,9 @@ definitions.</p>
     
 
     
-        <h3>
-    
-    DESCRIPTION.en_us.html should end in a linebreak.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                METADATA.pb
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
-
-                            
-                             [code: missing-eof-linebreak]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    DESCRIPTION.en_us.html must have more than 200 bytes.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                METADATA.pb
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
-
-                            
-                             [code: too-short]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
@@ -10333,33 +10229,8 @@ definitions.</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">Delicate</td>
-<td align="left">SCAN=-53.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Overexposed</td>
-<td align="left">SCAN=67.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Evenly</td>
-<td align="left">SCAN=-27.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Touching</td>
-<td align="left">SCAN=21.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Maximum</td>
-<td align="left">SCAN=100.0, BLED=0.0</td>
-<td align="left">N/A</td>
-</tr>
-<tr>
-<td align="left">Close</td>
-<td align="left">SCAN=0.0, BLED=0.0</td>
+<td align="left">Slight</td>
+<td align="left">SCAN=-45.0, BLED=0.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
@@ -10368,8 +10239,33 @@ definitions.</p>
 <td align="left">N/A</td>
 </tr>
 <tr>
-<td align="left">Slight</td>
-<td align="left">SCAN=-45.0, BLED=0.0</td>
+<td align="left">Close</td>
+<td align="left">SCAN=0.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Overexposed</td>
+<td align="left">SCAN=67.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Maximum</td>
+<td align="left">SCAN=100.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Touching</td>
+<td align="left">SCAN=21.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Evenly</td>
+<td align="left">SCAN=-27.0, BLED=0.0</td>
+<td align="left">N/A</td>
+</tr>
+<tr>
+<td align="left">Delicate</td>
+<td align="left">SCAN=-53.0, BLED=0.0</td>
 <td align="left">N/A</td>
 </tr>
 <tr>
@@ -10797,8 +10693,6 @@ definitions.</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
