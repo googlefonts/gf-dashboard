@@ -211,8 +211,6 @@ def rearrange_languages(languages):
 
 
 for directory in tqdm.tqdm(glob.glob(gfpath + "/ofl/*")):
-    if "noto" in directory:
-        continue
     try:
         gf = GoogleFont(directory, gfpath)
     except Exception as e:
