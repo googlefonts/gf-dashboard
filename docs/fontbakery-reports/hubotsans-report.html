@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -271,21 +275,21 @@ you're checking.</p>
     </tr>
     <tr>
         <td>0</td>
-        <td>2</td>
-        <td>10</td>
-        <td>18</td>
-        <td>87</td>
-        <td>15</td>
-        <td>353</td>
+        <td>0</td>
+        <td>5</td>
+        <td>23</td>
+        <td>77</td>
+        <td>11</td>
+        <td>345</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
+        <td>1%</td>
+        <td>5%</td>
+        <td>17%</td>
         <td>2%</td>
-        <td>4%</td>
-        <td>18%</td>
-        <td>3%</td>
-        <td>73%</td>
+        <td>75%</td>
     </tr>
 </table>
         
@@ -310,12 +314,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.13.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ☠☠🔥🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    🔥🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -351,553 +355,11 @@ immediately.
     
 
     
-
+    <h3>
     
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Checking OS/2 achVendID.
+    Axes and named instances fall within correct ranges?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OS/2 VendorID value 'GTHB' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
-
-                            
-                             [code: unknown]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OS/2 VendorID value 'GTHB' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
-
-                            
-                             [code: unknown]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: mende-kikakui, tirhuta, mongolian, limbu, caucasian-albanian, thaana, ahom, marchen, masaram-gondi, wancho, phoenician, old-italic, signwriting, tagalog, tai-le, indic-siyaq-numbers, korean, zanabazar-square, new-tai-lue, balinese, osmanya, duployan, garay, dives-akuru, sogdian, yi, bamum, kayah-li, ottoman-siyaq-numbers, hanifi-rohingya, gunjala-gondi, multani, kawi, modi, symbols, sundanese, newa, nyiakeng-puachue-hmong, myanmar, palmyrene, kharoshthi, pau-cin-hau, siddham, inscriptional-pahlavi, buginese, meroitic, warang-citi, kaithi, vai, rejang, gurung-khema, buhid, nko, nag-mundari, coptic, tulu-tigalari, canadian-aboriginal, bassa-vah, glagolitic, telugu, mayan-numerals, khitan-small-script, chinese-simplified, nushu, khmer, batak, linear-b, saurashtra, dogra, tamil-supplement, kannada, cypro-minoan, hatran, lisu, old-sogdian, phags-pa, cherokee, devanagari, cypriot, cuneiform, sharada, gujarati, brahmi, old-north-arabian, georgian, old-uyghur, makasar, inscriptional-parthian, mro, chakma, miao, chinese-traditional, carian, math, tai-tham, shavian, deseret, greek, javanese, old-turkic, tai-viet, armenian, gothic, tibetan, runic, tifinagh, samaritan, znamenny, kana-extended, old-hungarian, psalter-pahlavi, sunuwar, sinhala, tagbanwa, todhri, cham, manichaean, mandaic, khojki, ethiopic, hanunoo, mahajani, tangsa, lao, medefaidrin, hebrew, syloti-nagri, avestan, lycian, tamil, pahawh-hmong, kirat-rai, lydian, egyptian-hieroglyphs, ogham, symbols2, yezidi, bhaiksuki, tangut, grantha, ol-chiki, osage, linear-a, lepcha, meroitic-hieroglyphs, takri, toto, vithkuqi, imperial-aramaic, cyrillic-ext, soyombo, chorasmian, thai, bengali, ugaritic, malayalam, meetei-mayek, greek-ext, arabic, japanese, braille, elymaic, meroitic-cursive, khudawadi, adlam, elbasan, cyrillic, gurmukhi, old-permic, old-south-arabian, sora-sompeng, nabataean, anatolian-hieroglyphs, ol-onal, nandinagari, oriya, old-persian, syriac, music, chinese-hongkong</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: mende-kikakui, tirhuta, mongolian, limbu, caucasian-albanian, thaana, ahom, marchen, masaram-gondi, wancho, phoenician, old-italic, signwriting, tagalog, tai-le, indic-siyaq-numbers, korean, zanabazar-square, new-tai-lue, balinese, osmanya, duployan, garay, dives-akuru, sogdian, yi, bamum, kayah-li, ottoman-siyaq-numbers, hanifi-rohingya, gunjala-gondi, multani, kawi, modi, symbols, sundanese, newa, nyiakeng-puachue-hmong, myanmar, palmyrene, kharoshthi, pau-cin-hau, siddham, inscriptional-pahlavi, buginese, meroitic, warang-citi, kaithi, vai, rejang, gurung-khema, buhid, nko, nag-mundari, coptic, tulu-tigalari, canadian-aboriginal, bassa-vah, glagolitic, telugu, mayan-numerals, khitan-small-script, chinese-simplified, nushu, khmer, batak, linear-b, saurashtra, dogra, tamil-supplement, kannada, cypro-minoan, hatran, lisu, old-sogdian, phags-pa, cherokee, devanagari, cypriot, cuneiform, sharada, gujarati, brahmi, old-north-arabian, georgian, old-uyghur, makasar, inscriptional-parthian, mro, chakma, miao, chinese-traditional, carian, math, tai-tham, shavian, deseret, greek, javanese, old-turkic, tai-viet, armenian, gothic, tibetan, runic, tifinagh, samaritan, znamenny, kana-extended, old-hungarian, psalter-pahlavi, sunuwar, sinhala, tagbanwa, todhri, cham, manichaean, mandaic, khojki, ethiopic, hanunoo, mahajani, tangsa, lao, medefaidrin, hebrew, syloti-nagri, avestan, lycian, tamil, pahawh-hmong, kirat-rai, lydian, egyptian-hieroglyphs, ogham, symbols2, yezidi, bhaiksuki, tangut, grantha, ol-chiki, osage, linear-a, lepcha, meroitic-hieroglyphs, takri, toto, vithkuqi, imperial-aramaic, cyrillic-ext, soyombo, chorasmian, thai, bengali, ugaritic, malayalam, meetei-mayek, greek-ext, arabic, japanese, braille, elymaic, meroitic-cursive, khudawadi, adlam, elbasan, cyrillic, gurmukhi, old-permic, old-south-arabian, sora-sompeng, nabataean, anatolian-hieroglyphs, ol-onal, nandinagari, oriya, old-persian, syriac, music, chinese-hongkong</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, todhri, hebrew, coptic, duployan, tai-le, tifinagh, canadian-aboriginal, math, syriac, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
-<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
-<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: try adding math</li>
-<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+2070 SUPERSCRIPT ZERO: try adding math</li>
-<li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
-<li>U+2075 SUPERSCRIPT FIVE: try adding math</li>
-<li>U+2076 SUPERSCRIPT SIX: try adding math</li>
-<li>U+2077 SUPERSCRIPT SEVEN: try adding math</li>
-<li>U+2078 SUPERSCRIPT EIGHT: try adding math</li>
-<li>U+2079 SUPERSCRIPT NINE: try adding math</li>
-<li>U+2080 SUBSCRIPT ZERO: try adding math</li>
-<li>U+2081 SUBSCRIPT ONE: try adding math</li>
-<li>U+2082 SUBSCRIPT TWO: try adding math</li>
-<li>U+2083 SUBSCRIPT THREE: try adding math</li>
-<li>U+2084 SUBSCRIPT FOUR: try adding math</li>
-<li>U+2085 SUBSCRIPT FIVE: try adding math</li>
-<li>U+2086 SUBSCRIPT SIX: try adding math</li>
-<li>U+2087 SUBSCRIPT SEVEN: try adding math</li>
-<li>U+2088 SUBSCRIPT EIGHT: try adding math</li>
-<li>U+2089 SUBSCRIPT NINE: try adding math</li>
-<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
-<li>U+2117 SOUND RECORDING COPYRIGHT: try adding math</li>
-<li>U+212E ESTIMATED SYMBOL: try adding math</li>
-<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
-<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
-<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
-<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
-<li>U+2205 EMPTY SET: try adding math</li>
-<li>U+220F N-ARY PRODUCT: try adding math</li>
-<li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+221A SQUARE ROOT: try adding math</li>
-<li>U+221E INFINITY: try adding math</li>
-<li>U+222B INTEGRAL: try adding math</li>
-<li>U+2248 ALMOST EQUAL TO: try adding math</li>
-<li>U+2260 NOT EQUAL TO: try adding math</li>
-<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
-<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
-<li>U+2460 CIRCLED DIGIT ONE: try adding one of: yi, symbols, mongolian</li>
-<li>U+2461 CIRCLED DIGIT TWO: try adding one of: yi, symbols, mongolian</li>
-<li>U+2462 CIRCLED DIGIT THREE: try adding one of: yi, symbols, mongolian</li>
-<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: yi, symbols, mongolian</li>
-<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: yi, symbols, mongolian</li>
-<li>U+2465 CIRCLED DIGIT SIX: try adding one of: yi, symbols, mongolian</li>
-<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: yi, symbols, mongolian</li>
-<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: yi, symbols, mongolian</li>
-<li>U+2468 CIRCLED DIGIT NINE: try adding one of: yi, symbols, mongolian</li>
-<li>U+24EA CIRCLED DIGIT ZERO: try adding symbols</li>
-<li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: try adding symbols</li>
-<li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: mende-kikakui, tirhuta, mongolian, limbu, caucasian-albanian, thaana, ahom, marchen, masaram-gondi, wancho, tagalog, tai-le, zanabazar-square, new-tai-lue, balinese, duployan, sogdian, yi, kayah-li, hanifi-rohingya, gunjala-gondi, modi, symbols, sundanese, newa, myanmar, kharoshthi, siddham, buginese, warang-citi, kaithi, rejang, buhid, nko, coptic, canadian-aboriginal, bassa-vah, telugu, khmer, batak, saurashtra, dogra, kannada, phags-pa, devanagari, sharada, gujarati, brahmi, chakma, miao, math, tai-tham, javanese, tai-viet, armenian, tibetan, tifinagh, psalter-pahlavi, sinhala, tagbanwa, cham, manichaean, mandaic, khojki, hanunoo, mahajani, lao, hebrew, syloti-nagri, tamil, pahawh-hmong, bhaiksuki, grantha, osage, takri, lepcha, soyombo, thai, bengali, malayalam, meetei-mayek, khudawadi, adlam, elbasan, old-permic, gurmukhi, oriya, syriac, music</li>
-<li>U+25CF BLACK CIRCLE: try adding symbols</li>
-<li>U+2639 WHITE FROWNING FACE: try adding symbols</li>
-<li>U+263A WHITE SMILING FACE: try adding symbols</li>
-<li>U+2713 CHECK MARK: try adding symbols</li>
-<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: try adding symbols</li>
-<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: try adding symbols</li>
-<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: try adding symbols</li>
-<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: try adding symbols</li>
-<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: try adding symbols</li>
-<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: try adding symbols</li>
-<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: try adding symbols</li>
-<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: try adding symbols</li>
-<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: try adding symbols</li>
-<li>U+F8FF : not included in any glyphset definition</li>
-<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
-<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: mende-kikakui, tirhuta, mongolian, limbu, caucasian-albanian, thaana, ahom, marchen, masaram-gondi, wancho, phoenician, old-italic, signwriting, tagalog, tai-le, indic-siyaq-numbers, korean, zanabazar-square, new-tai-lue, balinese, osmanya, duployan, garay, dives-akuru, sogdian, yi, bamum, kayah-li, ottoman-siyaq-numbers, hanifi-rohingya, gunjala-gondi, multani, kawi, modi, symbols, sundanese, newa, nyiakeng-puachue-hmong, myanmar, palmyrene, kharoshthi, pau-cin-hau, siddham, inscriptional-pahlavi, buginese, meroitic, warang-citi, kaithi, vai, rejang, gurung-khema, buhid, nko, nag-mundari, coptic, tulu-tigalari, canadian-aboriginal, bassa-vah, glagolitic, telugu, mayan-numerals, khitan-small-script, chinese-simplified, nushu, khmer, batak, linear-b, saurashtra, dogra, tamil-supplement, kannada, cypro-minoan, hatran, lisu, old-sogdian, phags-pa, cherokee, devanagari, cypriot, cuneiform, sharada, gujarati, brahmi, old-north-arabian, georgian, old-uyghur, makasar, inscriptional-parthian, mro, chakma, miao, chinese-traditional, carian, math, tai-tham, shavian, deseret, greek, javanese, old-turkic, tai-viet, armenian, gothic, tibetan, runic, tifinagh, samaritan, znamenny, kana-extended, old-hungarian, psalter-pahlavi, sunuwar, sinhala, tagbanwa, todhri, cham, manichaean, mandaic, khojki, ethiopic, hanunoo, mahajani, tangsa, lao, medefaidrin, hebrew, syloti-nagri, avestan, lycian, tamil, pahawh-hmong, kirat-rai, lydian, egyptian-hieroglyphs, ogham, symbols2, yezidi, bhaiksuki, tangut, grantha, ol-chiki, osage, linear-a, lepcha, meroitic-hieroglyphs, takri, toto, vithkuqi, imperial-aramaic, cyrillic-ext, soyombo, chorasmian, thai, bengali, ugaritic, malayalam, meetei-mayek, greek-ext, arabic, japanese, braille, elymaic, meroitic-cursive, khudawadi, adlam, elbasan, cyrillic, gurmukhi, old-permic, old-south-arabian, sora-sompeng, nabataean, anatolian-hieroglyphs, ol-onal, nandinagari, oriya, old-persian, syriac, music, chinese-hongkong</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: mende-kikakui, tirhuta, mongolian, limbu, caucasian-albanian, thaana, ahom, marchen, masaram-gondi, wancho, phoenician, old-italic, signwriting, tagalog, tai-le, indic-siyaq-numbers, korean, zanabazar-square, new-tai-lue, balinese, osmanya, duployan, garay, dives-akuru, sogdian, yi, bamum, kayah-li, ottoman-siyaq-numbers, hanifi-rohingya, gunjala-gondi, multani, kawi, modi, symbols, sundanese, newa, nyiakeng-puachue-hmong, myanmar, palmyrene, kharoshthi, pau-cin-hau, siddham, inscriptional-pahlavi, buginese, meroitic, warang-citi, kaithi, vai, rejang, gurung-khema, buhid, nko, nag-mundari, coptic, tulu-tigalari, canadian-aboriginal, bassa-vah, glagolitic, telugu, mayan-numerals, khitan-small-script, chinese-simplified, nushu, khmer, batak, linear-b, saurashtra, dogra, tamil-supplement, kannada, cypro-minoan, hatran, lisu, old-sogdian, phags-pa, cherokee, devanagari, cypriot, cuneiform, sharada, gujarati, brahmi, old-north-arabian, georgian, old-uyghur, makasar, inscriptional-parthian, mro, chakma, miao, chinese-traditional, carian, math, tai-tham, shavian, deseret, greek, javanese, old-turkic, tai-viet, armenian, gothic, tibetan, runic, tifinagh, samaritan, znamenny, kana-extended, old-hungarian, psalter-pahlavi, sunuwar, sinhala, tagbanwa, todhri, cham, manichaean, mandaic, khojki, ethiopic, hanunoo, mahajani, tangsa, lao, medefaidrin, hebrew, syloti-nagri, avestan, lycian, tamil, pahawh-hmong, kirat-rai, lydian, egyptian-hieroglyphs, ogham, symbols2, yezidi, bhaiksuki, tangut, grantha, ol-chiki, osage, linear-a, lepcha, meroitic-hieroglyphs, takri, toto, vithkuqi, imperial-aramaic, cyrillic-ext, soyombo, chorasmian, thai, bengali, ugaritic, malayalam, meetei-mayek, greek-ext, arabic, japanese, braille, elymaic, meroitic-cursive, khudawadi, adlam, elbasan, cyrillic, gurmukhi, old-permic, old-south-arabian, sora-sompeng, nabataean, anatolian-hieroglyphs, ol-onal, nandinagari, oriya, old-persian, syriac, music, chinese-hongkong</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, todhri, hebrew, coptic, duployan, tai-le, tifinagh, canadian-aboriginal, math, syriac, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
-<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
-<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: try adding math</li>
-<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+2070 SUPERSCRIPT ZERO: try adding math</li>
-<li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
-<li>U+2075 SUPERSCRIPT FIVE: try adding math</li>
-<li>U+2076 SUPERSCRIPT SIX: try adding math</li>
-<li>U+2077 SUPERSCRIPT SEVEN: try adding math</li>
-<li>U+2078 SUPERSCRIPT EIGHT: try adding math</li>
-<li>U+2079 SUPERSCRIPT NINE: try adding math</li>
-<li>U+2080 SUBSCRIPT ZERO: try adding math</li>
-<li>U+2081 SUBSCRIPT ONE: try adding math</li>
-<li>U+2082 SUBSCRIPT TWO: try adding math</li>
-<li>U+2083 SUBSCRIPT THREE: try adding math</li>
-<li>U+2084 SUBSCRIPT FOUR: try adding math</li>
-<li>U+2085 SUBSCRIPT FIVE: try adding math</li>
-<li>U+2086 SUBSCRIPT SIX: try adding math</li>
-<li>U+2087 SUBSCRIPT SEVEN: try adding math</li>
-<li>U+2088 SUBSCRIPT EIGHT: try adding math</li>
-<li>U+2089 SUBSCRIPT NINE: try adding math</li>
-<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
-<li>U+2117 SOUND RECORDING COPYRIGHT: try adding math</li>
-<li>U+212E ESTIMATED SYMBOL: try adding math</li>
-<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
-<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
-<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
-<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
-<li>U+2205 EMPTY SET: try adding math</li>
-<li>U+220F N-ARY PRODUCT: try adding math</li>
-<li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+221A SQUARE ROOT: try adding math</li>
-<li>U+221E INFINITY: try adding math</li>
-<li>U+222B INTEGRAL: try adding math</li>
-<li>U+2248 ALMOST EQUAL TO: try adding math</li>
-<li>U+2260 NOT EQUAL TO: try adding math</li>
-<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
-<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
-<li>U+2460 CIRCLED DIGIT ONE: try adding one of: yi, symbols, mongolian</li>
-<li>U+2461 CIRCLED DIGIT TWO: try adding one of: yi, symbols, mongolian</li>
-<li>U+2462 CIRCLED DIGIT THREE: try adding one of: yi, symbols, mongolian</li>
-<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: yi, symbols, mongolian</li>
-<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: yi, symbols, mongolian</li>
-<li>U+2465 CIRCLED DIGIT SIX: try adding one of: yi, symbols, mongolian</li>
-<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: yi, symbols, mongolian</li>
-<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: yi, symbols, mongolian</li>
-<li>U+2468 CIRCLED DIGIT NINE: try adding one of: yi, symbols, mongolian</li>
-<li>U+24EA CIRCLED DIGIT ZERO: try adding symbols</li>
-<li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: try adding symbols</li>
-<li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: mende-kikakui, tirhuta, mongolian, limbu, caucasian-albanian, thaana, ahom, marchen, masaram-gondi, wancho, tagalog, tai-le, zanabazar-square, new-tai-lue, balinese, duployan, sogdian, yi, kayah-li, hanifi-rohingya, gunjala-gondi, modi, symbols, sundanese, newa, myanmar, kharoshthi, siddham, buginese, warang-citi, kaithi, rejang, buhid, nko, coptic, canadian-aboriginal, bassa-vah, telugu, khmer, batak, saurashtra, dogra, kannada, phags-pa, devanagari, sharada, gujarati, brahmi, chakma, miao, math, tai-tham, javanese, tai-viet, armenian, tibetan, tifinagh, psalter-pahlavi, sinhala, tagbanwa, cham, manichaean, mandaic, khojki, hanunoo, mahajani, lao, hebrew, syloti-nagri, tamil, pahawh-hmong, bhaiksuki, grantha, osage, takri, lepcha, soyombo, thai, bengali, malayalam, meetei-mayek, khudawadi, adlam, elbasan, old-permic, gurmukhi, oriya, syriac, music</li>
-<li>U+25CF BLACK CIRCLE: try adding symbols</li>
-<li>U+2639 WHITE FROWNING FACE: try adding symbols</li>
-<li>U+263A WHITE SMILING FACE: try adding symbols</li>
-<li>U+2713 CHECK MARK: try adding symbols</li>
-<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: try adding symbols</li>
-<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: try adding symbols</li>
-<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: try adding symbols</li>
-<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: try adding symbols</li>
-<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: try adding symbols</li>
-<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: try adding symbols</li>
-<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: try adding symbols</li>
-<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: try adding symbols</li>
-<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: try adding symbols</li>
-<li>U+F8FF : not included in any glyphset definition</li>
-<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
-<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Copyright notice on METADATA.pb should not contain &#39;Reserved Font Name&#39;.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/reserved_font_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: copyright field (&quot;Copyright 2021 The Hubot Sans Project Authors (<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>), with Reserved Font Name &quot;Hubot&quot;&quot;) contains &quot;Reserved Font Name&quot;. This is an error except in a few specific rare cases.</p>
-
-                            
-                             [code: rfn]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: copyright field (&quot;Copyright 2021 The Hubot Sans Project Authors (<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>), with Reserved Font Name &quot;Hubot&quot;&quot;) contains &quot;Reserved Font Name&quot;. This is an error except in a few specific rare cases.</p>
-
-                            
-                             [code: rfn]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    METADATA.pb: Check URL on copyright string is the same as in repository_url field.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:opentype/fvar/regular_coords_correct&gt;</div>
 
 
 
@@ -926,11 +388,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>Repository URL is <a href="https://github.com/googlefonts/hubot-sans">https://github.com/googlefonts/hubot-sans</a></p>
-<p>But: font copyright string has '<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>', font copyright string has '<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>' and OFL text has '<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>'</p>
+                            <p>Regular instance has wdth coordinate of 75.0, expected 100</p>
 
                             
-                             [code: mismatch]
+                             [code: wdth-not-100]
                             
                             </span>
                         </li>
@@ -956,11 +417,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>Repository URL is <a href="https://github.com/googlefonts/hubot-sans">https://github.com/googlefonts/hubot-sans</a></p>
-<p>But: font copyright string has '<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>', font copyright string has '<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>' and OFL text has '<a href="https://github.com/github/hubot-sans">https://github.com/github/hubot-sans</a>'</p>
+                            <p>Regular instance has wdth coordinate of 75.0, expected 100</p>
 
                             
-                             [code: mismatch]
+                             [code: wdth-not-100]
                             
                             </span>
                         </li>
@@ -975,11 +435,165 @@ definitions.</p>
     
 
     
-        <h3>
+
     
-    Shapes languages in all GF glyphsets.
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Validates subfamilyNameID and postScriptNameID for the default instance record
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:opentype/varfont/valid_default_instance_nameids&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                HubotSans[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>'ExtraLight' instance has the same coordinates as the default instance; its subfamily name should be 'Condensed ExtraLight'.</p>
+<p>Note: It is alternatively possible that Name ID 17 is incorrect, and should be set to the default instance subfamily name, 'ExtraLight', rather than ''Condensed ExtraLight''. If the default instance is 'ExtraLight', NameID 17 is probably the problem.</p>
+
+                            
+                             [code: invalid-default-instance-subfamily-name]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                🔥
+                HubotSans-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>'ExtraLight Italic' instance has the same coordinates as the default instance; its subfamily name should be 'Condensed ExtraLight Italic'.</p>
+<p>Note: It is alternatively possible that Name ID 17 is incorrect, and should be set to the default instance subfamily name, 'ExtraLight Italic', rather than ''Condensed ExtraLight Italic''. If the default instance is 'ExtraLight Italic', NameID 17 is probably the problem.</p>
+
+                            
+                             [code: invalid-default-instance-subfamily-name]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+    <h3>
+    
+    Check accent of Lcaron, dcaron, lcaron, tcaron
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:alt_caron&gt;</div>
 
 
 
@@ -1008,32 +622,52 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-</tbody>
-</table>
+                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
 
                             
-                             [code: warning-language-shaping]
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
                             
                             </span>
                         </li>
@@ -1044,7 +678,7 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>OK.</p>
+                            <p>Looks good!</p>
 
                             
                             </span>
@@ -1071,32 +705,52 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-</tbody>
-</table>
+                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
 
                             
-                             [code: warning-language-shaping]
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
                             
                             </span>
                         </li>
@@ -1107,7 +761,7 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>OK.</p>
+                            <p>Looks good!</p>
 
                             
                             </span>
@@ -1159,113 +813,37 @@ definitions.</p>
     
 
     
-        <h3>
-    
-    Is there kerning info for non-ligated sequences?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
     
 
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- f + f
-
-- f + i
-
-- i + f
-
-- f + l
-
-- l + f
-
-- i + l
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- f + f
-
-- f + i
-
-- i + f
-
-- f + l
-
-- l + f
-
-- i + l
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
     
     Combined length of family and style must not exceed 32 characters.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/family_and_style_max_length&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:name/family_and_style_max_length&gt;</div>
 
 
 
@@ -1281,7 +859,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                ⚠️
                 HubotSans[wdth,wght].ttf
                 
             </summary>
@@ -1302,246 +880,6 @@ definitions.</p>
                             </span>
                         </li>
                 
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraLight Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 278 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraLight Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 278 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Light Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 279 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Light Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 279 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Regular Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 280 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Regular Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 280 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Medium Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 281 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Medium Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 281 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'SemiBold Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 282 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'SemiBold Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 282 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Bold Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 283 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Bold Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 283 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraBold Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 284 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraBold Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 284 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Black Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 285 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Black Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 285 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
                 </ul>
             </div>
         </details>
@@ -1550,7 +888,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                ⚠️
                 HubotSans-Italic[wdth,wght].ttf
                 
             </summary>
@@ -1571,246 +909,6 @@ definitions.</p>
                             </span>
                         </li>
                 
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraLight Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 278 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraLight Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 278 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Light Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 279 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Light Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 279 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 280 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 280 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Medium Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 281 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Medium Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 281 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'SemiBold Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 282 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'SemiBold Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 282 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Bold Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 283 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Bold Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 283 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraBold Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 284 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'ExtraBold Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 284 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Black Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 285 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Variable font instance name 'Black Italic Hubot Sans Condensed ExtraLight' formed by space-separated concatenation of instance subfamily nameID 285 and font family name (nameID 1) exceeds 32 characters.</p>
-<p>This has been found to cause shaping issues for some accented letters in Microsoft Word on Windows 10 and 11.</p>
-
-                            
-                             [code: instance-too-long]
-                            
-                            </span>
-                        </li>
-                
                 </ul>
             </div>
         </details>
@@ -1833,41 +931,11 @@ definitions.</p>
     
 
     
-
+    <h3>
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
+    Check there are no overlapping path segments
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:overlapping_path_segments&gt;</div>
 
 
 
@@ -1896,24 +964,16 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>It seems that GitHub is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
+                            <p>The following glyphs have overlapping path segments:</p>
+<pre><code>* Euro (U+20AC): L&lt;&lt;129.0,306.0&gt;--&lt;129.0,280.0&gt;&gt; has the same coordinates as a previous segment.
+
+* Euro (U+20AC): L&lt;&lt;129.0,422.0&gt;--&lt;129.0,448.0&gt;&gt; has the same coordinates as a previous segment.
+
+* uni20B9 (U+20B9): L&lt;&lt;260.0,516.0&gt;--&lt;260.0,544.0&gt;&gt; has the same coordinates as a previous segment.
+</code></pre>
 
                             
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that Deni Anggara is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
+                             [code: overlapping-path-segments]
                             
                             </span>
                         </li>
@@ -1939,112 +999,16 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>It seems that GitHub is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
+                            <p>The following glyphs have overlapping path segments:</p>
+<pre><code>* Euro (U+20AC): L&lt;&lt;135.0,306.0&gt;--&lt;129.0,280.0&gt;&gt; has the same coordinates as a previous segment.
+
+* Euro (U+20AC): L&lt;&lt;159.0,422.0&gt;--&lt;165.0,448.0&gt;&gt; has the same coordinates as a previous segment.
+
+* uni20B9 (U+20B9): L&lt;&lt;316.0,516.0&gt;--&lt;322.0,544.0&gt;&gt; has the same coordinates as a previous segment.
+</code></pre>
 
                             
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that Deni Anggara is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
+                             [code: overlapping-path-segments]
                             
                             </span>
                         </li>
@@ -2077,80 +1041,6 @@ definitions.</p>
     
 
     
-        <h3>
-    
-    The font has tags in the GF Tags spreadsheet
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        HubotSans[wdth,wght].ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-    
-        ☠
-        HubotSans-Italic[wdth,wght].ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️
-</span>
 
     
 
@@ -2165,109 +1055,11 @@ definitions.</p>
     
 
     
-        <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                🔥
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Glyph names are all valid?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/valid_glyphnames&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:valid_glyphnames&gt;</div>
 
 
 
@@ -2362,242 +1154,150 @@ periodcentered.loclCAT.case.ss01</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Looks good!</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                HubotSans-Italic[wdth,wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
-
-                            
-                             [code: decomposed-outline]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Looks good!</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.fvar</h2>
+                <h2>Article Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
+    ⚠️⚠️
+</span>
+
+    
+    <h3>
+    
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Article page is too short!</p>
+
+                            
+                             [code: length-requirements-not-met]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Article page lacks visual assets.</p>
+
+                            
+                             [code: missing-visual-asset]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ✅ PASS
+                            </span>
+
+                            <span class='details_text'>
+                            <p>ok</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Article page is too short!</p>
+
+                            
+                             [code: length-requirements-not-met]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Article page lacks visual assets.</p>
+
+                            
+                             [code: missing-visual-asset]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ✅ PASS
+                            </span>
+
+                            <span class='details_text'>
+                            <p>ok</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩
 </span>
 
     
@@ -2605,11 +1305,29 @@ periodcentered.loclCAT.case.ss01</p>
     
 
     
-        <h3>
+
     
-    The variable font &#39;wdth&#39; (Width) axis coordinate must be 100 on the &#39;Regular&#39; instance.
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_wdth_coord&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/designer_profiles&gt;</div>
 
 
 
@@ -2625,7 +1343,7 @@ periodcentered.loclCAT.case.ss01</p>
     
         <details>
             <summary>
-                🔥
+                ⚠️
                 HubotSans[wdth,wght].ttf
                 
             </summary>
@@ -2634,14 +1352,14 @@ periodcentered.loclCAT.case.ss01</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            ⚠️ WARN
                             </span>
 
                             <span class='details_text'>
-                            <p>The &quot;wdth&quot; axis coordinate of the &quot;Regular&quot; instance must be 100. Got 75.0 as a default value instead.</p>
+                            <p>It seems that GitHub is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
 
                             
-                             [code: wdth-not-100]
+                             [code: profile-not-found]
                             
                             </span>
                         </li>
@@ -2654,7 +1372,7 @@ periodcentered.loclCAT.case.ss01</p>
     
         <details>
             <summary>
-                🔥
+                ⚠️
                 HubotSans-Italic[wdth,wght].ttf
                 
             </summary>
@@ -2663,14 +1381,14 @@ periodcentered.loclCAT.case.ss01</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            ⚠️ WARN
                             </span>
 
                             <span class='details_text'>
-                            <p>The &quot;wdth&quot; axis coordinate of the &quot;Regular&quot; instance must be 100. Got 75.0 as a default value instead.</p>
+                            <p>It seems that GitHub is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
 
                             
-                             [code: wdth-not-100]
+                             [code: profile-not-found]
                             
                             </span>
                         </li>
@@ -2703,11 +1421,41 @@ periodcentered.loclCAT.case.ss01</p>
     
 
     
-        <h3>
+
     
-    Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to a name ID whose string is equal to the string of either name ID 2 or 17, and its postScriptNameID value is set to a name ID whose string is equal to the string of name ID 6.
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_default_instance_nameids&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
 
 
 
@@ -2723,7 +1471,7 @@ periodcentered.loclCAT.case.ss01</p>
     
         <details>
             <summary>
-                🔥
+                ⚠️
                 HubotSans[wdth,wght].ttf
                 
             </summary>
@@ -2732,14 +1480,108 @@ periodcentered.loclCAT.case.ss01</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            ⚠️ WARN
                             </span>
 
                             <span class='details_text'>
-                            <p>'ExtraLight' instance has the same coordinates as the default instance; its subfamily name should be 'Condensed ExtraLight'</p>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, coptic, cherokee</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, syriac, todhri, malayalam, math, coptic, tai-le, duployan, old-permic, hebrew, canadian-aboriginal</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
+<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: try adding math</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+2070 SUPERSCRIPT ZERO: try adding math</li>
+<li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
+<li>U+2075 SUPERSCRIPT FIVE: try adding math</li>
+<li>U+2076 SUPERSCRIPT SIX: try adding math</li>
+<li>U+2077 SUPERSCRIPT SEVEN: try adding math</li>
+<li>U+2078 SUPERSCRIPT EIGHT: try adding math</li>
+<li>U+2079 SUPERSCRIPT NINE: try adding math</li>
+<li>U+2080 SUBSCRIPT ZERO: try adding math</li>
+<li>U+2081 SUBSCRIPT ONE: try adding math</li>
+<li>U+2082 SUBSCRIPT TWO: try adding math</li>
+<li>U+2083 SUBSCRIPT THREE: try adding math</li>
+<li>U+2084 SUBSCRIPT FOUR: try adding math</li>
+<li>U+2085 SUBSCRIPT FIVE: try adding math</li>
+<li>U+2086 SUBSCRIPT SIX: try adding math</li>
+<li>U+2087 SUBSCRIPT SEVEN: try adding math</li>
+<li>U+2088 SUBSCRIPT EIGHT: try adding math</li>
+<li>U+2089 SUBSCRIPT NINE: try adding math</li>
+<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
+<li>U+2117 SOUND RECORDING COPYRIGHT: try adding math</li>
+<li>U+212E ESTIMATED SYMBOL: try adding math</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
+<li>U+2205 EMPTY SET: try adding math</li>
+<li>U+220F N-ARY PRODUCT: try adding math</li>
+<li>U+2211 N-ARY SUMMATION: try adding math</li>
+<li>U+221A SQUARE ROOT: try adding math</li>
+<li>U+221E INFINITY: try adding math</li>
+<li>U+222B INTEGRAL: try adding math</li>
+<li>U+2248 ALMOST EQUAL TO: try adding math</li>
+<li>U+2260 NOT EQUAL TO: try adding math</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding one of: yi, mongolian, symbols</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding one of: yi, mongolian, symbols</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding one of: yi, mongolian, symbols</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: yi, mongolian, symbols</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: yi, mongolian, symbols</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding one of: yi, mongolian, symbols</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: yi, mongolian, symbols</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: yi, mongolian, symbols</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding one of: yi, mongolian, symbols</li>
+<li>U+24EA CIRCLED DIGIT ZERO: try adding symbols</li>
+<li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: try adding symbols</li>
+<li>U+25CB WHITE CIRCLE: try adding symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: hanunoo, music, oriya, tai-le, caucasian-albanian, phags-pa, hanifi-rohingya, lepcha, adlam, mandaic, ahom, kaithi, tamil, coptic, buhid, kharoshthi, gunjala-gondi, myanmar, math, khudawadi, thaana, masaram-gondi, newa, saurashtra, rejang, wancho, miao, syriac, batak, grantha, osage, psalter-pahlavi, balinese, tagbanwa, khojki, khmer, soyombo, tagalog, old-permic, bhaiksuki, malayalam, sinhala, telugu, sharada, pahawh-hmong, hebrew, tifinagh, gurmukhi, tibetan, meetei-mayek, siddham, yi, elbasan, marchen, tirhuta, kayah-li, mende-kikakui, cham, brahmi, dogra, syloti-nagri, thai, symbols, bengali, armenian, limbu, tai-viet, javanese, tai-tham, buginese, nko, sogdian, sundanese, new-tai-lue, canadian-aboriginal, bassa-vah, mahajani, chakma, gujarati, devanagari, takri, manichaean, mongolian, duployan, warang-citi, kannada, lao, zanabazar-square, modi</li>
+<li>U+25CF BLACK CIRCLE: try adding symbols</li>
+<li>U+2639 WHITE FROWNING FACE: try adding symbols</li>
+<li>U+263A WHITE SMILING FACE: try adding symbols</li>
+<li>U+2713 CHECK MARK: try adding symbols</li>
+<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: try adding symbols</li>
+<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: try adding symbols</li>
+<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: try adding symbols</li>
+<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: try adding symbols</li>
+<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: try adding symbols</li>
+<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: try adding symbols</li>
+<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: try adding symbols</li>
+<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: try adding symbols</li>
+<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: try adding symbols</li>
+<li>U+F8FF : not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
 
                             
-                             [code: invalid-default-instance-subfamily-name]
+                             [code: unreachable-subsetting]
                             
                             </span>
                         </li>
@@ -2752,7 +1594,7 @@ periodcentered.loclCAT.case.ss01</p>
     
         <details>
             <summary>
-                🔥
+                ⚠️
                 HubotSans-Italic[wdth,wght].ttf
                 
             </summary>
@@ -2761,14 +1603,108 @@ periodcentered.loclCAT.case.ss01</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            ⚠️ WARN
                             </span>
 
                             <span class='details_text'>
-                            <p>'ExtraLight Italic' instance has the same coordinates as the default instance; its subfamily name should be 'Condensed ExtraLight Italic'</p>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, coptic, cherokee</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, syriac, todhri, malayalam, math, coptic, tai-le, duployan, old-permic, hebrew, canadian-aboriginal</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
+<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: try adding math</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+2070 SUPERSCRIPT ZERO: try adding math</li>
+<li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
+<li>U+2075 SUPERSCRIPT FIVE: try adding math</li>
+<li>U+2076 SUPERSCRIPT SIX: try adding math</li>
+<li>U+2077 SUPERSCRIPT SEVEN: try adding math</li>
+<li>U+2078 SUPERSCRIPT EIGHT: try adding math</li>
+<li>U+2079 SUPERSCRIPT NINE: try adding math</li>
+<li>U+2080 SUBSCRIPT ZERO: try adding math</li>
+<li>U+2081 SUBSCRIPT ONE: try adding math</li>
+<li>U+2082 SUBSCRIPT TWO: try adding math</li>
+<li>U+2083 SUBSCRIPT THREE: try adding math</li>
+<li>U+2084 SUBSCRIPT FOUR: try adding math</li>
+<li>U+2085 SUBSCRIPT FIVE: try adding math</li>
+<li>U+2086 SUBSCRIPT SIX: try adding math</li>
+<li>U+2087 SUBSCRIPT SEVEN: try adding math</li>
+<li>U+2088 SUBSCRIPT EIGHT: try adding math</li>
+<li>U+2089 SUBSCRIPT NINE: try adding math</li>
+<li>U+2116 NUMERO SIGN: try adding cyrillic</li>
+<li>U+2117 SOUND RECORDING COPYRIGHT: try adding math</li>
+<li>U+212E ESTIMATED SYMBOL: try adding math</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
+<li>U+2205 EMPTY SET: try adding math</li>
+<li>U+220F N-ARY PRODUCT: try adding math</li>
+<li>U+2211 N-ARY SUMMATION: try adding math</li>
+<li>U+221A SQUARE ROOT: try adding math</li>
+<li>U+221E INFINITY: try adding math</li>
+<li>U+222B INTEGRAL: try adding math</li>
+<li>U+2248 ALMOST EQUAL TO: try adding math</li>
+<li>U+2260 NOT EQUAL TO: try adding math</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding one of: yi, mongolian, symbols</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding one of: yi, mongolian, symbols</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding one of: yi, mongolian, symbols</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: yi, mongolian, symbols</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: yi, mongolian, symbols</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding one of: yi, mongolian, symbols</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: yi, mongolian, symbols</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: yi, mongolian, symbols</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding one of: yi, mongolian, symbols</li>
+<li>U+24EA CIRCLED DIGIT ZERO: try adding symbols</li>
+<li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: try adding symbols</li>
+<li>U+25CB WHITE CIRCLE: try adding symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: hanunoo, music, oriya, tai-le, caucasian-albanian, phags-pa, hanifi-rohingya, lepcha, adlam, mandaic, ahom, kaithi, tamil, coptic, buhid, kharoshthi, gunjala-gondi, myanmar, math, khudawadi, thaana, masaram-gondi, newa, saurashtra, rejang, wancho, miao, syriac, batak, grantha, osage, psalter-pahlavi, balinese, tagbanwa, khojki, khmer, soyombo, tagalog, old-permic, bhaiksuki, malayalam, sinhala, telugu, sharada, pahawh-hmong, hebrew, tifinagh, gurmukhi, tibetan, meetei-mayek, siddham, yi, elbasan, marchen, tirhuta, kayah-li, mende-kikakui, cham, brahmi, dogra, syloti-nagri, thai, symbols, bengali, armenian, limbu, tai-viet, javanese, tai-tham, buginese, nko, sogdian, sundanese, new-tai-lue, canadian-aboriginal, bassa-vah, mahajani, chakma, gujarati, devanagari, takri, manichaean, mongolian, duployan, warang-citi, kannada, lao, zanabazar-square, modi</li>
+<li>U+25CF BLACK CIRCLE: try adding symbols</li>
+<li>U+2639 WHITE FROWNING FACE: try adding symbols</li>
+<li>U+263A WHITE SMILING FACE: try adding symbols</li>
+<li>U+2713 CHECK MARK: try adding symbols</li>
+<li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: try adding symbols</li>
+<li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: try adding symbols</li>
+<li>U+2778 DINGBAT NEGATIVE CIRCLED DIGIT THREE: try adding symbols</li>
+<li>U+2779 DINGBAT NEGATIVE CIRCLED DIGIT FOUR: try adding symbols</li>
+<li>U+277A DINGBAT NEGATIVE CIRCLED DIGIT FIVE: try adding symbols</li>
+<li>U+277B DINGBAT NEGATIVE CIRCLED DIGIT SIX: try adding symbols</li>
+<li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: try adding symbols</li>
+<li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: try adding symbols</li>
+<li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: try adding symbols</li>
+<li>U+F8FF : not included in any glyphset definition</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>vietnamese</code></p>
 
                             
-                             [code: invalid-default-instance-subfamily-name]
+                             [code: unreachable-subsetting]
                             
                             </span>
                         </li>
@@ -2786,12 +1722,864 @@ periodcentered.loclCAT.case.ss01</p>
 
     
 
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩⏩⏩⏩⏩⏩⏩
+</span>
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
         
             
         
+            
+        
+            
+        
+            
+        
+            
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩
+</span>
+
+    
+    <h3>
+    
+    Are there any misaligned on-curve points?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_alignment_miss&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* uni1EA3 (U+1EA3): X=179.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EBB (U+1EBB): X=179.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EC9 (U+1EC9): X=66.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1ECF (U+1ECF): X=179.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EDF (U+1EDF): X=179.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EE7 (U+1EE7): X=193.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EED (U+1EED): X=193.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EF7 (U+1EF7): X=164.0,Y=728.0 (should be at cap-height 729?)
+
+* uni1EA3.ss01: X=177.0,Y=728.0 (should be at cap-height 729?)
+
+* six (U+0036): X=160.5,Y=1.5 (should be at baseline 0?)
+
+* nine (U+0039): X=262.0,Y=727.5 (should be at cap-height 729?)
+
+* uni24EA (U+24EA): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni24EA (U+24EA): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni24EA (U+24EA): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2460 (U+2460): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2460 (U+2460): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2460 (U+2460): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2461 (U+2461): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2461 (U+2461): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2461 (U+2461): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2462 (U+2462): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2462 (U+2462): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2462 (U+2462): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2463 (U+2463): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2463 (U+2463): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2463 (U+2463): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2464 (U+2464): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2464 (U+2464): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2464 (U+2464): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2465 (U+2465): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2465 (U+2465): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2465 (U+2465): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2466 (U+2466): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2466 (U+2466): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2466 (U+2466): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2467 (U+2467): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2467 (U+2467): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2467 (U+2467): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2468 (U+2468): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2468 (U+2468): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2468 (U+2468): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* six.tf: X=198.0,Y=1.5 (should be at baseline 0?)
+
+* nine.tf: X=302.0,Y=727.5 (should be at cap-height 729?)
+
+* six.dnom: X=102.5,Y=-0.5 (should be at baseline 0?)
+
+* nine.numr: X=175.5,Y=728.5 (should be at cap-height 729?)
+
+* uni2080 (U+2080): X=63.0,Y=2.0 (should be at baseline 0?)
+
+* uni2080 (U+2080): X=243.0,Y=2.0 (should be at baseline 0?)
+
+* uni2083 (U+2083): X=231.5,Y=0.5 (should be at baseline 0?)
+
+* uni2085 (U+2085): X=82.5,Y=-0.5 (should be at baseline 0?)
+
+* uni2086 (U+2086): X=91.0,Y=2.0 (should be at baseline 0?)
+
+* comma.ss01: X=71.0,Y=-2.0 (should be at baseline 0?)
+
+* comma.ss01: X=52.0,Y=-0.5 (should be at baseline 0?)
+
+* comma.ss01: X=88.0,Y=1.0 (should be at baseline 0?)
+
+* semicolon.ss01: X=71.0,Y=-2.0 (should be at baseline 0?)
+
+* semicolon.ss01: X=52.0,Y=-0.5 (should be at baseline 0?)
+
+* semicolon.ss01: X=88.0,Y=1.0 (should be at baseline 0?)
+
+* quotesinglbase.ss01: X=71.0,Y=-2.0 (should be at baseline 0?)
+
+* quotesinglbase.ss01: X=52.0,Y=-0.5 (should be at baseline 0?)
+
+* quotesinglbase.ss01: X=88.0,Y=1.0 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=71.0,Y=-2.0 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=52.0,Y=-0.5 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=88.0,Y=1.0 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=181.0,Y=-2.0 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=162.0,Y=-0.5 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=198.0,Y=1.0 (should be at baseline 0?)
+
+* at (U+0040): X=159.5,Y=-1.0 (should be at baseline 0?)
+
+* section (U+00A7): X=123.5,Y=-0.5 (should be at baseline 0?)
+
+* section (U+00A7): X=115.5,Y=727.5 (should be at cap-height 729?)
+
+* section (U+00A7): X=209.5,Y=731.0 (should be at cap-height 729?)
+
+* copyright (U+00A9): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* copyright (U+00A9): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* copyright (U+00A9): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2117 (U+2117): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* uni2117 (U+2117): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* uni2117 (U+2117): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* circle (U+25CB): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* circle (U+25CB): X=276.0,Y=728.0 (should be at cap-height 729?)
+
+* circle (U+25CB): X=276.0,Y=1.0 (should be at baseline 0?)
+
+* hookabovecomb (U+0309): X=71.0,Y=728.0 (should be at cap-height 729?)
+</code></pre>
+
+                            
+                             [code: found-misalignments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* uni1EA3 (U+1EA3): X=271.0,Y=727.0 (should be at cap-height 729?)
+
+* aring (U+00E5): X=244.0,Y=730.0 (should be at cap-height 729?)
+
+* uni1EBB (U+1EBB): X=248.0,Y=727.0 (should be at cap-height 729?)
+
+* uni1EC9 (U+1EC9): X=146.0,Y=727.0 (should be at cap-height 729?)
+
+* uni1ECF (U+1ECF): X=258.0,Y=727.0 (should be at cap-height 729?)
+
+* uni1EDF (U+1EDF): X=258.0,Y=727.0 (should be at cap-height 729?)
+
+* germandbls (U+00DF): X=264.5,Y=727.0 (should be at cap-height 729?)
+
+* uni1EE7 (U+1EE7): X=271.0,Y=727.0 (should be at cap-height 729?)
+
+* uni1EED (U+1EED): X=271.0,Y=727.0 (should be at cap-height 729?)
+
+* uring (U+016F): X=244.0,Y=730.0 (should be at cap-height 729?)
+
+* uni1EF7 (U+1EF7): X=229.0,Y=727.0 (should be at cap-height 729?)
+
+* uni1EA3.ss01: X=255.0,Y=727.0 (should be at cap-height 729?)
+
+* aring.ss01: X=228.0,Y=730.0 (should be at cap-height 729?)
+
+* uni24EA (U+24EA): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni24EA (U+24EA): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2460 (U+2460): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2460 (U+2460): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2461 (U+2461): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2461 (U+2461): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2462 (U+2462): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2462 (U+2462): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2463 (U+2463): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2463 (U+2463): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2464 (U+2464): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2464 (U+2464): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2465 (U+2465): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2465 (U+2465): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2466 (U+2466): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2466 (U+2466): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2467 (U+2467): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2467 (U+2467): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2468 (U+2468): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2468 (U+2468): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* five.tf: X=260.5,Y=2.0 (should be at baseline 0?)
+
+* uni2080 (U+2080): X=13.5,Y=-0.5 (should be at baseline 0?)
+
+* uni2089 (U+2089): X=183.5,Y=1.5 (should be at baseline 0?)
+
+* uni2079 (U+2079): X=333.5,Y=728.5 (should be at cap-height 729?)
+
+* comma.ss01: X=11.0,Y=-1.0 (should be at baseline 0?)
+
+* comma.ss01: X=-0.5,Y=-0.5 (should be at baseline 0?)
+
+* semicolon.ss01: X=11.0,Y=-1.0 (should be at baseline 0?)
+
+* semicolon.ss01: X=-0.5,Y=-0.5 (should be at baseline 0?)
+
+* quotesinglbase.ss01: X=11.0,Y=-1.0 (should be at baseline 0?)
+
+* quotesinglbase.ss01: X=-0.5,Y=-0.5 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=11.0,Y=-1.0 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=-0.5,Y=-0.5 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=129.0,Y=-1.0 (should be at baseline 0?)
+
+* quotedblbase.ss01: X=117.5,Y=-0.5 (should be at baseline 0?)
+
+* section (U+00A7): X=313.5,Y=727.0 (should be at cap-height 729?)
+
+* copyright (U+00A9): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* copyright (U+00A9): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2117 (U+2117): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2117 (U+2117): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni2113 (U+2113): X=214.0,Y=-0.5 (should be at baseline 0?)
+
+* circle (U+25CB): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* circle (U+25CB): X=252.0,Y=2.0 (should be at baseline 0?)
+
+* uni030A (U+030A): X=147.0,Y=730.0 (should be at cap-height 729?)
+
+* hookabovecomb (U+0309): X=175.0,Y=727.0 (should be at cap-height 729?)
+
+* ring (U+02DA): X=147.0,Y=730.0 (should be at cap-height 729?)
+</code></pre>
+
+                            
+                             [code: found-misalignments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Checking OS/2 achVendID.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vendor_id&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>OS/2 VendorID value 'GTHB' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+
+                            
+                             [code: unknown]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                HubotSans-Italic[wdth,wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>OS/2 VendorID value 'GTHB' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+
+                            
+                             [code: unknown]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
     </main>

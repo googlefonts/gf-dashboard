@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/version_bump<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -272,20 +276,20 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>4</td>
-        <td>12</td>
-        <td>65</td>
-        <td>9</td>
-        <td>156</td>
+        <td>2</td>
+        <td>14</td>
+        <td>53</td>
+        <td>8</td>
+        <td>163</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>2%</td>
-        <td>5%</td>
-        <td>26%</td>
-        <td>4%</td>
-        <td>63%</td>
+        <td>1%</td>
+        <td>6%</td>
+        <td>22%</td>
+        <td>3%</td>
+        <td>68%</td>
     </tr>
 </table>
         
@@ -310,579 +314,100 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.10</p>
+<p>FontBakery version: 0.13.0</p>
         
             
                 <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
+    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
-    <h3>
     
-    Fonts have consistent underline thickness?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/underline_thickness&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Fonts have consistent PANOSE family type?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/panose_familytype&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Make sure all font files have the same version value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/equal_font_versions&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that OS/2.fsSelection bold &amp; italic settings are unique for each NameID1
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/family/bold_italic_unique_for_nameid1&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Verify that each group of fonts with the same nameID 1 has maximum of 4 fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/family/max_4_fonts_per_family_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Verify that family names in the name table are consistent across all fonts in the family. Checks Typographic Family name (nameID 16) if present, otherwise uses Font Family name (nameID 1)
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/family/consistent_family_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    CFF table FontName must match name table ID 6 (PostScript name).
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/name/postscript_vs_cff&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Name table ID 6 (PostScript name) must be consistent across platforms.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/name/postscript_name_consistency&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check name table for empty records.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/name/empty_records&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Description strings in the name table must not contain copyright info.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/no_copyright_on_description&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does full font name begin with the font family name?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/match_familyname_fullfont&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wght&#39; (Weight) axis coordinate must be 400 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_wght_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wdth&#39; (Width) axis coordinate must be 100 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_wdth_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;slnt&#39; (Slant) axis coordinate must be zero on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_slnt_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;ital&#39; (Italic) axis coordinate must be zero on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_ital_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;opsz&#39; (Optical Size) axis coordinate should be between 10 and 16 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_opsz_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;slnt&#39; (Slant) axis coordinate specifies positive values in its range?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/slnt_range&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;ital&#39; (Italic) axis coordinates is in a valid range?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.typenetwork/check/varfont/ital_range&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
     
 
-
-    <h3>
     
-    The variable font &#39;wght&#39; (Weight) axis coordinate must be within spec range of 1 to 1000 on all instances.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/wght_valid_range&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
     
-    The variable font &#39;wdth&#39; (Width) axis coordinate must strictly greater than zero.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/wdth_valid_range&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    All fvar axes have a correspondent Axis Record on STAT table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/stat_axis_record_for_each_axis&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Does the number of glyphs in the loca table match the maxp table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/loca/maxp_num_glyphs&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jun/20</div>
     
-    Does the font&#39;s CFF table top dict strings fit into the ASCII range?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff_ascii_strings&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Is the CFF subr/gsubr call depth &gt; 10?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff_call_depth&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Does the font use deprecated CFF operators or operations?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff_deprecated_operators&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
 
-    <h3>
     
-    Is the CFF2 subr/gsubr call depth &gt; 10?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff2_call_depth&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Checking font version fields (head and name table).
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Font has correct post table version?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/post_table_version&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
 
-    <h3>
     
-    Checking correctness of monospaced metadata.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/monospace&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Check if OS/2 xAvgCharWidth is correct.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Check if OS/2 fsSelection matches head macStyle bold and italic bits.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/fsselection_matches_macstyle&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
-
     <h3>
     
     Checking unitsPerEm value is reasonable.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unitsperem&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:opentype/unitsperem&gt;</div>
 
 
 
@@ -922,12 +447,44 @@ immediately.
         </details>
     
 
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+</span>
+
+    
     <h3>
     
-    Does the font have a DSIG table?
+    Check accent of Lcaron, dcaron, lcaron, tcaron
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:alt_caron&gt;</div>
 
 
 
@@ -939,13 +496,112 @@ immediately.
 
 
     
+        <details>
+            <summary>
+                ⚠️
+                Micro5-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
 
+                            <span class='details_text'>
+                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
 
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ✅ PASS
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Looks good!</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     <h3>
     
-    Check glyphs in mark glyph class are non-spacing.
+    Check if each glyph has the recommended amount of contours.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:contour_count&gt;</div>
 
 
 
@@ -957,49 +613,891 @@ immediately.
 
 
     
+        <details>
+            <summary>
+                ⚠️
+                Micro5-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
 
+                            <span class='details_text'>
+                            <p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: percent	Contours detected: 7	Expected: 4 or 5
 
-    <h3>
+- Glyph name: parenleft	Contours detected: 3	Expected: 1
+
+- Glyph name: parenright	Contours detected: 3	Expected: 1
+
+- Glyph name: asterisk	Contours detected: 5	Expected: 1 or 4
+
+- Glyph name: slash	Contours detected: 3	Expected: 1
+
+- Glyph name: seven	Contours detected: 2	Expected: 1
+
+- Glyph name: less	Contours detected: 3	Expected: 1
+
+- Glyph name: greater	Contours detected: 3	Expected: 1
+
+- Glyph name: question	Contours detected: 3	Expected: 2
+
+- Glyph name: at	Contours detected: 3	Expected: 2
+
+- Glyph name: B	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: G	Contours detected: 2	Expected: 1
+
+- Glyph name: J	Contours detected: 2	Expected: 1
+
+- Glyph name: K	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: M	Contours detected: 4	Expected: 1
+
+- Glyph name: N	Contours detected: 2	Expected: 1
+
+- Glyph name: V	Contours detected: 3	Expected: 1
+
+- Glyph name: W	Contours detected: 5	Expected: 1 or 2
+
+- Glyph name: X	Contours detected: 5	Expected: 1
+
+- Glyph name: Y	Contours detected: 3	Expected: 1
+
+- Glyph name: Z	Contours detected: 3	Expected: 1
+
+- Glyph name: backslash	Contours detected: 3	Expected: 1
+
+- Glyph name: asciicircum	Contours detected: 3	Expected: 1
+
+- Glyph name: grave	Contours detected: 2	Expected: 1
+
+- Glyph name: c	Contours detected: 3	Expected: 1
+
+- Glyph name: e	Contours detected: 3	Expected: 2
+
+- Glyph name: f	Contours detected: 2	Expected: 1
+
+- Glyph name: h	Contours detected: 2	Expected: 1
+
+- Glyph name: j	Contours detected: 3	Expected: 2
+
+- Glyph name: k	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: m	Contours detected: 4	Expected: 1
+
+- Glyph name: n	Contours detected: 2	Expected: 1
+
+- Glyph name: o	Contours detected: 4	Expected: 2
+
+- Glyph name: s	Contours detected: 2	Expected: 1
+
+- Glyph name: u	Contours detected: 2	Expected: 1
+
+- Glyph name: v	Contours detected: 3	Expected: 1
+
+- Glyph name: w	Contours detected: 5	Expected: 1
+
+- Glyph name: x	Contours detected: 5	Expected: 1
+
+- Glyph name: y	Contours detected: 4	Expected: 1
+
+- Glyph name: z	Contours detected: 6	Expected: 1
+
+- Glyph name: braceleft	Contours detected: 3	Expected: 1
+
+- Glyph name: braceright	Contours detected: 3	Expected: 1
+
+- Glyph name: asciitilde	Contours detected: 2	Expected: 1
+
+- Glyph name: yen	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: section	Contours detected: 8	Expected: 2
+
+- Glyph name: copyright	Contours detected: 7	Expected: 3
+
+- Glyph name: guillemotleft	Contours detected: 6	Expected: 2
+
+- Glyph name: degree	Contours detected: 4	Expected: 2
+
+- Glyph name: acute	Contours detected: 2	Expected: 1
+
+- Glyph name: cedilla	Contours detected: 3	Expected: 1
+
+- Glyph name: ordmasculine	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: guillemotright	Contours detected: 6	Expected: 2
+
+- Glyph name: questiondown	Contours detected: 3	Expected: 2
+
+- Glyph name: Agrave	Contours detected: 4	Expected: 3
+
+- Glyph name: Aacute	Contours detected: 4	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 5	Expected: 3
+
+- Glyph name: Atilde	Contours detected: 4	Expected: 3
+
+- Glyph name: Aring	Contours detected: 6	Expected: 3 or 4
+
+- Glyph name: AE	Contours detected: 1	Expected: 2
+
+- Glyph name: Ccedilla	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: Egrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Eacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ecircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: Igrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Iacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Icircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: Ntilde	Contours detected: 4	Expected: 2
+
+- Glyph name: Ograve	Contours detected: 4	Expected: 3
+
+- Glyph name: Oacute	Contours detected: 4	Expected: 3
+
+- Glyph name: Ocircumflex	Contours detected: 5	Expected: 3
+
+- Glyph name: Otilde	Contours detected: 4	Expected: 3
+
+- Glyph name: multiply	Contours detected: 5	Expected: 1
+
+- Glyph name: Ugrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Uacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ucircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: Yacute	Contours detected: 5	Expected: 2
+
+- Glyph name: germandbls	Contours detected: 6	Expected: 1
+
+- Glyph name: agrave	Contours detected: 4	Expected: 3
+
+- Glyph name: aacute	Contours detected: 4	Expected: 3
+
+- Glyph name: acircumflex	Contours detected: 5	Expected: 3
+
+- Glyph name: atilde	Contours detected: 4	Expected: 3
+
+- Glyph name: aring	Contours detected: 6	Expected: 4
+
+- Glyph name: ccedilla	Contours detected: 5	Expected: 1 or 2
+
+- Glyph name: egrave	Contours detected: 5	Expected: 3
+
+- Glyph name: eacute	Contours detected: 5	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 6	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 5	Expected: 4
+
+- Glyph name: igrave	Contours detected: 3	Expected: 2
+
+- Glyph name: iacute	Contours detected: 3	Expected: 2
+
+- Glyph name: icircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: eth	Contours detected: 4	Expected: 2
+
+- Glyph name: ntilde	Contours detected: 4	Expected: 2
+
+- Glyph name: ograve	Contours detected: 6	Expected: 3
+
+- Glyph name: oacute	Contours detected: 6	Expected: 3
+
+- Glyph name: ocircumflex	Contours detected: 7	Expected: 3
+
+- Glyph name: otilde	Contours detected: 6	Expected: 3
+
+- Glyph name: odieresis	Contours detected: 6	Expected: 4
+
+- Glyph name: oslash	Contours detected: 6	Expected: 3
+
+- Glyph name: ugrave	Contours detected: 4	Expected: 2
+
+- Glyph name: uacute	Contours detected: 4	Expected: 2
+
+- Glyph name: ucircumflex	Contours detected: 5	Expected: 2
+
+- Glyph name: udieresis	Contours detected: 4	Expected: 3
+
+- Glyph name: yacute	Contours detected: 6	Expected: 2
+
+- Glyph name: ydieresis	Contours detected: 6	Expected: 3
+
+- Glyph name: Aogonek	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: aogonek	Contours detected: 4	Expected: 2
+
+- Glyph name: Cacute	Contours detected: 3	Expected: 2
+
+- Glyph name: cacute	Contours detected: 5	Expected: 2
+
+- Glyph name: cdotaccent	Contours detected: 4	Expected: 2
+
+- Glyph name: Ccaron	Contours detected: 4	Expected: 2
+
+- Glyph name: ccaron	Contours detected: 6	Expected: 2
+
+- Glyph name: Dcaron	Contours detected: 5	Expected: 3
+
+- Glyph name: emacron	Contours detected: 4	Expected: 3
+
+- Glyph name: edotaccent	Contours detected: 4	Expected: 3
+
+- Glyph name: Eogonek	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: eogonek	Contours detected: 4	Expected: 2
+
+- Glyph name: Ecaron	Contours detected: 4	Expected: 2
+
+- Glyph name: ecaron	Contours detected: 6	Expected: 3
+
+- Glyph name: Gbreve	Contours detected: 3	Expected: 2
+
+- Glyph name: Gdotaccent	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0122	Contours detected: 3	Expected: 2
+
+- Glyph name: Hbar	Contours detected: 1	Expected: 2
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: Iogonek	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: iogonek	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: IJ	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: ij	Contours detected: 5	Expected: 3 or 4
+
+- Glyph name: uni0136	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: uni0137	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: Lacute	Contours detected: 3	Expected: 2
+
+- Glyph name: lacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: Nacute	Contours detected: 4	Expected: 2
+
+- Glyph name: nacute	Contours detected: 4	Expected: 2
+
+- Glyph name: uni0145	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0146	Contours detected: 3	Expected: 2
+
+- Glyph name: Ncaron	Contours detected: 5	Expected: 2
+
+- Glyph name: ncaron	Contours detected: 5	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: omacron	Contours detected: 5	Expected: 3
+
+- Glyph name: Ohungarumlaut	Contours detected: 6	Expected: 4
+
+- Glyph name: ohungarumlaut	Contours detected: 8	Expected: 4
+
+- Glyph name: oe	Contours detected: 5	Expected: 3
+
+- Glyph name: Racute	Contours detected: 4	Expected: 3
+
+- Glyph name: racute	Contours detected: 3	Expected: 2
+
+- Glyph name: Rcaron	Contours detected: 5	Expected: 3
+
+- Glyph name: rcaron	Contours detected: 4	Expected: 2
+
+- Glyph name: Sacute	Contours detected: 3	Expected: 2
+
+- Glyph name: sacute	Contours detected: 4	Expected: 2
+
+- Glyph name: Scedilla	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: scedilla	Contours detected: 4	Expected: 1 or 2
+
+- Glyph name: Scaron	Contours detected: 4	Expected: 2
+
+- Glyph name: scaron	Contours detected: 5	Expected: 2
+
+- Glyph name: Tcaron	Contours detected: 4	Expected: 2
+
+- Glyph name: umacron	Contours detected: 3	Expected: 2
+
+- Glyph name: ubreve	Contours detected: 3	Expected: 2
+
+- Glyph name: Uring	Contours detected: 5	Expected: 3
+
+- Glyph name: uring	Contours detected: 6	Expected: 3
+
+- Glyph name: Uhungarumlaut	Contours detected: 5	Expected: 3
+
+- Glyph name: uhungarumlaut	Contours detected: 6	Expected: 3
+
+- Glyph name: Uogonek	Contours detected: 3	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 4	Expected: 1
+
+- Glyph name: Wcircumflex	Contours detected: 8	Expected: 2
+
+- Glyph name: wcircumflex	Contours detected: 8	Expected: 2
+
+- Glyph name: Ycircumflex	Contours detected: 6	Expected: 2
+
+- Glyph name: ycircumflex	Contours detected: 7	Expected: 2
+
+- Glyph name: Ydieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: Zacute	Contours detected: 5	Expected: 2
+
+- Glyph name: zacute	Contours detected: 8	Expected: 2
+
+- Glyph name: Zdotaccent	Contours detected: 4	Expected: 2
+
+- Glyph name: zdotaccent	Contours detected: 7	Expected: 2
+
+- Glyph name: Zcaron	Contours detected: 6	Expected: 2
+
+- Glyph name: zcaron	Contours detected: 9	Expected: 2
+
+- Glyph name: uni0219	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0237	Contours detected: 2	Expected: 1
+
+- Glyph name: circumflex	Contours detected: 3	Expected: 1
+
+- Glyph name: caron	Contours detected: 3	Expected: 1
+
+- Glyph name: ring	Contours detected: 4	Expected: 2
+
+- Glyph name: ogonek	Contours detected: 3	Expected: 1
+
+- Glyph name: tilde	Contours detected: 2	Expected: 1
+
+- Glyph name: hungarumlaut	Contours detected: 4	Expected: 2
+
+- Glyph name: gravecomb	Contours detected: 2	Expected: 1
+
+- Glyph name: acutecomb	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0302	Contours detected: 3	Expected: 1
+
+- Glyph name: tildecomb	Contours detected: 2	Expected: 1
+
+- Glyph name: uni030A	Contours detected: 4	Expected: 2
+
+- Glyph name: uni030B	Contours detected: 4	Expected: 2
+
+- Glyph name: uni030C	Contours detected: 3	Expected: 1
+
+- Glyph name: uni0327	Contours detected: 3	Expected: 1
+
+- Glyph name: uni0328	Contours detected: 3	Expected: 1
+
+- Glyph name: Wgrave	Contours detected: 7	Expected: 2
+
+- Glyph name: wgrave	Contours detected: 7	Expected: 2
+
+- Glyph name: Wacute	Contours detected: 7	Expected: 2
+
+- Glyph name: wacute	Contours detected: 7	Expected: 2
+
+- Glyph name: Wdieresis	Contours detected: 7	Expected: 3
+
+- Glyph name: wdieresis	Contours detected: 7	Expected: 3
+
+- Glyph name: uni1E9E	Contours detected: 3	Expected: 1
+
+- Glyph name: Ygrave	Contours detected: 5	Expected: 2
+
+- Glyph name: ygrave	Contours detected: 6	Expected: 2
+
+- Glyph name: quoteleft	Contours detected: 2	Expected: 1
+
+- Glyph name: quoteright	Contours detected: 2	Expected: 1
+
+- Glyph name: quotedblleft	Contours detected: 4	Expected: 2
+
+- Glyph name: quotedblright	Contours detected: 4	Expected: 2
+
+- Glyph name: quotedblbase	Contours detected: 1	Expected: 2
+
+- Glyph name: guilsinglleft	Contours detected: 3	Expected: 1
+
+- Glyph name: guilsinglright	Contours detected: 3	Expected: 1
+
+- Glyph name: Euro	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: trademark	Contours detected: 5	Expected: 2
+
+- Glyph name: AE	Contours detected: 1	Expected: 2
+
+- Glyph name: Aacute	Contours detected: 4	Expected: 3
+
+- Glyph name: Acircumflex	Contours detected: 5	Expected: 3
+
+- Glyph name: Agrave	Contours detected: 4	Expected: 3
+
+- Glyph name: Aogonek	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: Aring	Contours detected: 6	Expected: 3 or 4
+
+- Glyph name: Atilde	Contours detected: 4	Expected: 3
+
+- Glyph name: B	Contours detected: 1	Expected: 2 or 3
+
+- Glyph name: Cacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ccaron	Contours detected: 4	Expected: 2
+
+- Glyph name: Ccedilla	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: Dcaron	Contours detected: 5	Expected: 3
+
+- Glyph name: Eacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ecaron	Contours detected: 4	Expected: 2
+
+- Glyph name: Ecircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: Egrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Eng	Contours detected: 2	Expected: 1
+
+- Glyph name: Eogonek	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: Euro	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: G	Contours detected: 2	Expected: 1
+
+- Glyph name: Gbreve	Contours detected: 3	Expected: 2
+
+- Glyph name: Gdotaccent	Contours detected: 3	Expected: 2
+
+- Glyph name: Hbar	Contours detected: 1	Expected: 2
+
+- Glyph name: IJ	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: Iacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Icircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: Igrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Iogonek	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: J	Contours detected: 2	Expected: 1
+
+- Glyph name: K	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: Lacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Lslash	Contours detected: 2	Expected: 1
+
+- Glyph name: M	Contours detected: 4	Expected: 1
+
+- Glyph name: N	Contours detected: 2	Expected: 1
+
+- Glyph name: Nacute	Contours detected: 4	Expected: 2
+
+- Glyph name: Ncaron	Contours detected: 5	Expected: 2
+
+- Glyph name: Ntilde	Contours detected: 4	Expected: 2
+
+- Glyph name: Oacute	Contours detected: 4	Expected: 3
+
+- Glyph name: Ocircumflex	Contours detected: 5	Expected: 3
+
+- Glyph name: Ograve	Contours detected: 4	Expected: 3
+
+- Glyph name: Ohungarumlaut	Contours detected: 6	Expected: 4
+
+- Glyph name: Otilde	Contours detected: 4	Expected: 3
+
+- Glyph name: Racute	Contours detected: 4	Expected: 3
+
+- Glyph name: Rcaron	Contours detected: 5	Expected: 3
+
+- Glyph name: Sacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Scaron	Contours detected: 4	Expected: 2
+
+- Glyph name: Tcaron	Contours detected: 4	Expected: 2
+
+- Glyph name: Uacute	Contours detected: 3	Expected: 2
+
+- Glyph name: Ucircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: Ugrave	Contours detected: 3	Expected: 2
+
+- Glyph name: Uhungarumlaut	Contours detected: 5	Expected: 3
+
+- Glyph name: Uogonek	Contours detected: 3	Expected: 1
+
+- Glyph name: Uring	Contours detected: 5	Expected: 3
+
+- Glyph name: V	Contours detected: 3	Expected: 1
+
+- Glyph name: W	Contours detected: 5	Expected: 1 or 2
+
+- Glyph name: Wacute	Contours detected: 7	Expected: 2
+
+- Glyph name: Wcircumflex	Contours detected: 8	Expected: 2
+
+- Glyph name: Wdieresis	Contours detected: 7	Expected: 3
+
+- Glyph name: Wgrave	Contours detected: 7	Expected: 2
+
+- Glyph name: X	Contours detected: 5	Expected: 1
+
+- Glyph name: Y	Contours detected: 3	Expected: 1
+
+- Glyph name: Yacute	Contours detected: 5	Expected: 2
+
+- Glyph name: Ycircumflex	Contours detected: 6	Expected: 2
+
+- Glyph name: Ydieresis	Contours detected: 5	Expected: 3
+
+- Glyph name: Ygrave	Contours detected: 5	Expected: 2
+
+- Glyph name: Z	Contours detected: 3	Expected: 1
+
+- Glyph name: Zacute	Contours detected: 5	Expected: 2
+
+- Glyph name: Zcaron	Contours detected: 6	Expected: 2
+
+- Glyph name: Zdotaccent	Contours detected: 4	Expected: 2
+
+- Glyph name: aacute	Contours detected: 4	Expected: 3
+
+- Glyph name: acircumflex	Contours detected: 5	Expected: 3
+
+- Glyph name: acute	Contours detected: 2	Expected: 1
+
+- Glyph name: agrave	Contours detected: 4	Expected: 3
+
+- Glyph name: aogonek	Contours detected: 4	Expected: 2
+
+- Glyph name: aring	Contours detected: 6	Expected: 4
+
+- Glyph name: asciicircum	Contours detected: 3	Expected: 1
+
+- Glyph name: asciitilde	Contours detected: 2	Expected: 1
+
+- Glyph name: asterisk	Contours detected: 5	Expected: 1 or 4
+
+- Glyph name: at	Contours detected: 3	Expected: 2
+
+- Glyph name: atilde	Contours detected: 4	Expected: 3
+
+- Glyph name: backslash	Contours detected: 3	Expected: 1
+
+- Glyph name: braceleft	Contours detected: 3	Expected: 1
+
+- Glyph name: braceright	Contours detected: 3	Expected: 1
+
+- Glyph name: c	Contours detected: 3	Expected: 1
+
+- Glyph name: cacute	Contours detected: 5	Expected: 2
+
+- Glyph name: caron	Contours detected: 3	Expected: 1
+
+- Glyph name: ccaron	Contours detected: 6	Expected: 2
+
+- Glyph name: ccedilla	Contours detected: 5	Expected: 1 or 2
+
+- Glyph name: cdotaccent	Contours detected: 4	Expected: 2
+
+- Glyph name: cedilla	Contours detected: 3	Expected: 1
+
+- Glyph name: circumflex	Contours detected: 3	Expected: 1
+
+- Glyph name: copyright	Contours detected: 7	Expected: 3
+
+- Glyph name: degree	Contours detected: 4	Expected: 2
+
+- Glyph name: e	Contours detected: 3	Expected: 2
+
+- Glyph name: eacute	Contours detected: 5	Expected: 3
+
+- Glyph name: ecaron	Contours detected: 6	Expected: 3
+
+- Glyph name: ecircumflex	Contours detected: 6	Expected: 3
+
+- Glyph name: edieresis	Contours detected: 5	Expected: 4
+
+- Glyph name: edotaccent	Contours detected: 4	Expected: 3
+
+- Glyph name: egrave	Contours detected: 5	Expected: 3
+
+- Glyph name: emacron	Contours detected: 4	Expected: 3
+
+- Glyph name: eng	Contours detected: 2	Expected: 1
+
+- Glyph name: eogonek	Contours detected: 4	Expected: 2
+
+- Glyph name: eth	Contours detected: 4	Expected: 2
+
+- Glyph name: f	Contours detected: 2	Expected: 1
+
+- Glyph name: germandbls	Contours detected: 6	Expected: 1
+
+- Glyph name: grave	Contours detected: 2	Expected: 1
+
+- Glyph name: greater	Contours detected: 3	Expected: 1
+
+- Glyph name: guillemotleft	Contours detected: 6	Expected: 2
+
+- Glyph name: guillemotright	Contours detected: 6	Expected: 2
+
+- Glyph name: guilsinglleft	Contours detected: 3	Expected: 1
+
+- Glyph name: guilsinglright	Contours detected: 3	Expected: 1
+
+- Glyph name: h	Contours detected: 2	Expected: 1
+
+- Glyph name: hbar	Contours detected: 2	Expected: 1
+
+- Glyph name: hungarumlaut	Contours detected: 4	Expected: 2
+
+- Glyph name: iacute	Contours detected: 3	Expected: 2
+
+- Glyph name: icircumflex	Contours detected: 4	Expected: 2
+
+- Glyph name: igrave	Contours detected: 3	Expected: 2
+
+- Glyph name: ij	Contours detected: 5	Expected: 3 or 4
+
+- Glyph name: iogonek	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: j	Contours detected: 3	Expected: 2
+
+- Glyph name: k	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: lacute	Contours detected: 3	Expected: 2
+
+- Glyph name: less	Contours detected: 3	Expected: 1
+
+- Glyph name: m	Contours detected: 4	Expected: 1
+
+- Glyph name: multiply	Contours detected: 5	Expected: 1
+
+- Glyph name: n	Contours detected: 2	Expected: 1
+
+- Glyph name: nacute	Contours detected: 4	Expected: 2
+
+- Glyph name: ncaron	Contours detected: 5	Expected: 2
+
+- Glyph name: ntilde	Contours detected: 4	Expected: 2
+
+- Glyph name: o	Contours detected: 4	Expected: 2
+
+- Glyph name: oacute	Contours detected: 6	Expected: 3
+
+- Glyph name: ocircumflex	Contours detected: 7	Expected: 3
+
+- Glyph name: odieresis	Contours detected: 6	Expected: 4
+
+- Glyph name: oe	Contours detected: 5	Expected: 3
+
+- Glyph name: ogonek	Contours detected: 3	Expected: 1
+
+- Glyph name: ograve	Contours detected: 6	Expected: 3
+
+- Glyph name: ohungarumlaut	Contours detected: 8	Expected: 4
+
+- Glyph name: omacron	Contours detected: 5	Expected: 3
+
+- Glyph name: ordmasculine	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: oslash	Contours detected: 6	Expected: 3
+
+- Glyph name: otilde	Contours detected: 6	Expected: 3
+
+- Glyph name: parenleft	Contours detected: 3	Expected: 1
+
+- Glyph name: parenright	Contours detected: 3	Expected: 1
+
+- Glyph name: percent	Contours detected: 7	Expected: 4 or 5
+
+- Glyph name: question	Contours detected: 3	Expected: 2
+
+- Glyph name: questiondown	Contours detected: 3	Expected: 2
+
+- Glyph name: quotedblbase	Contours detected: 1	Expected: 2
+
+- Glyph name: quotedblleft	Contours detected: 4	Expected: 2
+
+- Glyph name: quotedblright	Contours detected: 4	Expected: 2
+
+- Glyph name: quoteleft	Contours detected: 2	Expected: 1
+
+- Glyph name: quoteright	Contours detected: 2	Expected: 1
+
+- Glyph name: racute	Contours detected: 3	Expected: 2
+
+- Glyph name: rcaron	Contours detected: 4	Expected: 2
+
+- Glyph name: ring	Contours detected: 4	Expected: 2
+
+- Glyph name: s	Contours detected: 2	Expected: 1
+
+- Glyph name: sacute	Contours detected: 4	Expected: 2
+
+- Glyph name: scaron	Contours detected: 5	Expected: 2
+
+- Glyph name: section	Contours detected: 8	Expected: 2
+
+- Glyph name: seven	Contours detected: 2	Expected: 1
+
+- Glyph name: slash	Contours detected: 3	Expected: 1
+
+- Glyph name: tilde	Contours detected: 2	Expected: 1
+
+- Glyph name: trademark	Contours detected: 5	Expected: 2
+
+- Glyph name: u	Contours detected: 2	Expected: 1
+
+- Glyph name: uacute	Contours detected: 4	Expected: 2
+
+- Glyph name: ubreve	Contours detected: 3	Expected: 2
+
+- Glyph name: ucircumflex	Contours detected: 5	Expected: 2
+
+- Glyph name: udieresis	Contours detected: 4	Expected: 3
+
+- Glyph name: ugrave	Contours detected: 4	Expected: 2
+
+- Glyph name: uhungarumlaut	Contours detected: 6	Expected: 3
+
+- Glyph name: umacron	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0122	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0136	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: uni0137	Contours detected: 4	Expected: 2 or 3
+
+- Glyph name: uni0145	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0146	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0219	Contours detected: 3	Expected: 2
+
+- Glyph name: uni0237	Contours detected: 2	Expected: 1
+
+- Glyph name: uni0302	Contours detected: 3	Expected: 1
+
+- Glyph name: uni030A	Contours detected: 4	Expected: 2
+
+- Glyph name: uni030B	Contours detected: 4	Expected: 2
+
+- Glyph name: uni030C	Contours detected: 3	Expected: 1
+
+- Glyph name: uni0327	Contours detected: 3	Expected: 1
+
+- Glyph name: uni0328	Contours detected: 3	Expected: 1
+
+- Glyph name: uni1E9E	Contours detected: 3	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 4	Expected: 1
+
+- Glyph name: uring	Contours detected: 6	Expected: 3
+
+- Glyph name: v	Contours detected: 3	Expected: 1
+
+- Glyph name: w	Contours detected: 5	Expected: 1
+
+- Glyph name: wacute	Contours detected: 7	Expected: 2
+
+- Glyph name: wcircumflex	Contours detected: 8	Expected: 2
+
+- Glyph name: wdieresis	Contours detected: 7	Expected: 3
+
+- Glyph name: wgrave	Contours detected: 7	Expected: 2
+
+- Glyph name: x	Contours detected: 5	Expected: 1
+
+- Glyph name: y	Contours detected: 4	Expected: 1
+
+- Glyph name: yacute	Contours detected: 6	Expected: 2
+
+- Glyph name: ycircumflex	Contours detected: 7	Expected: 2
+
+- Glyph name: ydieresis	Contours detected: 6	Expected: 3
+
+- Glyph name: yen	Contours detected: 3	Expected: 1 or 2
+
+- Glyph name: ygrave	Contours detected: 6	Expected: 2
+
+- Glyph name: z	Contours detected: 6	Expected: 1
+
+- Glyph name: zacute	Contours detected: 8	Expected: 2
+
+- Glyph name: zcaron	Contours detected: 9	Expected: 2
+
+- Glyph name: zdotaccent	Contours detected: 7	Expected: 2
+</code></pre>
+
+                            
+                             [code: contour-count]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
-    Check mark characters are in GDEF mark glyph class.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Check GDEF mark glyph class doesn&#39;t have characters that are not marks.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
+    
 
+    
+
+    
+
+    
+
+    
+
+    
     <h3>
     
     Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:gpos_kerning_info&gt;</div>
 
 
 
@@ -1039,634 +1537,78 @@ immediately.
         </details>
     
 
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     <h3>
     
-    Is there a usable &#34;kern&#34; table declared in the font?
+    Checking that the typoAscender exceeds the yMax of the /Agrave.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kern_table&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Is there any unused data at the end of the glyf table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_unused_data&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font follows the family naming recommendations?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family_naming_recommendations&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    MaxAdvanceWidth is consistent with values in the Hmtx and Hhea tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/maxadvancewidth&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    PostScript name follows OpenType specification requirements?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/postscript_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check for points out of bounds.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check glyphs do not have duplicate components which have the same x,y coordinates.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_non_transformed_duplicate_components&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check code page character ranges
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/code_pages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font have any invalid feature tags?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/layout_valid_feature_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font have any invalid script tags?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/layout_valid_script_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font have any invalid language tags?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/layout_valid_language_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking post.italicAngle value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_angle&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking head.macStyle value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mac_style&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 fsSelection value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fsselection&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check name table IDs 1, 2, 16, 17 to conform to Italic style.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/italic_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that the value of axisNameID used by each VariationAxisRecord is greater than 255 and less than 32768.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_axis_nameid&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that the value of subfamilyNameID used by each InstanceRecord is 2, 17, or greater than 255 and less than 32768.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_subfamily_nameid&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that the value of postScriptNameID used by each InstanceRecord is 6, 0xFFFF, or greater than 255 and less than 32768.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_postscript_nameid&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to a name ID whose string is equal to the string of either name ID 2 or 17, and its postScriptNameID value is set to a name ID whose string is equal to the string of name ID 6.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_default_instance_nameids&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that all of the instance records in a given font have the same size.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/same_size_instance_records&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that all of the instance records in a given font have distinct data.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/distinct_instance_records&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate foundry-defined design-variation axis tag names.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/foundry_defined_tag_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that family axis ranges are indentical
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/family_axis_ranges&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    STAT table has Axis Value tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/stat_has_axis_value_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 achVendID against configuration.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.thetypefounders/check/vendor_id&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check hhea.caretSlopeRise and hhea.caretSlopeRun
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/caret_slope&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure VFs have &#39;ital&#39; STAT axis.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_in_stat&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure &#39;ital&#39; STAT axis is boolean value
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_in_stat_is_boolean&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure &#39;ital&#39; STAT axis is last.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_last&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-            
-        
-            
-        
-            
-                <h2>Universal Profile Checks</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️
-</span>
-
-    <h3>
-    
-    Check accent of Lcaron, dcaron, lcaron, tcaron
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that glyph for U+0675 ARABIC LETTER HIGH HAMZA is not a mark.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/arabic_high_hamza&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that Arabic spacing symbols U+FBB2–FBC1 aren&#39;t classified as marks.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/arabic_spacing_symbols&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure the font supports case swapping for all its glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/case_mapping&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font contain chws and vchw features?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if each glyph has the recommended amount of contours.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:typoascender_exceeds_Agrave&gt;</div>
 
 
 
@@ -1693,1718 +1635,6 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
-<p>The following glyphs do not have the recommended number of contours:</p>
-<pre><code>- Glyph name: exclam	Contours detected: 4	Expected: 2
-
-- Glyph name: quotedbl	Contours detected: 4	Expected: 2
-
-- Glyph name: numbersign	Contours detected: 16	Expected: 2
-
-- Glyph name: dollar	Contours detected: 18	Expected: 1, 3 or 5
-
-- Glyph name: percent	Contours detected: 7	Expected: 4 or 5
-
-- Glyph name: ampersand	Contours detected: 17	Expected: 1, 2 or 3
-
-- Glyph name: quotesingle	Contours detected: 2	Expected: 1
-
-- Glyph name: parenleft	Contours detected: 6	Expected: 1
-
-- Glyph name: parenright	Contours detected: 6	Expected: 1
-
-- Glyph name: asterisk	Contours detected: 5	Expected: 1 or 4
-
-- Glyph name: plus	Contours detected: 5	Expected: 1
-
-- Glyph name: comma	Contours detected: 2	Expected: 1
-
-- Glyph name: hyphen	Contours detected: 3	Expected: 1
-
-- Glyph name: slash	Contours detected: 6	Expected: 1
-
-- Glyph name: zero	Contours detected: 12	Expected: 2 or 3
-
-- Glyph name: one	Contours detected: 6	Expected: 1
-
-- Glyph name: two	Contours detected: 11	Expected: 1
-
-- Glyph name: three	Contours detected: 10	Expected: 1
-
-- Glyph name: four	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: five	Contours detected: 11	Expected: 1
-
-- Glyph name: six	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: seven	Contours detected: 7	Expected: 1
-
-- Glyph name: eight	Contours detected: 13	Expected: 3
-
-- Glyph name: nine	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: semicolon	Contours detected: 3	Expected: 2
-
-- Glyph name: less	Contours detected: 5	Expected: 1
-
-- Glyph name: equal	Contours detected: 6	Expected: 2
-
-- Glyph name: greater	Contours detected: 5	Expected: 1
-
-- Glyph name: question	Contours detected: 6	Expected: 2
-
-- Glyph name: at	Contours detected: 25	Expected: 2
-
-- Glyph name: A	Contours detected: 10	Expected: 2
-
-- Glyph name: B	Contours detected: 12	Expected: 2 or 3
-
-- Glyph name: C	Contours detected: 7	Expected: 1
-
-- Glyph name: D	Contours detected: 10	Expected: 2
-
-- Glyph name: E	Contours detected: 10	Expected: 1
-
-- Glyph name: F	Contours detected: 8	Expected: 1
-
-- Glyph name: G	Contours detected: 10	Expected: 1
-
-- Glyph name: H	Contours detected: 11	Expected: 1
-
-- Glyph name: I	Contours detected: 5	Expected: 1
-
-- Glyph name: J	Contours detected: 5	Expected: 1
-
-- Glyph name: K	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: L	Contours detected: 6	Expected: 1
-
-- Glyph name: M	Contours detected: 15	Expected: 1
-
-- Glyph name: N	Contours detected: 10	Expected: 1
-
-- Glyph name: O	Contours detected: 12	Expected: 2
-
-- Glyph name: P	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: Q	Contours detected: 12	Expected: 2
-
-- Glyph name: R	Contours detected: 11	Expected: 1 or 2
-
-- Glyph name: S	Contours detected: 11	Expected: 1
-
-- Glyph name: T	Contours detected: 7	Expected: 1
-
-- Glyph name: U	Contours detected: 11	Expected: 1
-
-- Glyph name: V	Contours detected: 9	Expected: 1
-
-- Glyph name: W	Contours detected: 14	Expected: 1 or 2
-
-- Glyph name: X	Contours detected: 9	Expected: 1
-
-- Glyph name: Y	Contours detected: 8	Expected: 1
-
-- Glyph name: Z	Contours detected: 9	Expected: 1
-
-- Glyph name: bracketleft	Contours detected: 8	Expected: 1
-
-- Glyph name: backslash	Contours detected: 6	Expected: 1
-
-- Glyph name: bracketright	Contours detected: 8	Expected: 1
-
-- Glyph name: asciicircum	Contours detected: 3	Expected: 1
-
-- Glyph name: underscore	Contours detected: 4	Expected: 1
-
-- Glyph name: grave	Contours detected: 2	Expected: 1
-
-- Glyph name: a	Contours detected: 8	Expected: 2
-
-- Glyph name: b	Contours detected: 9	Expected: 2
-
-- Glyph name: c	Contours detected: 6	Expected: 1
-
-- Glyph name: d	Contours detected: 9	Expected: 2
-
-- Glyph name: e	Contours detected: 8	Expected: 2
-
-- Glyph name: f	Contours detected: 6	Expected: 1
-
-- Glyph name: g	Contours detected: 10	Expected: 2 or 3
-
-- Glyph name: h	Contours detected: 9	Expected: 1
-
-- Glyph name: i	Contours detected: 4	Expected: 2
-
-- Glyph name: j	Contours detected: 5	Expected: 2
-
-- Glyph name: k	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: l	Contours detected: 5	Expected: 1
-
-- Glyph name: m	Contours detected: 12	Expected: 1
-
-- Glyph name: n	Contours detected: 8	Expected: 1
-
-- Glyph name: o	Contours detected: 6	Expected: 2
-
-- Glyph name: p	Contours detected: 9	Expected: 2
-
-- Glyph name: q	Contours detected: 9	Expected: 2
-
-- Glyph name: r	Contours detected: 5	Expected: 1
-
-- Glyph name: s	Contours detected: 8	Expected: 1
-
-- Glyph name: t	Contours detected: 7	Expected: 1
-
-- Glyph name: u	Contours detected: 8	Expected: 1
-
-- Glyph name: v	Contours detected: 7	Expected: 1
-
-- Glyph name: w	Contours detected: 11	Expected: 1
-
-- Glyph name: x	Contours detected: 6	Expected: 1
-
-- Glyph name: y	Contours detected: 8	Expected: 1
-
-- Glyph name: z	Contours detected: 8	Expected: 1
-
-- Glyph name: braceleft	Contours detected: 8	Expected: 1
-
-- Glyph name: bar	Contours detected: 6	Expected: 1
-
-- Glyph name: braceright	Contours detected: 8	Expected: 1
-
-- Glyph name: asciitilde	Contours detected: 6	Expected: 1
-
-- Glyph name: exclamdown	Contours detected: 4	Expected: 2
-
-- Glyph name: cent	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: sterling	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: yen	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: section	Contours detected: 12	Expected: 2
-
-- Glyph name: copyright	Contours detected: 25	Expected: 3
-
-- Glyph name: ordfeminine	Contours detected: 8	Expected: 2 or 3
-
-- Glyph name: guillemotleft	Contours detected: 6	Expected: 2
-
-- Glyph name: registered	Contours detected: 17	Expected: 3 or 4
-
-- Glyph name: macron	Contours detected: 3	Expected: 1
-
-- Glyph name: degree	Contours detected: 4	Expected: 2
-
-- Glyph name: acute	Contours detected: 2	Expected: 1
-
-- Glyph name: paragraph	Contours detected: 17	Expected: 1, 2 or 3
-
-- Glyph name: cedilla	Contours detected: 3	Expected: 1
-
-- Glyph name: ordmasculine	Contours detected: 6	Expected: 2 or 3
-
-- Glyph name: guillemotright	Contours detected: 6	Expected: 2
-
-- Glyph name: questiondown	Contours detected: 6	Expected: 2
-
-- Glyph name: Agrave	Contours detected: 12	Expected: 3
-
-- Glyph name: Aacute	Contours detected: 4	Expected: 3
-
-- Glyph name: Acircumflex	Contours detected: 13	Expected: 3
-
-- Glyph name: Atilde	Contours detected: 16	Expected: 3
-
-- Glyph name: Adieresis	Contours detected: 12	Expected: 4
-
-- Glyph name: Aring	Contours detected: 14	Expected: 3 or 4
-
-- Glyph name: AE	Contours detected: 16	Expected: 2
-
-- Glyph name: Ccedilla	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: Egrave	Contours detected: 12	Expected: 2
-
-- Glyph name: Eacute	Contours detected: 12	Expected: 2
-
-- Glyph name: Ecircumflex	Contours detected: 13	Expected: 2
-
-- Glyph name: Edieresis	Contours detected: 12	Expected: 3
-
-- Glyph name: Igrave	Contours detected: 3	Expected: 2
-
-- Glyph name: Iacute	Contours detected: 3	Expected: 2
-
-- Glyph name: Icircumflex	Contours detected: 4	Expected: 2
-
-- Glyph name: Eth	Contours detected: 14	Expected: 2
-
-- Glyph name: Ntilde	Contours detected: 16	Expected: 2
-
-- Glyph name: Ograve	Contours detected: 14	Expected: 3
-
-- Glyph name: Oacute	Contours detected: 4	Expected: 3
-
-- Glyph name: Ocircumflex	Contours detected: 15	Expected: 3
-
-- Glyph name: Otilde	Contours detected: 18	Expected: 3
-
-- Glyph name: Odieresis	Contours detected: 14	Expected: 4
-
-- Glyph name: multiply	Contours detected: 5	Expected: 1
-
-- Glyph name: Oslash	Contours detected: 15	Expected: 2 or 3
-
-- Glyph name: Ugrave	Contours detected: 13	Expected: 2
-
-- Glyph name: Uacute	Contours detected: 13	Expected: 2
-
-- Glyph name: Ucircumflex	Contours detected: 14	Expected: 2
-
-- Glyph name: Udieresis	Contours detected: 13	Expected: 3
-
-- Glyph name: Yacute	Contours detected: 10	Expected: 2
-
-- Glyph name: Thorn	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: germandbls	Contours detected: 10	Expected: 1
-
-- Glyph name: agrave	Contours detected: 10	Expected: 3
-
-- Glyph name: aacute	Contours detected: 10	Expected: 3
-
-- Glyph name: acircumflex	Contours detected: 11	Expected: 3
-
-- Glyph name: atilde	Contours detected: 14	Expected: 3
-
-- Glyph name: adieresis	Contours detected: 10	Expected: 4
-
-- Glyph name: aring	Contours detected: 12	Expected: 4
-
-- Glyph name: ae	Contours detected: 13	Expected: 3
-
-- Glyph name: ccedilla	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: egrave	Contours detected: 10	Expected: 3
-
-- Glyph name: eacute	Contours detected: 10	Expected: 3
-
-- Glyph name: ecircumflex	Contours detected: 11	Expected: 3
-
-- Glyph name: edieresis	Contours detected: 10	Expected: 4
-
-- Glyph name: igrave	Contours detected: 3	Expected: 2
-
-- Glyph name: iacute	Contours detected: 3	Expected: 2
-
-- Glyph name: icircumflex	Contours detected: 4	Expected: 2
-
-- Glyph name: eth	Contours detected: 7	Expected: 2
-
-- Glyph name: ntilde	Contours detected: 14	Expected: 2
-
-- Glyph name: ograve	Contours detected: 8	Expected: 3
-
-- Glyph name: oacute	Contours detected: 8	Expected: 3
-
-- Glyph name: ocircumflex	Contours detected: 9	Expected: 3
-
-- Glyph name: otilde	Contours detected: 12	Expected: 3
-
-- Glyph name: odieresis	Contours detected: 8	Expected: 4
-
-- Glyph name: divide	Contours detected: 5	Expected: 3
-
-- Glyph name: oslash	Contours detected: 8	Expected: 3
-
-- Glyph name: ugrave	Contours detected: 10	Expected: 2
-
-- Glyph name: uacute	Contours detected: 10	Expected: 2
-
-- Glyph name: ucircumflex	Contours detected: 11	Expected: 2
-
-- Glyph name: udieresis	Contours detected: 10	Expected: 3
-
-- Glyph name: yacute	Contours detected: 10	Expected: 2
-
-- Glyph name: thorn	Contours detected: 10	Expected: 2
-
-- Glyph name: ydieresis	Contours detected: 10	Expected: 3
-
-- Glyph name: Amacron	Contours detected: 13	Expected: 3
-
-- Glyph name: amacron	Contours detected: 11	Expected: 3
-
-- Glyph name: Abreve	Contours detected: 15	Expected: 3
-
-- Glyph name: abreve	Contours detected: 13	Expected: 3
-
-- Glyph name: Aogonek	Contours detected: 13	Expected: 2 or 3
-
-- Glyph name: aogonek	Contours detected: 11	Expected: 2
-
-- Glyph name: Cacute	Contours detected: 9	Expected: 2
-
-- Glyph name: cacute	Contours detected: 5	Expected: 2
-
-- Glyph name: Cdotaccent	Contours detected: 8	Expected: 2
-
-- Glyph name: cdotaccent	Contours detected: 7	Expected: 2
-
-- Glyph name: Ccaron	Contours detected: 12	Expected: 2
-
-- Glyph name: ccaron	Contours detected: 9	Expected: 2
-
-- Glyph name: Dcaron	Contours detected: 13	Expected: 3
-
-- Glyph name: dcaron	Contours detected: 11	Expected: 3
-
-- Glyph name: Dcroat	Contours detected: 14	Expected: 2
-
-- Glyph name: dcroat	Contours detected: 9	Expected: 2
-
-- Glyph name: Emacron	Contours detected: 13	Expected: 2
-
-- Glyph name: emacron	Contours detected: 11	Expected: 3
-
-- Glyph name: Edotaccent	Contours detected: 11	Expected: 2
-
-- Glyph name: edotaccent	Contours detected: 9	Expected: 3
-
-- Glyph name: Eogonek	Contours detected: 13	Expected: 1 or 2
-
-- Glyph name: eogonek	Contours detected: 11	Expected: 2
-
-- Glyph name: Ecaron	Contours detected: 13	Expected: 2
-
-- Glyph name: ecaron	Contours detected: 11	Expected: 3
-
-- Glyph name: Gbreve	Contours detected: 15	Expected: 2
-
-- Glyph name: gbreve	Contours detected: 15	Expected: 3 or 4
-
-- Glyph name: Gdotaccent	Contours detected: 11	Expected: 2
-
-- Glyph name: gdotaccent	Contours detected: 11	Expected: 3 or 4
-
-- Glyph name: uni0122	Contours detected: 11	Expected: 2
-
-- Glyph name: uni0123	Contours detected: 12	Expected: 3 or 4
-
-- Glyph name: Hbar	Contours detected: 13	Expected: 2
-
-- Glyph name: hbar	Contours detected: 9	Expected: 1
-
-- Glyph name: Iogonek	Contours detected: 8	Expected: 1 or 2
-
-- Glyph name: iogonek	Contours detected: 7	Expected: 2 or 3
-
-- Glyph name: Idotaccent	Contours detected: 6	Expected: 2
-
-- Glyph name: dotlessi	Contours detected: 3	Expected: 1
-
-- Glyph name: IJ	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: ij	Contours detected: 9	Expected: 3 or 4
-
-- Glyph name: uni0136	Contours detected: 11	Expected: 2 or 3
-
-- Glyph name: uni0137	Contours detected: 10	Expected: 2 or 3
-
-- Glyph name: Lacute	Contours detected: 3	Expected: 2
-
-- Glyph name: lacute	Contours detected: 7	Expected: 2
-
-- Glyph name: uni013B	Contours detected: 7	Expected: 2
-
-- Glyph name: uni013C	Contours detected: 6	Expected: 2
-
-- Glyph name: Lcaron	Contours detected: 8	Expected: 2
-
-- Glyph name: lcaron	Contours detected: 7	Expected: 2
-
-- Glyph name: Lslash	Contours detected: 9	Expected: 1
-
-- Glyph name: lslash	Contours detected: 7	Expected: 1
-
-- Glyph name: Nacute	Contours detected: 12	Expected: 2
-
-- Glyph name: nacute	Contours detected: 10	Expected: 2
-
-- Glyph name: uni0145	Contours detected: 11	Expected: 2
-
-- Glyph name: uni0146	Contours detected: 9	Expected: 2
-
-- Glyph name: Ncaron	Contours detected: 13	Expected: 2
-
-- Glyph name: ncaron	Contours detected: 11	Expected: 2
-
-- Glyph name: Eng	Contours detected: 11	Expected: 1
-
-- Glyph name: eng	Contours detected: 9	Expected: 1
-
-- Glyph name: Omacron	Contours detected: 15	Expected: 3
-
-- Glyph name: omacron	Contours detected: 9	Expected: 3
-
-- Glyph name: Ohungarumlaut	Contours detected: 16	Expected: 4
-
-- Glyph name: ohungarumlaut	Contours detected: 10	Expected: 4
-
-- Glyph name: OE	Contours detected: 17	Expected: 2
-
-- Glyph name: oe	Contours detected: 12	Expected: 3
-
-- Glyph name: Racute	Contours detected: 13	Expected: 3
-
-- Glyph name: racute	Contours detected: 7	Expected: 2
-
-- Glyph name: uni0156	Contours detected: 12	Expected: 3
-
-- Glyph name: uni0157	Contours detected: 6	Expected: 2
-
-- Glyph name: Rcaron	Contours detected: 14	Expected: 3
-
-- Glyph name: rcaron	Contours detected: 8	Expected: 2
-
-- Glyph name: Sacute	Contours detected: 13	Expected: 2
-
-- Glyph name: sacute	Contours detected: 10	Expected: 2
-
-- Glyph name: Scedilla	Contours detected: 14	Expected: 1 or 2
-
-- Glyph name: scedilla	Contours detected: 11	Expected: 1 or 2
-
-- Glyph name: Scaron	Contours detected: 14	Expected: 2
-
-- Glyph name: scaron	Contours detected: 11	Expected: 2
-
-- Glyph name: Tcaron	Contours detected: 10	Expected: 2
-
-- Glyph name: tcaron	Contours detected: 9	Expected: 2
-
-- Glyph name: Umacron	Contours detected: 14	Expected: 2
-
-- Glyph name: umacron	Contours detected: 11	Expected: 2
-
-- Glyph name: Ubreve	Contours detected: 16	Expected: 2
-
-- Glyph name: ubreve	Contours detected: 13	Expected: 2
-
-- Glyph name: Uring	Contours detected: 15	Expected: 3
-
-- Glyph name: uring	Contours detected: 12	Expected: 3
-
-- Glyph name: Uhungarumlaut	Contours detected: 15	Expected: 3
-
-- Glyph name: uhungarumlaut	Contours detected: 12	Expected: 3
-
-- Glyph name: Uogonek	Contours detected: 14	Expected: 1
-
-- Glyph name: uogonek	Contours detected: 11	Expected: 1
-
-- Glyph name: Wcircumflex	Contours detected: 8	Expected: 2
-
-- Glyph name: wcircumflex	Contours detected: 8	Expected: 2
-
-- Glyph name: Ycircumflex	Contours detected: 11	Expected: 2
-
-- Glyph name: ycircumflex	Contours detected: 11	Expected: 2
-
-- Glyph name: Ydieresis	Contours detected: 10	Expected: 3
-
-- Glyph name: Zacute	Contours detected: 11	Expected: 2
-
-- Glyph name: zacute	Contours detected: 8	Expected: 2
-
-- Glyph name: Zdotaccent	Contours detected: 10	Expected: 2
-
-- Glyph name: zdotaccent	Contours detected: 9	Expected: 2
-
-- Glyph name: Zcaron	Contours detected: 12	Expected: 2
-
-- Glyph name: zcaron	Contours detected: 9	Expected: 2
-
-- Glyph name: uni0218	Contours detected: 12	Expected: 2
-
-- Glyph name: uni0219	Contours detected: 9	Expected: 2
-
-- Glyph name: uni021A	Contours detected: 8	Expected: 2
-
-- Glyph name: uni021B	Contours detected: 8	Expected: 2
-
-- Glyph name: uni0237	Contours detected: 4	Expected: 1
-
-- Glyph name: circumflex	Contours detected: 3	Expected: 1
-
-- Glyph name: caron	Contours detected: 3	Expected: 1
-
-- Glyph name: breve	Contours detected: 5	Expected: 1
-
-- Glyph name: ring	Contours detected: 4	Expected: 2
-
-- Glyph name: ogonek	Contours detected: 3	Expected: 1
-
-- Glyph name: tilde	Contours detected: 6	Expected: 1
-
-- Glyph name: hungarumlaut	Contours detected: 4	Expected: 2
-
-- Glyph name: gravecomb	Contours detected: 2	Expected: 1
-
-- Glyph name: acutecomb	Contours detected: 2	Expected: 1
-
-- Glyph name: uni0302	Contours detected: 3	Expected: 1
-
-- Glyph name: tildecomb	Contours detected: 6	Expected: 1
-
-- Glyph name: uni0304	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0306	Contours detected: 5	Expected: 1
-
-- Glyph name: uni030A	Contours detected: 4	Expected: 2
-
-- Glyph name: uni030B	Contours detected: 4	Expected: 2
-
-- Glyph name: uni030C	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0312	Contours detected: 2	Expected: 1
-
-- Glyph name: uni0327	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0328	Contours detected: 3	Expected: 1
-
-- Glyph name: Wgrave	Contours detected: 7	Expected: 2
-
-- Glyph name: wgrave	Contours detected: 7	Expected: 2
-
-- Glyph name: Wacute	Contours detected: 7	Expected: 2
-
-- Glyph name: wacute	Contours detected: 7	Expected: 2
-
-- Glyph name: Wdieresis	Contours detected: 7	Expected: 3
-
-- Glyph name: wdieresis	Contours detected: 7	Expected: 3
-
-- Glyph name: uni1E9E	Contours detected: 13	Expected: 1
-
-- Glyph name: Ygrave	Contours detected: 10	Expected: 2
-
-- Glyph name: ygrave	Contours detected: 10	Expected: 2
-
-- Glyph name: endash	Contours detected: 4	Expected: 1
-
-- Glyph name: emdash	Contours detected: 5	Expected: 1
-
-- Glyph name: quoteleft	Contours detected: 2	Expected: 1
-
-- Glyph name: quoteright	Contours detected: 2	Expected: 1
-
-- Glyph name: quotesinglbase	Contours detected: 2	Expected: 1
-
-- Glyph name: quotedblleft	Contours detected: 4	Expected: 2
-
-- Glyph name: quotedblright	Contours detected: 4	Expected: 2
-
-- Glyph name: bullet	Contours detected: 4	Expected: 1
-
-- Glyph name: guilsinglleft	Contours detected: 3	Expected: 1
-
-- Glyph name: guilsinglright	Contours detected: 3	Expected: 1
-
-- Glyph name: Euro	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: trademark	Contours detected: 22	Expected: 2
-
-- Glyph name: minus	Contours detected: 3	Expected: 1
-
-- Glyph name: A	Contours detected: 10	Expected: 2
-
-- Glyph name: AE	Contours detected: 16	Expected: 2
-
-- Glyph name: Aacute	Contours detected: 4	Expected: 3
-
-- Glyph name: Abreve	Contours detected: 15	Expected: 3
-
-- Glyph name: Acircumflex	Contours detected: 13	Expected: 3
-
-- Glyph name: Adieresis	Contours detected: 12	Expected: 4
-
-- Glyph name: Agrave	Contours detected: 12	Expected: 3
-
-- Glyph name: Amacron	Contours detected: 13	Expected: 3
-
-- Glyph name: Aogonek	Contours detected: 13	Expected: 2 or 3
-
-- Glyph name: Aring	Contours detected: 14	Expected: 3 or 4
-
-- Glyph name: Atilde	Contours detected: 16	Expected: 3
-
-- Glyph name: B	Contours detected: 12	Expected: 2 or 3
-
-- Glyph name: C	Contours detected: 7	Expected: 1
-
-- Glyph name: Cacute	Contours detected: 9	Expected: 2
-
-- Glyph name: Ccaron	Contours detected: 12	Expected: 2
-
-- Glyph name: Ccedilla	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: Cdotaccent	Contours detected: 8	Expected: 2
-
-- Glyph name: D	Contours detected: 10	Expected: 2
-
-- Glyph name: Dcaron	Contours detected: 13	Expected: 3
-
-- Glyph name: Dcroat	Contours detected: 14	Expected: 2
-
-- Glyph name: E	Contours detected: 10	Expected: 1
-
-- Glyph name: Eacute	Contours detected: 12	Expected: 2
-
-- Glyph name: Ecaron	Contours detected: 13	Expected: 2
-
-- Glyph name: Ecircumflex	Contours detected: 13	Expected: 2
-
-- Glyph name: Edieresis	Contours detected: 12	Expected: 3
-
-- Glyph name: Edotaccent	Contours detected: 11	Expected: 2
-
-- Glyph name: Egrave	Contours detected: 12	Expected: 2
-
-- Glyph name: Emacron	Contours detected: 13	Expected: 2
-
-- Glyph name: Eng	Contours detected: 11	Expected: 1
-
-- Glyph name: Eogonek	Contours detected: 13	Expected: 1 or 2
-
-- Glyph name: Eth	Contours detected: 14	Expected: 2
-
-- Glyph name: Euro	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: F	Contours detected: 8	Expected: 1
-
-- Glyph name: G	Contours detected: 10	Expected: 1
-
-- Glyph name: Gbreve	Contours detected: 15	Expected: 2
-
-- Glyph name: Gdotaccent	Contours detected: 11	Expected: 2
-
-- Glyph name: H	Contours detected: 11	Expected: 1
-
-- Glyph name: Hbar	Contours detected: 13	Expected: 2
-
-- Glyph name: I	Contours detected: 5	Expected: 1
-
-- Glyph name: IJ	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: Iacute	Contours detected: 3	Expected: 2
-
-- Glyph name: Icircumflex	Contours detected: 4	Expected: 2
-
-- Glyph name: Idotaccent	Contours detected: 6	Expected: 2
-
-- Glyph name: Igrave	Contours detected: 3	Expected: 2
-
-- Glyph name: Iogonek	Contours detected: 8	Expected: 1 or 2
-
-- Glyph name: J	Contours detected: 5	Expected: 1
-
-- Glyph name: K	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: L	Contours detected: 6	Expected: 1
-
-- Glyph name: Lacute	Contours detected: 3	Expected: 2
-
-- Glyph name: Lcaron	Contours detected: 8	Expected: 2
-
-- Glyph name: Lslash	Contours detected: 9	Expected: 1
-
-- Glyph name: M	Contours detected: 15	Expected: 1
-
-- Glyph name: N	Contours detected: 10	Expected: 1
-
-- Glyph name: Nacute	Contours detected: 12	Expected: 2
-
-- Glyph name: Ncaron	Contours detected: 13	Expected: 2
-
-- Glyph name: Ntilde	Contours detected: 16	Expected: 2
-
-- Glyph name: O	Contours detected: 12	Expected: 2
-
-- Glyph name: OE	Contours detected: 17	Expected: 2
-
-- Glyph name: Oacute	Contours detected: 4	Expected: 3
-
-- Glyph name: Ocircumflex	Contours detected: 15	Expected: 3
-
-- Glyph name: Odieresis	Contours detected: 14	Expected: 4
-
-- Glyph name: Ograve	Contours detected: 14	Expected: 3
-
-- Glyph name: Ohungarumlaut	Contours detected: 16	Expected: 4
-
-- Glyph name: Omacron	Contours detected: 15	Expected: 3
-
-- Glyph name: Oslash	Contours detected: 15	Expected: 2 or 3
-
-- Glyph name: Otilde	Contours detected: 18	Expected: 3
-
-- Glyph name: P	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: Q	Contours detected: 12	Expected: 2
-
-- Glyph name: R	Contours detected: 11	Expected: 1 or 2
-
-- Glyph name: Racute	Contours detected: 13	Expected: 3
-
-- Glyph name: Rcaron	Contours detected: 14	Expected: 3
-
-- Glyph name: S	Contours detected: 11	Expected: 1
-
-- Glyph name: Sacute	Contours detected: 13	Expected: 2
-
-- Glyph name: Scaron	Contours detected: 14	Expected: 2
-
-- Glyph name: T	Contours detected: 7	Expected: 1
-
-- Glyph name: Tcaron	Contours detected: 10	Expected: 2
-
-- Glyph name: Thorn	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: U	Contours detected: 11	Expected: 1
-
-- Glyph name: Uacute	Contours detected: 13	Expected: 2
-
-- Glyph name: Ubreve	Contours detected: 16	Expected: 2
-
-- Glyph name: Ucircumflex	Contours detected: 14	Expected: 2
-
-- Glyph name: Udieresis	Contours detected: 13	Expected: 3
-
-- Glyph name: Ugrave	Contours detected: 13	Expected: 2
-
-- Glyph name: Uhungarumlaut	Contours detected: 15	Expected: 3
-
-- Glyph name: Umacron	Contours detected: 14	Expected: 2
-
-- Glyph name: Uogonek	Contours detected: 14	Expected: 1
-
-- Glyph name: Uring	Contours detected: 15	Expected: 3
-
-- Glyph name: V	Contours detected: 9	Expected: 1
-
-- Glyph name: W	Contours detected: 14	Expected: 1 or 2
-
-- Glyph name: Wacute	Contours detected: 7	Expected: 2
-
-- Glyph name: Wcircumflex	Contours detected: 8	Expected: 2
-
-- Glyph name: Wdieresis	Contours detected: 7	Expected: 3
-
-- Glyph name: Wgrave	Contours detected: 7	Expected: 2
-
-- Glyph name: X	Contours detected: 9	Expected: 1
-
-- Glyph name: Y	Contours detected: 8	Expected: 1
-
-- Glyph name: Yacute	Contours detected: 10	Expected: 2
-
-- Glyph name: Ycircumflex	Contours detected: 11	Expected: 2
-
-- Glyph name: Ydieresis	Contours detected: 10	Expected: 3
-
-- Glyph name: Ygrave	Contours detected: 10	Expected: 2
-
-- Glyph name: Z	Contours detected: 9	Expected: 1
-
-- Glyph name: Zacute	Contours detected: 11	Expected: 2
-
-- Glyph name: Zcaron	Contours detected: 12	Expected: 2
-
-- Glyph name: Zdotaccent	Contours detected: 10	Expected: 2
-
-- Glyph name: a	Contours detected: 8	Expected: 2
-
-- Glyph name: aacute	Contours detected: 10	Expected: 3
-
-- Glyph name: abreve	Contours detected: 13	Expected: 3
-
-- Glyph name: acircumflex	Contours detected: 11	Expected: 3
-
-- Glyph name: acute	Contours detected: 2	Expected: 1
-
-- Glyph name: adieresis	Contours detected: 10	Expected: 4
-
-- Glyph name: ae	Contours detected: 13	Expected: 3
-
-- Glyph name: agrave	Contours detected: 10	Expected: 3
-
-- Glyph name: amacron	Contours detected: 11	Expected: 3
-
-- Glyph name: ampersand	Contours detected: 17	Expected: 1, 2 or 3
-
-- Glyph name: aogonek	Contours detected: 11	Expected: 2
-
-- Glyph name: aring	Contours detected: 12	Expected: 4
-
-- Glyph name: asciicircum	Contours detected: 3	Expected: 1
-
-- Glyph name: asciitilde	Contours detected: 6	Expected: 1
-
-- Glyph name: asterisk	Contours detected: 5	Expected: 1 or 4
-
-- Glyph name: at	Contours detected: 25	Expected: 2
-
-- Glyph name: atilde	Contours detected: 14	Expected: 3
-
-- Glyph name: b	Contours detected: 9	Expected: 2
-
-- Glyph name: backslash	Contours detected: 6	Expected: 1
-
-- Glyph name: bar	Contours detected: 6	Expected: 1
-
-- Glyph name: braceleft	Contours detected: 8	Expected: 1
-
-- Glyph name: braceright	Contours detected: 8	Expected: 1
-
-- Glyph name: bracketleft	Contours detected: 8	Expected: 1
-
-- Glyph name: bracketright	Contours detected: 8	Expected: 1
-
-- Glyph name: breve	Contours detected: 5	Expected: 1
-
-- Glyph name: bullet	Contours detected: 4	Expected: 1
-
-- Glyph name: c	Contours detected: 6	Expected: 1
-
-- Glyph name: cacute	Contours detected: 5	Expected: 2
-
-- Glyph name: caron	Contours detected: 3	Expected: 1
-
-- Glyph name: ccaron	Contours detected: 9	Expected: 2
-
-- Glyph name: ccedilla	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: cdotaccent	Contours detected: 7	Expected: 2
-
-- Glyph name: cedilla	Contours detected: 3	Expected: 1
-
-- Glyph name: cent	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: circumflex	Contours detected: 3	Expected: 1
-
-- Glyph name: comma	Contours detected: 2	Expected: 1
-
-- Glyph name: copyright	Contours detected: 25	Expected: 3
-
-- Glyph name: d	Contours detected: 9	Expected: 2
-
-- Glyph name: dcaron	Contours detected: 11	Expected: 3
-
-- Glyph name: dcroat	Contours detected: 9	Expected: 2
-
-- Glyph name: degree	Contours detected: 4	Expected: 2
-
-- Glyph name: divide	Contours detected: 5	Expected: 3
-
-- Glyph name: dollar	Contours detected: 18	Expected: 1, 3 or 5
-
-- Glyph name: dotlessi	Contours detected: 3	Expected: 1
-
-- Glyph name: e	Contours detected: 8	Expected: 2
-
-- Glyph name: eacute	Contours detected: 10	Expected: 3
-
-- Glyph name: ecaron	Contours detected: 11	Expected: 3
-
-- Glyph name: ecircumflex	Contours detected: 11	Expected: 3
-
-- Glyph name: edieresis	Contours detected: 10	Expected: 4
-
-- Glyph name: edotaccent	Contours detected: 9	Expected: 3
-
-- Glyph name: egrave	Contours detected: 10	Expected: 3
-
-- Glyph name: eight	Contours detected: 13	Expected: 3
-
-- Glyph name: emacron	Contours detected: 11	Expected: 3
-
-- Glyph name: emdash	Contours detected: 5	Expected: 1
-
-- Glyph name: endash	Contours detected: 4	Expected: 1
-
-- Glyph name: eng	Contours detected: 9	Expected: 1
-
-- Glyph name: eogonek	Contours detected: 11	Expected: 2
-
-- Glyph name: equal	Contours detected: 6	Expected: 2
-
-- Glyph name: eth	Contours detected: 7	Expected: 2
-
-- Glyph name: exclam	Contours detected: 4	Expected: 2
-
-- Glyph name: exclamdown	Contours detected: 4	Expected: 2
-
-- Glyph name: f	Contours detected: 6	Expected: 1
-
-- Glyph name: five	Contours detected: 11	Expected: 1
-
-- Glyph name: four	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: g	Contours detected: 10	Expected: 2 or 3
-
-- Glyph name: gbreve	Contours detected: 15	Expected: 3 or 4
-
-- Glyph name: gdotaccent	Contours detected: 11	Expected: 3 or 4
-
-- Glyph name: germandbls	Contours detected: 10	Expected: 1
-
-- Glyph name: grave	Contours detected: 2	Expected: 1
-
-- Glyph name: greater	Contours detected: 5	Expected: 1
-
-- Glyph name: guillemotleft	Contours detected: 6	Expected: 2
-
-- Glyph name: guillemotright	Contours detected: 6	Expected: 2
-
-- Glyph name: guilsinglleft	Contours detected: 3	Expected: 1
-
-- Glyph name: guilsinglright	Contours detected: 3	Expected: 1
-
-- Glyph name: h	Contours detected: 9	Expected: 1
-
-- Glyph name: hbar	Contours detected: 9	Expected: 1
-
-- Glyph name: hungarumlaut	Contours detected: 4	Expected: 2
-
-- Glyph name: hyphen	Contours detected: 3	Expected: 1
-
-- Glyph name: i	Contours detected: 4	Expected: 2
-
-- Glyph name: iacute	Contours detected: 3	Expected: 2
-
-- Glyph name: icircumflex	Contours detected: 4	Expected: 2
-
-- Glyph name: igrave	Contours detected: 3	Expected: 2
-
-- Glyph name: ij	Contours detected: 9	Expected: 3 or 4
-
-- Glyph name: iogonek	Contours detected: 7	Expected: 2 or 3
-
-- Glyph name: j	Contours detected: 5	Expected: 2
-
-- Glyph name: k	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: l	Contours detected: 5	Expected: 1
-
-- Glyph name: lacute	Contours detected: 7	Expected: 2
-
-- Glyph name: lcaron	Contours detected: 7	Expected: 2
-
-- Glyph name: less	Contours detected: 5	Expected: 1
-
-- Glyph name: lslash	Contours detected: 7	Expected: 1
-
-- Glyph name: m	Contours detected: 12	Expected: 1
-
-- Glyph name: macron	Contours detected: 3	Expected: 1
-
-- Glyph name: minus	Contours detected: 3	Expected: 1
-
-- Glyph name: multiply	Contours detected: 5	Expected: 1
-
-- Glyph name: n	Contours detected: 8	Expected: 1
-
-- Glyph name: nacute	Contours detected: 10	Expected: 2
-
-- Glyph name: ncaron	Contours detected: 11	Expected: 2
-
-- Glyph name: nine	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: ntilde	Contours detected: 14	Expected: 2
-
-- Glyph name: numbersign	Contours detected: 16	Expected: 2
-
-- Glyph name: o	Contours detected: 6	Expected: 2
-
-- Glyph name: oacute	Contours detected: 8	Expected: 3
-
-- Glyph name: ocircumflex	Contours detected: 9	Expected: 3
-
-- Glyph name: odieresis	Contours detected: 8	Expected: 4
-
-- Glyph name: oe	Contours detected: 12	Expected: 3
-
-- Glyph name: ogonek	Contours detected: 3	Expected: 1
-
-- Glyph name: ograve	Contours detected: 8	Expected: 3
-
-- Glyph name: ohungarumlaut	Contours detected: 10	Expected: 4
-
-- Glyph name: omacron	Contours detected: 9	Expected: 3
-
-- Glyph name: one	Contours detected: 6	Expected: 1
-
-- Glyph name: ordfeminine	Contours detected: 8	Expected: 2 or 3
-
-- Glyph name: ordmasculine	Contours detected: 6	Expected: 2 or 3
-
-- Glyph name: oslash	Contours detected: 8	Expected: 3
-
-- Glyph name: otilde	Contours detected: 12	Expected: 3
-
-- Glyph name: p	Contours detected: 9	Expected: 2
-
-- Glyph name: paragraph	Contours detected: 17	Expected: 1, 2 or 3
-
-- Glyph name: parenleft	Contours detected: 6	Expected: 1
-
-- Glyph name: parenright	Contours detected: 6	Expected: 1
-
-- Glyph name: percent	Contours detected: 7	Expected: 4 or 5
-
-- Glyph name: plus	Contours detected: 5	Expected: 1
-
-- Glyph name: q	Contours detected: 9	Expected: 2
-
-- Glyph name: question	Contours detected: 6	Expected: 2
-
-- Glyph name: questiondown	Contours detected: 6	Expected: 2
-
-- Glyph name: quotedbl	Contours detected: 4	Expected: 2
-
-- Glyph name: quotedblleft	Contours detected: 4	Expected: 2
-
-- Glyph name: quotedblright	Contours detected: 4	Expected: 2
-
-- Glyph name: quoteleft	Contours detected: 2	Expected: 1
-
-- Glyph name: quoteright	Contours detected: 2	Expected: 1
-
-- Glyph name: quotesinglbase	Contours detected: 2	Expected: 1
-
-- Glyph name: quotesingle	Contours detected: 2	Expected: 1
-
-- Glyph name: r	Contours detected: 5	Expected: 1
-
-- Glyph name: racute	Contours detected: 7	Expected: 2
-
-- Glyph name: rcaron	Contours detected: 8	Expected: 2
-
-- Glyph name: registered	Contours detected: 17	Expected: 3 or 4
-
-- Glyph name: ring	Contours detected: 4	Expected: 2
-
-- Glyph name: s	Contours detected: 8	Expected: 1
-
-- Glyph name: sacute	Contours detected: 10	Expected: 2
-
-- Glyph name: scaron	Contours detected: 11	Expected: 2
-
-- Glyph name: section	Contours detected: 12	Expected: 2
-
-- Glyph name: semicolon	Contours detected: 3	Expected: 2
-
-- Glyph name: seven	Contours detected: 7	Expected: 1
-
-- Glyph name: six	Contours detected: 12	Expected: 1 or 2
-
-- Glyph name: slash	Contours detected: 6	Expected: 1
-
-- Glyph name: sterling	Contours detected: 10	Expected: 1 or 2
-
-- Glyph name: t	Contours detected: 7	Expected: 1
-
-- Glyph name: tcaron	Contours detected: 9	Expected: 2
-
-- Glyph name: thorn	Contours detected: 10	Expected: 2
-
-- Glyph name: three	Contours detected: 10	Expected: 1
-
-- Glyph name: tilde	Contours detected: 6	Expected: 1
-
-- Glyph name: trademark	Contours detected: 22	Expected: 2
-
-- Glyph name: two	Contours detected: 11	Expected: 1
-
-- Glyph name: u	Contours detected: 8	Expected: 1
-
-- Glyph name: uacute	Contours detected: 10	Expected: 2
-
-- Glyph name: ubreve	Contours detected: 13	Expected: 2
-
-- Glyph name: ucircumflex	Contours detected: 11	Expected: 2
-
-- Glyph name: udieresis	Contours detected: 10	Expected: 3
-
-- Glyph name: ugrave	Contours detected: 10	Expected: 2
-
-- Glyph name: uhungarumlaut	Contours detected: 12	Expected: 3
-
-- Glyph name: umacron	Contours detected: 11	Expected: 2
-
-- Glyph name: underscore	Contours detected: 4	Expected: 1
-
-- Glyph name: uni0122	Contours detected: 11	Expected: 2
-
-- Glyph name: uni0123	Contours detected: 12	Expected: 3 or 4
-
-- Glyph name: uni0136	Contours detected: 11	Expected: 2 or 3
-
-- Glyph name: uni0137	Contours detected: 10	Expected: 2 or 3
-
-- Glyph name: uni013B	Contours detected: 7	Expected: 2
-
-- Glyph name: uni013C	Contours detected: 6	Expected: 2
-
-- Glyph name: uni0145	Contours detected: 11	Expected: 2
-
-- Glyph name: uni0146	Contours detected: 9	Expected: 2
-
-- Glyph name: uni0156	Contours detected: 12	Expected: 3
-
-- Glyph name: uni0157	Contours detected: 6	Expected: 2
-
-- Glyph name: uni0218	Contours detected: 12	Expected: 2
-
-- Glyph name: uni0219	Contours detected: 9	Expected: 2
-
-- Glyph name: uni021A	Contours detected: 8	Expected: 2
-
-- Glyph name: uni021B	Contours detected: 8	Expected: 2
-
-- Glyph name: uni0237	Contours detected: 4	Expected: 1
-
-- Glyph name: uni0302	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0304	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0306	Contours detected: 5	Expected: 1
-
-- Glyph name: uni030A	Contours detected: 4	Expected: 2
-
-- Glyph name: uni030B	Contours detected: 4	Expected: 2
-
-- Glyph name: uni030C	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0312	Contours detected: 2	Expected: 1
-
-- Glyph name: uni0327	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0328	Contours detected: 3	Expected: 1
-
-- Glyph name: uni1E9E	Contours detected: 13	Expected: 1
-
-- Glyph name: uogonek	Contours detected: 11	Expected: 1
-
-- Glyph name: uring	Contours detected: 12	Expected: 3
-
-- Glyph name: v	Contours detected: 7	Expected: 1
-
-- Glyph name: w	Contours detected: 11	Expected: 1
-
-- Glyph name: wacute	Contours detected: 7	Expected: 2
-
-- Glyph name: wcircumflex	Contours detected: 8	Expected: 2
-
-- Glyph name: wdieresis	Contours detected: 7	Expected: 3
-
-- Glyph name: wgrave	Contours detected: 7	Expected: 2
-
-- Glyph name: x	Contours detected: 6	Expected: 1
-
-- Glyph name: y	Contours detected: 8	Expected: 1
-
-- Glyph name: yacute	Contours detected: 10	Expected: 2
-
-- Glyph name: ycircumflex	Contours detected: 11	Expected: 2
-
-- Glyph name: ydieresis	Contours detected: 10	Expected: 3
-
-- Glyph name: yen	Contours detected: 9	Expected: 1 or 2
-
-- Glyph name: ygrave	Contours detected: 10	Expected: 2
-
-- Glyph name: z	Contours detected: 8	Expected: 1
-
-- Glyph name: zacute	Contours detected: 8	Expected: 2
-
-- Glyph name: zcaron	Contours detected: 9	Expected: 2
-
-- Glyph name: zdotaccent	Contours detected: 9	Expected: 2
-
-- Glyph name: zero	Contours detected: 12	Expected: 2 or 3
-</code></pre>
-
-                            
-                             [code: contour-count]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-
-    <h3>
-    
-    Checking all files are in the same directory.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/single_directory&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Each font in a family must have the same set of vertical metrics values.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 usWinAscent &amp; usWinDescent.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure that the font can be rasterized by FreeType.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/freetype_rasterizer&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure no GPOS7 lookups are present.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos7&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jun/10</div>
-    
-    Ensure &#39;smcp&#39; (small caps) lookups are defined before ligature lookups in the &#39;GSUB&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gsub/smallcaps_before_ligatures&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Detect any interpolation issues in the font.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that legacy accents aren&#39;t used in composite glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/legacy_accents&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking Vertical Metric Linegaps.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/linegaps&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font contains &#39;.notdef&#39; as its first glyph?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check math signs have the same width.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Name table records must not have trailing spaces.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/trailing_spaces&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 Metrics match hhea Metrics.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking with ots-sanitize.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ots&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font contains all required tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/required_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure indic fonts have the Indian Rupee Sign glyph.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/rupee&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has the proper sfntVersion value?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/sfnt_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font contain a soft hyphen?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking STAT table entries in static fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT_in_statics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check correctness of STAT table strings
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT_strings&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jun/04</div>
-    
-    Check tabular widths don&#39;t have kerning.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/tabular_kerning&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure component transforms do not perform scaling or rotation.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jul/17</div>
-    
-    Checking that the typoAscender exceeds the yMax of the /Agrave.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.arrowtype.fonts/check/typoascender_exceeds_Agrave&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Micro5-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
                             <p>OS/2.sTypoAscender value should be greater than 1200, but got 1190 instead</p>
 
                             
@@ -3418,30 +1648,16 @@ immediately.
         </details>
     
 
-
-    <h3>
     
-    Font contains unique glyph names?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unique_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
-
     <h3>
     
     Check font contains no unreachable glyphs
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:unreachable_glyphs&gt;</div>
 
 
 
@@ -3469,7 +1685,9 @@ immediately.
 
                             <span class='details_text'>
                             <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- uni030C.alt
+<pre><code>- pixel
+
+- uni030C.alt
 </code></pre>
 
                             
@@ -3483,114 +1701,33 @@ immediately.
         </details>
     
 
-
-    <h3>
     
-    Are there unwanted tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Glyph names are all valid?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/valid_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Font has **proper** whitespace glyph names?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
-    
-    Font contains glyphs for whitespace characters?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    Whitespace glyphs have ink?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_ink&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Space and non-breaking space have the same width?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_widths&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
 
             
         
@@ -3600,11 +1737,12 @@ immediately.
     ⚠️
 </span>
 
+    
     <h3>
     
     Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
 
 
 
@@ -3631,7 +1769,7 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/micro5 does not have an article.</p>
+                            <p>Family metadata at /Users/simon/others-repos/fonts//ofl/micro5 does not have an article.</p>
 
                             
                              [code: lacks-article]
@@ -3644,760 +1782,96 @@ immediately.
         </details>
     
 
+    
 
             
         
             
                 <h2>Metadata Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩⏩ℹ️
+    ⚠️⏩⏩⏩ℹ️
 </span>
 
-    <h3>
     
-    Does METADATA.pb copyright field contain broken links?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/broken_links&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Font styles are named canonically?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/canonical_style_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Check that font weight has a canonical value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/canonical_weight_value&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check samples can be rendered.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/can_render_samples&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure METADATA.pb category field is valid.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/category&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if category on METADATA.pb matches what can be inferred from the family name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/category_hints&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate VF axes match the ones declared on METADATA.pb.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_axis_enumeration&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Check URL on copyright string is the same as in repository_url field.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Copyright notice is the same in all fonts?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/May/22</div>
-    
-    Validate &#39;date_added&#39; field on METADATA.pb.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/date_added&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Multiple values in font designer field in METADATA.pb must be separated by commas.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    At least one designer is declared in METADATA.pb
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/empty_designer&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure METADATA.pb does not use escaped strings.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/escaped_strings&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font family directory name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/family_directory_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that METADATA.pb family values are all the same.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/familyname&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Font filenames match font.filename entries?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/filenames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate METADATA.pb axes values are within gf_axisregistry bounds.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/gf_axisregistry_bounds&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate METADATA.pb axes tags are defined in gf_axisregistry.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/gf_axisregistry_valid_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure there is a regular style defined in METADATA.pb.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_regular&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check METADATA.pb includes production subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/includes_production_subsets&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check METADATA.pb file only contains a single CJK subset.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/single_cjk_subset&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb license is &#34;APACHE2&#34;, &#34;UFL&#34; or &#34;OFL&#34;?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/license&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb font.filename and font.post_script_name fields have equivalent values?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_filename_postscript&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb font.full_name and font.post_script_name fields have equivalent values ?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_fullname_postscript&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Check font name is the same as family name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_name_familyname&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb weight matches postScriptName for static fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_weight_postscript&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb should contain at least &#34;menu&#34; and &#34;latin&#34; subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/menu_and_latin&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Validate family.minisite_url field.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/minisite_url&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
     
-
 
-    <h3>
     
-    METADATA.pb font.name and font.full_name fields match the values declared on the name table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/family_and_full_names&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    METADATA.pb font.name value should be same as the family name declared on the name table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/font_name&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
     
-    Checks METADATA.pb font.post_script_name matches postscript name declared on the name table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/post_script_name&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Check METADATA.pb font weights are correct.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/os2_weightclass&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Check METADATA.pb parse correctly.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/parses&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    METADATA.pb: Check for primary_script
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
 
-    <h3>
     
-    METADATA.pb: Regular should be 400.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/regular_is_400&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
 
-    <h3>
     
-    Copyright notice on METADATA.pb should not contain &#39;Reserved Font Name&#39;.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/reserved_font_name&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
     
-    METADATA.pb subsets should be alphabetically ordered.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
     
-    Ensure METADATA.pb lists all font binaries.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/undeclared_fonts&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    METADATA.pb: check if fonts field only has unique &#34;full_name&#34; values.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unique_full_name_values&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    METADATA.pb: check if fonts field only contains unique style:weight pairs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unique_weight_style_pairs&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
     <h3>
     
     Check for codepoints not covered by METADATA subsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
 
 
 
@@ -4430,20 +1904,15 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
-<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
-<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+200A HAIR SPACE: not included in any glyphset definition</li>
+<li>U+200A HAIR SPACE: try adding symbols2</li>
 </ul>
 <p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>math</code>, <code>menu</code>, <code>symbols</code></p>
 
@@ -4458,96 +1927,19 @@ definitions.</p>
         </details>
     
 
-
-    <h3>
     
-    Check for METADATA subsets with zero support.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unsupported_subsets&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    METADATA.pb font.filename field contains font name in right format?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_filename_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    METADATA.pb font.full_name field contains font name in right format?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_full_name_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check name ID 25 to end with &#34;Italic&#34; for Italic VFs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_nameid25&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb font.post_script_name field contains font name in right format?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_post_script_name_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
 
             
         
@@ -4557,11 +1949,12 @@ definitions.</p>
     🔥
 </span>
 
+    
     <h3>
     
     Shapes languages in all GF glyphsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
 
 
 
@@ -4588,22 +1981,22 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
+                            <p>GF_TransLatin_Arabic glyphset:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Language</th>
 <th align="left">FAIL messages</th>
+<th align="left">Languages</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td align="left">Shaper didn't attach acutecomb.case to J</td>
 <td align="left">nl_Latn (Dutch)</td>
-<td align="left">Shaper didn't attach acutecomb to uni0237</td>
 </tr>
 <tr>
-<td align="left">^</td>
-<td align="left">Shaper didn't attach acutecomb.case to J</td>
+<td align="left">Shaper didn't attach acutecomb to uni0237</td>
+<td align="left">nl_Latn (Dutch)</td>
 </tr>
 </tbody>
 </table>
@@ -4614,11 +2007,52 @@ definitions.</p>
                             </span>
                         </li>
                 
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_TransLatin_Arabic glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
+<td align="left">ca_Latn (Catalan)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
+<td align="left">nb_Latn (Norwegian Bokmål)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
                 </ul>
             </div>
         </details>
     
 
+    
 
             
         
@@ -4628,29 +2062,14 @@ definitions.</p>
     🔥⚠️⚠️ℹ️ℹ️
 </span>
 
-    <h3>
-    
-    Does DESCRIPTION file contain broken links?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/broken_links&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
     <h3>
     
     DESCRIPTION.en_us.html should end in a linebreak.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
 
 
 
@@ -4694,12 +2113,14 @@ definitions.</p>
 
     
 
+    
 
+    
     <h3>
     
     On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/family_update&gt;</div>
 
 
 
@@ -4740,48 +2161,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
     
-    Does DESCRIPTION file contain a upstream Git repo URL?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Check the description doesn&#39;t contain unsupported html elements
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/has_unsupported_elements&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     DESCRIPTION.en_us.html must have more than 200 bytes.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
 
 
 
@@ -4825,61 +2218,14 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
     
 
-
-    <h3>
     
-    Check for presence of an ARTICLE.en_us.html file
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/has_article&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
-    
-    URLs on DESCRIPTION file must not display http(s) prefix.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/urls&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Is this a proper HTML snippet?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/valid_html&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
+            
+        
             
         
             
@@ -4894,65 +2240,12 @@ Please consider mentioning note-worthy improvements made to the family recently.
     ⚠️⚠️⏩⏩⏩
 </span>
 
-    <h3>
     
-    Check that texts shape as per expectation
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/shaping/regression&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that no forbidden glyphs are found while shaping
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/shaping/forbidden&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that no collisions are found while shaping
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/shaping/collides&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Ensure dotted circle glyph is present and can attach marks.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:dotted_circle&gt;</div>
 
 
 
@@ -4992,12 +2285,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
+    
+
+    
+
+    
+
+    
     <h3>
     
     Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_dotted&gt;</div>
 
 
 
@@ -5027,7 +2328,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́</p>
 <p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Mango (Latn, 77,000 speakers), Mundani (Latn, 34,000 speakers), Igbo (Latn, 27,823,640 speakers), Bete-Bendi (Latn, 100,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Cicipu (Latn, 44,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ngbaka (Latn, 1,020,000 speakers), Ekpeye (Latn, 226,000 speakers), Yala (Latn, 200,000 speakers), Ma’di (Latn, 584,000 speakers), Nzakara (Latn, 50,000 speakers), Ejagham (Latn, 120,000 speakers), Dan (Latn, 1,099,244 speakers), Vute (Latn, 21,000 speakers), Mfumte (Latn, 79,000 speakers), Dutch (Latn, 31,709,104 speakers), Avokaya (Latn, 100,000 speakers), Nateni (Latn, 100,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Southern Kisi (Latn, 360,000 speakers), Fur (Latn, 1,230,163 speakers), Basaa (Latn, 332,940 speakers), Koonzime (Latn, 40,000 speakers), South Central Banda (Latn, 244,000 speakers), Sar (Latn, 500,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Lugbara (Latn, 2,200,000 speakers), Makaa (Latn, 221,000 speakers), Gulay (Latn, 250,478 speakers), Bafut (Latn, 158,146 speakers), Navajo (Latn, 166,319 speakers), Aghem (Latn, 38,843 speakers), Dii (Latn, 71,000 speakers), Ebira (Latn, 2,200,000 speakers), Kom (Latn, 360,685 speakers), Zapotec (Latn, 490,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Ma’di (Latn, 584,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ikwere (Latn, 717,000 speakers), Mundani (Latn, 34,000 speakers), Gulay (Latn, 250,478 speakers), Koonzime (Latn, 40,000 speakers), Northern Tutchone (Latn, 85 speakers), Navajo (Latn, 166,319 speakers), Zapotec (Latn, 490,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Nateni (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers), Southern Kisi (Latn, 360,000 speakers), Mfumte (Latn, 79,000 speakers), Makaa (Latn, 221,000 speakers), Basaa (Latn, 332,940 speakers), Han (Latn, 6 speakers), Dii (Latn, 71,000 speakers), Dutch (Latn, 31,709,104 speakers), Cicipu (Latn, 44,000 speakers), Aghem (Latn, 38,843 speakers), Fur (Latn, 1,230,163 speakers), Ngbaka (Latn, 1,020,000 speakers), Yala (Latn, 200,000 speakers), Longto (Latn, 5,000 speakers), Ebira (Latn, 2,200,000 speakers), Avokaya (Latn, 100,000 speakers), Bafut (Latn, 158,146 speakers), Kaska (Latn, 125 speakers), Southern Tutchone (Latn, 65 speakers), Heiltsuk (Latn, 300 speakers), Abua (Latn, 25,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ekpeye (Latn, 226,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), South Central Banda (Latn, 244,000 speakers), Lugbara (Latn, 2,200,000 speakers), Western Krahn (Latn, 97,800 speakers), Vute (Latn, 21,000 speakers), Nzakara (Latn, 50,000 speakers), Igbo (Latn, 27,823,640 speakers), Kom (Latn, 360,685 speakers), Dan (Latn, 1,099,244 speakers), Ejagham (Latn, 120,000 speakers), Mango (Latn, 77,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Keliko (Latn, 63,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -5040,6 +2341,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
             
         
@@ -5048,464 +2350,39 @@ Please consider mentioning note-worthy improvements made to the family recently.
             
                 <h2>Font File Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
-    <h3>
     
-    Are there unwanted Apple tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/aat&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking file is named canonically.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/canonical_filename&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font contain less than 150 CJK characters?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_not_enough_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font follows the Google Fonts CJK vertical metric schema
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if the vertical metrics of a CJK family are similar to the same family hosted on Google Fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_vertical_metrics_regressions&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Color layers should have a minimum brightness
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/color_cpal_brightness&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font has the expected color font tables.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/colorfont_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Put an empty glyph on GID 1 right after the .notdef glyph for COLRv0 fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/empty_glyph_on_gid1_for_colrv0&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    EPAR table present in font?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/epar&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure files are not too large.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Copyright notices match canonical pattern in fonts
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font names are correct
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 fsType does not impose restrictions.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fstype&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check variable font instances
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fvar_instances&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    All name entries referenced by fvar instances exist on the name table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fvar_name_entries&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Is the Grid-fitting and Scan-conversion Procedure (&#39;gasp&#39;) table set to optimize rendering?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate defaults on fvar table match registered fallback names in GFAxisRegistry.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gf_axisregistry/fvar_axis_defaults&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check glyphs do not have components which are themselves components.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_nested_components&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check Google Fonts glyph coverage.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has ttfautohint params?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/has_ttfautohint_params&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Show hinting filesize impact.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/hinting_impact&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
     
-    PPEM must be an integer on hinted fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/integer_ppem_if_hinted&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
     
-    Is there kerning info for non-ligated sequences?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Are there caret positions declared for every ligature?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Ensure variable fonts include an avar table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_avar_table&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
-
     <h3>
     
     Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
 
 
 
@@ -5545,464 +2422,38 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
-    
-    Check small caps glyphs are available.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/missing_small_caps_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Are there non-ASCII characters in ASCII-only NAME table entries?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/ascii_only_entries&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Description strings in the name table must not exceed 200 characters.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/description_max_length&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Make sure family name does not begin with a digit.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/familyname_first_char&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has all mandatory &#39;name&#39; table entries?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/mandatory_entries&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Version format is correct in &#39;name&#39; table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/version_format&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure fonts do not contain any pre-production tables.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has old ttfautohint applied?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/old_ttfautohint&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font can render its own name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/render_own_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking direction of slnt axis angles
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/slant_direction&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font enables smart dropout control in &#34;prep&#34; table instructions?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check axis ordering on the STAT table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT/axis_order&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate STAT particle names and values match the fallback names in GFAxisRegistry.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT/gf_axisregistry&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure Stylistic Sets have description.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/stylisticset_description&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Stricter unitsPerEm criteria for Google Fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unitsperem_strict&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check the OS/2 usWeightClass is appropriate for the font&#39;s best SubFamily name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/usweightclass&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wght&#39; (Weight) axis coordinate must be 700 on the &#39;Bold&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/bold_wght_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure that all variable font files have the same set of axes and axis ranges.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/consistent_axes&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure VFs with duplexed axes do not vary horizontal advance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/duplexed_axis_reflow&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check variable font instances don&#39;t have duplicate names
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont_duplicate_instance_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Check a static ttf can be generated from a variable font.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/generate_static&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/27</div>
-    
-    Ensure the font&#39;s instances are in the correct order.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/instances_in_order&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Check that variable fonts have an HVAR table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/has_HVAR&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Ensure VFs do not contain the ital axis.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/unsupported_axes&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
-
     <h3>
     
     Checking OS/2 achVendID.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vendor_id&gt;</div>
 
 
 
@@ -6042,87 +2493,13 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
     
-    Check font follows the Google Fonts vertical metric schema
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Micro5-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The sum of hhea.ascender + abs(hhea.descender) + hhea.lineGap is 1650 when it should be at least 1980</p>
-
-                            
-                             [code: bad-hhea-range]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
 
-
-    <h3>
     
-    Check if the vertical metrics of a family are similar to the same family hosted on Google Fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics_regressions&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    There must not be VTT Talk sources in the font.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vttclean&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
 
             
         

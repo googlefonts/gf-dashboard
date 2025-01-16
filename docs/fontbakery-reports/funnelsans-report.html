@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -271,21 +275,21 @@ you're checking.</p>
     </tr>
     <tr>
         <td>0</td>
-        <td>2</td>
-        <td>5</td>
-        <td>14</td>
-        <td>91</td>
-        <td>15</td>
-        <td>358</td>
+        <td>0</td>
+        <td>1</td>
+        <td>19</td>
+        <td>75</td>
+        <td>13</td>
+        <td>353</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>1%</td>
+        <td>0%</td>
+        <td>4%</td>
+        <td>16%</td>
         <td>3%</td>
-        <td>19%</td>
-        <td>3%</td>
-        <td>74%</td>
+        <td>77%</td>
     </tr>
 </table>
         
@@ -310,12 +314,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.13.0</p>
         
             
-                <h2>Google Fonts</h2>
+                <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ☠☠🔥⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -369,11 +373,41 @@ immediately.
     
 
     
-        <h3>
+
     
-    Check for codepoints not covered by METADATA subsets.
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Checking unitsPerEm value is reasonable.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:opentype/unitsperem&gt;</div>
 
 
 
@@ -402,37 +436,10 @@ immediately.
                             </span>
 
                             <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: bamum, cuneiform, music, ethiopic, hanifi-rohingya, devanagari, dogra, braille, cyrillic-ext, mahajani, hatran, siddham, garay, chorasmian, old-north-arabian, ottoman-siyaq-numbers, telugu, vai, hebrew, nko, gurmukhi, brahmi, gunjala-gondi, old-persian, malayalam, takri, mende-kikakui, runic, adlam, toto, arabic, tamil, pahawh-hmong, indic-siyaq-numbers, symbols, nabataean, javanese, cypro-minoan, georgian, math, miao, makasar, old-hungarian, duployan, japanese, ahom, buhid, khojki, ol-chiki, ugaritic, linear-b, khitan-small-script, bhaiksuki, sora-sompeng, symbols2, lepcha, chinese-traditional, grantha, oriya, tibetan, meroitic-hieroglyphs, kaithi, soyombo, greek, tagalog, chinese-simplified, samaritan, cherokee, balinese, kayah-li, old-sogdian, palmyrene, multani, new-tai-lue, osage, inscriptional-pahlavi, yi, dives-akuru, old-turkic, chinese-hongkong, ogham, cham, old-uyghur, imperial-aramaic, tangsa, tagbanwa, batak, caucasian-albanian, signwriting, tirhuta, phags-pa, gurung-khema, elymaic, lao, medefaidrin, chakma, kawi, linear-a, kirat-rai, thaana, old-italic, rejang, warang-citi, sharada, limbu, kannada, meetei-mayek, sunuwar, korean, carian, phoenician, avestan, syriac, sinhala, thai, znamenny, tai-le, hanunoo, masaram-gondi, canadian-aboriginal, mandaic, buginese, pau-cin-hau, syloti-nagri, manichaean, anatolian-hieroglyphs, vithkuqi, lydian, sogdian, egyptian-hieroglyphs, yezidi, cyrillic, tifinagh, khmer, kana-extended, glagolitic, kharoshthi, elbasan, nushu, tai-tham, osmanya, myanmar, tai-viet, bassa-vah, lycian, lisu, sundanese, meroitic, saurashtra, todhri, meroitic-cursive, gujarati, ol-onal, cypriot, vietnamese, newa, shavian, marchen, old-permic, tamil-supplement, psalter-pahlavi, zanabazar-square, nyiakeng-puachue-hmong, inscriptional-parthian, tulu-tigalari, armenian, mro, old-south-arabian, mayan-numerals, modi, nag-mundari, khudawadi, greek-ext, mongolian, tangut, deseret, coptic, bengali, wancho, gothic, nandinagari</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: bamum, cuneiform, music, ethiopic, hanifi-rohingya, devanagari, dogra, braille, cyrillic-ext, mahajani, hatran, siddham, garay, chorasmian, old-north-arabian, ottoman-siyaq-numbers, telugu, vai, hebrew, nko, gurmukhi, brahmi, gunjala-gondi, old-persian, malayalam, takri, mende-kikakui, runic, adlam, toto, arabic, tamil, pahawh-hmong, indic-siyaq-numbers, symbols, nabataean, javanese, cypro-minoan, georgian, math, miao, makasar, old-hungarian, duployan, japanese, ahom, buhid, khojki, ol-chiki, ugaritic, linear-b, khitan-small-script, bhaiksuki, sora-sompeng, symbols2, lepcha, chinese-traditional, grantha, oriya, tibetan, meroitic-hieroglyphs, kaithi, soyombo, greek, tagalog, chinese-simplified, samaritan, cherokee, balinese, kayah-li, old-sogdian, palmyrene, multani, new-tai-lue, osage, inscriptional-pahlavi, yi, dives-akuru, old-turkic, chinese-hongkong, ogham, cham, old-uyghur, imperial-aramaic, tangsa, tagbanwa, batak, caucasian-albanian, signwriting, tirhuta, phags-pa, gurung-khema, elymaic, lao, medefaidrin, chakma, kawi, linear-a, kirat-rai, thaana, old-italic, rejang, warang-citi, sharada, limbu, kannada, meetei-mayek, sunuwar, korean, carian, phoenician, avestan, syriac, sinhala, thai, znamenny, tai-le, hanunoo, masaram-gondi, canadian-aboriginal, mandaic, buginese, pau-cin-hau, syloti-nagri, manichaean, anatolian-hieroglyphs, vithkuqi, lydian, sogdian, egyptian-hieroglyphs, yezidi, cyrillic, tifinagh, khmer, kana-extended, glagolitic, kharoshthi, elbasan, nushu, tai-tham, osmanya, myanmar, tai-viet, bassa-vah, lycian, lisu, sundanese, meroitic, saurashtra, todhri, meroitic-cursive, gujarati, ol-onal, cypriot, vietnamese, newa, shavian, marchen, old-permic, tamil-supplement, psalter-pahlavi, zanabazar-square, nyiakeng-puachue-hmong, inscriptional-parthian, tulu-tigalari, armenian, mro, old-south-arabian, mayan-numerals, modi, nag-mundari, khudawadi, greek-ext, mongolian, tangut, deseret, coptic, bengali, wancho, gothic, nandinagari</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, cherokee, coptic</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: duployan, syriac, todhri, hebrew, tai-le, old-permic, malayalam, math, coptic, canadian-aboriginal, tifinagh</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
-<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
+                            <p>In order to optimize performance on some legacy renderers, the value of unitsPerEm at the head table should ideally be a power of 2 between 16 to 16384. And values of 1000 and 2000 are also common and may be just fine as well. But we got 1200 instead.</p>
 
                             
-                             [code: unreachable-subsetting]
+                             [code: suboptimal]
                             
                             </span>
                         </li>
@@ -458,37 +465,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: bamum, cuneiform, music, ethiopic, hanifi-rohingya, devanagari, dogra, braille, cyrillic-ext, mahajani, hatran, siddham, garay, chorasmian, old-north-arabian, ottoman-siyaq-numbers, telugu, vai, hebrew, nko, gurmukhi, brahmi, gunjala-gondi, old-persian, malayalam, takri, mende-kikakui, runic, adlam, toto, arabic, tamil, pahawh-hmong, indic-siyaq-numbers, symbols, nabataean, javanese, cypro-minoan, georgian, math, miao, makasar, old-hungarian, duployan, japanese, ahom, buhid, khojki, ol-chiki, ugaritic, linear-b, khitan-small-script, bhaiksuki, sora-sompeng, symbols2, lepcha, chinese-traditional, grantha, oriya, tibetan, meroitic-hieroglyphs, kaithi, soyombo, greek, tagalog, chinese-simplified, samaritan, cherokee, balinese, kayah-li, old-sogdian, palmyrene, multani, new-tai-lue, osage, inscriptional-pahlavi, yi, dives-akuru, old-turkic, chinese-hongkong, ogham, cham, old-uyghur, imperial-aramaic, tangsa, tagbanwa, batak, caucasian-albanian, signwriting, tirhuta, phags-pa, gurung-khema, elymaic, lao, medefaidrin, chakma, kawi, linear-a, kirat-rai, thaana, old-italic, rejang, warang-citi, sharada, limbu, kannada, meetei-mayek, sunuwar, korean, carian, phoenician, avestan, syriac, sinhala, thai, znamenny, tai-le, hanunoo, masaram-gondi, canadian-aboriginal, mandaic, buginese, pau-cin-hau, syloti-nagri, manichaean, anatolian-hieroglyphs, vithkuqi, lydian, sogdian, egyptian-hieroglyphs, yezidi, cyrillic, tifinagh, khmer, kana-extended, glagolitic, kharoshthi, elbasan, nushu, tai-tham, osmanya, myanmar, tai-viet, bassa-vah, lycian, lisu, sundanese, meroitic, saurashtra, todhri, meroitic-cursive, gujarati, ol-onal, cypriot, vietnamese, newa, shavian, marchen, old-permic, tamil-supplement, psalter-pahlavi, zanabazar-square, nyiakeng-puachue-hmong, inscriptional-parthian, tulu-tigalari, armenian, mro, old-south-arabian, mayan-numerals, modi, nag-mundari, khudawadi, greek-ext, mongolian, tangut, deseret, coptic, bengali, wancho, gothic, nandinagari</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: bamum, cuneiform, music, ethiopic, hanifi-rohingya, devanagari, dogra, braille, cyrillic-ext, mahajani, hatran, siddham, garay, chorasmian, old-north-arabian, ottoman-siyaq-numbers, telugu, vai, hebrew, nko, gurmukhi, brahmi, gunjala-gondi, old-persian, malayalam, takri, mende-kikakui, runic, adlam, toto, arabic, tamil, pahawh-hmong, indic-siyaq-numbers, symbols, nabataean, javanese, cypro-minoan, georgian, math, miao, makasar, old-hungarian, duployan, japanese, ahom, buhid, khojki, ol-chiki, ugaritic, linear-b, khitan-small-script, bhaiksuki, sora-sompeng, symbols2, lepcha, chinese-traditional, grantha, oriya, tibetan, meroitic-hieroglyphs, kaithi, soyombo, greek, tagalog, chinese-simplified, samaritan, cherokee, balinese, kayah-li, old-sogdian, palmyrene, multani, new-tai-lue, osage, inscriptional-pahlavi, yi, dives-akuru, old-turkic, chinese-hongkong, ogham, cham, old-uyghur, imperial-aramaic, tangsa, tagbanwa, batak, caucasian-albanian, signwriting, tirhuta, phags-pa, gurung-khema, elymaic, lao, medefaidrin, chakma, kawi, linear-a, kirat-rai, thaana, old-italic, rejang, warang-citi, sharada, limbu, kannada, meetei-mayek, sunuwar, korean, carian, phoenician, avestan, syriac, sinhala, thai, znamenny, tai-le, hanunoo, masaram-gondi, canadian-aboriginal, mandaic, buginese, pau-cin-hau, syloti-nagri, manichaean, anatolian-hieroglyphs, vithkuqi, lydian, sogdian, egyptian-hieroglyphs, yezidi, cyrillic, tifinagh, khmer, kana-extended, glagolitic, kharoshthi, elbasan, nushu, tai-tham, osmanya, myanmar, tai-viet, bassa-vah, lycian, lisu, sundanese, meroitic, saurashtra, todhri, meroitic-cursive, gujarati, ol-onal, cypriot, vietnamese, newa, shavian, marchen, old-permic, tamil-supplement, psalter-pahlavi, zanabazar-square, nyiakeng-puachue-hmong, inscriptional-parthian, tulu-tigalari, armenian, mro, old-south-arabian, mayan-numerals, modi, nag-mundari, khudawadi, greek-ext, mongolian, tangut, deseret, coptic, bengali, wancho, gothic, nandinagari</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, cherokee, coptic</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: duployan, syriac, todhri, hebrew, tai-le, old-permic, malayalam, math, coptic, canadian-aboriginal, tifinagh</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
-<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
+                            <p>In order to optimize performance on some legacy renderers, the value of unitsPerEm at the head table should ideally be a power of 2 between 16 to 16384. And values of 1000 and 2000 are also common and may be just fine as well. But we got 1200 instead.</p>
 
                             
-                             [code: unreachable-subsetting]
+                             [code: suboptimal]
                             
                             </span>
                         </li>
@@ -520,98 +500,24 @@ definitions.</p>
 
     
 
-    
+            
+        
+            
+        
+            
+        
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️
+</span>
 
     
-
+    <h3>
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
 
 
 
@@ -640,40 +546,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ca_Latn (Catalan)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-</tr>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
-</tr>
-</tbody>
-</table>
+                            <p>Article page is too short!</p>
 
                             
-                             [code: warning-language-shaping]
+                             [code: length-requirements-not-met]
                             
                             </span>
                         </li>
@@ -684,7 +560,7 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>OK.</p>
+                            <p>ok</p>
 
                             
                             </span>
@@ -711,40 +587,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ca_Latn (Catalan)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-</tr>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
-</tr>
-</tbody>
-</table>
+                            <p>Article page is too short!</p>
 
                             
-                             [code: warning-language-shaping]
+                             [code: length-requirements-not-met]
                             
                             </span>
                         </li>
@@ -755,7 +601,7 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>OK.</p>
+                            <p>ok</p>
 
                             
                             </span>
@@ -768,7 +614,13 @@ definitions.</p>
 
     
 
-    
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩ℹ️ℹ️
+</span>
 
     
 
@@ -793,161 +645,11 @@ definitions.</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Is there kerning info for non-ligated sequences?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FunnelSans[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- f + f
-
-- f + i
-
-- i + l
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FunnelSans-Italic[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- f + f
-
-- f + i
-
-- i + l
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/designer_profiles&gt;</div>
 
 
 
@@ -969,20 +671,6 @@ definitions.</p>
             </summary>
             <div>
                 <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that NORD ID is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
@@ -1019,20 +707,6 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>It seems that NORD ID is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
                             <p>It seems that Kristian Möller is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
 
                             
@@ -1059,11 +733,51 @@ definitions.</p>
     
 
     
-        <h3>
+
     
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
 
 
 
@@ -1092,10 +806,35 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, old-permic, hebrew, coptic, duployan, todhri, math, syriac, tai-le, malayalam, tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
+<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
 
                             
-                             [code: lacks-meta-table]
+                             [code: unreachable-subsetting]
                             
                             </span>
                         </li>
@@ -1121,10 +860,35 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, old-permic, hebrew, coptic, duployan, todhri, math, syriac, tai-le, malayalam, tifinagh</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
+<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
+<li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
 
                             
-                             [code: lacks-meta-table]
+                             [code: unreachable-subsetting]
                             
                             </span>
                         </li>
@@ -1148,112 +912,229 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    The font has tags in the GF Tags spreadsheet
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        FunnelSans[wght].ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-    
-        ☠
-        FunnelSans-Italic[wght].ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-    
-
             
         
             
-                <h2>Universal</h2>
+                <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FunnelSans[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_TransLatin_Arabic glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
+<td align="left">ca_Latn (Catalan)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
+<td align="left">nb_Latn (Norwegian Bokmål)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FunnelSans-Italic[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_TransLatin_Arabic glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
+<td align="left">ca_Latn (Catalan)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
+<td align="left">nb_Latn (Norwegian Bokmål)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
     
 
     
-
+    <h3>
     
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Do we have the latest version of FontBakery installed?
+    DESCRIPTION.en_us.html should end in a linebreak.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
 
 
 
 <div style="background-color:#ee8">
+
+    
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
 
     
 
@@ -1266,7 +1147,7 @@ definitions.</p>
         <details>
             <summary>
                 🔥
-                FunnelSans[wght].ttf
+                METADATA.pb
                 
             </summary>
             <div>
@@ -1278,39 +1159,10 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
 
                             
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                🔥
-                FunnelSans-Italic[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
+                             [code: too-short]
                             
                             </span>
                         </li>
@@ -1330,218 +1182,6 @@ definitions.</p>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jan/30</div>
-    
-    Check tabular widths don&#39;t have kerning.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/tabular_kerning&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                FunnelSans[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Kerning between five.lf and two is not zero</p>
-
-                            
-                             [code: has-tabular-kerning]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Kerning between six.lf and two is not zero</p>
-
-                            
-                             [code: has-tabular-kerning]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Kerning between two and seven.lf is not zero</p>
-
-                            
-                             [code: has-tabular-kerning]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-        <details>
-            <summary>
-                🔥
-                FunnelSans-Italic[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Kerning between five.lf and two is not zero</p>
-
-                            
-                             [code: has-tabular-kerning]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Kerning between six.lf and two is not zero</p>
-
-                            
-                             [code: has-tabular-kerning]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Kerning between two and seven.lf is not zero</p>
-
-                            
-                             [code: has-tabular-kerning]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
             
         
             
@@ -1559,17 +1199,11 @@ definitions.</p>
 </span>
 
     
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Ensure dotted circle glyph is present and can attach marks.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:dotted_circle&gt;</div>
 
 
 
@@ -1643,11 +1277,17 @@ definitions.</p>
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+    <h3>
     
     Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_dotted&gt;</div>
 
 
 
@@ -1678,8 +1318,8 @@ definitions.</p>
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ̦ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ j̦̀ j̦́ ĵ̦ j̦̃ j̦̄ j̦̆ j̦̇ j̦̈ j̦̊ j̦̋ ǰ̦ j̦̒ į̆</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Nateni (Latn, 100,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Mundani (Latn, 34,000 speakers), Ebira (Latn, 2,200,000 speakers), Ejagham (Latn, 120,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Koonzime (Latn, 40,000 speakers), Mango (Latn, 77,000 speakers), Cicipu (Latn, 44,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Nzakara (Latn, 50,000 speakers), Ma’di (Latn, 584,000 speakers), Avokaya (Latn, 100,000 speakers), Aghem (Latn, 38,843 speakers), Makaa (Latn, 221,000 speakers), Dan (Latn, 1,099,244 speakers), Zapotec (Latn, 490,000 speakers), Bafut (Latn, 158,146 speakers), Mfumte (Latn, 79,000 speakers), Yala (Latn, 200,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ekpeye (Latn, 226,000 speakers), Kom (Latn, 360,685 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Dii (Latn, 71,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), South Central Banda (Latn, 244,000 speakers), Vute (Latn, 21,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Gulay (Latn, 250,478 speakers), Southern Kisi (Latn, 360,000 speakers), Fur (Latn, 1,230,163 speakers).</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Southern Tutchone (Latn, 65 speakers), Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers), Northern Tutchone (Latn, 85 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Nateni (Latn, 100,000 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Vute (Latn, 21,000 speakers), Han (Latn, 6 speakers), Heiltsuk (Latn, 300 speakers), Dan (Latn, 1,099,244 speakers), Ngbaka (Latn, 1,020,000 speakers), Ejagham (Latn, 120,000 speakers), Ebira (Latn, 2,200,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Ekpeye (Latn, 226,000 speakers), Yala (Latn, 200,000 speakers), Makaa (Latn, 221,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Bafut (Latn, 158,146 speakers), Mango (Latn, 77,000 speakers), Kom (Latn, 360,685 speakers), South Central Banda (Latn, 244,000 speakers), Cicipu (Latn, 44,000 speakers), Mundani (Latn, 34,000 speakers), Ma’di (Latn, 584,000 speakers), Keliko (Latn, 63,000 speakers), Avokaya (Latn, 100,000 speakers), Igbo (Latn, 27,823,640 speakers), Dii (Latn, 71,000 speakers), Western Krahn (Latn, 97,800 speakers), Lugbara (Latn, 2,200,000 speakers), Gulay (Latn, 250,478 speakers), Bete-Bendi (Latn, 100,000 speakers), Zapotec (Latn, 490,000 speakers), Nzakara (Latn, 50,000 speakers), Southern Kisi (Latn, 360,000 speakers), Koonzime (Latn, 40,000 speakers), Aghem (Latn, 38,843 speakers), Ikwere (Latn, 717,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Longto (Latn, 5,000 speakers), Kaska (Latn, 125 speakers), Fur (Latn, 1,230,163 speakers), Mfumte (Latn, 79,000 speakers), Sar (Latn, 500,000 speakers), Abua (Latn, 25,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -1710,8 +1350,8 @@ definitions.</p>
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Nateni (Latn, 100,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Mundani (Latn, 34,000 speakers), Ebira (Latn, 2,200,000 speakers), Ejagham (Latn, 120,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Koonzime (Latn, 40,000 speakers), Mango (Latn, 77,000 speakers), Cicipu (Latn, 44,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Nzakara (Latn, 50,000 speakers), Ma’di (Latn, 584,000 speakers), Avokaya (Latn, 100,000 speakers), Aghem (Latn, 38,843 speakers), Makaa (Latn, 221,000 speakers), Dan (Latn, 1,099,244 speakers), Zapotec (Latn, 490,000 speakers), Bafut (Latn, 158,146 speakers), Mfumte (Latn, 79,000 speakers), Yala (Latn, 200,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ekpeye (Latn, 226,000 speakers), Kom (Latn, 360,685 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Dii (Latn, 71,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), South Central Banda (Latn, 244,000 speakers), Vute (Latn, 21,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Gulay (Latn, 250,478 speakers), Southern Kisi (Latn, 360,000 speakers), Fur (Latn, 1,230,163 speakers).</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Southern Tutchone (Latn, 65 speakers), Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers), Northern Tutchone (Latn, 85 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Nateni (Latn, 100,000 speakers), Basaa (Latn, 332,940 speakers), Navajo (Latn, 166,319 speakers), Vute (Latn, 21,000 speakers), Han (Latn, 6 speakers), Heiltsuk (Latn, 300 speakers), Dan (Latn, 1,099,244 speakers), Ngbaka (Latn, 1,020,000 speakers), Ejagham (Latn, 120,000 speakers), Ebira (Latn, 2,200,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Ekpeye (Latn, 226,000 speakers), Yala (Latn, 200,000 speakers), Makaa (Latn, 221,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Bafut (Latn, 158,146 speakers), Mango (Latn, 77,000 speakers), Kom (Latn, 360,685 speakers), South Central Banda (Latn, 244,000 speakers), Cicipu (Latn, 44,000 speakers), Mundani (Latn, 34,000 speakers), Ma’di (Latn, 584,000 speakers), Keliko (Latn, 63,000 speakers), Avokaya (Latn, 100,000 speakers), Igbo (Latn, 27,823,640 speakers), Dii (Latn, 71,000 speakers), Western Krahn (Latn, 97,800 speakers), Lugbara (Latn, 2,200,000 speakers), Gulay (Latn, 250,478 speakers), Bete-Bendi (Latn, 100,000 speakers), Zapotec (Latn, 490,000 speakers), Nzakara (Latn, 50,000 speakers), Southern Kisi (Latn, 360,000 speakers), Koonzime (Latn, 40,000 speakers), Aghem (Latn, 38,843 speakers), Ikwere (Latn, 717,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Longto (Latn, 5,000 speakers), Kaska (Latn, 125 speakers), Fur (Latn, 1,230,163 speakers), Mfumte (Latn, 79,000 speakers), Sar (Latn, 500,000 speakers), Abua (Latn, 25,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -1722,6 +1362,352 @@ definitions.</p>
                 </ul>
             </div>
         </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩
+</span>
+
+    
+    <h3>
+    
+    Are there any misaligned on-curve points?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_alignment_miss&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FunnelSans[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* uni1E9E (U+1E9E): X=294.0,Y=-1.0 (should be at baseline 0?)
+
+* uni1E9E (U+1E9E): X=294.0,Y=-1.0 (should be at baseline 0?)
+
+* adieresis (U+00E4): X=417.0,Y=809.0 (should be at cap-height 810?)
+
+* adieresis (U+00E4): X=183.0,Y=809.0 (should be at cap-height 810?)
+
+* edieresis (U+00EB): X=442.0,Y=809.0 (should be at cap-height 810?)
+
+* edieresis (U+00EB): X=208.0,Y=809.0 (should be at cap-height 810?)
+
+* idieresis (U+00EF): X=226.0,Y=809.0 (should be at cap-height 810?)
+
+* idieresis (U+00EF): X=64.0,Y=809.0 (should be at cap-height 810?)
+
+* odieresis (U+00F6): X=457.0,Y=809.0 (should be at cap-height 810?)
+
+* odieresis (U+00F6): X=223.0,Y=809.0 (should be at cap-height 810?)
+
+* germandbls (U+00DF): X=276.0,Y=-1.0 (should be at baseline 0?)
+
+* germandbls (U+00DF): X=276.0,Y=-1.0 (should be at baseline 0?)
+
+* udieresis (U+00FC): X=462.0,Y=809.0 (should be at cap-height 810?)
+
+* udieresis (U+00FC): X=228.0,Y=809.0 (should be at cap-height 810?)
+
+* wdieresis (U+1E85): X=567.0,Y=809.0 (should be at cap-height 810?)
+
+* wdieresis (U+1E85): X=333.0,Y=809.0 (should be at cap-height 810?)
+
+* ydieresis (U+00FF): X=407.0,Y=809.0 (should be at cap-height 810?)
+
+* ydieresis (U+00FF): X=173.0,Y=809.0 (should be at cap-height 810?)
+
+* uni03BC (U+03BC): X=246.0,Y=2.0 (should be at baseline 0?)
+
+* braceleft (U+007B): X=256.0,Y=1.0 (should be at baseline 0?)
+
+* uni0308 (U+0308): X=417.0,Y=809.0 (should be at cap-height 810?)
+
+* uni0308 (U+0308): X=183.0,Y=809.0 (should be at cap-height 810?)
+
+* uni0308.narrow: X=381.0,Y=809.0 (should be at cap-height 810?)
+
+* uni0308.narrow: X=219.0,Y=809.0 (should be at cap-height 810?)
+
+* dieresis (U+00A8): X=417.0,Y=809.0 (should be at cap-height 810?)
+
+* dieresis (U+00A8): X=183.0,Y=809.0 (should be at cap-height 810?)
+</code></pre>
+
+                            
+                             [code: found-misalignments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FunnelSans-Italic[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* uni1E9E (U+1E9E): X=219.0,Y=-1.0 (should be at baseline 0?)
+
+* uni1E9E (U+1E9E): X=219.0,Y=-1.0 (should be at baseline 0?)
+
+* adieresis (U+00E4): X=534.0,Y=809.0 (should be at cap-height 810?)
+
+* adieresis (U+00E4): X=300.0,Y=809.0 (should be at cap-height 810?)
+
+* edieresis (U+00EB): X=559.0,Y=809.0 (should be at cap-height 810?)
+
+* edieresis (U+00EB): X=325.0,Y=809.0 (should be at cap-height 810?)
+
+* idieresis (U+00EF): X=353.0,Y=809.0 (should be at cap-height 810?)
+
+* idieresis (U+00EF): X=191.0,Y=809.0 (should be at cap-height 810?)
+
+* odieresis (U+00F6): X=574.0,Y=809.0 (should be at cap-height 810?)
+
+* odieresis (U+00F6): X=340.0,Y=809.0 (should be at cap-height 810?)
+
+* oslash (U+00F8): X=189.0,Y=0.5 (should be at baseline 0?)
+
+* germandbls (U+00DF): X=201.0,Y=-1.0 (should be at baseline 0?)
+
+* germandbls (U+00DF): X=201.0,Y=-1.0 (should be at baseline 0?)
+
+* udieresis (U+00FC): X=579.0,Y=809.0 (should be at cap-height 810?)
+
+* udieresis (U+00FC): X=345.0,Y=809.0 (should be at cap-height 810?)
+
+* wdieresis (U+1E85): X=684.0,Y=809.0 (should be at cap-height 810?)
+
+* wdieresis (U+1E85): X=450.0,Y=809.0 (should be at cap-height 810?)
+
+* ydieresis (U+00FF): X=524.0,Y=809.0 (should be at cap-height 810?)
+
+* ydieresis (U+00FF): X=290.0,Y=809.0 (should be at cap-height 810?)
+
+* uni03BC (U+03BC): X=171.0,Y=2.0 (should be at baseline 0?)
+
+* uni00B2 (U+00B2): X=376.0,Y=812.0 (should be at cap-height 810?)
+
+* braceleft (U+007B): X=181.0,Y=1.0 (should be at baseline 0?)
+
+* uni0308 (U+0308): X=534.0,Y=809.0 (should be at cap-height 810?)
+
+* uni0308 (U+0308): X=300.0,Y=809.0 (should be at cap-height 810?)
+
+* uni0308.narrow: X=508.0,Y=809.0 (should be at cap-height 810?)
+
+* uni0308.narrow: X=346.0,Y=809.0 (should be at cap-height 810?)
+
+* dieresis (U+00A8): X=534.0,Y=809.0 (should be at cap-height 810?)
+
+* dieresis (U+00A8): X=300.0,Y=809.0 (should be at cap-height 810?)
+</code></pre>
+
+                            
+                             [code: found-misalignments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FunnelSans[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FunnelSans-Italic[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     

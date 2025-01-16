@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -270,19 +274,19 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>0</td>
+        <td>1</td>
         <td>0</td>
         <td>1</td>
+        <td>8</td>
+        <td>39</td>
         <td>10</td>
-        <td>40</td>
-        <td>10</td>
-        <td>184</td>
+        <td>181</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>0%</td>
-        <td>4%</td>
+        <td>3%</td>
         <td>16%</td>
         <td>4%</td>
         <td>75%</td>
@@ -310,12 +314,12 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.4</p>
+<p>FontBakery version: 0.13.0</p>
         
             
                 <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️
+    ⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️
 </span>
 
     
@@ -371,11 +375,33 @@ immediately.
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
     
     Font has correct post table version?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/post_table_version&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:opentype/post_table_version&gt;</div>
 
 
 
@@ -443,56 +469,6 @@ immediately.
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
             
         
             
@@ -500,7 +476,7 @@ immediately.
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -534,11 +510,86 @@ immediately.
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Are there caret positions declared for every ligature?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:ligature_carets&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                EduVICWANTHandPre[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font lacks caret position values for ligature glyphs on its GDEF table.</p>
+
+                            
+                             [code: lacks-caret-pos]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
     
     Check math signs have the same width.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:math_signs_width&gt;</div>
 
 
 
@@ -580,7 +631,7 @@ approxequal</p>
 <p>Width = 1037:
 notequal</p>
 <p>Width = 1039:
-lessequal, greaterequal</p>
+greaterequal, lessequal</p>
 
                             
                              [code: width-outliers]
@@ -633,13 +684,15 @@ lessequal, greaterequal</p>
 
     
 
-            
-        
-            
-                <h2>Shaping Checks</h2>
-<span class='section__emoji'>
-    ⚠️⏩⏩⏩
-</span>
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -650,51 +703,23 @@ lessequal, greaterequal</p>
     
 
     
-        <h3>
-    
-    Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
-        <details>
-            <summary>
-                ⚠️
-                EduVICWANTHandPre[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
 
-                            <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̋ į̀ į́ į̂ į̃ į̄ į̌</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĭ i̇ ǐ i̒ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ ĭ̧ i̧̇ i̧̊ i̧̋ ǐ̧ i̧̒ į̆ į̇ į̈ į̊</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Lugbara (Latn, 2,200,000 speakers), Mundani (Latn, 34,000 speakers), Basaa (Latn, 332,940 speakers), Kom (Latn, 360,685 speakers), Navajo (Latn, 166,319 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Nzakara (Latn, 50,000 speakers), Fur (Latn, 1,230,163 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Makaa (Latn, 221,000 speakers), Igbo (Latn, 27,823,640 speakers), Belarusian (Cyrl, 10,064,517 speakers), Mango (Latn, 77,000 speakers), Cicipu (Latn, 44,000 speakers), Southern Kisi (Latn, 360,000 speakers), Ebira (Latn, 2,200,000 speakers), Dan (Latn, 1,099,244 speakers), Ejagham (Latn, 120,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Bete-Bendi (Latn, 100,000 speakers), Avokaya (Latn, 100,000 speakers), Nateni (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers), Koonzime (Latn, 40,000 speakers), Gulay (Latn, 250,478 speakers), Ma’di (Latn, 584,000 speakers), Ekpeye (Latn, 226,000 speakers), Aghem (Latn, 38,843 speakers), South Central Banda (Latn, 244,000 speakers), Yala (Latn, 200,000 speakers), Bafut (Latn, 158,146 speakers), Mfumte (Latn, 79,000 speakers), Zapotec (Latn, 490,000 speakers), Dii (Latn, 71,000 speakers), Ngbaka (Latn, 1,020,000 speakers).</p>
+    
 
-                            
-                             [code: soft-dotted]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -708,13 +733,11 @@ lessequal, greaterequal</p>
 </span>
 
     
-        <h3>
+    <h3>
     
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/25</div>
-    
-    Validate location, size and resolution of article images.
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
 
 
 
@@ -741,7 +764,7 @@ lessequal, greaterequal</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/eduvicwanthandpre does not have an article.</p>
+                            <p>Family metadata at /Users/simon/others-repos/fonts//ofl/eduvicwanthandpre does not have an article.</p>
 
                             
                              [code: lacks-article]
@@ -839,21 +862,11 @@ lessequal, greaterequal</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Check for codepoints not covered by METADATA subsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
 
 
 
@@ -886,39 +899,37 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, coptic, cherokee, tifinagh</li>
-<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, canadian-aboriginal, math, malayalam, tifinagh, tai-le, old-permic, syriac</li>
-<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, tai-le, old-permic, math, canadian-aboriginal, syriac, hebrew, todhri, coptic, malayalam, duployan</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
 <li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
-<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
-<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+1EBC LATIN CAPITAL LETTER E WITH TILDE: try adding vietnamese</li>
 <li>U+1EBD LATIN SMALL LETTER E WITH TILDE: try adding vietnamese</li>
-<li>U+2000 EN QUAD: not included in any glyphset definition</li>
-<li>U+2001 EM QUAD: not included in any glyphset definition</li>
+<li>U+2000 EN QUAD: try adding symbols2</li>
+<li>U+2001 EM QUAD: try adding symbols2</li>
 <li>U+2003 EM SPACE: try adding nushu</li>
-<li>U+2004 THREE-PER-EM SPACE: not included in any glyphset definition</li>
-<li>U+2005 FOUR-PER-EM SPACE: not included in any glyphset definition</li>
-<li>U+2006 SIX-PER-EM SPACE: not included in any glyphset definition</li>
-<li>U+2007 FIGURE SPACE: not included in any glyphset definition</li>
-<li>U+2008 PUNCTUATION SPACE: not included in any glyphset definition</li>
-<li>U+200A HAIR SPACE: not included in any glyphset definition</li>
-<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: modi, gurmukhi, meetei-mayek, bengali, dogra, hatran, mongolian, tai-tham, tamil, myanmar, saurashtra, balinese, rejang, kaithi, buginese, tagbanwa, syriac, kayah-li, masaram-gondi, new-tai-lue, thaana, khojki, batak, malayalam, siddham, mandaic, hanunoo, khudawadi, devanagari, sundanese, nko, gunjala-gondi, pahawh-hmong, syloti-nagri, limbu, oriya, brahmi, bhaiksuki, tai-viet, psalter-pahlavi, zanabazar-square, grantha, hebrew, kharoshthi, yi, phags-pa, sogdian, telugu, sinhala, tagalog, arabic, khmer, lepcha, manichaean, newa, javanese, cham, chakma, avestan, hanifi-rohingya, tirhuta, tibetan, tifinagh, duployan, mahajani, gujarati, sharada, lao, tai-le, thai, warang-citi, kannada, buhid, takri</li>
-<li>U+200D ZERO WIDTH JOINER: try adding one of: modi, gurmukhi, meetei-mayek, bengali, dogra, mongolian, tai-tham, tamil, myanmar, saurashtra, balinese, rejang, kaithi, buginese, tagbanwa, syriac, kayah-li, masaram-gondi, new-tai-lue, thaana, khojki, batak, malayalam, siddham, mandaic, hanunoo, khudawadi, devanagari, sundanese, nko, gunjala-gondi, pahawh-hmong, syloti-nagri, limbu, oriya, brahmi, bhaiksuki, tai-viet, psalter-pahlavi, zanabazar-square, grantha, hebrew, kharoshthi, yi, phags-pa, sogdian, telugu, sinhala, tagalog, arabic, khmer, lepcha, manichaean, newa, old-hungarian, javanese, cham, chakma, avestan, hanifi-rohingya, tirhuta, tibetan, tifinagh, duployan, mahajani, gujarati, sharada, lao, tai-le, thai, warang-citi, kannada, buhid, takri</li>
+<li>U+2004 THREE-PER-EM SPACE: try adding symbols2</li>
+<li>U+2005 FOUR-PER-EM SPACE: try adding symbols2</li>
+<li>U+2006 SIX-PER-EM SPACE: try adding symbols2</li>
+<li>U+2007 FIGURE SPACE: try adding symbols2</li>
+<li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
+<li>U+200A HAIR SPACE: try adding symbols2</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: avestan, rejang, manichaean, sundanese, nko, bengali, grantha, phags-pa, telugu, tibetan, kharoshthi, khojki, mahajani, kaithi, syloti-nagri, hanunoo, brahmi, masaram-gondi, arabic, new-tai-lue, gunjala-gondi, tifinagh, sogdian, pahawh-hmong, syriac, meetei-mayek, devanagari, dogra, gurmukhi, hebrew, kannada, limbu, zanabazar-square, malayalam, mongolian, oriya, duployan, tai-viet, psalter-pahlavi, tagbanwa, tamil, tai-tham, cham, khudawadi, sinhala, batak, chakma, buginese, buhid, khmer, hatran, gujarati, saurashtra, hanifi-rohingya, modi, javanese, mandaic, thai, tai-le, myanmar, takri, siddham, kayah-li, balinese, yi, lao, sharada, bhaiksuki, tirhuta, lepcha, newa, thaana, tagalog, warang-citi</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: avestan, rejang, manichaean, sundanese, nko, bengali, grantha, phags-pa, telugu, tibetan, kharoshthi, khojki, mahajani, kaithi, syloti-nagri, hanunoo, brahmi, masaram-gondi, arabic, new-tai-lue, gunjala-gondi, tifinagh, sogdian, pahawh-hmong, syriac, meetei-mayek, devanagari, dogra, gurmukhi, hebrew, kannada, limbu, zanabazar-square, malayalam, mongolian, oriya, duployan, tai-viet, psalter-pahlavi, tagbanwa, tamil, tai-tham, cham, khudawadi, sinhala, batak, chakma, old-hungarian, buginese, buhid, khmer, gujarati, saurashtra, hanifi-rohingya, modi, javanese, mandaic, thai, tai-le, myanmar, takri, siddham, kayah-li, balinese, yi, lao, sharada, bhaiksuki, tirhuta, lepcha, newa, thaana, tagalog, warang-citi</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: mongolian, yi</li>
-<li>U+205F MEDIUM MATHEMATICAL SPACE: not included in any glyphset definition</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: phags-pa, mongolian, yi</li>
+<li>U+205F MEDIUM MATHEMATICAL SPACE: try adding math</li>
 <li>U+2116 NUMERO SIGN: try adding cyrillic</li>
-<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
+<li>U+212E ESTIMATED SYMBOL: try adding math</li>
 <li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
 <li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
 <li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
@@ -931,7 +942,7 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+25CA LOZENGE: try adding one of: math, symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: dogra, tamil, soyombo, adlam, syriac, mandaic, hanunoo, syloti-nagri, limbu, zanabazar-square, phags-pa, khmer, lepcha, manichaean, javanese, tirhuta, mahajani, thai, tai-le, new-tai-lue, old-permic, lao, kannada, buhid, coptic, wancho, myanmar, symbols, rejang, kaithi, buginese, kayah-li, masaram-gondi, thaana, batak, pahawh-hmong, brahmi, psalter-pahlavi, grantha, marchen, sogdian, newa, chakma, osage, tibetan, tifinagh, sharada, math, mongolian, caucasian-albanian, tai-tham, balinese, miao, tagbanwa, malayalam, gunjala-gondi, oriya, hebrew, kharoshthi, telugu, sinhala, tagalog, cham, elbasan, hanifi-rohingya, duployan, takri, modi, gurmukhi, meetei-mayek, bengali, saurashtra, canadian-aboriginal, khojki, siddham, ahom, khudawadi, armenian, devanagari, music, sundanese, nko, bhaiksuki, yi, bassa-vah, mende-kikakui, gujarati, warang-citi, tai-viet</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: khojki, kaithi, hanunoo, brahmi, bassa-vah, canadian-aboriginal, pahawh-hmong, limbu, oriya, osage, tagbanwa, khmer, saurashtra, symbols, elbasan, mandaic, myanmar, bhaiksuki, thaana, warang-citi, nko, telugu, tibetan, adlam, tifinagh, sogdian, armenian, dogra, gurmukhi, kannada, mongolian, duployan, soyombo, caucasian-albanian, old-permic, cham, sinhala, batak, chakma, gujarati, marchen, hanifi-rohingya, takri, siddham, kayah-li, sharada, rejang, phags-pa, kharoshthi, mahajani, coptic, gunjala-gondi, math, syriac, meetei-mayek, hebrew, zanabazar-square, tai-viet, psalter-pahlavi, miao, mende-kikakui, buginese, ahom, wancho, yi, balinese, lao, tirhuta, lepcha, newa, tagalog, music, sundanese, manichaean, bengali, grantha, syloti-nagri, masaram-gondi, new-tai-lue, devanagari, malayalam, tamil, tai-tham, khudawadi, buhid, modi, javanese, thai, tai-le</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
 </ul>
@@ -965,21 +976,80 @@ definitions.</p>
             
         
             
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    💥
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                💥
+                EduVICWANTHandPre[wght].ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
         
             
                 <h2>Description Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️ℹ️
+    🔥⚠️ℹ️ℹ️
 </span>
 
     
 
     
-        <h3>
+    <h3>
     
     DESCRIPTION.en_us.html should end in a linebreak.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
 
 
 
@@ -1032,11 +1102,13 @@ definitions.</p>
     
 
     
-        <h3>
+
+    
+    <h3>
     
     DESCRIPTION.en_us.html must have more than 200 bytes.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
 
 
 
@@ -1086,8 +1158,12 @@ definitions.</p>
 
     
 
-    
-
+            
+        
+            
+        
+            
+        
             
         
             
@@ -1099,7 +1175,7 @@ definitions.</p>
             
                 <h2>Font File Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️
 </span>
 
     
@@ -1127,131 +1203,11 @@ definitions.</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Is there kerning info for non-ligated sequences?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                EduVICWANTHandPre[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- f + glyph00277
-
-- f + glyph00293
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
-    
-    Are there caret positions declared for every ligature?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                EduVICWANTHandPre[wght].ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font lacks caret position values for ligature glyphs on its GDEF table.</p>
-
-                            
-                             [code: lacks-caret-pos]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
 
 
 
@@ -1320,39 +1276,11 @@ definitions.</p>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Check font follows the Google Fonts vertical metric schema
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vertical_metrics&gt;</div>
 
 
 

@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/version_bump<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -270,22 +274,22 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>1</td>
         <td>0</td>
-        <td>1</td>
-        <td>8</td>
-        <td>68</td>
-        <td>7</td>
-        <td>167</td>
+        <td>0</td>
+        <td>2</td>
+        <td>12</td>
+        <td>56</td>
+        <td>6</td>
+        <td>164</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>0%</td>
-        <td>3%</td>
-        <td>27%</td>
-        <td>3%</td>
-        <td>66%</td>
+        <td>1%</td>
+        <td>5%</td>
+        <td>23%</td>
+        <td>2%</td>
+        <td>68%</td>
     </tr>
 </table>
         
@@ -310,12 +314,16 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.13.0</p>
         
             
-                <h2>Google Fonts</h2>
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    💥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -337,2346 +345,11 @@ immediately.
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: medefaidrin, tagalog, nandinagari, runic, nko, duployan, ol-chiki, imperial-aramaic, lao, nag-mundari, bhaiksuki, anatolian-hieroglyphs, tangut, chinese-simplified, palmyrene, hebrew, gujarati, mayan-numerals, miao, ottoman-siyaq-numbers, javanese, hanunoo, nushu, signwriting, sinhala, mahajani, pau-cin-hau, telugu, sharada, ugaritic, oriya, gothic, tagbanwa, cyrillic-ext, tirhuta, khojki, kannada, chorasmian, kirat-rai, linear-b, korean, indic-siyaq-numbers, coptic, deseret, braille, dogra, elymaic, meroitic, old-north-arabian, garay, shavian, znamenny, tamil-supplement, makasar, lepcha, wancho, inscriptional-parthian, meroitic-cursive, phoenician, khmer, linear-a, thaana, malayalam, old-permic, rejang, vithkuqi, mro, vai, kharoshthi, gurung-khema, osmanya, syriac, japanese, psalter-pahlavi, greek, old-uyghur, symbols2, bassa-vah, zanabazar-square, cypro-minoan, music, cherokee, meroitic-hieroglyphs, tamil, chinese-traditional, sora-sompeng, ahom, old-turkic, khudawadi, phags-pa, ol-onal, khitan-small-script, saurashtra, devanagari, newa, osage, tibetan, math, arabic, nyiakeng-puachue-hmong, marchen, multani, old-persian, warang-citi, cham, lisu, sunuwar, takri, symbols, gunjala-gondi, limbu, samaritan, adlam, tangsa, vietnamese, lycian, old-italic, canadian-aboriginal, siddham, avestan, carian, ogham, toto, pahawh-hmong, cyrillic, meetei-mayek, grantha, gurmukhi, kana-extended, soyombo, manichaean, chinese-hongkong, bamum, georgian, syloti-nagri, new-tai-lue, hanifi-rohingya, tai-tham, batak, mandaic, mende-kikakui, sogdian, glagolitic, buginese, buhid, greek-ext, sundanese, ethiopic, armenian, cypriot, elbasan, modi, dives-akuru, brahmi, kawi, chakma, mongolian, inscriptional-pahlavi, lydian, masaram-gondi, thai, hatran, cuneiform, old-sogdian, old-south-arabian, tai-le, yi, yezidi, tulu-tigalari, tifinagh, myanmar, caucasian-albanian, old-hungarian, egyptian-hieroglyphs, nabataean, kaithi, tai-viet, balinese, kayah-li, bengali</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: medefaidrin, tagalog, nandinagari, runic, nko, duployan, ol-chiki, imperial-aramaic, lao, nag-mundari, bhaiksuki, anatolian-hieroglyphs, tangut, chinese-simplified, palmyrene, hebrew, gujarati, mayan-numerals, miao, ottoman-siyaq-numbers, javanese, hanunoo, nushu, signwriting, sinhala, mahajani, pau-cin-hau, telugu, sharada, ugaritic, oriya, gothic, tagbanwa, cyrillic-ext, tirhuta, khojki, kannada, chorasmian, kirat-rai, linear-b, korean, indic-siyaq-numbers, coptic, deseret, braille, dogra, elymaic, meroitic, old-north-arabian, garay, shavian, znamenny, tamil-supplement, makasar, lepcha, wancho, inscriptional-parthian, meroitic-cursive, phoenician, khmer, linear-a, thaana, malayalam, old-permic, rejang, vithkuqi, mro, vai, kharoshthi, gurung-khema, osmanya, syriac, japanese, psalter-pahlavi, greek, old-uyghur, symbols2, bassa-vah, zanabazar-square, cypro-minoan, music, cherokee, meroitic-hieroglyphs, tamil, chinese-traditional, sora-sompeng, ahom, old-turkic, khudawadi, phags-pa, ol-onal, khitan-small-script, saurashtra, devanagari, newa, osage, tibetan, math, arabic, nyiakeng-puachue-hmong, marchen, multani, old-persian, warang-citi, cham, lisu, sunuwar, takri, symbols, gunjala-gondi, limbu, samaritan, adlam, tangsa, vietnamese, lycian, old-italic, canadian-aboriginal, siddham, avestan, carian, ogham, toto, pahawh-hmong, cyrillic, meetei-mayek, grantha, gurmukhi, kana-extended, soyombo, manichaean, chinese-hongkong, bamum, georgian, syloti-nagri, new-tai-lue, hanifi-rohingya, tai-tham, batak, mandaic, mende-kikakui, sogdian, glagolitic, buginese, buhid, greek-ext, sundanese, ethiopic, armenian, cypriot, elbasan, modi, dives-akuru, brahmi, kawi, chakma, mongolian, inscriptional-pahlavi, lydian, masaram-gondi, thai, hatran, cuneiform, old-sogdian, old-south-arabian, tai-le, yi, yezidi, tulu-tigalari, tifinagh, myanmar, caucasian-albanian, old-hungarian, egyptian-hieroglyphs, nabataean, kaithi, tai-viet, balinese, kayah-li, bengali</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee</li>
-<li>U+0305 COMBINING OVERLINE: try adding one of: coptic, elbasan, gothic, glagolitic, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+0361 COMBINING DOUBLE INVERTED BREVE: try adding coptic</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: tagalog, nko, duployan, lao, bhaiksuki, hebrew, gujarati, miao, javanese, hanunoo, sinhala, mahajani, telugu, sharada, oriya, tagbanwa, tirhuta, khojki, kannada, coptic, dogra, lepcha, wancho, khmer, thaana, malayalam, old-permic, rejang, kharoshthi, syriac, psalter-pahlavi, bassa-vah, zanabazar-square, music, tamil, ahom, khudawadi, phags-pa, saurashtra, devanagari, newa, osage, tibetan, math, marchen, warang-citi, cham, takri, symbols, gunjala-gondi, limbu, adlam, canadian-aboriginal, siddham, pahawh-hmong, meetei-mayek, grantha, gurmukhi, soyombo, manichaean, syloti-nagri, new-tai-lue, hanifi-rohingya, tai-tham, batak, mandaic, mende-kikakui, sogdian, buginese, buhid, sundanese, armenian, elbasan, modi, brahmi, mongolian, chakma, masaram-gondi, thai, tai-le, yi, tifinagh, myanmar, caucasian-albanian, kaithi, tai-viet, balinese, kayah-li, bengali</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>todhri</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ca_Latn (Catalan)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-</tr>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ</td>
-</tr>
-<tr>
-<td align="left">nl_Latn (Dutch)</td>
-<td align="left">Some auxiliary glyphs were missing: Ĳ, ĳ</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OK.</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
-Please consider mentioning note-worthy improvements made to the family recently.</p>
-
-                            
-                             [code: description-not-updated]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    The font has tags in the GF Tags spreadsheet
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                💥
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            💥 ERROR
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Failed with ReadTimeout: HTTPSConnectionPool(host='doc-08-b8-sheets.googleusercontent.com', port=443): Read timed out. (read timeout=10)</p>
-<pre><code>  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/fontbakery/checkrunner.py&quot;, line 170, in _exec_check
-    results.extend(list(result))
-                   ^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/fontbakery/profiles/googlefonts.py&quot;, line 7476, in com_google_fonts_check_metadata_has_tags
-    tags = gf_tags()
-           ^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/fontbakery/profiles/googlefonts_conditions.py&quot;, line 752, in gf_tags
-    req = requests.get(GF_TAGS_SHEET_URL, timeout=10)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/api.py&quot;, line 73, in get
-    return request(&quot;get&quot;, url, params=params, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/api.py&quot;, line 59, in request
-    return session.request(method=method, url=url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/sessions.py&quot;, line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/sessions.py&quot;, line 724, in send
-    history = [resp for resp in gen]
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/sessions.py&quot;, line 724, in &lt;listcomp&gt;
-    history = [resp for resp in gen]
-              ^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/sessions.py&quot;, line 265, in resolve_redirects
-    resp = self.send(
-           ^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/sessions.py&quot;, line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/opt/hostedtoolcache/Python/3.11.10/x64/lib/python3.11/site-packages/requests/adapters.py&quot;, line 713, in send
-    raise ReadTimeout(e, request=request)
-
-</code></pre>
-
-                            
-                             [code: failed-check]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check that legacy accents aren&#39;t used in composite glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/legacy_accents&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                NotoSerifTodhri-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;eitodhri&quot; has a legacy accent component  (dotabovemod). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;utodhri&quot; has a legacy accent component  (dotabovemod). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;acutecomb&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;dotabovecomb&quot; has a legacy accent component  (dotabovemod). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Aacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Abreve&quot; has a legacy accent component  (breve). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Acircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Adieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Agrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Aogonek&quot; has a legacy accent component  (ogonek). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Atilde&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Cacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ccaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Dcaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Eacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ecaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ecircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Edieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Egrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Gbreve&quot; has a legacy accent component  (breve). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Iacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Icircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Idieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Igrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Lacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Nacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ncaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ntilde&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Oacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ocircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Odieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ograve&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ohungarumlaut&quot; has a legacy accent component  (hungarumlaut). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Otilde&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Racute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Rcaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Sacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Scaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Scedilla&quot; has a legacy accent component  (cedilla). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Tcaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Uacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ucircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Udieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ugrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Uhungarumlaut&quot; has a legacy accent component  (hungarumlaut). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Uring&quot; has a legacy accent component  (ring). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Wacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Wcircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Wdieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Wgrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Yacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ycircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ydieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Ygrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Zacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;Zcaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;aacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;abreve&quot; has a legacy accent component  (breve). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;acircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;adieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;agrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;aogonek&quot; has a legacy accent component  (ogonek). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;aring&quot; has a legacy accent component  (ring). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;atilde&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uni0306&quot; has a legacy accent component  (breve). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;cacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uni030C&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ccaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ccedilla&quot; has a legacy accent component  (cedilla). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uni0302&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;eacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ecaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ecircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;edieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;egrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;gbreve&quot; has a legacy accent component  (breve). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uni030B&quot; has a legacy accent component  (hungarumlaut). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;iacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;icircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;idieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;igrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;lacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;nacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ncaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ntilde&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;oacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ocircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;odieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ograve&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ohungarumlaut&quot; has a legacy accent component  (hungarumlaut). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;otilde&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;racute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;rcaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uni030A&quot; has a legacy accent component  (ring). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;sacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;scaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;scedilla&quot; has a legacy accent component  (cedilla). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;tildecomb&quot; has a legacy accent component  (tilde). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ucircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;udieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ugrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uhungarumlaut&quot; has a legacy accent component  (hungarumlaut). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uogonek&quot; has a legacy accent component  (ogonek). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;uring&quot; has a legacy accent component  (ring). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;wacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;wcircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;wdieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;wgrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;yacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ycircumflex&quot; has a legacy accent component  (circumflex). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ydieresis&quot; has a legacy accent component  (dieresis). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;ygrave&quot; has a legacy accent component  (grave). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;zacute&quot; has a legacy accent component  (acute). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph &quot;zcaron&quot; has a legacy accent component  (caron). It needs to be replaced by a combining mark.</p>
-
-                            
-                             [code: legacy-accents-component]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Check if each glyph has the recommended amount of contours.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:contour_count&gt;</div>
 
 
 
@@ -2752,11 +425,35 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
     
     Check math signs have the same width.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:math_signs_width&gt;</div>
 
 
 
@@ -2811,30 +508,618 @@ minus</p>
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
-        
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+    <h3>
+    
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Article page is too short!</p>
+
+                            
+                             [code: length-requirements-not-met]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Article page lacks visual assets.</p>
+
+                            
+                             [code: missing-visual-asset]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ✅ PASS
+                            </span>
+
+                            <span class='details_text'>
+                            <p>ok</p>
+
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
             
         
             
-        
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩⏩⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, coptic, cherokee, math</li>
+<li>U+0305 COMBINING OVERLINE: try adding one of: glagolitic, elbasan, coptic, gothic, math</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0361 COMBINING DOUBLE INVERTED BREVE: try adding coptic</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: zanabazar-square, sinhala, miao, oriya, thai, hanifi-rohingya, khmer, phags-pa, hebrew, marchen, mahajani, takri, modi, mongolian, masaram-gondi, thaana, meetei-mayek, wancho, soyombo, tai-le, manichaean, ahom, sundanese, syloti-nagri, dogra, duployan, tai-viet, newa, sogdian, chakma, bassa-vah, bengali, mandaic, armenian, telugu, canadian-aboriginal, tagbanwa, rejang, pahawh-hmong, music, lao, tifinagh, lepcha, sharada, grantha, hanunoo, khojki, khudawadi, malayalam, symbols, tai-tham, buginese, devanagari, adlam, limbu, gurmukhi, batak, gujarati, tirhuta, nko, cham, kayah-li, brahmi, kharoshthi, bhaiksuki, tagalog, osage, myanmar, old-permic, elbasan, coptic, math, tamil, psalter-pahlavi, kaithi, siddham, kannada, tibetan, mende-kikakui, caucasian-albanian, yi, syriac, balinese, javanese, warang-citi, buhid, new-tai-lue, saurashtra, gunjala-gondi</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code>, <code>todhri</code></p>
+
+                            
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
-        
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
+<td align="left">ca_Latn (Catalan)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ</td>
+<td align="left">nb_Latn (Norwegian Bokmål)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ĳ, ĳ</td>
+<td align="left">nl_Latn (Dutch)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥🔥⚠️⚠️⏩
+</span>
+
+    
+    <h3>
+    
+    Does DESCRIPTION file contain broken links?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/broken_links&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following links are broken in the article file:
+<a href="https://scriptsource.org/scr/Todr">https://scriptsource.org/scr/Todr</a> (status code: 403)</p>
+
+                            
+                             [code: broken-links]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/family_update&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently.</p>
+
+                            
+                             [code: description-not-updated]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
@@ -2860,11 +1145,11 @@ minus</p>
     
 
     
-        <h3>
+    <h3>
     
     Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_dotted&gt;</div>
 
 
 
@@ -2893,8 +1178,8 @@ minus</p>
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: j̈ j̑ į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̇ ȋ ị̇ ị̑ i̦̇ ȋ̦ i̧̇ ȋ̧ j̇ j̣̇ j̣̈ j̣̑ j̦̇ j̦̈ j̦̑ j̧̇ j̧̈ j̧̑ j̨̇ j̨̈</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Ekpeye (Latn, 226,000 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Vute (Latn, 21,000 speakers), Avokaya (Latn, 100,000 speakers), South Central Banda (Latn, 244,000 speakers), Nateni (Latn, 100,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Cicipu (Latn, 44,000 speakers), Dii (Latn, 71,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Navajo (Latn, 166,319 speakers), Makaa (Latn, 221,000 speakers), Yala (Latn, 200,000 speakers), Zapotec (Latn, 490,000 speakers), Mundani (Latn, 34,000 speakers), Fur (Latn, 1,230,163 speakers), Koonzime (Latn, 40,000 speakers), Sar (Latn, 500,000 speakers), Lugbara (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Dan (Latn, 1,099,244 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Kom (Latn, 360,685 speakers), Gulay (Latn, 250,478 speakers), Bete-Bendi (Latn, 100,000 speakers), Ejagham (Latn, 120,000 speakers), Nzakara (Latn, 50,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Mango (Latn, 77,000 speakers), Mfumte (Latn, 79,000 speakers), Southern Kisi (Latn, 360,000 speakers), Aghem (Latn, 38,843 speakers), Basaa (Latn, 332,940 speakers), Ma’di (Latn, 584,000 speakers).</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Southern Tutchone (Latn, 65 speakers), Ikwere (Latn, 717,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Ekpeye (Latn, 226,000 speakers), Dutch (Latn, 31,709,104 speakers), Abua (Latn, 25,000 speakers), Northern Tutchone (Latn, 85 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Cicipu (Latn, 44,000 speakers), South Central Banda (Latn, 244,000 speakers), Sar (Latn, 500,000 speakers), Nateni (Latn, 100,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Zapotec (Latn, 490,000 speakers), Western Krahn (Latn, 97,800 speakers), Longto (Latn, 5,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Mfumte (Latn, 79,000 speakers), Makaa (Latn, 221,000 speakers), Fur (Latn, 1,230,163 speakers), Ma’di (Latn, 584,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Kom (Latn, 360,685 speakers), Dan (Latn, 1,099,244 speakers), Aghem (Latn, 38,843 speakers), Keliko (Latn, 63,000 speakers), Heiltsuk (Latn, 300 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Gulay (Latn, 250,478 speakers), Basaa (Latn, 332,940 speakers), Kaska (Latn, 125 speakers), Ngbaka (Latn, 1,020,000 speakers), Avokaya (Latn, 100,000 speakers), Nzakara (Latn, 50,000 speakers), Navajo (Latn, 166,319 speakers), Yala (Latn, 200,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Bafut (Latn, 158,146 speakers), Ejagham (Latn, 120,000 speakers), Han (Latn, 6 speakers), Lugbara (Latn, 2,200,000 speakers), Mango (Latn, 77,000 speakers), Dii (Latn, 71,000 speakers), Southern Kisi (Latn, 360,000 speakers), Mundani (Latn, 34,000 speakers), Vute (Latn, 21,000 speakers), Koonzime (Latn, 40,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -2905,6 +1190,642 @@ minus</p>
                 </ul>
             </div>
         </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️
+</span>
+
+    
+    <h3>
+    
+    Are there any misaligned on-curve points?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_alignment_miss&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* ootodhri (U+105F3): X=325.0,Y=1.5 (should be at baseline 0?)
+
+* ootodhri (U+105F3): X=548.5,Y=1.5 (should be at baseline 0?)
+
+* etodhri (U+105CA): X=91.0,Y=713.5 (should be at cap-height 714?)
+
+* shttodhri (U+105E1): X=312.0,Y=712.0 (should be at cap-height 714?)
+
+* shttodhri (U+105E1): X=312.0,Y=712.0 (should be at cap-height 714?)
+
+* shttodhri.part: X=337.0,Y=712.0 (should be at cap-height 714?)
+
+* shttodhri.part: X=337.0,Y=712.0 (should be at cap-height 714?)
+
+* acute (U+00B4): X=197.5,Y=713.0 (should be at cap-height 714?)
+
+* acutecomb (U+0301): X=-144.5,Y=713.0 (should be at cap-height 714?)
+
+* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* Gbreve (U+011E): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* uni0122 (U+0122): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* Gdotaccent (U+0120): X=519.0,Y=1.5 (should be at baseline 0?)
+
+* Oslash (U+00D8): X=454.5,Y=715.5 (should be at cap-height 714?)
+
+* a (U+0061): X=182.0,Y=536.5 (should be at x-height 536?)
+
+* aacute (U+00E1): X=387.5,Y=713.0 (should be at cap-height 714?)
+
+* c (U+0063): X=360.0,Y=535.0 (should be at x-height 536?)
+
+* cacute (U+0107): X=384.5,Y=713.0 (should be at cap-height 714?)
+
+* comma (U+002C): X=114.0,Y=1.0 (should be at baseline 0?)
+
+* eacute (U+00E9): X=388.5,Y=713.0 (should be at cap-height 714?)
+
+* g (U+0067): X=161.0,Y=-0.5 (should be at baseline 0?)
+
+* gbreve (U+011F): X=161.0,Y=-0.5 (should be at baseline 0?)
+
+* uni0123 (U+0123): X=161.0,Y=-0.5 (should be at baseline 0?)
+
+* gdotaccent (U+0121): X=161.0,Y=-0.5 (should be at baseline 0?)
+
+* iacute (U+00ED): X=274.5,Y=713.0 (should be at cap-height 714?)
+
+* nacute (U+0144): X=435.5,Y=713.0 (should be at cap-height 714?)
+
+* nine (U+0039): X=139.0,Y=2.0 (should be at baseline 0?)
+
+* oacute (U+00F3): X=407.5,Y=713.0 (should be at cap-height 714?)
+
+* parenleft (U+0028): X=314.0,Y=715.0 (should be at cap-height 714?)
+
+* parenright (U+0029): X=32.0,Y=715.0 (should be at cap-height 714?)
+
+* q (U+0071): X=412.5,Y=0.5 (should be at baseline 0?)
+
+* quotedblbase (U+201E): X=314.0,Y=1.0 (should be at baseline 0?)
+
+* quotedblbase (U+201E): X=114.0,Y=1.0 (should be at baseline 0?)
+
+* quotedblleft (U+201C): X=420.0,Y=715.0 (should be at cap-height 714?)
+
+* quotedblleft (U+201C): X=220.0,Y=715.0 (should be at cap-height 714?)
+
+* quoteleft (U+2018): X=220.0,Y=715.0 (should be at cap-height 714?)
+
+* quotesinglbase (U+201A): X=114.0,Y=1.0 (should be at baseline 0?)
+
+* racute (U+0155): X=339.5,Y=713.0 (should be at cap-height 714?)
+
+* sacute (U+015B): X=335.5,Y=713.0 (should be at cap-height 714?)
+
+* section (U+00A7): X=101.0,Y=2.0 (should be at baseline 0?)
+
+* semicolon (U+003B): X=132.0,Y=1.0 (should be at baseline 0?)
+
+* sterling (U+00A3): X=77.0,Y=1.0 (should be at baseline 0?)
+
+* three (U+0033): X=334.5,Y=1.0 (should be at baseline 0?)
+
+* uacute (U+00FA): X=421.5,Y=713.0 (should be at cap-height 714?)
+
+* wacute (U+1E83): X=545.5,Y=713.0 (should be at cap-height 714?)
+
+* yacute (U+00FD): X=403.5,Y=713.0 (should be at cap-height 714?)
+
+* zacute (U+017A): X=366.5,Y=713.0 (should be at cap-height 714?)
+</code></pre>
+
+                            
+                             [code: found-misalignments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    Do any segments have colinear vectors?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_colinear_vectors&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have colinear vectors:</p>
+<pre><code>* astodhri (U+105C1): L&lt;&lt;262.0,85.0&gt;--&lt;253.0,128.0&gt;&gt; -&gt; L&lt;&lt;253.0,128.0&gt;--&lt;185.0,381.0&gt;&gt;
+
+* atodhri (U+105C0): L&lt;&lt;262.0,85.0&gt;--&lt;253.0,128.0&gt;&gt; -&gt; L&lt;&lt;253.0,128.0&gt;--&lt;185.0,381.0&gt;&gt;
+
+* dtodhri (U+105C6): L&lt;&lt;306.0,647.0&gt;--&lt;322.0,588.0&gt;&gt; -&gt; L&lt;&lt;322.0,588.0&gt;--&lt;519.0,0.0&gt;&gt;
+
+* dtodhri (U+105C6): L&lt;&lt;93.0,0.0&gt;--&lt;290.0,588.0&gt;&gt; -&gt; L&lt;&lt;290.0,588.0&gt;--&lt;306.0,647.0&gt;&gt;
+
+* ghtodhri (U+105EE): L&lt;&lt;349.0,67.0&gt;--&lt;339.0,108.0&gt;&gt; -&gt; L&lt;&lt;339.0,108.0&gt;--&lt;207.0,502.0&gt;&gt;
+
+* ghtodhri (U+105EE): L&lt;&lt;484.0,479.0&gt;--&lt;359.0,108.0&gt;&gt; -&gt; L&lt;&lt;359.0,108.0&gt;--&lt;349.0,67.0&gt;&gt;
+
+* njantodhri (U+105D9): L&lt;&lt;262.0,85.0&gt;--&lt;253.0,128.0&gt;&gt; -&gt; L&lt;&lt;253.0,128.0&gt;--&lt;185.0,381.0&gt;&gt;
+
+* ntodhri (U+105D8): L&lt;&lt;262.0,84.0&gt;--&lt;253.0,128.0&gt;&gt; -&gt; L&lt;&lt;253.0,128.0&gt;--&lt;144.0,536.0&gt;&gt;
+
+* ntodhri (U+105D8): L&lt;&lt;381.0,536.0&gt;--&lt;271.0,128.0&gt;&gt; -&gt; L&lt;&lt;271.0,128.0&gt;--&lt;262.0,84.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-colinear-vectors]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    Check the direction of the outermost contour in each glyph
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_direction&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have a counter-clockwise outer contour:</p>
+<pre><code>* Aacute (U+00C1) has a counter-clockwise outer contour
+
+* Amacron (U+0100) has a counter-clockwise outer contour
+
+* Cacute (U+0106) has a counter-clockwise outer contour
+
+* Eacute (U+00C9) has a counter-clockwise outer contour
+
+* Emacron (U+0112) has a counter-clockwise outer contour
+
+* Iacute (U+00CD) has a counter-clockwise outer contour
+
+* Imacron (U+012A) has a counter-clockwise outer contour
+
+* Lacute (U+0139) has a counter-clockwise outer contour
+
+* Nacute (U+0143) has a counter-clockwise outer contour
+
+* Oacute (U+00D3) has a counter-clockwise outer contour
+
+* Racute (U+0154) has a counter-clockwise outer contour
+
+* Sacute (U+015A) has a counter-clockwise outer contour
+
+* Uacute (U+00DA) has a counter-clockwise outer contour
+
+* Umacron (U+016A) has a counter-clockwise outer contour
+
+* Wacute (U+1E82) has a counter-clockwise outer contour
+
+* Yacute (U+00DD) has a counter-clockwise outer contour
+
+* Zacute (U+0179) has a counter-clockwise outer contour
+
+* aacute (U+00E1) has a counter-clockwise outer contour
+
+* acute (U+00B4) has a counter-clockwise outer contour
+
+* acutecomb (U+0301) has a counter-clockwise outer contour
+
+* amacron (U+0101) has a counter-clockwise outer contour
+
+* astodhri (U+105C1) has a counter-clockwise outer contour
+
+* astodhri (U+105C1) has a counter-clockwise outer contour
+
+* astodhri.part has a counter-clockwise outer contour
+
+* atodhri (U+105C0) has a counter-clockwise outer contour
+
+* btodhri (U+105C2) has a counter-clockwise outer contour
+
+* cacute (U+0107) has a counter-clockwise outer contour
+
+* catodhri.part has a counter-clockwise outer contour
+
+* chtodhri (U+105C5) has a counter-clockwise outer contour
+
+* ctodhri (U+105C4) has a counter-clockwise outer contour
+
+* ctodhri (U+105C4) has a counter-clockwise outer contour
+
+* dblmacroncomb (U+035E) has a counter-clockwise outer contour
+
+* dhtodhri (U+105C8) has a counter-clockwise outer contour
+
+* diaeresiscomb (U+0308) has a counter-clockwise outer contour
+
+* diaeresiscomb (U+0308) has a counter-clockwise outer contour
+
+* dotabovecomb (U+0307) has a counter-clockwise outer contour
+
+* dotabovemod (U+02D9) has a counter-clockwise outer contour
+
+* dotbelowcomb (U+0323) has a counter-clockwise outer contour
+
+* dtodhri (U+105C6) has a counter-clockwise outer contour
+
+* eacute (U+00E9) has a counter-clockwise outer contour
+
+* eitodhri (U+105C9) has a counter-clockwise outer contour
+
+* eitodhri (U+105C9) has a counter-clockwise outer contour
+
+* emacron (U+0113) has a counter-clockwise outer contour
+
+* etodhri (U+105CA) has a counter-clockwise outer contour
+
+* ftodhri (U+105CB) has a counter-clockwise outer contour
+
+* ghtodhri (U+105EE) has a counter-clockwise outer contour
+
+* gjtodhri (U+105CE) has a counter-clockwise outer contour
+
+* gravecomb (U+0300) has a counter-clockwise outer contour
+
+* gtodhri (U+105CC) has a counter-clockwise outer contour
+
+* hjtodhri (U+105D1) has a counter-clockwise outer contour
+
+* htodhri (U+105D0) has a counter-clockwise outer contour
+
+* iacute (U+00ED) has a counter-clockwise outer contour
+
+* imacron (U+012B) has a counter-clockwise outer contour
+
+* itodhri (U+105D2) has a counter-clockwise outer contour
+
+* jtodhri (U+105D3) has a counter-clockwise outer contour
+
+* jytodhri (U+105EB) has a counter-clockwise outer contour
+
+* jytodhri.part has a counter-clockwise outer contour
+
+* khtodhri (U+105F1) has a counter-clockwise outer contour
+
+* ktodhri (U+105D4) has a counter-clockwise outer contour
+
+* lacute (U+013A) has a counter-clockwise outer contour
+
+* lltodhri (U+105D6) has a counter-clockwise outer contour
+
+* ltodhri (U+105D5) has a counter-clockwise outer contour
+
+* macronmod (U+02C9) has a counter-clockwise outer contour
+
+* mbtodhri (U+105C3) has a counter-clockwise outer contour
+
+* mtodhri (U+105D7) has a counter-clockwise outer contour
+
+* nacute (U+0144) has a counter-clockwise outer contour
+
+* ndtodhri (U+105C7) has a counter-clockwise outer contour
+
+* ngjtodhri (U+105CF) has a counter-clockwise outer contour
+
+* ngtodhri (U+105CD) has a counter-clockwise outer contour
+
+* ngtodhri.Part has a counter-clockwise outer contour
+
+* njantodhri (U+105D9) has a counter-clockwise outer contour
+
+* njantodhri (U+105D9) has a counter-clockwise outer contour
+
+* njantodhri.Part has a counter-clockwise outer contour
+
+* ntodhri (U+105D8) has a counter-clockwise outer contour
+
+* nxhtodhri (U+105E9) has a counter-clockwise outer contour
+
+* nxhtodhri (U+105E9) has a counter-clockwise outer contour
+
+* nxhtodhri.part has a counter-clockwise outer contour
+
+* nxtodhri (U+105E7) has a counter-clockwise outer contour
+
+* oacute (U+00F3) has a counter-clockwise outer contour
+
+* ootodhri (U+105F3) has a counter-clockwise outer contour
+
+* otodhri (U+105DA) has a counter-clockwise outer contour
+
+* pstodhri (U+105F2) has a counter-clockwise outer contour
+
+* ptodhri (U+105DB) has a counter-clockwise outer contour
+
+* qtodhri (U+105DC) has a counter-clockwise outer contour
+
+* racute (U+0155) has a counter-clockwise outer contour
+
+* rrtodhri (U+105DE) has a counter-clockwise outer contour
+
+* rtodhri (U+105DD) has a counter-clockwise outer contour
+
+* sacute (U+015B) has a counter-clockwise outer contour
+
+* shtodhri (U+105E0) has a counter-clockwise outer contour
+
+* shttodhri (U+105E1) has a counter-clockwise outer contour
+
+* shttodhri.part has a counter-clockwise outer contour
+
+* skantodhri (U+105F0) has a counter-clockwise outer contour
+
+* stodhri (U+105DF) has a counter-clockwise outer contour
+
+* sttodhri (U+105EF) has a counter-clockwise outer contour
+
+* thtodhri (U+105E3) has a counter-clockwise outer contour
+
+* ttodhri (U+105E2) has a counter-clockwise outer contour
+
+* uacute (U+00FA) has a counter-clockwise outer contour
+
+* umacron (U+016B) has a counter-clockwise outer contour
+
+* uni0304 (U+0304) has a counter-clockwise outer contour
+
+* uni0305 (U+0305) has a counter-clockwise outer contour
+
+* uni0311 (U+0311) has a counter-clockwise outer contour
+
+* uni0361 (U+0361) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* uni25CC (U+25CC) has a counter-clockwise outer contour
+
+* utodhri (U+105E4) has a counter-clockwise outer contour
+
+* utodhri (U+105E4) has a counter-clockwise outer contour
+
+* vtodhri (U+105E5) has a counter-clockwise outer contour
+
+* wacute (U+1E83) has a counter-clockwise outer contour
+
+* xhtodhri (U+105E8) has a counter-clockwise outer contour
+
+* xtodhri (U+105E6) has a counter-clockwise outer contour
+
+* yacute (U+00FD) has a counter-clockwise outer contour
+
+* ytodhri (U+105EA) has a counter-clockwise outer contour
+
+* zacute (U+017A) has a counter-clockwise outer contour
+
+* zhtodhri (U+105ED) has a counter-clockwise outer contour
+
+* ztodhri (U+105EC) has a counter-clockwise outer contour
+</code></pre>
+
+                            
+                             [code: ccw-outer-contour]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                NotoSerifTodhri-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     

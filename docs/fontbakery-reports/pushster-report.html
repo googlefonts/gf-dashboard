@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -272,20 +276,20 @@ you're checking.</p>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td>15</td>
-        <td>22</td>
-        <td>64</td>
-        <td>7</td>
-        <td>138</td>
+        <td>16</td>
+        <td>23</td>
+        <td>54</td>
+        <td>6</td>
+        <td>141</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>6%</td>
-        <td>9%</td>
-        <td>26%</td>
-        <td>3%</td>
-        <td>56%</td>
+        <td>7%</td>
+        <td>10%</td>
+        <td>22%</td>
+        <td>2%</td>
+        <td>59%</td>
     </tr>
 </table>
         
@@ -310,805 +314,90 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.12.10</p>
+<p>FontBakery version: 0.13.0</p>
         
             
                 <h2>OpenType Specification Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
+    ⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩
 </span>
 
-    <h3>
     
-    Fonts have consistent underline thickness?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/underline_thickness&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Fonts have consistent PANOSE family type?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/panose_familytype&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Make sure all font files have the same version value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/equal_font_versions&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that OS/2.fsSelection bold &amp; italic settings are unique for each NameID1
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/family/bold_italic_unique_for_nameid1&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Verify that each group of fonts with the same nameID 1 has maximum of 4 fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/family/max_4_fonts_per_family_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Verify that family names in the name table are consistent across all fonts in the family. Checks Typographic Family name (nameID 16) if present, otherwise uses Font Family name (nameID 1)
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/family/consistent_family_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    CFF table FontName must match name table ID 6 (PostScript name).
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/name/postscript_vs_cff&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Name table ID 6 (PostScript name) must be consistent across platforms.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/name/postscript_name_consistency&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check name table for empty records.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/name/empty_records&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Description strings in the name table must not contain copyright info.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/no_copyright_on_description&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does full font name begin with the font family name?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/match_familyname_fullfont&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wght&#39; (Weight) axis coordinate must be 400 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_wght_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wdth&#39; (Width) axis coordinate must be 100 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_wdth_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;slnt&#39; (Slant) axis coordinate must be zero on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_slnt_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;ital&#39; (Italic) axis coordinate must be zero on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_ital_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;opsz&#39; (Optical Size) axis coordinate should be between 10 and 16 on the &#39;Regular&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/regular_opsz_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;slnt&#39; (Slant) axis coordinate specifies positive values in its range?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/slnt_range&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;ital&#39; (Italic) axis coordinates is in a valid range?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.typenetwork/check/varfont/ital_range&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wght&#39; (Weight) axis coordinate must be within spec range of 1 to 1000 on all instances.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/wght_valid_range&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wdth&#39; (Width) axis coordinate must strictly greater than zero.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/wdth_valid_range&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    All fvar axes have a correspondent Axis Record on STAT table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/stat_axis_record_for_each_axis&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the number of glyphs in the loca table match the maxp table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/loca/maxp_num_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jun/20</div>
-    
-    Does the font&#39;s CFF table top dict strings fit into the ASCII range?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff_ascii_strings&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Is the CFF subr/gsubr call depth &gt; 10?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff_call_depth&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font use deprecated CFF operators or operations?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff_deprecated_operators&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Is the CFF2 subr/gsubr call depth &gt; 10?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/cff2_call_depth&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking font version fields (head and name table).
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has correct post table version?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/post_table_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking correctness of monospaced metadata.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/monospace&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if OS/2 xAvgCharWidth is correct.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/xavgcharwidth&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if OS/2 fsSelection matches head macStyle bold and italic bits.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/fsselection_matches_macstyle&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
     
 
-
-    <h3>
     
-    Checking unitsPerEm value is reasonable.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unitsperem&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Does the font have a DSIG table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dsig&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
 
-                            <span class='details_text'>
-                            <p>This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
-The current recommendation is to completely remove the DSIG table.</p>
-
-                            
-                             [code: found-DSIG]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
-
 
-    <h3>
     
-    Check glyphs in mark glyph class are non-spacing.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_spacing_marks&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
 
-    <h3>
     
-    Check mark characters are in GDEF mark glyph class.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Check GDEF mark glyph class doesn&#39;t have characters that are not marks.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_non_mark_chars&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Is there a usable &#34;kern&#34; table declared in the font?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kern_table&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
 
-    <h3>
     
-    Is there any unused data at the end of the glyf table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_unused_data&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
 
-
-    <h3>
     
-    Font follows the family naming recommendations?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family_naming_recommendations&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    MaxAdvanceWidth is consistent with values in the Hmtx and Hhea tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/maxadvancewidth&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    PostScript name follows OpenType specification requirements?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/postscript_name&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
     <h3>
     
     Check for points out of bounds.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/points_out_of_bounds&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:opentype/points_out_of_bounds&gt;</div>
 
 
 
@@ -1150,420 +439,37 @@ The current recommendation is to completely remove the DSIG table.</p>
         </details>
     
 
-
-    <h3>
-    
-    Check glyphs do not have duplicate components which have the same x,y coordinates.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_non_transformed_duplicate_components&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check code page character ranges
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/code_pages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font have any invalid feature tags?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/layout_valid_feature_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font have any invalid script tags?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/layout_valid_script_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Does the font have any invalid language tags?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/layout_valid_language_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking post.italicAngle value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_angle&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking head.macStyle value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mac_style&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 fsSelection value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fsselection&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check name table IDs 1, 2, 16, 17 to conform to Italic style.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/italic_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that the value of axisNameID used by each VariationAxisRecord is greater than 255 and less than 32768.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_axis_nameid&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that the value of subfamilyNameID used by each InstanceRecord is 2, 17, or greater than 255 and less than 32768.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_subfamily_nameid&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that the value of postScriptNameID used by each InstanceRecord is 6, 0xFFFF, or greater than 255 and less than 32768.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_postscript_nameid&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to a name ID whose string is equal to the string of either name ID 2 or 17, and its postScriptNameID value is set to a name ID whose string is equal to the string of name ID 6.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/valid_default_instance_nameids&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that all of the instance records in a given font have the same size.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/same_size_instance_records&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validates that all of the instance records in a given font have distinct data.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/distinct_instance_records&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate foundry-defined design-variation axis tag names.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/varfont/foundry_defined_tag_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    Check that family axis ranges are indentical
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/family_axis_ranges&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    STAT table has Axis Value tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/stat_has_axis_value_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    Checking OS/2 achVendID against configuration.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.thetypefounders/check/vendor_id&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    Check hhea.caretSlopeRise and hhea.caretSlopeRun
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/caret_slope&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    Ensure VFs have &#39;ital&#39; STAT axis.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_in_stat&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    Ensure &#39;ital&#39; STAT axis is boolean value
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_in_stat_is_boolean&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
-    
-    Ensure &#39;ital&#39; STAT axis is last.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/italic_axis_last&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
             
         
@@ -1572,14 +478,15 @@ The current recommendation is to completely remove the DSIG table.</p>
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩ℹ️
+    🔥🔥🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
+    
     <h3>
     
     Check accent of Lcaron, dcaron, lcaron, tcaron
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:alt_caron&gt;</div>
 
 
 
@@ -1673,84 +580,30 @@ The current recommendation is to completely remove the DSIG table.</p>
         </details>
     
 
-
-    <h3>
     
-    Check that glyph for U+0675 ARABIC LETTER HIGH HAMZA is not a mark.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/arabic_high_hamza&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Check that Arabic spacing symbols U+FBB2–FBC1 aren&#39;t classified as marks.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/arabic_spacing_symbols&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
-    
-    Ensure the font supports case swapping for all its glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/case_mapping&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    Does the font contain chws and vchw features?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Check if each glyph has the recommended amount of contours.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:contour_count&gt;</div>
 
 
 
@@ -2209,12 +1062,40 @@ The current recommendation is to completely remove the DSIG table.</p>
         </details>
     
 
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     <h3>
     
-    Checking all files are in the same directory.
+    PPEM must be an integer on hinted fonts.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/single_directory&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:integer_ppem_if_hinted&gt;</div>
 
 
 
@@ -2226,13 +1107,54 @@ The current recommendation is to completely remove the DSIG table.</p>
 
 
     
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
 
+                            <span class='details_text'>
+                            <p>This is a hinted font, so it must have bit 3 set on the flags of the head table, so that PPEM values will be rounded into an integer value.</p>
+<p>This can be accomplished by using the 'gftools fix-hinting' command:</p>
+<pre><code># create virtualenv
+python3 -m venv venv
+# activate virtualenv
+source venv/bin/activate
+# install gftools
+pip install git+https://www.github.com/googlefonts/gftools
+</code></pre>
 
+                            
+                             [code: bad-flags]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
     <h3>
     
-    Each font in a family must have the same set of vertical metrics values.
+    Are there caret positions declared for every ligature?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/vertical_metrics&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:ligature_carets&gt;</div>
 
 
 
@@ -2244,177 +1166,48 @@ The current recommendation is to completely remove the DSIG table.</p>
 
 
     
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
 
+                            <span class='details_text'>
+                            <p>This font lacks caret position values for ligature glyphs on its GDEF table.</p>
 
-    <h3>
+                            
+                             [code: lacks-caret-pos]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
-    Checking OS/2 usWinAscent &amp; usWinDescent.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
-    
-    Ensure that the font can be rasterized by FreeType.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/freetype_rasterizer&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    Ensure no GPOS7 lookups are present.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos7&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jun/10</div>
-    
-    Ensure &#39;smcp&#39; (small caps) lookups are defined before ligature lookups in the &#39;GSUB&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gsub/smallcaps_before_ligatures&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Detect any interpolation issues in the font.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/interpolation_issues&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that legacy accents aren&#39;t used in composite glyphs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/legacy_accents&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking Vertical Metric Linegaps.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/linegaps&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font contains &#39;.notdef&#39; as its first glyph?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Check math signs have the same width.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:math_signs_width&gt;</div>
 
 
 
@@ -2477,120 +1270,46 @@ notequal</p>
         </details>
     
 
-
-    <h3>
     
-    Name table records must not have trailing spaces.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/trailing_spaces&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Checking OS/2 Metrics match hhea Metrics.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Checking with ots-sanitize.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ots&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Font contains all required tables?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/required_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
-    
-    Ensure indic fonts have the Indian Rupee Sign glyph.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/rupee&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    Font has the proper sfntVersion value?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.adobe.fonts/check/sfnt_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Does the font contain a soft hyphen?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_hyphen&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_hyphen&gt;</div>
 
 
 
@@ -2630,68 +1349,22 @@ notequal</p>
         </details>
     
 
-
-    <h3>
     
-    Checking STAT table entries in static fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT_in_statics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
-    
-    Check correctness of STAT table strings
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT_strings&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jun/04</div>
-    
-    Check tabular widths don&#39;t have kerning.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/tabular_kerning&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Ensure component transforms do not perform scaling or rotation.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/transformed_components&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:transformed_components&gt;</div>
 
 
 
@@ -2737,50 +1410,20 @@ or inverted outline direction:</p>
         </details>
     
 
-
-    <h3>
     
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Jul/17</div>
-    
-    Checking that the typoAscender exceeds the yMax of the /Agrave.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.arrowtype.fonts/check/typoascender_exceeds_Agrave&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Font contains unique glyph names?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unique_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Check font contains no unreachable glyphs
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:unreachable_glyphs&gt;</div>
 
 
 
@@ -2872,12 +1515,16 @@ or inverted outline direction:</p>
         </details>
     
 
+    
 
+    
+
+    
     <h3>
     
     Are there unwanted tables?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unwanted_tables&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:unwanted_tables&gt;</div>
 
 
 
@@ -2889,97 +1536,62 @@ or inverted outline direction:</p>
 
 
     
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
 
+                            <span class='details_text'>
+                            <p>The following unwanted font tables were found:</p>
+<ul>
+<li>DSIG - This font has a digital signature (DSIG table) which is only required - even if only a placeholder - on old programs like MS Office 2013 in order to work properly.
+The current recommendation is to completely remove the DSIG table.</li>
+</ul>
+<p>They can be removed with the 'fix-unwanted-tables' script provided by gftools.</p>
 
-    <h3>
+                            
+                             [code: unwanted-tables]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
     
-    Glyph names are all valid?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/valid_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has **proper** whitespace glyph names?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Font contains glyphs for whitespace characters?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Whitespace glyphs have ink?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_ink&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Space and non-breaking space have the same width?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_widths&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
 
             
         
@@ -2989,11 +1601,12 @@ or inverted outline direction:</p>
     ⚠️
 </span>
 
+    
     <h3>
     
     Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/article/images&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
 
 
 
@@ -3045,202 +1658,44 @@ or inverted outline direction:</p>
         </details>
     
 
+    
 
             
         
             
                 <h2>Metadata Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥🔥⚠️⚠️⚠️⏩⏩⏩⏩
+    🔥🔥🔥🔥🔥⚠️⚠️⏩⏩⏩⏩
 </span>
 
-    <h3>
     
-    Does METADATA.pb copyright field contain broken links?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/broken_links&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    METADATA.pb: Font styles are named canonically?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/canonical_style_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    METADATA.pb: Check that font weight has a canonical value.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/canonical_weight_value&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Check samples can be rendered.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/can_render_samples&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure METADATA.pb category field is valid.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/category&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if category on METADATA.pb matches what can be inferred from the family name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/category_hints&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate VF axes match the ones declared on METADATA.pb.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_axis_enumeration&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Check URL on copyright string is the same as in repository_url field.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/consistent_repo_urls&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Copyright notice is the same in all fonts?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/May/22</div>
-    
-    Validate &#39;date_added&#39; field on METADATA.pb.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/date_added&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/designer_profiles&gt;</div>
 
 
 
@@ -3280,336 +1735,42 @@ or inverted outline direction:</p>
         </details>
     
 
-
-    <h3>
     
-    Multiple values in font designer field in METADATA.pb must be separated by commas.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    At least one designer is declared in METADATA.pb
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/empty_designer&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Ensure METADATA.pb does not use escaped strings.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/escaped_strings&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Check font family directory name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/family_directory_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Check that METADATA.pb family values are all the same.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/familyname&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Font filenames match font.filename entries?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/filenames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate METADATA.pb axes values are within gf_axisregistry bounds.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/gf_axisregistry_bounds&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate METADATA.pb axes tags are defined in gf_axisregistry.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/gf_axisregistry_valid_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure there is a regular style defined in METADATA.pb.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_regular&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check METADATA.pb includes production subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/includes_production_subsets&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check METADATA.pb file only contains a single CJK subset.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/single_cjk_subset&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb license is &#34;APACHE2&#34;, &#34;UFL&#34; or &#34;OFL&#34;?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/license&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb font.filename and font.post_script_name fields have equivalent values?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_filename_postscript&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb font.full_name and font.post_script_name fields have equivalent values ?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_fullname_postscript&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Check font name is the same as family name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_name_familyname&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb weight matches postScriptName for static fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/match_weight_postscript&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb should contain at least &#34;menu&#34; and &#34;latin&#34; subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/menu_and_latin&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: Validate family.minisite_url field.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/minisite_url&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     METADATA.pb font.name and font.full_name fields match the values declared on the name table?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/family_and_full_names&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/nameid/family_and_full_names&gt;</div>
 
 
 
@@ -3649,12 +1810,14 @@ or inverted outline direction:</p>
         </details>
     
 
+    
 
+    
     <h3>
     
     METADATA.pb font.name value should be same as the family name declared on the name table.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/font_name&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/nameid/font_name&gt;</div>
 
 
 
@@ -3694,12 +1857,14 @@ or inverted outline direction:</p>
         </details>
     
 
+    
 
+    
     <h3>
     
     Checks METADATA.pb font.post_script_name matches postscript name declared on the name table.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/nameid/post_script_name&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/nameid/post_script_name&gt;</div>
 
 
 
@@ -3753,201 +1918,30 @@ or inverted outline direction:</p>
         </details>
     
 
-
-    <h3>
     
-    Check METADATA.pb font weights are correct.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/os2_weightclass&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Check METADATA.pb parse correctly.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/parses&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
-    
-    METADATA.pb: Check for primary_script
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/primary_script&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
-    <h3>
-    
-    METADATA.pb: Regular should be 400.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/regular_is_400&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Copyright notice on METADATA.pb should not contain &#39;Reserved Font Name&#39;.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/reserved_font_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: copyright field (&quot;Copyright 2010 xyz The Lobster Project Authors (<a href="https://github.com/impallari/The-Lobster-Font">https://github.com/impallari/The-Lobster-Font</a>), with Reserved Font Name &quot;Lobster&quot;.4&quot;) contains &quot;Reserved Font Name&quot;. This is an error except in a few specific rare cases.</p>
-
-                            
-                             [code: rfn]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-
-    <h3>
-    
-    METADATA.pb subsets should be alphabetically ordered.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/subsets_order&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure METADATA.pb lists all font binaries.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/undeclared_fonts&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: check if fonts field only has unique &#34;full_name&#34; values.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unique_full_name_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    METADATA.pb: check if fonts field only contains unique style:weight pairs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unique_weight_style_pairs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Check for codepoints not covered by METADATA subsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
 
 
 
@@ -3980,34 +1974,29 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: yi, tifinagh, canadian-aboriginal</li>
-<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
-<li>U+02CA MODIFIER LETTER ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+02CB MODIFIER LETTER GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, math, cherokee</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: math, tifinagh, malayalam, syriac, old-permic, canadian-aboriginal, tai-le, coptic</li>
-<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, coptic, duployan, hebrew, tifinagh, malayalam, todhri, math, canadian-aboriginal, old-permic, syriac</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+0311 COMBINING INVERTED BREVE: try adding coptic</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding one of: todhri, coptic</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, cherokee</li>
-<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
-<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: duployan, syriac, cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, cherokee, gothic, tifinagh, syriac</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: tifinagh, caucasian-albanian, thai, gothic, sunuwar, syriac, cherokee</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: greek, elbasan, math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, elbasan, math</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: elbasan, greek, math</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: elbasan, greek, math</li>
 <li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
 <li>U+0400 CYRILLIC CAPITAL LETTER IE WITH GRAVE: try adding cyrillic</li>
 <li>U+0401 CYRILLIC CAPITAL LETTER IO: try adding cyrillic</li>
 <li>U+0402 CYRILLIC CAPITAL LETTER DJE: try adding cyrillic</li>
@@ -4272,43 +2261,44 @@ definitions.</p>
 <li>U+1EEF LATIN SMALL LETTER U WITH HORN AND TILDE: try adding vietnamese</li>
 <li>U+1EF0 LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW: try adding vietnamese</li>
 <li>U+1EF1 LATIN SMALL LETTER U WITH HORN AND DOT BELOW: try adding vietnamese</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, sundanese, hebrew, lisu, sora-sompeng, kayah-li, yi, cham, kharoshthi, arabic, kaithi, coptic, syloti-nagri</li>
+<li>U+2010 HYPHEN: try adding one of: kharoshthi, kayah-li, armenian, coptic, cham, hebrew, yi, sora-sompeng, syloti-nagri, arabic, sundanese, lisu, kaithi</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
-<li>U+2070 SUPERSCRIPT ZERO: not included in any glyphset definition</li>
-<li>U+2075 SUPERSCRIPT FIVE: not included in any glyphset definition</li>
-<li>U+2076 SUPERSCRIPT SIX: not included in any glyphset definition</li>
-<li>U+2077 SUPERSCRIPT SEVEN: not included in any glyphset definition</li>
-<li>U+2078 SUPERSCRIPT EIGHT: not included in any glyphset definition</li>
-<li>U+2079 SUPERSCRIPT NINE: not included in any glyphset definition</li>
-<li>U+2080 SUBSCRIPT ZERO: not included in any glyphset definition</li>
-<li>U+2081 SUBSCRIPT ONE: not included in any glyphset definition</li>
-<li>U+2082 SUBSCRIPT TWO: not included in any glyphset definition</li>
-<li>U+2083 SUBSCRIPT THREE: not included in any glyphset definition</li>
-<li>U+2084 SUBSCRIPT FOUR: not included in any glyphset definition</li>
-<li>U+2085 SUBSCRIPT FIVE: not included in any glyphset definition</li>
-<li>U+2086 SUBSCRIPT SIX: not included in any glyphset definition</li>
-<li>U+2087 SUBSCRIPT SEVEN: not included in any glyphset definition</li>
-<li>U+2088 SUBSCRIPT EIGHT: not included in any glyphset definition</li>
-<li>U+2089 SUBSCRIPT NINE: not included in any glyphset definition</li>
+<li>U+2070 SUPERSCRIPT ZERO: try adding math</li>
+<li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
+<li>U+2075 SUPERSCRIPT FIVE: try adding math</li>
+<li>U+2076 SUPERSCRIPT SIX: try adding math</li>
+<li>U+2077 SUPERSCRIPT SEVEN: try adding math</li>
+<li>U+2078 SUPERSCRIPT EIGHT: try adding math</li>
+<li>U+2079 SUPERSCRIPT NINE: try adding math</li>
+<li>U+2080 SUBSCRIPT ZERO: try adding math</li>
+<li>U+2081 SUBSCRIPT ONE: try adding math</li>
+<li>U+2082 SUBSCRIPT TWO: try adding math</li>
+<li>U+2083 SUBSCRIPT THREE: try adding math</li>
+<li>U+2084 SUBSCRIPT FOUR: try adding math</li>
+<li>U+2085 SUBSCRIPT FIVE: try adding math</li>
+<li>U+2086 SUBSCRIPT SIX: try adding math</li>
+<li>U+2087 SUBSCRIPT SEVEN: try adding math</li>
+<li>U+2088 SUBSCRIPT EIGHT: try adding math</li>
+<li>U+2089 SUBSCRIPT NINE: try adding math</li>
 <li>U+2116 NUMERO SIGN: try adding cyrillic</li>
-<li>U+2120 SERVICE MARK: not included in any glyphset definition</li>
-<li>U+2126 OHM SIGN: not included in any glyphset definition</li>
-<li>U+212A KELVIN SIGN: not included in any glyphset definition</li>
-<li>U+212B ANGSTROM SIGN: not included in any glyphset definition</li>
-<li>U+212E ESTIMATED SYMBOL: not included in any glyphset definition</li>
-<li>U+2153 VULGAR FRACTION ONE THIRD: not included in any glyphset definition</li>
-<li>U+2154 VULGAR FRACTION TWO THIRDS: not included in any glyphset definition</li>
-<li>U+215B VULGAR FRACTION ONE EIGHTH: not included in any glyphset definition</li>
-<li>U+215C VULGAR FRACTION THREE EIGHTHS: not included in any glyphset definition</li>
-<li>U+215D VULGAR FRACTION FIVE EIGHTHS: not included in any glyphset definition</li>
-<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: not included in any glyphset definition</li>
+<li>U+2120 SERVICE MARK: try adding math</li>
+<li>U+2126 OHM SIGN: try adding math</li>
+<li>U+212A KELVIN SIGN: try adding math</li>
+<li>U+212B ANGSTROM SIGN: try adding math</li>
+<li>U+212E ESTIMATED SYMBOL: try adding math</li>
+<li>U+2153 VULGAR FRACTION ONE THIRD: try adding symbols</li>
+<li>U+2154 VULGAR FRACTION TWO THIRDS: try adding symbols</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
 <li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: yi, tai-tham, symbols, math</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: symbols, tai-tham, yi, math</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -4338,48 +2328,18 @@ definitions.</p>
         </details>
     
 
-
-    <h3>
     
-    Check for METADATA subsets with zero support.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unsupported_subsets&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    METADATA.pb font.filename field contains font name in right format?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_filename_values&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     METADATA.pb font.full_name field contains font name in right format?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_full_name_values&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/valid_full_name_values&gt;</div>
 
 
 
@@ -4419,30 +2379,16 @@ definitions.</p>
         </details>
     
 
-
-    <h3>
     
-    Check name ID 25 to end with &#34;Italic&#34; for Italic VFs.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_nameid25&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-
-
     <h3>
     
     METADATA.pb font.post_script_name field contains font name in right format?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/valid_post_script_name_values&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/valid_post_script_name_values&gt;</div>
 
 
 
@@ -4482,6 +2428,9 @@ definitions.</p>
         </details>
     
 
+    
+
+    
 
             
         
@@ -4491,11 +2440,12 @@ definitions.</p>
     🔥
 </span>
 
+    
     <h3>
     
     Shapes languages in all GF glyphsets.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
 
 
 
@@ -4522,22 +2472,30 @@ definitions.</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Language</th>
 <th align="left">FAIL messages</th>
+<th align="left">Languages</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">nl_Latn (Dutch)</td>
 <td align="left">Shaper didn't attach acutecomb to j.end</td>
+<td align="left">nl_Latn (Dutch)</td>
 </tr>
 <tr>
-<td align="left">^</td>
 <td align="left">Shaper didn't attach acutecomb to J</td>
+<td align="left">nl_Latn (Dutch)</td>
+</tr>
+<tr>
+<td align="left">Some base glyphs were missing: Ҳ, ҳ</td>
+<td align="left">kaa_Cyrl (Kara-Kalpak)</td>
+</tr>
+<tr>
+<td align="left">Some base glyphs were missing: ҳ</td>
+<td align="left">tg_Cyrl (Tajik), uz_Cyrl (Uzbek (Cyrillic)), tg_Cyrl (Tajik) and uz_Cyrl (Uzbek (Cyrillic))</td>
 </tr>
 </tbody>
 </table>
@@ -4548,11 +2506,40 @@ definitions.</p>
                             </span>
                         </li>
                 
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ӊ</td>
+<td align="left">mn_Cyrl (Mongolian)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
                 </ul>
             </div>
         </details>
     
 
+    
 
             
         
@@ -4562,29 +2549,14 @@ definitions.</p>
     🔥🔥🔥🔥⚠️⚠️
 </span>
 
-    <h3>
-    
-    Does DESCRIPTION file contain broken links?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/broken_links&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
     <h3>
     
     DESCRIPTION.en_us.html should end in a linebreak.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/eof_linebreak&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
 
 
 
@@ -4628,12 +2600,14 @@ definitions.</p>
 
     
 
+    
 
+    
     <h3>
     
     On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/family_update&gt;</div>
 
 
 
@@ -4674,12 +2648,14 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
+    
     <h3>
     
     Does DESCRIPTION file contain a upstream Git repo URL?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/git_url&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/git_url&gt;</div>
 
 
 
@@ -4719,12 +2695,14 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
+    
     <h3>
     
-    Check the description doesn&#39;t contain unsupported html elements
+    Check for presence of an ARTICLE.en_us.html file
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/has_unsupported_elements&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/has_article&gt;</div>
 
 
 
@@ -4736,13 +2714,44 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
 
     
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
 
+                            <span class='details_text'>
+                            <p>This font has both a DESCRIPTION.en_us.html file and an ARTICLE.en_us.html file. In this case the description must be deleted.</p>
 
+                            
+                             [code: description-and-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
     <h3>
     
     DESCRIPTION.en_us.html must have more than 200 bytes.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/min_length&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
 
 
 
@@ -4786,75 +2795,16 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
     
 
-
-    <h3>
     
-    Check for presence of an ARTICLE.en_us.html file
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/has_article&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font has both a DESCRIPTION.en_us.html file and an ARTICLE.en_us.html file. In this case the description must be deleted.</p>
-
-                            
-                             [code: description-and-article]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-
-    <h3>
-    
-    URLs on DESCRIPTION file must not display http(s) prefix.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/urls&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Is this a proper HTML snippet?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/valid_html&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/valid_html&gt;</div>
 
 
 
@@ -4881,7 +2831,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
                             </span>
 
                             <span class='details_text'>
-                            <p>/home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/pushster/DESCRIPTION.en_us.html does not include an HTML <p> tag.</p>
+                            <p>/Users/simon/others-repos/fonts//ofl/pushster/DESCRIPTION.en_us.html does not include an HTML &lt;p&gt; tag.</p>
 
                             
                              [code: lacks-paragraph]
@@ -4894,22 +2844,28 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
             
         
             
         
             
-                <h2>Name table checks</h2>
+        
+            
+                <h2>Licensing Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⚠️
+    🔥⚠️⚠️⚠️⚠️
 </span>
 
+    
+
+    
     <h3>
     
-    Combined length of family and style must not exceed 32 characters.
+    Copyright notices match canonical pattern in fonts
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/family_and_style_max_length&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/font_copyright&gt;</div>
 
 
 
@@ -4921,13 +2877,71 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
 
     
+        <details>
+            <summary>
+                🔥
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
 
+                            <span class='details_text'>
+                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
+<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
+<p>But instead we have got:</p>
+<p>&quot;Copyright 2010 xyz The Lobster Project Authors (<a href="https://github.com/impallari/The-Lobster-Font">https://github.com/impallari/The-Lobster-Font</a>), with Reserved Font Name &quot;Lobster&quot;.4&quot;</p>
 
+                            
+                             [code: bad-notice-format]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Copyright notices differ between name table entries and METADATA.pb.The following copyright values were found:</p>
+<pre><code>- Copyright 2010 The Lobster Project Authors (https://github.com/impallari/The-Lobster-Font), with Reserved Font Name &quot;Lobster&quot;.: Name Table entry and Name Table entry
+
+- Copyright 2010 xyz The Lobster Project Authors (https://github.com/impallari/The-Lobster-Font), with Reserved Font Name &quot;Lobster&quot;.4: METADATA.pb
+</code></pre>
+
+                            
+                             [code: mismatch]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     <h3>
     
-    Check family name for GF Guide compliance.
+    Copyright notice on METADATA.pb should not contain &#39;Reserved Font Name&#39;.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/family_name_compliance&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/reserved_font_name&gt;</div>
 
 
 
@@ -4939,13 +2953,42 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
 
     
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
 
+                            <span class='details_text'>
+                            <p>METADATA.pb: copyright field (&quot;Copyright 2010 xyz The Lobster Project Authors (<a href="https://github.com/impallari/The-Lobster-Font">https://github.com/impallari/The-Lobster-Font</a>), with Reserved Font Name &quot;Lobster&quot;.4&quot;) contains &quot;Reserved Font Name&quot;. This is an error except in a few specific rare cases.</p>
 
+                            
+                             [code: rfn]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
     <h3>
     
     Check copyright namerecords match license file.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/name/license&gt;</div>
 
 
 
@@ -4999,12 +3042,14 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
+    
     <h3>
     
     License URL matches License text on name table?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/name/license_url&gt;</div>
 
 
 
@@ -5126,30 +3171,14 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
-    
-    Name table entries should not contain line-breaks.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/line_breaks&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
     <h3>
     
     Name table strings must not contain the string &#39;Reserved Font Name&#39;.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/rfn&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/name/rfn&gt;</div>
 
 
 
@@ -5203,24 +3232,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
     
-    Substitute copyright, registered and trademark symbols in name table entries.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/unwanted_chars&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
 
             
         
@@ -5230,47 +3242,12 @@ Please consider mentioning note-worthy improvements made to the family recently.
     🔥⏩
 </span>
 
-    <h3>
     
-    Check OFL body text is correct.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_body_text&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check license file has good copyright string.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Directory name in GFonts repo structure must match NameID 1 of the regular.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/dirname_matches_nameid_1&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/repo/dirname_matches_nameid_1&gt;</div>
 
 
 
@@ -5311,78 +3288,15 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
     
-    A font repository should not include FontBakery report files
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/fb_report&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
+    
 
     
 
-
-    <h3>
     
-    Check upstream.yaml file contains all required fields
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/upstream_yaml_has_required_fields&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    A static fonts directory, if present, must contain manually hinted fonts
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/vf_has_static_fonts&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    A font repository should not include ZIP files
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/repo/zip_files&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
 
             
         
@@ -5392,65 +3306,12 @@ Please consider mentioning note-worthy improvements made to the family recently.
     ⚠️⚠️⏩⏩⏩
 </span>
 
-    <h3>
     
-    Check that texts shape as per expectation
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/shaping/regression&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that no forbidden glyphs are found while shaping
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/shaping/forbidden&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check that no collisions are found while shaping
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/shaping/collides&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
     <h3>
     
     Ensure dotted circle glyph is present and can attach marks.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:dotted_circle&gt;</div>
 
 
 
@@ -5490,12 +3351,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
+    
+
+    
+
+    
+
+    
     <h3>
     
     Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_dotted&gt;</div>
 
 
 
@@ -5525,7 +3394,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ ị̀ ị́ ị̂ ị̃ ị̄</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̉ į̊ į̋ į̏ į̑ į̛̀ į̛́ į̛̂ į̛̃ į̛̄ į̛̆ į̛̇ į̛̈ į̛̉ į̛̊ į̛̋ į̛̌</p>
 <p>Your font fully covers the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Dii (Latn, 71,000 speakers), Mfumte (Latn, 79,000 speakers), Ekpeye (Latn, 226,000 speakers), Mundani (Latn, 34,000 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Nzakara (Latn, 50,000 speakers), Cicipu (Latn, 44,000 speakers), Dan (Latn, 1,099,244 speakers), Lugbara (Latn, 2,200,000 speakers), Makaa (Latn, 221,000 speakers), Nateni (Latn, 100,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Southern Kisi (Latn, 360,000 speakers), South Central Banda (Latn, 244,000 speakers), Aghem (Latn, 38,843 speakers), Koonzime (Latn, 40,000 speakers), Basaa (Latn, 332,940 speakers), Vute (Latn, 21,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Dutch (Latn, 31,709,104 speakers), Gulay (Latn, 250,478 speakers), Ma’di (Latn, 584,000 speakers), Navajo (Latn, 166,319 speakers), Ejagham (Latn, 120,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Fur (Latn, 1,230,163 speakers), Avokaya (Latn, 100,000 speakers), Kom (Latn, 360,685 speakers), Yala (Latn, 200,000 speakers), Mango (Latn, 77,000 speakers), Zapotec (Latn, 490,000 speakers), Sar (Latn, 500,000 speakers), Bete-Bendi (Latn, 100,000 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Vute (Latn, 21,000 speakers), Longto (Latn, 5,000 speakers), Sar (Latn, 500,000 speakers), Ma’di (Latn, 584,000 speakers), Mundani (Latn, 34,000 speakers), Lugbara (Latn, 2,200,000 speakers), Keliko (Latn, 63,000 speakers), Cicipu (Latn, 44,000 speakers), Heiltsuk (Latn, 300 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Aghem (Latn, 38,843 speakers), Makaa (Latn, 221,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Ebira (Latn, 2,200,000 speakers), Mango (Latn, 77,000 speakers), Ikwere (Latn, 717,000 speakers), Dutch (Latn, 31,709,104 speakers), Koonzime (Latn, 40,000 speakers), Mfumte (Latn, 79,000 speakers), Zapotec (Latn, 490,000 speakers), Fur (Latn, 1,230,163 speakers), Southern Tutchone (Latn, 65 speakers), Northern Tutchone (Latn, 85 speakers), Nzakara (Latn, 50,000 speakers), Southern Kisi (Latn, 360,000 speakers), Yala (Latn, 200,000 speakers), Kom (Latn, 360,685 speakers), Basaa (Latn, 332,940 speakers), Bafut (Latn, 158,146 speakers), Western Krahn (Latn, 97,800 speakers), Ejagham (Latn, 120,000 speakers), Kaska (Latn, 125 speakers), Dan (Latn, 1,099,244 speakers), Avokaya (Latn, 100,000 speakers), Dii (Latn, 71,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Han (Latn, 6 speakers), Gulay (Latn, 250,478 speakers), Ekpeye (Latn, 226,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Abua (Latn, 25,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Nateni (Latn, 100,000 speakers), South Central Banda (Latn, 244,000 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -5538,22 +3407,24 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
+    
 
             
         
             
-        
-            
-                <h2>Font File Checks</h2>
+                <h2>Outline Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⚠️
 </span>
 
+    
+
+    
     <h3>
     
-    Are there unwanted Apple tables?
+    Do any segments have colinear vectors?
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/aat&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_colinear_vectors&gt;</div>
 
 
 
@@ -5565,13 +3436,520 @@ Please consider mentioning note-worthy improvements made to the family recently.
 
 
     
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have colinear vectors:</p>
+<pre><code>* Uacute (U+00DA): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Ubreve (U+016C): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Ucircumflex (U+00DB): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Udieresis (U+00DC): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Ugrave (U+00D9): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Uhorn (U+01AF): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Uhungarumlaut (U+0170): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Umacron (U+016A): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Uogonek (U+0172): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Uring (U+016E): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* Utilde (U+0168): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* d.end: L&lt;&lt;263.0,163.0&gt;--&lt;267.0,179.0&gt;&gt; -&gt; L&lt;&lt;267.0,179.0&gt;--&lt;316.0,408.0&gt;&gt;
+
+* ff (U+FB00): L&lt;&lt;311.0,500.0&gt;--&lt;328.0,579.0&gt;&gt; -&gt; L&lt;&lt;328.0,579.0&gt;--&lt;334.0,605.0&gt;&gt;
+
+* g_x: L&lt;&lt;266.0,172.0&gt;--&lt;268.0,179.0&gt;&gt; -&gt; L&lt;&lt;268.0,179.0&gt;--&lt;316.0,405.0&gt;&gt;
+
+* ordfeminine (U+00AA): L&lt;&lt;191.0,538.0&gt;--&lt;195.0,556.0&gt;&gt; -&gt; L&lt;&lt;195.0,556.0&gt;--&lt;228.0,699.0&gt;&gt;
+
+* uni00B5 (U+00B5): L&lt;&lt;-3.0,164.0&gt;--&lt;0.0,179.0&gt;&gt; -&gt; L&lt;&lt;0.0,179.0&gt;--&lt;68.0,500.0&gt;&gt;
+
+* uni00B5 (U+00B5): L&lt;&lt;-73.0,-166.0&gt;--&lt;-3.0,164.0&gt;&gt; -&gt; L&lt;&lt;-3.0,164.0&gt;--&lt;0.0,179.0&gt;&gt;
+
+* uni01D3 (U+01D3): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni01D5 (U+01D5): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni01D7 (U+01D7): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni01D9 (U+01D9): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni01DB (U+01DB): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni0214 (U+0214): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni0216 (U+0216): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni03BC (U+03BC): L&lt;&lt;-3.0,164.0&gt;--&lt;0.0,179.0&gt;&gt; -&gt; L&lt;&lt;0.0,179.0&gt;--&lt;68.0,500.0&gt;&gt;
+
+* uni03BC (U+03BC): L&lt;&lt;-73.0,-166.0&gt;--&lt;-3.0,164.0&gt;&gt; -&gt; L&lt;&lt;-3.0,164.0&gt;--&lt;0.0,179.0&gt;&gt;
+
+* uni0414 (U+0414): L&lt;&lt;142.0,203.0&gt;--&lt;146.0,223.0&gt;&gt; -&gt; L&lt;&lt;146.0,223.0&gt;--&lt;236.0,636.0&gt;&gt;
+
+* uni0431 (U+0431): L&lt;&lt;263.0,716.0&gt;--&lt;415.0,716.0&gt;&gt; -&gt; L&lt;&lt;415.0,716.0&gt;--&lt;446.0,716.0&gt;&gt;
+
+* uni04310433: L&lt;&lt;263.0,716.0&gt;--&lt;415.0,716.0&gt;&gt; -&gt; L&lt;&lt;415.0,716.0&gt;--&lt;446.0,716.0&gt;&gt;
+
+* uni04310436: L&lt;&lt;263.0,716.0&gt;--&lt;415.0,716.0&gt;&gt; -&gt; L&lt;&lt;415.0,716.0&gt;--&lt;446.0,716.0&gt;&gt;
+
+* uni04310439.liga: L&lt;&lt;263.0,716.0&gt;--&lt;395.0,716.0&gt;&gt; -&gt; L&lt;&lt;395.0,716.0&gt;--&lt;426.0,716.0&gt;&gt;
+
+* uni04310439: L&lt;&lt;263.0,716.0&gt;--&lt;395.0,716.0&gt;&gt; -&gt; L&lt;&lt;395.0,716.0&gt;--&lt;426.0,716.0&gt;&gt;
+
+* uni0431044D: L&lt;&lt;263.0,716.0&gt;--&lt;415.0,716.0&gt;&gt; -&gt; L&lt;&lt;415.0,716.0&gt;--&lt;446.0,716.0&gt;&gt;
+
+* uni04310451.liga: L&lt;&lt;263.0,716.0&gt;--&lt;385.0,716.0&gt;&gt; -&gt; L&lt;&lt;385.0,716.0&gt;--&lt;416.0,716.0&gt;&gt;
+
+* uni04310451: L&lt;&lt;263.0,716.0&gt;--&lt;385.0,716.0&gt;&gt; -&gt; L&lt;&lt;385.0,716.0&gt;--&lt;416.0,716.0&gt;&gt;
+
+* uni04310453: L&lt;&lt;263.0,716.0&gt;--&lt;415.0,716.0&gt;&gt; -&gt; L&lt;&lt;415.0,716.0&gt;--&lt;446.0,716.0&gt;&gt;
+
+* uni04310456.liga: L&lt;&lt;263.0,716.0&gt;--&lt;365.0,716.0&gt;&gt; -&gt; L&lt;&lt;365.0,716.0&gt;--&lt;396.0,716.0&gt;&gt;
+
+* uni04310456: L&lt;&lt;263.0,716.0&gt;--&lt;365.0,716.0&gt;&gt; -&gt; L&lt;&lt;365.0,716.0&gt;--&lt;396.0,716.0&gt;&gt;
+
+* uni04310457.liga: L&lt;&lt;263.0,716.0&gt;--&lt;347.0,716.0&gt;&gt; -&gt; L&lt;&lt;347.0,716.0&gt;--&lt;378.0,716.0&gt;&gt;
+
+* uni04310457: L&lt;&lt;263.0,716.0&gt;--&lt;347.0,716.0&gt;&gt; -&gt; L&lt;&lt;347.0,716.0&gt;--&lt;378.0,716.0&gt;&gt;
+
+* uni04310458.liga: L&lt;&lt;263.0,716.0&gt;--&lt;365.0,716.0&gt;&gt; -&gt; L&lt;&lt;365.0,716.0&gt;--&lt;396.0,716.0&gt;&gt;
+
+* uni04310458: L&lt;&lt;263.0,716.0&gt;--&lt;365.0,716.0&gt;&gt; -&gt; L&lt;&lt;365.0,716.0&gt;--&lt;396.0,716.0&gt;&gt;
+
+* uni0431045E.liga: L&lt;&lt;263.0,716.0&gt;--&lt;395.0,716.0&gt;&gt; -&gt; L&lt;&lt;395.0,716.0&gt;--&lt;426.0,716.0&gt;&gt;
+
+* uni0431045E: L&lt;&lt;263.0,716.0&gt;--&lt;395.0,716.0&gt;&gt; -&gt; L&lt;&lt;395.0,716.0&gt;--&lt;426.0,716.0&gt;&gt;
+
+* uni04330447.liga: L&lt;&lt;405.0,321.0&gt;--&lt;408.0,333.0&gt;&gt; -&gt; L&lt;&lt;408.0,333.0&gt;--&lt;443.0,500.0&gt;&gt;
+
+* uni04330447: L&lt;&lt;405.0,321.0&gt;--&lt;408.0,333.0&gt;&gt; -&gt; L&lt;&lt;408.0,333.0&gt;--&lt;443.0,500.0&gt;&gt;
+
+* uni04340458.liga: L&lt;&lt;266.0,172.0&gt;--&lt;268.0,179.0&gt;&gt; -&gt; L&lt;&lt;268.0,179.0&gt;--&lt;316.0,405.0&gt;&gt;
+
+* uni04340458: L&lt;&lt;266.0,172.0&gt;--&lt;268.0,179.0&gt;&gt; -&gt; L&lt;&lt;268.0,179.0&gt;--&lt;316.0,405.0&gt;&gt;
+
+* uni04380447.liga: L&lt;&lt;533.0,306.0&gt;--&lt;539.0,337.0&gt;&gt; -&gt; L&lt;&lt;539.0,337.0&gt;--&lt;573.0,500.0&gt;&gt;
+
+* uni04380447: L&lt;&lt;533.0,306.0&gt;--&lt;539.0,337.0&gt;&gt; -&gt; L&lt;&lt;539.0,337.0&gt;--&lt;573.0,500.0&gt;&gt;
+
+* uni043C0447.liga: L&lt;&lt;172.0,221.0&gt;--&lt;178.0,252.0&gt;&gt; -&gt; L&lt;&lt;178.0,252.0&gt;--&lt;231.0,500.0&gt;&gt;
+
+* uni043C0447: L&lt;&lt;172.0,221.0&gt;--&lt;178.0,252.0&gt;&gt; -&gt; L&lt;&lt;178.0,252.0&gt;--&lt;231.0,500.0&gt;&gt;
+
+* uni043E043C.liga: L&lt;&lt;606.0,221.0&gt;--&lt;612.0,252.0&gt;&gt; -&gt; L&lt;&lt;612.0,252.0&gt;--&lt;665.0,500.0&gt;&gt;
+
+* uni043E043C: L&lt;&lt;605.0,217.0&gt;--&lt;612.0,252.0&gt;&gt; -&gt; L&lt;&lt;612.0,252.0&gt;--&lt;665.0,500.0&gt;&gt;
+
+* uni04470447.liga: L&lt;&lt;533.0,306.0&gt;--&lt;539.0,337.0&gt;&gt; -&gt; L&lt;&lt;539.0,337.0&gt;--&lt;573.0,500.0&gt;&gt;
+
+* uni04470447: L&lt;&lt;533.0,306.0&gt;--&lt;539.0,337.0&gt;&gt; -&gt; L&lt;&lt;539.0,337.0&gt;--&lt;573.0,500.0&gt;&gt;
+
+* uni04480447.liga: L&lt;&lt;780.0,306.0&gt;--&lt;786.0,337.0&gt;&gt; -&gt; L&lt;&lt;786.0,337.0&gt;--&lt;820.0,500.0&gt;&gt;
+
+* uni04480447: L&lt;&lt;780.0,306.0&gt;--&lt;786.0,337.0&gt;&gt; -&gt; L&lt;&lt;786.0,337.0&gt;--&lt;820.0,500.0&gt;&gt;
+
+* uni0449 (U+0449): L&lt;&lt;531.0,-188.0&gt;--&lt;462.0,-188.0&gt;&gt; -&gt; L&lt;&lt;462.0,-188.0&gt;--&lt;432.0,-188.0&gt;&gt;
+
+* uni044B0447.liga: L&lt;&lt;680.0,306.0&gt;--&lt;686.0,337.0&gt;&gt; -&gt; L&lt;&lt;686.0,337.0&gt;--&lt;720.0,500.0&gt;&gt;
+
+* uni044B0447: L&lt;&lt;680.0,306.0&gt;--&lt;686.0,337.0&gt;&gt; -&gt; L&lt;&lt;686.0,337.0&gt;--&lt;720.0,500.0&gt;&gt;
+
+* uni044E043C.liga: L&lt;&lt;842.0,221.0&gt;--&lt;848.0,252.0&gt;&gt; -&gt; L&lt;&lt;848.0,252.0&gt;--&lt;901.0,500.0&gt;&gt;
+
+* uni044E043C: L&lt;&lt;841.0,217.0&gt;--&lt;848.0,252.0&gt;&gt; -&gt; L&lt;&lt;848.0,252.0&gt;--&lt;901.0,500.0&gt;&gt;
+
+* uni044F0447.liga: L&lt;&lt;552.0,304.0&gt;--&lt;559.0,337.0&gt;&gt; -&gt; L&lt;&lt;559.0,337.0&gt;--&lt;593.0,500.0&gt;&gt;
+
+* uni044F0447: L&lt;&lt;552.0,304.0&gt;--&lt;559.0,337.0&gt;&gt; -&gt; L&lt;&lt;559.0,337.0&gt;--&lt;593.0,500.0&gt;&gt;
+
+* uni04560447.liga: L&lt;&lt;286.0,306.0&gt;--&lt;292.0,337.0&gt;&gt; -&gt; L&lt;&lt;292.0,337.0&gt;--&lt;326.0,500.0&gt;&gt;
+
+* uni04560447: L&lt;&lt;286.0,306.0&gt;--&lt;292.0,337.0&gt;&gt; -&gt; L&lt;&lt;292.0,337.0&gt;--&lt;326.0,500.0&gt;&gt;
+
+* uni04570447.liga: L&lt;&lt;286.0,306.0&gt;--&lt;292.0,337.0&gt;&gt; -&gt; L&lt;&lt;292.0,337.0&gt;--&lt;326.0,500.0&gt;&gt;
+
+* uni04570447: L&lt;&lt;286.0,306.0&gt;--&lt;292.0,337.0&gt;&gt; -&gt; L&lt;&lt;292.0,337.0&gt;--&lt;326.0,500.0&gt;&gt;
+
+* uni045F0447.liga: L&lt;&lt;533.0,306.0&gt;--&lt;539.0,337.0&gt;&gt; -&gt; L&lt;&lt;539.0,337.0&gt;--&lt;573.0,500.0&gt;&gt;
+
+* uni045F0447: L&lt;&lt;533.0,306.0&gt;--&lt;539.0,337.0&gt;&gt; -&gt; L&lt;&lt;539.0,337.0&gt;--&lt;573.0,500.0&gt;&gt;
+
+* uni04A2 (U+04A2): L&lt;&lt;390.0,-15.0&gt;--&lt;395.0,10.0&gt;&gt; -&gt; L&lt;&lt;395.0,10.0&gt;--&lt;471.0,376.0&gt;&gt;
+
+* uni04A4 (U+04A4): L&lt;&lt;486.0,450.0&gt;--&lt;544.0,721.0&gt;&gt; -&gt; L&lt;&lt;544.0,721.0&gt;--&lt;548.0,741.0&gt;&gt;
+
+* uni04A5 (U+04A5): L&lt;&lt;281.0,300.0&gt;--&lt;314.0,447.0&gt;&gt; -&gt; L&lt;&lt;314.0,447.0&gt;--&lt;325.0,497.0&gt;&gt;
+
+* uni04B6 (U+04B6): L&lt;&lt;418.0,-15.0&gt;--&lt;423.0,10.0&gt;&gt; -&gt; L&lt;&lt;423.0,10.0&gt;--&lt;492.0,333.0&gt;&gt;
+
+* uni04CB (U+04CB): L&lt;&lt;724.0,748.0&gt;--&lt;566.0,4.0&gt;&gt; -&gt; L&lt;&lt;566.0,4.0&gt;--&lt;562.0,-14.0&gt;&gt;
+
+* uni04CC (U+04CC): L&lt;&lt;199.0,-188.0&gt;--&lt;170.0,-188.0&gt;&gt; -&gt; L&lt;&lt;170.0,-188.0&gt;--&lt;140.0,-188.0&gt;&gt;
+
+* uni0524 (U+0524): L&lt;&lt;388.0,-15.0&gt;--&lt;393.0,10.0&gt;&gt; -&gt; L&lt;&lt;393.0,10.0&gt;--&lt;527.0,631.0&gt;&gt;
+
+* uni1EE4 (U+1EE4): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni1EE6 (U+1EE6): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni1EE8 (U+1EE8): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni1EEA (U+1EEA): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni1EEC (U+1EEC): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni1EEE (U+1EEE): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni1EF0 (U+1EF0): L&lt;&lt;215.0,492.0&gt;--&lt;232.0,560.0&gt;&gt; -&gt; L&lt;&lt;232.0,560.0&gt;--&lt;265.0,692.0&gt;&gt;
+
+* uni20B4 (U+20B4): L&lt;&lt;382.0,438.0&gt;--&lt;328.0,399.0&gt;&gt; -&gt; L&lt;&lt;328.0,399.0&gt;--&lt;297.0,373.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-colinear-vectors]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Do outlines contain any jaggy segments?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_jaggy_segments&gt;</div>
 
 
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have jaggy segments:</p>
+<pre><code>* a (U+0061): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* a.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* a_x.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* a_x: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* a_z: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* aacute (U+00E1): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* aacute.end: L&lt;&lt;319.0,454.0&gt;--&lt;319.0,447.0&gt;&gt;/L&lt;&lt;319.0,447.0&gt;--&lt;330.0,500.0&gt;&gt; = 11.725112015165065
+
+* abreve (U+0103): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* acircumflex (U+00E2): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* adieresis (U+00E4): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* agrave (U+00E0): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* amacron (U+0101): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* aogonek (U+0105): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* aring (U+00E5): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* aringacute (U+01FB): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* atilde (U+00E3): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* d (U+0064): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;374.0,680.0&gt;&gt; = 12.026689654905335
+
+* d.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;374.0,680.0&gt;&gt; = 12.026689654905335
+
+* dcaron (U+010F): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;374.0,680.0&gt;&gt; = 12.026689654905335
+
+* dcroat (U+0111): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;348.0,559.0&gt;&gt; = 11.915147071265011
+
+* eth (U+00F0): B&lt;&lt;307.0,490.0&gt;-&lt;328.0,475.0&gt;-&lt;328.0,448.0&gt;&gt;/B&lt;&lt;328.0,448.0&gt;-&lt;336.0,501.0&gt;-&lt;336.0,539.0&gt;&gt; = 8.583621480113925
+
+* g (U+0067): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* g.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,452.0&gt;&gt;/L&lt;&lt;325.0,452.0&gt;--&lt;335.0,500.0&gt;&gt; = 11.768288932020628
+
+* g_p: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* g_x: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* g_z: L&lt;&lt;324.0,454.0&gt;--&lt;324.0,452.0&gt;&gt;/L&lt;&lt;324.0,452.0&gt;--&lt;334.0,500.0&gt;&gt; = 11.768288932020628
+
+* gbreve (U+011F): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* gcaron (U+01E7): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* gcircumflex (U+011D): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* gcommaaccent (U+0123): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* gdotaccent (U+0121): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* k.salt: B&lt;&lt;293.5,394.5&gt;-&lt;267.0,379.0&gt;-&lt;223.0,345.0&gt;&gt;/B&lt;&lt;223.0,345.0&gt;-&lt;268.0,365.0&gt;-&lt;305.0,365.0&gt;&gt; = 13.731751492110982
+
+* q (U+0071): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,452.0&gt;&gt;/L&lt;&lt;325.0,452.0&gt;--&lt;335.0,500.0&gt;&gt; = 11.768288932020628
+
+* trademark (U+2122): L&lt;&lt;290.0,433.0&gt;--&lt;317.0,589.0&gt;&gt;/L&lt;&lt;317.0,589.0&gt;--&lt;254.0,433.0&gt;&gt; = 12.17182927841921
+
+* uni01CE (U+01CE): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni01E5 (U+01E5): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* uni01E5.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,452.0&gt;&gt;/L&lt;&lt;325.0,452.0&gt;--&lt;335.0,500.0&gt;&gt; = 11.768288932020628
+
+* uni01F5 (U+01F5): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* uni0201 (U+0201): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni0203 (U+0203): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni040C (U+040C): L&lt;&lt;403.0,748.0&gt;--&lt;339.0,449.0&gt;&gt;/B&lt;&lt;339.0,449.0&gt;-&lt;359.0,508.0&gt;-&lt;394.5,569.0&gt;&gt; = 6.644117972124471
+
+* uni041A (U+041A): L&lt;&lt;403.0,748.0&gt;--&lt;339.0,449.0&gt;&gt;/B&lt;&lt;339.0,449.0&gt;-&lt;359.0,508.0&gt;-&lt;394.5,569.0&gt;&gt; = 6.644117972124471
+
+* uni042F (U+042F): B&lt;&lt;166.0,131.0&gt;-&lt;154.0,74.0&gt;-&lt;155.0,78.0&gt;&gt;/B&lt;&lt;155.0,78.0&gt;-&lt;145.0,33.0&gt;-&lt;125.0,8.0&gt;&gt; = 1.5074357587751237
+
+* uni0430 (U+0430): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni0430.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04300445.liga: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04300445: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04300447.liga: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04300447: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni0434 (U+0434): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* uni0434.end: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,452.0&gt;&gt;/L&lt;&lt;325.0,452.0&gt;--&lt;335.0,500.0&gt;&gt; = 11.768288932020628
+
+* uni04340447.liga: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* uni04340447: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* uni04340458.liga: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04340458: L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04390447.liga: B&lt;&lt;493.5,156.0&gt;-&lt;518.0,221.0&gt;-&lt;534.0,312.0&gt;&gt;/B&lt;&lt;534.0,312.0&gt;-&lt;534.0,309.0&gt;-&lt;538.0,335.0&gt;&gt; = 9.972057687331077
+
+* uni04390447: B&lt;&lt;493.5,156.0&gt;-&lt;518.0,221.0&gt;-&lt;534.0,312.0&gt;&gt;/B&lt;&lt;534.0,312.0&gt;-&lt;534.0,309.0&gt;-&lt;538.0,335.0&gt;&gt; = 9.972057687331077
+
+* uni043C (U+043C): L&lt;&lt;586.0,233.0&gt;--&lt;615.0,363.0&gt;&gt;/L&lt;&lt;615.0,363.0&gt;--&lt;434.0,0.0&gt;&gt; = 13.926415052970677
+
+* uni043C0447.liga: L&lt;&lt;533.0,236.0&gt;--&lt;548.0,303.0&gt;&gt;/L&lt;&lt;548.0,303.0&gt;--&lt;400.0,0.0&gt;&gt; = 13.413820482419284
+
+* uni043C0447: L&lt;&lt;533.0,236.0&gt;--&lt;548.0,303.0&gt;&gt;/L&lt;&lt;548.0,303.0&gt;--&lt;400.0,0.0&gt;&gt; = 13.413820482419284
+
+* uni043E043C.liga: B&lt;&lt;953.5,164.5&gt;-&lt;960.0,200.0&gt;-&lt;982.0,304.0&gt;&gt;/L&lt;&lt;982.0,304.0&gt;--&lt;834.0,0.0&gt;&gt; = 14.014592073114295
+
+* uni043E043C: L&lt;&lt;966.0,233.0&gt;--&lt;982.0,304.0&gt;&gt;/L&lt;&lt;982.0,304.0&gt;--&lt;834.0,0.0&gt;&gt; = 13.259184771963254
+
+* uni0444 (U+0444): B&lt;&lt;243.0,505.0&gt;-&lt;325.0,505.0&gt;-&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;375.0,680.0&gt;&gt; = 12.2647737278924
+
+* uni04440437.liga: B&lt;&lt;243.0,505.0&gt;-&lt;325.0,505.0&gt;-&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;375.0,680.0&gt;&gt; = 12.2647737278924
+
+* uni04440437: B&lt;&lt;243.0,505.0&gt;-&lt;325.0,505.0&gt;-&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;375.0,680.0&gt;&gt; = 12.2647737278924
+
+* uni044E043C.liga: B&lt;&lt;1190.5,171.0&gt;-&lt;1199.0,214.0&gt;-&lt;1218.0,304.0&gt;&gt;/L&lt;&lt;1218.0,304.0&gt;--&lt;1070.0,0.0&gt;&gt; = 14.038030721638298
+
+* uni044E043C: L&lt;&lt;1202.0,233.0&gt;--&lt;1218.0,304.0&gt;&gt;/L&lt;&lt;1218.0,304.0&gt;--&lt;1070.0,0.0&gt;&gt; = 13.259184771963254
+
+* uni0474 (U+0474): L&lt;&lt;397.0,748.0&gt;--&lt;406.0,133.0&gt;&gt;/B&lt;&lt;406.0,133.0&gt;-&lt;454.0,385.0&gt;-&lt;490.5,516.5&gt;&gt; = 11.622712841964676
+
+* uni049A (U+049A): L&lt;&lt;403.0,748.0&gt;--&lt;339.0,449.0&gt;&gt;/B&lt;&lt;339.0,449.0&gt;-&lt;359.0,508.0&gt;-&lt;394.5,569.0&gt;&gt; = 6.644117972124471
+
+* uni04A0 (U+04A0): L&lt;&lt;459.0,741.0&gt;--&lt;399.0,462.0&gt;&gt;/B&lt;&lt;399.0,462.0&gt;-&lt;420.0,519.0&gt;-&lt;454.0,575.5&gt;&gt; = 8.088034975875772
+
+* uni04D1 (U+04D1): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni04D3 (U+04D3): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni051B (U+051B): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,452.0&gt;&gt;/L&lt;&lt;325.0,452.0&gt;--&lt;335.0,500.0&gt;&gt; = 11.768288932020628
+
+* uni0525 (U+0525): B&lt;&lt;547.0,179.0&gt;-&lt;487.0,3.0&gt;-&lt;374.0,-6.0&gt;&gt;/L&lt;&lt;374.0,-6.0&gt;--&lt;375.0,-6.0&gt;&gt; = 4.553767979158586
+
+* uni1E0D (U+1E0D): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,450.0&gt;&gt;/L&lt;&lt;325.0,450.0&gt;--&lt;374.0,680.0&gt;&gt; = 12.026689654905335
+
+* uni1E21 (U+1E21): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,448.0&gt;&gt;/L&lt;&lt;325.0,448.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.944177188446329
+
+* uni1EA1 (U+1EA1): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EA3 (U+1EA3): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EA5 (U+1EA5): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EA7 (U+1EA7): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EA9 (U+1EA9): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EAB (U+1EAB): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EAD (U+1EAD): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EAF (U+1EAF): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EB1 (U+1EB1): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EB3 (U+1EB3): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EB5 (U+1EB5): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+
+* uni1EB7 (U+1EB7): L&lt;&lt;325.0,454.0&gt;--&lt;325.0,447.0&gt;&gt;/L&lt;&lt;325.0,447.0&gt;--&lt;336.0,500.0&gt;&gt; = 11.725112015165065
+</code></pre>
+
+                            
+                             [code: found-jaggy-segments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    Do outlines contain any semi-vertical or semi-horizontal lines?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_semi_vertical&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                Pushster-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* G (U+0047): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* Gbreve (U+011E): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* Gcaron (U+01E6): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* Gcircumflex (U+011C): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* Gdotaccent (U+0120): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* registered (U+00AE): L&lt;&lt;176.0,192.0&gt;--&lt;177.0,483.0&gt;&gt;
+
+* uni01E4 (U+01E4): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* uni01F4 (U+01F4): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* uni1E20 (U+1E20): L&lt;&lt;428.0,419.0&gt;--&lt;546.0,418.0&gt;&gt;
+
+* uni20A9 (U+20A9): L&lt;&lt;281.0,752.0&gt;--&lt;284.0,406.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-semi-vertical]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
     <h3>
     
     Checking file is named canonically.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/canonical_filename&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/canonical_filename&gt;</div>
 
 
 
@@ -5611,861 +3989,32 @@ Please consider mentioning note-worthy improvements made to the family recently.
         </details>
     
 
-
-    <h3>
-    
-    Does the font contain less than 150 CJK characters?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_not_enough_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font follows the Google Fonts CJK vertical metric schema
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check if the vertical metrics of a CJK family are similar to the same family hosted on Google Fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_vertical_metrics_regressions&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Color layers should have a minimum brightness
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/color_cpal_brightness&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font has the expected color font tables.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/colorfont_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Put an empty glyph on GID 1 right after the .notdef glyph for COLRv0 fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/empty_glyph_on_gid1_for_colrv0&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    EPAR table present in font?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/epar&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure files are not too large.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/file_size&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Copyright notices match canonical pattern in fonts
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>METADATA.pb: Copyright notices should match a pattern similar to:</p>
-<p>&quot;Copyright 2020 The Familyname Project Authors (git url)&quot;</p>
-<p>But instead we have got:</p>
-<p>&quot;Copyright 2010 xyz The Lobster Project Authors (<a href="https://github.com/impallari/The-Lobster-Font">https://github.com/impallari/The-Lobster-Font</a>), with Reserved Font Name &quot;Lobster&quot;.4&quot;</p>
-
-                            
-                             [code: bad-notice-format]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Copyright notices differ between name table entries and METADATA.pb.The following copyright values were found:</p>
-<pre><code>- Copyright 2010 The Lobster Project Authors (https://github.com/impallari/The-Lobster-Font), with Reserved Font Name &quot;Lobster&quot;.: Name Table entry and Name Table entry
-
-- Copyright 2010 xyz The Lobster Project Authors (https://github.com/impallari/The-Lobster-Font), with Reserved Font Name &quot;Lobster&quot;.4: METADATA.pb
-</code></pre>
-
-                            
-                             [code: mismatch]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-
-    <h3>
-    
-    Check font names are correct
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking OS/2 fsType does not impose restrictions.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fstype&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check variable font instances
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fvar_instances&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    All name entries referenced by fvar instances exist on the name table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fvar_name_entries&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Is the Grid-fitting and Scan-conversion Procedure (&#39;gasp&#39;) table set to optimize rendering?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gasp&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate defaults on fvar table match registered fallback names in GFAxisRegistry.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gf_axisregistry/fvar_axis_defaults&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check glyphs do not have components which are themselves components.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyf_nested_components&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check Google Fonts glyph coverage.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has ttfautohint params?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/has_ttfautohint_params&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Show hinting filesize impact.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/hinting_impact&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
     
-    PPEM must be an integer on hinted fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/integer_ppem_if_hinted&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This is a hinted font, so it must have bit 3 set on the flags of the head table, so that PPEM values will be rounded into an integer value.</p>
-<p>This can be accomplished by using the 'gftools fix-hinting' command:</p>
-<pre><code># create virtualenv
-python3 -m venv venv
-# activate virtualenv
-source venv/bin/activate
-# install gftools
-pip install git+https://www.github.com/googlefonts/tools
-</code></pre>
-
-                            
-                             [code: bad-flags]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-
-    <h3>
     
-    Is there kerning info for non-ligated sequences?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/kerning_for_non_ligated_sequences&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
     
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GPOS table lacks kerning info for the following non-ligated sequences:</p>
-<pre><code>- E + x
-
-- F + i
-
-- I + J
-
-- T + h
-
-- T + i
-
-- a + x
-
-- a + z
-
-- b + s
-
-- c + x
-
-- c + z
-
-- e + x
-
-- e + z
-
-- eacute + x
-
-- f + f
-
-- f + i
-
-- f + l
-
-- f + t
-
-- f + u
-
-- f + x
-
-- g + p
-
-- g + x
-
-- g + z
-
-- i + j
-
-- i + x
-
-- i + z
-
-- iacute + x
-
-- iacute + z
-
-- j + x
-
-- j + z
-
-- l + x
-
-- l + z
-
-- m + x
-
-- m + z
-
-- n + z
-
-- o + ae
-
-- o + s
-
-- o + x
-
-- oacute + s
-
-- oacute + x
-
-- r + x
-
-- r + z
-
-- s + x
-
-- s + z
-
-- t + x
-
-- t + z
-
-- u + v
-
-- u + x
-
-- uni0401 + uni0437
-
-- uni0401 + uni0445
-
-- uni0404 + uni0437
-
-- uni0404 + uni0445
-
-- uni0415 + uni0437
-
-- uni0415 + uni0445
-
-- uni0421 + uni0437
-
-- uni0421 + uni0445
-
-- uni0430 + uni0445
-
-- uni0430 + uni0447
-
-- uni0431 + uni0433
-
-- uni0431 + uni0436
 
-- uni0431 + uni0439
-
-- uni0431 + uni044D
-
-- uni0431 + uni0451
-
-- uni0431 + uni0453
-
-- uni0431 + uni0456
-
-- uni0431 + uni0457
-
-- uni0431 + uni0458
-
-- uni0431 + uni045E
-
-- uni0432 + uni0433
-
-- uni0432 + uni0436
-
-- uni0432 + uni0437
-
-- uni0432 + uni0445
-
-- uni0432 + uni0453
-
-- uni0433 + uni0437
-
-- uni0433 + uni0445
-
-- uni0433 + uni0447
-
-- uni0434 + uni0447
-
-- uni0434 + uni0458
-
-- uni0435 + uni0437
-
-- uni0435 + uni0445
-
-- uni0435 + uni0447
-
-- uni0436 + uni0447
-
-- uni0437 + uni0437
-
-- uni0438 + uni0447
-
-- uni0439 + uni0447
-
-- uni043A + uni0447
-
-- uni043B + uni0447
-
-- uni043C + uni0447
-
-- uni043D + uni0447
-
-- uni043E + uni0433
-
-- uni043E + uni0436
-
-- uni043E + uni0437
-
-- uni043E + uni043B
-
-- uni043E + uni043C
-
-- uni043E + uni0445
-
-- uni043E + uni044D
-
-- uni043E + uni0453
-
-- uni043E + uni0459
-
-- uni043F + uni0447
-
-- uni0440 + uni0437
-
-- uni0441 + uni0437
-
-- uni0441 + uni0445
-
-- uni0441 + uni0447
-
-- uni0441 + uni044A
-
-- uni0442 + uni0447
-
-- uni0443 + uni0447
-
-- uni0443 + uni0458
-
-- uni0444 + uni0437
-
-- uni0445 + uni0447
-
-- uni0445 + uni044A
-
-- uni0447 + uni0447
-
-- uni0448 + uni0447
-
-- uni044B + uni0447
-
-- uni044D + uni0437
-
-- uni044E + uni0433
-
-- uni044E + uni0436
-
-- uni044E + uni0437
-
-- uni044E + uni043B
-
-- uni044E + uni043C
-
-- uni044E + uni0445
-
-- uni044E + uni044D
-
-- uni044E + uni0453
-
-- uni044E + uni0459
-
-- uni044F + uni0447
-
-- uni0451 + uni0437
-
-- uni0451 + uni0445
-
-- uni0451 + uni0447
-
-- uni0453 + uni0437
-
-- uni0453 + uni0445
-
-- uni0453 + uni0447
-
-- uni0454 + uni0437
-
-- uni0454 + uni0445
-
-- uni0454 + uni0447
-
-- uni0455 + uni0437
-
-- uni0455 + uni0445
-
-- uni0455 + uni0447
-
-- uni0456 + uni0447
-
-- uni0457 + uni0447
-
-- uni0457 + uni0457
-
-- uni0458 + uni0447
-
-- uni0458 + uni0458
-
-- uni045B + uni0447
-
-- uni045B + uni0458
-
-- uni045C + uni0447
-
-- uni045E + uni0447
-
-- uni045E + uni0458
-
-- uni045F + uni0447
-
-- y + p
-
-- y + x
-
-- y + z
-</code></pre>
-
-                            
-                             [code: lacks-kern-info]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
-
 
-    <h3>
     
-    Are there caret positions declared for every ligature?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/ligature_carets&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-        <details>
-            <summary>
-                ⚠️
-                Pushster-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
 
-                            <span class='details_text'>
-                            <p>This font lacks caret position values for ligature glyphs on its GDEF table.</p>
-
-                            
-                             [code: lacks-caret-pos]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
     
-
 
-    <h3>
     
-    Ensure variable fonts include an avar table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/mandatory_avar_table&gt;</div>
 
-
-
-<div style="background-color:#ee8">
-
     
 
-</div>
-
-
     
-
-
     <h3>
     
     Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
 
 
 
@@ -6505,464 +4054,38 @@ pip install git+https://www.github.com/googlefonts/tools
         </details>
     
 
-
-    <h3>
-    
-    Check small caps glyphs are available.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/missing_small_caps_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Are there non-ASCII characters in ASCII-only NAME table entries?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/ascii_only_entries&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Description strings in the name table must not exceed 200 characters.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/description_max_length&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Make sure family name does not begin with a digit.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/familyname_first_char&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has all mandatory &#39;name&#39; table entries?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/mandatory_entries&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Version format is correct in &#39;name&#39; table?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/version_format&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure fonts do not contain any pre-production tables.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/no_debugging_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font has old ttfautohint applied?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/old_ttfautohint&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check font can render its own name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/render_own_name&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Checking direction of slnt axis angles
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/slant_direction&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Font enables smart dropout control in &#34;prep&#34; table instructions?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/smart_dropout&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check axis ordering on the STAT table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT/axis_order&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Validate STAT particle names and values match the fallback names in GFAxisRegistry.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/STAT/gf_axisregistry&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure Stylistic Sets have description.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/stylisticset_description&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Stricter unitsPerEm criteria for Google Fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unitsperem_strict&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check the OS/2 usWeightClass is appropriate for the font&#39;s best SubFamily name.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/usweightclass&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    The variable font &#39;wght&#39; (Weight) axis coordinate must be 700 on the &#39;Bold&#39; instance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/bold_wght_coord&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure that all variable font files have the same set of axes and axis ranges.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/consistent_axes&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Ensure VFs with duplexed axes do not vary horizontal advance.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/duplexed_axis_reflow&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    Check variable font instances don&#39;t have duplicate names
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont_duplicate_instance_names&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Check a static ttf can be generated from a variable font.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/generate_static&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    <div style='color:#88c'>EXPERIMENTAL CHECK - Since 2024/Mar/27</div>
-    
-    Ensure the font&#39;s instances are in the correct order.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/instances_in_order&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
-
 
     
 
-
-    <h3>
     
-    Check that variable fonts have an HVAR table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/has_HVAR&gt;</div>
-
 
-
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
 
-    <h3>
     
-    Ensure VFs do not contain the ital axis.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/varfont/unsupported_axes&gt;</div>
-
-
 
-<div style="background-color:#ee8">
-
     
-
-</div>
 
-
     
-
-
     <h3>
     
     Checking OS/2 achVendID.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vendor_id&gt;</div>
 
 
 
@@ -7002,60 +4125,13 @@ pip install git+https://www.github.com/googlefonts/tools
         </details>
     
 
-
-    <h3>
     
-    Check font follows the Google Fonts vertical metric schema
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
 
     
 
-</div>
-
-
     
 
-
-    <h3>
     
-    Check if the vertical metrics of a family are similar to the same family hosted on Google Fonts.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics_regressions&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
-
-    <h3>
-    
-    There must not be VTT Talk sources in the font.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vttclean&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-
 
             
         

@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -271,21 +275,21 @@ you're checking.</p>
     </tr>
     <tr>
         <td>0</td>
-        <td>1</td>
+        <td>0</td>
         <td>2</td>
-        <td>10</td>
-        <td>67</td>
+        <td>14</td>
+        <td>54</td>
         <td>8</td>
-        <td>164</td>
+        <td>162</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>1%</td>
-        <td>4%</td>
-        <td>27%</td>
+        <td>6%</td>
+        <td>22%</td>
         <td>3%</td>
-        <td>65%</td>
+        <td>68%</td>
     </tr>
 </table>
         
@@ -310,12 +314,16 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.13.0</p>
         
             
-                <h2>Google Fonts</h2>
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ☠🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -337,832 +345,11 @@ immediately.
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Checking OS/2 achVendID.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
-
-                            
-                             [code: unknown]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: mende-kikakui, deseret, yezidi, meroitic, old-sogdian, sundanese, indic-siyaq-numbers, tifinagh, avestan, syriac, ottoman-siyaq-numbers, ahom, lydian, ol-onal, lao, old-hungarian, nko, tagbanwa, old-turkic, phoenician, tai-tham, sunuwar, meroitic-hieroglyphs, buginese, zanabazar-square, braille, cypriot, lycian, myanmar, chakma, nag-mundari, pau-cin-hau, takri, vai, kannada, nandinagari, batak, hebrew, greek-ext, rejang, siddham, hatran, bhaiksuki, balinese, symbols, kayah-li, kaithi, hanifi-rohingya, armenian, elymaic, gunjala-gondi, inscriptional-parthian, toto, tangut, glagolitic, runic, samaritan, sogdian, ogham, modi, linear-a, cypro-minoan, warang-citi, nabataean, chinese-simplified, saurashtra, tulu-tigalari, coptic, imperial-aramaic, marchen, kawi, soyombo, khmer, ugaritic, meetei-mayek, tangsa, syloti-nagri, grantha, dives-akuru, nyiakeng-puachue-hmong, mro, mahajani, tamil, wancho, buhid, music, mongolian, yi, phags-pa, canadian-aboriginal, khudawadi, thai, lisu, cham, khojki, bamum, hanunoo, linear-b, bassa-vah, chinese-traditional, tibetan, caucasian-albanian, math, tai-viet, javanese, todhri, inscriptional-pahlavi, znamenny, sinhala, shavian, mandaic, newa, symbols2, miao, mayan-numerals, sharada, tai-le, adlam, oriya, meroitic-cursive, masaram-gondi, osmanya, tagalog, ol-chiki, telugu, new-tai-lue, cyrillic-ext, old-south-arabian, kirat-rai, egyptian-hieroglyphs, thaana, greek, old-persian, cuneiform, chinese-hongkong, elbasan, pahawh-hmong, old-italic, old-uyghur, dogra, gurmukhi, malayalam, makasar, chorasmian, ethiopic, psalter-pahlavi, sora-sompeng, nushu, georgian, vietnamese, carian, manichaean, multani, anatolian-hieroglyphs, tamil-supplement, gurung-khema, korean, signwriting, medefaidrin, kharoshthi, kana-extended, bengali, cherokee, garay, gujarati, khitan-small-script, japanese, osage, palmyrene, limbu, old-north-arabian, gothic, old-permic, devanagari, lepcha, duployan, brahmi, tirhuta, cyrillic, vithkuqi</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: mende-kikakui, deseret, yezidi, meroitic, old-sogdian, sundanese, indic-siyaq-numbers, tifinagh, avestan, syriac, ottoman-siyaq-numbers, ahom, lydian, ol-onal, lao, old-hungarian, nko, tagbanwa, old-turkic, phoenician, tai-tham, sunuwar, meroitic-hieroglyphs, buginese, zanabazar-square, braille, cypriot, lycian, myanmar, chakma, nag-mundari, pau-cin-hau, takri, vai, kannada, nandinagari, batak, hebrew, greek-ext, rejang, siddham, hatran, bhaiksuki, balinese, symbols, kayah-li, kaithi, hanifi-rohingya, armenian, elymaic, gunjala-gondi, inscriptional-parthian, toto, tangut, glagolitic, runic, samaritan, sogdian, ogham, modi, linear-a, cypro-minoan, warang-citi, nabataean, chinese-simplified, saurashtra, tulu-tigalari, coptic, imperial-aramaic, marchen, kawi, soyombo, khmer, ugaritic, meetei-mayek, tangsa, syloti-nagri, grantha, dives-akuru, nyiakeng-puachue-hmong, mro, mahajani, tamil, wancho, buhid, music, mongolian, yi, phags-pa, canadian-aboriginal, khudawadi, thai, lisu, cham, khojki, bamum, hanunoo, linear-b, bassa-vah, chinese-traditional, tibetan, caucasian-albanian, math, tai-viet, javanese, todhri, inscriptional-pahlavi, znamenny, sinhala, shavian, mandaic, newa, symbols2, miao, mayan-numerals, sharada, tai-le, adlam, oriya, meroitic-cursive, masaram-gondi, osmanya, tagalog, ol-chiki, telugu, new-tai-lue, cyrillic-ext, old-south-arabian, kirat-rai, egyptian-hieroglyphs, thaana, greek, old-persian, cuneiform, chinese-hongkong, elbasan, pahawh-hmong, old-italic, old-uyghur, dogra, gurmukhi, malayalam, makasar, chorasmian, ethiopic, psalter-pahlavi, sora-sompeng, nushu, georgian, vietnamese, carian, manichaean, multani, anatolian-hieroglyphs, tamil-supplement, gurung-khema, korean, signwriting, medefaidrin, kharoshthi, kana-extended, bengali, cherokee, garay, gujarati, khitan-small-script, japanese, osage, palmyrene, limbu, old-north-arabian, gothic, old-permic, devanagari, lepcha, duployan, brahmi, tirhuta, cyrillic, vithkuqi</li>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, canadian-aboriginal, todhri, math, malayalam, duployan, tai-le, hebrew, coptic, tifinagh, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>arabic</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Arabic_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">fa_Arab (Persian)</td>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@150,-100+0</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Arabic_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ar_Arab (Arabic)</td>
-<td align="left">Some auxiliary glyphs were missing: ڜ, ڢ, ڥ, ڧ, ڨ</td>
-</tr>
-<tr>
-<td align="left">ur_Arab (Urdu)</td>
-<td align="left">Some auxiliary glyphs were missing: ؀؁؂؃‌‍‏, ٗ, ٺ, ٻ, ټ, ٽ</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ca_Latn (Catalan)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-</tr>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
-</tr>
-<tr>
-<td align="left">nl_Latn (Dutch)</td>
-<td align="left">Some auxiliary glyphs were missing: Ĳ, ĳ</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/family_update&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
-Please consider mentioning note-worthy improvements made to the family recently.</p>
-
-                            
-                             [code: description-not-updated]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    The font has tags in the GF Tags spreadsheet
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        BadeenDisplay-Regular.ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check font contains no unreachable glyphs
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- dotcenterar
-
-- doublestrokear
-
-- gafsarkashabovear
-
-- gafsarkashcenterar
-
-- miniKehehar
-
-- threedotsdownabovear
-
-- threedotsdownbelowar
-
-- threedotsdowncenterar
-
-- threedotsupabovear
-
-- threedotsupbelowar
-
-- twodotshorizontalabovear
-
-- twodotshorizontalbelowar
-
-- uni030B.001
-
-- uni06F4.urdu
-
-- uni06F7.urdu
-</code></pre>
-
-                            
-                             [code: unreachable-glyphs]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Check if each glyph has the recommended amount of contours.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:contour_count&gt;</div>
 
 
 
@@ -1266,103 +453,17 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
 
     
-        <h3>
-    
-    Check math signs have the same width.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                BadeenDisplay-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The most common width is 620 among a set of 3 math glyphs.
-The following math glyphs have a different width, though:</p>
-<p>Width = 720:
-plus</p>
-<p>Width = 458:
-greater, less</p>
-<p>Width = 642:
-multiply</p>
-
-                            
-                             [code: width-outliers]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
 
     
 
     
 
     
-
-    
-
-    
-
-    
-
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <h2>fontbakery.profiles.gpos</h2>
-<span class='section__emoji'>
-    ⚠️
-</span>
-
-    
-        <h3>
+    <h3>
     
     Does GPOS table have kerning information? This check skips monospaced fonts as defined by post.isFixedPitch value
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gpos_kerning_info&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:gpos_kerning_info&gt;</div>
 
 
 
@@ -1404,8 +505,736 @@ multiply</p>
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check math signs have the same width.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:math_signs_width&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The most common width is 620 among a set of 3 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 720:
+plus</p>
+<p>Width = 458:
+less, greater</p>
+<p>Width = 642:
+multiply</p>
+
+                            
+                             [code: width-outliers]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check font contains no unreachable glyphs
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:unreachable_glyphs&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- dotcenterar
+
+- doublestrokear
+
+- gafsarkashabovear
+
+- gafsarkashcenterar
+
+- miniKehehar
+
+- threedotsdownabovear
+
+- threedotsdownbelowar
+
+- threedotsdowncenterar
+
+- threedotsupabovear
+
+- threedotsupbelowar
+
+- twodotshorizontalabovear
+
+- twodotshorizontalbelowar
+
+- uni030B.001
+
+- uni06F4.urdu
+
+- uni06F7.urdu
+</code></pre>
+
+                            
+                             [code: unreachable-glyphs]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
+            
+                <h2>Article Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+    <h3>
+    
+    Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/article/images&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Family metadata at /Users/simon/others-repos/fonts//ofl/badeendisplay does not have an article.</p>
+
+                            
+                             [code: lacks-article]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, coptic, cherokee</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, math, syriac, canadian-aboriginal, malayalam, todhri, hebrew, duployan, tifinagh, old-permic</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>arabic</code>, <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
+
+                            
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    🔥
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_TransLatin_Arabic glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">FAIL messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@150,-100+0</td>
+<td align="left">uni0647=0+592</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: failed-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_TransLatin_Arabic glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
+<td align="left">ca_Latn (Catalan)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
+<td align="left">nb_Latn (Norwegian Bokmål)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ĳ, ĳ</td>
+<td align="left">nl_Latn (Dutch)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ڜ, ڢ, ڥ, ڧ, ڨ</td>
+<td align="left">ar_Arab (Arabic)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ؀؁؂؃‌‍‏, ٗ, ٺ, ٻ, ټ, ٽ</td>
+<td align="left">ur_Arab (Urdu)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⚠️ℹ️ℹ️
+</span>
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    On a family update, the DESCRIPTION.en_us.html file should ideally also be updated.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/family_update&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The DESCRIPTION.en_us.html file in this family has not changed in comparison to the latest font release on the google/fonts github repo.
+Please consider mentioning note-worthy improvements made to the family recently.</p>
+
+                            
+                             [code: description-not-updated]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
@@ -1423,17 +1252,11 @@ multiply</p>
 </span>
 
     
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Ensure dotted circle glyph is present and can attach marks.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:dotted_circle&gt;</div>
 
 
 
@@ -1476,11 +1299,17 @@ multiply</p>
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+    <h3>
     
     Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_dotted&gt;</div>
 
 
 
@@ -1509,8 +1338,8 @@ multiply</p>
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Northern Tutchone (Latn, 85 speakers), Southern Tutchone (Latn, 65 speakers), Dutch (Latn, 31,709,104 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Zapotec (Latn, 490,000 speakers), Mfumte (Latn, 79,000 speakers), Vute (Latn, 21,000 speakers), South Central Banda (Latn, 244,000 speakers), Dan (Latn, 1,099,244 speakers), Belarusian (Cyrl, 10,064,517 speakers), Dii (Latn, 71,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Fur (Latn, 1,230,163 speakers), Ejagham (Latn, 120,000 speakers), Han (Latn, 6 speakers), Cicipu (Latn, 44,000 speakers), Gulay (Latn, 250,478 speakers), Ma’di (Latn, 584,000 speakers), Ikwere (Latn, 717,000 speakers), Makaa (Latn, 221,000 speakers), Abua (Latn, 25,000 speakers), Koonzime (Latn, 40,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Mango (Latn, 77,000 speakers), Kom (Latn, 360,685 speakers), Nzakara (Latn, 50,000 speakers), Kaska (Latn, 125 speakers), Southern Kisi (Latn, 360,000 speakers), Lugbara (Latn, 2,200,000 speakers), Heiltsuk (Latn, 300 speakers), Bete-Bendi (Latn, 100,000 speakers), Avokaya (Latn, 100,000 speakers), Ebira (Latn, 2,200,000 speakers), Nateni (Latn, 100,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Western Krahn (Latn, 97,800 speakers), Bafut (Latn, 158,146 speakers), Yala (Latn, 200,000 speakers), Ekpeye (Latn, 226,000 speakers), Navajo (Latn, 166,319 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Basaa (Latn, 332,940 speakers), Longto (Latn, 5,000 speakers), Mundani (Latn, 34,000 speakers), Keliko (Latn, 63,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Sar (Latn, 500,000 speakers), Aghem (Latn, 38,843 speakers), Igbo (Latn, 27,823,640 speakers).</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Northern Tutchone (Latn, 85 speakers), Lithuanian (Latn, 2,357,094 speakers), Southern Tutchone (Latn, 65 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Yala (Latn, 200,000 speakers), Zapotec (Latn, 490,000 speakers), Mango (Latn, 77,000 speakers), Western Krahn (Latn, 97,800 speakers), Basaa (Latn, 332,940 speakers), Koonzime (Latn, 40,000 speakers), Nzakara (Latn, 50,000 speakers), Han (Latn, 6 speakers), Ejagham (Latn, 120,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Igbo (Latn, 27,823,640 speakers), Ebira (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Makaa (Latn, 221,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Fur (Latn, 1,230,163 speakers), Ma’di (Latn, 584,000 speakers), Aghem (Latn, 38,843 speakers), South Central Banda (Latn, 244,000 speakers), Heiltsuk (Latn, 300 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Kaska (Latn, 125 speakers), Gulay (Latn, 250,478 speakers), Southern Kisi (Latn, 360,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Keliko (Latn, 63,000 speakers), Mundani (Latn, 34,000 speakers), Cicipu (Latn, 44,000 speakers), Avokaya (Latn, 100,000 speakers), Abua (Latn, 25,000 speakers), Sar (Latn, 500,000 speakers), Vute (Latn, 21,000 speakers), Kom (Latn, 360,685 speakers), Longto (Latn, 5,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Dan (Latn, 1,099,244 speakers), Ekpeye (Latn, 226,000 speakers), Nateni (Latn, 100,000 speakers), Mfumte (Latn, 79,000 speakers), Ikwere (Latn, 717,000 speakers), Navajo (Latn, 166,319 speakers), Dii (Latn, 71,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -1521,6 +1350,452 @@ multiply</p>
                 </ul>
             </div>
         </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️
+</span>
+
+    
+
+    
+    <h3>
+    
+    Do any segments have colinear vectors?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_colinear_vectors&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have colinear vectors:</p>
+<pre><code>* six (U+0036): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,300.0&gt;&gt; -&gt; L&lt;&lt;10.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+
+* uni0639.fina: L&lt;&lt;297.0,301.0&gt;--&lt;630.0,300.0&gt;&gt; -&gt; L&lt;&lt;630.0,300.0&gt;--&lt;640.0,300.0&gt;&gt;
+
+* uni0639.medi: L&lt;&lt;161.0,301.0&gt;--&lt;612.0,300.0&gt;&gt; -&gt; L&lt;&lt;612.0,300.0&gt;--&lt;622.0,300.0&gt;&gt;
+
+* uni063A.fina: L&lt;&lt;297.0,301.0&gt;--&lt;630.0,300.0&gt;&gt; -&gt; L&lt;&lt;630.0,300.0&gt;--&lt;640.0,300.0&gt;&gt;
+
+* uni063A.medi: L&lt;&lt;161.0,301.0&gt;--&lt;612.0,300.0&gt;&gt; -&gt; L&lt;&lt;612.0,300.0&gt;--&lt;622.0,300.0&gt;&gt;
+
+* uni0666 (U+0666): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,300.0&gt;&gt; -&gt; L&lt;&lt;10.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+
+* uni06F6 (U+06F6): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,300.0&gt;&gt; -&gt; L&lt;&lt;10.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+
+* yen (U+00A5): L&lt;&lt;30.0,339.0&gt;--&lt;30.0,345.0&gt;&gt; -&gt; L&lt;&lt;30.0,345.0&gt;--&lt;30.0,359.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-colinear-vectors]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Do outlines contain any semi-vertical or semi-horizontal lines?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_semi_vertical&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* bar (U+007C): L&lt;&lt;10.0,800.0&gt;--&lt;310.0,801.0&gt;&gt;
+
+* bracketleft (U+005B): L&lt;&lt;10.0,800.0&gt;--&lt;310.0,801.0&gt;&gt;
+
+* bracketright (U+005D): L&lt;&lt;10.0,801.0&gt;--&lt;310.0,800.0&gt;&gt;
+
+* e (U+0065): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* eacute (U+00E9): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* ecaron (U+011B): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* ecircumflex (U+00EA): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* edieresis (U+00EB): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* edotaccent (U+0117): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* egrave (U+00E8): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* emacron (U+0113): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* eogonek (U+0119): L&lt;&lt;630.0,0.0&gt;--&lt;160.0,1.0&gt;&gt;
+
+* five (U+0035): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,281.0&gt;&gt;
+
+* oe (U+0153): L&lt;&lt;950.0,0.0&gt;--&lt;480.0,1.0&gt;&gt;
+
+* seven (U+0037): L&lt;&lt;11.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+
+* six (U+0036): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,300.0&gt;&gt;
+
+* uni0633 (U+0633): L&lt;&lt;11.0,125.0&gt;--&lt;10.0,600.0&gt;&gt;
+
+* uni0633.fina: L&lt;&lt;11.0,125.0&gt;--&lt;10.0,600.0&gt;&gt;
+
+* uni0633.init: L&lt;&lt;330.0,320.0&gt;--&lt;331.0,600.0&gt;&gt;
+
+* uni0634 (U+0634): L&lt;&lt;11.0,125.0&gt;--&lt;10.0,600.0&gt;&gt;
+
+* uni0634.fina: L&lt;&lt;11.0,125.0&gt;--&lt;10.0,600.0&gt;&gt;
+
+* uni0634.init: L&lt;&lt;330.0,320.0&gt;--&lt;331.0,600.0&gt;&gt;
+
+* uni0639 (U+0639): L&lt;&lt;297.0,301.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni0639.fina: L&lt;&lt;297.0,301.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni0639.init: L&lt;&lt;310.0,301.0&gt;--&lt;612.0,300.0&gt;&gt;
+
+* uni0639.medi: L&lt;&lt;161.0,301.0&gt;--&lt;612.0,300.0&gt;&gt;
+
+* uni063A (U+063A): L&lt;&lt;297.0,301.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni063A.fina: L&lt;&lt;297.0,301.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni063A.init: L&lt;&lt;310.0,301.0&gt;--&lt;612.0,300.0&gt;&gt;
+
+* uni063A.medi: L&lt;&lt;161.0,301.0&gt;--&lt;612.0,300.0&gt;&gt;
+
+* uni0641 (U+0641): L&lt;&lt;630.0,435.0&gt;--&lt;629.0,300.0&gt;&gt;
+
+* uni0641 (U+0641): L&lt;&lt;648.0,300.0&gt;--&lt;649.0,455.0&gt;&gt;
+
+* uni0641.fina: L&lt;&lt;630.0,435.0&gt;--&lt;629.0,300.0&gt;&gt;
+
+* uni0641.fina: L&lt;&lt;648.0,300.0&gt;--&lt;649.0,455.0&gt;&gt;
+
+* uni0641.init: L&lt;&lt;310.0,435.0&gt;--&lt;309.0,300.0&gt;&gt;
+
+* uni0641.init: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni0641.medi: L&lt;&lt;311.0,435.0&gt;--&lt;310.0,300.0&gt;&gt;
+
+* uni0641.medi: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni0642 (U+0642): L&lt;&lt;310.0,-19.0&gt;--&lt;607.0,-20.0&gt;&gt;
+
+* uni0642 (U+0642): L&lt;&lt;631.0,435.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni0642.fina: L&lt;&lt;310.0,-19.0&gt;--&lt;607.0,-20.0&gt;&gt;
+
+* uni0642.fina: L&lt;&lt;631.0,435.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni0642.init: L&lt;&lt;310.0,435.0&gt;--&lt;309.0,300.0&gt;&gt;
+
+* uni0642.init: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni0642.medi: L&lt;&lt;311.0,435.0&gt;--&lt;310.0,300.0&gt;&gt;
+
+* uni0642.medi: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni0643 (U+0643): L&lt;&lt;330.0,699.0&gt;--&lt;630.0,700.0&gt;&gt;
+
+* uni0643.fina: L&lt;&lt;330.0,699.0&gt;--&lt;630.0,700.0&gt;&gt;
+
+* uni0644.fina: L&lt;&lt;630.0,700.0&gt;--&lt;628.0,300.0&gt;&gt;
+
+* uni0645 (U+0645): L&lt;&lt;331.0,300.0&gt;--&lt;330.0,435.0&gt;&gt;
+
+* uni0645.fina: L&lt;&lt;331.0,300.0&gt;--&lt;330.0,435.0&gt;&gt;
+
+* uni0645.init: L&lt;&lt;332.0,300.0&gt;--&lt;331.0,435.0&gt;&gt;
+
+* uni0645.medi: L&lt;&lt;332.0,300.0&gt;--&lt;331.0,435.0&gt;&gt;
+
+* uni0646.fina: L&lt;&lt;640.0,300.0&gt;--&lt;641.0,0.0&gt;&gt;
+
+* uni0665 (U+0665): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,281.0&gt;&gt;
+
+* uni0666 (U+0666): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,300.0&gt;&gt;
+
+* uni0667 (U+0667): L&lt;&lt;11.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+
+* uni066F (U+066F): L&lt;&lt;310.0,-19.0&gt;--&lt;607.0,-20.0&gt;&gt;
+
+* uni066F (U+066F): L&lt;&lt;631.0,435.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni066F.fina: L&lt;&lt;310.0,-19.0&gt;--&lt;607.0,-20.0&gt;&gt;
+
+* uni066F.fina: L&lt;&lt;631.0,435.0&gt;--&lt;630.0,300.0&gt;&gt;
+
+* uni06A1 (U+06A1): L&lt;&lt;630.0,435.0&gt;--&lt;629.0,300.0&gt;&gt;
+
+* uni06A1 (U+06A1): L&lt;&lt;648.0,300.0&gt;--&lt;649.0,455.0&gt;&gt;
+
+* uni06A1.fina: L&lt;&lt;630.0,435.0&gt;--&lt;629.0,300.0&gt;&gt;
+
+* uni06A1.fina: L&lt;&lt;648.0,300.0&gt;--&lt;649.0,455.0&gt;&gt;
+
+* uni06A1.init: L&lt;&lt;310.0,435.0&gt;--&lt;309.0,300.0&gt;&gt;
+
+* uni06A1.init: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni06A1.medi: L&lt;&lt;311.0,435.0&gt;--&lt;310.0,300.0&gt;&gt;
+
+* uni06A1.medi: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni06A4 (U+06A4): L&lt;&lt;630.0,435.0&gt;--&lt;629.0,300.0&gt;&gt;
+
+* uni06A4 (U+06A4): L&lt;&lt;648.0,300.0&gt;--&lt;649.0,455.0&gt;&gt;
+
+* uni06A4.fina: L&lt;&lt;630.0,435.0&gt;--&lt;629.0,300.0&gt;&gt;
+
+* uni06A4.fina: L&lt;&lt;648.0,300.0&gt;--&lt;649.0,455.0&gt;&gt;
+
+* uni06A4.init: L&lt;&lt;310.0,435.0&gt;--&lt;309.0,300.0&gt;&gt;
+
+* uni06A4.init: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni06A4.medi: L&lt;&lt;311.0,435.0&gt;--&lt;310.0,300.0&gt;&gt;
+
+* uni06A4.medi: L&lt;&lt;329.0,300.0&gt;--&lt;330.0,455.0&gt;&gt;
+
+* uni06BA.fina: L&lt;&lt;640.0,300.0&gt;--&lt;641.0,0.0&gt;&gt;
+
+* uni06F5 (U+06F5): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,281.0&gt;&gt;
+
+* uni06F6 (U+06F6): L&lt;&lt;12.0,0.0&gt;--&lt;10.0,300.0&gt;&gt;
+
+* uni06F7 (U+06F7): L&lt;&lt;11.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+
+* uni06F7.urdu: L&lt;&lt;11.0,300.0&gt;--&lt;10.0,455.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-semi-vertical]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Checking OS/2 achVendID.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vendor_id&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                BadeenDisplay-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+
+                            
+                             [code: unknown]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
     
 
     

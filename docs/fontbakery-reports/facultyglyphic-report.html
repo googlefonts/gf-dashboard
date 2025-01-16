@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/version_bump<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -271,21 +275,21 @@ you're checking.</p>
     </tr>
     <tr>
         <td>0</td>
+        <td>0</td>
         <td>1</td>
-        <td>1</td>
-        <td>9</td>
-        <td>74</td>
-        <td>7</td>
-        <td>160</td>
+        <td>12</td>
+        <td>59</td>
+        <td>6</td>
+        <td>162</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>0%</td>
-        <td>4%</td>
-        <td>29%</td>
-        <td>3%</td>
-        <td>63%</td>
+        <td>5%</td>
+        <td>25%</td>
+        <td>2%</td>
+        <td>68%</td>
     </tr>
 </table>
         
@@ -310,12 +314,16 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.13.0</p>
         
             
-                <h2>Google Fonts</h2>
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ☠⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -337,723 +345,11 @@ immediately.
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Checking OS/2 achVendID.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FacultyGlyphic-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
-
-                            
-                             [code: unknown]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FacultyGlyphic-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+0020 SPACE: try adding one of: chinese-traditional, meroitic-cursive, old-sogdian, math, mongolian, mayan-numerals, nag-mundari, nushu, ottoman-siyaq-numbers, linear-a, inscriptional-pahlavi, elbasan, nyiakeng-puachue-hmong, bamum, khitan-small-script, kawi, pau-cin-hau, greek-ext, gothic, ol-onal, deseret, ahom, phoenician, telugu, adlam, duployan, garay, hanunoo, kayah-li, elymaic, toto, sogdian, old-uyghur, balinese, todhri, caucasian-albanian, batak, masaram-gondi, old-turkic, saurashtra, chakma, modi, tagalog, lisu, osmanya, anatolian-hieroglyphs, sharada, sora-sompeng, bhaiksuki, yezidi, oriya, phags-pa, kannada, vai, avestan, sinhala, gurung-khema, ugaritic, nabataean, ethiopic, kharoshthi, cypro-minoan, warang-citi, brahmi, thai, ol-chiki, carian, gujarati, gunjala-gondi, limbu, soyombo, mandaic, old-north-arabian, javanese, kaithi, tangut, palmyrene, dives-akuru, hatran, khojki, pahawh-hmong, dogra, thaana, tai-tham, chinese-simplified, takri, inscriptional-parthian, arabic, grantha, ogham, tibetan, meroitic-hieroglyphs, cham, tagbanwa, hebrew, lepcha, cypriot, tangsa, chinese-hongkong, imperial-aramaic, vithkuqi, vietnamese, linear-b, tirhuta, lycian, armenian, buhid, multani, glagolitic, zanabazar-square, old-italic, buginese, cuneiform, runic, bengali, cherokee, meetei-mayek, old-south-arabian, new-tai-lue, cyrillic, khudawadi, siddham, myanmar, japanese, coptic, devanagari, nko, meroitic, old-hungarian, lydian, georgian, tai-le, tamil-supplement, korean, canadian-aboriginal, osage, medefaidrin, shavian, znamenny, sunuwar, tai-viet, marchen, nandinagari, signwriting, lao, yi, mahajani, indic-siyaq-numbers, syloti-nagri, manichaean, greek, music, symbols, samaritan, kirat-rai, mende-kikakui, chorasmian, old-persian, psalter-pahlavi, khmer, tulu-tigalari, sundanese, kana-extended, braille, mro, symbols2, wancho, tifinagh, tamil, old-permic, newa, hanifi-rohingya, makasar, miao, malayalam, cyrillic-ext, syriac, bassa-vah, egyptian-hieroglyphs, gurmukhi, rejang</li>
-<li>U+00A0 NO-BREAK SPACE: try adding one of: chinese-traditional, meroitic-cursive, old-sogdian, math, mongolian, mayan-numerals, nag-mundari, nushu, ottoman-siyaq-numbers, linear-a, inscriptional-pahlavi, elbasan, nyiakeng-puachue-hmong, bamum, khitan-small-script, kawi, pau-cin-hau, greek-ext, gothic, ol-onal, deseret, ahom, phoenician, telugu, adlam, duployan, garay, hanunoo, kayah-li, elymaic, toto, sogdian, old-uyghur, balinese, todhri, caucasian-albanian, batak, masaram-gondi, old-turkic, saurashtra, chakma, modi, tagalog, lisu, osmanya, anatolian-hieroglyphs, sharada, sora-sompeng, bhaiksuki, yezidi, oriya, phags-pa, kannada, vai, avestan, sinhala, gurung-khema, ugaritic, nabataean, ethiopic, kharoshthi, cypro-minoan, warang-citi, brahmi, thai, ol-chiki, carian, gujarati, gunjala-gondi, limbu, soyombo, mandaic, old-north-arabian, javanese, kaithi, tangut, palmyrene, dives-akuru, hatran, khojki, pahawh-hmong, dogra, thaana, tai-tham, chinese-simplified, takri, inscriptional-parthian, arabic, grantha, ogham, tibetan, meroitic-hieroglyphs, cham, tagbanwa, hebrew, lepcha, cypriot, tangsa, chinese-hongkong, imperial-aramaic, vithkuqi, vietnamese, linear-b, tirhuta, lycian, armenian, buhid, multani, glagolitic, zanabazar-square, old-italic, buginese, cuneiform, runic, bengali, cherokee, meetei-mayek, old-south-arabian, new-tai-lue, cyrillic, khudawadi, siddham, myanmar, japanese, coptic, devanagari, nko, meroitic, old-hungarian, lydian, georgian, tai-le, tamil-supplement, korean, canadian-aboriginal, osage, medefaidrin, shavian, znamenny, sunuwar, tai-viet, marchen, nandinagari, signwriting, lao, yi, mahajani, indic-siyaq-numbers, syloti-nagri, manichaean, greek, music, symbols, samaritan, kirat-rai, mende-kikakui, chorasmian, old-persian, psalter-pahlavi, khmer, tulu-tigalari, sundanese, kana-extended, braille, mro, symbols2, wancho, tifinagh, tamil, old-permic, newa, hanifi-rohingya, makasar, miao, malayalam, cyrillic-ext, syriac, bassa-vah, egyptian-hieroglyphs, gurmukhi, rejang</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, math, tifinagh, coptic</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, tai-le, old-permic, coptic, math, canadian-aboriginal, malayalam, todhri, syriac, duployan, hebrew</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
-<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
-<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+0327 COMBINING CEDILLA: try adding math</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
-<li>U+1EBC LATIN CAPITAL LETTER E WITH TILDE: try adding vietnamese</li>
-<li>U+1EBD LATIN SMALL LETTER E WITH TILDE: try adding vietnamese</li>
-<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+2030 PER MILLE SIGN: try adding adlam</li>
-<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
-<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
-<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
-<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
-<li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
-<li>U+220F N-ARY PRODUCT: try adding math</li>
-<li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+221A SQUARE ROOT: try adding math</li>
-<li>U+221E INFINITY: try adding math</li>
-<li>U+222B INTEGRAL: try adding math</li>
-<li>U+2248 ALMOST EQUAL TO: try adding math</li>
-<li>U+2260 NOT EQUAL TO: try adding math</li>
-<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
-<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
-
-                            
-                             [code: unreachable-subsetting]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FacultyGlyphic-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ca_Latn (Catalan)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-</tr>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ✅ PASS
-                            </span>
-
-                            <span class='details_text'>
-                            <p>OK.</p>
-
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    METADATA.pb: Designers are listed correctly on the Google Fonts catalog?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/designer_profiles&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FacultyGlyphic-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>It seems that Dylan Young is still not listed on the designers catalog. Please submit a photo and a link to a webpage where people can learn more about the work of this designer/typefoundry.</p>
-
-                            
-                             [code: profile-not-found]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                FacultyGlyphic-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    The font has tags in the GF Tags spreadsheet
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/has_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        FacultyGlyphic-Regular.ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family does not appear in tag spreadsheet.</p>
-
-                
-                 [code: no-tags]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                FacultyGlyphic-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Check if each glyph has the recommended amount of contours.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:contour_count&gt;</div>
 
 
 
@@ -1129,11 +425,35 @@ definitions.</p>
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
     
     Check math signs have the same width.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:math_signs_width&gt;</div>
 
 
 
@@ -1167,13 +487,13 @@ plus</p>
 <p>Width = 568:
 greater, less</p>
 <p>Width = 519:
-approxequal, logicalnot</p>
+logicalnot, approxequal</p>
 <p>Width = 524:
 multiply</p>
 <p>Width = 600:
 divide</p>
 <p>Width = 558:
-greaterequal, lessequal</p>
+lessequal, greaterequal</p>
 
                             
                              [code: width-outliers]
@@ -1198,30 +518,461 @@ greaterequal, lessequal</p>
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
         
             
-        
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    ⚠️⏩⏩⏩ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, todhri, malayalam, coptic, hebrew, tai-le, duployan, tifinagh, canadian-aboriginal, old-permic, math</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
+<li>U+1EBC LATIN CAPITAL LETTER E WITH TILDE: try adding vietnamese</li>
+<li>U+1EBD LATIN SMALL LETTER E WITH TILDE: try adding vietnamese</li>
+<li>U+2021 DOUBLE DAGGER: try adding adlam</li>
+<li>U+2030 PER MILLE SIGN: try adding adlam</li>
+<li>U+215B VULGAR FRACTION ONE EIGHTH: try adding symbols</li>
+<li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
+<li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
+<li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
+<li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
+<li>U+220F N-ARY PRODUCT: try adding math</li>
+<li>U+2211 N-ARY SUMMATION: try adding math</li>
+<li>U+221A SQUARE ROOT: try adding math</li>
+<li>U+221E INFINITY: try adding math</li>
+<li>U+222B INTEGRAL: try adding math</li>
+<li>U+2248 ALMOST EQUAL TO: try adding math</li>
+<li>U+2260 NOT EQUAL TO: try adding math</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code>, <code>menu</code></p>
+
+                            
+                             [code: unreachable-subsetting]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
-        
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
+<td align="left">ca_Latn (Catalan)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ŋ, ŋ, Ŧ, ŧ</td>
+<td align="left">nb_Latn (Norwegian Bokmål)</td>
+</tr>
+</tbody>
+</table>
+
+                            
+                             [code: warning-language-shaping]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩⏩⏩⏩⏩
+</span>
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
+
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
             
         
             
@@ -1239,17 +990,11 @@ greaterequal, lessequal</p>
 </span>
 
     
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Ensure dotted circle glyph is present and can attach marks.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:dotted_circle&gt;</div>
 
 
 
@@ -1292,11 +1037,17 @@ greaterequal, lessequal</p>
     
 
     
-        <h3>
+
+    
+
+    
+
+    
+    <h3>
     
     Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:soft_dotted&gt;</div>
 
 
 
@@ -1325,8 +1076,8 @@ greaterequal, lessequal</p>
                             <span class='details_text'>
                             <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Vute (Latn, 21,000 speakers), Igbo (Latn, 27,823,640 speakers), Lugbara (Latn, 2,200,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ekpeye (Latn, 226,000 speakers), Avokaya (Latn, 100,000 speakers), Mundani (Latn, 34,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Dan (Latn, 1,099,244 speakers), Sar (Latn, 500,000 speakers), Aghem (Latn, 38,843 speakers), Nateni (Latn, 100,000 speakers), Kom (Latn, 360,685 speakers), Dii (Latn, 71,000 speakers), Bafut (Latn, 158,146 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Ejagham (Latn, 120,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ebira (Latn, 2,200,000 speakers), Heiltsuk (Latn, 300 speakers), Belarusian (Cyrl, 10,064,517 speakers), Fur (Latn, 1,230,163 speakers), Navajo (Latn, 166,319 speakers), Bete-Bendi (Latn, 100,000 speakers), Yala (Latn, 200,000 speakers), Nzakara (Latn, 50,000 speakers), Kaska (Latn, 125 speakers), Ma’di (Latn, 584,000 speakers), Makaa (Latn, 221,000 speakers), Southern Kisi (Latn, 360,000 speakers), South Central Banda (Latn, 244,000 speakers), Cicipu (Latn, 44,000 speakers), Gulay (Latn, 250,478 speakers), Han (Latn, 6 speakers), Koonzime (Latn, 40,000 speakers), Mfumte (Latn, 79,000 speakers), Mango (Latn, 77,000 speakers), Zapotec (Latn, 490,000 speakers), Basaa (Latn, 332,940 speakers).</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Northern Tutchone (Latn, 85 speakers), Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers), Southern Tutchone (Latn, 65 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Ngbaka (Latn, 1,020,000 speakers), Cicipu (Latn, 44,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Southern Kisi (Latn, 360,000 speakers), Heiltsuk (Latn, 300 speakers), Longto (Latn, 5,000 speakers), Abua (Latn, 25,000 speakers), Aghem (Latn, 38,843 speakers), Zapotec (Latn, 490,000 speakers), Nzakara (Latn, 50,000 speakers), Nateni (Latn, 100,000 speakers), Vute (Latn, 21,000 speakers), Bafut (Latn, 158,146 speakers), Ikwere (Latn, 717,000 speakers), Kaska (Latn, 125 speakers), Dan (Latn, 1,099,244 speakers), Makaa (Latn, 221,000 speakers), Ejagham (Latn, 120,000 speakers), Igbo (Latn, 27,823,640 speakers), Ekpeye (Latn, 226,000 speakers), Gulay (Latn, 250,478 speakers), Sar (Latn, 500,000 speakers), Yala (Latn, 200,000 speakers), Ma’di (Latn, 584,000 speakers), Keliko (Latn, 63,000 speakers), Mfumte (Latn, 79,000 speakers), Navajo (Latn, 166,319 speakers), Koonzime (Latn, 40,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Han (Latn, 6 speakers), South Central Banda (Latn, 244,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Kom (Latn, 360,685 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Avokaya (Latn, 100,000 speakers), Mundani (Latn, 34,000 speakers), Fur (Latn, 1,230,163 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Dii (Latn, 71,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Basaa (Latn, 332,940 speakers), Ebira (Latn, 2,200,000 speakers), Lugbara (Latn, 2,200,000 speakers), Mango (Latn, 77,000 speakers), Western Krahn (Latn, 97,800 speakers).</p>
 
                             
                              [code: soft-dotted]
@@ -1337,6 +1088,541 @@ greaterequal, lessequal</p>
                 </ul>
             </div>
         </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️
+</span>
+
+    
+    <h3>
+    
+    Are there any misaligned on-curve points?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_alignment_miss&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* Aogonek (U+0104): X=749.0,Y=-260.0 (should be at descender -262?)
+
+* Ccedilla (U+00C7): X=457.0,Y=-260.0 (should be at descender -262?)
+
+* Eogonek (U+0118): X=509.0,Y=-260.0 (should be at descender -262?)
+
+* Iogonek (U+012E): X=168.0,Y=-260.0 (should be at descender -262?)
+
+* N (U+004E): X=609.0,Y=776.0 (should be at cap-height 775?)
+
+* N (U+004E): X=740.0,Y=776.0 (should be at cap-height 775?)
+
+* Nacute (U+0143): X=609.0,Y=776.0 (should be at cap-height 775?)
+
+* Nacute (U+0143): X=740.0,Y=776.0 (should be at cap-height 775?)
+
+* Ncaron (U+0147): X=609.0,Y=776.0 (should be at cap-height 775?)
+
+* Ncaron (U+0147): X=740.0,Y=776.0 (should be at cap-height 775?)
+
+* uni0145 (U+0145): X=609.0,Y=776.0 (should be at cap-height 775?)
+
+* uni0145 (U+0145): X=740.0,Y=776.0 (should be at cap-height 775?)
+
+* Ntilde (U+00D1): X=609.0,Y=776.0 (should be at cap-height 775?)
+
+* Ntilde (U+00D1): X=740.0,Y=776.0 (should be at cap-height 775?)
+
+* Oslash (U+00D8): X=312.5,Y=2.0 (should be at baseline 0?)
+
+* Oslash (U+00D8): X=544.5,Y=773.0 (should be at cap-height 775?)
+
+* S (U+0053): X=401.5,Y=776.5 (should be at cap-height 775?)
+
+* Sacute (U+015A): X=401.5,Y=776.5 (should be at cap-height 775?)
+
+* Scaron (U+0160): X=401.5,Y=776.5 (should be at cap-height 775?)
+
+* Scedilla (U+015E): X=401.5,Y=776.5 (should be at cap-height 775?)
+
+* Scedilla (U+015E): X=321.0,Y=-260.0 (should be at descender -262?)
+
+* Scircumflex (U+015C): X=401.5,Y=776.5 (should be at cap-height 775?)
+
+* uni0218 (U+0218): X=401.5,Y=776.5 (should be at cap-height 775?)
+
+* uni0162 (U+0162): X=352.0,Y=-260.0 (should be at descender -262?)
+
+* uni0145.loclMAH: X=609.0,Y=776.0 (should be at cap-height 775?)
+
+* uni0145.loclMAH: X=740.0,Y=776.0 (should be at cap-height 775?)
+
+* aogonek (U+0105): X=345.0,Y=-260.0 (should be at descender -262?)
+
+* b (U+0062): X=273.5,Y=-2.0 (should be at baseline 0?)
+
+* ccedilla (U+00E7): X=293.0,Y=-260.0 (should be at descender -262?)
+
+* eogonek (U+0119): X=345.0,Y=-260.0 (should be at descender -262?)
+
+* f (U+0066): X=342.5,Y=774.5 (should be at cap-height 775?)
+
+* g (U+0067): X=361.0,Y=549.0 (should be at x-height 550?)
+
+* h (U+0068): X=259.0,Y=552.0 (should be at x-height 550?)
+
+* iogonek (U+012F): X=159.0,Y=-260.0 (should be at descender -262?)
+
+* m (U+006D): X=255.0,Y=552.0 (should be at x-height 550?)
+
+* m (U+006D): X=581.0,Y=548.0 (should be at x-height 550?)
+
+* n (U+006E): X=259.0,Y=552.0 (should be at x-height 550?)
+
+* p (U+0070): X=263.5,Y=-2.0 (should be at baseline 0?)
+
+* p (U+0070): X=181.0,Y=-260.0 (should be at descender -262?)
+
+* p (U+0070): X=50.0,Y=-260.0 (should be at descender -262?)
+
+* thorn (U+00FE): X=263.5,Y=-2.0 (should be at baseline 0?)
+
+* thorn (U+00FE): X=181.0,Y=-260.0 (should be at descender -262?)
+
+* thorn (U+00FE): X=50.0,Y=-260.0 (should be at descender -262?)
+
+* q (U+0071): X=562.0,Y=-260.0 (should be at descender -262?)
+
+* q (U+0071): X=431.0,Y=-260.0 (should be at descender -262?)
+
+* s (U+0073): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* sacute (U+015B): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* scaron (U+0161): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* scedilla (U+015F): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* scedilla (U+015F): X=284.0,Y=1.0 (should be at baseline 0?)
+
+* scedilla (U+015F): X=220.0,Y=-260.0 (should be at descender -262?)
+
+* scircumflex (U+015D): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* uni0219 (U+0219): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* uni0163 (U+0163): X=242.0,Y=-260.0 (should be at descender -262?)
+
+* uni0163 (U+0163): X=242.0,Y=-260.0 (should be at descender -262?)
+
+* u (U+0075): X=373.0,Y=551.0 (should be at x-height 550?)
+
+* u (U+0075): X=486.0,Y=551.0 (should be at x-height 550?)
+
+* u (U+0075): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* u (U+0075): X=30.0,Y=551.0 (should be at x-height 550?)
+
+* u (U+0075): X=143.0,Y=551.0 (should be at x-height 550?)
+
+* uacute (U+00FA): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* ubreve (U+016D): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* ucircumflex (U+00FB): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* udieresis (U+00FC): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* ugrave (U+00F9): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* uhungarumlaut (U+0171): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* umacron (U+016B): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* uogonek (U+0173): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* uogonek (U+0173): X=377.0,Y=-260.0 (should be at descender -262?)
+
+* uring (U+016F): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* utilde (U+0169): X=308.0,Y=-1.0 (should be at baseline 0?)
+
+* three (U+0033): X=199.0,Y=-0.5 (should be at baseline 0?)
+
+* five (U+0035): X=219.5,Y=-0.5 (should be at baseline 0?)
+
+* three.tf: X=259.0,Y=-0.5 (should be at baseline 0?)
+
+* five.tf: X=254.5,Y=-0.5 (should be at baseline 0?)
+
+* asterisk (U+002A): X=140.0,Y=774.0 (should be at cap-height 775?)
+
+* asterisk (U+002A): X=234.0,Y=774.0 (should be at cap-height 775?)
+
+* slash (U+002F): X=147.0,Y=0.5 (should be at baseline 0?)
+
+* slash (U+002F): X=362.5,Y=774.5 (should be at cap-height 775?)
+
+* backslash (U+005C): X=362.5,Y=0.5 (should be at baseline 0?)
+
+* backslash (U+005C): X=147.0,Y=774.5 (should be at cap-height 775?)
+
+* braceleft (U+007B): X=187.0,Y=2.0 (should be at baseline 0?)
+
+* section (U+00A7): X=121.0,Y=0.5 (should be at baseline 0?)
+
+* uni20B4 (U+20B4): X=227.5,Y=775.5 (should be at cap-height 775?)
+
+* uni20B4 (U+20B4): X=443.0,Y=-1.0 (should be at baseline 0?)
+
+* sterling (U+00A3): X=406.5,Y=775.5 (should be at cap-height 775?)
+
+* plusminus (U+00B1): X=472.0,Y=-0.5 (should be at baseline 0?)
+
+* plusminus (U+00B1): X=138.5,Y=-0.5 (should be at baseline 0?)
+
+* integral (U+222B): X=389.0,Y=774.0 (should be at cap-height 775?)
+
+* uni0327 (U+0327): X=205.0,Y=-260.0 (should be at descender -262?)
+
+* uni0328 (U+0328): X=203.0,Y=-260.0 (should be at descender -262?)
+
+* cedilla (U+00B8): X=205.0,Y=-260.0 (should be at descender -262?)
+
+* ogonek (U+02DB): X=203.0,Y=-260.0 (should be at descender -262?)
+</code></pre>
+
+                            
+                             [code: found-misalignments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    Do any segments have colinear vectors?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_colinear_vectors&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have colinear vectors:</p>
+<pre><code>* ij (U+0133): L&lt;&lt;451.0,557.0&gt;--&lt;450.0,330.0&gt;&gt; -&gt; L&lt;&lt;450.0,330.0&gt;--&lt;450.0,-28.0&gt;&gt;
+
+* jcircumflex (U+0135): L&lt;&lt;236.0,557.0&gt;--&lt;235.0,330.0&gt;&gt; -&gt; L&lt;&lt;235.0,330.0&gt;--&lt;235.0,-28.0&gt;&gt;
+
+* notequal (U+2260): L&lt;&lt;410.0,361.0&gt;--&lt;400.0,343.0&gt;&gt; -&gt; L&lt;&lt;400.0,343.0&gt;--&lt;313.0,189.0&gt;&gt;
+
+* oslash (U+00F8): L&lt;&lt;167.0,153.0&gt;--&lt;195.0,187.0&gt;&gt; -&gt; L&lt;&lt;195.0,187.0&gt;--&lt;343.0,368.0&gt;&gt;
+
+* oslash (U+00F8): L&lt;&lt;423.0,343.0&gt;--&lt;265.0,142.0&gt;&gt; -&gt; L&lt;&lt;265.0,142.0&gt;--&lt;225.0,91.0&gt;&gt;
+
+* oslash (U+00F8): L&lt;&lt;464.0,394.0&gt;--&lt;423.0,343.0&gt;&gt; -&gt; L&lt;&lt;423.0,343.0&gt;--&lt;265.0,142.0&gt;&gt;
+
+* summation (U+2211): L&lt;&lt;352.0,321.0&gt;--&lt;337.0,298.0&gt;&gt; -&gt; L&lt;&lt;337.0,298.0&gt;--&lt;197.0,80.0&gt;&gt;
+
+* summation (U+2211): L&lt;&lt;361.0,336.0&gt;--&lt;352.0,321.0&gt;&gt; -&gt; L&lt;&lt;352.0,321.0&gt;--&lt;337.0,298.0&gt;&gt;
+
+* summation (U+2211): L&lt;&lt;394.0,389.0&gt;--&lt;361.0,336.0&gt;&gt; -&gt; L&lt;&lt;361.0,336.0&gt;--&lt;352.0,321.0&gt;&gt;
+
+* trademark (U+2122): L&lt;&lt;624.0,369.0&gt;--&lt;507.0,628.0&gt;&gt; -&gt; L&lt;&lt;507.0,628.0&gt;--&lt;506.0,630.0&gt;&gt;
+
+* trademark (U+2122): L&lt;&lt;791.0,633.0&gt;--&lt;789.0,628.0&gt;&gt; -&gt; L&lt;&lt;789.0,628.0&gt;--&lt;670.0,369.0&gt;&gt;
+
+* uni006A0301: L&lt;&lt;206.0,557.0&gt;--&lt;205.0,330.0&gt;&gt; -&gt; L&lt;&lt;205.0,330.0&gt;--&lt;205.0,-28.0&gt;&gt;
+
+* uni0237 (U+0237): L&lt;&lt;236.0,557.0&gt;--&lt;235.0,330.0&gt;&gt; -&gt; L&lt;&lt;235.0,330.0&gt;--&lt;235.0,-28.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-colinear-vectors]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Do outlines contain any semi-vertical or semi-horizontal lines?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_semi_vertical&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* dcroat (U+0111): L&lt;&lt;545.0,780.0&gt;--&lt;544.0,657.0&gt;&gt;
+
+* ij (U+0133): L&lt;&lt;451.0,557.0&gt;--&lt;450.0,330.0&gt;&gt;
+
+* integral (U+222B): L&lt;&lt;228.0,52.0&gt;--&lt;227.0,686.0&gt;&gt;
+
+* jcircumflex (U+0135): L&lt;&lt;236.0,557.0&gt;--&lt;235.0,330.0&gt;&gt;
+
+* uni006A0301: L&lt;&lt;206.0,557.0&gt;--&lt;205.0,330.0&gt;&gt;
+
+* uni0237 (U+0237): L&lt;&lt;236.0,557.0&gt;--&lt;235.0,330.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-semi-vertical]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Checking OS/2 achVendID.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vendor_id&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                FacultyGlyphic-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at <a href="https://www.microsoft.com/typography/links/vendorlist.aspx">https://www.microsoft.com/typography/links/vendorlist.aspx</a></p>
+
+                            
+                             [code: unknown]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
     
 
     

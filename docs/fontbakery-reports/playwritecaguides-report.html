@@ -258,6 +258,10 @@ ul {
 please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a>
 and remember to include a pointer to the repo and branch
 you're checking.</p>
+        
+        <h3>DEPRECATION WARNING</h3>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br><br></p>
+        
         <h2>Summary</h2>
     <table>
     <tr>
@@ -271,21 +275,21 @@ you're checking.</p>
     </tr>
     <tr>
         <td>0</td>
-        <td>1</td>
+        <td>0</td>
         <td>2</td>
-        <td>7</td>
-        <td>122</td>
-        <td>8</td>
-        <td>112</td>
+        <td>12</td>
+        <td>62</td>
+        <td>6</td>
+        <td>158</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
         <td>1%</td>
-        <td>3%</td>
-        <td>48%</td>
-        <td>3%</td>
-        <td>44%</td>
+        <td>5%</td>
+        <td>26%</td>
+        <td>2%</td>
+        <td>66%</td>
     </tr>
 </table>
         
@@ -310,264 +314,24 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.11.2</p>
+<p>FontBakery version: 0.13.0</p>
         
             
-                <h2>Google Fonts</h2>
+        
+            
+        
+            
+                <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    ☠🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️ℹ️
+    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
-
+    <h3>
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check METADATA.pb parse correctly.
+    Check accent of Lcaron, dcaron, lcaron, tcaron
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/parses&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-        ☠
-        PlaywriteCAGuides-Regular.ttf
-        
-        <ul>
-        
-            <li class='details_item'>
-                <span class='details_indicator'>
-                ☠ FATAL
-                </span>
-
-                <span class='details_text'>
-                <p>Family metadata at /home/runner/work/gf-dashboard/gf-dashboard/fonts/ofl/playwritecaguides failed to parse.
-TRACEBACK:
-47:1 : Message type &quot;google.fonts_public.FamilyProto&quot; has no field named &quot;primary_language&quot;.</p>
-
-                
-                 [code: parsing-error]
-                
-                </span>
-            </li>
-        
-        </ul>
-    
-
-</div>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check for codepoints not covered by METADATA subsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/metadata/unreachable_subsetting&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                PlaywriteCAGuides-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Could not parse metadata.pb file</p>
-
-                            
-                             [code: unparsable-metadata]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Shapes languages in all GF glyphsets.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyphsets/shape_languages&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:alt_caron&gt;</div>
 
 
 
@@ -594,32 +358,52 @@ TRACEBACK:
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">de_Latn (German)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-<tr>
-<td align="left">fi_Latn (Finnish)</td>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-</tr>
-<tr>
-<td align="left">fr_Latn (French)</td>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-</tr>
-</tbody>
-</table>
+                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
 
                             
-                             [code: warning-language-shaping]
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
                             
                             </span>
                         </li>
@@ -630,7 +414,7 @@ TRACEBACK:
                             </span>
 
                             <span class='details_text'>
-                            <p>OK.</p>
+                            <p>Looks good!</p>
 
                             
                             </span>
@@ -660,399 +444,11 @@ TRACEBACK:
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Check font follows the Google Fonts vertical metric schema
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vertical_metrics&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCAGuides-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>We recommend the absolute sum of the hhea metrics should be between 1.2-1.5x of the font's upm. This font has 1.923x (1923)</p>
-
-                            
-                             [code: bad-hhea-range]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCAGuides-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file does not have a 'meta' table.</p>
-
-                            
-                             [code: lacks-meta-table]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-            
-        
-            
-                <h2>Universal</h2>
-<span class='section__emoji'>
-    🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
-</span>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Do we have the latest version of FontBakery installed?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                🔥
-                PlaywriteCAGuides-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            🔥 FAIL
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Current FontBakery version is 0.11.2, while a newer 0.12.10 is already available. Please upgrade it with 'pip install -U fontbakery'</p>
-
-                            
-                             [code: outdated-fontbakery]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Font has **proper** whitespace glyph names?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCAGuides-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>Glyph 0x00A0 is called &quot;nbspace&quot;: Change to &quot;uni00A0&quot;</p>
-
-                            
-                             [code: not-recommended-00a0]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
-    
-    Glyph names are all valid?
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/valid_glyphnames&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                PlaywriteCAGuides-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyph names may be too long for some legacy systems which may expect a maximum 31-characters length limit:
-circumflexcomb_hookabovecomb.case</p>
-
-                            
-                             [code: legacy-long-names]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3>
+    <h3>
     
     Check if each glyph has the recommended amount of contours.
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:contour_count&gt;</div>
 
 
 
@@ -2570,11 +1966,49 @@ circumflexcomb_hookabovecomb.case</p>
     
 
     
-        <h3>
+
     
-    Check accent of Lcaron, dcaron, lcaron, tcaron (derived from com.google.fonts/check/alt_caron)
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check there are no overlapping path segments
 </h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/alt_caron:googlefonts&gt;</div>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:overlapping_path_segments&gt;</div>
 
 
 
@@ -2601,13 +2035,1368 @@ circumflexcomb_hookabovecomb.case</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+                            <p>The following glyphs have overlapping path segments:</p>
+<pre><code>* cnct.mod_n_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_n_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_c_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_f.ful: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_f.ful: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_f.ful: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_f.ful: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_h.lop: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_h.lop: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_h.lop: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_e_h.lop: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x.cnt: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x.cnt: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x.cnt: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x.cnt: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_v: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_v: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_v: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_v: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_o_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_v: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_v: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_v: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_v: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s.ful: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s.ful: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s.ful: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_s.ful: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_z.cnt: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_z.cnt: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_z.cnt: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_r_z.cnt: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_v: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_v: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_v: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_v: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_v_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_n_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_n_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_n_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_n_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_g_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_f_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_c_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_c_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_c_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_c_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_e_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_e_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_e_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_e_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_o_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_o_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_o_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_o_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_r_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_r_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_r_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_r_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_v_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_v_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_v_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_v_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_r: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_r: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_r: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_r: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_s.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_b_z.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_r: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_r: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_r: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_r: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_c_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_e_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_f_e.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_g_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_n_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_r: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_r: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_r: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_r: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_o_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_r: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_r: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_r: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_r: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_z_e.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_n_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_n_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_n_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_n_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_c_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_c_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_c_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_c_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_e_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_e_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_e_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_e_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_f_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_f_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_f_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_f_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_g_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_g_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_g_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_g_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_o_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_o_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_o_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_o_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_z_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_z_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_z_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_z_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_b_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_b_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_b_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_b_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_c_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_c_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_c_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_c_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_f_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_f_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_f_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_f_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_o_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_z: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_z: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_z: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.cnt_r_z: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_i: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_i: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_i: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_i: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_e.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_n.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_n.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_n.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_f_n.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.cnt: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.cnt: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.cnt: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_b_z.cnt: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_i: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_i: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_i: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_i: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_f_e.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_x: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_x: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_x: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_x: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e.mod: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e.mod: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e.mod: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_e.mod: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_z.cnt: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_z.cnt: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_z.cnt: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mlp_o_z.cnt: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_r: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_r: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_r: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_r: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_C_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_C_f: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_C_f: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_C_f: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.jmc_C_f: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_C_h: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_C_h: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_C_h: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.lop_C_h: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_b: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_b: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_b: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_b: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_n: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_n: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_n: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_n: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_o: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_o: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_o: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_o: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_t: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_t: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_t: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mod_C_t: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_C_i: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_C_i: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_C_i: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.mrr_C_i: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_e: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_e: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_e: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_e: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_s: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_s: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_s: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* cnct.ful_X_s: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_xful: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_xful: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_xful: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_xful: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_zcnt: L&lt;&lt;0.0,-496.0&gt;--&lt;0.0,-486.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_zcnt: L&lt;&lt;0.0,0.0&gt;--&lt;0.0,20.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_zcnt: L&lt;&lt;0.0,500.0&gt;--&lt;0.0,505.0&gt;&gt; has the same coordinates as a previous segment.
+
+* entr_zcnt: L&lt;&lt;0.0,996.0&gt;--&lt;0.0,1006.0&gt;&gt; has the same coordinates as a previous segment.
+</code></pre>
 
                             
-                             [code: decomposed-outline]
+                             [code: overlapping-path-segments]
                             
                             </span>
                         </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Glyph names are all valid?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:valid_glyphnames&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
@@ -2615,13 +3404,196 @@ circumflexcomb_hookabovecomb.case</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
+                            <p>The following glyph names may be too long for some legacy systems which may expect a maximum 31-characters length limit:
+circumflexcomb_hookabovecomb.case</p>
 
                             
-                             [code: decomposed-outline]
+                             [code: legacy-long-names]
                             
                             </span>
                         </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+                <h2>Metadata Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩⏩⏩
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    METADATA.pb should contain at least &#34;menu&#34; and &#34;latin&#34; subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/menu_and_latin&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Subsets &quot;menu&quot; and &quot;latin&quot; are mandatory, but METADATA.pb is missing &quot;latin&quot;.</p>
+
+                            
+                             [code: missing]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check for codepoints not covered by METADATA subsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/metadata/unreachable_subsetting&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
@@ -2629,13 +3601,346 @@ circumflexcomb_hookabovecomb.case</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+                            <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+0100 LATIN CAPITAL LETTER A WITH MACRON: try adding latin-ext</li>
+<li>U+0101 LATIN SMALL LETTER A WITH MACRON: try adding latin-ext</li>
+<li>U+0102 LATIN CAPITAL LETTER A WITH BREVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0103 LATIN SMALL LETTER A WITH BREVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0104 LATIN CAPITAL LETTER A WITH OGONEK: try adding latin-ext</li>
+<li>U+0105 LATIN SMALL LETTER A WITH OGONEK: try adding latin-ext</li>
+<li>U+0106 LATIN CAPITAL LETTER C WITH ACUTE: try adding latin-ext</li>
+<li>U+0107 LATIN SMALL LETTER C WITH ACUTE: try adding latin-ext</li>
+<li>U+0108 LATIN CAPITAL LETTER C WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0109 LATIN SMALL LETTER C WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+010A LATIN CAPITAL LETTER C WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+010B LATIN SMALL LETTER C WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+010C LATIN CAPITAL LETTER C WITH CARON: try adding latin-ext</li>
+<li>U+010D LATIN SMALL LETTER C WITH CARON: try adding latin-ext</li>
+<li>U+010E LATIN CAPITAL LETTER D WITH CARON: try adding latin-ext</li>
+<li>U+010F LATIN SMALL LETTER D WITH CARON: try adding latin-ext</li>
+<li>U+0110 LATIN CAPITAL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0112 LATIN CAPITAL LETTER E WITH MACRON: try adding latin-ext</li>
+<li>U+0113 LATIN SMALL LETTER E WITH MACRON: try adding latin-ext</li>
+<li>U+0114 LATIN CAPITAL LETTER E WITH BREVE: try adding latin-ext</li>
+<li>U+0115 LATIN SMALL LETTER E WITH BREVE: try adding latin-ext</li>
+<li>U+0116 LATIN CAPITAL LETTER E WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0117 LATIN SMALL LETTER E WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0118 LATIN CAPITAL LETTER E WITH OGONEK: try adding latin-ext</li>
+<li>U+0119 LATIN SMALL LETTER E WITH OGONEK: try adding latin-ext</li>
+<li>U+011A LATIN CAPITAL LETTER E WITH CARON: try adding latin-ext</li>
+<li>U+011B LATIN SMALL LETTER E WITH CARON: try adding latin-ext</li>
+<li>U+011C LATIN CAPITAL LETTER G WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+011D LATIN SMALL LETTER G WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+011E LATIN CAPITAL LETTER G WITH BREVE: try adding latin-ext</li>
+<li>U+011F LATIN SMALL LETTER G WITH BREVE: try adding latin-ext</li>
+<li>U+0120 LATIN CAPITAL LETTER G WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0121 LATIN SMALL LETTER G WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0122 LATIN CAPITAL LETTER G WITH CEDILLA: try adding latin-ext</li>
+<li>U+0123 LATIN SMALL LETTER G WITH CEDILLA: try adding latin-ext</li>
+<li>U+0124 LATIN CAPITAL LETTER H WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0125 LATIN SMALL LETTER H WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0126 LATIN CAPITAL LETTER H WITH STROKE: try adding latin-ext</li>
+<li>U+0127 LATIN SMALL LETTER H WITH STROKE: try adding latin-ext</li>
+<li>U+0128 LATIN CAPITAL LETTER I WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0129 LATIN SMALL LETTER I WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+012A LATIN CAPITAL LETTER I WITH MACRON: try adding latin-ext</li>
+<li>U+012B LATIN SMALL LETTER I WITH MACRON: try adding latin-ext</li>
+<li>U+012C LATIN CAPITAL LETTER I WITH BREVE: try adding latin-ext</li>
+<li>U+012D LATIN SMALL LETTER I WITH BREVE: try adding latin-ext</li>
+<li>U+012E LATIN CAPITAL LETTER I WITH OGONEK: try adding latin-ext</li>
+<li>U+012F LATIN SMALL LETTER I WITH OGONEK: try adding latin-ext</li>
+<li>U+0130 LATIN CAPITAL LETTER I WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+0132 LATIN CAPITAL LIGATURE IJ: try adding latin-ext</li>
+<li>U+0133 LATIN SMALL LIGATURE IJ: try adding latin-ext</li>
+<li>U+0134 LATIN CAPITAL LETTER J WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0135 LATIN SMALL LETTER J WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0136 LATIN CAPITAL LETTER K WITH CEDILLA: try adding latin-ext</li>
+<li>U+0137 LATIN SMALL LETTER K WITH CEDILLA: try adding latin-ext</li>
+<li>U+0139 LATIN CAPITAL LETTER L WITH ACUTE: try adding latin-ext</li>
+<li>U+013A LATIN SMALL LETTER L WITH ACUTE: try adding latin-ext</li>
+<li>U+013B LATIN CAPITAL LETTER L WITH CEDILLA: try adding latin-ext</li>
+<li>U+013C LATIN SMALL LETTER L WITH CEDILLA: try adding latin-ext</li>
+<li>U+013D LATIN CAPITAL LETTER L WITH CARON: try adding latin-ext</li>
+<li>U+013E LATIN SMALL LETTER L WITH CARON: try adding latin-ext</li>
+<li>U+013F LATIN CAPITAL LETTER L WITH MIDDLE DOT: try adding latin-ext</li>
+<li>U+0140 LATIN SMALL LETTER L WITH MIDDLE DOT: try adding latin-ext</li>
+<li>U+0141 LATIN CAPITAL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0142 LATIN SMALL LETTER L WITH STROKE: try adding latin-ext</li>
+<li>U+0143 LATIN CAPITAL LETTER N WITH ACUTE: try adding latin-ext</li>
+<li>U+0144 LATIN SMALL LETTER N WITH ACUTE: try adding latin-ext</li>
+<li>U+0145 LATIN CAPITAL LETTER N WITH CEDILLA: try adding latin-ext</li>
+<li>U+0146 LATIN SMALL LETTER N WITH CEDILLA: try adding latin-ext</li>
+<li>U+0147 LATIN CAPITAL LETTER N WITH CARON: try adding latin-ext</li>
+<li>U+0148 LATIN SMALL LETTER N WITH CARON: try adding latin-ext</li>
+<li>U+014A LATIN CAPITAL LETTER ENG: try adding latin-ext</li>
+<li>U+014B LATIN SMALL LETTER ENG: try adding latin-ext</li>
+<li>U+014C LATIN CAPITAL LETTER O WITH MACRON: try adding latin-ext</li>
+<li>U+014D LATIN SMALL LETTER O WITH MACRON: try adding latin-ext</li>
+<li>U+014E LATIN CAPITAL LETTER O WITH BREVE: try adding latin-ext</li>
+<li>U+014F LATIN SMALL LETTER O WITH BREVE: try adding latin-ext</li>
+<li>U+0150 LATIN CAPITAL LETTER O WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0151 LATIN SMALL LETTER O WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0154 LATIN CAPITAL LETTER R WITH ACUTE: try adding latin-ext</li>
+<li>U+0155 LATIN SMALL LETTER R WITH ACUTE: try adding latin-ext</li>
+<li>U+0156 LATIN CAPITAL LETTER R WITH CEDILLA: try adding latin-ext</li>
+<li>U+0157 LATIN SMALL LETTER R WITH CEDILLA: try adding latin-ext</li>
+<li>U+0158 LATIN CAPITAL LETTER R WITH CARON: try adding latin-ext</li>
+<li>U+0159 LATIN SMALL LETTER R WITH CARON: try adding latin-ext</li>
+<li>U+015A LATIN CAPITAL LETTER S WITH ACUTE: try adding latin-ext</li>
+<li>U+015B LATIN SMALL LETTER S WITH ACUTE: try adding latin-ext</li>
+<li>U+015C LATIN CAPITAL LETTER S WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+015D LATIN SMALL LETTER S WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+015E LATIN CAPITAL LETTER S WITH CEDILLA: try adding latin-ext</li>
+<li>U+015F LATIN SMALL LETTER S WITH CEDILLA: try adding latin-ext</li>
+<li>U+0160 LATIN CAPITAL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0161 LATIN SMALL LETTER S WITH CARON: try adding latin-ext</li>
+<li>U+0162 LATIN CAPITAL LETTER T WITH CEDILLA: try adding latin-ext</li>
+<li>U+0163 LATIN SMALL LETTER T WITH CEDILLA: try adding latin-ext</li>
+<li>U+0164 LATIN CAPITAL LETTER T WITH CARON: try adding latin-ext</li>
+<li>U+0165 LATIN SMALL LETTER T WITH CARON: try adding latin-ext</li>
+<li>U+0166 LATIN CAPITAL LETTER T WITH STROKE: try adding latin-ext</li>
+<li>U+0167 LATIN SMALL LETTER T WITH STROKE: try adding latin-ext</li>
+<li>U+0168 LATIN CAPITAL LETTER U WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0169 LATIN SMALL LETTER U WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+016A LATIN CAPITAL LETTER U WITH MACRON: try adding latin-ext</li>
+<li>U+016B LATIN SMALL LETTER U WITH MACRON: try adding latin-ext</li>
+<li>U+016C LATIN CAPITAL LETTER U WITH BREVE: try adding latin-ext</li>
+<li>U+016D LATIN SMALL LETTER U WITH BREVE: try adding latin-ext</li>
+<li>U+016E LATIN CAPITAL LETTER U WITH RING ABOVE: try adding latin-ext</li>
+<li>U+016F LATIN SMALL LETTER U WITH RING ABOVE: try adding latin-ext</li>
+<li>U+0170 LATIN CAPITAL LETTER U WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0171 LATIN SMALL LETTER U WITH DOUBLE ACUTE: try adding latin-ext</li>
+<li>U+0172 LATIN CAPITAL LETTER U WITH OGONEK: try adding latin-ext</li>
+<li>U+0173 LATIN SMALL LETTER U WITH OGONEK: try adding latin-ext</li>
+<li>U+0174 LATIN CAPITAL LETTER W WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0175 LATIN SMALL LETTER W WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0176 LATIN CAPITAL LETTER Y WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0177 LATIN SMALL LETTER Y WITH CIRCUMFLEX: try adding latin-ext</li>
+<li>U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS: try adding latin-ext</li>
+<li>U+0179 LATIN CAPITAL LETTER Z WITH ACUTE: try adding latin-ext</li>
+<li>U+017A LATIN SMALL LETTER Z WITH ACUTE: try adding latin-ext</li>
+<li>U+017B LATIN CAPITAL LETTER Z WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+017C LATIN SMALL LETTER Z WITH DOT ABOVE: try adding latin-ext</li>
+<li>U+017D LATIN CAPITAL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+017E LATIN SMALL LETTER Z WITH CARON: try adding latin-ext</li>
+<li>U+01A0 LATIN CAPITAL LETTER O WITH HORN: try adding one of: vietnamese, latin-ext</li>
+<li>U+01A1 LATIN SMALL LETTER O WITH HORN: try adding one of: vietnamese, latin-ext</li>
+<li>U+01AF LATIN CAPITAL LETTER U WITH HORN: try adding one of: vietnamese, latin-ext</li>
+<li>U+01B0 LATIN SMALL LETTER U WITH HORN: try adding one of: vietnamese, latin-ext</li>
+<li>U+01CD LATIN CAPITAL LETTER A WITH CARON: try adding latin-ext</li>
+<li>U+01CE LATIN SMALL LETTER A WITH CARON: try adding latin-ext</li>
+<li>U+01CF LATIN CAPITAL LETTER I WITH CARON: try adding latin-ext</li>
+<li>U+01D0 LATIN SMALL LETTER I WITH CARON: try adding latin-ext</li>
+<li>U+01D1 LATIN CAPITAL LETTER O WITH CARON: try adding latin-ext</li>
+<li>U+01D2 LATIN SMALL LETTER O WITH CARON: try adding latin-ext</li>
+<li>U+01D3 LATIN CAPITAL LETTER U WITH CARON: try adding latin-ext</li>
+<li>U+01D4 LATIN SMALL LETTER U WITH CARON: try adding latin-ext</li>
+<li>U+01D5 LATIN CAPITAL LETTER U WITH DIAERESIS AND MACRON: try adding latin-ext</li>
+<li>U+01D6 LATIN SMALL LETTER U WITH DIAERESIS AND MACRON: try adding latin-ext</li>
+<li>U+01D7 LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE: try adding latin-ext</li>
+<li>U+01D8 LATIN SMALL LETTER U WITH DIAERESIS AND ACUTE: try adding latin-ext</li>
+<li>U+01D9 LATIN CAPITAL LETTER U WITH DIAERESIS AND CARON: try adding latin-ext</li>
+<li>U+01DA LATIN SMALL LETTER U WITH DIAERESIS AND CARON: try adding latin-ext</li>
+<li>U+01DB LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE: try adding latin-ext</li>
+<li>U+01DC LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE: try adding latin-ext</li>
+<li>U+01FC LATIN CAPITAL LETTER AE WITH ACUTE: try adding latin-ext</li>
+<li>U+01FD LATIN SMALL LETTER AE WITH ACUTE: try adding latin-ext</li>
+<li>U+0218 LATIN CAPITAL LETTER S WITH COMMA BELOW: try adding latin-ext</li>
+<li>U+0219 LATIN SMALL LETTER S WITH COMMA BELOW: try adding latin-ext</li>
+<li>U+021A LATIN CAPITAL LETTER T WITH COMMA BELOW: try adding latin-ext</li>
+<li>U+021B LATIN SMALL LETTER T WITH COMMA BELOW: try adding latin-ext</li>
+<li>U+0237 LATIN SMALL LETTER DOTLESS J: try adding latin-ext</li>
+<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh, latin-ext</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: try adding latin-ext</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, tifinagh, math, coptic</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: todhri, old-permic, hebrew, math, malayalam, duployan, tai-le, tifinagh, syriac, canadian-aboriginal, coptic</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
+<li>U+031B COMBINING HORN: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
+<li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
+<li>U+0338 COMBINING LONG SOLIDUS OVERLAY: try adding math</li>
+<li>U+1E80 LATIN CAPITAL LETTER W WITH GRAVE: try adding latin-ext</li>
+<li>U+1E81 LATIN SMALL LETTER W WITH GRAVE: try adding latin-ext</li>
+<li>U+1E82 LATIN CAPITAL LETTER W WITH ACUTE: try adding latin-ext</li>
+<li>U+1E83 LATIN SMALL LETTER W WITH ACUTE: try adding latin-ext</li>
+<li>U+1E84 LATIN CAPITAL LETTER W WITH DIAERESIS: try adding latin-ext</li>
+<li>U+1E85 LATIN SMALL LETTER W WITH DIAERESIS: try adding latin-ext</li>
+<li>U+1E9E LATIN CAPITAL LETTER SHARP S: try adding latin-ext</li>
+<li>U+1EA0 LATIN CAPITAL LETTER A WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EA1 LATIN SMALL LETTER A WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EA2 LATIN CAPITAL LETTER A WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EA3 LATIN SMALL LETTER A WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EA4 LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE: try adding vietnamese</li>
+<li>U+1EA5 LATIN SMALL LETTER A WITH CIRCUMFLEX AND ACUTE: try adding vietnamese</li>
+<li>U+1EA6 LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND GRAVE: try adding vietnamese</li>
+<li>U+1EA7 LATIN SMALL LETTER A WITH CIRCUMFLEX AND GRAVE: try adding vietnamese</li>
+<li>U+1EA8 LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EA9 LATIN SMALL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EAA LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND TILDE: try adding vietnamese</li>
+<li>U+1EAB LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE: try adding vietnamese</li>
+<li>U+1EAC LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EAD LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EAE LATIN CAPITAL LETTER A WITH BREVE AND ACUTE: try adding vietnamese</li>
+<li>U+1EAF LATIN SMALL LETTER A WITH BREVE AND ACUTE: try adding vietnamese</li>
+<li>U+1EB0 LATIN CAPITAL LETTER A WITH BREVE AND GRAVE: try adding vietnamese</li>
+<li>U+1EB1 LATIN SMALL LETTER A WITH BREVE AND GRAVE: try adding vietnamese</li>
+<li>U+1EB2 LATIN CAPITAL LETTER A WITH BREVE AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EB3 LATIN SMALL LETTER A WITH BREVE AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EB4 LATIN CAPITAL LETTER A WITH BREVE AND TILDE: try adding vietnamese</li>
+<li>U+1EB5 LATIN SMALL LETTER A WITH BREVE AND TILDE: try adding vietnamese</li>
+<li>U+1EB6 LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EB7 LATIN SMALL LETTER A WITH BREVE AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EB8 LATIN CAPITAL LETTER E WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EB9 LATIN SMALL LETTER E WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EBA LATIN CAPITAL LETTER E WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EBB LATIN SMALL LETTER E WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EBC LATIN CAPITAL LETTER E WITH TILDE: try adding vietnamese</li>
+<li>U+1EBD LATIN SMALL LETTER E WITH TILDE: try adding vietnamese</li>
+<li>U+1EBE LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND ACUTE: try adding vietnamese</li>
+<li>U+1EBF LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE: try adding vietnamese</li>
+<li>U+1EC0 LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND GRAVE: try adding vietnamese</li>
+<li>U+1EC1 LATIN SMALL LETTER E WITH CIRCUMFLEX AND GRAVE: try adding vietnamese</li>
+<li>U+1EC2 LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EC3 LATIN SMALL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EC4 LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND TILDE: try adding vietnamese</li>
+<li>U+1EC5 LATIN SMALL LETTER E WITH CIRCUMFLEX AND TILDE: try adding vietnamese</li>
+<li>U+1EC6 LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EC7 LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EC8 LATIN CAPITAL LETTER I WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EC9 LATIN SMALL LETTER I WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1ECA LATIN CAPITAL LETTER I WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ECB LATIN SMALL LETTER I WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ECC LATIN CAPITAL LETTER O WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ECD LATIN SMALL LETTER O WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1ECE LATIN CAPITAL LETTER O WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1ECF LATIN SMALL LETTER O WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1ED0 LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE: try adding vietnamese</li>
+<li>U+1ED1 LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE: try adding vietnamese</li>
+<li>U+1ED2 LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND GRAVE: try adding vietnamese</li>
+<li>U+1ED3 LATIN SMALL LETTER O WITH CIRCUMFLEX AND GRAVE: try adding vietnamese</li>
+<li>U+1ED4 LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1ED5 LATIN SMALL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1ED6 LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND TILDE: try adding vietnamese</li>
+<li>U+1ED7 LATIN SMALL LETTER O WITH CIRCUMFLEX AND TILDE: try adding vietnamese</li>
+<li>U+1ED8 LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1ED9 LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EDA LATIN CAPITAL LETTER O WITH HORN AND ACUTE: try adding vietnamese</li>
+<li>U+1EDB LATIN SMALL LETTER O WITH HORN AND ACUTE: try adding vietnamese</li>
+<li>U+1EDC LATIN CAPITAL LETTER O WITH HORN AND GRAVE: try adding vietnamese</li>
+<li>U+1EDD LATIN SMALL LETTER O WITH HORN AND GRAVE: try adding vietnamese</li>
+<li>U+1EDE LATIN CAPITAL LETTER O WITH HORN AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EDF LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EE0 LATIN CAPITAL LETTER O WITH HORN AND TILDE: try adding vietnamese</li>
+<li>U+1EE1 LATIN SMALL LETTER O WITH HORN AND TILDE: try adding vietnamese</li>
+<li>U+1EE2 LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EE3 LATIN SMALL LETTER O WITH HORN AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EE4 LATIN CAPITAL LETTER U WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EE5 LATIN SMALL LETTER U WITH DOT BELOW: try adding vietnamese</li>
+<li>U+1EE6 LATIN CAPITAL LETTER U WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EE7 LATIN SMALL LETTER U WITH HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EE8 LATIN CAPITAL LETTER U WITH HORN AND ACUTE: try adding vietnamese</li>
+<li>U+1EE9 LATIN SMALL LETTER U WITH HORN AND ACUTE: try adding vietnamese</li>
+<li>U+1EEA LATIN CAPITAL LETTER U WITH HORN AND GRAVE: try adding vietnamese</li>
+<li>U+1EEB LATIN SMALL LETTER U WITH HORN AND GRAVE: try adding vietnamese</li>
+<li>U+1EEC LATIN CAPITAL LETTER U WITH HORN AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EED LATIN SMALL LETTER U WITH HORN AND HOOK ABOVE: try adding vietnamese</li>
+<li>U+1EEE LATIN CAPITAL LETTER U WITH HORN AND TILDE: try adding vietnamese</li>
+<li>U+1EEF LATIN SMALL LETTER U WITH HORN AND TILDE: try adding vietnamese</li>
+<li>U+1EF0 LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EF1 LATIN SMALL LETTER U WITH HORN AND DOT BELOW: try adding vietnamese</li>
+<li>U+1EF2 LATIN CAPITAL LETTER Y WITH GRAVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF3 LATIN SMALL LETTER Y WITH GRAVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF4 LATIN CAPITAL LETTER Y WITH DOT BELOW: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF5 LATIN SMALL LETTER Y WITH DOT BELOW: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF6 LATIN CAPITAL LETTER Y WITH HOOK ABOVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF7 LATIN SMALL LETTER Y WITH HOOK ABOVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF8 LATIN CAPITAL LETTER Y WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+1EF9 LATIN SMALL LETTER Y WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+220F N-ARY PRODUCT: try adding math</li>
+<li>U+222B INTEGRAL: try adding math</li>
+<li>U+2248 ALMOST EQUAL TO: try adding math</li>
+<li>U+2260 NOT EQUAL TO: try adding math</li>
+<li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
+<li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: bengali, marchen, gujarati, telugu, symbols, buhid, syloti-nagri, armenian, nko, khudawadi, bassa-vah, syriac, gurmukhi, balinese, caucasian-albanian, tibetan, kharoshthi, elbasan, tifinagh, masaram-gondi, khmer, javanese, dogra, rejang, bhaiksuki, canadian-aboriginal, miao, thai, zanabazar-square, tai-viet, sharada, malayalam, lepcha, osage, tirhuta, yi, mandaic, tagbanwa, hebrew, duployan, newa, oriya, gunjala-gondi, warang-citi, adlam, wancho, takri, hanunoo, siddham, mongolian, sundanese, tagalog, manichaean, sinhala, psalter-pahlavi, limbu, kayah-li, myanmar, mahajani, kannada, brahmi, grantha, old-permic, sogdian, pahawh-hmong, devanagari, khojki, ahom, music, tai-tham, mende-kikakui, kaithi, modi, cham, new-tai-lue, thaana, math, tai-le, coptic, meetei-mayek, saurashtra, chakma, lao, phags-pa, buginese, tamil, soyombo, batak, hanifi-rohingya</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code></p>
 
                             
-                             [code: decomposed-outline]
+                             [code: unreachable-subsetting]
                             
                             </span>
                         </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    ⚠️
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
@@ -2643,22 +3948,1723 @@ circumflexcomb_hookabovecomb.case</p>
                             </span>
 
                             <span class='details_text'>
-                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
+                            <p>GF_Phonetics_SinoExt glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">WARN messages</th>
+<th align="left">Languages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: ſ</td>
+<td align="left">de_Latn (German) and fr_Latn (French)</td>
+</tr>
+<tr>
+<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
+<td align="left">fi_Latn (Finnish)</td>
+</tr>
+</tbody>
+</table>
 
                             
-                             [code: decomposed-outline]
+                             [code: warning-language-shaping]
                             
                             </span>
                         </li>
                 
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+            
+        
+            
+                <h2>Description Checks</h2>
+<span class='section__emoji'>
+    🔥⚠️⏩⏩⏩⏩
+</span>
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html should end in a linebreak.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/eof_linebreak&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ✅ PASS
+                            ⚠️ WARN
                             </span>
 
                             <span class='details_text'>
-                            <p>Looks good!</p>
+                            <p>The last characther on DESCRIPTION.en_us.html is not a line-break. Please add it.</p>
 
+                            
+                             [code: missing-eof-linebreak]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    DESCRIPTION.en_us.html must have more than 200 bytes.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/description/min_length&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                🔥
+                METADATA.pb
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            🔥 FAIL
+                            </span>
+
+                            <span class='details_text'>
+                            <p>DESCRIPTION.en_us.html must have size larger than 200 bytes.</p>
+
+                            
+                             [code: too-short]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <h2>Outline Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⚠️
+</span>
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check the direction of the outermost contour in each glyph
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_direction&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have a counter-clockwise outer contour:</p>
+<pre><code>* cnct.cnt_b_z has a counter-clockwise outer contour
+
+* cnct.cnt_b_z has a counter-clockwise outer contour
+
+* cnct.cnt_b_z has a counter-clockwise outer contour
+
+* cnct.cnt_c_z has a counter-clockwise outer contour
+
+* cnct.cnt_c_z has a counter-clockwise outer contour
+
+* cnct.cnt_f_z has a counter-clockwise outer contour
+
+* cnct.cnt_o_n has a counter-clockwise outer contour
+
+* cnct.cnt_o_n has a counter-clockwise outer contour
+
+* cnct.cnt_o_n has a counter-clockwise outer contour
+
+* cnct.cnt_o_z has a counter-clockwise outer contour
+
+* cnct.cnt_o_z has a counter-clockwise outer contour
+
+* cnct.cnt_o_z has a counter-clockwise outer contour
+
+* cnct.cnt_r_s has a counter-clockwise outer contour
+
+* cnct.cnt_r_s has a counter-clockwise outer contour
+
+* cnct.cnt_r_s has a counter-clockwise outer contour
+
+* cnct.cnt_r_x has a counter-clockwise outer contour
+
+* cnct.cnt_r_x has a counter-clockwise outer contour
+
+* cnct.cnt_r_x has a counter-clockwise outer contour
+
+* cnct.cnt_r_z has a counter-clockwise outer contour
+
+* cnct.cnt_r_z has a counter-clockwise outer contour
+
+* cnct.cnt_r_z has a counter-clockwise outer contour
+
+* cnct.ful_C_e has a counter-clockwise outer contour
+
+* cnct.ful_C_e has a counter-clockwise outer contour
+
+* cnct.ful_C_e has a counter-clockwise outer contour
+
+* cnct.ful_C_f has a counter-clockwise outer contour
+
+* cnct.ful_C_f has a counter-clockwise outer contour
+
+* cnct.ful_C_r has a counter-clockwise outer contour
+
+* cnct.ful_C_r has a counter-clockwise outer contour
+
+* cnct.ful_C_r has a counter-clockwise outer contour
+
+* cnct.ful_C_s has a counter-clockwise outer contour
+
+* cnct.ful_C_s has a counter-clockwise outer contour
+
+* cnct.ful_C_s has a counter-clockwise outer contour
+
+* cnct.ful_X_e has a counter-clockwise outer contour
+
+* cnct.ful_X_e has a counter-clockwise outer contour
+
+* cnct.ful_X_e has a counter-clockwise outer contour
+
+* cnct.ful_X_s has a counter-clockwise outer contour
+
+* cnct.ful_X_s has a counter-clockwise outer contour
+
+* cnct.ful_X_s has a counter-clockwise outer contour
+
+* cnct.ful_b_b has a counter-clockwise outer contour
+
+* cnct.ful_b_b has a counter-clockwise outer contour
+
+* cnct.ful_b_b has a counter-clockwise outer contour
+
+* cnct.ful_b_n has a counter-clockwise outer contour
+
+* cnct.ful_b_n has a counter-clockwise outer contour
+
+* cnct.ful_b_n has a counter-clockwise outer contour
+
+* cnct.ful_b_o has a counter-clockwise outer contour
+
+* cnct.ful_b_o has a counter-clockwise outer contour
+
+* cnct.ful_b_o has a counter-clockwise outer contour
+
+* cnct.ful_b_o has a counter-clockwise outer contour
+
+* cnct.ful_b_r has a counter-clockwise outer contour
+
+* cnct.ful_b_r has a counter-clockwise outer contour
+
+* cnct.ful_b_r has a counter-clockwise outer contour
+
+* cnct.ful_b_r has a counter-clockwise outer contour
+
+* cnct.ful_b_s has a counter-clockwise outer contour
+
+* cnct.ful_b_s has a counter-clockwise outer contour
+
+* cnct.ful_b_s has a counter-clockwise outer contour
+
+* cnct.ful_b_s has a counter-clockwise outer contour
+
+* cnct.ful_b_s.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_s.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_s.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_s.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_t has a counter-clockwise outer contour
+
+* cnct.ful_b_t has a counter-clockwise outer contour
+
+* cnct.ful_b_t has a counter-clockwise outer contour
+
+* cnct.ful_b_x has a counter-clockwise outer contour
+
+* cnct.ful_b_x has a counter-clockwise outer contour
+
+* cnct.ful_b_x has a counter-clockwise outer contour
+
+* cnct.ful_b_z has a counter-clockwise outer contour
+
+* cnct.ful_b_z has a counter-clockwise outer contour
+
+* cnct.ful_b_z has a counter-clockwise outer contour
+
+* cnct.ful_b_z has a counter-clockwise outer contour
+
+* cnct.ful_b_z.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_z.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_z.mod has a counter-clockwise outer contour
+
+* cnct.ful_b_z.mod has a counter-clockwise outer contour
+
+* cnct.ful_c_e has a counter-clockwise outer contour
+
+* cnct.ful_c_e has a counter-clockwise outer contour
+
+* cnct.ful_c_e has a counter-clockwise outer contour
+
+* cnct.ful_c_f has a counter-clockwise outer contour
+
+* cnct.ful_c_f has a counter-clockwise outer contour
+
+* cnct.ful_c_r has a counter-clockwise outer contour
+
+* cnct.ful_c_r has a counter-clockwise outer contour
+
+* cnct.ful_c_r has a counter-clockwise outer contour
+
+* cnct.ful_c_s has a counter-clockwise outer contour
+
+* cnct.ful_c_s has a counter-clockwise outer contour
+
+* cnct.ful_c_s has a counter-clockwise outer contour
+
+* cnct.ful_e_b has a counter-clockwise outer contour
+
+* cnct.ful_e_b has a counter-clockwise outer contour
+
+* cnct.ful_e_e has a counter-clockwise outer contour
+
+* cnct.ful_e_e has a counter-clockwise outer contour
+
+* cnct.ful_e_f has a counter-clockwise outer contour
+
+* cnct.ful_e_f has a counter-clockwise outer contour
+
+* cnct.ful_e_n has a counter-clockwise outer contour
+
+* cnct.ful_e_n has a counter-clockwise outer contour
+
+* cnct.ful_e_o has a counter-clockwise outer contour
+
+* cnct.ful_e_o has a counter-clockwise outer contour
+
+* cnct.ful_e_s has a counter-clockwise outer contour
+
+* cnct.ful_e_s has a counter-clockwise outer contour
+
+* cnct.ful_e_t has a counter-clockwise outer contour
+
+* cnct.ful_e_t has a counter-clockwise outer contour
+
+* cnct.ful_f_e has a counter-clockwise outer contour
+
+* cnct.ful_f_e has a counter-clockwise outer contour
+
+* cnct.ful_f_e.mod has a counter-clockwise outer contour
+
+* cnct.ful_f_e.mod has a counter-clockwise outer contour
+
+* cnct.ful_f_f has a counter-clockwise outer contour
+
+* cnct.ful_f_s has a counter-clockwise outer contour
+
+* cnct.ful_f_s has a counter-clockwise outer contour
+
+* cnct.ful_g_e has a counter-clockwise outer contour
+
+* cnct.ful_g_e has a counter-clockwise outer contour
+
+* cnct.ful_g_e has a counter-clockwise outer contour
+
+* cnct.ful_g_s has a counter-clockwise outer contour
+
+* cnct.ful_g_s has a counter-clockwise outer contour
+
+* cnct.ful_g_s has a counter-clockwise outer contour
+
+* cnct.ful_n_e has a counter-clockwise outer contour
+
+* cnct.ful_n_e has a counter-clockwise outer contour
+
+* cnct.ful_n_e has a counter-clockwise outer contour
+
+* cnct.ful_n_f has a counter-clockwise outer contour
+
+* cnct.ful_n_f has a counter-clockwise outer contour
+
+* cnct.ful_n_s has a counter-clockwise outer contour
+
+* cnct.ful_n_s has a counter-clockwise outer contour
+
+* cnct.ful_n_s has a counter-clockwise outer contour
+
+* cnct.ful_o_r has a counter-clockwise outer contour
+
+* cnct.ful_o_r has a counter-clockwise outer contour
+
+* cnct.ful_o_r has a counter-clockwise outer contour
+
+* cnct.ful_o_r has a counter-clockwise outer contour
+
+* cnct.ful_o_s has a counter-clockwise outer contour
+
+* cnct.ful_o_s has a counter-clockwise outer contour
+
+* cnct.ful_o_s has a counter-clockwise outer contour
+
+* cnct.ful_o_s has a counter-clockwise outer contour
+
+* cnct.ful_o_x has a counter-clockwise outer contour
+
+* cnct.ful_o_x has a counter-clockwise outer contour
+
+* cnct.ful_o_x has a counter-clockwise outer contour
+
+* cnct.ful_z_b has a counter-clockwise outer contour
+
+* cnct.ful_z_b has a counter-clockwise outer contour
+
+* cnct.ful_z_b has a counter-clockwise outer contour
+
+* cnct.ful_z_e has a counter-clockwise outer contour
+
+* cnct.ful_z_e has a counter-clockwise outer contour
+
+* cnct.ful_z_e has a counter-clockwise outer contour
+
+* cnct.ful_z_e.mod has a counter-clockwise outer contour
+
+* cnct.ful_z_e.mod has a counter-clockwise outer contour
+
+* cnct.ful_z_e.mod has a counter-clockwise outer contour
+
+* cnct.ful_z_o has a counter-clockwise outer contour
+
+* cnct.ful_z_o has a counter-clockwise outer contour
+
+* cnct.ful_z_o has a counter-clockwise outer contour
+
+* cnct.ful_z_r has a counter-clockwise outer contour
+
+* cnct.ful_z_r has a counter-clockwise outer contour
+
+* cnct.ful_z_r has a counter-clockwise outer contour
+
+* cnct.ful_z_s has a counter-clockwise outer contour
+
+* cnct.ful_z_s has a counter-clockwise outer contour
+
+* cnct.ful_z_s has a counter-clockwise outer contour
+
+* cnct.jmc_C_f has a counter-clockwise outer contour
+
+* cnct.jmc_C_f has a counter-clockwise outer contour
+
+* cnct.jmc_C_f has a counter-clockwise outer contour
+
+* cnct.jmc_c_f has a counter-clockwise outer contour
+
+* cnct.jmc_c_f has a counter-clockwise outer contour
+
+* cnct.jmc_c_f has a counter-clockwise outer contour
+
+* cnct.jmc_e_f has a counter-clockwise outer contour
+
+* cnct.jmc_e_f has a counter-clockwise outer contour
+
+* cnct.jmc_e_f has a counter-clockwise outer contour
+
+* cnct.jmc_f_e has a counter-clockwise outer contour
+
+* cnct.jmc_f_e has a counter-clockwise outer contour
+
+* cnct.jmc_f_f has a counter-clockwise outer contour
+
+* cnct.jmc_f_f has a counter-clockwise outer contour
+
+* cnct.jmc_f_n has a counter-clockwise outer contour
+
+* cnct.jmc_f_n has a counter-clockwise outer contour
+
+* cnct.jmc_f_s has a counter-clockwise outer contour
+
+* cnct.jmc_f_s has a counter-clockwise outer contour
+
+* cnct.jmc_f_z has a counter-clockwise outer contour
+
+* cnct.jmc_f_z has a counter-clockwise outer contour
+
+* cnct.jmc_g_b has a counter-clockwise outer contour
+
+* cnct.jmc_g_b has a counter-clockwise outer contour
+
+* cnct.jmc_g_b has a counter-clockwise outer contour
+
+* cnct.jmc_g_e has a counter-clockwise outer contour
+
+* cnct.jmc_g_e has a counter-clockwise outer contour
+
+* cnct.jmc_g_e has a counter-clockwise outer contour
+
+* cnct.jmc_g_n has a counter-clockwise outer contour
+
+* cnct.jmc_g_n has a counter-clockwise outer contour
+
+* cnct.jmc_g_n has a counter-clockwise outer contour
+
+* cnct.jmc_g_o has a counter-clockwise outer contour
+
+* cnct.jmc_g_o has a counter-clockwise outer contour
+
+* cnct.jmc_g_o has a counter-clockwise outer contour
+
+* cnct.jmc_g_t has a counter-clockwise outer contour
+
+* cnct.jmc_g_t has a counter-clockwise outer contour
+
+* cnct.jmc_g_t has a counter-clockwise outer contour
+
+* cnct.jmc_n_f has a counter-clockwise outer contour
+
+* cnct.jmc_n_f has a counter-clockwise outer contour
+
+* cnct.jmc_n_f has a counter-clockwise outer contour
+
+* cnct.jmc_o_f has a counter-clockwise outer contour
+
+* cnct.jmc_o_f has a counter-clockwise outer contour
+
+* cnct.jmc_o_f has a counter-clockwise outer contour
+
+* cnct.jmc_r_f has a counter-clockwise outer contour
+
+* cnct.jmc_r_f has a counter-clockwise outer contour
+
+* cnct.jmc_r_f has a counter-clockwise outer contour
+
+* cnct.jmc_r_f has a counter-clockwise outer contour
+
+* cnct.jmc_v_f has a counter-clockwise outer contour
+
+* cnct.jmc_v_f has a counter-clockwise outer contour
+
+* cnct.jmc_v_f has a counter-clockwise outer contour
+
+* cnct.lop_C_h has a counter-clockwise outer contour
+
+* cnct.lop_C_h has a counter-clockwise outer contour
+
+* cnct.lop_C_h has a counter-clockwise outer contour
+
+* cnct.lop_c_h has a counter-clockwise outer contour
+
+* cnct.lop_c_h has a counter-clockwise outer contour
+
+* cnct.lop_c_h has a counter-clockwise outer contour
+
+* cnct.lop_e_h has a counter-clockwise outer contour
+
+* cnct.lop_e_h has a counter-clockwise outer contour
+
+* cnct.lop_f_h has a counter-clockwise outer contour
+
+* cnct.lop_f_h has a counter-clockwise outer contour
+
+* cnct.lop_g_h has a counter-clockwise outer contour
+
+* cnct.lop_g_h has a counter-clockwise outer contour
+
+* cnct.lop_g_h has a counter-clockwise outer contour
+
+* cnct.lop_n_h has a counter-clockwise outer contour
+
+* cnct.lop_n_h has a counter-clockwise outer contour
+
+* cnct.lop_n_h has a counter-clockwise outer contour
+
+* cnct.lop_o_h has a counter-clockwise outer contour
+
+* cnct.lop_o_h has a counter-clockwise outer contour
+
+* cnct.lop_o_h has a counter-clockwise outer contour
+
+* cnct.lop_o_h has a counter-clockwise outer contour
+
+* cnct.lop_z_h has a counter-clockwise outer contour
+
+* cnct.lop_z_h has a counter-clockwise outer contour
+
+* cnct.lop_z_h has a counter-clockwise outer contour
+
+* cnct.mlp_b_f has a counter-clockwise outer contour
+
+* cnct.mlp_b_f has a counter-clockwise outer contour
+
+* cnct.mlp_b_f has a counter-clockwise outer contour
+
+* cnct.mlp_b_h has a counter-clockwise outer contour
+
+* cnct.mlp_b_h has a counter-clockwise outer contour
+
+* cnct.mlp_b_h has a counter-clockwise outer contour
+
+* cnct.mlp_b_s has a counter-clockwise outer contour
+
+* cnct.mlp_b_s has a counter-clockwise outer contour
+
+* cnct.mlp_b_s has a counter-clockwise outer contour
+
+* cnct.mlp_b_t has a counter-clockwise outer contour
+
+* cnct.mlp_b_t has a counter-clockwise outer contour
+
+* cnct.mlp_b_t has a counter-clockwise outer contour
+
+* cnct.mlp_b_x has a counter-clockwise outer contour
+
+* cnct.mlp_b_x has a counter-clockwise outer contour
+
+* cnct.mlp_b_x has a counter-clockwise outer contour
+
+* cnct.mlp_b_z.cnt has a counter-clockwise outer contour
+
+* cnct.mlp_b_z.cnt has a counter-clockwise outer contour
+
+* cnct.mlp_b_z.cnt has a counter-clockwise outer contour
+
+* cnct.mlp_b_z.mod has a counter-clockwise outer contour
+
+* cnct.mlp_b_z.mod has a counter-clockwise outer contour
+
+* cnct.mlp_b_z.mod has a counter-clockwise outer contour
+
+* cnct.mlp_f_e has a counter-clockwise outer contour
+
+* cnct.mlp_f_e has a counter-clockwise outer contour
+
+* cnct.mlp_f_e has a counter-clockwise outer contour
+
+* cnct.mlp_f_e has a counter-clockwise outer contour
+
+* cnct.mlp_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_f_f has a counter-clockwise outer contour
+
+* cnct.mlp_f_f has a counter-clockwise outer contour
+
+* cnct.mlp_f_f has a counter-clockwise outer contour
+
+* cnct.mlp_f_h has a counter-clockwise outer contour
+
+* cnct.mlp_f_h has a counter-clockwise outer contour
+
+* cnct.mlp_f_h has a counter-clockwise outer contour
+
+* cnct.mlp_f_h has a counter-clockwise outer contour
+
+* cnct.mlp_f_i has a counter-clockwise outer contour
+
+* cnct.mlp_f_i has a counter-clockwise outer contour
+
+* cnct.mlp_f_i has a counter-clockwise outer contour
+
+* cnct.mlp_f_i has a counter-clockwise outer contour
+
+* cnct.mlp_f_o has a counter-clockwise outer contour
+
+* cnct.mlp_f_o has a counter-clockwise outer contour
+
+* cnct.mlp_f_o has a counter-clockwise outer contour
+
+* cnct.mlp_f_o has a counter-clockwise outer contour
+
+* cnct.mlp_f_s has a counter-clockwise outer contour
+
+* cnct.mlp_f_s has a counter-clockwise outer contour
+
+* cnct.mlp_f_s has a counter-clockwise outer contour
+
+* cnct.mlp_f_s has a counter-clockwise outer contour
+
+* cnct.mlp_f_t has a counter-clockwise outer contour
+
+* cnct.mlp_f_t has a counter-clockwise outer contour
+
+* cnct.mlp_f_t has a counter-clockwise outer contour
+
+* cnct.mlp_f_t has a counter-clockwise outer contour
+
+* cnct.mlp_f_x has a counter-clockwise outer contour
+
+* cnct.mlp_f_x has a counter-clockwise outer contour
+
+* cnct.mlp_f_x has a counter-clockwise outer contour
+
+* cnct.mlp_o_e has a counter-clockwise outer contour
+
+* cnct.mlp_o_e has a counter-clockwise outer contour
+
+* cnct.mlp_o_e has a counter-clockwise outer contour
+
+* cnct.mlp_o_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_o_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_o_e.mod has a counter-clockwise outer contour
+
+* cnct.mlp_o_h has a counter-clockwise outer contour
+
+* cnct.mlp_o_h has a counter-clockwise outer contour
+
+* cnct.mlp_o_h has a counter-clockwise outer contour
+
+* cnct.mlp_o_s has a counter-clockwise outer contour
+
+* cnct.mlp_o_s has a counter-clockwise outer contour
+
+* cnct.mlp_o_s has a counter-clockwise outer contour
+
+* cnct.mlp_o_t has a counter-clockwise outer contour
+
+* cnct.mlp_o_t has a counter-clockwise outer contour
+
+* cnct.mlp_o_t has a counter-clockwise outer contour
+
+* cnct.mlp_o_x has a counter-clockwise outer contour
+
+* cnct.mlp_o_x has a counter-clockwise outer contour
+
+* cnct.mlp_o_x has a counter-clockwise outer contour
+
+* cnct.mlp_o_z.cnt has a counter-clockwise outer contour
+
+* cnct.mlp_o_z.cnt has a counter-clockwise outer contour
+
+* cnct.mlp_o_z.cnt has a counter-clockwise outer contour
+
+* cnct.mod_C_b has a counter-clockwise outer contour
+
+* cnct.mod_C_b has a counter-clockwise outer contour
+
+* cnct.mod_C_b has a counter-clockwise outer contour
+
+* cnct.mod_C_e has a counter-clockwise outer contour
+
+* cnct.mod_C_e has a counter-clockwise outer contour
+
+* cnct.mod_C_e has a counter-clockwise outer contour
+
+* cnct.mod_C_n has a counter-clockwise outer contour
+
+* cnct.mod_C_n has a counter-clockwise outer contour
+
+* cnct.mod_C_n has a counter-clockwise outer contour
+
+* cnct.mod_C_o has a counter-clockwise outer contour
+
+* cnct.mod_C_o has a counter-clockwise outer contour
+
+* cnct.mod_C_o has a counter-clockwise outer contour
+
+* cnct.mod_C_t has a counter-clockwise outer contour
+
+* cnct.mod_C_t has a counter-clockwise outer contour
+
+* cnct.mod_C_t has a counter-clockwise outer contour
+
+* cnct.mod_c_b has a counter-clockwise outer contour
+
+* cnct.mod_c_b has a counter-clockwise outer contour
+
+* cnct.mod_c_b has a counter-clockwise outer contour
+
+* cnct.mod_c_e has a counter-clockwise outer contour
+
+* cnct.mod_c_e has a counter-clockwise outer contour
+
+* cnct.mod_c_e has a counter-clockwise outer contour
+
+* cnct.mod_c_n has a counter-clockwise outer contour
+
+* cnct.mod_c_n has a counter-clockwise outer contour
+
+* cnct.mod_c_n has a counter-clockwise outer contour
+
+* cnct.mod_c_o has a counter-clockwise outer contour
+
+* cnct.mod_c_o has a counter-clockwise outer contour
+
+* cnct.mod_c_o has a counter-clockwise outer contour
+
+* cnct.mod_c_t has a counter-clockwise outer contour
+
+* cnct.mod_c_t has a counter-clockwise outer contour
+
+* cnct.mod_c_t has a counter-clockwise outer contour
+
+* cnct.mod_e_b has a counter-clockwise outer contour
+
+* cnct.mod_e_b has a counter-clockwise outer contour
+
+* cnct.mod_e_b has a counter-clockwise outer contour
+
+* cnct.mod_e_e has a counter-clockwise outer contour
+
+* cnct.mod_e_e has a counter-clockwise outer contour
+
+* cnct.mod_e_e has a counter-clockwise outer contour
+
+* cnct.mod_e_f.ful has a counter-clockwise outer contour
+
+* cnct.mod_e_f.ful has a counter-clockwise outer contour
+
+* cnct.mod_e_h.lop has a counter-clockwise outer contour
+
+* cnct.mod_e_h.lop has a counter-clockwise outer contour
+
+* cnct.mod_e_h.lop has a counter-clockwise outer contour
+
+* cnct.mod_e_n has a counter-clockwise outer contour
+
+* cnct.mod_e_n has a counter-clockwise outer contour
+
+* cnct.mod_e_n has a counter-clockwise outer contour
+
+* cnct.mod_e_o has a counter-clockwise outer contour
+
+* cnct.mod_e_o has a counter-clockwise outer contour
+
+* cnct.mod_e_o has a counter-clockwise outer contour
+
+* cnct.mod_e_t has a counter-clockwise outer contour
+
+* cnct.mod_e_t has a counter-clockwise outer contour
+
+* cnct.mod_e_t has a counter-clockwise outer contour
+
+* cnct.mod_n_b has a counter-clockwise outer contour
+
+* cnct.mod_n_b has a counter-clockwise outer contour
+
+* cnct.mod_n_b has a counter-clockwise outer contour
+
+* cnct.mod_n_e has a counter-clockwise outer contour
+
+* cnct.mod_n_e has a counter-clockwise outer contour
+
+* cnct.mod_n_e has a counter-clockwise outer contour
+
+* cnct.mod_n_n has a counter-clockwise outer contour
+
+* cnct.mod_n_n has a counter-clockwise outer contour
+
+* cnct.mod_n_n has a counter-clockwise outer contour
+
+* cnct.mod_n_o has a counter-clockwise outer contour
+
+* cnct.mod_n_o has a counter-clockwise outer contour
+
+* cnct.mod_n_o has a counter-clockwise outer contour
+
+* cnct.mod_n_t has a counter-clockwise outer contour
+
+* cnct.mod_n_t has a counter-clockwise outer contour
+
+* cnct.mod_n_t has a counter-clockwise outer contour
+
+* cnct.mod_o_b has a counter-clockwise outer contour
+
+* cnct.mod_o_b has a counter-clockwise outer contour
+
+* cnct.mod_o_b has a counter-clockwise outer contour
+
+* cnct.mod_o_n has a counter-clockwise outer contour
+
+* cnct.mod_o_n has a counter-clockwise outer contour
+
+* cnct.mod_o_n has a counter-clockwise outer contour
+
+* cnct.mod_o_o has a counter-clockwise outer contour
+
+* cnct.mod_o_o has a counter-clockwise outer contour
+
+* cnct.mod_o_o has a counter-clockwise outer contour
+
+* cnct.mod_o_o has a counter-clockwise outer contour
+
+* cnct.mod_o_s has a counter-clockwise outer contour
+
+* cnct.mod_o_s has a counter-clockwise outer contour
+
+* cnct.mod_o_s has a counter-clockwise outer contour
+
+* cnct.mod_o_s has a counter-clockwise outer contour
+
+* cnct.mod_o_t has a counter-clockwise outer contour
+
+* cnct.mod_o_t has a counter-clockwise outer contour
+
+* cnct.mod_o_t has a counter-clockwise outer contour
+
+* cnct.mod_o_v has a counter-clockwise outer contour
+
+* cnct.mod_o_v has a counter-clockwise outer contour
+
+* cnct.mod_o_v has a counter-clockwise outer contour
+
+* cnct.mod_o_x has a counter-clockwise outer contour
+
+* cnct.mod_o_x has a counter-clockwise outer contour
+
+* cnct.mod_o_x has a counter-clockwise outer contour
+
+* cnct.mod_o_z has a counter-clockwise outer contour
+
+* cnct.mod_o_z has a counter-clockwise outer contour
+
+* cnct.mod_o_z has a counter-clockwise outer contour
+
+* cnct.mod_o_z has a counter-clockwise outer contour
+
+* cnct.mod_r_b has a counter-clockwise outer contour
+
+* cnct.mod_r_b has a counter-clockwise outer contour
+
+* cnct.mod_r_b has a counter-clockwise outer contour
+
+* cnct.mod_r_b has a counter-clockwise outer contour
+
+* cnct.mod_r_n has a counter-clockwise outer contour
+
+* cnct.mod_r_n has a counter-clockwise outer contour
+
+* cnct.mod_r_n has a counter-clockwise outer contour
+
+* cnct.mod_r_n has a counter-clockwise outer contour
+
+* cnct.mod_r_o has a counter-clockwise outer contour
+
+* cnct.mod_r_o has a counter-clockwise outer contour
+
+* cnct.mod_r_o has a counter-clockwise outer contour
+
+* cnct.mod_r_o has a counter-clockwise outer contour
+
+* cnct.mod_r_s has a counter-clockwise outer contour
+
+* cnct.mod_r_s has a counter-clockwise outer contour
+
+* cnct.mod_r_s has a counter-clockwise outer contour
+
+* cnct.mod_r_s has a counter-clockwise outer contour
+
+* cnct.mod_r_s.ful has a counter-clockwise outer contour
+
+* cnct.mod_r_s.ful has a counter-clockwise outer contour
+
+* cnct.mod_r_s.ful has a counter-clockwise outer contour
+
+* cnct.mod_r_s.ful has a counter-clockwise outer contour
+
+* cnct.mod_r_t has a counter-clockwise outer contour
+
+* cnct.mod_r_t has a counter-clockwise outer contour
+
+* cnct.mod_r_t has a counter-clockwise outer contour
+
+* cnct.mod_r_t has a counter-clockwise outer contour
+
+* cnct.mod_r_v has a counter-clockwise outer contour
+
+* cnct.mod_r_v has a counter-clockwise outer contour
+
+* cnct.mod_r_v has a counter-clockwise outer contour
+
+* cnct.mod_r_v has a counter-clockwise outer contour
+
+* cnct.mod_r_x has a counter-clockwise outer contour
+
+* cnct.mod_r_x has a counter-clockwise outer contour
+
+* cnct.mod_r_x has a counter-clockwise outer contour
+
+* cnct.mod_r_x has a counter-clockwise outer contour
+
+* cnct.mod_r_x.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_x.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_x.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_x.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_z.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_z.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_z.cnt has a counter-clockwise outer contour
+
+* cnct.mod_r_z.cnt has a counter-clockwise outer contour
+
+* cnct.mod_v_b has a counter-clockwise outer contour
+
+* cnct.mod_v_b has a counter-clockwise outer contour
+
+* cnct.mod_v_b has a counter-clockwise outer contour
+
+* cnct.mod_v_n has a counter-clockwise outer contour
+
+* cnct.mod_v_n has a counter-clockwise outer contour
+
+* cnct.mod_v_n has a counter-clockwise outer contour
+
+* cnct.mod_v_n has a counter-clockwise outer contour
+
+* cnct.mod_v_o has a counter-clockwise outer contour
+
+* cnct.mod_v_o has a counter-clockwise outer contour
+
+* cnct.mod_v_o has a counter-clockwise outer contour
+
+* cnct.mod_v_s has a counter-clockwise outer contour
+
+* cnct.mod_v_s has a counter-clockwise outer contour
+
+* cnct.mod_v_s has a counter-clockwise outer contour
+
+* cnct.mod_v_t has a counter-clockwise outer contour
+
+* cnct.mod_v_t has a counter-clockwise outer contour
+
+* cnct.mod_v_t has a counter-clockwise outer contour
+
+* cnct.mod_v_v has a counter-clockwise outer contour
+
+* cnct.mod_v_v has a counter-clockwise outer contour
+
+* cnct.mod_v_v has a counter-clockwise outer contour
+
+* cnct.mod_v_v has a counter-clockwise outer contour
+
+* cnct.mod_v_x has a counter-clockwise outer contour
+
+* cnct.mod_v_x has a counter-clockwise outer contour
+
+* cnct.mod_v_x has a counter-clockwise outer contour
+
+* cnct.mod_v_x has a counter-clockwise outer contour
+
+* cnct.mod_v_z has a counter-clockwise outer contour
+
+* cnct.mod_v_z has a counter-clockwise outer contour
+
+* cnct.mod_v_z has a counter-clockwise outer contour
+
+* cnct.mrr_C_i has a counter-clockwise outer contour
+
+* cnct.mrr_C_i has a counter-clockwise outer contour
+
+* cnct.mrr_C_i has a counter-clockwise outer contour
+
+* cnct.mrr_f_e has a counter-clockwise outer contour
+
+* cnct.mrr_f_e has a counter-clockwise outer contour
+
+* cnct.mrr_f_e has a counter-clockwise outer contour
+
+* cnct.mrr_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_e.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_f has a counter-clockwise outer contour
+
+* cnct.mrr_f_f has a counter-clockwise outer contour
+
+* cnct.mrr_f_f has a counter-clockwise outer contour
+
+* cnct.mrr_f_h has a counter-clockwise outer contour
+
+* cnct.mrr_f_h has a counter-clockwise outer contour
+
+* cnct.mrr_f_h has a counter-clockwise outer contour
+
+* cnct.mrr_f_h has a counter-clockwise outer contour
+
+* cnct.mrr_f_i has a counter-clockwise outer contour
+
+* cnct.mrr_f_i has a counter-clockwise outer contour
+
+* cnct.mrr_f_i has a counter-clockwise outer contour
+
+* cnct.mrr_f_n.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_n.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_n.mod has a counter-clockwise outer contour
+
+* cnct.mrr_f_o has a counter-clockwise outer contour
+
+* cnct.mrr_f_o has a counter-clockwise outer contour
+
+* cnct.mrr_f_o has a counter-clockwise outer contour
+
+* cnct.mrr_f_o has a counter-clockwise outer contour
+
+* cnct.mrr_f_s has a counter-clockwise outer contour
+
+* cnct.mrr_f_s has a counter-clockwise outer contour
+
+* cnct.mrr_f_s has a counter-clockwise outer contour
+
+* cnct.mrr_f_s has a counter-clockwise outer contour
+
+* cnct.mrr_f_t has a counter-clockwise outer contour
+
+* cnct.mrr_f_t has a counter-clockwise outer contour
+
+* cnct.mrr_f_t has a counter-clockwise outer contour
+
+* entr_xful has a counter-clockwise outer contour
+
+* entr_xful has a counter-clockwise outer contour
+
+* entr_xful has a counter-clockwise outer contour
+
+* entr_xful has a counter-clockwise outer contour
+
+* entr_zcnt has a counter-clockwise outer contour
+
+* entr_zcnt has a counter-clockwise outer contour
+
+* entr_zcnt has a counter-clockwise outer contour
+
+* entr_zcnt has a counter-clockwise outer contour
+</code></pre>
+
+                            
+                             [code: ccw-outer-contour]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    Do outlines contain any jaggy segments?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_jaggy_segments&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have jaggy segments:</p>
+<pre><code>* A.cur.ini: L&lt;&lt;787.0,223.0&gt;--&lt;850.0,414.0&gt;&gt;/B&lt;&lt;850.0,414.0&gt;-&lt;786.0,308.0&gt;-&lt;722.5,227.5&gt;&gt; = 12.86769618723817
+
+* A.cur: L&lt;&lt;763.0,150.0&gt;--&lt;850.0,414.0&gt;&gt;/B&lt;&lt;850.0,414.0&gt;-&lt;787.0,308.0&gt;-&lt;723.0,227.5&gt;&gt; = 12.485292624139447
+
+* A.cur_locl (U+0041): L&lt;&lt;763.0,150.0&gt;--&lt;849.0,413.0&gt;&gt;/B&lt;&lt;849.0,413.0&gt;-&lt;785.0,307.0&gt;-&lt;721.5,226.5&gt;&gt; = 13.014922264714347
+
+* A.cur_locl.ini: L&lt;&lt;787.0,223.0&gt;--&lt;849.0,413.0&gt;&gt;/B&lt;&lt;849.0,413.0&gt;-&lt;785.0,307.0&gt;-&lt;721.5,226.5&gt;&gt; = 13.050148047832458
+
+* IJ.cur (U+0132): L&lt;&lt;463.0,-256.0&gt;--&lt;663.0,358.0&gt;&gt;/B&lt;&lt;663.0,358.0&gt;-&lt;618.0,281.0&gt;-&lt;569.0,224.0&gt;&gt; = 12.260546954035606
+
+* IJ.cur.ini: L&lt;&lt;464.0,-256.0&gt;--&lt;663.0,358.0&gt;&gt;/B&lt;&lt;663.0,358.0&gt;-&lt;618.0,281.0&gt;-&lt;569.0,224.0&gt;&gt; = 12.344951754400135
+
+* M.cur (U+004D): B&lt;&lt;499.0,810.5&gt;-&lt;488.0,776.0&gt;-&lt;476.0,741.0&gt;&gt;/B&lt;&lt;476.0,741.0&gt;-&lt;520.0,814.0&gt;-&lt;566.0,866.0&gt;&gt; = 12.154395219027997
+
+* M.cur (U+004D): B&lt;&lt;928.5,777.5&gt;-&lt;924.0,761.0&gt;-&lt;919.0,745.0&gt;&gt;/B&lt;&lt;919.0,745.0&gt;-&lt;962.0,818.0&gt;-&lt;1008.0,868.5&gt;&gt; = 13.145808597186116
+
+* M.cur.ini: B&lt;&lt;464.5,649.5&gt;-&lt;418.0,563.0&gt;-&lt;378.0,445.0&gt;&gt;/L&lt;&lt;378.0,445.0&gt;--&lt;391.0,564.0&gt;&gt; = 12.491307749731309
+
+* M.cur.ini: B&lt;&lt;905.0,649.5&gt;-&lt;858.0,563.0&gt;-&lt;818.0,445.0&gt;&gt;/L&lt;&lt;818.0,445.0&gt;--&lt;832.0,564.0&gt;&gt; = 12.015951037515588
+
+* N.cur (U+004E): L&lt;&lt;521.0,879.0&gt;--&lt;463.0,699.0&gt;&gt;/B&lt;&lt;463.0,699.0&gt;-&lt;514.0,784.0&gt;-&lt;569.5,844.0&gt;&gt; = 13.103662461394443
+
+* N.cur.ini: L&lt;&lt;521.0,879.0&gt;--&lt;463.0,698.0&gt;&gt;/B&lt;&lt;463.0,698.0&gt;-&lt;514.0,784.0&gt;-&lt;569.5,844.0&gt;&gt; = 12.901286182627985
+
+* U.cur (U+0055): B&lt;&lt;752.5,224.0&gt;-&lt;765.0,263.0&gt;-&lt;777.0,301.0&gt;&gt;/B&lt;&lt;777.0,301.0&gt;-&lt;736.0,230.0&gt;-&lt;688.0,171.5&gt;&gt; = 12.479352497101132
+
+* U.cur.ini: B&lt;&lt;781.0,377.5&gt;-&lt;824.0,454.0&gt;-&lt;858.0,540.0&gt;&gt;/L&lt;&lt;858.0,540.0&gt;--&lt;841.0,423.0&gt;&gt; = 13.304133855743926
+
+* Y.cur (U+0059): L&lt;&lt;566.0,-256.0&gt;--&lt;765.0,358.0&gt;&gt;/B&lt;&lt;765.0,358.0&gt;-&lt;720.0,281.0&gt;-&lt;671.5,224.0&gt;&gt; = 12.344951754400135
+
+* Y.cur.ini: L&lt;&lt;566.0,-256.0&gt;--&lt;765.0,359.0&gt;&gt;/B&lt;&lt;765.0,359.0&gt;-&lt;720.0,281.0&gt;-&lt;671.5,224.0&gt;&gt; = 12.05123916268967
+
+* a.mod (U+0061): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* a.mod.fin: B&lt;&lt;416.0,162.0&gt;-&lt;425.0,189.0&gt;-&lt;433.0,216.0&gt;&gt;/B&lt;&lt;433.0,216.0&gt;-&lt;386.0,136.0&gt;-&lt;340.5,84.0&gt;&gt; = 13.929874371688403
+
+* aacute (U+00E1): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* abreve (U+0103): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* abreveacute (U+1EAF): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* abrevedotbelow (U+1EB7): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* abrevegrave (U+1EB1): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* abrevehookabove (U+1EB3): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* abrevetilde (U+1EB5): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acaron (U+01CE): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acircumflex (U+00E2): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acircumflexacute (U+1EA5): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acircumflexdotbelow (U+1EAD): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acircumflexgrave (U+1EA7): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acircumflexhookabove (U+1EA9): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* acircumflextilde (U+1EAB): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* adieresis (U+00E4): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* adotbelow (U+1EA1): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* agrave (U+00E0): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* ahookabove (U+1EA3): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* amacron (U+0101): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* aogonek (U+0105): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* aring (U+00E5): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* atilde (U+00E3): B&lt;&lt;403.0,162.0&gt;-&lt;412.0,189.0&gt;-&lt;420.0,216.0&gt;&gt;/B&lt;&lt;420.0,216.0&gt;-&lt;373.0,136.0&gt;-&lt;327.5,84.0&gt;&gt; = 13.929874371688403
+
+* b.jmc.fin: L&lt;&lt;433.0,989.0&gt;--&lt;205.0,293.0&gt;&gt;/B&lt;&lt;205.0,293.0&gt;-&lt;252.0,371.0&gt;-&lt;296.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.jmc.ini: L&lt;&lt;408.0,989.0&gt;--&lt;180.0,293.0&gt;&gt;/B&lt;&lt;180.0,293.0&gt;-&lt;227.0,371.0&gt;-&lt;271.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.jmc.med: L&lt;&lt;433.0,989.0&gt;--&lt;205.0,293.0&gt;&gt;/B&lt;&lt;205.0,293.0&gt;-&lt;252.0,371.0&gt;-&lt;296.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.jmc: L&lt;&lt;408.0,989.0&gt;--&lt;180.0,293.0&gt;&gt;/B&lt;&lt;180.0,293.0&gt;-&lt;227.0,371.0&gt;-&lt;271.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.mod.fin: L&lt;&lt;433.0,989.0&gt;--&lt;205.0,293.0&gt;&gt;/B&lt;&lt;205.0,293.0&gt;-&lt;252.0,371.0&gt;-&lt;296.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.mod.ini: L&lt;&lt;408.0,989.0&gt;--&lt;180.0,293.0&gt;&gt;/B&lt;&lt;180.0,293.0&gt;-&lt;227.0,371.0&gt;-&lt;271.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.mod.med: L&lt;&lt;433.0,989.0&gt;--&lt;205.0,293.0&gt;&gt;/B&lt;&lt;205.0,293.0&gt;-&lt;252.0,371.0&gt;-&lt;296.5,421.0&gt;&gt; = 12.93357590524897
+
+* b.mod: L&lt;&lt;408.0,989.0&gt;--&lt;180.0,293.0&gt;&gt;/B&lt;&lt;180.0,293.0&gt;-&lt;227.0,371.0&gt;-&lt;271.5,421.0&gt;&gt; = 12.93357590524897
+
+* d.mod (U+0064): B&lt;&lt;405.5,163.0&gt;-&lt;414.0,190.0&gt;-&lt;423.0,216.0&gt;&gt;/B&lt;&lt;423.0,216.0&gt;-&lt;375.0,136.0&gt;-&lt;329.0,84.0&gt;&gt; = 11.870264531587885
+
+* d.mod.fin: B&lt;&lt;414.5,163.0&gt;-&lt;423.0,190.0&gt;-&lt;431.0,216.0&gt;&gt;/B&lt;&lt;431.0,216.0&gt;-&lt;384.0,136.0&gt;-&lt;338.0,84.0&gt;&gt; = 13.331506784391031
+
+* d.mod.ini: L&lt;&lt;389.0,116.0&gt;--&lt;420.0,213.0&gt;&gt;/B&lt;&lt;420.0,213.0&gt;-&lt;373.0,134.0&gt;-&lt;327.5,83.0&gt;&gt; = 13.026730685310087
+
+* d.mod.med: L&lt;&lt;398.0,116.0&gt;--&lt;429.0,213.0&gt;&gt;/B&lt;&lt;429.0,213.0&gt;-&lt;382.0,134.0&gt;-&lt;336.5,83.0&gt;&gt; = 13.026730685310087
+
+* dcaron (U+010F): B&lt;&lt;405.5,163.0&gt;-&lt;414.0,190.0&gt;-&lt;423.0,216.0&gt;&gt;/B&lt;&lt;423.0,216.0&gt;-&lt;375.0,136.0&gt;-&lt;329.0,84.0&gt;&gt; = 11.870264531587885
+
+* dcroat (U+0111): B&lt;&lt;405.5,163.0&gt;-&lt;414.0,190.0&gt;-&lt;423.0,216.0&gt;&gt;/B&lt;&lt;423.0,216.0&gt;-&lt;375.0,136.0&gt;-&lt;329.0,84.0&gt;&gt; = 11.870264531587885
+
+* eng (U+014B): L&lt;&lt;240.0,491.0&gt;--&lt;165.0,261.0&gt;&gt;/B&lt;&lt;165.0,261.0&gt;-&lt;205.0,331.0&gt;-&lt;245.0,380.5&gt;&gt; = 11.684409360742983
+
+* g.jmc (U+0067): L&lt;&lt;341.0,-31.0&gt;--&lt;421.0,214.0&gt;&gt;/B&lt;&lt;421.0,214.0&gt;-&lt;374.0,134.0&gt;-&lt;328.0,83.0&gt;&gt; = 12.350790370394725
+
+* g.jmc.fin: L&lt;&lt;354.0,-31.0&gt;--&lt;434.0,214.0&gt;&gt;/B&lt;&lt;434.0,214.0&gt;-&lt;387.0,134.0&gt;-&lt;341.0,83.0&gt;&gt; = 12.350790370394725
+
+* g.jmc.ini: L&lt;&lt;341.0,-31.0&gt;--&lt;421.0,214.0&gt;&gt;/B&lt;&lt;421.0,214.0&gt;-&lt;374.0,134.0&gt;-&lt;328.0,83.0&gt;&gt; = 12.350790370394725
+
+* g.jmc.med: L&lt;&lt;354.0,-31.0&gt;--&lt;434.0,214.0&gt;&gt;/B&lt;&lt;434.0,214.0&gt;-&lt;387.0,134.0&gt;-&lt;341.0,83.0&gt;&gt; = 12.350790370394725
+
+* g.mod.fin: L&lt;&lt;270.0,-291.0&gt;--&lt;435.0,215.0&gt;&gt;/B&lt;&lt;435.0,215.0&gt;-&lt;388.0,135.0&gt;-&lt;342.0,83.5&gt;&gt; = 12.373763817244228
+
+* g.mod.ini: L&lt;&lt;257.0,-291.0&gt;--&lt;422.0,215.0&gt;&gt;/B&lt;&lt;422.0,215.0&gt;-&lt;375.0,135.0&gt;-&lt;329.0,83.5&gt;&gt; = 12.373763817244228
+
+* g.mod.med: L&lt;&lt;270.0,-291.0&gt;--&lt;435.0,215.0&gt;&gt;/B&lt;&lt;435.0,215.0&gt;-&lt;388.0,135.0&gt;-&lt;342.0,83.5&gt;&gt; = 12.373763817244228
+
+* g.mod: L&lt;&lt;257.0,-291.0&gt;--&lt;422.0,215.0&gt;&gt;/B&lt;&lt;422.0,215.0&gt;-&lt;375.0,135.0&gt;-&lt;329.0,83.5&gt;&gt; = 12.373763817244228
+
+* gbreve (U+011F): L&lt;&lt;257.0,-291.0&gt;--&lt;422.0,215.0&gt;&gt;/B&lt;&lt;422.0,215.0&gt;-&lt;375.0,135.0&gt;-&lt;329.0,83.5&gt;&gt; = 12.373763817244228
+
+* gcircumflex (U+011D): L&lt;&lt;257.0,-291.0&gt;--&lt;422.0,215.0&gt;&gt;/B&lt;&lt;422.0,215.0&gt;-&lt;375.0,135.0&gt;-&lt;329.0,83.5&gt;&gt; = 12.373763817244228
+
+* gcommaaccent (U+0123): L&lt;&lt;257.0,-291.0&gt;--&lt;422.0,215.0&gt;&gt;/B&lt;&lt;422.0,215.0&gt;-&lt;375.0,135.0&gt;-&lt;329.0,83.5&gt;&gt; = 12.373763817244228
+
+* gdotaccent (U+0121): L&lt;&lt;257.0,-291.0&gt;--&lt;422.0,215.0&gt;&gt;/B&lt;&lt;422.0,215.0&gt;-&lt;375.0,135.0&gt;-&lt;329.0,83.5&gt;&gt; = 12.373763817244228
+
+* h.mod.fin: L&lt;&lt;433.0,987.0&gt;--&lt;197.0,263.0&gt;&gt;/B&lt;&lt;197.0,263.0&gt;-&lt;236.0,333.0&gt;-&lt;276.0,381.5&gt;&gt; = 11.069801923282181
+
+* h.mod.ini: L&lt;&lt;408.0,987.0&gt;--&lt;172.0,263.0&gt;&gt;/B&lt;&lt;172.0,263.0&gt;-&lt;211.0,333.0&gt;-&lt;251.0,381.5&gt;&gt; = 11.069801923282181
+
+* h.mod.med: L&lt;&lt;433.0,987.0&gt;--&lt;196.0,263.0&gt;&gt;/B&lt;&lt;196.0,263.0&gt;-&lt;235.0,333.0&gt;-&lt;275.0,381.5&gt;&gt; = 10.998294337057223
+
+* h.mod: L&lt;&lt;408.0,987.0&gt;--&lt;172.0,263.0&gt;&gt;/B&lt;&lt;172.0,263.0&gt;-&lt;211.0,333.0&gt;-&lt;251.0,381.5&gt;&gt; = 11.069801923282181
+
+* hbar (U+0127): L&lt;&lt;408.0,987.0&gt;--&lt;172.0,263.0&gt;&gt;/B&lt;&lt;172.0,263.0&gt;-&lt;211.0,333.0&gt;-&lt;251.0,381.5&gt;&gt; = 11.069801923282181
+
+* hcircumflex (U+0125): L&lt;&lt;408.0,987.0&gt;--&lt;172.0,263.0&gt;&gt;/B&lt;&lt;172.0,263.0&gt;-&lt;211.0,333.0&gt;-&lt;251.0,381.5&gt;&gt; = 11.069801923282181
+
+* ij.mod.fin: L&lt;&lt;251.0,-376.0&gt;--&lt;475.0,311.0&gt;&gt;/B&lt;&lt;475.0,311.0&gt;-&lt;416.0,217.0&gt;-&lt;370.5,154.0&gt;&gt; = 14.055997465639107
+
+* ij.mod.ini: L&lt;&lt;226.0,-376.0&gt;--&lt;450.0,311.0&gt;&gt;/B&lt;&lt;450.0,311.0&gt;-&lt;391.0,217.0&gt;-&lt;345.5,154.0&gt;&gt; = 14.055997465639107
+
+* ij.mod.med: L&lt;&lt;251.0,-376.0&gt;--&lt;475.0,311.0&gt;&gt;/B&lt;&lt;475.0,311.0&gt;-&lt;416.0,217.0&gt;-&lt;370.5,154.0&gt;&gt; = 14.055997465639107
+
+* ij.mod: L&lt;&lt;226.0,-376.0&gt;--&lt;450.0,311.0&gt;&gt;/B&lt;&lt;450.0,311.0&gt;-&lt;391.0,217.0&gt;-&lt;345.5,154.0&gt;&gt; = 14.055997465639107
+
+* m.cnt (U+006D): L&lt;&lt;235.0,396.0&gt;--&lt;192.0,267.0&gt;&gt;/B&lt;&lt;192.0,267.0&gt;-&lt;231.0,336.0&gt;-&lt;269.5,384.0&gt;&gt; = 11.04094018032372
+
+* m.cnt.fin: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,267.0&gt;&gt;/B&lt;&lt;192.0,267.0&gt;-&lt;231.0,336.0&gt;-&lt;269.5,384.0&gt;&gt; = 11.04094018032372
+
+* m.cnt.fin_n_: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,267.0&gt;&gt;/B&lt;&lt;192.0,267.0&gt;-&lt;231.0,336.0&gt;-&lt;269.5,384.0&gt;&gt; = 11.04094018032372
+
+* m.cnt.ini: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,267.0&gt;&gt;/B&lt;&lt;192.0,267.0&gt;-&lt;231.0,336.0&gt;-&lt;269.5,384.0&gt;&gt; = 11.04094018032372
+
+* m.cnt.med: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,267.0&gt;&gt;/B&lt;&lt;192.0,267.0&gt;-&lt;231.0,336.0&gt;-&lt;269.5,384.0&gt;&gt; = 11.04094018032372
+
+* m.cnt.med_n_: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,267.0&gt;&gt;/B&lt;&lt;192.0,267.0&gt;-&lt;231.0,336.0&gt;-&lt;269.5,384.0&gt;&gt; = 11.04094018032372
+
+* m.mod.fin: L&lt;&lt;265.0,491.0&gt;--&lt;192.0,265.0&gt;&gt;/B&lt;&lt;192.0,265.0&gt;-&lt;230.0,334.0&gt;-&lt;269.0,383.0&gt;&gt; = 10.941744391442132
+
+* m.mod.ini: L&lt;&lt;240.0,491.0&gt;--&lt;167.0,265.0&gt;&gt;/B&lt;&lt;167.0,265.0&gt;-&lt;205.0,334.0&gt;-&lt;244.0,383.0&gt;&gt; = 10.941744391442132
+
+* m.mod.med: L&lt;&lt;265.0,491.0&gt;--&lt;192.0,265.0&gt;&gt;/B&lt;&lt;192.0,265.0&gt;-&lt;230.0,334.0&gt;-&lt;269.0,383.0&gt;&gt; = 10.941744391442132
+
+* m.mod: L&lt;&lt;240.0,491.0&gt;--&lt;167.0,265.0&gt;&gt;/B&lt;&lt;167.0,265.0&gt;-&lt;205.0,334.0&gt;-&lt;244.0,383.0&gt;&gt; = 10.941744391442132
+
+* n.cnt (U+006E): L&lt;&lt;235.0,396.0&gt;--&lt;192.0,264.0&gt;&gt;/B&lt;&lt;192.0,264.0&gt;-&lt;231.0,334.0&gt;-&lt;271.0,382.5&gt;&gt; = 11.08064148944614
+
+* n.cnt.fin: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,264.0&gt;&gt;/B&lt;&lt;192.0,264.0&gt;-&lt;231.0,334.0&gt;-&lt;271.0,382.5&gt;&gt; = 11.08064148944614
+
+* n.cnt.fin_n_: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,264.0&gt;&gt;/B&lt;&lt;192.0,264.0&gt;-&lt;231.0,334.0&gt;-&lt;271.0,382.5&gt;&gt; = 11.08064148944614
+
+* n.cnt.ini: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,264.0&gt;&gt;/B&lt;&lt;192.0,264.0&gt;-&lt;231.0,334.0&gt;-&lt;271.0,382.5&gt;&gt; = 11.08064148944614
+
+* n.cnt.med: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,264.0&gt;&gt;/B&lt;&lt;192.0,264.0&gt;-&lt;231.0,334.0&gt;-&lt;271.0,382.5&gt;&gt; = 11.08064148944614
+
+* n.cnt.med_n_: L&lt;&lt;235.0,396.0&gt;--&lt;192.0,264.0&gt;&gt;/B&lt;&lt;192.0,264.0&gt;-&lt;231.0,334.0&gt;-&lt;271.0,382.5&gt;&gt; = 11.08064148944614
+
+* n.mod.fin: L&lt;&lt;265.0,491.0&gt;--&lt;190.0,261.0&gt;&gt;/B&lt;&lt;190.0,261.0&gt;-&lt;230.0,331.0&gt;-&lt;270.0,380.5&gt;&gt; = 11.684409360742983
+
+* n.mod.ini: L&lt;&lt;240.0,491.0&gt;--&lt;166.0,262.0&gt;&gt;/B&lt;&lt;166.0,262.0&gt;-&lt;206.0,333.0&gt;-&lt;245.5,382.0&gt;&gt; = 11.488119991955445
+
+* n.mod.med: L&lt;&lt;265.0,491.0&gt;--&lt;191.0,262.0&gt;&gt;/B&lt;&lt;191.0,262.0&gt;-&lt;231.0,333.0&gt;-&lt;270.5,382.0&gt;&gt; = 11.488119991955445
+
+* n.mod: L&lt;&lt;240.0,491.0&gt;--&lt;165.0,261.0&gt;&gt;/B&lt;&lt;165.0,261.0&gt;-&lt;205.0,331.0&gt;-&lt;245.0,380.5&gt;&gt; = 11.684409360742983
+
+* nacute (U+0144): L&lt;&lt;240.0,491.0&gt;--&lt;165.0,261.0&gt;&gt;/B&lt;&lt;165.0,261.0&gt;-&lt;205.0,331.0&gt;-&lt;245.0,380.5&gt;&gt; = 11.684409360742983
+
+* ncaron (U+0148): L&lt;&lt;240.0,491.0&gt;--&lt;165.0,261.0&gt;&gt;/B&lt;&lt;165.0,261.0&gt;-&lt;205.0,331.0&gt;-&lt;245.0,380.5&gt;&gt; = 11.684409360742983
+
+* ncommaaccent (U+0146): L&lt;&lt;240.0,491.0&gt;--&lt;165.0,261.0&gt;&gt;/B&lt;&lt;165.0,261.0&gt;-&lt;205.0,331.0&gt;-&lt;245.0,380.5&gt;&gt; = 11.684409360742983
+
+* ntilde (U+00F1): L&lt;&lt;240.0,491.0&gt;--&lt;165.0,261.0&gt;&gt;/B&lt;&lt;165.0,261.0&gt;-&lt;205.0,331.0&gt;-&lt;245.0,380.5&gt;&gt; = 11.684409360742983
+
+* p.ful.fin: L&lt;&lt;266.0,492.0&gt;--&lt;192.0,266.0&gt;&gt;/B&lt;&lt;192.0,266.0&gt;-&lt;243.0,354.0&gt;-&lt;291.0,409.5&gt;&gt; = 11.964054563944062
+
+* p.ful.ini: L&lt;&lt;247.0,492.0&gt;--&lt;173.0,266.0&gt;&gt;/B&lt;&lt;173.0,266.0&gt;-&lt;223.0,354.0&gt;-&lt;271.5,409.5&gt;&gt; = 11.474263833503956
+
+* p.ful.med: L&lt;&lt;266.0,492.0&gt;--&lt;192.0,266.0&gt;&gt;/B&lt;&lt;192.0,266.0&gt;-&lt;243.0,354.0&gt;-&lt;291.0,409.5&gt;&gt; = 11.964054563944062
+
+* p.ful: L&lt;&lt;247.0,492.0&gt;--&lt;173.0,266.0&gt;&gt;/B&lt;&lt;173.0,266.0&gt;-&lt;223.0,354.0&gt;-&lt;271.5,409.5&gt;&gt; = 11.474263833503956
+
+* p.jmc.fin: L&lt;&lt;268.0,492.0&gt;--&lt;202.0,293.0&gt;&gt;/B&lt;&lt;202.0,293.0&gt;-&lt;249.0,371.0&gt;-&lt;293.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.jmc.ini: L&lt;&lt;247.0,492.0&gt;--&lt;181.0,293.0&gt;&gt;/B&lt;&lt;181.0,293.0&gt;-&lt;228.0,371.0&gt;-&lt;272.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.jmc.med: L&lt;&lt;266.0,492.0&gt;--&lt;200.0,293.0&gt;&gt;/B&lt;&lt;200.0,293.0&gt;-&lt;247.0,371.0&gt;-&lt;291.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.jmc: L&lt;&lt;247.0,492.0&gt;--&lt;181.0,293.0&gt;&gt;/B&lt;&lt;181.0,293.0&gt;-&lt;228.0,371.0&gt;-&lt;272.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.mod.fin: L&lt;&lt;268.0,492.0&gt;--&lt;202.0,293.0&gt;&gt;/B&lt;&lt;202.0,293.0&gt;-&lt;249.0,371.0&gt;-&lt;293.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.mod.ini: L&lt;&lt;247.0,492.0&gt;--&lt;181.0,293.0&gt;&gt;/B&lt;&lt;181.0,293.0&gt;-&lt;228.0,371.0&gt;-&lt;272.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.mod.med: L&lt;&lt;268.0,492.0&gt;--&lt;202.0,293.0&gt;&gt;/B&lt;&lt;202.0,293.0&gt;-&lt;249.0,371.0&gt;-&lt;293.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.mod: L&lt;&lt;247.0,492.0&gt;--&lt;181.0,293.0&gt;&gt;/B&lt;&lt;181.0,293.0&gt;-&lt;228.0,371.0&gt;-&lt;272.5,421.0&gt;&gt; = 12.723128146015826
+
+* p.mrr.fin: L&lt;&lt;266.0,492.0&gt;--&lt;192.0,266.0&gt;&gt;/B&lt;&lt;192.0,266.0&gt;-&lt;242.0,354.0&gt;-&lt;290.5,409.5&gt;&gt; = 11.474263833503956
+
+* p.mrr.ini: L&lt;&lt;266.0,492.0&gt;--&lt;192.0,266.0&gt;&gt;/B&lt;&lt;192.0,266.0&gt;-&lt;243.0,354.0&gt;-&lt;291.0,409.5&gt;&gt; = 11.964054563944062
+
+* p.mrr.med: L&lt;&lt;266.0,492.0&gt;--&lt;192.0,266.0&gt;&gt;/B&lt;&lt;192.0,266.0&gt;-&lt;243.0,354.0&gt;-&lt;291.0,409.5&gt;&gt; = 11.964054563944062
+
+* p.mrr: L&lt;&lt;266.0,492.0&gt;--&lt;192.0,266.0&gt;&gt;/B&lt;&lt;192.0,266.0&gt;-&lt;242.0,354.0&gt;-&lt;290.5,409.5&gt;&gt; = 11.474263833503956
+
+* p.mrr_ca (U+0070): L&lt;&lt;141.0,85.0&gt;--&lt;208.0,290.0&gt;&gt;/B&lt;&lt;208.0,290.0&gt;-&lt;166.0,221.0&gt;-&lt;119.5,165.0&gt;&gt; = 13.229785819345144
+
+* p.mrr_ca.ini: L&lt;&lt;141.0,85.0&gt;--&lt;208.0,290.0&gt;&gt;/B&lt;&lt;208.0,290.0&gt;-&lt;166.0,222.0&gt;-&lt;119.5,165.5&gt;&gt; = 13.602522621046685
+
+* q.jmc.fin: L&lt;&lt;207.0,-490.0&gt;--&lt;436.0,214.0&gt;&gt;/B&lt;&lt;436.0,214.0&gt;-&lt;389.0,134.0&gt;-&lt;343.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.jmc.ini: L&lt;&lt;194.0,-490.0&gt;--&lt;423.0,214.0&gt;&gt;/B&lt;&lt;423.0,214.0&gt;-&lt;376.0,134.0&gt;-&lt;330.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.jmc.med: L&lt;&lt;207.0,-490.0&gt;--&lt;436.0,214.0&gt;&gt;/B&lt;&lt;436.0,214.0&gt;-&lt;389.0,134.0&gt;-&lt;343.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.jmc: L&lt;&lt;194.0,-490.0&gt;--&lt;423.0,214.0&gt;&gt;/B&lt;&lt;423.0,214.0&gt;-&lt;376.0,134.0&gt;-&lt;330.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.mod.fin: L&lt;&lt;207.0,-490.0&gt;--&lt;436.0,214.0&gt;&gt;/B&lt;&lt;436.0,214.0&gt;-&lt;389.0,134.0&gt;-&lt;343.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.mod.ini: L&lt;&lt;194.0,-490.0&gt;--&lt;423.0,214.0&gt;&gt;/B&lt;&lt;423.0,214.0&gt;-&lt;376.0,134.0&gt;-&lt;330.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.mod.med: L&lt;&lt;207.0,-490.0&gt;--&lt;436.0,214.0&gt;&gt;/B&lt;&lt;436.0,214.0&gt;-&lt;389.0,134.0&gt;-&lt;343.0,83.0&gt;&gt; = 12.415353197341535
+
+* q.mod: L&lt;&lt;194.0,-490.0&gt;--&lt;423.0,214.0&gt;&gt;/B&lt;&lt;423.0,214.0&gt;-&lt;376.0,134.0&gt;-&lt;330.0,83.0&gt;&gt; = 12.415353197341535
+
+* r.cnt.fin: L&lt;&lt;235.0,396.0&gt;--&lt;195.0,272.0&gt;&gt;/B&lt;&lt;195.0,272.0&gt;-&lt;233.0,345.0&gt;-&lt;265.0,393.0&gt;&gt; = 9.620442135205789
+
+* r.cnt.fin_n_: L&lt;&lt;235.0,396.0&gt;--&lt;195.0,272.0&gt;&gt;/B&lt;&lt;195.0,272.0&gt;-&lt;233.0,345.0&gt;-&lt;265.0,393.0&gt;&gt; = 9.620442135205789
+
+* r.cnt.ini: L&lt;&lt;235.0,396.0&gt;--&lt;195.0,272.0&gt;&gt;/B&lt;&lt;195.0,272.0&gt;-&lt;233.0,345.0&gt;-&lt;265.0,393.0&gt;&gt; = 9.620442135205789
+
+* r.cnt.med: L&lt;&lt;235.0,396.0&gt;--&lt;195.0,272.0&gt;&gt;/B&lt;&lt;195.0,272.0&gt;-&lt;233.0,345.0&gt;-&lt;265.0,393.0&gt;&gt; = 9.620442135205789
+
+* r.cnt.med_n_: L&lt;&lt;235.0,396.0&gt;--&lt;195.0,272.0&gt;&gt;/B&lt;&lt;195.0,272.0&gt;-&lt;233.0,345.0&gt;-&lt;265.0,393.0&gt;&gt; = 9.620442135205789
+
+* r.cnt: L&lt;&lt;235.0,396.0&gt;--&lt;195.0,272.0&gt;&gt;/B&lt;&lt;195.0,272.0&gt;-&lt;233.0,345.0&gt;-&lt;265.0,393.0&gt;&gt; = 9.620442135205789
+
+* r.mod.fin: L&lt;&lt;264.0,491.0&gt;--&lt;190.0,265.0&gt;&gt;/B&lt;&lt;190.0,265.0&gt;-&lt;230.0,340.0&gt;-&lt;266.5,389.5&gt;&gt; = 9.942300023352013
+
+* r.mod.ini: L&lt;&lt;239.0,491.0&gt;--&lt;163.0,259.0&gt;&gt;/B&lt;&lt;163.0,259.0&gt;-&lt;204.0,337.0&gt;-&lt;238.5,387.0&gt;&gt; = 9.590175266721758
+
+* r.mod.med: L&lt;&lt;264.0,491.0&gt;--&lt;188.0,259.0&gt;&gt;/B&lt;&lt;188.0,259.0&gt;-&lt;229.0,337.0&gt;-&lt;263.5,387.0&gt;&gt; = 9.590175266721758
+
+* r.mod: L&lt;&lt;239.0,491.0&gt;--&lt;165.0,265.0&gt;&gt;/B&lt;&lt;165.0,265.0&gt;-&lt;205.0,340.0&gt;-&lt;241.5,389.5&gt;&gt; = 9.942300023352013
+
+* racute (U+0155): L&lt;&lt;239.0,491.0&gt;--&lt;165.0,265.0&gt;&gt;/B&lt;&lt;165.0,265.0&gt;-&lt;205.0,340.0&gt;-&lt;241.5,389.5&gt;&gt; = 9.942300023352013
+
+* rcaron (U+0159): L&lt;&lt;239.0,491.0&gt;--&lt;165.0,265.0&gt;&gt;/B&lt;&lt;165.0,265.0&gt;-&lt;205.0,340.0&gt;-&lt;241.5,389.5&gt;&gt; = 9.942300023352013
+
+* rcommaaccent (U+0157): L&lt;&lt;239.0,491.0&gt;--&lt;165.0,265.0&gt;&gt;/B&lt;&lt;165.0,265.0&gt;-&lt;205.0,340.0&gt;-&lt;241.5,389.5&gt;&gt; = 9.942300023352013
+
+* thorn.jmc (U+00FE): L&lt;&lt;433.0,988.0&gt;--&lt;206.0,293.0&gt;&gt;/B&lt;&lt;206.0,293.0&gt;-&lt;253.0,371.0&gt;-&lt;297.5,421.0&gt;&gt; = 12.983651759226875
+
+* thorn.jmc.fin: L&lt;&lt;433.0,988.0&gt;--&lt;206.0,293.0&gt;&gt;/B&lt;&lt;206.0,293.0&gt;-&lt;253.0,371.0&gt;-&lt;297.5,421.0&gt;&gt; = 12.983651759226875
+
+* thorn.jmc.ini: L&lt;&lt;433.0,988.0&gt;--&lt;206.0,293.0&gt;&gt;/B&lt;&lt;206.0,293.0&gt;-&lt;253.0,371.0&gt;-&lt;297.5,421.0&gt;&gt; = 12.983651759226875
+
+* thorn.jmc.med: L&lt;&lt;433.0,988.0&gt;--&lt;206.0,293.0&gt;&gt;/B&lt;&lt;206.0,293.0&gt;-&lt;253.0,371.0&gt;-&lt;297.5,421.0&gt;&gt; = 12.983651759226875
+
+* u.mod (U+0075): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* u.mod.fin: L&lt;&lt;431.0,115.0&gt;--&lt;473.0,243.0&gt;&gt;/B&lt;&lt;473.0,243.0&gt;-&lt;434.0,172.0&gt;-&lt;394.0,122.5&gt;&gt; = 10.613849775171696
+
+* u.mod.ini: L&lt;&lt;407.0,116.0&gt;--&lt;448.0,242.0&gt;&gt;/B&lt;&lt;448.0,242.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,123.0&gt;&gt; = 11.099329973538921
+
+* u.mod.med: L&lt;&lt;432.0,116.0&gt;--&lt;473.0,242.0&gt;&gt;/B&lt;&lt;473.0,242.0&gt;-&lt;434.0,172.0&gt;-&lt;394.0,123.0&gt;&gt; = 11.099329973538921
+
+* uacute (U+00FA): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* ubreve (U+016D): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* ucaron (U+01D4): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* ucircumflex (U+00FB): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* udieresis (U+00FC): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* udieresisacute (U+01D8): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* udieresiscaron (U+01DA): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* udieresisgrave (U+01DC): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* udieresismacron (U+01D6): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* udotbelow (U+1EE5): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* ugrave (U+00F9): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhookabove (U+1EE7): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhorn (U+01B0): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhornacute (U+1EE9): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhorndotbelow (U+1EF1): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhorngrave (U+1EEB): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhornhookabove (U+1EED): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhorntilde (U+1EEF): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uhungarumlaut (U+0171): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* umacron (U+016B): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uogonek (U+0173): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* uring (U+016F): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* utilde (U+0169): L&lt;&lt;406.0,115.0&gt;--&lt;448.0,243.0&gt;&gt;/B&lt;&lt;448.0,243.0&gt;-&lt;409.0,172.0&gt;-&lt;369.0,122.5&gt;&gt; = 10.613849775171696
+
+* y.cnt (U+0079): L&lt;&lt;384.0,-31.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.719334368198059
+
+* y.cnt.fin: L&lt;&lt;384.0,-31.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.719334368198059
+
+* y.cnt.fin_n_: L&lt;&lt;384.0,-31.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.719334368198059
+
+* y.cnt.ini: L&lt;&lt;384.0,-31.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.719334368198059
+
+* y.cnt.med: L&lt;&lt;384.0,-31.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.719334368198059
+
+* y.cnt.med_n_: L&lt;&lt;384.0,-31.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.719334368198059
+
+* y.jmc.fin: L&lt;&lt;385.0,-31.0&gt;--&lt;474.0,244.0&gt;&gt;/B&lt;&lt;474.0,244.0&gt;-&lt;435.0,174.0&gt;-&lt;395.0,124.5&gt;&gt; = 11.190586653736984
+
+* y.jmc.ini: L&lt;&lt;360.0,-31.0&gt;--&lt;449.0,244.0&gt;&gt;/B&lt;&lt;449.0,244.0&gt;-&lt;410.0,174.0&gt;-&lt;370.0,124.5&gt;&gt; = 11.190586653736984
+
+* y.jmc.med: L&lt;&lt;385.0,-31.0&gt;--&lt;474.0,244.0&gt;&gt;/B&lt;&lt;474.0,244.0&gt;-&lt;435.0,174.0&gt;-&lt;395.0,124.5&gt;&gt; = 11.190586653736984
+
+* y.jmc: L&lt;&lt;360.0,-30.0&gt;--&lt;449.0,244.0&gt;&gt;/B&lt;&lt;449.0,244.0&gt;-&lt;410.0,173.0&gt;-&lt;370.0,124.0&gt;&gt; = 10.785101788356354
+
+* y.mod.fin: L&lt;&lt;300.0,-291.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.794983413305307
+
+* y.mod.ini: L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* y.mod.med: L&lt;&lt;300.0,-291.0&gt;--&lt;474.0,245.0&gt;&gt;/B&lt;&lt;474.0,245.0&gt;-&lt;435.0,174.0&gt;-&lt;394.5,124.5&gt;&gt; = 10.794983413305307
+
+* y.mod: L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* yacute (U+00FD): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* ycircumflex (U+0177): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* ydieresis (U+00FF): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* ydotbelow (U+1EF5): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* ygrave (U+1EF3): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+
+* yhookabove (U+1EF7): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.0&gt;&gt; = 10.794983413305307
+
+* ytilde (U+1EF9): L&lt;&lt;275.0,-291.0&gt;--&lt;449.0,245.0&gt;&gt;/B&lt;&lt;449.0,245.0&gt;-&lt;410.0,174.0&gt;-&lt;369.5,124.5&gt;&gt; = 10.794983413305307
+</code></pre>
+
+                            
+                             [code: found-jaggy-segments]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+    <h3>
+    
+    Do outlines contain any semi-vertical or semi-horizontal lines?
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:outline_semi_vertical&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* Wacute (U+1E82): L&lt;&lt;875.0,13.0&gt;--&lt;877.0,914.0&gt;&gt;
+
+* Wacute (U+1E82): L&lt;&lt;928.0,988.0&gt;--&lt;924.0,78.0&gt;&gt;
+
+* Wcircumflex (U+0174): L&lt;&lt;875.0,13.0&gt;--&lt;877.0,914.0&gt;&gt;
+
+* Wcircumflex (U+0174): L&lt;&lt;928.0,988.0&gt;--&lt;924.0,78.0&gt;&gt;
+
+* Wdieresis (U+1E84): L&lt;&lt;875.0,13.0&gt;--&lt;877.0,914.0&gt;&gt;
+
+* Wdieresis (U+1E84): L&lt;&lt;928.0,988.0&gt;--&lt;924.0,78.0&gt;&gt;
+
+* Wgrave (U+1E80): L&lt;&lt;875.0,13.0&gt;--&lt;877.0,914.0&gt;&gt;
+
+* Wgrave (U+1E80): L&lt;&lt;928.0,988.0&gt;--&lt;924.0,78.0&gt;&gt;
+
+* w.mod.fin: L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* w.mod.ini: L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* w.mod.med: L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* w.mod: L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* wacute (U+1E83): L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* wcircumflex (U+0175): L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* wdieresis (U+1E85): L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+
+* wgrave (U+1E81): L&lt;&lt;104.0,11.0&gt;--&lt;102.0,489.0&gt;&gt;
+</code></pre>
+
+                            
+                             [code: found-semi-vertical]
                             
                             </span>
                         </li>
@@ -2675,37 +5681,159 @@ circumflexcomb_hookabovecomb.case</p>
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
+                <h2>Font File Checks</h2>
+<span class='section__emoji'>
+    ⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️
+</span>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Ensure fonts have ScriptLangTags declared on the &#39;meta&#39; table.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/meta/script_lang_tags&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>This font file does not have a 'meta' table.</p>
+
+                            
+                             [code: lacks-meta-table]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h3>
+    
+    Check font follows the Google Fonts vertical metric schema
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/vertical_metrics&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                ⚠️
+                PlaywriteCAGuides-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>We recommend the absolute sum of the hhea metrics should be between 1.2-1.5x of the font's upm. This font has 1.923x (1923)</p>
+
+                            
+                             [code: bad-hhea-range]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
+    
+
+    
+
             
         
     </main>
