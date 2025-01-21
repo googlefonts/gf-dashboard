@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/ttx_roundtrip<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,13 +274,13 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>0</td>
+        <td>1</td>
         <td>0</td>
         <td>2</td>
-        <td>7</td>
+        <td>6</td>
         <td>45</td>
         <td>7</td>
-        <td>179</td>
+        <td>177</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -289,7 +289,7 @@ you're checking.</p>
         <td>3%</td>
         <td>19%</td>
         <td>3%</td>
-        <td>75%</td>
+        <td>74%</td>
     </tr>
 </table>
         
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -925,8 +925,6 @@ immediately.
     
 
     
-
-    
     <h3>
     
     Glyph names are all valid?
@@ -970,8 +968,6 @@ circumflexcomb_hookabovecomb.case</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1310,17 +1306,17 @@ definitions.</p>
 <li>U+021A LATIN CAPITAL LETTER T WITH COMMA BELOW: try adding latin-ext</li>
 <li>U+021B LATIN SMALL LETTER T WITH COMMA BELOW: try adding latin-ext</li>
 <li>U+0237 LATIN SMALL LETTER DOTLESS J: try adding latin-ext</li>
-<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh, yi, latin-ext</li>
+<li>U+02C7 CARON: try adding one of: tifinagh, canadian-aboriginal, yi, latin-ext</li>
 <li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: try adding latin-ext</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: duployan, math, syriac, tai-le, hebrew, tifinagh, canadian-aboriginal, coptic, malayalam, todhri, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, cherokee, coptic, math</li>
+<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, todhri, hebrew, tifinagh, canadian-aboriginal, coptic, tai-le, duployan, syriac, old-permic, math</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
@@ -1433,7 +1429,7 @@ definitions.</p>
 <li>U+2260 NOT EQUAL TO: try adding math</li>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: duployan, tirhuta, yi, meetei-mayek, tai-tham, psalter-pahlavi, syriac, tai-le, khojki, sogdian, khmer, nko, wancho, lepcha, chakma, symbols, thai, modi, bassa-vah, newa, warang-citi, tibetan, soyombo, kayah-li, bhaiksuki, limbu, zanabazar-square, tai-viet, ahom, bengali, takri, cham, oriya, manichaean, new-tai-lue, canadian-aboriginal, gurmukhi, kharoshthi, telugu, malayalam, siddham, buginese, dogra, phags-pa, gunjala-gondi, gujarati, rejang, sundanese, pahawh-hmong, osage, sharada, brahmi, kaithi, coptic, old-permic, mende-kikakui, miao, sinhala, hebrew, saurashtra, myanmar, kannada, devanagari, math, hanifi-rohingya, marchen, tagalog, thaana, mandaic, khudawadi, tamil, javanese, tifinagh, mahajani, batak, masaram-gondi, adlam, hanunoo, balinese, grantha, buhid, tagbanwa, armenian, mongolian, caucasian-albanian, lao, elbasan, music, syloti-nagri</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: takri, wancho, tagbanwa, manichaean, mongolian, nko, soyombo, tamil, coptic, javanese, buginese, caucasian-albanian, mende-kikakui, grantha, gurmukhi, buhid, yi, chakma, thai, ahom, sharada, bhaiksuki, osage, masaram-gondi, pahawh-hmong, tirhuta, kannada, meetei-mayek, sundanese, tagalog, khojki, khmer, malayalam, telugu, hanunoo, mahajani, lepcha, duployan, gunjala-gondi, kaithi, hanifi-rohingya, gujarati, tibetan, bengali, tai-viet, zanabazar-square, siddham, canadian-aboriginal, kayah-li, tai-tham, elbasan, syriac, cham, oriya, saurashtra, lao, khudawadi, rejang, psalter-pahlavi, kharoshthi, miao, balinese, mandaic, dogra, batak, tai-le, hebrew, tifinagh, armenian, newa, sogdian, myanmar, brahmi, modi, syloti-nagri, adlam, new-tai-lue, limbu, sinhala, old-permic, music, bassa-vah, phags-pa, symbols, math, warang-citi, marchen, thaana, devanagari</li>
 </ul>
 <p>Or you can add the above codepoints to one of the subsets supported by the font: <code>menu</code></p>
 
@@ -1467,7 +1463,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    ⚠️
+    💥
 </span>
 
     
@@ -1489,7 +1485,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 PlaywriteCO[wght].ttf
                 
             </summary>
@@ -1498,32 +1494,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>

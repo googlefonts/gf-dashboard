@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_short_segments<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/version_bump<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,16 +274,16 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>0</td>
+        <td>4</td>
         <td>0</td>
         <td>5</td>
-        <td>43</td>
+        <td>39</td>
         <td>107</td>
         <td>15</td>
-        <td>291</td>
+        <td>287</td>
     </tr>
     <tr>
-        <td>0%</td>
+        <td>1%</td>
         <td>0%</td>
         <td>1%</td>
         <td>9%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
         
@@ -952,11 +952,11 @@ The following math glyphs have a different width, though:</p>
 <p>Width = 640:
 plusminus</p>
 <p>Width = 900:
-suchthat, element, proportional, propersuperset, reflexsuperset, reflexsubset, propersubset</p>
+proportional, element, reflexsubset, propersuperset, suchthat, propersubset, reflexsuperset</p>
 <p>Width = 800:
-angle, uni22A5</p>
+uni22A5, angle</p>
 <p>Width = 660:
-greaterequal, lessequal</p>
+lessequal, greaterequal</p>
 
                             
                              [code: width-outliers]
@@ -988,9 +988,9 @@ greaterequal, lessequal</p>
                             <p>The most common width is 650 among a set of 18 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 900:
-suchthat, element, proportional, propersuperset, reflexsuperset, reflexsubset, propersubset</p>
+proportional, element, reflexsubset, propersuperset, suchthat, propersubset, reflexsuperset</p>
 <p>Width = 800:
-angle, uni22A5</p>
+uni22A5, angle</p>
 <p>Width = 640:
 equivalence</p>
 
@@ -1003,8 +1003,6 @@ equivalence</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1552,8 +1550,6 @@ The current recommendation is to completely remove the DSIG table.</li>
 
     
 
-    
-
             
         
             
@@ -1765,22 +1761,22 @@ definitions.</p>
 <li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, coptic, cherokee</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, math, canadian-aboriginal, tai-le, duployan, tifinagh, hebrew, todhri, malayalam, coptic, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: old-permic, tai-le, coptic, todhri, syriac, tifinagh, math, canadian-aboriginal, malayalam, duployan, hebrew</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+0311 COMBINING INVERTED BREVE: try adding one of: todhri, coptic</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding one of: coptic, todhri</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, cherokee, duployan</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: duployan, cherokee, syriac</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
 <li>U+0327 COMBINING CEDILLA: try adding math</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: syriac, cherokee, tifinagh, caucasian-albanian, gothic, sunuwar, thai</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, tifinagh, cherokee, thai, gothic, sunuwar, syriac</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
@@ -1788,7 +1784,7 @@ definitions.</p>
 <li>U+2003 EM SPACE: try adding nushu</li>
 <li>U+2005 FOUR-PER-EM SPACE: try adding symbols2</li>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
-<li>U+2010 HYPHEN: try adding one of: arabic, syloti-nagri, yi, kayah-li, lisu, hebrew, cham, sora-sompeng, kharoshthi, armenian, sundanese, coptic, kaithi</li>
+<li>U+2010 HYPHEN: try adding one of: kayah-li, arabic, kaithi, kharoshthi, sundanese, sora-sompeng, syloti-nagri, yi, coptic, armenian, cham, lisu, hebrew</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
@@ -1853,14 +1849,14 @@ definitions.</p>
 <li>U+2177 SMALL ROMAN NUMERAL EIGHT: try adding symbols</li>
 <li>U+2178 SMALL ROMAN NUMERAL NINE: try adding symbols</li>
 <li>U+2179 SMALL ROMAN NUMERAL TEN: try adding symbols</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
 <li>U+21D2 RIGHTWARDS DOUBLE ARROW: try adding math</li>
 <li>U+21D4 LEFT RIGHT DOUBLE ARROW: try adding math</li>
 <li>U+2200 FOR ALL: try adding math</li>
@@ -1872,7 +1868,7 @@ definitions.</p>
 <li>U+220B CONTAINS AS MEMBER: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, math, yi, symbols</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: symbols, math, tai-tham, yi</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221D PROPORTIONAL TO: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
@@ -1905,34 +1901,34 @@ definitions.</p>
 <li>U+2283 SUPERSET OF: try adding math</li>
 <li>U+2286 SUBSET OF OR EQUAL TO: try adding math</li>
 <li>U+2287 SUPERSET OF OR EQUAL TO: try adding math</li>
-<li>U+2299 CIRCLED DOT OPERATOR: try adding one of: math, symbols</li>
+<li>U+2299 CIRCLED DOT OPERATOR: try adding one of: symbols, math</li>
 <li>U+22A5 UP TACK: try adding math</li>
 <li>U+22EF MIDLINE HORIZONTAL ELLIPSIS: try adding math</li>
 <li>U+2312 ARC: try adding symbols</li>
 <li>U+2329 LEFT-POINTING ANGLE BRACKET: try adding symbols</li>
 <li>U+232A RIGHT-POINTING ANGLE BRACKET: try adding symbols</li>
-<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, yi, symbols</li>
-<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, yi, symbols</li>
-<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, yi, symbols</li>
-<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, yi, symbols</li>
-<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2469 CIRCLED NUMBER TEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246A CIRCLED NUMBER ELEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246B CIRCLED NUMBER TWELVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+246C CIRCLED NUMBER THIRTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246D CIRCLED NUMBER FOURTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246E CIRCLED NUMBER FIFTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246F CIRCLED NUMBER SIXTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: mongolian, yi, symbols</li>
-<li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: math, symbols</li>
-<li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: math, symbols</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, symbols, yi</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, symbols, yi</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, symbols, yi</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, symbols, yi</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2469 CIRCLED NUMBER TEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246A CIRCLED NUMBER ELEVEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246B CIRCLED NUMBER TWELVE: try adding one of: mongolian, symbols, yi</li>
+<li>U+246C CIRCLED NUMBER THIRTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246D CIRCLED NUMBER FOURTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246E CIRCLED NUMBER FIFTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246F CIRCLED NUMBER SIXTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: mongolian, symbols, yi</li>
+<li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: symbols, math</li>
+<li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: symbols, math</li>
 <li>U+2476 PARENTHESIZED DIGIT THREE: try adding symbols</li>
 <li>U+2477 PARENTHESIZED DIGIT FOUR: try adding symbols</li>
 <li>U+2478 PARENTHESIZED DIGIT FIVE: try adding symbols</li>
@@ -2120,18 +2116,18 @@ definitions.</p>
 <li>U+25A8 SQUARE WITH UPPER RIGHT TO LOWER LEFT FILL: try adding symbols</li>
 <li>U+25A9 SQUARE WITH DIAGONAL CROSSHATCH FILL: try adding symbols</li>
 <li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C6 BLACK DIAMOND: try adding symbols</li>
 <li>U+25C7 WHITE DIAMOND: try adding symbols</li>
 <li>U+25C8 WHITE DIAMOND CONTAINING BLACK SMALL DIAMOND: try adding symbols</li>
 <li>U+25C9 FISHEYE: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
@@ -2153,10 +2149,10 @@ definitions.</p>
 <li>U+2665 BLACK HEART SUIT: try adding symbols</li>
 <li>U+2667 WHITE CLUB SUIT: try adding symbols</li>
 <li>U+2668 HOT SPRINGS: try adding symbols</li>
-<li>U+2669 QUARTER NOTE: try adding one of: music, symbols</li>
-<li>U+266A EIGHTH NOTE: try adding one of: music, symbols</li>
-<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: music, symbols</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: music, math, symbols</li>
+<li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
+<li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: symbols, math, music</li>
 <li>U+274C CROSS MARK: try adding symbols</li>
 <li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: try adding symbols</li>
 <li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: try adding symbols</li>
@@ -2170,23 +2166,23 @@ definitions.</p>
 <li>U+277F DINGBAT NEGATIVE CIRCLED NUMBER TEN: try adding symbols</li>
 <li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
 <li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
-<li>U+3000 IDEOGRAPHIC SPACE: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, nushu, chinese-simplified</li>
-<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: tai-le, chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: tai-le, chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, nushu, mongolian, chinese-simplified</li>
-<li>U+3003 DITTO MARK: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, lisu, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, lisu, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3013 GETA MARK: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
+<li>U+3000 IDEOGRAPHIC SPACE: try adding one of: japanese, chinese-traditional, nushu, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: japanese, tai-le, chinese-traditional, nushu, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3003 DITTO MARK: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong, lisu</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong, lisu</li>
+<li>U+300C LEFT CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300D RIGHT CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3013 GETA MARK: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
 <li>U+301C WAVE DASH: try adding japanese</li>
 <li>U+327E CIRCLED HANGUL IEUNG U: not included in any glyphset definition</li>
 <li>U+327F KOREAN STANDARD SYMBOL: not included in any glyphset definition</li>
@@ -2272,105 +2268,105 @@ definitions.</p>
 <li>U+33DD SQUARE WB: not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FF01 FULLWIDTH EXCLAMATION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF03 FULLWIDTH NUMBER SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF04 FULLWIDTH DOLLAR SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF05 FULLWIDTH PERCENT SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF06 FULLWIDTH AMPERSAND: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF07 FULLWIDTH APOSTROPHE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF08 FULLWIDTH LEFT PARENTHESIS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF09 FULLWIDTH RIGHT PARENTHESIS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0A FULLWIDTH ASTERISK: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0B FULLWIDTH PLUS SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0C FULLWIDTH COMMA: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0E FULLWIDTH FULL STOP: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0F FULLWIDTH SOLIDUS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF10 FULLWIDTH DIGIT ZERO: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF11 FULLWIDTH DIGIT ONE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF12 FULLWIDTH DIGIT TWO: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF13 FULLWIDTH DIGIT THREE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF14 FULLWIDTH DIGIT FOUR: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF15 FULLWIDTH DIGIT FIVE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF16 FULLWIDTH DIGIT SIX: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF17 FULLWIDTH DIGIT SEVEN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF18 FULLWIDTH DIGIT EIGHT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF19 FULLWIDTH DIGIT NINE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1A FULLWIDTH COLON: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF1B FULLWIDTH SEMICOLON: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF1C FULLWIDTH LESS-THAN SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1D FULLWIDTH EQUALS SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1E FULLWIDTH GREATER-THAN SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1F FULLWIDTH QUESTION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF20 FULLWIDTH COMMERCIAL AT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF21 FULLWIDTH LATIN CAPITAL LETTER A: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF22 FULLWIDTH LATIN CAPITAL LETTER B: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF23 FULLWIDTH LATIN CAPITAL LETTER C: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF24 FULLWIDTH LATIN CAPITAL LETTER D: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF25 FULLWIDTH LATIN CAPITAL LETTER E: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF26 FULLWIDTH LATIN CAPITAL LETTER F: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF27 FULLWIDTH LATIN CAPITAL LETTER G: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF28 FULLWIDTH LATIN CAPITAL LETTER H: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF29 FULLWIDTH LATIN CAPITAL LETTER I: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2A FULLWIDTH LATIN CAPITAL LETTER J: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2B FULLWIDTH LATIN CAPITAL LETTER K: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2C FULLWIDTH LATIN CAPITAL LETTER L: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2D FULLWIDTH LATIN CAPITAL LETTER M: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2E FULLWIDTH LATIN CAPITAL LETTER N: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2F FULLWIDTH LATIN CAPITAL LETTER O: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF30 FULLWIDTH LATIN CAPITAL LETTER P: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF31 FULLWIDTH LATIN CAPITAL LETTER Q: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF32 FULLWIDTH LATIN CAPITAL LETTER R: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF33 FULLWIDTH LATIN CAPITAL LETTER S: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF34 FULLWIDTH LATIN CAPITAL LETTER T: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF35 FULLWIDTH LATIN CAPITAL LETTER U: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF36 FULLWIDTH LATIN CAPITAL LETTER V: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF37 FULLWIDTH LATIN CAPITAL LETTER W: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF38 FULLWIDTH LATIN CAPITAL LETTER X: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF39 FULLWIDTH LATIN CAPITAL LETTER Y: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3A FULLWIDTH LATIN CAPITAL LETTER Z: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3B FULLWIDTH LEFT SQUARE BRACKET: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3D FULLWIDTH RIGHT SQUARE BRACKET: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF3E FULLWIDTH CIRCUMFLEX ACCENT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3F FULLWIDTH LOW LINE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF40 FULLWIDTH GRAVE ACCENT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF41 FULLWIDTH LATIN SMALL LETTER A: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF42 FULLWIDTH LATIN SMALL LETTER B: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF43 FULLWIDTH LATIN SMALL LETTER C: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF44 FULLWIDTH LATIN SMALL LETTER D: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF45 FULLWIDTH LATIN SMALL LETTER E: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF46 FULLWIDTH LATIN SMALL LETTER F: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF47 FULLWIDTH LATIN SMALL LETTER G: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF48 FULLWIDTH LATIN SMALL LETTER H: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF49 FULLWIDTH LATIN SMALL LETTER I: try adding one of: japanese, chinese-simplified</li>
+<li>U+FF01 FULLWIDTH EXCLAMATION MARK: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF03 FULLWIDTH NUMBER SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF04 FULLWIDTH DOLLAR SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF05 FULLWIDTH PERCENT SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF06 FULLWIDTH AMPERSAND: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF07 FULLWIDTH APOSTROPHE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF08 FULLWIDTH LEFT PARENTHESIS: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF09 FULLWIDTH RIGHT PARENTHESIS: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF0A FULLWIDTH ASTERISK: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF0B FULLWIDTH PLUS SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF0C FULLWIDTH COMMA: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF0E FULLWIDTH FULL STOP: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF0F FULLWIDTH SOLIDUS: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF10 FULLWIDTH DIGIT ZERO: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF11 FULLWIDTH DIGIT ONE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF12 FULLWIDTH DIGIT TWO: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF13 FULLWIDTH DIGIT THREE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF14 FULLWIDTH DIGIT FOUR: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF15 FULLWIDTH DIGIT FIVE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF16 FULLWIDTH DIGIT SIX: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF17 FULLWIDTH DIGIT SEVEN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF18 FULLWIDTH DIGIT EIGHT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF19 FULLWIDTH DIGIT NINE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1A FULLWIDTH COLON: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF1B FULLWIDTH SEMICOLON: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF1C FULLWIDTH LESS-THAN SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1D FULLWIDTH EQUALS SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1E FULLWIDTH GREATER-THAN SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1F FULLWIDTH QUESTION MARK: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF20 FULLWIDTH COMMERCIAL AT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF21 FULLWIDTH LATIN CAPITAL LETTER A: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF22 FULLWIDTH LATIN CAPITAL LETTER B: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF23 FULLWIDTH LATIN CAPITAL LETTER C: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF24 FULLWIDTH LATIN CAPITAL LETTER D: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF25 FULLWIDTH LATIN CAPITAL LETTER E: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF26 FULLWIDTH LATIN CAPITAL LETTER F: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF27 FULLWIDTH LATIN CAPITAL LETTER G: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF28 FULLWIDTH LATIN CAPITAL LETTER H: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF29 FULLWIDTH LATIN CAPITAL LETTER I: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2A FULLWIDTH LATIN CAPITAL LETTER J: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2B FULLWIDTH LATIN CAPITAL LETTER K: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2C FULLWIDTH LATIN CAPITAL LETTER L: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2D FULLWIDTH LATIN CAPITAL LETTER M: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2E FULLWIDTH LATIN CAPITAL LETTER N: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2F FULLWIDTH LATIN CAPITAL LETTER O: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF30 FULLWIDTH LATIN CAPITAL LETTER P: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF31 FULLWIDTH LATIN CAPITAL LETTER Q: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF32 FULLWIDTH LATIN CAPITAL LETTER R: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF33 FULLWIDTH LATIN CAPITAL LETTER S: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF34 FULLWIDTH LATIN CAPITAL LETTER T: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF35 FULLWIDTH LATIN CAPITAL LETTER U: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF36 FULLWIDTH LATIN CAPITAL LETTER V: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF37 FULLWIDTH LATIN CAPITAL LETTER W: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF38 FULLWIDTH LATIN CAPITAL LETTER X: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF39 FULLWIDTH LATIN CAPITAL LETTER Y: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3A FULLWIDTH LATIN CAPITAL LETTER Z: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3B FULLWIDTH LEFT SQUARE BRACKET: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3D FULLWIDTH RIGHT SQUARE BRACKET: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF3E FULLWIDTH CIRCUMFLEX ACCENT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3F FULLWIDTH LOW LINE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF40 FULLWIDTH GRAVE ACCENT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF41 FULLWIDTH LATIN SMALL LETTER A: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF42 FULLWIDTH LATIN SMALL LETTER B: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF43 FULLWIDTH LATIN SMALL LETTER C: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF44 FULLWIDTH LATIN SMALL LETTER D: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF45 FULLWIDTH LATIN SMALL LETTER E: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF46 FULLWIDTH LATIN SMALL LETTER F: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF47 FULLWIDTH LATIN SMALL LETTER G: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF48 FULLWIDTH LATIN SMALL LETTER H: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF49 FULLWIDTH LATIN SMALL LETTER I: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF4A FULLWIDTH LATIN SMALL LETTER J: try adding japanese</li>
-<li>U+FF4B FULLWIDTH LATIN SMALL LETTER K: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4C FULLWIDTH LATIN SMALL LETTER L: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4D FULLWIDTH LATIN SMALL LETTER M: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4E FULLWIDTH LATIN SMALL LETTER N: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4F FULLWIDTH LATIN SMALL LETTER O: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF50 FULLWIDTH LATIN SMALL LETTER P: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF51 FULLWIDTH LATIN SMALL LETTER Q: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF52 FULLWIDTH LATIN SMALL LETTER R: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF53 FULLWIDTH LATIN SMALL LETTER S: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF54 FULLWIDTH LATIN SMALL LETTER T: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF55 FULLWIDTH LATIN SMALL LETTER U: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF56 FULLWIDTH LATIN SMALL LETTER V: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF57 FULLWIDTH LATIN SMALL LETTER W: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: japanese, chinese-simplified</li>
+<li>U+FF4B FULLWIDTH LATIN SMALL LETTER K: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4C FULLWIDTH LATIN SMALL LETTER L: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4D FULLWIDTH LATIN SMALL LETTER M: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4E FULLWIDTH LATIN SMALL LETTER N: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4F FULLWIDTH LATIN SMALL LETTER O: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF50 FULLWIDTH LATIN SMALL LETTER P: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF51 FULLWIDTH LATIN SMALL LETTER Q: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF52 FULLWIDTH LATIN SMALL LETTER R: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF53 FULLWIDTH LATIN SMALL LETTER S: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF54 FULLWIDTH LATIN SMALL LETTER T: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF55 FULLWIDTH LATIN SMALL LETTER U: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF56 FULLWIDTH LATIN SMALL LETTER V: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF57 FULLWIDTH LATIN SMALL LETTER W: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF5A FULLWIDTH LATIN SMALL LETTER Z: try adding japanese</li>
-<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: japanese, math, chinese-simplified, yi</li>
-<li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: japanese, math, chinese-simplified, yi</li>
+<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: chinese-simplified, yi, math, japanese</li>
+<li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: chinese-simplified, yi, math, japanese</li>
 <li>U+FF5E FULLWIDTH TILDE: try adding one of: chinese-simplified, yi</li>
 <li>U+FFE0 FULLWIDTH CENT SIGN: try adding chinese-simplified</li>
 <li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
 <li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
-<li>U+FFE3 FULLWIDTH MACRON: try adding one of: japanese, chinese-simplified</li>
-<li>U+FFE5 FULLWIDTH YEN SIGN: try adding one of: japanese, chinese-simplified</li>
+<li>U+FFE3 FULLWIDTH MACRON: try adding one of: chinese-simplified, japanese</li>
+<li>U+FFE5 FULLWIDTH YEN SIGN: try adding one of: chinese-simplified, japanese</li>
 <li>U+FFE6 FULLWIDTH WON SIGN: not included in any glyphset definition</li>
 <li>U+1F110 PARENTHESIZED LATIN CAPITAL LETTER A: try adding symbols</li>
 <li>U+1F111 PARENTHESIZED LATIN CAPITAL LETTER B: try adding symbols</li>
@@ -2437,22 +2433,22 @@ definitions.</p>
 <li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, coptic, cherokee</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, cherokee, math</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, math, canadian-aboriginal, tai-le, duployan, tifinagh, hebrew, todhri, malayalam, coptic, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: old-permic, tai-le, coptic, todhri, syriac, tifinagh, math, canadian-aboriginal, malayalam, duployan, hebrew</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+0311 COMBINING INVERTED BREVE: try adding one of: todhri, coptic</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding one of: coptic, todhri</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, cherokee, duployan</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: duployan, cherokee, syriac</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
 <li>U+0327 COMBINING CEDILLA: try adding math</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: syriac, cherokee, tifinagh, caucasian-albanian, gothic, sunuwar, thai</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, tifinagh, cherokee, thai, gothic, sunuwar, syriac</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
@@ -2460,7 +2456,7 @@ definitions.</p>
 <li>U+2003 EM SPACE: try adding nushu</li>
 <li>U+2005 FOUR-PER-EM SPACE: try adding symbols2</li>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
-<li>U+2010 HYPHEN: try adding one of: arabic, syloti-nagri, yi, kayah-li, lisu, hebrew, cham, sora-sompeng, kharoshthi, armenian, sundanese, coptic, kaithi</li>
+<li>U+2010 HYPHEN: try adding one of: kayah-li, arabic, kaithi, kharoshthi, sundanese, sora-sompeng, syloti-nagri, yi, coptic, armenian, cham, lisu, hebrew</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
@@ -2525,14 +2521,14 @@ definitions.</p>
 <li>U+2177 SMALL ROMAN NUMERAL EIGHT: try adding symbols</li>
 <li>U+2178 SMALL ROMAN NUMERAL NINE: try adding symbols</li>
 <li>U+2179 SMALL ROMAN NUMERAL TEN: try adding symbols</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
 <li>U+21D2 RIGHTWARDS DOUBLE ARROW: try adding math</li>
 <li>U+21D4 LEFT RIGHT DOUBLE ARROW: try adding math</li>
 <li>U+2200 FOR ALL: try adding math</li>
@@ -2544,7 +2540,7 @@ definitions.</p>
 <li>U+220B CONTAINS AS MEMBER: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, math, yi, symbols</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: symbols, math, tai-tham, yi</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221D PROPORTIONAL TO: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
@@ -2577,34 +2573,34 @@ definitions.</p>
 <li>U+2283 SUPERSET OF: try adding math</li>
 <li>U+2286 SUBSET OF OR EQUAL TO: try adding math</li>
 <li>U+2287 SUPERSET OF OR EQUAL TO: try adding math</li>
-<li>U+2299 CIRCLED DOT OPERATOR: try adding one of: math, symbols</li>
+<li>U+2299 CIRCLED DOT OPERATOR: try adding one of: symbols, math</li>
 <li>U+22A5 UP TACK: try adding math</li>
 <li>U+22EF MIDLINE HORIZONTAL ELLIPSIS: try adding math</li>
 <li>U+2312 ARC: try adding symbols</li>
 <li>U+2329 LEFT-POINTING ANGLE BRACKET: try adding symbols</li>
 <li>U+232A RIGHT-POINTING ANGLE BRACKET: try adding symbols</li>
-<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, yi, symbols</li>
-<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, yi, symbols</li>
-<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, yi, symbols</li>
-<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, yi, symbols</li>
-<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2469 CIRCLED NUMBER TEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246A CIRCLED NUMBER ELEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246B CIRCLED NUMBER TWELVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+246C CIRCLED NUMBER THIRTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246D CIRCLED NUMBER FOURTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246E CIRCLED NUMBER FIFTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246F CIRCLED NUMBER SIXTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: mongolian, yi, symbols</li>
-<li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: math, symbols</li>
-<li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: math, symbols</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, symbols, yi</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, symbols, yi</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, symbols, yi</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, symbols, yi</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2469 CIRCLED NUMBER TEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246A CIRCLED NUMBER ELEVEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246B CIRCLED NUMBER TWELVE: try adding one of: mongolian, symbols, yi</li>
+<li>U+246C CIRCLED NUMBER THIRTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246D CIRCLED NUMBER FOURTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246E CIRCLED NUMBER FIFTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246F CIRCLED NUMBER SIXTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: mongolian, symbols, yi</li>
+<li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: symbols, math</li>
+<li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: symbols, math</li>
 <li>U+2476 PARENTHESIZED DIGIT THREE: try adding symbols</li>
 <li>U+2477 PARENTHESIZED DIGIT FOUR: try adding symbols</li>
 <li>U+2478 PARENTHESIZED DIGIT FIVE: try adding symbols</li>
@@ -2792,18 +2788,18 @@ definitions.</p>
 <li>U+25A8 SQUARE WITH UPPER RIGHT TO LOWER LEFT FILL: try adding symbols</li>
 <li>U+25A9 SQUARE WITH DIAGONAL CROSSHATCH FILL: try adding symbols</li>
 <li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C6 BLACK DIAMOND: try adding symbols</li>
 <li>U+25C7 WHITE DIAMOND: try adding symbols</li>
 <li>U+25C8 WHITE DIAMOND CONTAINING BLACK SMALL DIAMOND: try adding symbols</li>
 <li>U+25C9 FISHEYE: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
@@ -2825,10 +2821,10 @@ definitions.</p>
 <li>U+2665 BLACK HEART SUIT: try adding symbols</li>
 <li>U+2667 WHITE CLUB SUIT: try adding symbols</li>
 <li>U+2668 HOT SPRINGS: try adding symbols</li>
-<li>U+2669 QUARTER NOTE: try adding one of: music, symbols</li>
-<li>U+266A EIGHTH NOTE: try adding one of: music, symbols</li>
-<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: music, symbols</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: music, math, symbols</li>
+<li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
+<li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: symbols, math, music</li>
 <li>U+274C CROSS MARK: try adding symbols</li>
 <li>U+2776 DINGBAT NEGATIVE CIRCLED DIGIT ONE: try adding symbols</li>
 <li>U+2777 DINGBAT NEGATIVE CIRCLED DIGIT TWO: try adding symbols</li>
@@ -2842,23 +2838,23 @@ definitions.</p>
 <li>U+277F DINGBAT NEGATIVE CIRCLED NUMBER TEN: try adding symbols</li>
 <li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
 <li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
-<li>U+3000 IDEOGRAPHIC SPACE: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, nushu, chinese-simplified</li>
-<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: tai-le, chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: tai-le, chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, nushu, mongolian, chinese-simplified</li>
-<li>U+3003 DITTO MARK: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, lisu, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: tai-le, chinese-traditional, yi, japanese, tibetan, phags-pa, lisu, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, mongolian, chinese-simplified</li>
-<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3013 GETA MARK: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
-<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-traditional, yi, japanese, phags-pa, chinese-hongkong, chinese-simplified</li>
+<li>U+3000 IDEOGRAPHIC SPACE: try adding one of: japanese, chinese-traditional, nushu, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: japanese, tai-le, chinese-traditional, nushu, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3003 DITTO MARK: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong, lisu</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: tibetan, japanese, tai-le, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong, lisu</li>
+<li>U+300C LEFT CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300D RIGHT CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, mongolian, phags-pa, chinese-hongkong</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3013 GETA MARK: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: japanese, chinese-traditional, yi, chinese-simplified, phags-pa, chinese-hongkong</li>
 <li>U+301C WAVE DASH: try adding japanese</li>
 <li>U+327E CIRCLED HANGUL IEUNG U: not included in any glyphset definition</li>
 <li>U+327F KOREAN STANDARD SYMBOL: not included in any glyphset definition</li>
@@ -2944,105 +2940,105 @@ definitions.</p>
 <li>U+33DD SQUARE WB: not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FF01 FULLWIDTH EXCLAMATION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF03 FULLWIDTH NUMBER SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF04 FULLWIDTH DOLLAR SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF05 FULLWIDTH PERCENT SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF06 FULLWIDTH AMPERSAND: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF07 FULLWIDTH APOSTROPHE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF08 FULLWIDTH LEFT PARENTHESIS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF09 FULLWIDTH RIGHT PARENTHESIS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0A FULLWIDTH ASTERISK: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0B FULLWIDTH PLUS SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0C FULLWIDTH COMMA: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0E FULLWIDTH FULL STOP: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0F FULLWIDTH SOLIDUS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF10 FULLWIDTH DIGIT ZERO: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF11 FULLWIDTH DIGIT ONE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF12 FULLWIDTH DIGIT TWO: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF13 FULLWIDTH DIGIT THREE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF14 FULLWIDTH DIGIT FOUR: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF15 FULLWIDTH DIGIT FIVE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF16 FULLWIDTH DIGIT SIX: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF17 FULLWIDTH DIGIT SEVEN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF18 FULLWIDTH DIGIT EIGHT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF19 FULLWIDTH DIGIT NINE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1A FULLWIDTH COLON: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF1B FULLWIDTH SEMICOLON: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF1C FULLWIDTH LESS-THAN SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1D FULLWIDTH EQUALS SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1E FULLWIDTH GREATER-THAN SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1F FULLWIDTH QUESTION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF20 FULLWIDTH COMMERCIAL AT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF21 FULLWIDTH LATIN CAPITAL LETTER A: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF22 FULLWIDTH LATIN CAPITAL LETTER B: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF23 FULLWIDTH LATIN CAPITAL LETTER C: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF24 FULLWIDTH LATIN CAPITAL LETTER D: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF25 FULLWIDTH LATIN CAPITAL LETTER E: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF26 FULLWIDTH LATIN CAPITAL LETTER F: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF27 FULLWIDTH LATIN CAPITAL LETTER G: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF28 FULLWIDTH LATIN CAPITAL LETTER H: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF29 FULLWIDTH LATIN CAPITAL LETTER I: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2A FULLWIDTH LATIN CAPITAL LETTER J: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2B FULLWIDTH LATIN CAPITAL LETTER K: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2C FULLWIDTH LATIN CAPITAL LETTER L: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2D FULLWIDTH LATIN CAPITAL LETTER M: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2E FULLWIDTH LATIN CAPITAL LETTER N: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF2F FULLWIDTH LATIN CAPITAL LETTER O: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF30 FULLWIDTH LATIN CAPITAL LETTER P: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF31 FULLWIDTH LATIN CAPITAL LETTER Q: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF32 FULLWIDTH LATIN CAPITAL LETTER R: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF33 FULLWIDTH LATIN CAPITAL LETTER S: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF34 FULLWIDTH LATIN CAPITAL LETTER T: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF35 FULLWIDTH LATIN CAPITAL LETTER U: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF36 FULLWIDTH LATIN CAPITAL LETTER V: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF37 FULLWIDTH LATIN CAPITAL LETTER W: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF38 FULLWIDTH LATIN CAPITAL LETTER X: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF39 FULLWIDTH LATIN CAPITAL LETTER Y: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3A FULLWIDTH LATIN CAPITAL LETTER Z: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3B FULLWIDTH LEFT SQUARE BRACKET: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3D FULLWIDTH RIGHT SQUARE BRACKET: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF3E FULLWIDTH CIRCUMFLEX ACCENT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3F FULLWIDTH LOW LINE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF40 FULLWIDTH GRAVE ACCENT: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF41 FULLWIDTH LATIN SMALL LETTER A: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF42 FULLWIDTH LATIN SMALL LETTER B: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF43 FULLWIDTH LATIN SMALL LETTER C: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF44 FULLWIDTH LATIN SMALL LETTER D: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF45 FULLWIDTH LATIN SMALL LETTER E: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF46 FULLWIDTH LATIN SMALL LETTER F: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF47 FULLWIDTH LATIN SMALL LETTER G: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF48 FULLWIDTH LATIN SMALL LETTER H: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF49 FULLWIDTH LATIN SMALL LETTER I: try adding one of: japanese, chinese-simplified</li>
+<li>U+FF01 FULLWIDTH EXCLAMATION MARK: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF03 FULLWIDTH NUMBER SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF04 FULLWIDTH DOLLAR SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF05 FULLWIDTH PERCENT SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF06 FULLWIDTH AMPERSAND: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF07 FULLWIDTH APOSTROPHE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF08 FULLWIDTH LEFT PARENTHESIS: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF09 FULLWIDTH RIGHT PARENTHESIS: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF0A FULLWIDTH ASTERISK: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF0B FULLWIDTH PLUS SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF0C FULLWIDTH COMMA: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF0E FULLWIDTH FULL STOP: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF0F FULLWIDTH SOLIDUS: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF10 FULLWIDTH DIGIT ZERO: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF11 FULLWIDTH DIGIT ONE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF12 FULLWIDTH DIGIT TWO: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF13 FULLWIDTH DIGIT THREE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF14 FULLWIDTH DIGIT FOUR: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF15 FULLWIDTH DIGIT FIVE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF16 FULLWIDTH DIGIT SIX: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF17 FULLWIDTH DIGIT SEVEN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF18 FULLWIDTH DIGIT EIGHT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF19 FULLWIDTH DIGIT NINE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1A FULLWIDTH COLON: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF1B FULLWIDTH SEMICOLON: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF1C FULLWIDTH LESS-THAN SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1D FULLWIDTH EQUALS SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1E FULLWIDTH GREATER-THAN SIGN: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF1F FULLWIDTH QUESTION MARK: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF20 FULLWIDTH COMMERCIAL AT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF21 FULLWIDTH LATIN CAPITAL LETTER A: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF22 FULLWIDTH LATIN CAPITAL LETTER B: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF23 FULLWIDTH LATIN CAPITAL LETTER C: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF24 FULLWIDTH LATIN CAPITAL LETTER D: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF25 FULLWIDTH LATIN CAPITAL LETTER E: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF26 FULLWIDTH LATIN CAPITAL LETTER F: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF27 FULLWIDTH LATIN CAPITAL LETTER G: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF28 FULLWIDTH LATIN CAPITAL LETTER H: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF29 FULLWIDTH LATIN CAPITAL LETTER I: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2A FULLWIDTH LATIN CAPITAL LETTER J: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2B FULLWIDTH LATIN CAPITAL LETTER K: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2C FULLWIDTH LATIN CAPITAL LETTER L: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2D FULLWIDTH LATIN CAPITAL LETTER M: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2E FULLWIDTH LATIN CAPITAL LETTER N: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF2F FULLWIDTH LATIN CAPITAL LETTER O: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF30 FULLWIDTH LATIN CAPITAL LETTER P: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF31 FULLWIDTH LATIN CAPITAL LETTER Q: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF32 FULLWIDTH LATIN CAPITAL LETTER R: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF33 FULLWIDTH LATIN CAPITAL LETTER S: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF34 FULLWIDTH LATIN CAPITAL LETTER T: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF35 FULLWIDTH LATIN CAPITAL LETTER U: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF36 FULLWIDTH LATIN CAPITAL LETTER V: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF37 FULLWIDTH LATIN CAPITAL LETTER W: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF38 FULLWIDTH LATIN CAPITAL LETTER X: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF39 FULLWIDTH LATIN CAPITAL LETTER Y: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3A FULLWIDTH LATIN CAPITAL LETTER Z: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3B FULLWIDTH LEFT SQUARE BRACKET: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3D FULLWIDTH RIGHT SQUARE BRACKET: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF3E FULLWIDTH CIRCUMFLEX ACCENT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF3F FULLWIDTH LOW LINE: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF40 FULLWIDTH GRAVE ACCENT: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF41 FULLWIDTH LATIN SMALL LETTER A: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF42 FULLWIDTH LATIN SMALL LETTER B: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF43 FULLWIDTH LATIN SMALL LETTER C: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF44 FULLWIDTH LATIN SMALL LETTER D: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF45 FULLWIDTH LATIN SMALL LETTER E: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF46 FULLWIDTH LATIN SMALL LETTER F: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF47 FULLWIDTH LATIN SMALL LETTER G: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF48 FULLWIDTH LATIN SMALL LETTER H: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF49 FULLWIDTH LATIN SMALL LETTER I: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF4A FULLWIDTH LATIN SMALL LETTER J: try adding japanese</li>
-<li>U+FF4B FULLWIDTH LATIN SMALL LETTER K: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4C FULLWIDTH LATIN SMALL LETTER L: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4D FULLWIDTH LATIN SMALL LETTER M: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4E FULLWIDTH LATIN SMALL LETTER N: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF4F FULLWIDTH LATIN SMALL LETTER O: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF50 FULLWIDTH LATIN SMALL LETTER P: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF51 FULLWIDTH LATIN SMALL LETTER Q: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF52 FULLWIDTH LATIN SMALL LETTER R: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF53 FULLWIDTH LATIN SMALL LETTER S: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF54 FULLWIDTH LATIN SMALL LETTER T: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF55 FULLWIDTH LATIN SMALL LETTER U: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF56 FULLWIDTH LATIN SMALL LETTER V: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF57 FULLWIDTH LATIN SMALL LETTER W: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: japanese, chinese-simplified</li>
+<li>U+FF4B FULLWIDTH LATIN SMALL LETTER K: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4C FULLWIDTH LATIN SMALL LETTER L: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4D FULLWIDTH LATIN SMALL LETTER M: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4E FULLWIDTH LATIN SMALL LETTER N: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF4F FULLWIDTH LATIN SMALL LETTER O: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF50 FULLWIDTH LATIN SMALL LETTER P: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF51 FULLWIDTH LATIN SMALL LETTER Q: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF52 FULLWIDTH LATIN SMALL LETTER R: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF53 FULLWIDTH LATIN SMALL LETTER S: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF54 FULLWIDTH LATIN SMALL LETTER T: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF55 FULLWIDTH LATIN SMALL LETTER U: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF56 FULLWIDTH LATIN SMALL LETTER V: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF57 FULLWIDTH LATIN SMALL LETTER W: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: chinese-simplified, japanese</li>
+<li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF5A FULLWIDTH LATIN SMALL LETTER Z: try adding japanese</li>
-<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: japanese, math, chinese-simplified, yi</li>
-<li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: japanese, math, chinese-simplified, yi</li>
+<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: chinese-simplified, yi, math, japanese</li>
+<li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: chinese-simplified, yi, japanese</li>
+<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: chinese-simplified, yi, math, japanese</li>
 <li>U+FF5E FULLWIDTH TILDE: try adding one of: chinese-simplified, yi</li>
 <li>U+FFE0 FULLWIDTH CENT SIGN: try adding chinese-simplified</li>
 <li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
 <li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
-<li>U+FFE3 FULLWIDTH MACRON: try adding one of: japanese, chinese-simplified</li>
-<li>U+FFE5 FULLWIDTH YEN SIGN: try adding one of: japanese, chinese-simplified</li>
+<li>U+FFE3 FULLWIDTH MACRON: try adding one of: chinese-simplified, japanese</li>
+<li>U+FFE5 FULLWIDTH YEN SIGN: try adding one of: chinese-simplified, japanese</li>
 <li>U+FFE6 FULLWIDTH WON SIGN: not included in any glyphset definition</li>
 <li>U+1F110 PARENTHESIZED LATIN CAPITAL LETTER A: try adding symbols</li>
 <li>U+1F111 PARENTHESIZED LATIN CAPITAL LETTER B: try adding symbols</li>
@@ -3103,7 +3099,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️
+    💥💥
 </span>
 
     
@@ -3127,7 +3123,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 GowunBatang-Bold.ttf
                 
             </summary>
@@ -3136,32 +3132,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3174,7 +3158,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 GowunBatang-Regular.ttf
                 
             </summary>
@@ -3183,32 +3167,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3625,7 +3597,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩
+    💥💥⚠️⚠️⏩⏩⏩⏩⏩⏩
 </span>
 
     
@@ -3733,7 +3705,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                💥
                 GowunBatang-Bold.ttf
                 
             </summary>
@@ -3742,17 +3714,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ ị̀ ị́ ị̂ ị̃ ị̄</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ j̦̀ j̦́ j̦̃ j̦̄ j̦̆ j̦̇ j̦̈ j̦̉ j̦̊ j̦̋ ǰ̦ j̦̏ j̦̑ j̦̒ į̆</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Ma’di (Latn, 584,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ebira (Latn, 2,200,000 speakers), Northern Tutchone (Latn, 85 speakers), Navajo (Latn, 166,319 speakers), Kaska (Latn, 125 speakers), Han (Latn, 6 speakers), Ekpeye (Latn, 226,000 speakers), Southern Tutchone (Latn, 65 speakers), Abua (Latn, 25,000 speakers), Dutch (Latn, 31,709,104 speakers), Ikwere (Latn, 717,000 speakers), Lithuanian (Latn, 2,357,094 speakers), Igbo (Latn, 27,823,640 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: South Central Banda (Latn, 244,000 speakers), Avokaya (Latn, 100,000 speakers), Basaa (Latn, 332,940 speakers), Vute (Latn, 21,000 speakers), Keliko (Latn, 63,000 speakers), Cicipu (Latn, 44,000 speakers), Nzakara (Latn, 50,000 speakers), Western Krahn (Latn, 97,800 speakers), Heiltsuk (Latn, 300 speakers), Mundani (Latn, 34,000 speakers), Southern Kisi (Latn, 360,000 speakers), Longto (Latn, 5,000 speakers), Zapotec (Latn, 490,000 speakers), Fur (Latn, 1,230,163 speakers), Ngbaka (Latn, 1,020,000 speakers), Bafut (Latn, 158,146 speakers), Bete-Bendi (Latn, 100,000 speakers), Dan (Latn, 1,099,244 speakers), Sar (Latn, 500,000 speakers), Dii (Latn, 71,000 speakers), Kom (Latn, 360,685 speakers), Belarusian (Cyrl, 10,064,517 speakers), Mfumte (Latn, 79,000 speakers), Ejagham (Latn, 120,000 speakers), Gulay (Latn, 250,478 speakers), Mango (Latn, 77,000 speakers), Nateni (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Lugbara (Latn, 2,200,000 speakers), Koonzime (Latn, 40,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Aghem (Latn, 38,843 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Yala (Latn, 200,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3765,7 +3740,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                💥
                 GowunBatang-Regular.ttf
                 
             </summary>
@@ -3774,17 +3749,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ ị̀ ị́ ị̂ ị̃ ị̄</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ j̦̀ j̦́ j̦̃ j̦̄ j̦̆ j̦̇ j̦̈ j̦̉ j̦̊ j̦̋ ǰ̦ j̦̏ j̦̑ j̦̒ į̆</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Northern Tutchone (Latn, 85 speakers), Navajo (Latn, 166,319 speakers), Kaska (Latn, 125 speakers), Han (Latn, 6 speakers), Southern Tutchone (Latn, 65 speakers), Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Ma’di (Latn, 584,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), South Central Banda (Latn, 244,000 speakers), Avokaya (Latn, 100,000 speakers), Basaa (Latn, 332,940 speakers), Ebira (Latn, 2,200,000 speakers), Vute (Latn, 21,000 speakers), Keliko (Latn, 63,000 speakers), Cicipu (Latn, 44,000 speakers), Nzakara (Latn, 50,000 speakers), Western Krahn (Latn, 97,800 speakers), Heiltsuk (Latn, 300 speakers), Mundani (Latn, 34,000 speakers), Southern Kisi (Latn, 360,000 speakers), Longto (Latn, 5,000 speakers), Zapotec (Latn, 490,000 speakers), Fur (Latn, 1,230,163 speakers), Ngbaka (Latn, 1,020,000 speakers), Ekpeye (Latn, 226,000 speakers), Bafut (Latn, 158,146 speakers), Bete-Bendi (Latn, 100,000 speakers), Dan (Latn, 1,099,244 speakers), Sar (Latn, 500,000 speakers), Dii (Latn, 71,000 speakers), Kom (Latn, 360,685 speakers), Belarusian (Cyrl, 10,064,517 speakers), Mfumte (Latn, 79,000 speakers), Abua (Latn, 25,000 speakers), Ejagham (Latn, 120,000 speakers), Gulay (Latn, 250,478 speakers), Mango (Latn, 77,000 speakers), Nateni (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Lugbara (Latn, 2,200,000 speakers), Koonzime (Latn, 40,000 speakers), Ikwere (Latn, 717,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Yala (Latn, 200,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

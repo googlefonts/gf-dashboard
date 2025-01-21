@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_alignment_miss<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,18 +274,18 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td>2</td>
+        <td>1</td>
         <td>10</td>
         <td>51</td>
         <td>9</td>
-        <td>168</td>
+        <td>166</td>
     </tr>
     <tr>
         <td>0%</td>
         <td>0%</td>
-        <td>1%</td>
+        <td>0%</td>
         <td>4%</td>
         <td>21%</td>
         <td>4%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
         
@@ -669,8 +669,6 @@ immediately.
     
 
     
-
-    
     <h3>
     
     Check font contains no unreachable glyphs
@@ -721,8 +719,6 @@ immediately.
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -929,12 +925,12 @@ definitions.</p>
 <li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, cherokee, tifinagh, math</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, coptic, math, cherokee</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: tifinagh, coptic, syriac, malayalam, canadian-aboriginal, todhri, old-permic, duployan, hebrew, tai-le, math</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, canadian-aboriginal, hebrew, todhri, math, duployan, old-permic, tai-le, tifinagh, coptic</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+030D COMBINING VERTICAL LINE ABOVE: try adding sunuwar</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
 <li>U+0310 COMBINING CANDRABINDU: try adding one of: math, sunuwar</li>
@@ -944,7 +940,7 @@ definitions.</p>
 <li>U+0315 COMBINING COMMA ABOVE RIGHT: try adding math</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
 <li>U+0320 COMBINING MINUS SIGN BELOW: try adding syriac</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: syriac, duployan, cherokee</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: duployan, syriac, cherokee</li>
 <li>U+0325 COMBINING RING BELOW: try adding syriac</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
 <li>U+0327 COMBINING CEDILLA: try adding math</li>
@@ -952,17 +948,17 @@ definitions.</p>
 <li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding one of: syriac, sunuwar</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
 <li>U+032F COMBINING INVERTED BREVE BELOW: try adding math</li>
-<li>U+0330 COMBINING TILDE BELOW: try adding one of: syriac, cherokee, math</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: cherokee, tifinagh, thai, caucasian-albanian, syriac, gothic, sunuwar</li>
+<li>U+0330 COMBINING TILDE BELOW: try adding one of: syriac, math, cherokee</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: syriac, caucasian-albanian, cherokee, thai, sunuwar, tifinagh, gothic</li>
 <li>U+0332 COMBINING LOW LINE: try adding math</li>
 <li>U+0334 COMBINING TILDE OVERLAY: not included in any glyphset definition</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0358 COMBINING DOT ABOVE RIGHT: try adding osage</li>
 <li>U+035F COMBINING DOUBLE MACRON BELOW: not included in any glyphset definition</li>
-<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: elbasan, greek, math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: elbasan, greek, math</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: greek, elbasan, math</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, elbasan, math</li>
 <li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
 <li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
 <li>U+1DC4 COMBINING MACRON-ACUTE: not included in any glyphset definition</li>
 <li>U+1DC5 COMBINING GRAVE-MACRON: not included in any glyphset definition</li>
@@ -973,7 +969,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+2010 HYPHEN: try adding one of: syloti-nagri, cham, kaithi, coptic, kharoshthi, kayah-li, sora-sompeng, armenian, hebrew, sundanese, arabic, yi, lisu</li>
+<li>U+2010 HYPHEN: try adding one of: hebrew, sora-sompeng, sundanese, kayah-li, syloti-nagri, lisu, cham, kaithi, arabic, coptic, kharoshthi, yi, armenian</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
@@ -1008,20 +1004,20 @@ definitions.</p>
 <li>U+215C VULGAR FRACTION THREE EIGHTHS: try adding symbols</li>
 <li>U+215D VULGAR FRACTION FIVE EIGHTHS: try adding symbols</li>
 <li>U+215E VULGAR FRACTION SEVEN EIGHTHS: try adding symbols</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
 <li>U+2202 PARTIAL DIFFERENTIAL: try adding math</li>
 <li>U+2205 EMPTY SET: try adding math</li>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: yi, tai-tham, math, symbols</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: symbols, tai-tham, math, yi</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -1034,24 +1030,24 @@ definitions.</p>
 <li>U+25AA BLACK SMALL SQUARE: try adding symbols</li>
 <li>U+25AB WHITE SMALL SQUARE: try adding symbols</li>
 <li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25B4 BLACK UP-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25B5 WHITE UP-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25B8 BLACK RIGHT-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25B9 WHITE RIGHT-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25BE BLACK DOWN-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25BF WHITE DOWN-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: symbols, math</li>
 <li>U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25C6 BLACK DIAMOND: try adding symbols</li>
 <li>U+25C7 WHITE DIAMOND: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+25E6 WHITE BULLET: try adding symbols</li>
@@ -1096,7 +1092,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -1118,7 +1114,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Freeman-Regular.ttf
                 
             </summary>
@@ -1127,204 +1123,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Small-cap ɣ is formed; both buffers returned uni0263=0+457</td>
-<td align="left">dop_Latn (Lukpa), nus_Latn (Nuer), sxw_Latn (Saxwe Gbe), lom_Latn (Loma, Liberia), bza_Latn (Bandi), ajg_Latn (Aja), aeb_Latn (Tunisian Darija), rif_Latn (Riffian (Latin)), dip_Latn (Dinka, Northeastern), mdt_Latn (Mbere), fan_Latn (Fang), taq_Latn (Tamasheq (Latin)), kpo_Latn (Ikposo), shi_Latn (Tachelhit (Latin)), puu_Latn (Punu), ttq_Latn (Tawallammat Tamajaq), kab_Latn (Kabyle), buw_Latn (gevové), pil_Latn (Yom), wci_Latn (Gbe, Waci), dag_Latn (Dagbani), aha_Latn (Ahanta), xwe_Latn (Gbe, Xwela), gej_Latn (Gen), akp_Latn (Siwu), kbp_Latn (Kabiyé), tzm_Latn (Central Atlas Tamazight) and ee_Latn (Ewe)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɖ is formed; both buffers returned uni0256=0+501</td>
-<td align="left">sxw_Latn (Saxwe Gbe), kdh_Latn (Tem), fon_Latn (Fon), nyb_Latn (Nyangbo), ife_Latn (Ifè), ajg_Latn (Aja), avn_Latn (Avatime), tcd_Latn (Tafi), aks_Latn (Akeselem), keu_Latn (Akebu), blo_Latn (Anii), ahl_Latn (Igo), wci_Latn (Gbe, Waci), bsq_Latn (Bassa (Latin)), xwe_Latn (Gbe, Xwela), gej_Latn (Gen), tfi_Latn (Gbe, Tofin), akp_Latn (Siwu), kbp_Latn (Kabiyé), ee_Latn (Ewe) and las_Latn (Lama, Togo)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ƃ is formed; both buffers returned .notdef=0+648</td>
-<td align="left">lom_Latn (Loma, Liberia)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɑ is formed; both buffers returned uni0251=0+516</td>
-<td align="left">byv_Latn (Medumba), fmp_Latn (Fe’fe’) and nza_Latn (Tigon Mbembe)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ƒ is formed; both buffers returned florin=0+413</td>
-<td align="left">nyb_Latn (Nyangbo), avn_Latn (Avatime), tcd_Latn (Tafi), wci_Latn (Gbe, Waci) and ee_Latn (Ewe)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɂ is formed; both buffers returned uni0242=0+447</td>
-<td align="left">mfd_Latn (Mendankwe-Nkwen)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ꞵ is formed; both buffers returned uniA7B5=0+531</td>
-<td align="left">mdt_Latn (Mbere), puu_Latn (Punu) and buw_Latn (gevové)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᶶ</td>
-<td align="left">teo_Latn (Teso)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ḵ is formed; both buffers returned uni1E35=0+482</td>
-<td align="left">udu_Latn (Uduk)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ẖ is formed; both buffers returned u1E96=0+509</td>
-<td align="left">udu_Latn (Uduk)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ʕ is formed; both buffers returned uni0295=0+453</td>
-<td align="left">tsb_Latn (Tsamai) and gwd_Latn (Gawwada)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɽ is formed; both buffers returned uni027D=0+383</td>
-<td align="left">kib_Latn (Koalib) and mor_Latn (Moro)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɐ is formed; both buffers returned .notdef=0+648</td>
-<td align="left">kib_Latn (Koalib)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɤ, Ɤ̀, Ɤ́, Ɤ̂, Ɤ̄, Ɤ̋, Ɤ̏</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɤ is formed; both buffers returned uni0264=0+560</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">The locl feature did not affect uni028B</td>
-<td align="left">tod_Latn (Toma)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uniA7B7</td>
-<td align="left">kzc_Latn (Bondoukou Kulango)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uniA7B7.sc</td>
-<td align="left">kzc_Latn (Bondoukou Kulango)</td>
-</tr>
-<tr>
-<td align="left">Small-cap ɪ is formed; both buffers returned uni026A=0+366</td>
-<td align="left">kzc_Latn (Bondoukou Kulango)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to oe.sc</td>
-<td align="left">ozm_Latn (Koonzime)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to oe.sc</td>
-<td align="left">ozm_Latn (Koonzime) and bkm_Latn (Kom)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to oe.sc</td>
-<td align="left">ozm_Latn (Koonzime)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
-<td align="left">gov_Latn (Goo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ꟈ, ꟈ</td>
-<td align="left">mor_Latn (Moro)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to oe.sc</td>
-<td align="left">bkm_Latn (Kom)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">No variant glyphs were found for Eng</td>
-<td align="left">bm_Latn (Bambara), dyu_Latn (Dyula), ig_Latn (Igbo), lg_Latn (Ganda), mua_Latn (Mundang), bqv_Latn (Koro Wachi), lia_Latn (Limba, West-Central), gng_Latn (Ngangam), kyf_Latn (Kouya), bsc_Latn (Bassari), bjt_Latn (Balanta-Ganja), fuf_Latn (Pular), lmp_Latn (Limbum), nhu_Latn (Noone), mnk_Latn (Mandinka), ddn_Latn (Dendi), dop_Latn (Lukpa), wok_Latn (Longto), nus_Latn (Nuer), bcw_Latn (Bana), sxw_Latn (Saxwe Gbe), lom_Latn (Loma, Liberia), toq_Latn (Toposa), kdh_Latn (Tem), ahs_Latn (Ashe), ekm_Latn (Elip), pnz_Latn (Pana, Central African Republic), ffm_Latn (Maasina Fulfulde), tpm_Latn (Tampulma), wan_Latn (Wan), moa_Latn (Mwan), mgo_Latn (Metaʼ), dyo_Latn (Jola-Fonyi), kvf_Latn (Kabalai), tuq_Latn (Tedaga), dow_Latn (Doyayo), bfd_Latn (Bafut), tem_Latn (Timne), fuh_Latn (Fulfulde, Western Niger), khq_Latn (Koyra Chiini), lok_Latn (Loko), adj_Latn (Adioukrou), nnw_Latn (Southern Nuni), byv_Latn (Medumba), tnr_Latn (Ménik), kss_Latn (Southern Kisi), saf_Latn (Safaliba), ikx_Latn (Ik), ebo_Latn (Teke-Ebo), nmg_Latn (Kwasio), lig_Latn (Ligbi), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), god_Latn (Godié), gna_Latn (Kaansa), ted_Latn (Krumen, Tepo), bib_Latn (Bissa), mmu_Latn (Mmaala), mne_Latn (Naba), dyi_Latn (Sénoufo, Djimini), anv_Latn (Denya), gaa_Latn (Ga), ife_Latn (Ifè), bim_Latn (Bimoba), mfd_Latn (Mendankwe-Nkwen), sok_Latn (Sokoro), dts_Latn (Dogon, Toro So), bza_Latn (Bandi), nym_Latn (Nyamwezi), dje_Latn (Zarma), mcp_Latn (Makaa), mbu_Latn (Mbula-Bwazza), hag_Latn (Hanga), ajg_Latn (Aja), xrb_Latn (Karaboro, Eastern), sig_Latn (Paasaal), acd_Latn (Gikyode), spp_Latn (Sénoufo, Supyire), ig_Latn (Igbo), snf_Latn (Noon), gud_Latn (Dida, Yocoboué), naw_Latn (Nawuri), ade_Latn (Adele), yam_Latn (Yamba), xsm_Latn (Kasem), krs_Latn (Gbaya, Sudan), knp_Latn (Kwanja), xon_Latn (Konkomba), ken_Latn (Kenyang), csk_Latn (Jola-Kasa), pbi_Latn (Parkwa), mev_Latn (Mano), kbo_Latn (Keliko), mgc_Latn (Morokodo), gkp_Latn (Kpelle, Guinea), bud_Latn (Ntcham), fue_Latn (Fulfulde, Borgu), avn_Latn (Avatime), bex_Latn (Jur Modo), vai_Latn (Vai (Latin)), gnd_Latn (Zulgo-Gemzek), kye_Latn (Krache), dip_Latn (Dinka, Northeastern), mcu_Latn (Mambila, Cameroon), lun_Latn (Lunda), etu_Latn (Ejagham), cae_Latn (Lehar), mgd_Latn (Moru), ntr_Latn (Delo), mdt_Latn (Mbere), meq_Latn (Merey), idu_Latn (Idoma), lgg_Latn (Lugbara), fub_Latn (Fulfulde, Adamawa), mfi_Latn (Wandala), fvr_Latn (Fur), fmp_Latn (Fe’fe’), rub_Latn (Gungu), kzr_Latn (Karang), mls_Latn (Masalit), fan_Latn (Fang), mnf_Latn (Mundani), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), fuc_Latn (Pulaar), agq_Latn (Aghem), nfr_Latn (Nafaanra), fod_Latn (Foodo), laj_Latn (Lango, Uganda), neb_Latn (Toura), vag_Latn (Vagla), ach_Latn (Acoli), dur_Latn (Dii), bze_Latn (Jenaama Bozo), xuo_Latn (Kuo), nuv_Latn (Nuni, Northern), tcd_Latn (Tafi), nko_Latn (Nkonya), log_Latn (Logo), taq_Latn (Tamasheq (Latin)), lam_Latn (Lamba), kpo_Latn (Ikposo), nfu_Latn (Mfumte), kdj_Latn (Karamojong), bfa_Latn (Bari), sil_Latn (Sisaala, Tumulung), ttq_Latn (Tawallammat Tamajaq), ses_Latn (Koyraboro Senni), kus_Latn (Kusaal), bum_Latn (Bulu), ncu_Latn (Chumburung), tik_Latn (Tikar), ktj_Latn (Krumen, Plapo), srr_Latn (Serer), sld_Latn (Sissala), eto_Latn (Eton, Cameroon), cou_Latn (Wamey), sav_Latn (Saafi-Saafi), dua_Latn (Duala), ny_Latn (Nyanja), ybb_Latn (Yemba), udu_Latn (Uduk), nnh_Latn (Ngiemboon), shz_Latn (Syenara Senoufo), gde_Latn (Gude), bas_Latn (Basaa), mzw_Latn (Deg), avu_Latn (Avokaya), muy_Latn (Muyang), kqp_Latn (Kimré), aks_Latn (Akeselem), ndz_Latn (Ndogo), kib_Latn (Koalib), pug_Latn (Phuie), yat_Latn (Yambeta), nku_Latn (Kulango, Bouna), gjn_Latn (Gonja), pil_Latn (Yom), bbj_Latn (Ghomala), bss_Latn (Akoose), wwa_Latn (Waama), bzx_Latn (Bozo, Hainyaxo), keu_Latn (Akebu), blo_Latn (Anii), mwk_Latn (Kita Maninkakan), bzw_Latn (Basa), mas_Latn (Masai), wo_Latn (Wolof), sef_Latn (Cebaara Senoufo), nhb_Latn (Beng), yas_Latn (Nugunu), dgi_Latn (Northern Dagara), gur_Latn (Frafra), agc_Latn (Agatu), fuq_Latn (Central-Eastern Niger Fulfulde), dzg_Latn (Dazaga), dnj_Latn (Dan), ahl_Latn (Igo), dtm_Latn (Tomo Kan Dogon), kpz_Latn (Sapiny), kyq_Latn (Kenga), mcn_Latn (Masana), azo_Latn (Awing), gux_Latn (Gourmanchéma), cko_Latn (Anufo), knf_Latn (Mankanya), tod_Latn (Toma), nza_Latn (Tigon Mbembe), wci_Latn (Gbe, Waci), lg_Latn (Ganda), kzc_Latn (Bondoukou Kulango), dag_Latn (Dagbani), bm_Latn (Bambara), myk_Latn (Mamara Senoufo), dyu_Latn (Dyula), bbo_Latn (Northern Bobo Madaré), twq_Latn (Tasawaq), yav_Latn (Yangben), ozm_Latn (Koonzime), gmm_Latn (Gbaya-Mbodomo), boz_Latn (Tiéyaxo Bozo), xed_Latn (Hdi), kmy_Latn (Koma), biv_Latn (Birifor, Southern), xwe_Latn (Gbe, Xwela), mdj_Latn (Mangbetu), dno_Latn (Ndrulo), bax_Latn (Bamun (Latin)), vut_Latn (Vute), mbo_Latn (Mbo), gej_Latn (Gen), bsp_Latn (Baga Sitemu), mur_Latn (Murle), cme_Latn (Cerma), nmz_Latn (Nawdm), daa_Latn (Dangaléat), lem_Latn (Nomaande), lns_Latn (Lamnso’), mfv_Latn (Mandjak), kia_Latn (Kim), lee_Latn (Lyélé), kao_Latn (Xaasongaxango), soy_Latn (Miyobe), tvu_Latn (Tunen), maw_Latn (Mampruli), kqs_Latn (Kissi, Northern), ksf_Latn (Bafia), ndv_Latn (Ndut), kbp_Latn (Kabiyé), loq_Latn (Lobala), mor_Latn (Moro), bkm_Latn (Kom), bav_Latn (Vengo), giz_Latn (Southern Giziga), mfq_Latn (Moba), sbd_Latn (Southern Samo), ee_Latn (Ewe), las_Latn (Lama, Togo), jgo_Latn (Ngomba) and bqj_Latn (Bandial)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Mina</td>
-<td align="left">hna_Latn (Mina)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Amo</td>
-<td align="left">amo_Latn (Amo)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ƃ, ƃ</td>
-<td align="left">lom_Latn (Loma, Liberia) and dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni0181</td>
-<td align="left">lom_Latn (Loma, Liberia) and dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01A9</td>
-<td align="left">gaa_Latn (Ga)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01B7</td>
-<td align="left">gaa_Latn (Ga)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Eastern Gurung, Latin</td>
-<td align="left">ggn_Latn (Eastern Gurung, Latin)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Mbunga</td>
-<td align="left">mgy_Latn (Mbunga)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ɐ, ɐ̀, ɐ́, ɐ̂, Ⓐ, ⓐ, Ɐ, Ɐ̀, Ɐ́, Ɐ̂</td>
-<td align="left">kib_Latn (Koalib)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01B2</td>
-<td align="left">tod_Latn (Toma)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Koro</td>
-<td align="left">kfo_Latn (Koro)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Seki</td>
-<td align="left">syi_Latn (Seki)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Atsam</td>
-<td align="left">cch_Latn (Atsam)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>

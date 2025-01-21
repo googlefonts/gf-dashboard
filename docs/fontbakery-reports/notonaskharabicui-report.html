@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,21 +274,21 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>1</td>
+        <td>2</td>
         <td>0</td>
-        <td>17</td>
+        <td>16</td>
         <td>13</td>
         <td>40</td>
         <td>6</td>
-        <td>163</td>
+        <td>161</td>
     </tr>
     <tr>
-        <td>0%</td>
+        <td>1%</td>
         <td>0%</td>
         <td>7%</td>
         <td>5%</td>
         <td>17%</td>
-        <td>2%</td>
+        <td>3%</td>
         <td>68%</td>
     </tr>
 </table>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -778,15 +778,15 @@ U+FC5E, U+FC5F, U+FC60, U+FC61, U+FC62 and U+FC63</p>
                             <p>Interpolation issues were found in the font:</p>
 <pre><code>- Contour 0 point 72 in glyph 'uni06AA' has a kink between location wght=400 and location wght=700
 
+- Contour 0 point 40 in glyph 'uni0602' has a kink between location wght=400 and location wght=700
+
 - Contour order differs in glyph 'uni08F1': [0, 1] in wght=400, [1, 0] in wght=700.
+
+- Contour 0 point 26 in glyph 'uni0665' has a kink between location wght=400 and location wght=700
 
 - Contour 0 in glyph 'uni08AA': becomes underweight between wght=400 and wght=700.
 
 - Contour 0 point 24 in glyph 'uni08AA' has a kink between location wght=400 and location wght=700
-
-- Contour 0 point 26 in glyph 'uni0665' has a kink between location wght=400 and location wght=700
-
-- Contour 0 point 40 in glyph 'uni0602' has a kink between location wght=400 and location wght=700
 </code></pre>
 
                             
@@ -2023,8 +2023,6 @@ U+FC5E, U+FC5F, U+FC60, U+FC61, U+FC62 and U+FC63</p>
     
 
     
-
-    
     <h3>
     
     Ensure smart dropout control is enabled in &#34;prep&#34; table instructions.
@@ -2180,8 +2178,6 @@ U+FC5E, U+FC5F, U+FC60, U+FC61, U+FC62 and U+FC63</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -2562,8 +2558,8 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, syriac, thaana, phags-pa, hebrew</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: soyombo, tai-tham, telugu, hanifi-rohingya, siddham, mahajani, devanagari, takri, chakma, math, armenian, adlam, khojki, tibetan, lao, warang-citi, balinese, music, lepcha, tagbanwa, nko, tai-le, gujarati, yi, thai, manichaean, thaana, dogra, bengali, kharoshthi, mandaic, sharada, gurmukhi, caucasian-albanian, tai-viet, symbols, pahawh-hmong, malayalam, wancho, grantha, newa, coptic, new-tai-lue, syloti-nagri, kaithi, tamil, gunjala-gondi, elbasan, cham, oriya, psalter-pahlavi, saurashtra, marchen, hanunoo, buhid, sundanese, limbu, tifinagh, meetei-mayek, osage, kannada, masaram-gondi, kayah-li, phags-pa, old-permic, tagalog, duployan, miao, hebrew, sogdian, canadian-aboriginal, batak, bassa-vah, tirhuta, modi, mongolian, sinhala, syriac, ahom, buginese, mende-kikakui, khmer, zanabazar-square, khudawadi, rejang, javanese, bhaiksuki, brahmi, myanmar</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: thaana, phags-pa, nko, hebrew, syriac</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: kannada, oriya, lao, tagalog, syloti-nagri, bassa-vah, mende-kikakui, tamil, math, hanunoo, masaram-gondi, meetei-mayek, new-tai-lue, miao, javanese, buginese, rejang, wancho, bhaiksuki, kaithi, grantha, warang-citi, sogdian, gurmukhi, zanabazar-square, nko, hebrew, khojki, limbu, mongolian, tai-viet, tai-le, gunjala-gondi, armenian, buhid, siddham, brahmi, mandaic, symbols, caucasian-albanian, pahawh-hmong, marchen, kayah-li, balinese, devanagari, saurashtra, duployan, yi, myanmar, tagbanwa, tai-tham, khmer, kharoshthi, manichaean, lepcha, soyombo, gujarati, adlam, tirhuta, tibetan, music, sharada, phags-pa, cham, malayalam, hanifi-rohingya, modi, khudawadi, dogra, batak, mahajani, bengali, elbasan, telugu, chakma, newa, ahom, psalter-pahlavi, thaana, thai, canadian-aboriginal, osage, sundanese, tifinagh, old-permic, sinhala, takri, coptic, syriac</li>
 </ul>
 <p>Or you can add the above codepoints to one of the subsets supported by the font: <code>arabic</code>, <code>menu</code></p>
 
@@ -2597,7 +2593,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -2619,7 +2615,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 NotoNaskhArabicUI[wght].ttf
                 
             </summary>
@@ -2628,216 +2624,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Pinyin glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍آٔ'</td>
-<td align="left">ps_Arab (Pashto), ar_Arab (Arabic), fa_Arab (Persian), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'آٔ'</td>
-<td align="left">ps_Arab (Pashto), ar_Arab (Arabic), fa_Arab (Persian), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍أٔ'</td>
-<td align="left">ps_Arab (Pashto), ar_Arab (Arabic), fa_Arab (Persian), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'أٔ'</td>
-<td align="left">ps_Arab (Pashto), ar_Arab (Arabic), fa_Arab (Persian), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ءٔ'</td>
-<td align="left">ps_Arab (Pashto), ar_Arab (Arabic), fa_Arab (Persian), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍کٔ'</td>
-<td align="left">ps_Arab (Pashto), fa_Arab (Persian) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to uni0020</td>
-<td align="left">ps_Arab (Pashto), ar_Arab (Arabic), fa_Arab (Persian), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'کٔ'</td>
-<td align="left">ps_Arab (Pashto), fa_Arab (Persian) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ګٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ګٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍گٔ'</td>
-<td align="left">ps_Arab (Pashto), fa_Arab (Persian) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'گٔ'</td>
-<td align="left">ps_Arab (Pashto), fa_Arab (Persian) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ۍٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ۍٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ءٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ؤٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ؤٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ةٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ةٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍جٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'جٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍حٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'حٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍خٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'خٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍عٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'عٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍غٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'غٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍هٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to uni0020</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'هٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍وٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'وٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@126,-68+0</td>
-<td align="left">uni0647=0+408</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Pinyin glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Malay (Arabic)</td>
-<td align="left">zlm_Arab (Malay (Arabic))</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>

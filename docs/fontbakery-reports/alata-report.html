@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,18 +274,18 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>2</td>
         <td>0</td>
-        <td>0</td>
-        <td>4</td>
-        <td>10</td>
+        <td>3</td>
+        <td>9</td>
         <td>52</td>
         <td>8</td>
-        <td>166</td>
+        <td>164</td>
     </tr>
     <tr>
+        <td>1%</td>
         <td>0%</td>
-        <td>0%</td>
-        <td>2%</td>
+        <td>1%</td>
         <td>4%</td>
         <td>22%</td>
         <td>3%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
         
@@ -539,9 +539,9 @@ immediately.
                             <p>The most common width is 646 among a set of 5 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 647:
-plusminus, plus</p>
+plus, plusminus</p>
 <p>Width = 555:
-notequal, divide, equal</p>
+equal, notequal, divide</p>
 <p>Width = 828:
 logicalnot</p>
 <p>Width = 569:
@@ -558,8 +558,6 @@ approxequal</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -657,8 +655,6 @@ approxequal</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -862,12 +858,12 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, tifinagh, math, cherokee</li>
-<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, old-permic, duployan, math, canadian-aboriginal, hebrew, todhri, tai-le, tifinagh, syriac, coptic</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, coptic, math, cherokee</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, old-permic, coptic, tifinagh, todhri, canadian-aboriginal, math, duployan, tai-le, hebrew, syriac</li>
 <li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
@@ -884,12 +880,12 @@ definitions.</p>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
 <li>U+032F COMBINING INVERTED BREVE BELOW: try adding math</li>
 <li>U+0330 COMBINING TILDE BELOW: try adding one of: syriac, math, cherokee</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: gothic, caucasian-albanian, cherokee, tifinagh, syriac, thai, sunuwar</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: thai, gothic, cherokee, tifinagh, caucasian-albanian, sunuwar, syriac</li>
 <li>U+0332 COMBINING LOW LINE: try adding math</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
-<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: elbasan, greek, math</li>
-<li>U+039C GREEK CAPITAL LETTER MU: try adding one of: elbasan, greek, math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: elbasan, greek, math</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: math, greek, elbasan</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding one of: math, greek, elbasan</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: math, greek, elbasan</li>
 <li>U+03B4 GREEK SMALL LETTER DELTA: try adding one of: greek, math</li>
 <li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
 <li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
@@ -904,15 +900,15 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: malayalam, phags-pa, dogra, telugu, kharoshthi, limbu, batak, meetei-mayek, tai-le, tai-viet, kayah-li, tibetan, arabic, tifinagh, tirhuta, yi, sharada, hanunoo, khmer, buginese, myanmar, modi, avestan, pahawh-hmong, tamil, cham, thaana, zanabazar-square, manichaean, khudawadi, rejang, grantha, gurmukhi, saurashtra, kannada, siddham, tagbanwa, tai-tham, kaithi, brahmi, hanifi-rohingya, mandaic, gunjala-gondi, masaram-gondi, nko, tagalog, psalter-pahlavi, bhaiksuki, syriac, thai, sundanese, lepcha, sogdian, gujarati, warang-citi, duployan, bengali, mongolian, lao, oriya, buhid, chakma, hebrew, hatran, devanagari, balinese, javanese, khojki, new-tai-lue, newa, sinhala, takri, mahajani, syloti-nagri</li>
-<li>U+200D ZERO WIDTH JOINER: try adding one of: malayalam, phags-pa, dogra, telugu, kharoshthi, limbu, batak, meetei-mayek, tai-le, tai-viet, kayah-li, tibetan, arabic, tifinagh, tirhuta, yi, sharada, hanunoo, khmer, buginese, myanmar, modi, avestan, pahawh-hmong, tamil, cham, thaana, zanabazar-square, manichaean, khudawadi, rejang, grantha, gurmukhi, saurashtra, kannada, siddham, tagbanwa, tai-tham, kaithi, old-hungarian, brahmi, hanifi-rohingya, mandaic, gunjala-gondi, masaram-gondi, nko, tagalog, psalter-pahlavi, bhaiksuki, syriac, thai, sundanese, lepcha, sogdian, gujarati, warang-citi, duployan, bengali, mongolian, lao, oriya, buhid, chakma, hebrew, khojki, devanagari, balinese, javanese, new-tai-lue, newa, sinhala, takri, mahajani, syloti-nagri</li>
-<li>U+2010 HYPHEN: try adding one of: lisu, kharoshthi, hebrew, cham, syloti-nagri, kayah-li, arabic, yi, sora-sompeng, coptic, sundanese, armenian, kaithi</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, syloti-nagri, yi</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: gujarati, tagbanwa, grantha, sharada, sinhala, arabic, bhaiksuki, hanunoo, newa, tai-viet, phags-pa, tai-tham, tamil, syloti-nagri, thaana, brahmi, chakma, khmer, tai-le, buhid, sogdian, saurashtra, mongolian, warang-citi, kaithi, rejang, sundanese, malayalam, lepcha, thai, zanabazar-square, takri, meetei-mayek, yi, masaram-gondi, oriya, avestan, kayah-li, mandaic, kannada, psalter-pahlavi, syriac, gurmukhi, limbu, tibetan, gunjala-gondi, tifinagh, tirhuta, kharoshthi, batak, buginese, devanagari, modi, nko, cham, hebrew, siddham, javanese, myanmar, balinese, hatran, pahawh-hmong, mahajani, bengali, lao, duployan, hanifi-rohingya, tagalog, khojki, new-tai-lue, khudawadi, manichaean, telugu, dogra</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: gujarati, tagbanwa, grantha, sharada, sinhala, arabic, bhaiksuki, hanunoo, newa, tai-viet, phags-pa, tai-tham, tamil, syloti-nagri, thaana, brahmi, chakma, khmer, tai-le, buhid, sogdian, saurashtra, mongolian, warang-citi, kaithi, rejang, sundanese, malayalam, lepcha, thai, zanabazar-square, takri, meetei-mayek, yi, masaram-gondi, oriya, avestan, kayah-li, mandaic, kannada, psalter-pahlavi, syriac, gurmukhi, limbu, tibetan, gunjala-gondi, tifinagh, tirhuta, kharoshthi, batak, buginese, devanagari, modi, nko, cham, hebrew, siddham, javanese, myanmar, balinese, pahawh-hmong, mahajani, bengali, lao, duployan, hanifi-rohingya, old-hungarian, tagalog, khojki, new-tai-lue, khudawadi, manichaean, telugu, dogra</li>
+<li>U+2010 HYPHEN: try adding one of: sundanese, coptic, arabic, yi, sora-sompeng, syloti-nagri, kayah-li, kharoshthi, armenian, lisu, hebrew, cham, kaithi</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, syloti-nagri, arabic</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: phags-pa, yi, mongolian</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: yi, phags-pa, mongolian</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+203C DOUBLE EXCLAMATION MARK: try adding math</li>
 <li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
@@ -974,7 +970,7 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: sharada, math, adlam, pahawh-hmong, zanabazar-square, tibetan, saurashtra, grantha, tagbanwa, brahmi, canadian-aboriginal, gunjala-gondi, sundanese, armenian, gujarati, hebrew, new-tai-lue, malayalam, phags-pa, telugu, kharoshthi, limbu, batak, tai-le, tai-viet, tifinagh, yi, hanunoo, khmer, mende-kikakui, elbasan, osage, modi, siddham, syriac, warang-citi, duployan, bengali, mongolian, syloti-nagri, buhid, devanagari, marchen, buginese, myanmar, tamil, miao, cham, symbols, manichaean, tai-tham, bassa-vah, hanifi-rohingya, caucasian-albanian, nko, bhaiksuki, thai, lepcha, sogdian, old-permic, lao, tagalog, khojki, sinhala, mahajani, dogra, meetei-mayek, ahom, kayah-li, tirhuta, soyombo, thaana, rejang, khudawadi, coptic, gurmukhi, wancho, kannada, kaithi, mandaic, masaram-gondi, psalter-pahlavi, oriya, chakma, newa, takri, balinese, javanese, music</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: symbols, tagbanwa, sharada, hanunoo, syloti-nagri, warang-citi, kaithi, lepcha, meetei-mayek, oriya, kayah-li, psalter-pahlavi, limbu, gunjala-gondi, batak, adlam, cham, javanese, pahawh-hmong, osage, lao, armenian, manichaean, dogra, grantha, tifinagh, phags-pa, sogdian, wancho, mongolian, zanabazar-square, rejang, malayalam, music, takri, yi, masaram-gondi, mandaic, syriac, bassa-vah, devanagari, modi, bengali, canadian-aboriginal, miao, duployan, tagalog, khojki, new-tai-lue, telugu, elbasan, gujarati, sinhala, tamil, thaana, tai-tham, math, brahmi, chakma, khmer, caucasian-albanian, kharoshthi, myanmar, balinese, mende-kikakui, hanifi-rohingya, tai-viet, bhaiksuki, newa, ahom, tai-le, buhid, saurashtra, sundanese, thai, marchen, kannada, gurmukhi, soyombo, tibetan, tirhuta, buginese, nko, hebrew, siddham, old-permic, coptic, mahajani, khudawadi</li>
 <li>U+25FC BLACK MEDIUM SQUARE: try adding symbols</li>
 <li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
 <li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
@@ -1017,7 +1013,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -1039,7 +1035,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Alata-Regular.ttf
                 
             </summary>
@@ -1048,692 +1044,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɲ, ɛ, ɲ</td>
-<td align="left">bm_Latn (Bambara), dyu_Latn (Dyula), yal_Latn (Yalunka), msc_Latn (Maninka, Sankaran), dts_Latn (Dogon, Toro So), spp_Latn (Sénoufo, Supyire), bwq_Latn (Southern Bobo Madaré), bmq_Latn (Bomu), bze_Latn (Jenaama Bozo), man_Latn (Mandingo), cou_Latn (Wamey), sus_Latn (Susu), shz_Latn (Syenara Senoufo), buw_Latn (gevové), bzx_Latn (Bozo, Hainyaxo), mwk_Latn (Kita Maninkakan), dtm_Latn (Tomo Kan Dogon), bm_Latn (Bambara), dyu_Latn (Dyula), boz_Latn (Tiéyaxo Bozo) and kqs_Latn (Kissi, Northern)</td>
-</tr>
-<tr>
-<td align="left">The locl feature did not affect Eng</td>
-<td align="left">bm_Latn (Bambara), dyu_Latn (Dyula), ig_Latn (Igbo), lg_Latn (Ganda), mua_Latn (Mundang), bqv_Latn (Koro Wachi), lia_Latn (Limba, West-Central), gng_Latn (Ngangam), kyf_Latn (Kouya), bsc_Latn (Bassari), bjt_Latn (Balanta-Ganja), fuf_Latn (Pular), lmp_Latn (Limbum), nhu_Latn (Noone), mnk_Latn (Mandinka), ddn_Latn (Dendi), dop_Latn (Lukpa), wok_Latn (Longto), nus_Latn (Nuer), bcw_Latn (Bana), sxw_Latn (Saxwe Gbe), lom_Latn (Loma, Liberia), toq_Latn (Toposa), kdh_Latn (Tem), ahs_Latn (Ashe), ekm_Latn (Elip), pnz_Latn (Pana, Central African Republic), ffm_Latn (Maasina Fulfulde), tpm_Latn (Tampulma), wan_Latn (Wan), moa_Latn (Mwan), mgo_Latn (Metaʼ), dyo_Latn (Jola-Fonyi), kvf_Latn (Kabalai), tuq_Latn (Tedaga), dow_Latn (Doyayo), bfd_Latn (Bafut), tem_Latn (Timne), fuh_Latn (Fulfulde, Western Niger), khq_Latn (Koyra Chiini), lok_Latn (Loko), adj_Latn (Adioukrou), nnw_Latn (Southern Nuni), byv_Latn (Medumba), tnr_Latn (Ménik), kss_Latn (Southern Kisi), saf_Latn (Safaliba), ikx_Latn (Ik), ebo_Latn (Teke-Ebo), nmg_Latn (Kwasio), lig_Latn (Ligbi), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), god_Latn (Godié), gna_Latn (Kaansa), ted_Latn (Krumen, Tepo), bib_Latn (Bissa), mmu_Latn (Mmaala), mne_Latn (Naba), dyi_Latn (Sénoufo, Djimini), anv_Latn (Denya), gaa_Latn (Ga), ife_Latn (Ifè), bim_Latn (Bimoba), mfd_Latn (Mendankwe-Nkwen), sok_Latn (Sokoro), dts_Latn (Dogon, Toro So), bza_Latn (Bandi), nym_Latn (Nyamwezi), dje_Latn (Zarma), mcp_Latn (Makaa), mbu_Latn (Mbula-Bwazza), hag_Latn (Hanga), ajg_Latn (Aja), xrb_Latn (Karaboro, Eastern), sig_Latn (Paasaal), acd_Latn (Gikyode), spp_Latn (Sénoufo, Supyire), ig_Latn (Igbo), snf_Latn (Noon), gud_Latn (Dida, Yocoboué), naw_Latn (Nawuri), ade_Latn (Adele), yam_Latn (Yamba), xsm_Latn (Kasem), krs_Latn (Gbaya, Sudan), knp_Latn (Kwanja), xon_Latn (Konkomba), ken_Latn (Kenyang), csk_Latn (Jola-Kasa), pbi_Latn (Parkwa), mev_Latn (Mano), kbo_Latn (Keliko), mgc_Latn (Morokodo), gkp_Latn (Kpelle, Guinea), bud_Latn (Ntcham), fue_Latn (Fulfulde, Borgu), avn_Latn (Avatime), bex_Latn (Jur Modo), vai_Latn (Vai (Latin)), gnd_Latn (Zulgo-Gemzek), kye_Latn (Krache), dip_Latn (Dinka, Northeastern), mcu_Latn (Mambila, Cameroon), lun_Latn (Lunda), etu_Latn (Ejagham), cae_Latn (Lehar), mgd_Latn (Moru), ntr_Latn (Delo), mdt_Latn (Mbere), meq_Latn (Merey), idu_Latn (Idoma), lgg_Latn (Lugbara), fub_Latn (Fulfulde, Adamawa), mfi_Latn (Wandala), fvr_Latn (Fur), fmp_Latn (Fe’fe’), rub_Latn (Gungu), kzr_Latn (Karang), mls_Latn (Masalit), fan_Latn (Fang), mnf_Latn (Mundani), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), fuc_Latn (Pulaar), agq_Latn (Aghem), nfr_Latn (Nafaanra), fod_Latn (Foodo), laj_Latn (Lango, Uganda), neb_Latn (Toura), vag_Latn (Vagla), ach_Latn (Acoli), dur_Latn (Dii), bze_Latn (Jenaama Bozo), xuo_Latn (Kuo), nuv_Latn (Nuni, Northern), tcd_Latn (Tafi), nko_Latn (Nkonya), log_Latn (Logo), taq_Latn (Tamasheq (Latin)), lam_Latn (Lamba), kpo_Latn (Ikposo), nfu_Latn (Mfumte), kdj_Latn (Karamojong), bfa_Latn (Bari), sil_Latn (Sisaala, Tumulung), ttq_Latn (Tawallammat Tamajaq), ses_Latn (Koyraboro Senni), kus_Latn (Kusaal), bum_Latn (Bulu), ncu_Latn (Chumburung), tik_Latn (Tikar), ktj_Latn (Krumen, Plapo), srr_Latn (Serer), sld_Latn (Sissala), eto_Latn (Eton, Cameroon), cou_Latn (Wamey), sav_Latn (Saafi-Saafi), dua_Latn (Duala), ny_Latn (Nyanja), ybb_Latn (Yemba), udu_Latn (Uduk), nnh_Latn (Ngiemboon), shz_Latn (Syenara Senoufo), gde_Latn (Gude), bas_Latn (Basaa), mzw_Latn (Deg), avu_Latn (Avokaya), muy_Latn (Muyang), kqp_Latn (Kimré), aks_Latn (Akeselem), ndz_Latn (Ndogo), kib_Latn (Koalib), pug_Latn (Phuie), yat_Latn (Yambeta), nku_Latn (Kulango, Bouna), gjn_Latn (Gonja), pil_Latn (Yom), bbj_Latn (Ghomala), bss_Latn (Akoose), wwa_Latn (Waama), bzx_Latn (Bozo, Hainyaxo), keu_Latn (Akebu), blo_Latn (Anii), mwk_Latn (Kita Maninkakan), bzw_Latn (Basa), mas_Latn (Masai), wo_Latn (Wolof), sef_Latn (Cebaara Senoufo), nhb_Latn (Beng), yas_Latn (Nugunu), dgi_Latn (Northern Dagara), gur_Latn (Frafra), agc_Latn (Agatu), fuq_Latn (Central-Eastern Niger Fulfulde), dzg_Latn (Dazaga), dnj_Latn (Dan), ahl_Latn (Igo), dtm_Latn (Tomo Kan Dogon), kpz_Latn (Sapiny), kyq_Latn (Kenga), mcn_Latn (Masana), azo_Latn (Awing), gux_Latn (Gourmanchéma), cko_Latn (Anufo), knf_Latn (Mankanya), tod_Latn (Toma), nza_Latn (Tigon Mbembe), wci_Latn (Gbe, Waci), lg_Latn (Ganda), kzc_Latn (Bondoukou Kulango), dag_Latn (Dagbani), bm_Latn (Bambara), myk_Latn (Mamara Senoufo), dyu_Latn (Dyula), bbo_Latn (Northern Bobo Madaré), twq_Latn (Tasawaq), yav_Latn (Yangben), ozm_Latn (Koonzime), gmm_Latn (Gbaya-Mbodomo), boz_Latn (Tiéyaxo Bozo), xed_Latn (Hdi), kmy_Latn (Koma), biv_Latn (Birifor, Southern), xwe_Latn (Gbe, Xwela), mdj_Latn (Mangbetu), dno_Latn (Ndrulo), bax_Latn (Bamun (Latin)), vut_Latn (Vute), mbo_Latn (Mbo), gej_Latn (Gen), bsp_Latn (Baga Sitemu), mur_Latn (Murle), cme_Latn (Cerma), nmz_Latn (Nawdm), daa_Latn (Dangaléat), lem_Latn (Nomaande), lns_Latn (Lamnso’), mfv_Latn (Mandjak), kia_Latn (Kim), lee_Latn (Lyélé), kao_Latn (Xaasongaxango), soy_Latn (Miyobe), tvu_Latn (Tunen), maw_Latn (Mampruli), kqs_Latn (Kissi, Northern), ksf_Latn (Bafia), ndv_Latn (Ndut), kbp_Latn (Kabiyé), loq_Latn (Lobala), mor_Latn (Moro), bkm_Latn (Kom), bav_Latn (Vengo), giz_Latn (Southern Giziga), mfq_Latn (Moba), sbd_Latn (Southern Samo), ee_Latn (Ewe), las_Latn (Lama, Togo), jgo_Latn (Ngomba) and bqj_Latn (Bandial)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ɛ</td>
-<td align="left">fat_Latn (Fanti), tw_akuapem_Latn (Akuapem Twi), lia_Latn (Limba, West-Central), gng_Latn (Ngangam), ayb_Latn (Ayizo Gbe), nhu_Latn (Noone), jen_Latn (Dza), ahs_Latn (Ashe), ekm_Latn (Elip), tpm_Latn (Tampulma), wan_Latn (Wan), moa_Latn (Mwan), bet_Latn (Bété, Guiberoua), fon_Latn (Fon), tem_Latn (Timne), guk_Latn (Gumuz), lok_Latn (Loko), adj_Latn (Adioukrou), kss_Latn (Southern Kisi), saf_Latn (Safaliba), lig_Latn (Ligbi), dbd_Latn (Dadiya), mmu_Latn (Mmaala), dyi_Latn (Sénoufo, Djimini), anv_Latn (Denya), gaa_Latn (Ga), sok_Latn (Sokoro), nym_Latn (Nyamwezi), xrb_Latn (Karaboro, Eastern), acd_Latn (Gikyode), xsm_Latn (Kasem), mzm_Latn (Mumuye), ntr_Latn (Delo), tw_akuapem_Latn (Akuapem Twi), idu_Latn (Idoma), ada_Latn (Adangme), nfr_Latn (Nafaanra), vag_Latn (Vagla), xuo_Latn (Kuo), mfo_Latn (Mbe), utr_Latn (Etulo), ncu_Latn (Chumburung), bci_Latn (Baoulé), bov_Latn (Tuwuli), ckl_Latn (Kibaku), lip_Latn (Sekpele), kri_Latn (Krio), ica_Latn (Ede Ica), ijj_Latn (Ede Ije), mda_Latn (Mada), mzw_Latn (Deg), ldb_Latn (Duya), bhy_Latn (Bhele), yat_Latn (Yambeta), gjn_Latn (Gonja), snw_Latn (Selee), ich_Latn (Etkywan), bss_Latn (Akoose), ngb_Latn (Ngbandi, Northern), bzw_Latn (Basa), kez_Latn (Kukele), fat_Latn (Fanti), nhb_Latn (Beng), yas_Latn (Nugunu), dga_Latn (Dagaare, Southern), agc_Latn (Agatu), dzg_Latn (Dazaga), ahl_Latn (Igo), kyq_Latn (Kenga), azo_Latn (Awing), cko_Latn (Anufo), idd_Latn (Ede Idaca), nzi_Latn (Nzima), gmm_Latn (Gbaya-Mbodomo), abr_Latn (Abron), guw_Latn (Gun), bkc_Latn (Baka, Cameroon/Gabon), mbo_Latn (Mbo), bsp_Latn (Baga Sitemu), mur_Latn (Murle), cme_Latn (Cerma), men_Latn (Mende), cbj_Latn (Ede Cabe), mym_Latn (Me’en), lem_Latn (Nomaande), mkl_Latn (Mokole), maw_Latn (Mampruli), tfi_Latn (Gbe, Tofin), suq_Latn (Suri, Tirmaga-Chai), mql_Latn (Mbelime) and mfq_Latn (Moba)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, ɛ, ɛ̃</td>
-<td align="left">bqv_Latn (Koro Wachi) and bba_Latn (Baatonum)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɩ, Ʋ, ɛ, ɩ, ʋ</td>
-<td align="left">kyf_Latn (Kouya), kvf_Latn (Kabalai), ted_Latn (Krumen, Tepo), any_Latn (Anyin), abi_Latn (Abidji), sig_Latn (Paasaal), wob_Latn (Wè Northern), gud_Latn (Dida, Yocoboué), naw_Latn (Nawuri), ade_Latn (Adele), kye_Latn (Krache), nwb_Latn (Nyabwa), bev_Latn (Bété, Daloa), nuv_Latn (Nuni, Northern), nko_Latn (Nkonya), sil_Latn (Sisaala, Tumulung), kus_Latn (Kusaal), ktj_Latn (Krumen, Plapo), lor_Latn (Téén), mos_Latn (Mossi) and las_Latn (Lama, Togo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɠ, Ɲ, ɠ, ɲ</td>
-<td align="left">fuf_Latn (Pular)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ʉ, ɛ, ʉ</td>
-<td align="left">lmp_Latn (Limbum), niy_Latn (Ngiti), yam_Latn (Yamba), knp_Latn (Kwanja), ken_Latn (Kenyang) and mdj_Latn (Mangbetu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̄, ɛ, ɛ̀, ɛ́, ɛ̄</td>
-<td align="left">ddn_Latn (Dendi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɣ, Ɩ, ɛ, ɣ, ɩ</td>
-<td align="left">dop_Latn (Lukpa) and kpo_Latn (Ikposo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̄, Ɛ̰, Ɛ̰̀, Ɛ̰́, Ɛ̰̄, ɛ, ɛ̀, ɛ́, ɛ̄, ɛ̰, ɛ̰̀, ɛ̰́, ɛ̰̄</td>
-<td align="left">wok_Latn (Longto)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̈, Ɛ̱, Ɛ̱̈, Ɣ, ɛ, ɛ̈, ɛ̱, ɛ̱̈, ɣ</td>
-<td align="left">nus_Latn (Nuer)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɣ, ɛ, ɣ</td>
-<td align="left">sxw_Latn (Saxwe Gbe), bza_Latn (Bandi), ajg_Latn (Aja), aeb_Latn (Tunisian Darija), rif_Latn (Riffian (Latin)), fan_Latn (Fang), kab_Latn (Kabyle), pil_Latn (Yom), dag_Latn (Dagbani), xwe_Latn (Gbe, Xwela), gej_Latn (Gen) and akp_Latn (Siwu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɣ, Ʋ, ɛ, ɛ̀, ɛ́, ɛ̃, ɛ̃̀, ɛ̃́, ɣ, ʋ</td>
-<td align="left">lom_Latn (Loma, Liberia)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, ʉ</td>
-<td align="left">lag_Latn (Langi), les_Latn (Lese), maf_Latn (Mafa), muy_Latn (Muyang) and led_Latn (Lendu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɩ, ɛ, ɩ</td>
-<td align="left">kdh_Latn (Tem), fod_Latn (Foodo), wib_Latn (Toussian, Southern) and keu_Latn (Akebu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̃, Ɣ, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̃, ɣ</td>
-<td align="left">kpe_Latn (Kpelle)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̂, Ɛ̧, Ɛ̧́, Ɛ̧̂, ɛ, ɛ́, ɛ̂, ɛ̧, ɛ̧́, ɛ̧̂</td>
-<td align="left">pnz_Latn (Pana, Central African Republic)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɲ, ɲ</td>
-<td align="left">ffm_Latn (Maasina Fulfulde), khq_Latn (Koyra Chiini), dje_Latn (Zarma), ses_Latn (Koyraboro Senni), kqp_Latn (Kimré), twq_Latn (Tasawaq) and kao_Latn (Xaasongaxango)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, ɛ, ɛ̀, ɛ́</td>
-<td align="left">lu_Latn (Luba-Katanga), yo_Latn_BJ (Yoruba, Benin), etx_Latn (Iten), eto_Latn (Eton, Cameroon), yav_Latn (Yangben) and loq_Latn (Lobala)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ǀ, ǁ, ǂ, ǃ</td>
-<td align="left">naq_Latn (Nama), ktz_Latn (Juǀʼhoan) and ngh_Latn (Nǁng)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɩ, Ɩ̃, Ʋ, Ʋ̃, ɛ, ɛ̃, ɩ, ɩ̃, ʋ, ʋ̃, Ⱳ, ⱳ</td>
-<td align="left">lob_Latn (Lobi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɛ̃̀, Ɛ̃́, ɛ, ɛ̀, ɛ́, ɛ̃, ɛ̃̀, ɛ̃́</td>
-<td align="left">dnj_Latn_LR (Liberian Dan), bqc_Latn (Boko) and nga_Latn (Ngbaka)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɩ, Ɩ́, Ʋ, Ʋ́, ɛ, ɩ, ɩ́, ʋ, ʋ́</td>
-<td align="left">xsm_Latn_BF (Kasem, Burkina Faso)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: A̍, A̧̍, O̍, a̍, a̧̍, o̍, Ɔ̍, Ɛ, Ɛ̀, Ɛ́, Ɛ̄, Ɛ̍, Ɛ̧, Ɛ̧̄, ɔ̍, ɛ, ɛ̀, ɛ́, ɛ̄, ɛ̍, ɛ̧, ɛ̧̄</td>
-<td align="left">dow_Latn (Doyayo)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̍</td>
-<td align="left">dow_Latn (Doyayo), krw_Latn (Western Krahn), yba_Latn (Yala) and nga_Latn (Ngbaka)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̌, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̌</td>
-<td align="left">bfd_Latn (Bafut), ewo_Latn (Ewondo), lol_Latn (Mongo) and bom_Latn (Berom)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: A̍, E̍, I̍, O̍, U̍, a̍, e̍, i̍, o̍, u̍, Ɔ̍, Ɛ, Ɛ̀, Ɛ̌, Ɛ̍, ɔ̍, ɛ, ɛ̀, ɛ̌, ɛ̍</td>
-<td align="left">krw_Latn (Western Krahn)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɩ, Ʋ, ɛ, ɛ̀, ɛ́, ɩ, ʋ</td>
-<td align="left">nnw_Latn (Southern Nuni)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ̂, Ɛ̌, Ʉ, Ʉ̀, Ʉ̂, Ʉ̌, ɑ, ɑ̀, ɑ̂, ɑ̌, ɛ, ɛ̀, ɛ̂, ɛ̌, ʉ, ʉ̀, ʉ̂, ʉ̌, Ɑ, Ɑ̀, Ɑ̂, Ɑ̌</td>
-<td align="left">byv_Latn (Medumba)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̍, ◌᷄, ◌᷅</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɲ, ɲ, ʝ, Ʝ</td>
-<td align="left">ikx_Latn (Ik)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ʉ, Ʉ̃, ɛ, ɛ̃, ʉ, ʉ̃</td>
-<td align="left">ebo_Latn (Teke-Ebo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̂, Ɛ̄, Ɛ̌, ɛ, ɛ́, ɛ̂, ɛ̄, ɛ̌</td>
-<td align="left">nmg_Latn (Kwasio)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, ɛ, ɛ̀, ɛ́, ɛ̃</td>
-<td align="left">bqp_Latn (Bisã)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ̈, Ɛ̌, ɛ, ɛ̀, ɛ̈, ɛ̌</td>
-<td align="left">grb_Latn (Grebo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ƒ, ɛ, ɛ̀, ɛ́, ɛ̃</td>
-<td align="left">nyb_Latn (Nyangbo) and tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɩ, Ʋ, ɛ, ɩ, ʋ, ˗</td>
-<td align="left">god_Latn (Godié)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̂, Ɛ̃, Ɛ̃́, Ɛ̌, Ɩ, Ɩ́, Ɩ̂, Ɩ̃, Ɩ̃́, Ɩ̃̂, Ɩ̌, Ɲ, Ʋ, Ʋ́, Ʋ̂, Ʋ̃, Ʋ̃́, ɛ, ɛ́, ɛ̂, ɛ̃, ɛ̃́, ɛ̌, ɩ, ɩ́, ɩ̂, ɩ̃, ɩ̃́, ɩ̃̂, ɩ̌, ɲ, ʋ, ʋ́, ʋ̂, ʋ̃, ʋ̃́</td>
-<td align="left">gna_Latn (Kaansa)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɩ, Ɲ, Ʋ, ɛ, ɩ, ɲ, ʋ</td>
-<td align="left">bib_Latn (Bissa), nku_Latn (Kulango, Bouna) and bbo_Latn (Northern Bobo Madaré)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɛ̃̀, Ɛ̃́, ɛ, ɛ̃, ɛ̃̀, ɛ̃́</td>
-<td align="left">ife_Latn (Ifè)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɂ, ɂ, ɛ</td>
-<td align="left">mfd_Latn (Mendankwe-Nkwen)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̧́, Ɛ̂, Ɛ̧̂, Ɛ̌, Ɛ̧̌, Ɛ̧, Ʉ, Ʉ́, Ʉ̂, Ʉ̌, ɛ, ɛ́, ɛ̧́, ɛ̂, ɛ̧̂, ɛ̌, ɛ̧̌, ɛ̧, ʉ, ʉ́, ʉ̂, ʉ̌</td>
-<td align="left">mcp_Latn (Makaa)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̃, Ɛ̃́, Ɩ, Ɩ́, Ɩ̃, Ɩ̃́, Ʋ, Ʋ́, Ʋ̃, Ʋ̃́, ɛ, ɛ́, ɛ̃, ɛ̃́, ɩ, ɩ́, ɩ̃, ɩ̃́, ʋ, ʋ́, ʋ̃, ʋ̃́</td>
-<td align="left">kst_Latn (Winyé) and sld_Latn (Sissala)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɲ, Ɉ, ɉ, ɛ, ɲ</td>
-<td align="left">bsc_Latn_GN (Guinean Bassari)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɲ, ɛ, ɛ̃, ɲ</td>
-<td align="left">dya_Latn (Dyan)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɍ, ɍ</td>
-<td align="left">kr_Latn (Kanuri), knc_Latn (Kanuri, Central) and kby_Latn (Kanuri, Manga)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃̀, Ɛ̃́, Ɲ, ɛ, ɛ̀, ɛ́, ɛ̃̀, ɛ̃́, ɲ</td>
-<td align="left">mev_Latn (Mano)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̃, Ɠ, Ɲ, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̃, ɠ, ɲ</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ƒ, Ʋ, ɛ, ʋ</td>
-<td align="left">avn_Latn (Avatime)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̃, ɛ, ɛ́, ɛ̃</td>
-<td align="left">vai_Latn (Vai (Latin))</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ƐN, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̌, Ɩ, Ɩ̀, Ɩ́, Ɩ̂, Ɩ̌, Ʋ, Ʋ̀, Ʋ́, Ʋ̂, Ʋ̌, ɛ, ɛn, ɛ̀, ɛ́, ɛ̂, ɛ̌, ɩ, ɩ̀, ɩ́, ɩ̂, ɩ̌, ʋ, ʋ̀, ʋ́, ʋ̂, ʋ̌</td>
-<td align="left">goa_Latn (Guro)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̈, Ɣ, ɛ, ɛ̈, ɣ</td>
-<td align="left">dip_Latn (Dinka, Northeastern) and din_Latn (Dinka)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, Ʉ́, Ʉ̂, ʉ, ʉ́, ʉ̂</td>
-<td align="left">etu_Latn (Ejagham)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̂, Ɛ̈, Ʉ, Ʉ̂, Ʉ̈, ɛ, ɛ̂, ɛ̈, ʉ, ʉ̂, ʉ̈</td>
-<td align="left">lnl_Latn (South Central Banda)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɂ</td>
-<td align="left">cae_Latn (Lehar)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, ɛ, ɛ́</td>
-<td align="left">mdt_Latn (Mbere), dua_Latn (Duala), gvl_Latn (Gulay), tvu_Latn (Tunen) and ksf_Latn (Bafia)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, Ʉ̀, Ʉ́, Ʉ̂, Ʉ̌, ʉ, ʉ̀, ʉ́, ʉ̂, ʉ̌</td>
-<td align="left">lgg_Latn (Lugbara) and nfu_Latn (Mfumte)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ʔ</td>
-<td align="left">mey_Latn (Hassaniyya)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɩ, Ɩ̀, Ɩ́, Ɲ, ɛ, ɛ̀, ɛ́, ɛ̃, ɛ̃̀, ɛ̃́, ɩ, ɲ</td>
-<td align="left">tuz_Latn (Turka)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, Ʉ́, Ʉ̂, Ʉ̌, ʉ, ʉ́, ʉ̂, ʉ̌</td>
-<td align="left">fvr_Latn (Fur)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɩ, Ɩ̃, Ʋ, Ʋ̃, ɛ, ɛ̃, ɩ, ɩ̃, ʋ, ʋ̃</td>
-<td align="left">bfo_Latn (Malba Birifor)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, Ʉ̀, Ʉ́, Ʉ̄, Ʉ̌, ɑ, ɑ̀, ɑ́, ɑ̄, ɑ̌, ʉ, ʉ̀, ʉ́, ʉ̄, ʉ̌, Ɑ, Ɑ̀, Ɑ́, Ɑ̄, Ɑ̌</td>
-<td align="left">fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɣ, Ƭ, ƭ, ɣ, ʔ</td>
-<td align="left">tmh_Latn (Tamashek)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̧, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̧</td>
-<td align="left">kkj_Latn (Kako)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɲ, ɛ, ɛ̀, ɛ́, ɲ</td>
-<td align="left">emk_Latn (Maninkakan, Eastern) and myk_Latn (Mamara Senoufo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ̂, Ɛ̄, Ɛ̌, Ʉ, Ʉ̀, Ʉ̂, Ʉ̄, Ʉ̌, ɛ, ɛ̀, ɛ̂, ɛ̄, ɛ̌, ʉ, ʉ̀, ʉ̂, ʉ̄, ʉ̌, ʔ</td>
-<td align="left">agq_Latn (Aghem)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɩ, Ʋ, ɛ, ɩ, ʋ, ˗, ˮ</td>
-<td align="left">yre_Latn (Yaouré)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɩ, Ɩ̀, Ɩ́, Ɩ̂, Ʋ, Ʋ̀, Ʋ́, Ʋ̂, ɛ, ɛ̀, ɛ́, ɛ̂, ɩ, ɩ̀, ɩ́, ɩ̂, ʋ, ʋ̀, ʋ́, ʋ̂</td>
-<td align="left">neb_Latn (Toura)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̂, ɛ, ɛ̂</td>
-<td align="left">ksp_Latn (Kabba)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ʉ, ɛ, ʉ, ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᵘ, ᶤ, ᶶ, ⁱ</td>
-<td align="left">teo_Latn (Teso)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ɦ, Ɦ</td>
-<td align="left">pym_Latn (Pyam), mcn_Latn (Masana) and dno_Latn (Ndrulo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ʉ, Ʉ̀, Ʉ́, ɛ, ʉ, ʉ̀, ʉ́</td>
-<td align="left">dur_Latn (Dii)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌͟</td>
-<td align="left">apd_Latn (Sudanese Arabic) and udu_Latn (Uduk)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̰, ɛ, ɛ̰</td>
-<td align="left">mge_Latn (Mango)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɣ, ɣ, ʔ</td>
-<td align="left">taq_Latn (Tamasheq (Latin))</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̱, Ʉ, Ʉ̱, ɛ, ɛ̱, ʉ, ʉ̱</td>
-<td align="left">kdj_Latn (Karamojong)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Gʷ, Kʷ, gʷ, kʷ, Ɛ, Ɣ, ɛ, ɣ</td>
-<td align="left">shi_Latn (Tachelhit (Latin)) and tzm_Latn (Central Atlas Tamazight)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɣ, ɣ</td>
-<td align="left">ttq_Latn (Tawallammat Tamajaq)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: A᷅, A᷆, E᷅, E᷆, I᷅, I᷆, O᷅, O᷆, U᷅, U᷆, a᷅, a᷆, e᷅, e᷆, i᷅, i᷆, o᷅, o᷆, u᷅, u᷆</td>
-<td align="left">btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌᷅, ◌᷆</td>
-<td align="left">btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ̂, Ɛ̌, ɛ, ɛ̀, ɛ̂, ɛ̌</td>
-<td align="left">tik_Latn (Tikar)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ƈ, ƈ, Ƥ, ƥ, Ƭ, ƭ</td>
-<td align="left">srr_Latn (Serer)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, Ʉ́, Ʉ̄, ʉ, ʉ́, ʉ̄</td>
-<td align="left">ybb_Latn (Yemba)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʋ, ʋ</td>
-<td align="left">bcn_Latn (Bali)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: T͟H, t͟h</td>
-<td align="left">udu_Latn (Uduk)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̌, Ʉ, Ʉ̀, Ʉ́, Ʉ̂, Ʉ̌, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̌, ʉ, ʉ̀, ʉ́, ʉ̂, ʉ̌</td>
-<td align="left">nnh_Latn (Ngiemboon), bbj_Latn (Ghomala) and bax_Latn (Bamun (Latin))</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ɛ, ˗, ˮ</td>
-<td align="left">ati_Latn (Attié)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: A᷆, A᷇, E᷆, E᷇, I᷆, I᷇, O᷆, O᷇, U᷆, U᷇, a᷆, a᷇, e᷆, e᷇, i᷆, i᷇, o᷆, o᷇, u᷆, u᷇, Ɔ᷆, Ɔ᷇, Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̄, Ɛ̌, Ɛ᷆, Ɛ᷇, ɔ᷆, ɔ᷇, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̄, ɛ̌, ɛ᷆, ɛ᷇</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌᷆, ◌᷇</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃̀, Ɛ̃́, ɛ, ɛ̀, ɛ́, ɛ̃̀, ɛ̃́</td>
-<td align="left">tbz_Latn (Ditammari)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɲ, ɛ, ɛ̀, ɛ́, ɛ̃, ɛ̃̀, ɛ̃́, ɲ</td>
-<td align="left">box_Latn (Buamu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɩ, Ɩ́, ɛ, ɛ́, ɩ, ɩ́</td>
-<td align="left">aks_Latn (Akeselem)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ɽ, Ɽ</td>
-<td align="left">kib_Latn (Koalib)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɩ, Ɩ̀, Ɩ́, Ɩ̃, Ɩ̃̀, Ɩ̃́, Ɲ, Ʋ, Ʋ̀, Ʋ́, Ʋ̃, Ʋ̃̀, Ʋ̃́, ɛ, ɛ̀, ɛ́, ɛ̃, ɛ̃̀, ɛ̃́, ɩ, ɩ̀, ɩ́, ɩ̃, ɩ̃̀, ɩ̃́, ɲ, ʋ, ʋ̀, ʋ́, ʋ̃, ʋ̃̀, ʋ̃́, Ⱳ, ⱳ</td>
-<td align="left">pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɲ, ɛ, ɛ̃, ɛ̃̀, ɛ̃́, ɲ</td>
-<td align="left">bwj_Latn (Láá Láá Bwamu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ̃, ɛ, ɛ̀, ɛ̃</td>
-<td align="left">wwa_Latn (Waama)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɩ, Ɩ̀, Ɩ́, Ɩ̂, ɛ, ɛ̀, ɛ́, ɛ̂, ɩ, ɩ̀, ɩ́, ɩ̂</td>
-<td align="left">blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ʉ, Ʉ̂, Ʉ̈, ʉ, ʉ̂, ʉ̈</td>
-<td align="left">nzk_Latn (Nzakara)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ʉ, Ʉ́, ɛ, ʉ, ʉ́</td>
-<td align="left">mas_Latn (Masai)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ɛ, ʔ</td>
-<td align="left">sef_Latn (Cebaara Senoufo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɩ, Ʋ, ɛ, ɛ̀, ɛ́, ɛ̃, ɩ, ʋ</td>
-<td align="left">dgi_Latn (Northern Dagara)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɩ, Ʋ, ɛ, ɛ̃, ɩ, ʋ</td>
-<td align="left">gur_Latn (Frafra)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̄, Ɛ̋, Ɛ̏, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̄, ɛ̋, ɛ̏, ɤ, ɤ̀, ɤ́, ɤ̂, ɤ̄, ɤ̋, ɤ̏, Ɤ, Ɤ̀, Ɤ́, Ɤ̂, Ɤ̄, Ɤ̋, Ɤ̏</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: A̍, E̍, I̍, O̍, U̍, a̍, e̍, i̍, o̍, u̍, Ɔ̍, Ɛ, Ɛ̄, Ɛ̍, ɔ̍, ɛ, ɛ̄, ɛ̍</td>
-<td align="left">yba_Latn (Yala)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɠ, Ɲ, Ʋ, ɛ, ɠ, ɲ, ʋ</td>
-<td align="left">tod_Latn (Toma)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ɑ, ɛ, Ɑ</td>
-<td align="left">nza_Latn (Tigon Mbembe)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ƒ, Ɣ, Ʋ, ɛ, ɣ, ʋ</td>
-<td align="left">wci_Latn (Gbe, Waci)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ɛ, Ꞷ, Ꞷ̃, ꞷ, ꞷ̃</td>
-<td align="left">kzc_Latn (Bondoukou Kulango)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɣ, Ɩ, Ʋ, ɛ, ɣ, ɩ, ʋ</td>
-<td align="left">aha_Latn (Ahanta) and kbp_Latn (Kabiyé)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̂, Ɛ̌, Ʉ, Ʉ́, Ʉ̌, ɛ, ɛ́, ɛ̂, ɛ̌, ʉ, ʉ́, ʉ̌</td>
-<td align="left">ozm_Latn (Koonzime)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɛ̃̌, Ɛ̌, ɛ, ɛ̀, ɛ́, ɛ̃, ɛ̃̀, ɛ̃́, ɛ̃̌, ɛ̌</td>
-<td align="left">bsq_Latn (Bassa (Latin))</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɩ, Ʋ, ɩ, ʋ</td>
-<td align="left">kmy_Latn (Koma)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̃, Ɩ, Ɩ̃, ɛ, ɛ̃, ɩ, ɩ̃</td>
-<td align="left">biv_Latn (Birifor, Southern)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ʉ, ɛ, ʉ, ꞉, ꞊</td>
-<td align="left">buu_Latn (Budu)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, ɛ, ɦ, Ɦ</td>
-<td align="left">nmz_Latn (Nawdm)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̰, Ɛ̰̀, Ɛ̰́, ɛ, ɛ̀, ɛ́, ɛ̰, ɛ̰̀, ɛ̰́</td>
-<td align="left">ntm_Latn (Nateni)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̃, Ɛ̃̀, Ɛ̃́, Ɛ̃̌, Ɛ̌, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̃, ɛ̃̀, ɛ̃́, ɛ̃̌, ɛ̌</td>
-<td align="left">lee_Latn (Lyélé)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̃, Ɛ̃́, ɛ, ɛ́, ɛ̃, ɛ̃́</td>
-<td align="left">soy_Latn (Miyobe)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɩ, Ɩ̀, Ɩ́, Ɩ̂, Ʋ, Ʋ̀, Ʋ́, Ʋ̂, ɛ, ɛ̀, ɛ́, ɛ̂, ɤ, ɤ̀, ɤ́, ɤ̂, ɩ, ɩ̀, ɩ́, ɩ̂, ʋ, ʋ̀, ʋ́, ʋ̂, Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
-<td align="left">gov_Latn (Goo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ɽ, Ɽ, Ꟈ, ꟈ</td>
-<td align="left">mor_Latn (Moro)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ˀ</td>
-<td align="left">giz_Latn (Southern Giziga)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̈, Ɛ̌, ɛ, ɛ̀, ɛ́, ɛ̈, ɛ̌</td>
-<td align="left">sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̃, Ƒ, Ɣ, Ʋ, ɛ, ɛ̀, ɛ́, ɛ̃, ɣ, ʋ</td>
-<td align="left">ee_Latn (Ewe)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ́, Ɛ̂, Ɛ̌, ɛ, ɛ́, ɛ̂, ɛ̌</td>
-<td align="left">ln_Latn (Lingala)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̄, Ɛ̌, Ʉ, Ʉ́, Ʉ̂, Ʉ̈, Ʉ̌, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̄, ɛ̌, ʉ, ʉ́, ʉ̂, ʉ̈, ʉ̌</td>
-<td align="left">jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ᵽ, Ᵽ</td>
-<td align="left">bqj_Latn (Bandial)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ, ɛ</td>
-<td align="left">ig_Latn (Igbo), tuq_Latn (Tedaga), hag_Latn (Hanga), ig_Latn (Igbo) and etu_Latn (Ejagham)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Mina</td>
-<td align="left">hna_Latn (Mina)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Amo</td>
-<td align="left">amo_Latn (Amo)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʈ, ʈ</td>
-<td align="left">nus_Latn (Nuer), luo_Latn (Luo) and ach_Latn (Acoli)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ƃ, ƃ</td>
-<td align="left">lom_Latn (Loma, Liberia) and dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni0181</td>
-<td align="left">lom_Latn (Loma, Liberia) and dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ʔ</td>
-<td align="left">lob_Latn (Lobi), abi_Latn (Abidji) and ttq_Latn (Tawallammat Tamajaq)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: A̍, A᷄, A᷅, E̍, E᷄, E᷅, I̍, I᷄, I᷅, O̍, O᷄, O᷅, U̍, U᷄, U᷅, a̍, a᷄, a᷅, e̍, e᷄, e᷅, i̍, i᷄, i᷅, o̍, o᷄, o᷅, u̍, u᷄, u᷅, Ŋ̍, ŋ̍, Ɔ̍, Ɔ᷄, Ɔ᷅, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̄, Ɛ̌, Ɛ̍, Ɛ᷄, Ɛ᷅, ɔ̍, ɔ᷄, ɔ᷅, ɛ̀, ɛ́, ɛ̂, ɛ̄, ɛ̌, ɛ̍, ɛ᷄, ɛ᷅</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01A9</td>
-<td align="left">gaa_Latn (Ga)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01B7</td>
-<td align="left">gaa_Latn (Ga)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ˀ</td>
-<td align="left">mfd_Latn (Mendankwe-Nkwen)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɩ, Ʋ, ɩ, ʋ</td>
-<td align="left">xsm_Latn (Kasem)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ̰, Ɛ̰̀, Ɛ̰́, Ɛ̰̄, ɛ̰, ɛ̰̀, ɛ̰́, ɛ̰̄</td>
-<td align="left">mev_Latn (Mano)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ̨, Ɛ̨́, ɛ̨, ɛ̨́</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ƹ, ƹ</td>
-<td align="left">rif_Latn (Riffian (Latin))</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɣ, Ɍ, ɍ, ɣ, Ꞵ, ꞵ</td>
-<td align="left">mdt_Latn (Mbere)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ, Ɩ, Ʋ, ɛ, ɩ, ʋ</td>
-<td align="left">lgg_Latn (Lugbara)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: A᷆, E᷆, O᷅, O᷆, U᷆, a᷆, e᷆, o᷅, o᷆, u᷆, Ũ᷆, ũ᷆, Ɔ᷆, Ɛ̃, Ɛ̃́, Ɛ̃̂, Ɛ̃̌, Ɛ̄, Ɛ̌, Ɩ, Ɩ́, Ɩ̂, Ɩ̃, Ɩ̃̂, Ɩ̃᷆, Ɩ̄, Ɩ̌, Ɩ᷆, ɔ᷆, ɛ̃, ɛ̃́, ɛ̃̂, ɛ̃̌, ɛ̄, ɛ̌, ɩ, ɩ́, ɩ̂, ɩ̃, ɩ̃̂, ɩ̃᷆, ɩ̄, ɩ̌, ɩ᷆</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Eastern Gurung, Latin</td>
-<td align="left">ggn_Latn (Eastern Gurung, Latin)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɣ, ɣ, Ꞵ, ꞵ</td>
-<td align="left">puu_Latn (Punu) and buw_Latn (gevové)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɲ, Ɲ̀, Ɲ́, ɲ, ɲ̀, ɲ́</td>
-<td align="left">eto_Latn (Eton, Cameroon)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Mbunga</td>
-<td align="left">mgy_Latn (Mbunga)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ̀, ɛ̀</td>
-<td align="left">gvl_Latn (Gulay)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ʕ</td>
-<td align="left">tsb_Latn (Tsamai)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ, Ɛ̀, Ɛ́, Ɛ̂, Ɛ̌, ɐ, ɐ̀, ɐ́, ɐ̂, ɛ, ɛ̀, ɛ́, ɛ̂, ɛ̌, Ⓐ, ⓐ, Ɐ, Ɐ̀, Ɐ́, Ɐ̂</td>
-<td align="left">kib_Latn (Koalib)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʋ̈, ʋ̈, ˗, ˮ, ꞊</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ̀, Ɛ́, Ɛ̄, ɛ̀, ɛ́, ɛ̄</td>
-<td align="left">kyq_Latn (Kenga)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Koro</td>
-<td align="left">kfo_Latn (Koro)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ̄, Ʉ̄, ɛ̄, ʉ̄</td>
-<td align="left">bax_Latn (Bamun (Latin))</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ̀, Ɛ́, Ɛ̌, ɛ̀, ɛ́, ɛ̌</td>
-<td align="left">gej_Latn (Gen)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: A̍, E̍, I̍, O̍, U̍, a̍, e̍, i̍, o̍, u̍, Ã̍, ã̍, Ĩ̍, ĩ̍, Ũ̍, ũ̍, Ɔ̃̍, Ɔ̍, Ɛ̂, Ɛ̃̂, Ɛ̃̌, Ɛ̃̍, Ɛ̌, Ɛ̍, ɔ̃̍, ɔ̍, ɛ̂, ɛ̃̂, ɛ̃̌, ɛ̃̍, ɛ̌, ɛ̍</td>
-<td align="left">nga_Latn (Ngbaka)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Seki</td>
-<td align="left">syi_Latn (Seki)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Atsam</td>
-<td align="left">cch_Latn (Atsam)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ʔ, ʕ</td>
-<td align="left">gwd_Latn (Gawwada)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -1974,7 +1298,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩
+    💥⏩⏩⏩
 </span>
 
     
@@ -2004,7 +1328,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                💥
                 Alata-Regular.ttf
                 
             </summary>
@@ -2013,17 +1337,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̉ į̊ į̋ į̏ į̑ į̒ į̥̀ į̥́ į̥̂ į̥̃ į̥̄ į̥̆ į̥̇ į̥̈ į̥̉ į̥̊ į̥̋</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Navajo (Latn, 166,319 speakers), Sar (Latn, 500,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Abua (Latn, 25,000 speakers), Ikwere (Latn, 717,000 speakers), Ebira (Latn, 2,200,000 speakers), Southern Tutchone (Latn, 65 speakers), Northern Tutchone (Latn, 85 speakers), Lithuanian (Latn, 2,357,094 speakers), Ma’di (Latn, 584,000 speakers), Cicipu (Latn, 44,000 speakers), Han (Latn, 6 speakers), Ekpeye (Latn, 226,000 speakers), Dutch (Latn, 31,709,104 speakers), Kaska (Latn, 125 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Dii (Latn, 71,000 speakers), Mango (Latn, 77,000 speakers), Basaa (Latn, 332,940 speakers), Keliko (Latn, 63,000 speakers), Gulay (Latn, 250,478 speakers), Nateni (Latn, 100,000 speakers), Southern Kisi (Latn, 360,000 speakers), South Central Banda (Latn, 244,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Makaa (Latn, 221,000 speakers), Aghem (Latn, 38,843 speakers), Teke-Ebo (Latn, 260,000 speakers), Igbo (Latn, 27,823,640 speakers), Belarusian (Cyrl, 10,064,517 speakers), Vute (Latn, 21,000 speakers), Zapotec (Latn, 490,000 speakers), Western Krahn (Latn, 97,800 speakers), Ejagham (Latn, 120,000 speakers), Mfumte (Latn, 79,000 speakers), Koonzime (Latn, 40,000 speakers), Nzakara (Latn, 50,000 speakers), Longto (Latn, 5,000 speakers), Yala (Latn, 200,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Mundani (Latn, 34,000 speakers), Dan (Latn, 1,099,244 speakers), Heiltsuk (Latn, 300 speakers), Kom (Latn, 360,685 speakers), Lugbara (Latn, 2,200,000 speakers), Avokaya (Latn, 100,000 speakers), Fur (Latn, 1,230,163 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Bafut (Latn, 158,146 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

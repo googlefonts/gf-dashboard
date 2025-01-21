@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/version_bump<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,18 +274,18 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>1</td>
+        <td>3</td>
         <td>0</td>
-        <td>2</td>
-        <td>17</td>
+        <td>1</td>
+        <td>16</td>
         <td>34</td>
         <td>9</td>
-        <td>177</td>
+        <td>175</td>
     </tr>
     <tr>
-        <td>0%</td>
-        <td>0%</td>
         <td>1%</td>
+        <td>0%</td>
+        <td>0%</td>
         <td>7%</td>
         <td>14%</td>
         <td>4%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -772,9 +772,9 @@ U+FC5E, U+FC5F, U+FC60, U+FC61, U+FC62 and U+FC63</p>
 
                             <span class='details_text'>
                             <p>Interpolation issues were found in the font:</p>
-<pre><code>- Contour 0 point 23 in glyph 'uni1E20' has a kink between location wght=200 and location wght=900
+<pre><code>- Contour 0 point 42 in glyph 'uni2126' has a kink between location wght=200 and location wght=900
 
-- Contour 0 point 42 in glyph 'uni2126' has a kink between location wght=200 and location wght=900
+- Contour 0 point 23 in glyph 'uni1E20' has a kink between location wght=200 and location wght=900
 </code></pre>
 
                             
@@ -979,8 +979,6 @@ uni2237</p>
     
 
     
-
-    
     <h3>
     
     Does the font contain a soft hyphen?
@@ -1093,8 +1091,6 @@ extendedarabicindicdigitfoururdu.lining and extendedarabicindicdigitsevenurdu.li
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1351,14 +1347,14 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, coptic, cherokee, tifinagh</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, todhri, duployan, math, hebrew, malayalam, syriac, old-permic, coptic, canadian-aboriginal, tifinagh</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, coptic, canadian-aboriginal, old-permic, tifinagh, hebrew, duployan, math, syriac, todhri, malayalam</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
 <li>U+0313 COMBINING COMMA ABOVE: try adding one of: old-permic, todhri</li>
@@ -1367,7 +1363,7 @@ definitions.</p>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+037E GREEK QUESTION MARK: try adding greek</li>
 <li>U+0387 GREEK ANO TELEIA: try adding greek</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: math, greek, yi</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: math, yi, greek</li>
 <li>U+0E3F THAI CURRENCY SYMBOL BAHT: try adding thai</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
@@ -1516,7 +1512,7 @@ definitions.</p>
 <li>U+25C3 WHITE LEFT-POINTING SMALL TRIANGLE: try adding symbols</li>
 <li>U+25C7 WHITE DIAMOND: try adding symbols</li>
 <li>U+25CA LOZENGE: try adding one of: math, symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: balinese, gunjala-gondi, soyombo, sharada, rejang, coptic, saurashtra, tagbanwa, sogdian, kharoshthi, malayalam, nko, zanabazar-square, lao, lepcha, sinhala, mende-kikakui, psalter-pahlavi, cham, gujarati, pahawh-hmong, canadian-aboriginal, newa, hanifi-rohingya, bassa-vah, khudawadi, mahajani, miao, grantha, tamil, elbasan, limbu, bengali, tai-le, oriya, bhaiksuki, tirhuta, thai, duployan, modi, khojki, new-tai-lue, takri, syloti-nagri, batak, buginese, myanmar, music, meetei-mayek, adlam, manichaean, syriac, phags-pa, khmer, kannada, wancho, caucasian-albanian, brahmi, devanagari, masaram-gondi, tibetan, hanunoo, tai-tham, buhid, yi, warang-citi, ahom, sundanese, gurmukhi, armenian, thaana, hebrew, kayah-li, javanese, chakma, symbols, kaithi, dogra, siddham, math, old-permic, marchen, tai-viet, mandaic, telugu, osage, tagalog, tifinagh, mongolian</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: tifinagh, soyombo, duployan, manichaean, newa, kaithi, symbols, cham, coptic, old-permic, miao, music, saurashtra, pahawh-hmong, tamil, tagbanwa, takri, thai, gunjala-gondi, modi, tai-tham, kannada, gurmukhi, oriya, caucasian-albanian, kayah-li, sharada, adlam, javanese, devanagari, mahajani, khudawadi, lao, hebrew, myanmar, tirhuta, osage, kharoshthi, bengali, limbu, siddham, psalter-pahlavi, syloti-nagri, bassa-vah, hanifi-rohingya, masaram-gondi, thaana, canadian-aboriginal, khojki, tai-le, mandaic, syriac, mende-kikakui, sinhala, rejang, brahmi, tai-viet, grantha, hanunoo, sundanese, elbasan, marchen, armenian, yi, khmer, sogdian, zanabazar-square, telugu, tibetan, bhaiksuki, chakma, mongolian, malayalam, math, nko, wancho, buginese, balinese, phags-pa, lepcha, batak, new-tai-lue, dogra, gujarati, meetei-mayek, buhid, tagalog, warang-citi, ahom</li>
 <li>U+25E6 WHITE BULLET: try adding symbols</li>
 <li>U+27E8 MATHEMATICAL LEFT ANGLE BRACKET: try adding math</li>
 <li>U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET: try adding math</li>
@@ -1773,7 +1769,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -1795,7 +1791,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Beiruti[wght].ttf
                 
             </summary>
@@ -1804,1452 +1800,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shaper didn't attach Acute to J</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to j</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̛</td>
-<td align="left">vi_Latn (Vietnamese)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ءٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ءٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ءٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍أٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍أٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'أٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'أٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ؤٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ؤٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ؤٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ؤٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ؤٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ؤٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍إٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍إٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'إٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'إٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'إٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ئٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ئٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ئٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to space</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to space</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to space</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ئٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ئٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ئٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍آٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍آٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍إٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'آٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'آٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'إٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍بٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍بٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍بٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'بٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'بٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'بٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ةٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ةٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ةٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ةٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ةٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ةٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍تٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍تٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍تٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'تٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'تٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'تٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ثٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ثٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ثٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ثٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ثٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ثٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍جٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍جٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍جٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'جٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'جٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'جٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍حٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍حٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍حٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'حٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'حٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'حٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍خٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍خٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍خٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'خٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'خٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'خٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍دٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍دٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍دٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'دٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'دٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'دٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ذٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ذٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ذٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ذٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ذٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ذٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍رٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍رٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍رٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'رٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'رٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'رٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍زٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍زٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍زٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'زٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'زٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'زٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍سٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍سٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍سٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'سٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'سٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'سٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍شٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍شٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍شٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'شٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'شٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'شٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍صٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍صٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍صٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'صٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'صٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'صٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ضٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ضٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ضٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ضٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ضٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ضٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍طٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍طٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍طٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'طٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'طٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'طٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ظٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ظٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ظٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ظٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ظٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ظٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍عٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍عٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍عٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'عٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'عٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'عٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍غٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍غٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍غٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'غٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'غٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'غٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍فٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍فٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍فٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'فٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'فٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'فٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍قٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍قٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍قٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'قٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'قٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'قٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍كٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍كٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍كٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'كٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'كٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'كٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍لٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍لٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍لٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'لٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'لٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'لٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍مٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍مٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍مٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'مٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'مٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'مٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍نٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍نٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍نٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'نٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'نٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'نٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍هٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍هٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍هٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'هٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'هٔ'</td>
-<td align="left">ar_Arab (Arabic), fa_Arab (Persian), ps_Arab (Pashto), ar_Arab (Arabic) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'هٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍وٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍وٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'وٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'وٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍ىٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ىٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍ىٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to space</td>
-<td align="left">ar_Arab (Arabic), ps_Arab (Pashto) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'ىٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ىٔ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'ىٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text '‍يٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text '‍يٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to the base glyph when shaping the text 'يٓ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to the base glyph when shaping the text 'يٕ'</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0653 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0655 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to uni0640</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍پٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'پٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍چٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'چٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ژٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ژٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍کٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'کٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍گٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'گٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍یٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'یٔ'</td>
-<td align="left">fa_Arab (Persian), ps_Arab (Pashto) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0+0</td>
-<td align="left">uni0647=0+401</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ټٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ټٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ځٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ځٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍څٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'څٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ډٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ډٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ړٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ړٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to the base glyph when shaping the text '‍ږَ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to the base glyph when shaping the text '‍ږِ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to the base glyph when shaping the text '‍ږُ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to the base glyph when shaping the text '‍ږً'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to the base glyph when shaping the text '‍ږٍ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to the base glyph when shaping the text '‍ږٌ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to the base glyph when shaping the text '‍ږّ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to the base glyph when shaping the text '‍ږْ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ږٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to the base glyph when shaping the text '‍ږٰ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to the base glyph when shaping the text 'ږَ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to the base glyph when shaping the text 'ږِ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to the base glyph when shaping the text 'ږُ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to the base glyph when shaping the text 'ږً'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to the base glyph when shaping the text 'ږٍ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to the base glyph when shaping the text 'ږٌ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to the base glyph when shaping the text 'ږّ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to the base glyph when shaping the text 'ږْ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ږٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to the base glyph when shaping the text 'ږٰ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ښٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ښٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ګٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ګٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ڼٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ڼٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to the base glyph when shaping the text '‍ېَ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to the base glyph when shaping the text '‍ېِ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to the base glyph when shaping the text '‍ېُ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to the base glyph when shaping the text '‍ېً'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to the base glyph when shaping the text '‍ېٍ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to the base glyph when shaping the text '‍ېٌ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to the base glyph when shaping the text '‍ېّ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to the base glyph when shaping the text '‍ېْ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ېٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to the base glyph when shaping the text '‍ېٰ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to the base glyph when shaping the text 'ېَ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to the base glyph when shaping the text 'ېِ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to the base glyph when shaping the text 'ېُ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to the base glyph when shaping the text 'ېً'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to the base glyph when shaping the text 'ېٍ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to the base glyph when shaping the text 'ېٌ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to the base glyph when shaping the text 'ېّ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to the base glyph when shaping the text 'ېْ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ېٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to the base glyph when shaping the text 'ېٰ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to the base glyph when shaping the text '‍ۍَ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to the base glyph when shaping the text '‍ۍِ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to the base glyph when shaping the text '‍ۍُ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to the base glyph when shaping the text '‍ۍً'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to the base glyph when shaping the text '‍ۍٍ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to the base glyph when shaping the text '‍ۍٌ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to the base glyph when shaping the text '‍ۍّ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to the base glyph when shaping the text '‍ۍْ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text '‍ۍٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to the base glyph when shaping the text '‍ۍٰ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064E to the base glyph when shaping the text 'ۍَ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0650 to the base glyph when shaping the text 'ۍِ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064F to the base glyph when shaping the text 'ۍُ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064B to the base glyph when shaping the text 'ۍً'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064D to the base glyph when shaping the text 'ۍٍ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni064C to the base glyph when shaping the text 'ۍٌ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0651 to the base glyph when shaping the text 'ۍّ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0652 to the base glyph when shaping the text 'ۍْ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0654 to the base glyph when shaping the text 'ۍٔ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0670 to the base glyph when shaping the text 'ۍٰ'</td>
-<td align="left">ps_Arab (Pashto)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ڪ</td>
-<td align="left">sd_Arab (Sindhi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɔ, Ɛ, Ɲ, ɔ, ɛ, ɲ</td>
-<td align="left">bm_Latn (Bambara) and dyu_Latn (Dyula)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɔ, Ɛ, ɔ, ɛ</td>
-<td align="left">fat_Latn (Fanti) and tw_akuapem_Latn (Akuapem Twi)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɓ, Ɗ, Ƴ, ƴ, ɓ, ɗ</td>
-<td align="left">ff_Latn (Fulah)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ɓ, Ɗ, Ƙ, ƙ, Ƴ, ƴ, ɓ, ɗ</td>
-<td align="left">ha_Latn (Hausa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Tilde to r</td>
-<td align="left">ha_Latn (Hausa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Tilde to R</td>
-<td align="left">ha_Latn (Hausa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1ECB</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1ECA</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1ECB</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1ECA</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to m</td>
-<td align="left">ig_Latn (Igbo) and yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to M</td>
-<td align="left">ig_Latn (Igbo) and yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1ECD</td>
-<td align="left">ig_Latn (Igbo) and yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1ECC</td>
-<td align="left">ig_Latn (Igbo) and yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1ECD</td>
-<td align="left">ig_Latn (Igbo) and yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1ECC</td>
-<td align="left">ig_Latn (Igbo) and yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1EE5</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1EE4</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1EE5</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1EE4</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1EB9</td>
-<td align="left">yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Acute to uni1EB8</td>
-<td align="left">yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1EB8</td>
-<td align="left">yo_Latn (Yoruba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach Grave to uni1EB9</td>
-<td align="left">yo_Latn (Yoruba)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ٯ</td>
-<td align="left">ar_Arab (Arabic) and ar_Arab (Arabic)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ٖ</td>
-<td align="left">fa_Arab (Persian) and fa_Arab (Persian)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ؀؁؂؃‌‍‏, ٖ, ٗ, ٘</td>
-<td align="left">ur_Arab (Urdu) and ur_Arab (Urdu)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Malay (Arabic)</td>
-<td align="left">zlm_Arab (Malay (Arabic))</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for Eng</td>
-<td align="left">bm_Latn (Bambara), dyu_Latn (Dyula), ig_Latn (Igbo) and lg_Latn (Ganda)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ɛ, Ɵ, ɛ, ɵ</td>
-<td align="left">ig_Latn (Igbo)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3425,7 +1989,7 @@ definitions.</p>
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩
+    💥⏩⏩⏩
 </span>
 
     
@@ -3455,7 +2019,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 Beiruti[wght].ttf
                 
             </summary>
@@ -3464,17 +2028,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̋ i̓ j̀ j́ j̃ j̄ j̈ į̀ į́ į̂ į̃ į̄ į̌ ḭ̀ ḭ́ ḭ̄ ị̀ ị́ ị̂ ị̃ ị̄</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: i̇ i̒ i̦̇ i̦̊ i̦̋ i̦̒ i̦̓ i̧̇ i̧̊ i̧̋ i̧̒ i̧̓ j̆ j̇ j̉ j̊ j̋ j̒ j̓ j̣̀</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Sar (Latn, 500,000 speakers), Ejagham (Latn, 120,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Zapotec (Latn, 490,000 speakers), Keliko (Latn, 63,000 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Yala (Latn, 200,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Aghem (Latn, 38,843 speakers), Kom (Latn, 360,685 speakers), Nateni (Latn, 100,000 speakers), Mfumte (Latn, 79,000 speakers), Avokaya (Latn, 100,000 speakers), Mango (Latn, 77,000 speakers), Western Krahn (Latn, 97,800 speakers), Dutch (Latn, 31,709,104 speakers), Dan (Latn, 1,099,244 speakers), Mundani (Latn, 34,000 speakers), Kaska (Latn, 125 speakers), Abua (Latn, 25,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Heiltsuk (Latn, 300 speakers), Southern Tutchone (Latn, 65 speakers), Basaa (Latn, 332,940 speakers), Nzakara (Latn, 50,000 speakers), Igbo (Latn, 27,823,640 speakers), Ma’di (Latn, 584,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Longto (Latn, 5,000 speakers), Koonzime (Latn, 40,000 speakers), Ebira (Latn, 2,200,000 speakers), South Central Banda (Latn, 244,000 speakers), Han (Latn, 6 speakers), Ikwere (Latn, 717,000 speakers), Navajo (Latn, 166,319 speakers), Ngbaka (Latn, 1,020,000 speakers), Makaa (Latn, 221,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ekpeye (Latn, 226,000 speakers), Fur (Latn, 1,230,163 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Gulay (Latn, 250,478 speakers), Northern Tutchone (Latn, 85 speakers), Southern Kisi (Latn, 360,000 speakers), Dii (Latn, 71,000 speakers), Vute (Latn, 21,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

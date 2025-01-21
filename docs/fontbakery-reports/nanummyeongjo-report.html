@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_jaggy_segments<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,13 +274,13 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>0</td>
+        <td>3</td>
         <td>0</td>
         <td>56</td>
         <td>48</td>
         <td>177</td>
         <td>22</td>
-        <td>379</td>
+        <td>370</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -289,7 +289,7 @@ you're checking.</p>
         <td>7%</td>
         <td>26%</td>
         <td>3%</td>
-        <td>56%</td>
+        <td>55%</td>
     </tr>
 </table>
         
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -1352,9 +1352,9 @@ For Google Fonts, all messages from this check are considered FAILs.</p>
                             <p>The most common width is 973 among a set of 56 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 654:
-logicalnot, equal, plus</p>
+equal, plus, logicalnot</p>
 <p>Width = 561:
-greater, less</p>
+less, greater</p>
 
                             
                              [code: width-outliers]
@@ -1386,9 +1386,9 @@ greater, less</p>
                             <p>The most common width is 973 among a set of 56 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 654:
-logicalnot, equal, plus</p>
+equal, plus, logicalnot</p>
 <p>Width = 561:
-greater, less</p>
+less, greater</p>
 
                             
                              [code: width-outliers]
@@ -1420,9 +1420,9 @@ greater, less</p>
                             <p>The most common width is 973 among a set of 56 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 654:
-logicalnot, equal, plus</p>
+equal, plus, logicalnot</p>
 <p>Width = 561:
-greater, less</p>
+less, greater</p>
 
                             
                              [code: width-outliers]
@@ -1433,8 +1433,6 @@ greater, less</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -2106,8 +2104,6 @@ The current recommendation is to completely remove the DSIG table.</li>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -3009,7 +3005,7 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
 <li>U+0126 LATIN CAPITAL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0127 LATIN SMALL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0132 LATIN CAPITAL LIGATURE IJ: try adding latin-ext</li>
@@ -3026,7 +3022,7 @@ definitions.</p>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
 <li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
-<li>U+2020 DAGGER: try adding one of: latin-ext, adlam</li>
+<li>U+2020 DAGGER: try adding one of: adlam, latin-ext</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2025 TWO DOT LEADER: try adding phags-pa</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
@@ -3256,7 +3252,7 @@ definitions.</p>
 <li>U+25C9 FISHEYE: try adding symbols</li>
 <li>U+25CA LOZENGE: try adding one of: symbols, math</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: elbasan, tagbanwa, symbols, osage, new-tai-lue, thai, telugu, psalter-pahlavi, batak, chakma, mongolian, soyombo, wancho, mende-kikakui, sundanese, old-permic, buhid, music, meetei-mayek, takri, tirhuta, khmer, miao, ahom, saurashtra, syloti-nagri, lao, warang-citi, tifinagh, kaithi, siddham, armenian, yi, canadian-aboriginal, dogra, sinhala, adlam, myanmar, math, tai-le, brahmi, hebrew, masaram-gondi, caucasian-albanian, kharoshthi, gurmukhi, marchen, phags-pa, khojki, cham, kannada, modi, pahawh-hmong, balinese, newa, bhaiksuki, manichaean, tamil, hanunoo, oriya, gunjala-gondi, mahajani, javanese, tai-tham, duployan, bassa-vah, limbu, tagalog, zanabazar-square, syriac, thaana, bengali, grantha, buginese, coptic, khudawadi, lepcha, gujarati, malayalam, sogdian, tibetan, devanagari, nko, sharada, mandaic, hanifi-rohingya, tai-viet, rejang, kayah-li</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: hebrew, hanunoo, sharada, khudawadi, siddham, psalter-pahlavi, telugu, chakma, kaithi, malayalam, oriya, tai-le, mongolian, mahajani, tai-tham, lao, ahom, buginese, cham, duployan, elbasan, pahawh-hmong, canadian-aboriginal, bengali, thaana, warang-citi, marchen, grantha, bassa-vah, new-tai-lue, rejang, balinese, syriac, myanmar, gunjala-gondi, dogra, khojki, batak, javanese, thai, soyombo, old-permic, sogdian, kannada, tamil, tirhuta, tai-viet, brahmi, kayah-li, wancho, meetei-mayek, zanabazar-square, armenian, symbols, takri, tagbanwa, masaram-gondi, sinhala, bhaiksuki, music, tagalog, tibetan, miao, yi, gurmukhi, devanagari, gujarati, adlam, mandaic, newa, phags-pa, kharoshthi, limbu, saurashtra, hanifi-rohingya, nko, tifinagh, syloti-nagri, sundanese, khmer, lepcha, buhid, caucasian-albanian, coptic, manichaean, mende-kikakui, modi, osage, math</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+25D0 CIRCLE WITH LEFT HALF BLACK: try adding symbols</li>
@@ -3284,34 +3280,34 @@ definitions.</p>
 <li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
 <li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
 <li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: symbols, music, math</li>
-<li>U+266F MUSIC SHARP SIGN: try adding one of: symbols, music, math</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: music, symbols, math</li>
+<li>U+266F MUSIC SHARP SIGN: try adding one of: music, symbols, math</li>
 <li>U+2716 HEAVY MULTIPLICATION X: try adding symbols</li>
 <li>U+271A HEAVY GREEK CROSS: try adding symbols</li>
 <li>U+273D HEAVY TEARDROP-SPOKED ASTERISK: try adding symbols</li>
 <li>U+2756 BLACK DIAMOND MINUS WHITE X: try adding symbols</li>
-<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le</li>
-<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: mongolian, chinese-simplified, phags-pa, yi, nushu, chinese-traditional, japanese, chinese-hongkong, tai-le</li>
-<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, lisu, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, lisu, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300C LEFT CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300D RIGHT CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3012 POSTAL MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3013 GETA MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-simplified, chinese-hongkong, chinese-traditional</li>
+<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: chinese-simplified, yi, chinese-traditional, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: chinese-simplified, yi, chinese-traditional, tai-le, japanese, phags-pa, mongolian, chinese-hongkong, nushu</li>
+<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, lisu, mongolian, chinese-hongkong</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, lisu, mongolian, chinese-hongkong</li>
+<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3012 POSTAL MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3013 GETA MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-traditional, chinese-hongkong, chinese-simplified</li>
 <li>U+301F LOW DOUBLE PRIME QUOTATION MARK: not included in any glyphset definition</li>
 <li>U+3020 POSTAL MARK FACE: not included in any glyphset definition</li>
 <li>U+3036 CIRCLED POSTAL MARK: not included in any glyphset definition</li>
@@ -3406,10 +3402,10 @@ definitions.</p>
 <li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF5A FULLWIDTH LATIN SMALL LETTER Z: try adding japanese</li>
-<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: yi, chinese-simplified, math, japanese</li>
+<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: yi, math, chinese-simplified, japanese</li>
 <li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: yi, chinese-simplified, japanese</li>
-<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: yi, chinese-simplified, math, japanese</li>
-<li>U+FF5E FULLWIDTH TILDE: try adding one of: yi, chinese-simplified</li>
+<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: yi, math, chinese-simplified, japanese</li>
+<li>U+FF5E FULLWIDTH TILDE: try adding one of: chinese-simplified, yi</li>
 <li>U+FFE0 FULLWIDTH CENT SIGN: try adding chinese-simplified</li>
 <li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
 <li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
@@ -3451,7 +3447,7 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
 <li>U+0126 LATIN CAPITAL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0127 LATIN SMALL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0132 LATIN CAPITAL LIGATURE IJ: try adding latin-ext</li>
@@ -3468,7 +3464,7 @@ definitions.</p>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
 <li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
-<li>U+2020 DAGGER: try adding one of: latin-ext, adlam</li>
+<li>U+2020 DAGGER: try adding one of: adlam, latin-ext</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2025 TWO DOT LEADER: try adding phags-pa</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
@@ -3698,7 +3694,7 @@ definitions.</p>
 <li>U+25C9 FISHEYE: try adding symbols</li>
 <li>U+25CA LOZENGE: try adding one of: symbols, math</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: elbasan, tagbanwa, symbols, osage, new-tai-lue, thai, telugu, psalter-pahlavi, batak, chakma, mongolian, soyombo, wancho, mende-kikakui, sundanese, old-permic, buhid, music, meetei-mayek, takri, tirhuta, khmer, miao, ahom, saurashtra, syloti-nagri, lao, warang-citi, tifinagh, kaithi, siddham, armenian, yi, canadian-aboriginal, dogra, sinhala, adlam, myanmar, math, tai-le, brahmi, hebrew, masaram-gondi, caucasian-albanian, kharoshthi, gurmukhi, marchen, phags-pa, khojki, cham, kannada, modi, pahawh-hmong, balinese, newa, bhaiksuki, manichaean, tamil, hanunoo, oriya, gunjala-gondi, mahajani, javanese, tai-tham, duployan, bassa-vah, limbu, tagalog, zanabazar-square, syriac, thaana, bengali, grantha, buginese, coptic, khudawadi, lepcha, gujarati, malayalam, sogdian, tibetan, devanagari, nko, sharada, mandaic, hanifi-rohingya, tai-viet, rejang, kayah-li</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: hebrew, hanunoo, sharada, khudawadi, siddham, psalter-pahlavi, telugu, chakma, kaithi, malayalam, oriya, tai-le, mongolian, mahajani, tai-tham, lao, ahom, buginese, cham, duployan, elbasan, pahawh-hmong, canadian-aboriginal, bengali, thaana, warang-citi, marchen, grantha, bassa-vah, new-tai-lue, rejang, balinese, syriac, myanmar, gunjala-gondi, dogra, khojki, batak, javanese, thai, soyombo, old-permic, sogdian, kannada, tamil, tirhuta, tai-viet, brahmi, kayah-li, wancho, meetei-mayek, zanabazar-square, armenian, symbols, takri, tagbanwa, masaram-gondi, sinhala, bhaiksuki, music, tagalog, tibetan, miao, yi, gurmukhi, devanagari, gujarati, adlam, mandaic, newa, phags-pa, kharoshthi, limbu, saurashtra, hanifi-rohingya, nko, tifinagh, syloti-nagri, sundanese, khmer, lepcha, buhid, caucasian-albanian, coptic, manichaean, mende-kikakui, modi, osage, math</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+25D0 CIRCLE WITH LEFT HALF BLACK: try adding symbols</li>
@@ -3726,34 +3722,34 @@ definitions.</p>
 <li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
 <li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
 <li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: symbols, music, math</li>
-<li>U+266F MUSIC SHARP SIGN: try adding one of: symbols, music, math</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: music, symbols, math</li>
+<li>U+266F MUSIC SHARP SIGN: try adding one of: music, symbols, math</li>
 <li>U+2716 HEAVY MULTIPLICATION X: try adding symbols</li>
 <li>U+271A HEAVY GREEK CROSS: try adding symbols</li>
 <li>U+273D HEAVY TEARDROP-SPOKED ASTERISK: try adding symbols</li>
 <li>U+2756 BLACK DIAMOND MINUS WHITE X: try adding symbols</li>
-<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le</li>
-<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: mongolian, chinese-simplified, phags-pa, yi, nushu, chinese-traditional, japanese, chinese-hongkong, tai-le</li>
-<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, lisu, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, lisu, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300C LEFT CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300D RIGHT CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3012 POSTAL MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3013 GETA MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-simplified, chinese-hongkong, chinese-traditional</li>
+<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: chinese-simplified, yi, chinese-traditional, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: chinese-simplified, yi, chinese-traditional, tai-le, japanese, phags-pa, mongolian, chinese-hongkong, nushu</li>
+<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, lisu, mongolian, chinese-hongkong</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, lisu, mongolian, chinese-hongkong</li>
+<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3012 POSTAL MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3013 GETA MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-traditional, chinese-hongkong, chinese-simplified</li>
 <li>U+301F LOW DOUBLE PRIME QUOTATION MARK: not included in any glyphset definition</li>
 <li>U+3020 POSTAL MARK FACE: not included in any glyphset definition</li>
 <li>U+3036 CIRCLED POSTAL MARK: not included in any glyphset definition</li>
@@ -3848,10 +3844,10 @@ definitions.</p>
 <li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF5A FULLWIDTH LATIN SMALL LETTER Z: try adding japanese</li>
-<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: yi, chinese-simplified, math, japanese</li>
+<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: yi, math, chinese-simplified, japanese</li>
 <li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: yi, chinese-simplified, japanese</li>
-<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: yi, chinese-simplified, math, japanese</li>
-<li>U+FF5E FULLWIDTH TILDE: try adding one of: yi, chinese-simplified</li>
+<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: yi, math, chinese-simplified, japanese</li>
+<li>U+FF5E FULLWIDTH TILDE: try adding one of: chinese-simplified, yi</li>
 <li>U+FFE0 FULLWIDTH CENT SIGN: try adding chinese-simplified</li>
 <li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
 <li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
@@ -3893,7 +3889,7 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
 <li>U+0126 LATIN CAPITAL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0127 LATIN SMALL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0132 LATIN CAPITAL LIGATURE IJ: try adding latin-ext</li>
@@ -3910,7 +3906,7 @@ definitions.</p>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
 <li>U+201F DOUBLE HIGH-REVERSED-9 QUOTATION MARK: not included in any glyphset definition</li>
-<li>U+2020 DAGGER: try adding one of: latin-ext, adlam</li>
+<li>U+2020 DAGGER: try adding one of: adlam, latin-ext</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2025 TWO DOT LEADER: try adding phags-pa</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
@@ -4140,7 +4136,7 @@ definitions.</p>
 <li>U+25C9 FISHEYE: try adding symbols</li>
 <li>U+25CA LOZENGE: try adding one of: symbols, math</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: elbasan, tagbanwa, symbols, osage, new-tai-lue, thai, telugu, psalter-pahlavi, batak, chakma, mongolian, soyombo, wancho, mende-kikakui, sundanese, old-permic, buhid, music, meetei-mayek, takri, tirhuta, khmer, miao, ahom, saurashtra, syloti-nagri, lao, warang-citi, tifinagh, kaithi, siddham, armenian, yi, canadian-aboriginal, dogra, sinhala, adlam, myanmar, math, tai-le, brahmi, hebrew, masaram-gondi, caucasian-albanian, kharoshthi, gurmukhi, marchen, phags-pa, khojki, cham, kannada, modi, pahawh-hmong, balinese, newa, bhaiksuki, manichaean, tamil, hanunoo, oriya, gunjala-gondi, mahajani, javanese, tai-tham, duployan, bassa-vah, limbu, tagalog, zanabazar-square, syriac, thaana, bengali, grantha, buginese, coptic, khudawadi, lepcha, gujarati, malayalam, sogdian, tibetan, devanagari, nko, sharada, mandaic, hanifi-rohingya, tai-viet, rejang, kayah-li</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: hebrew, hanunoo, sharada, khudawadi, siddham, psalter-pahlavi, telugu, chakma, kaithi, malayalam, oriya, tai-le, mongolian, mahajani, tai-tham, lao, ahom, buginese, cham, duployan, elbasan, pahawh-hmong, canadian-aboriginal, bengali, thaana, warang-citi, marchen, grantha, bassa-vah, new-tai-lue, rejang, balinese, syriac, myanmar, gunjala-gondi, dogra, khojki, batak, javanese, thai, soyombo, old-permic, sogdian, kannada, tamil, tirhuta, tai-viet, brahmi, kayah-li, wancho, meetei-mayek, zanabazar-square, armenian, symbols, takri, tagbanwa, masaram-gondi, sinhala, bhaiksuki, music, tagalog, tibetan, miao, yi, gurmukhi, devanagari, gujarati, adlam, mandaic, newa, phags-pa, kharoshthi, limbu, saurashtra, hanifi-rohingya, nko, tifinagh, syloti-nagri, sundanese, khmer, lepcha, buhid, caucasian-albanian, coptic, manichaean, mende-kikakui, modi, osage, math</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+25D0 CIRCLE WITH LEFT HALF BLACK: try adding symbols</li>
@@ -4168,34 +4164,34 @@ definitions.</p>
 <li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
 <li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
 <li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: symbols, music, math</li>
-<li>U+266F MUSIC SHARP SIGN: try adding one of: symbols, music, math</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: music, symbols, math</li>
+<li>U+266F MUSIC SHARP SIGN: try adding one of: music, symbols, math</li>
 <li>U+2716 HEAVY MULTIPLICATION X: try adding symbols</li>
 <li>U+271A HEAVY GREEK CROSS: try adding symbols</li>
 <li>U+273D HEAVY TEARDROP-SPOKED ASTERISK: try adding symbols</li>
 <li>U+2756 BLACK DIAMOND MINUS WHITE X: try adding symbols</li>
-<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le</li>
-<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: mongolian, chinese-simplified, phags-pa, yi, nushu, chinese-traditional, japanese, chinese-hongkong, tai-le</li>
-<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, lisu, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified, lisu, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong, tai-le, tibetan</li>
-<li>U+300C LEFT CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300D RIGHT CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3012 POSTAL MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3013 GETA MARK: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, phags-pa, yi, chinese-traditional, japanese, chinese-hongkong</li>
-<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-simplified, chinese-hongkong, chinese-traditional</li>
+<li>U+3001 IDEOGRAPHIC COMMA: try adding one of: chinese-simplified, yi, chinese-traditional, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3002 IDEOGRAPHIC FULL STOP: try adding one of: chinese-simplified, yi, chinese-traditional, tai-le, japanese, phags-pa, mongolian, chinese-hongkong, nushu</li>
+<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, lisu, mongolian, chinese-hongkong</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, tibetan, chinese-traditional, yi, tai-le, japanese, phags-pa, lisu, mongolian, chinese-hongkong</li>
+<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, mongolian, chinese-hongkong</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3012 POSTAL MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3013 GETA MARK: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3018 LEFT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+3019 RIGHT WHITE TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, yi, chinese-traditional, japanese, phags-pa, chinese-hongkong</li>
+<li>U+301E DOUBLE PRIME QUOTATION MARK: try adding one of: chinese-traditional, chinese-hongkong, chinese-simplified</li>
 <li>U+301F LOW DOUBLE PRIME QUOTATION MARK: not included in any glyphset definition</li>
 <li>U+3020 POSTAL MARK FACE: not included in any glyphset definition</li>
 <li>U+3036 CIRCLED POSTAL MARK: not included in any glyphset definition</li>
@@ -4292,10 +4288,10 @@ definitions.</p>
 <li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: chinese-simplified, japanese</li>
 <li>U+FF5A FULLWIDTH LATIN SMALL LETTER Z: try adding japanese</li>
-<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: yi, chinese-simplified, math, japanese</li>
+<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: yi, math, chinese-simplified, japanese</li>
 <li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: yi, chinese-simplified, japanese</li>
-<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: yi, chinese-simplified, math, japanese</li>
-<li>U+FF5E FULLWIDTH TILDE: try adding one of: yi, chinese-simplified</li>
+<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: yi, math, chinese-simplified, japanese</li>
+<li>U+FF5E FULLWIDTH TILDE: try adding one of: chinese-simplified, yi</li>
 <li>U+FFE0 FULLWIDTH CENT SIGN: try adding chinese-simplified</li>
 <li>U+FFE1 FULLWIDTH POUND SIGN: try adding chinese-simplified</li>
 <li>U+FFE2 FULLWIDTH NOT SIGN: not included in any glyphset definition</li>
@@ -4331,6 +4327,139 @@ definitions.</p>
 
             
         
+            
+                <h2>Glyphset Checks</h2>
+<span class='section__emoji'>
+    💥💥💥
+</span>
+
+    
+    <h3>
+    
+    Shapes languages in all GF glyphsets.
+</h3>
+<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:googlefonts/glyphsets/shape_languages&gt;</div>
+
+
+
+<div style="background-color:#ee8">
+
+    
+
+    
+
+    
+
+</div>
+
+
+    
+        <details>
+            <summary>
+                💥
+                NanumMyeongjo-Bold.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                💥
+                NanumMyeongjo-Regular.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+        <details>
+            <summary>
+                💥
+                NanumMyeongjo-ExtraBold.ttf
+                
+            </summary>
+            <div>
+                <ul>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            💥 ERROR
+                            </span>
+
+                            <span class='details_text'>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
+
+                            
+                             [code: failed-check]
+                            
+                            </span>
+                        </li>
+                
+                </ul>
+            </div>
+        </details>
+    
+
+    
+
             
         
             

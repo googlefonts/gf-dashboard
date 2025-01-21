@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/version_bump<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,18 +274,18 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>2</td>
         <td>0</td>
-        <td>0</td>
-        <td>4</td>
-        <td>15</td>
+        <td>3</td>
+        <td>14</td>
         <td>38</td>
         <td>7</td>
-        <td>176</td>
+        <td>174</td>
     </tr>
     <tr>
+        <td>1%</td>
         <td>0%</td>
-        <td>0%</td>
-        <td>2%</td>
+        <td>1%</td>
         <td>6%</td>
         <td>16%</td>
         <td>3%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -701,21 +701,21 @@ llvocalicvowelsignorya (U+0B63)</p>
 
 - Contour 0 in glyph 'nnattaorya': becomes underweight between wght=400 and wght=700.
 
-- Contour 0 start point differs in glyph 'nnatthaUIorya' between location wght=400 and location wght=700
+- Contour 0 start point differs in glyph 'nnattaUIorya' between location wght=400 and location wght=700
 
-- Contour 0 in glyph 'nnatthaUIorya': becomes underweight between wght=400 and wght=700.
-
-- Contour 1 start point differs in glyph 'badaorya' between location wght=400 and location wght=700
-
-- Contour 1 in glyph 'badaorya': becomes underweight between wght=400 and wght=700.
+- Contour 0 in glyph 'nnattaUIorya': becomes underweight between wght=400 and wght=700.
 
 - Contour 0 start point differs in glyph 'tasaorya' between location wght=400 and location wght=700
 
 - Contour 0 in glyph 'tasaorya': becomes underweight between wght=400 and wght=700.
 
-- Contour 0 start point differs in glyph 'nnattaUIorya' between location wght=400 and location wght=700
+- Contour 1 start point differs in glyph 'badaorya' between location wght=400 and location wght=700
 
-- Contour 0 in glyph 'nnattaUIorya': becomes underweight between wght=400 and wght=700.
+- Contour 1 in glyph 'badaorya': becomes underweight between wght=400 and wght=700.
+
+- Contour 0 start point differs in glyph 'nnatthaUIorya' between location wght=400 and location wght=700
+
+- Contour 0 in glyph 'nnatthaUIorya': becomes underweight between wght=400 and wght=700.
 </code></pre>
 
                             
@@ -780,8 +780,6 @@ llvocalicvowelsignorya (U+0B63)</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1093,8 +1091,6 @@ llvocalicvowelsignorya (U+0B63)</p>
 
     
 
-    
-
             
         
             
@@ -1296,15 +1292,15 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, math, tifinagh, coptic</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, math, cherokee, coptic</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: hebrew, old-permic, duployan, math, tai-le, malayalam, tifinagh, syriac, todhri, canadian-aboriginal, coptic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: duployan, canadian-aboriginal, coptic, old-permic, todhri, syriac, tai-le, malayalam, math, tifinagh, hebrew</li>
 <li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
 <li>U+0327 COMBINING CEDILLA: try adding math</li>
@@ -1342,7 +1338,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -1364,7 +1360,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 NotoSerifOriya[wght].ttf
                 
             </summary>
@@ -1373,72 +1369,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to J</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to j</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-<td align="left">ca_Latn (Catalan)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -1732,7 +1676,7 @@ definitions.</p>
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩
+    💥⏩⏩⏩
 </span>
 
     
@@ -1762,7 +1706,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 NotoSerifOriya[wght].ttf
                 
             </summary>
@@ -1771,17 +1715,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̊ i̋ j̀ j́ j̃ j̄ j̈ į̀ į́ į̂ į̃ į̄ į̌</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ ĭ i̇ ǐ i̒ ĩ̦ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ ĩ̧ ĭ̧ i̧̇ i̧̊ i̧̋ ǐ̧ i̧̒ ĵ</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Cicipu (Latn, 44,000 speakers), Mango (Latn, 77,000 speakers), Aghem (Latn, 38,843 speakers), Mfumte (Latn, 79,000 speakers), Longto (Latn, 5,000 speakers), Ejagham (Latn, 120,000 speakers), Han (Latn, 6 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ebira (Latn, 2,200,000 speakers), Dan (Latn, 1,099,244 speakers), Heiltsuk (Latn, 300 speakers), Northern Tutchone (Latn, 85 speakers), Southern Kisi (Latn, 360,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Bafut (Latn, 158,146 speakers), Basaa (Latn, 332,940 speakers), Ikwere (Latn, 717,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Fur (Latn, 1,230,163 speakers), South Central Banda (Latn, 244,000 speakers), Western Krahn (Latn, 97,800 speakers), Teke-Ebo (Latn, 260,000 speakers), Dii (Latn, 71,000 speakers), Kaska (Latn, 125 speakers), Keliko (Latn, 63,000 speakers), Makaa (Latn, 221,000 speakers), Avokaya (Latn, 100,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Dutch (Latn, 31,709,104 speakers), Vute (Latn, 21,000 speakers), Southern Tutchone (Latn, 65 speakers), Gulay (Latn, 250,478 speakers), Ma’di (Latn, 584,000 speakers), Koonzime (Latn, 40,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Nzakara (Latn, 50,000 speakers), Kom (Latn, 360,685 speakers), Zapotec (Latn, 490,000 speakers), Nateni (Latn, 100,000 speakers), Mundani (Latn, 34,000 speakers), Sar (Latn, 500,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ekpeye (Latn, 226,000 speakers), Yala (Latn, 200,000 speakers), Abua (Latn, 25,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

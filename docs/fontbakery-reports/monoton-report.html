@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,13 +274,13 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td>20</td>
-        <td>17</td>
+        <td>19</td>
+        <td>16</td>
         <td>58</td>
         <td>9</td>
-        <td>136</td>
+        <td>135</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -477,7 +477,7 @@ uni0307 (U+0307), uni030F (U+030F), uni0311 (U+0311) and uni0326 (U+0326)</p>
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️
+    🔥🔥🔥🔥🔥🔥🔥🔥⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️
 </span>
 
     
@@ -2288,7 +2288,7 @@ The following math glyphs have a different width, though:</p>
 <p>Width = 1231:
 plus</p>
 <p>Width = 970:
-equal, notequal</p>
+notequal, equal</p>
 <p>Width = 1471:
 logicalnot</p>
 <p>Width = 1226:
@@ -2411,53 +2411,6 @@ greaterequal, lessequal</p>
 
                             
                              [code: found-nested-components]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
-    <h3>
-    
-    Ensure fonts do not contain any pre-production tables.
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:no_debugging_tables&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Monoton-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>This font file contains the following pre-production tables: FFTM</p>
-
-                            
-                             [code: has-debugging-tables]
                             
                             </span>
                         </li>
@@ -2605,8 +2558,6 @@ The current recommendation is to completely remove the DSIG table.</li>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -2991,8 +2942,8 @@ definitions.</p>
 <li>U+000A : try adding symbols</li>
 <li>U+0100 LATIN CAPITAL LETTER A WITH MACRON: try adding latin-ext</li>
 <li>U+0101 LATIN SMALL LETTER A WITH MACRON: try adding latin-ext</li>
-<li>U+0102 LATIN CAPITAL LETTER A WITH BREVE: try adding one of: latin-ext, vietnamese</li>
-<li>U+0103 LATIN SMALL LETTER A WITH BREVE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0102 LATIN CAPITAL LETTER A WITH BREVE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0103 LATIN SMALL LETTER A WITH BREVE: try adding one of: vietnamese, latin-ext</li>
 <li>U+0104 LATIN CAPITAL LETTER A WITH OGONEK: try adding latin-ext</li>
 <li>U+0105 LATIN SMALL LETTER A WITH OGONEK: try adding latin-ext</li>
 <li>U+0106 LATIN CAPITAL LETTER C WITH ACUTE: try adding latin-ext</li>
@@ -3003,8 +2954,8 @@ definitions.</p>
 <li>U+010D LATIN SMALL LETTER C WITH CARON: try adding latin-ext</li>
 <li>U+010E LATIN CAPITAL LETTER D WITH CARON: try adding latin-ext</li>
 <li>U+010F LATIN SMALL LETTER D WITH CARON: try adding latin-ext</li>
-<li>U+0110 LATIN CAPITAL LETTER D WITH STROKE: try adding one of: latin-ext, vietnamese</li>
-<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0110 LATIN CAPITAL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0111 LATIN SMALL LETTER D WITH STROKE: try adding one of: vietnamese, latin-ext</li>
 <li>U+0112 LATIN CAPITAL LETTER E WITH MACRON: try adding latin-ext</li>
 <li>U+0113 LATIN SMALL LETTER E WITH MACRON: try adding latin-ext</li>
 <li>U+0114 LATIN CAPITAL LETTER E WITH BREVE: try adding latin-ext</li>
@@ -3025,8 +2976,8 @@ definitions.</p>
 <li>U+0125 LATIN SMALL LETTER H WITH CIRCUMFLEX: try adding latin-ext</li>
 <li>U+0126 LATIN CAPITAL LETTER H WITH STROKE: try adding latin-ext</li>
 <li>U+0127 LATIN SMALL LETTER H WITH STROKE: try adding latin-ext</li>
-<li>U+0128 LATIN CAPITAL LETTER I WITH TILDE: try adding one of: latin-ext, vietnamese</li>
-<li>U+0129 LATIN SMALL LETTER I WITH TILDE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0128 LATIN CAPITAL LETTER I WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0129 LATIN SMALL LETTER I WITH TILDE: try adding one of: vietnamese, latin-ext</li>
 <li>U+012A LATIN CAPITAL LETTER I WITH MACRON: try adding latin-ext</li>
 <li>U+012B LATIN SMALL LETTER I WITH MACRON: try adding latin-ext</li>
 <li>U+012C LATIN CAPITAL LETTER I WITH BREVE: try adding latin-ext</li>
@@ -3084,8 +3035,8 @@ definitions.</p>
 <li>U+0165 LATIN SMALL LETTER T WITH CARON: try adding latin-ext</li>
 <li>U+0166 LATIN CAPITAL LETTER T WITH STROKE: try adding latin-ext</li>
 <li>U+0167 LATIN SMALL LETTER T WITH STROKE: try adding latin-ext</li>
-<li>U+0168 LATIN CAPITAL LETTER U WITH TILDE: try adding one of: latin-ext, vietnamese</li>
-<li>U+0169 LATIN SMALL LETTER U WITH TILDE: try adding one of: latin-ext, vietnamese</li>
+<li>U+0168 LATIN CAPITAL LETTER U WITH TILDE: try adding one of: vietnamese, latin-ext</li>
+<li>U+0169 LATIN SMALL LETTER U WITH TILDE: try adding one of: vietnamese, latin-ext</li>
 <li>U+016A LATIN CAPITAL LETTER U WITH MACRON: try adding latin-ext</li>
 <li>U+016B LATIN SMALL LETTER U WITH MACRON: try adding latin-ext</li>
 <li>U+016C LATIN CAPITAL LETTER U WITH BREVE: try adding latin-ext</li>
@@ -3113,19 +3064,19 @@ definitions.</p>
 <li>U+021A LATIN CAPITAL LETTER T WITH COMMA BELOW: try adding latin-ext</li>
 <li>U+021B LATIN SMALL LETTER T WITH COMMA BELOW: try adding latin-ext</li>
 <li>U+0237 LATIN SMALL LETTER DOTLESS J: try adding latin-ext</li>
-<li>U+02C7 CARON: try adding one of: canadian-aboriginal, latin-ext, yi, tifinagh</li>
+<li>U+02C7 CARON: try adding one of: canadian-aboriginal, yi, latin-ext, tifinagh</li>
 <li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: try adding latin-ext</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, hebrew, tifinagh, malayalam, old-permic, syriac, todhri, canadian-aboriginal, duployan, math</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, canadian-aboriginal, tai-le, coptic, old-permic, math, tifinagh, todhri, hebrew, duployan, malayalam</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
 <li>U+0311 COMBINING INVERTED BREVE: try adding one of: coptic, todhri</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, math, elbasan</li>
-<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
-<li>U+2020 DAGGER: try adding one of: latin-ext, adlam</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: elbasan, math, greek</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding one of: math, greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: math, greek, yi</li>
+<li>U+2020 DAGGER: try adding one of: adlam, latin-ext</li>
 <li>U+2021 DOUBLE DAGGER: try adding adlam</li>
 <li>U+2030 PER MILLE SIGN: try adding adlam</li>
 <li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
@@ -3177,7 +3128,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -3199,7 +3150,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Monoton-Regular.ttf
                 
             </summary>
@@ -3208,184 +3159,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̈, ◌̧</td>
-<td align="left">ca_Latn (Catalan)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̊, ◌̌</td>
-<td align="left">cs_Latn (Czech)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ŵ, ŵ, Ẁ, ẁ, Ẃ, ẃ, Ẅ, ẅ, Ỳ, ỳ</td>
-<td align="left">cy_Latn (Welsh)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̈</td>
-<td align="left">cy_Latn (Welsh), it_Latn (Italian) and nl_Latn (Dutch)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̊</td>
-<td align="left">da_Latn (Danish)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ẞ</td>
-<td align="left">de_Latn (German)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̈</td>
-<td align="left">de_Latn (German)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̃, ◌̈, ◌̧</td>
-<td align="left">en_Latn (English) and pt_Latn (Portuguese)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̃, ◌̈</td>
-<td align="left">es_Latn (Spanish)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̃, ◌̈, ◌̊, ◌̌</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̈, ◌̧</td>
-<td align="left">fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̌</td>
-<td align="left">hr_Latn (Croatian)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̈, ◌̋</td>
-<td align="left">hu_Latn (Hungarian)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̈, ◌̨</td>
-<td align="left">is_Latn (Icelandic)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̄, ◌̌, ◌̨</td>
-<td align="left">lt_Latn (Lithuanian)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̄, ◌̌, ◌̧</td>
-<td align="left">lv_Latn (Latvian)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌̂</td>
-<td align="left">mt_Latn (Maltese)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̂, ◌̈, ◌̊</td>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ÍJ́, íj́</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̨</td>
-<td align="left">pl_Latn (Polish)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̂, ◌̆, ◌̧</td>
-<td align="left">ro_Latn (Romanian)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ŕ</td>
-<td align="left">sk_Latn (Slovak)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌́, ◌̂, ◌̈, ◌̌</td>
-<td align="left">sk_Latn (Slovak)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̈, ◌̧</td>
-<td align="left">sq_Latn (Albanian)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̀, ◌́, ◌̈, ◌̊</td>
-<td align="left">sv_Latn (Swedish)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̂, ◌̆, ◌̈, ◌̧</td>
-<td align="left">tr_Latn (Turkish)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ŕ</td>
-<td align="left">cs_Latn (Czech)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ǿ, ǿ</td>
-<td align="left">da_Latn (Danish)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ŕ, Ʒ, Ǥ, ǥ, Ǧ, ǧ, Ǩ, ǩ, Ǯ, ǯ, Ȟ, ȟ, ʒ, ẞ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ, Ǔ, ǔ, ẞ</td>
-<td align="left">fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ẞ</td>
-<td align="left">it_Latn (Italian), pl_Latn (Polish) and tr_Latn (Turkish)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: İ̀, İ́, İ̃, J̃, J̇̃, L̃, M̃, R̃, i̇̀, i̇́, i̇̃, j̃, j̇̃, l̃, m̃, r̃, Ą́, Ą̃, ą́, ą̃, Ė́, Ė̃, ė́, ė̃, Ę́, Ę̃, ę́, ę̃, Į́, Į̃, Į̇́, Į̇̃, į́, į̃, į̇́, į̇̃, Ū́, Ū̃, ū́, ū̃, Ų́, Ų̃, ų́, ų̃, Ẽ, ẽ</td>
-<td align="left">lt_Latn (Lithuanian)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ǎ, ǎ</td>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>

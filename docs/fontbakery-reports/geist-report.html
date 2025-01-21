@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/version_bump<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,16 +274,16 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>0</td>
+        <td>2</td>
         <td>0</td>
         <td>2</td>
-        <td>13</td>
+        <td>11</td>
         <td>39</td>
         <td>8</td>
-        <td>178</td>
+        <td>176</td>
     </tr>
     <tr>
-        <td>0%</td>
+        <td>1%</td>
         <td>0%</td>
         <td>1%</td>
         <td>5%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
         
@@ -583,7 +583,7 @@ The following math glyphs have a different width, though:</p>
 <p>Width = 558:
 plus</p>
 <p>Width = 540:
-divide, notequal, equal</p>
+notequal, equal, divide</p>
 <p>Width = 500:
 logicalnot</p>
 <p>Width = 538:
@@ -604,8 +604,6 @@ approxequal</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -822,8 +820,6 @@ hyphen_hyphen_hyphen_greater.liga and periodcentered.loclCAT.case.ss08</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1078,15 +1074,15 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, tifinagh, cherokee</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, coptic, cherokee, tifinagh</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, canadian-aboriginal, syriac, duployan, old-permic, tai-le, coptic, math, hebrew, tifinagh, todhri</li>
-<li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, todhri, tifinagh, canadian-aboriginal, hebrew, math, duployan, syriac, malayalam, old-permic</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
 <li>U+0312 COMBINING TURNED COMMA ABOVE: try adding math</li>
 <li>U+0326 COMBINING COMMA BELOW: try adding math</li>
 <li>U+0327 COMBINING CEDILLA: try adding math</li>
@@ -1095,10 +1091,10 @@ definitions.</p>
 <li>U+0336 COMBINING LONG STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
 <li>U+0338 COMBINING LONG SOLIDUS OVERLAY: try adding math</li>
-<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: greek, elbasan, math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, elbasan, math</li>
-<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
+<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: math, greek, elbasan</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: math, greek, elbasan</li>
+<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: math, greek</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: math, greek, yi</li>
 <li>U+0400 CYRILLIC CAPITAL LETTER IE WITH GRAVE: try adding cyrillic</li>
 <li>U+0401 CYRILLIC CAPITAL LETTER IO: try adding cyrillic</li>
 <li>U+0402 CYRILLIC CAPITAL LETTER DJE: try adding cyrillic</li>
@@ -1298,15 +1294,15 @@ definitions.</p>
 <li>U+23CE RETURN SYMBOL: try adding symbols</li>
 <li>U+240B SYMBOL FOR VERTICAL TABULATION: try adding symbols</li>
 <li>U+240C SYMBOL FOR FORM FEED: try adding symbols</li>
-<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, yi, symbols</li>
-<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, yi, symbols</li>
-<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, yi, symbols</li>
-<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, yi, symbols</li>
-<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, yi, symbols</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding one of: symbols, yi, mongolian</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding one of: symbols, yi, mongolian</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding one of: symbols, yi, mongolian</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: symbols, yi, mongolian</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: symbols, yi, mongolian</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding one of: symbols, yi, mongolian</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: symbols, yi, mongolian</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: symbols, yi, mongolian</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding one of: symbols, yi, mongolian</li>
 <li>U+24EA CIRCLED DIGIT ZERO: try adding symbols</li>
 <li>U+24FF NEGATIVE CIRCLED DIGIT ZERO: try adding symbols</li>
 <li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
@@ -1319,7 +1315,7 @@ definitions.</p>
 <li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
 <li>U+25CA LOZENGE: try adding one of: math, symbols</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: limbu, rejang, takri, manichaean, grantha, saurashtra, bengali, miao, brahmi, osage, sundanese, buhid, ahom, mandaic, duployan, coptic, hebrew, gurmukhi, telugu, zanabazar-square, thaana, mahajani, devanagari, canadian-aboriginal, old-permic, gunjala-gondi, tifinagh, hanifi-rohingya, sogdian, siddham, thai, tirhuta, tagbanwa, cham, gujarati, kannada, syloti-nagri, malayalam, khudawadi, tai-le, pahawh-hmong, tamil, tai-tham, newa, kharoshthi, tibetan, psalter-pahlavi, phags-pa, dogra, armenian, tai-viet, kayah-li, symbols, new-tai-lue, buginese, tagalog, sinhala, javanese, yi, math, marchen, nko, caucasian-albanian, oriya, hanunoo, sharada, lepcha, soyombo, music, modi, masaram-gondi, elbasan, mende-kikakui, bhaiksuki, syriac, balinese, batak, bassa-vah, wancho, myanmar, meetei-mayek, chakma, lao, khojki, kaithi, warang-citi, adlam, mongolian, khmer</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: marchen, soyombo, hanunoo, batak, khojki, sinhala, mandaic, gunjala-gondi, canadian-aboriginal, sharada, tai-le, limbu, gurmukhi, malayalam, tai-tham, pahawh-hmong, javanese, kayah-li, takri, bengali, math, telugu, mahajani, yi, khudawadi, syloti-nagri, kharoshthi, devanagari, bassa-vah, lepcha, thaana, masaram-gondi, newa, buhid, new-tai-lue, phags-pa, sogdian, oriya, kaithi, siddham, grantha, hebrew, tirhuta, cham, adlam, music, tagbanwa, chakma, miao, modi, tagalog, thai, duployan, mongolian, lao, tamil, myanmar, psalter-pahlavi, coptic, ahom, dogra, armenian, tai-viet, meetei-mayek, hanifi-rohingya, brahmi, nko, syriac, warang-citi, gujarati, sundanese, saurashtra, kannada, balinese, symbols, mende-kikakui, osage, wancho, tibetan, rejang, elbasan, buginese, khmer, tifinagh, bhaiksuki, caucasian-albanian, zanabazar-square, manichaean, old-permic</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+2639 WHITE FROWNING FACE: try adding symbols</li>
 <li>U+263A WHITE SMILING FACE: try adding symbols</li>
@@ -1332,21 +1328,21 @@ definitions.</p>
 <li>U+277C DINGBAT NEGATIVE CIRCLED DIGIT SEVEN: try adding symbols</li>
 <li>U+277D DINGBAT NEGATIVE CIRCLED DIGIT EIGHT: try adding symbols</li>
 <li>U+277E DINGBAT NEGATIVE CIRCLED DIGIT NINE: try adding symbols</li>
-<li>U+3003 DITTO MARK: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
-<li>U+3008 LEFT ANGLE BRACKET: try adding one of: tai-le, tibetan, chinese-simplified, japanese, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: tai-le, tibetan, chinese-simplified, japanese, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: tai-le, tibetan, chinese-simplified, japanese, lisu, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: tai-le, tibetan, chinese-simplified, japanese, lisu, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, mongolian, chinese-traditional, yi</li>
-<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
-<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
-<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
-<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
-<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
-<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-simplified, japanese, chinese-hongkong, phags-pa, chinese-traditional, yi</li>
+<li>U+3003 DITTO MARK: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
+<li>U+3008 LEFT ANGLE BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, tai-le, tibetan, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+3009 RIGHT ANGLE BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, tai-le, tibetan, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+300A LEFT DOUBLE ANGLE BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, tai-le, lisu, tibetan, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+300B RIGHT DOUBLE ANGLE BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, tai-le, lisu, tibetan, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+300C LEFT CORNER BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+300D RIGHT CORNER BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+300E LEFT WHITE CORNER BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+300F RIGHT WHITE CORNER BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, mongolian, japanese</li>
+<li>U+3010 LEFT BLACK LENTICULAR BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
+<li>U+3011 RIGHT BLACK LENTICULAR BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
+<li>U+3014 LEFT TORTOISE SHELL BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
+<li>U+3015 RIGHT TORTOISE SHELL BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
+<li>U+3016 LEFT WHITE LENTICULAR BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
+<li>U+3017 RIGHT WHITE LENTICULAR BRACKET: try adding one of: chinese-hongkong, chinese-traditional, phags-pa, chinese-simplified, yi, japanese</li>
 <li>U+301C WAVE DASH: try adding japanese</li>
 <li>U+F8FF : not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
@@ -1384,7 +1380,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    ⚠️
+    💥
 </span>
 
     
@@ -1406,7 +1402,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 Geist[wght].ttf
                 
             </summary>
@@ -1415,36 +1411,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-<td align="left">ca_Latn (Catalan)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ʒ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -1593,7 +1573,7 @@ definitions.</p>
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩
+    💥⏩⏩⏩
 </span>
 
     
@@ -1623,7 +1603,7 @@ definitions.</p>
     
         <details>
             <summary>
-                ⚠️
+                💥
                 Geist[wght].ttf
                 
             </summary>
@@ -1632,17 +1612,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌ і́</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Kaska (Latn, 125 speakers), Lithuanian (Latn, 2,357,094 speakers), Belarusian (Cyrl, 10,064,517 speakers), Southern Tutchone (Latn, 65 speakers), Navajo (Latn, 166,319 speakers), Northern Tutchone (Latn, 85 speakers), Dutch (Latn, 31,709,104 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Han (Latn, 6 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Kom (Latn, 360,685 speakers), South Central Banda (Latn, 244,000 speakers), Bafut (Latn, 158,146 speakers), Yala (Latn, 200,000 speakers), Vute (Latn, 21,000 speakers), Makaa (Latn, 221,000 speakers), Fur (Latn, 1,230,163 speakers), Dii (Latn, 71,000 speakers), Sar (Latn, 500,000 speakers), Koonzime (Latn, 40,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Basaa (Latn, 332,940 speakers), Nzakara (Latn, 50,000 speakers), Keliko (Latn, 63,000 speakers), Lugbara (Latn, 2,200,000 speakers), Mango (Latn, 77,000 speakers), Mfumte (Latn, 79,000 speakers), Southern Kisi (Latn, 360,000 speakers), Avokaya (Latn, 100,000 speakers), Zapotec (Latn, 490,000 speakers), Gulay (Latn, 250,478 speakers), Igbo (Latn, 27,823,640 speakers), Ikwere (Latn, 717,000 speakers), Western Krahn (Latn, 97,800 speakers), Ekpeye (Latn, 226,000 speakers), Dan (Latn, 1,099,244 speakers), Mundani (Latn, 34,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Aghem (Latn, 38,843 speakers), Heiltsuk (Latn, 300 speakers), Teke-Ebo (Latn, 260,000 speakers), Ma’di (Latn, 584,000 speakers), Cicipu (Latn, 44,000 speakers), Ebira (Latn, 2,200,000 speakers), Abua (Latn, 25,000 speakers), Longto (Latn, 5,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ejagham (Latn, 120,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Nateni (Latn, 100,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

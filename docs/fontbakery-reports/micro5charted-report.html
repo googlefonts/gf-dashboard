@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/ttx_roundtrip<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_jaggy_segments<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,19 +274,19 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>2</td>
         <td>0</td>
-        <td>0</td>
-        <td>3</td>
-        <td>15</td>
+        <td>2</td>
+        <td>13</td>
         <td>53</td>
         <td>8</td>
-        <td>161</td>
+        <td>160</td>
     </tr>
     <tr>
-        <td>0%</td>
+        <td>1%</td>
         <td>0%</td>
         <td>1%</td>
-        <td>6%</td>
+        <td>5%</td>
         <td>22%</td>
         <td>3%</td>
         <td>67%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -476,7 +476,7 @@ immediately.
             
                 <h2>Universal Profile Checks</h2>
 <span class='section__emoji'>
-    🔥⚠️⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
+    🔥⚠️⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️
 </span>
 
     
@@ -511,6 +511,20 @@ immediately.
                             </span>
 
                             <span class='details_text'>
+                            <p>Lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
                             <p>dcaron is decomposed and therefore could not be checked. Please check manually.</p>
 
                             
@@ -526,6 +540,20 @@ immediately.
 
                             <span class='details_text'>
                             <p>lcaron is decomposed and therefore could not be checked. Please check manually.</p>
+
+                            
+                             [code: decomposed-outline]
+                            
+                            </span>
+                        </li>
+                
+                        <li class='details_item'>
+                            <span class='details_indicator'>
+                            ⚠️ WARN
+                            </span>
+
+                            <span class='details_text'>
+                            <p>tcaron is decomposed and therefore could not be checked. Please check manually.</p>
 
                             
                              [code: decomposed-outline]
@@ -812,8 +840,6 @@ immediately.
 
 - Glyph name: registered	Contours detected: 47	Expected: 3 or 4
 
-- Glyph name: macron	Contours detected: 3	Expected: 1
-
 - Glyph name: degree	Contours detected: 27	Expected: 2
 
 - Glyph name: acute	Contours detected: 2	Expected: 1
@@ -830,15 +856,15 @@ immediately.
 
 - Glyph name: questiondown	Contours detected: 28	Expected: 2
 
-- Glyph name: Agrave	Contours detected: 25	Expected: 3
+- Glyph name: Agrave	Contours detected: 21	Expected: 3
 
 - Glyph name: Aacute	Contours detected: 19	Expected: 3
 
-- Glyph name: Acircumflex	Contours detected: 26	Expected: 3
+- Glyph name: Acircumflex	Contours detected: 18	Expected: 3
 
-- Glyph name: Atilde	Contours detected: 29	Expected: 3
+- Glyph name: Atilde	Contours detected: 17	Expected: 3
 
-- Glyph name: Adieresis	Contours detected: 25	Expected: 4
+- Glyph name: Adieresis	Contours detected: 21	Expected: 4
 
 - Glyph name: Aring	Contours detected: 19	Expected: 3 or 4
 
@@ -846,13 +872,13 @@ immediately.
 
 - Glyph name: Ccedilla	Contours detected: 20	Expected: 1 or 2
 
-- Glyph name: Egrave	Contours detected: 25	Expected: 2
+- Glyph name: Egrave	Contours detected: 21	Expected: 2
 
-- Glyph name: Eacute	Contours detected: 25	Expected: 2
+- Glyph name: Eacute	Contours detected: 21	Expected: 2
 
-- Glyph name: Ecircumflex	Contours detected: 26	Expected: 2
+- Glyph name: Ecircumflex	Contours detected: 18	Expected: 2
 
-- Glyph name: Edieresis	Contours detected: 25	Expected: 3
+- Glyph name: Edieresis	Contours detected: 21	Expected: 3
 
 - Glyph name: Igrave	Contours detected: 5	Expected: 2
 
@@ -864,59 +890,59 @@ immediately.
 
 - Glyph name: Eth	Contours detected: 37	Expected: 2
 
-- Glyph name: Ntilde	Contours detected: 29	Expected: 2
+- Glyph name: Ntilde	Contours detected: 17	Expected: 2
 
-- Glyph name: Ograve	Contours detected: 23	Expected: 3
+- Glyph name: Ograve	Contours detected: 17	Expected: 3
 
 - Glyph name: Oacute	Contours detected: 17	Expected: 3
 
-- Glyph name: Ocircumflex	Contours detected: 24	Expected: 3
+- Glyph name: Ocircumflex	Contours detected: 16	Expected: 3
 
-- Glyph name: Otilde	Contours detected: 27	Expected: 3
+- Glyph name: Otilde	Contours detected: 15	Expected: 3
 
-- Glyph name: Odieresis	Contours detected: 23	Expected: 4
+- Glyph name: Odieresis	Contours detected: 17	Expected: 4
 
 - Glyph name: multiply	Contours detected: 28	Expected: 1
 
 - Glyph name: Oslash	Contours detected: 39	Expected: 2 or 3
 
-- Glyph name: Ugrave	Contours detected: 24	Expected: 2
+- Glyph name: Ugrave	Contours detected: 18	Expected: 2
 
-- Glyph name: Uacute	Contours detected: 24	Expected: 2
+- Glyph name: Uacute	Contours detected: 18	Expected: 2
 
-- Glyph name: Ucircumflex	Contours detected: 25	Expected: 2
+- Glyph name: Ucircumflex	Contours detected: 17	Expected: 2
 
-- Glyph name: Udieresis	Contours detected: 24	Expected: 3
+- Glyph name: Udieresis	Contours detected: 18	Expected: 3
 
-- Glyph name: Yacute	Contours detected: 25	Expected: 2
+- Glyph name: Yacute	Contours detected: 23	Expected: 2
 
 - Glyph name: Thorn	Contours detected: 23	Expected: 1 or 2
 
 - Glyph name: germandbls	Contours detected: 31	Expected: 1
 
-- Glyph name: agrave	Contours detected: 25	Expected: 3
+- Glyph name: agrave	Contours detected: 23	Expected: 3
 
-- Glyph name: aacute	Contours detected: 25	Expected: 3
+- Glyph name: aacute	Contours detected: 23	Expected: 3
 
-- Glyph name: acircumflex	Contours detected: 26	Expected: 3
+- Glyph name: acircumflex	Contours detected: 22	Expected: 3
 
-- Glyph name: atilde	Contours detected: 29	Expected: 3
+- Glyph name: atilde	Contours detected: 20	Expected: 3
 
-- Glyph name: adieresis	Contours detected: 25	Expected: 4
+- Glyph name: adieresis	Contours detected: 23	Expected: 4
 
-- Glyph name: aring	Contours detected: 27	Expected: 4
+- Glyph name: aring	Contours detected: 21	Expected: 4
 
 - Glyph name: ae	Contours detected: 38	Expected: 3
 
-- Glyph name: ccedilla	Contours detected: 27	Expected: 1 or 2
+- Glyph name: ccedilla	Contours detected: 25	Expected: 1 or 2
 
-- Glyph name: egrave	Contours detected: 25	Expected: 3
+- Glyph name: egrave	Contours detected: 23	Expected: 3
 
-- Glyph name: eacute	Contours detected: 25	Expected: 3
+- Glyph name: eacute	Contours detected: 23	Expected: 3
 
-- Glyph name: ecircumflex	Contours detected: 26	Expected: 3
+- Glyph name: ecircumflex	Contours detected: 21	Expected: 3
 
-- Glyph name: edieresis	Contours detected: 25	Expected: 4
+- Glyph name: edieresis	Contours detected: 23	Expected: 4
 
 - Glyph name: igrave	Contours detected: 7	Expected: 2
 
@@ -928,61 +954,61 @@ immediately.
 
 - Glyph name: eth	Contours detected: 24	Expected: 2
 
-- Glyph name: ntilde	Contours detected: 29	Expected: 2
+- Glyph name: ntilde	Contours detected: 20	Expected: 2
 
-- Glyph name: ograve	Contours detected: 29	Expected: 3
+- Glyph name: ograve	Contours detected: 23	Expected: 3
 
-- Glyph name: oacute	Contours detected: 29	Expected: 3
+- Glyph name: oacute	Contours detected: 23	Expected: 3
 
-- Glyph name: ocircumflex	Contours detected: 30	Expected: 3
+- Glyph name: ocircumflex	Contours detected: 22	Expected: 3
 
-- Glyph name: otilde	Contours detected: 33	Expected: 3
+- Glyph name: otilde	Contours detected: 23	Expected: 3
 
-- Glyph name: odieresis	Contours detected: 29	Expected: 4
+- Glyph name: odieresis	Contours detected: 23	Expected: 4
 
 - Glyph name: divide	Contours detected: 29	Expected: 3
 
 - Glyph name: oslash	Contours detected: 43	Expected: 3
 
-- Glyph name: ugrave	Contours detected: 25	Expected: 2
+- Glyph name: ugrave	Contours detected: 22	Expected: 2
 
-- Glyph name: uacute	Contours detected: 25	Expected: 2
+- Glyph name: uacute	Contours detected: 21	Expected: 2
 
-- Glyph name: ucircumflex	Contours detected: 26	Expected: 2
+- Glyph name: ucircumflex	Contours detected: 22	Expected: 2
 
-- Glyph name: udieresis	Contours detected: 25	Expected: 3
+- Glyph name: udieresis	Contours detected: 21	Expected: 3
 
-- Glyph name: yacute	Contours detected: 26	Expected: 2
+- Glyph name: yacute	Contours detected: 21	Expected: 2
 
 - Glyph name: thorn	Contours detected: 21	Expected: 2
 
-- Glyph name: ydieresis	Contours detected: 26	Expected: 3
+- Glyph name: ydieresis	Contours detected: 21	Expected: 3
 
-- Glyph name: Amacron	Contours detected: 26	Expected: 3
+- Glyph name: Amacron	Contours detected: 18	Expected: 3
 
-- Glyph name: amacron	Contours detected: 26	Expected: 3
+- Glyph name: amacron	Contours detected: 22	Expected: 3
 
-- Glyph name: Abreve	Contours detected: 28	Expected: 3
+- Glyph name: Abreve	Contours detected: 16	Expected: 3
 
-- Glyph name: abreve	Contours detected: 28	Expected: 3
+- Glyph name: abreve	Contours detected: 18	Expected: 3
 
-- Glyph name: Aogonek	Contours detected: 25	Expected: 2 or 3
+- Glyph name: Aogonek	Contours detected: 21	Expected: 2 or 3
 
-- Glyph name: aogonek	Contours detected: 25	Expected: 2
+- Glyph name: aogonek	Contours detected: 23	Expected: 2
 
-- Glyph name: Cacute	Contours detected: 16	Expected: 2
+- Glyph name: Cacute	Contours detected: 12	Expected: 2
 
-- Glyph name: cacute	Contours detected: 27	Expected: 2
+- Glyph name: cacute	Contours detected: 23	Expected: 2
 
-- Glyph name: Cdotaccent	Contours detected: 15	Expected: 2
+- Glyph name: Cdotaccent	Contours detected: 13	Expected: 2
 
-- Glyph name: cdotaccent	Contours detected: 26	Expected: 2
+- Glyph name: cdotaccent	Contours detected: 24	Expected: 2
 
 - Glyph name: Ccaron	Contours detected: 19	Expected: 2
 
-- Glyph name: ccaron	Contours detected: 28	Expected: 2
+- Glyph name: ccaron	Contours detected: 24	Expected: 2
 
-- Glyph name: Dcaron	Contours detected: 26	Expected: 3
+- Glyph name: Dcaron	Contours detected: 18	Expected: 3
 
 - Glyph name: dcaron	Contours detected: 36	Expected: 3
 
@@ -990,33 +1016,33 @@ immediately.
 
 - Glyph name: dcroat	Contours detected: 24	Expected: 2
 
-- Glyph name: Emacron	Contours detected: 26	Expected: 2
+- Glyph name: Emacron	Contours detected: 18	Expected: 2
 
-- Glyph name: emacron	Contours detected: 26	Expected: 3
+- Glyph name: emacron	Contours detected: 21	Expected: 3
 
-- Glyph name: Edotaccent	Contours detected: 24	Expected: 2
+- Glyph name: Edotaccent	Contours detected: 22	Expected: 2
 
 - Glyph name: edotaccent	Contours detected: 24	Expected: 3
 
-- Glyph name: Eogonek	Contours detected: 25	Expected: 1 or 2
+- Glyph name: Eogonek	Contours detected: 21	Expected: 1 or 2
 
 - Glyph name: eogonek	Contours detected: 22	Expected: 2
 
-- Glyph name: Ecaron	Contours detected: 26	Expected: 2
+- Glyph name: Ecaron	Contours detected: 18	Expected: 2
 
-- Glyph name: ecaron	Contours detected: 26	Expected: 3
+- Glyph name: ecaron	Contours detected: 21	Expected: 3
 
-- Glyph name: Gbreve	Contours detected: 28	Expected: 2
+- Glyph name: Gbreve	Contours detected: 16	Expected: 2
 
-- Glyph name: gbreve	Contours detected: 28	Expected: 3 or 4
+- Glyph name: gbreve	Contours detected: 16	Expected: 3 or 4
 
-- Glyph name: Gdotaccent	Contours detected: 24	Expected: 2
+- Glyph name: Gdotaccent	Contours detected: 22	Expected: 2
 
-- Glyph name: gdotaccent	Contours detected: 24	Expected: 3 or 4
+- Glyph name: gdotaccent	Contours detected: 20	Expected: 3 or 4
 
-- Glyph name: uni0122	Contours detected: 24	Expected: 2
+- Glyph name: uni0122	Contours detected: 22	Expected: 2
 
-- Glyph name: uni0123	Contours detected: 25	Expected: 3 or 4
+- Glyph name: uni0123	Contours detected: 20	Expected: 3 or 4
 
 - Glyph name: Hbar	Contours detected: 38	Expected: 2
 
@@ -1026,31 +1052,31 @@ immediately.
 
 - Glyph name: imacron	Contours detected: 7	Expected: 2
 
-- Glyph name: Iogonek	Contours detected: 8	Expected: 1 or 2
+- Glyph name: Iogonek	Contours detected: 5	Expected: 1 or 2
 
-- Glyph name: iogonek	Contours detected: 11	Expected: 2 or 3
+- Glyph name: iogonek	Contours detected: 6	Expected: 2 or 3
 
-- Glyph name: Idotaccent	Contours detected: 7	Expected: 2
+- Glyph name: Idotaccent	Contours detected: 5	Expected: 2
 
 - Glyph name: dotlessi	Contours detected: 8	Expected: 1
 
-- Glyph name: IJ	Contours detected: 22	Expected: 1 or 2
+- Glyph name: IJ	Contours detected: 33	Expected: 1 or 2
 
-- Glyph name: ij	Contours detected: 14	Expected: 3 or 4
+- Glyph name: ij	Contours detected: 24	Expected: 3 or 4
 
-- Glyph name: uni0136	Contours detected: 24	Expected: 2 or 3
+- Glyph name: uni0136	Contours detected: 22	Expected: 2 or 3
 
 - Glyph name: uni0137	Contours detected: 23	Expected: 2 or 3
 
 - Glyph name: Lacute	Contours detected: 13	Expected: 2
 
-- Glyph name: lacute	Contours detected: 8	Expected: 2
+- Glyph name: lacute	Contours detected: 5	Expected: 2
 
-- Glyph name: uni013B	Contours detected: 16	Expected: 2
+- Glyph name: uni013B	Contours detected: 15	Expected: 2
 
-- Glyph name: uni013C	Contours detected: 7	Expected: 2
+- Glyph name: uni013C	Contours detected: 5	Expected: 2
 
-- Glyph name: Lcaron	Contours detected: 17	Expected: 2
+- Glyph name: Lcaron	Contours detected: 15	Expected: 2
 
 - Glyph name: lcaron	Contours detected: 17	Expected: 2
 
@@ -1058,111 +1084,111 @@ immediately.
 
 - Glyph name: lslash	Contours detected: 24	Expected: 1
 
-- Glyph name: Nacute	Contours detected: 25	Expected: 2
+- Glyph name: Nacute	Contours detected: 21	Expected: 2
 
-- Glyph name: nacute	Contours detected: 25	Expected: 2
+- Glyph name: nacute	Contours detected: 21	Expected: 2
 
-- Glyph name: uni0145	Contours detected: 24	Expected: 2
+- Glyph name: uni0145	Contours detected: 22	Expected: 2
 
 - Glyph name: uni0146	Contours detected: 24	Expected: 2
 
-- Glyph name: Ncaron	Contours detected: 26	Expected: 2
+- Glyph name: Ncaron	Contours detected: 18	Expected: 2
 
-- Glyph name: ncaron	Contours detected: 26	Expected: 2
+- Glyph name: ncaron	Contours detected: 20	Expected: 2
 
 - Glyph name: Eng	Contours detected: 21	Expected: 1
 
 - Glyph name: eng	Contours detected: 24	Expected: 1
 
-- Glyph name: Omacron	Contours detected: 24	Expected: 3
+- Glyph name: Omacron	Contours detected: 16	Expected: 3
 
-- Glyph name: omacron	Contours detected: 30	Expected: 3
+- Glyph name: omacron	Contours detected: 22	Expected: 3
 
-- Glyph name: Ohungarumlaut	Contours detected: 25	Expected: 4
+- Glyph name: Ohungarumlaut	Contours detected: 16	Expected: 4
 
-- Glyph name: ohungarumlaut	Contours detected: 31	Expected: 4
+- Glyph name: ohungarumlaut	Contours detected: 22	Expected: 4
 
 - Glyph name: OE	Contours detected: 38	Expected: 2
 
 - Glyph name: oe	Contours detected: 39	Expected: 3
 
-- Glyph name: Racute	Contours detected: 24	Expected: 3
+- Glyph name: Racute	Contours detected: 18	Expected: 3
 
-- Glyph name: racute	Contours detected: 18	Expected: 2
+- Glyph name: racute	Contours detected: 14	Expected: 2
 
-- Glyph name: uni0156	Contours detected: 23	Expected: 3
+- Glyph name: uni0156	Contours detected: 21	Expected: 3
 
-- Glyph name: uni0157	Contours detected: 17	Expected: 2
+- Glyph name: uni0157	Contours detected: 15	Expected: 2
 
-- Glyph name: Rcaron	Contours detected: 25	Expected: 3
+- Glyph name: Rcaron	Contours detected: 18	Expected: 3
 
-- Glyph name: rcaron	Contours detected: 19	Expected: 2
+- Glyph name: rcaron	Contours detected: 14	Expected: 2
 
-- Glyph name: Sacute	Contours detected: 24	Expected: 2
+- Glyph name: Sacute	Contours detected: 18	Expected: 2
 
-- Glyph name: sacute	Contours detected: 25	Expected: 2
+- Glyph name: sacute	Contours detected: 21	Expected: 2
 
-- Glyph name: Scedilla	Contours detected: 24	Expected: 1 or 2
+- Glyph name: Scedilla	Contours detected: 20	Expected: 1 or 2
 
-- Glyph name: scedilla	Contours detected: 25	Expected: 1 or 2
+- Glyph name: scedilla	Contours detected: 23	Expected: 1 or 2
 
-- Glyph name: Scaron	Contours detected: 25	Expected: 2
+- Glyph name: Scaron	Contours detected: 17	Expected: 2
 
-- Glyph name: scaron	Contours detected: 26	Expected: 2
+- Glyph name: scaron	Contours detected: 20	Expected: 2
 
-- Glyph name: Tcaron	Contours detected: 27	Expected: 2
+- Glyph name: Tcaron	Contours detected: 23	Expected: 2
 
-- Glyph name: tcaron	Contours detected: 16	Expected: 2
+- Glyph name: tcaron	Contours detected: 14	Expected: 2
 
-- Glyph name: Umacron	Contours detected: 25	Expected: 2
+- Glyph name: Umacron	Contours detected: 17	Expected: 2
 
-- Glyph name: umacron	Contours detected: 26	Expected: 2
+- Glyph name: umacron	Contours detected: 22	Expected: 2
 
-- Glyph name: Ubreve	Contours detected: 27	Expected: 2
+- Glyph name: Ubreve	Contours detected: 15	Expected: 2
 
-- Glyph name: ubreve	Contours detected: 28	Expected: 2
+- Glyph name: ubreve	Contours detected: 18	Expected: 2
 
 - Glyph name: Uring	Contours detected: 18	Expected: 3
 
-- Glyph name: uring	Contours detected: 27	Expected: 3
+- Glyph name: uring	Contours detected: 19	Expected: 3
 
-- Glyph name: Uhungarumlaut	Contours detected: 26	Expected: 3
+- Glyph name: Uhungarumlaut	Contours detected: 17	Expected: 3
 
-- Glyph name: uhungarumlaut	Contours detected: 27	Expected: 3
+- Glyph name: uhungarumlaut	Contours detected: 20	Expected: 3
 
-- Glyph name: Uogonek	Contours detected: 24	Expected: 1
+- Glyph name: Uogonek	Contours detected: 20	Expected: 1
 
-- Glyph name: uogonek	Contours detected: 25	Expected: 1
+- Glyph name: uogonek	Contours detected: 23	Expected: 1
 
 - Glyph name: Wcircumflex	Contours detected: 39	Expected: 2
 
 - Glyph name: wcircumflex	Contours detected: 37	Expected: 2
 
-- Glyph name: Ycircumflex	Contours detected: 26	Expected: 2
+- Glyph name: Ycircumflex	Contours detected: 22	Expected: 2
 
-- Glyph name: ycircumflex	Contours detected: 27	Expected: 2
+- Glyph name: ycircumflex	Contours detected: 21	Expected: 2
 
-- Glyph name: Ydieresis	Contours detected: 25	Expected: 3
+- Glyph name: Ydieresis	Contours detected: 23	Expected: 3
 
-- Glyph name: Zacute	Contours detected: 26	Expected: 2
+- Glyph name: Zacute	Contours detected: 22	Expected: 2
 
 - Glyph name: zacute	Contours detected: 31	Expected: 2
 
-- Glyph name: Zdotaccent	Contours detected: 25	Expected: 2
+- Glyph name: Zdotaccent	Contours detected: 23	Expected: 2
 
-- Glyph name: zdotaccent	Contours detected: 34	Expected: 2
+- Glyph name: zdotaccent	Contours detected: 32	Expected: 2
 
-- Glyph name: Zcaron	Contours detected: 27	Expected: 2
+- Glyph name: Zcaron	Contours detected: 21	Expected: 2
 
 - Glyph name: zcaron	Contours detected: 30	Expected: 2
 
-- Glyph name: uni0218	Contours detected: 23	Expected: 2
+- Glyph name: uni0218	Contours detected: 21	Expected: 2
 
 - Glyph name: uni0219	Contours detected: 24	Expected: 2
 
 - Glyph name: uni021A	Contours detected: 25	Expected: 2
 
-- Glyph name: uni021B	Contours detected: 15	Expected: 2
+- Glyph name: uni021B	Contours detected: 13	Expected: 2
 
 - Glyph name: uni0237	Contours detected: 8	Expected: 1
 
@@ -1170,13 +1196,11 @@ immediately.
 
 - Glyph name: caron	Contours detected: 3	Expected: 1
 
-- Glyph name: breve	Contours detected: 5	Expected: 1
-
 - Glyph name: ring	Contours detected: 4	Expected: 2
 
 - Glyph name: ogonek	Contours detected: 2	Expected: 1
 
-- Glyph name: tilde	Contours detected: 6	Expected: 1
+- Glyph name: tilde	Contours detected: 2	Expected: 1
 
 - Glyph name: hungarumlaut	Contours detected: 4	Expected: 2
 
@@ -1186,19 +1210,13 @@ immediately.
 
 - Glyph name: uni0302	Contours detected: 3	Expected: 1
 
-- Glyph name: tildecomb	Contours detected: 6	Expected: 1
-
-- Glyph name: uni0304	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0306	Contours detected: 5	Expected: 1
+- Glyph name: tildecomb	Contours detected: 2	Expected: 1
 
 - Glyph name: uni030A	Contours detected: 4	Expected: 2
 
 - Glyph name: uni030B	Contours detected: 4	Expected: 2
 
 - Glyph name: uni030C	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0312	Contours detected: 2	Expected: 1
 
 - Glyph name: uni0327	Contours detected: 2	Expected: 1
 
@@ -1218,9 +1236,9 @@ immediately.
 
 - Glyph name: uni1E9E	Contours detected: 29	Expected: 1
 
-- Glyph name: Ygrave	Contours detected: 25	Expected: 2
+- Glyph name: Ygrave	Contours detected: 23	Expected: 2
 
-- Glyph name: ygrave	Contours detected: 26	Expected: 2
+- Glyph name: ygrave	Contours detected: 22	Expected: 2
 
 - Glyph name: uni200A	Contours detected: 1	Expected: 0
 
@@ -1250,7 +1268,7 @@ immediately.
 
 - Glyph name: Euro	Contours detected: 32	Expected: 1 or 2
 
-- Glyph name: trademark	Contours detected: 63	Expected: 2
+- Glyph name: trademark	Contours detected: 73	Expected: 2
 
 - Glyph name: minus	Contours detected: 28	Expected: 1
 
@@ -1260,59 +1278,59 @@ immediately.
 
 - Glyph name: Aacute	Contours detected: 19	Expected: 3
 
-- Glyph name: Abreve	Contours detected: 28	Expected: 3
+- Glyph name: Abreve	Contours detected: 16	Expected: 3
 
-- Glyph name: Acircumflex	Contours detected: 26	Expected: 3
+- Glyph name: Acircumflex	Contours detected: 18	Expected: 3
 
-- Glyph name: Adieresis	Contours detected: 25	Expected: 4
+- Glyph name: Adieresis	Contours detected: 21	Expected: 4
 
-- Glyph name: Agrave	Contours detected: 25	Expected: 3
+- Glyph name: Agrave	Contours detected: 21	Expected: 3
 
-- Glyph name: Amacron	Contours detected: 26	Expected: 3
+- Glyph name: Amacron	Contours detected: 18	Expected: 3
 
-- Glyph name: Aogonek	Contours detected: 25	Expected: 2 or 3
+- Glyph name: Aogonek	Contours detected: 21	Expected: 2 or 3
 
 - Glyph name: Aring	Contours detected: 19	Expected: 3 or 4
 
-- Glyph name: Atilde	Contours detected: 29	Expected: 3
+- Glyph name: Atilde	Contours detected: 17	Expected: 3
 
 - Glyph name: B	Contours detected: 21	Expected: 2 or 3
 
 - Glyph name: C	Contours detected: 14	Expected: 1
 
-- Glyph name: Cacute	Contours detected: 16	Expected: 2
+- Glyph name: Cacute	Contours detected: 12	Expected: 2
 
 - Glyph name: Ccaron	Contours detected: 19	Expected: 2
 
 - Glyph name: Ccedilla	Contours detected: 20	Expected: 1 or 2
 
-- Glyph name: Cdotaccent	Contours detected: 15	Expected: 2
+- Glyph name: Cdotaccent	Contours detected: 13	Expected: 2
 
 - Glyph name: D	Contours detected: 23	Expected: 2
 
-- Glyph name: Dcaron	Contours detected: 26	Expected: 3
+- Glyph name: Dcaron	Contours detected: 18	Expected: 3
 
 - Glyph name: Dcroat	Contours detected: 32	Expected: 2
 
 - Glyph name: E	Contours detected: 23	Expected: 1
 
-- Glyph name: Eacute	Contours detected: 25	Expected: 2
+- Glyph name: Eacute	Contours detected: 21	Expected: 2
 
-- Glyph name: Ecaron	Contours detected: 26	Expected: 2
+- Glyph name: Ecaron	Contours detected: 18	Expected: 2
 
-- Glyph name: Ecircumflex	Contours detected: 26	Expected: 2
+- Glyph name: Ecircumflex	Contours detected: 18	Expected: 2
 
-- Glyph name: Edieresis	Contours detected: 25	Expected: 3
+- Glyph name: Edieresis	Contours detected: 21	Expected: 3
 
-- Glyph name: Edotaccent	Contours detected: 24	Expected: 2
+- Glyph name: Edotaccent	Contours detected: 22	Expected: 2
 
-- Glyph name: Egrave	Contours detected: 25	Expected: 2
+- Glyph name: Egrave	Contours detected: 21	Expected: 2
 
-- Glyph name: Emacron	Contours detected: 26	Expected: 2
+- Glyph name: Emacron	Contours detected: 18	Expected: 2
 
 - Glyph name: Eng	Contours detected: 21	Expected: 1
 
-- Glyph name: Eogonek	Contours detected: 25	Expected: 1 or 2
+- Glyph name: Eogonek	Contours detected: 21	Expected: 1 or 2
 
 - Glyph name: Eth	Contours detected: 37	Expected: 2
 
@@ -1322,9 +1340,9 @@ immediately.
 
 - Glyph name: G	Contours detected: 23	Expected: 1
 
-- Glyph name: Gbreve	Contours detected: 28	Expected: 2
+- Glyph name: Gbreve	Contours detected: 16	Expected: 2
 
-- Glyph name: Gdotaccent	Contours detected: 24	Expected: 2
+- Glyph name: Gdotaccent	Contours detected: 22	Expected: 2
 
 - Glyph name: H	Contours detected: 22	Expected: 1
 
@@ -1332,7 +1350,7 @@ immediately.
 
 - Glyph name: I	Contours detected: 6	Expected: 1
 
-- Glyph name: IJ	Contours detected: 22	Expected: 1 or 2
+- Glyph name: IJ	Contours detected: 33	Expected: 1 or 2
 
 - Glyph name: Iacute	Contours detected: 5	Expected: 2
 
@@ -1340,13 +1358,13 @@ immediately.
 
 - Glyph name: Idieresis	Contours detected: 6	Expected: 3
 
-- Glyph name: Idotaccent	Contours detected: 7	Expected: 2
+- Glyph name: Idotaccent	Contours detected: 5	Expected: 2
 
 - Glyph name: Igrave	Contours detected: 5	Expected: 2
 
 - Glyph name: Imacron	Contours detected: 5	Expected: 2
 
-- Glyph name: Iogonek	Contours detected: 8	Expected: 1 or 2
+- Glyph name: Iogonek	Contours detected: 5	Expected: 1 or 2
 
 - Glyph name: J	Contours detected: 16	Expected: 1
 
@@ -1356,7 +1374,7 @@ immediately.
 
 - Glyph name: Lacute	Contours detected: 13	Expected: 2
 
-- Glyph name: Lcaron	Contours detected: 17	Expected: 2
+- Glyph name: Lcaron	Contours detected: 15	Expected: 2
 
 - Glyph name: Lslash	Contours detected: 24	Expected: 1
 
@@ -1364,11 +1382,11 @@ immediately.
 
 - Glyph name: N	Contours detected: 23	Expected: 1
 
-- Glyph name: Nacute	Contours detected: 25	Expected: 2
+- Glyph name: Nacute	Contours detected: 21	Expected: 2
 
-- Glyph name: Ncaron	Contours detected: 26	Expected: 2
+- Glyph name: Ncaron	Contours detected: 18	Expected: 2
 
-- Glyph name: Ntilde	Contours detected: 29	Expected: 2
+- Glyph name: Ntilde	Contours detected: 17	Expected: 2
 
 - Glyph name: O	Contours detected: 21	Expected: 2
 
@@ -1376,19 +1394,19 @@ immediately.
 
 - Glyph name: Oacute	Contours detected: 17	Expected: 3
 
-- Glyph name: Ocircumflex	Contours detected: 24	Expected: 3
+- Glyph name: Ocircumflex	Contours detected: 16	Expected: 3
 
-- Glyph name: Odieresis	Contours detected: 23	Expected: 4
+- Glyph name: Odieresis	Contours detected: 17	Expected: 4
 
-- Glyph name: Ograve	Contours detected: 23	Expected: 3
+- Glyph name: Ograve	Contours detected: 17	Expected: 3
 
-- Glyph name: Ohungarumlaut	Contours detected: 25	Expected: 4
+- Glyph name: Ohungarumlaut	Contours detected: 16	Expected: 4
 
-- Glyph name: Omacron	Contours detected: 24	Expected: 3
+- Glyph name: Omacron	Contours detected: 16	Expected: 3
 
 - Glyph name: Oslash	Contours detected: 39	Expected: 2 or 3
 
-- Glyph name: Otilde	Contours detected: 27	Expected: 3
+- Glyph name: Otilde	Contours detected: 15	Expected: 3
 
 - Glyph name: P	Contours detected: 23	Expected: 1 or 2
 
@@ -1396,39 +1414,39 @@ immediately.
 
 - Glyph name: R	Contours detected: 22	Expected: 1 or 2
 
-- Glyph name: Racute	Contours detected: 24	Expected: 3
+- Glyph name: Racute	Contours detected: 18	Expected: 3
 
-- Glyph name: Rcaron	Contours detected: 25	Expected: 3
+- Glyph name: Rcaron	Contours detected: 18	Expected: 3
 
 - Glyph name: S	Contours detected: 22	Expected: 1
 
-- Glyph name: Sacute	Contours detected: 24	Expected: 2
+- Glyph name: Sacute	Contours detected: 18	Expected: 2
 
-- Glyph name: Scaron	Contours detected: 25	Expected: 2
+- Glyph name: Scaron	Contours detected: 17	Expected: 2
 
 - Glyph name: T	Contours detected: 24	Expected: 1
 
-- Glyph name: Tcaron	Contours detected: 27	Expected: 2
+- Glyph name: Tcaron	Contours detected: 23	Expected: 2
 
 - Glyph name: Thorn	Contours detected: 23	Expected: 1 or 2
 
 - Glyph name: U	Contours detected: 22	Expected: 1
 
-- Glyph name: Uacute	Contours detected: 24	Expected: 2
+- Glyph name: Uacute	Contours detected: 18	Expected: 2
 
-- Glyph name: Ubreve	Contours detected: 27	Expected: 2
+- Glyph name: Ubreve	Contours detected: 15	Expected: 2
 
-- Glyph name: Ucircumflex	Contours detected: 25	Expected: 2
+- Glyph name: Ucircumflex	Contours detected: 17	Expected: 2
 
-- Glyph name: Udieresis	Contours detected: 24	Expected: 3
+- Glyph name: Udieresis	Contours detected: 18	Expected: 3
 
-- Glyph name: Ugrave	Contours detected: 24	Expected: 2
+- Glyph name: Ugrave	Contours detected: 18	Expected: 2
 
-- Glyph name: Uhungarumlaut	Contours detected: 26	Expected: 3
+- Glyph name: Uhungarumlaut	Contours detected: 17	Expected: 3
 
-- Glyph name: Umacron	Contours detected: 25	Expected: 2
+- Glyph name: Umacron	Contours detected: 17	Expected: 2
 
-- Glyph name: Uogonek	Contours detected: 24	Expected: 1
+- Glyph name: Uogonek	Contours detected: 20	Expected: 1
 
 - Glyph name: Uring	Contours detected: 18	Expected: 3
 
@@ -1448,45 +1466,45 @@ immediately.
 
 - Glyph name: Y	Contours detected: 23	Expected: 1
 
-- Glyph name: Yacute	Contours detected: 25	Expected: 2
+- Glyph name: Yacute	Contours detected: 23	Expected: 2
 
-- Glyph name: Ycircumflex	Contours detected: 26	Expected: 2
+- Glyph name: Ycircumflex	Contours detected: 22	Expected: 2
 
-- Glyph name: Ydieresis	Contours detected: 25	Expected: 3
+- Glyph name: Ydieresis	Contours detected: 23	Expected: 3
 
-- Glyph name: Ygrave	Contours detected: 25	Expected: 2
+- Glyph name: Ygrave	Contours detected: 23	Expected: 2
 
 - Glyph name: Z	Contours detected: 24	Expected: 1
 
-- Glyph name: Zacute	Contours detected: 26	Expected: 2
+- Glyph name: Zacute	Contours detected: 22	Expected: 2
 
-- Glyph name: Zcaron	Contours detected: 27	Expected: 2
+- Glyph name: Zcaron	Contours detected: 21	Expected: 2
 
-- Glyph name: Zdotaccent	Contours detected: 25	Expected: 2
+- Glyph name: Zdotaccent	Contours detected: 23	Expected: 2
 
 - Glyph name: a	Contours detected: 23	Expected: 2
 
-- Glyph name: aacute	Contours detected: 25	Expected: 3
+- Glyph name: aacute	Contours detected: 23	Expected: 3
 
-- Glyph name: abreve	Contours detected: 28	Expected: 3
+- Glyph name: abreve	Contours detected: 18	Expected: 3
 
-- Glyph name: acircumflex	Contours detected: 26	Expected: 3
+- Glyph name: acircumflex	Contours detected: 22	Expected: 3
 
 - Glyph name: acute	Contours detected: 2	Expected: 1
 
-- Glyph name: adieresis	Contours detected: 25	Expected: 4
+- Glyph name: adieresis	Contours detected: 23	Expected: 4
 
 - Glyph name: ae	Contours detected: 38	Expected: 3
 
-- Glyph name: agrave	Contours detected: 25	Expected: 3
+- Glyph name: agrave	Contours detected: 23	Expected: 3
 
-- Glyph name: amacron	Contours detected: 26	Expected: 3
+- Glyph name: amacron	Contours detected: 22	Expected: 3
 
 - Glyph name: ampersand	Contours detected: 38	Expected: 1, 2 or 3
 
-- Glyph name: aogonek	Contours detected: 25	Expected: 2
+- Glyph name: aogonek	Contours detected: 23	Expected: 2
 
-- Glyph name: aring	Contours detected: 27	Expected: 4
+- Glyph name: aring	Contours detected: 21	Expected: 4
 
 - Glyph name: asciicircum	Contours detected: 28	Expected: 1
 
@@ -1496,7 +1514,7 @@ immediately.
 
 - Glyph name: at	Contours detected: 36	Expected: 2
 
-- Glyph name: atilde	Contours detected: 29	Expected: 3
+- Glyph name: atilde	Contours detected: 20	Expected: 3
 
 - Glyph name: b	Contours detected: 24	Expected: 2
 
@@ -1512,21 +1530,19 @@ immediately.
 
 - Glyph name: bracketright	Contours detected: 13	Expected: 1
 
-- Glyph name: breve	Contours detected: 5	Expected: 1
-
 - Glyph name: bullet	Contours detected: 19	Expected: 1
 
 - Glyph name: c	Contours detected: 25	Expected: 1
 
-- Glyph name: cacute	Contours detected: 27	Expected: 2
+- Glyph name: cacute	Contours detected: 23	Expected: 2
 
 - Glyph name: caron	Contours detected: 3	Expected: 1
 
-- Glyph name: ccaron	Contours detected: 28	Expected: 2
+- Glyph name: ccaron	Contours detected: 24	Expected: 2
 
-- Glyph name: ccedilla	Contours detected: 27	Expected: 1 or 2
+- Glyph name: ccedilla	Contours detected: 25	Expected: 1 or 2
 
-- Glyph name: cdotaccent	Contours detected: 26	Expected: 2
+- Glyph name: cdotaccent	Contours detected: 24	Expected: 2
 
 - Glyph name: cedilla	Contours detected: 2	Expected: 1
 
@@ -1556,23 +1572,23 @@ immediately.
 
 - Glyph name: e	Contours detected: 23	Expected: 2
 
-- Glyph name: eacute	Contours detected: 25	Expected: 3
+- Glyph name: eacute	Contours detected: 23	Expected: 3
 
-- Glyph name: ecaron	Contours detected: 26	Expected: 3
+- Glyph name: ecaron	Contours detected: 21	Expected: 3
 
-- Glyph name: ecircumflex	Contours detected: 26	Expected: 3
+- Glyph name: ecircumflex	Contours detected: 21	Expected: 3
 
-- Glyph name: edieresis	Contours detected: 25	Expected: 4
+- Glyph name: edieresis	Contours detected: 23	Expected: 4
 
 - Glyph name: edotaccent	Contours detected: 24	Expected: 3
 
-- Glyph name: egrave	Contours detected: 25	Expected: 3
+- Glyph name: egrave	Contours detected: 23	Expected: 3
 
 - Glyph name: eight	Contours detected: 18	Expected: 3
 
 - Glyph name: ellipsis	Contours detected: 53	Expected: 3
 
-- Glyph name: emacron	Contours detected: 26	Expected: 3
+- Glyph name: emacron	Contours detected: 21	Expected: 3
 
 - Glyph name: emdash	Contours detected: 51	Expected: 1
 
@@ -1598,9 +1614,9 @@ immediately.
 
 - Glyph name: g	Contours detected: 23	Expected: 2 or 3
 
-- Glyph name: gbreve	Contours detected: 28	Expected: 3 or 4
+- Glyph name: gbreve	Contours detected: 16	Expected: 3 or 4
 
-- Glyph name: gdotaccent	Contours detected: 24	Expected: 3 or 4
+- Glyph name: gdotaccent	Contours detected: 20	Expected: 3 or 4
 
 - Glyph name: germandbls	Contours detected: 31	Expected: 1
 
@@ -1634,11 +1650,11 @@ immediately.
 
 - Glyph name: igrave	Contours detected: 7	Expected: 2
 
-- Glyph name: ij	Contours detected: 14	Expected: 3 or 4
+- Glyph name: ij	Contours detected: 24	Expected: 3 or 4
 
 - Glyph name: imacron	Contours detected: 7	Expected: 2
 
-- Glyph name: iogonek	Contours detected: 11	Expected: 2 or 3
+- Glyph name: iogonek	Contours detected: 6	Expected: 2 or 3
 
 - Glyph name: j	Contours detected: 7	Expected: 2
 
@@ -1646,7 +1662,7 @@ immediately.
 
 - Glyph name: l	Contours detected: 6	Expected: 1
 
-- Glyph name: lacute	Contours detected: 8	Expected: 2
+- Glyph name: lacute	Contours detected: 5	Expected: 2
 
 - Glyph name: lcaron	Contours detected: 17	Expected: 2
 
@@ -1656,41 +1672,39 @@ immediately.
 
 - Glyph name: m	Contours detected: 39	Expected: 1
 
-- Glyph name: macron	Contours detected: 3	Expected: 1
-
 - Glyph name: minus	Contours detected: 28	Expected: 1
 
 - Glyph name: multiply	Contours detected: 28	Expected: 1
 
 - Glyph name: n	Contours detected: 23	Expected: 1
 
-- Glyph name: nacute	Contours detected: 25	Expected: 2
+- Glyph name: nacute	Contours detected: 21	Expected: 2
 
-- Glyph name: ncaron	Contours detected: 26	Expected: 2
+- Glyph name: ncaron	Contours detected: 20	Expected: 2
 
 - Glyph name: nine	Contours detected: 19	Expected: 1 or 2
 
-- Glyph name: ntilde	Contours detected: 29	Expected: 2
+- Glyph name: ntilde	Contours detected: 20	Expected: 2
 
 - Glyph name: numbersign	Contours detected: 35	Expected: 2
 
 - Glyph name: o	Contours detected: 27	Expected: 2
 
-- Glyph name: oacute	Contours detected: 29	Expected: 3
+- Glyph name: oacute	Contours detected: 23	Expected: 3
 
-- Glyph name: ocircumflex	Contours detected: 30	Expected: 3
+- Glyph name: ocircumflex	Contours detected: 22	Expected: 3
 
-- Glyph name: odieresis	Contours detected: 29	Expected: 4
+- Glyph name: odieresis	Contours detected: 23	Expected: 4
 
 - Glyph name: oe	Contours detected: 39	Expected: 3
 
 - Glyph name: ogonek	Contours detected: 2	Expected: 1
 
-- Glyph name: ograve	Contours detected: 29	Expected: 3
+- Glyph name: ograve	Contours detected: 23	Expected: 3
 
-- Glyph name: ohungarumlaut	Contours detected: 31	Expected: 4
+- Glyph name: ohungarumlaut	Contours detected: 22	Expected: 4
 
-- Glyph name: omacron	Contours detected: 30	Expected: 3
+- Glyph name: omacron	Contours detected: 22	Expected: 3
 
 - Glyph name: one	Contours detected: 15	Expected: 1
 
@@ -1700,7 +1714,7 @@ immediately.
 
 - Glyph name: oslash	Contours detected: 43	Expected: 3
 
-- Glyph name: otilde	Contours detected: 33	Expected: 3
+- Glyph name: otilde	Contours detected: 23	Expected: 3
 
 - Glyph name: p	Contours detected: 22	Expected: 2
 
@@ -1742,9 +1756,9 @@ immediately.
 
 - Glyph name: r	Contours detected: 16	Expected: 1
 
-- Glyph name: racute	Contours detected: 18	Expected: 2
+- Glyph name: racute	Contours detected: 14	Expected: 2
 
-- Glyph name: rcaron	Contours detected: 19	Expected: 2
+- Glyph name: rcaron	Contours detected: 14	Expected: 2
 
 - Glyph name: registered	Contours detected: 47	Expected: 3 or 4
 
@@ -1752,9 +1766,9 @@ immediately.
 
 - Glyph name: s	Contours detected: 23	Expected: 1
 
-- Glyph name: sacute	Contours detected: 25	Expected: 2
+- Glyph name: sacute	Contours detected: 21	Expected: 2
 
-- Glyph name: scaron	Contours detected: 26	Expected: 2
+- Glyph name: scaron	Contours detected: 20	Expected: 2
 
 - Glyph name: section	Contours detected: 29	Expected: 2
 
@@ -1772,81 +1786,75 @@ immediately.
 
 - Glyph name: t	Contours detected: 14	Expected: 1
 
-- Glyph name: tcaron	Contours detected: 16	Expected: 2
+- Glyph name: tcaron	Contours detected: 14	Expected: 2
 
 - Glyph name: thorn	Contours detected: 21	Expected: 2
 
 - Glyph name: three	Contours detected: 21	Expected: 1
 
-- Glyph name: tilde	Contours detected: 6	Expected: 1
+- Glyph name: tilde	Contours detected: 2	Expected: 1
 
-- Glyph name: trademark	Contours detected: 63	Expected: 2
+- Glyph name: trademark	Contours detected: 73	Expected: 2
 
 - Glyph name: two	Contours detected: 20	Expected: 1
 
 - Glyph name: u	Contours detected: 23	Expected: 1
 
-- Glyph name: uacute	Contours detected: 25	Expected: 2
+- Glyph name: uacute	Contours detected: 21	Expected: 2
 
-- Glyph name: ubreve	Contours detected: 28	Expected: 2
+- Glyph name: ubreve	Contours detected: 18	Expected: 2
 
-- Glyph name: ucircumflex	Contours detected: 26	Expected: 2
+- Glyph name: ucircumflex	Contours detected: 22	Expected: 2
 
-- Glyph name: udieresis	Contours detected: 25	Expected: 3
+- Glyph name: udieresis	Contours detected: 21	Expected: 3
 
-- Glyph name: ugrave	Contours detected: 25	Expected: 2
+- Glyph name: ugrave	Contours detected: 22	Expected: 2
 
-- Glyph name: uhungarumlaut	Contours detected: 27	Expected: 3
+- Glyph name: uhungarumlaut	Contours detected: 20	Expected: 3
 
-- Glyph name: umacron	Contours detected: 26	Expected: 2
+- Glyph name: umacron	Contours detected: 22	Expected: 2
 
 - Glyph name: underscore	Contours detected: 37	Expected: 1
 
 - Glyph name: uni00A0	Contours detected: 21	Expected: 0
 
-- Glyph name: uni0122	Contours detected: 24	Expected: 2
+- Glyph name: uni0122	Contours detected: 22	Expected: 2
 
-- Glyph name: uni0123	Contours detected: 25	Expected: 3 or 4
+- Glyph name: uni0123	Contours detected: 20	Expected: 3 or 4
 
-- Glyph name: uni0136	Contours detected: 24	Expected: 2 or 3
+- Glyph name: uni0136	Contours detected: 22	Expected: 2 or 3
 
 - Glyph name: uni0137	Contours detected: 23	Expected: 2 or 3
 
-- Glyph name: uni013B	Contours detected: 16	Expected: 2
+- Glyph name: uni013B	Contours detected: 15	Expected: 2
 
-- Glyph name: uni013C	Contours detected: 7	Expected: 2
+- Glyph name: uni013C	Contours detected: 5	Expected: 2
 
-- Glyph name: uni0145	Contours detected: 24	Expected: 2
+- Glyph name: uni0145	Contours detected: 22	Expected: 2
 
 - Glyph name: uni0146	Contours detected: 24	Expected: 2
 
-- Glyph name: uni0156	Contours detected: 23	Expected: 3
+- Glyph name: uni0156	Contours detected: 21	Expected: 3
 
-- Glyph name: uni0157	Contours detected: 17	Expected: 2
+- Glyph name: uni0157	Contours detected: 15	Expected: 2
 
-- Glyph name: uni0218	Contours detected: 23	Expected: 2
+- Glyph name: uni0218	Contours detected: 21	Expected: 2
 
 - Glyph name: uni0219	Contours detected: 24	Expected: 2
 
 - Glyph name: uni021A	Contours detected: 25	Expected: 2
 
-- Glyph name: uni021B	Contours detected: 15	Expected: 2
+- Glyph name: uni021B	Contours detected: 13	Expected: 2
 
 - Glyph name: uni0237	Contours detected: 8	Expected: 1
 
 - Glyph name: uni0302	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0304	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0306	Contours detected: 5	Expected: 1
 
 - Glyph name: uni030A	Contours detected: 4	Expected: 2
 
 - Glyph name: uni030B	Contours detected: 4	Expected: 2
 
 - Glyph name: uni030C	Contours detected: 3	Expected: 1
-
-- Glyph name: uni0312	Contours detected: 2	Expected: 1
 
 - Glyph name: uni0327	Contours detected: 2	Expected: 1
 
@@ -1856,9 +1864,9 @@ immediately.
 
 - Glyph name: uni200A	Contours detected: 1	Expected: 0
 
-- Glyph name: uogonek	Contours detected: 25	Expected: 1
+- Glyph name: uogonek	Contours detected: 23	Expected: 1
 
-- Glyph name: uring	Contours detected: 27	Expected: 3
+- Glyph name: uring	Contours detected: 19	Expected: 3
 
 - Glyph name: v	Contours detected: 24	Expected: 1
 
@@ -1876,15 +1884,15 @@ immediately.
 
 - Glyph name: y	Contours detected: 24	Expected: 1
 
-- Glyph name: yacute	Contours detected: 26	Expected: 2
+- Glyph name: yacute	Contours detected: 21	Expected: 2
 
-- Glyph name: ycircumflex	Contours detected: 27	Expected: 2
+- Glyph name: ycircumflex	Contours detected: 21	Expected: 2
 
-- Glyph name: ydieresis	Contours detected: 26	Expected: 3
+- Glyph name: ydieresis	Contours detected: 21	Expected: 3
 
 - Glyph name: yen	Contours detected: 22	Expected: 1 or 2
 
-- Glyph name: ygrave	Contours detected: 26	Expected: 2
+- Glyph name: ygrave	Contours detected: 22	Expected: 2
 
 - Glyph name: z	Contours detected: 33	Expected: 1
 
@@ -1892,7 +1900,7 @@ immediately.
 
 - Glyph name: zcaron	Contours detected: 30	Expected: 2
 
-- Glyph name: zdotaccent	Contours detected: 34	Expected: 2
+- Glyph name: zdotaccent	Contours detected: 32	Expected: 2
 
 - Glyph name: zero	Contours detected: 20	Expected: 2 or 3
 </code></pre>
@@ -2018,251 +2026,6 @@ immediately.
     
 
     
-    <h3>
-    
-    Check there are no overlapping path segments
-</h3>
-<div class='check__idlabel'>Check ID: &lt;FontBakeryCheck:overlapping_path_segments&gt;</div>
-
-
-
-<div style="background-color:#ee8">
-
-    
-
-</div>
-
-
-    
-        <details>
-            <summary>
-                ⚠️
-                Micro5Charted-Regular.ttf
-                
-            </summary>
-            <div>
-                <ul>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>The following glyphs have overlapping path segments:</p>
-<pre><code>* Abreve (U+0102): L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Abreve (U+0102): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Abreve (U+0102): L&lt;&lt;0.0,1050.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Abreve (U+0102): L&lt;&lt;150.0,1050.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Amacron (U+0100): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Amacron (U+0100): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Atilde (U+00C3): L&lt;&lt;0.0,1200.0&gt;--&lt;0.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Atilde (U+00C3): L&lt;&lt;0.0,1050.0&gt;--&lt;-150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Atilde (U+00C3): L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Atilde (U+00C3): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Emacron (U+0112): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Emacron (U+0112): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Gbreve (U+011E): L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Gbreve (U+011E): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Gbreve (U+011E): L&lt;&lt;0.0,1050.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Gbreve (U+011E): L&lt;&lt;150.0,1050.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Lcaron (U+013D): L&lt;&lt;300.0,600.0&gt;--&lt;450.0,600.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ntilde (U+00D1): L&lt;&lt;0.0,1200.0&gt;--&lt;0.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ntilde (U+00D1): L&lt;&lt;0.0,1050.0&gt;--&lt;-150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ntilde (U+00D1): L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ntilde (U+00D1): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Omacron (U+014C): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Omacron (U+014C): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Otilde (U+00D5): L&lt;&lt;0.0,1200.0&gt;--&lt;0.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Otilde (U+00D5): L&lt;&lt;0.0,1050.0&gt;--&lt;-150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Otilde (U+00D5): L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Otilde (U+00D5): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ubreve (U+016C): L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ubreve (U+016C): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ubreve (U+016C): L&lt;&lt;0.0,1050.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Ubreve (U+016C): L&lt;&lt;150.0,1050.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Umacron (U+016A): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* Umacron (U+016A): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* abreve (U+0103): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* abreve (U+0103): L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* abreve (U+0103): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* abreve (U+0103): L&lt;&lt;450.0,900.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* amacron (U+0101): L&lt;&lt;150.0,750.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* amacron (U+0101): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* atilde (U+00E3): L&lt;&lt;0.0,1050.0&gt;--&lt;0.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* atilde (U+00E3): L&lt;&lt;0.0,900.0&gt;--&lt;-150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* atilde (U+00E3): L&lt;&lt;300.0,900.0&gt;--&lt;450.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* atilde (U+00E3): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* emacron (U+0113): L&lt;&lt;150.0,750.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* emacron (U+0113): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* gbreve (U+011F): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* gbreve (U+011F): L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* gbreve (U+011F): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* gbreve (U+011F): L&lt;&lt;450.0,900.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0123 (U+0123): L&lt;&lt;150.0,900.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ntilde (U+00F1): L&lt;&lt;0.0,1050.0&gt;--&lt;0.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ntilde (U+00F1): L&lt;&lt;0.0,900.0&gt;--&lt;-150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ntilde (U+00F1): L&lt;&lt;300.0,900.0&gt;--&lt;450.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ntilde (U+00F1): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* omacron (U+014D): L&lt;&lt;150.0,750.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* omacron (U+014D): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* otilde (U+00F5): L&lt;&lt;0.0,1050.0&gt;--&lt;0.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* otilde (U+00F5): L&lt;&lt;0.0,900.0&gt;--&lt;-150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* otilde (U+00F5): L&lt;&lt;300.0,900.0&gt;--&lt;450.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* otilde (U+00F5): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tcaron (U+0165): L&lt;&lt;300.0,740.0&gt;--&lt;450.0,740.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ubreve (U+016D): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ubreve (U+016D): L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ubreve (U+016D): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* ubreve (U+016D): L&lt;&lt;450.0,900.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* umacron (U+016B): L&lt;&lt;150.0,750.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* umacron (U+016B): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni030C.alt: L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306 (U+0306): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306 (U+0306): L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306 (U+0306): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306 (U+0306): L&lt;&lt;450.0,900.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb (U+0303): L&lt;&lt;150.0,1050.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb (U+0303): L&lt;&lt;150.0,900.0&gt;--&lt;0.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb (U+0303): L&lt;&lt;450.0,900.0&gt;--&lt;600.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb (U+0303): L&lt;&lt;450.0,750.0&gt;--&lt;450.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0304 (U+0304): L&lt;&lt;150.0,750.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0304 (U+0304): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0312 (U+0312): L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306.case: L&lt;&lt;300.0,1050.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306.case: L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306.case: L&lt;&lt;0.0,1050.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0306.case: L&lt;&lt;150.0,1050.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb.case: L&lt;&lt;150.0,1200.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb.case: L&lt;&lt;150.0,1050.0&gt;--&lt;0.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb.case: L&lt;&lt;450.0,1050.0&gt;--&lt;600.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tildecomb.case: L&lt;&lt;450.0,900.0&gt;--&lt;450.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0304.case: L&lt;&lt;150.0,900.0&gt;--&lt;150.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* uni0304.case: L&lt;&lt;300.0,900.0&gt;--&lt;300.0,1050.0&gt;&gt; has the same coordinates as a previous segment.
-
-* breve (U+02D8): L&lt;&lt;300.0,900.0&gt;--&lt;300.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* breve (U+02D8): L&lt;&lt;0.0,900.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* breve (U+02D8): L&lt;&lt;150.0,900.0&gt;--&lt;150.0,750.0&gt;&gt; has the same coordinates as a previous segment.
-
-* breve (U+02D8): L&lt;&lt;450.0,900.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tilde (U+02DC): L&lt;&lt;150.0,1050.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tilde (U+02DC): L&lt;&lt;150.0,900.0&gt;--&lt;0.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tilde (U+02DC): L&lt;&lt;450.0,900.0&gt;--&lt;600.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* tilde (U+02DC): L&lt;&lt;450.0,750.0&gt;--&lt;450.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* macron (U+00AF): L&lt;&lt;150.0,750.0&gt;--&lt;150.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-
-* macron (U+00AF): L&lt;&lt;300.0,750.0&gt;--&lt;300.0,900.0&gt;&gt; has the same coordinates as a previous segment.
-</code></pre>
-
-                            
-                             [code: overlapping-path-segments]
-                            
-                            </span>
-                        </li>
-                
-                </ul>
-            </div>
-        </details>
-    
-
-    
-
-    
 
     
 
@@ -2368,7 +2131,9 @@ immediately.
 
                             <span class='details_text'>
                             <p>The following glyphs could not be reached by codepoint or substitution rules:</p>
-<pre><code>- uni030C.alt
+<pre><code>- pixel
+
+- uni030C.alt
 </code></pre>
 
                             
@@ -2380,8 +2145,6 @@ immediately.
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -2661,10 +2424,10 @@ definitions.</p>
 <li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
 <li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
 <li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
 </ul>
@@ -2700,7 +2463,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -2722,7 +2485,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Micro5Charted-Regular.ttf
                 
             </summary>
@@ -2731,72 +2494,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shaper didn't attach acutecomb.case to J</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0237</td>
-<td align="left">nl_Latn (Dutch)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-<td align="left">ca_Latn (Catalan)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ, Ʒ, Ǥ, ǥ, Ǯ, ǯ, ʒ</td>
-<td align="left">fi_Latn (Finnish)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŧ, ŧ</td>
-<td align="left">nb_Latn (Norwegian Bokmål)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -2991,7 +2702,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⚠️⏩⏩⏩
+    💥⚠️⏩⏩⏩
 </span>
 
     
@@ -3066,7 +2777,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                💥
                 Micro5Charted-Regular.ttf
                 
             </summary>
@@ -3075,17 +2786,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Kpelle, Guinea (Latn, 622,000 speakers), Fur (Latn, 1,230,163 speakers), Kom (Latn, 360,685 speakers), Vute (Latn, 21,000 speakers), Northern Tutchone (Latn, 85 speakers), Abua (Latn, 25,000 speakers), Ebira (Latn, 2,200,000 speakers), Southern Tutchone (Latn, 65 speakers), Kaska (Latn, 125 speakers), Gulay (Latn, 250,478 speakers), Mundani (Latn, 34,000 speakers), Ekpeye (Latn, 226,000 speakers), Navajo (Latn, 166,319 speakers), Ejagham (Latn, 120,000 speakers), Mango (Latn, 77,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Mfumte (Latn, 79,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Dii (Latn, 71,000 speakers), Aghem (Latn, 38,843 speakers), Dan (Latn, 1,099,244 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ikwere (Latn, 717,000 speakers), Nzakara (Latn, 50,000 speakers), Yala (Latn, 200,000 speakers), South Central Banda (Latn, 244,000 speakers), Bafut (Latn, 158,146 speakers), Ngbaka (Latn, 1,020,000 speakers), Keliko (Latn, 63,000 speakers), Zapotec (Latn, 490,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Igbo (Latn, 27,823,640 speakers), Koonzime (Latn, 40,000 speakers), Heiltsuk (Latn, 300 speakers), Ma’di (Latn, 584,000 speakers), Nateni (Latn, 100,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Makaa (Latn, 221,000 speakers), Longto (Latn, 5,000 speakers), Han (Latn, 6 speakers), Lugbara (Latn, 2,200,000 speakers), Avokaya (Latn, 100,000 speakers), Cicipu (Latn, 44,000 speakers), Basaa (Latn, 332,940 speakers), Western Krahn (Latn, 97,800 speakers), Dutch (Latn, 31,709,104 speakers), Sar (Latn, 500,000 speakers), Southern Kisi (Latn, 360,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

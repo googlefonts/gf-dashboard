@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,22 +274,22 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>4</td>
+        <td>8</td>
         <td>0</td>
-        <td>46</td>
+        <td>42</td>
         <td>58</td>
         <td>217</td>
         <td>29</td>
-        <td>549</td>
+        <td>541</td>
     </tr>
     <tr>
-        <td>0%</td>
+        <td>1%</td>
         <td>0%</td>
         <td>5%</td>
         <td>6%</td>
         <td>24%</td>
         <td>3%</td>
-        <td>61%</td>
+        <td>60%</td>
     </tr>
 </table>
         
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
         
@@ -1821,8 +1821,6 @@ approxequal</p>
     
 
     
-
-    
     <h3>
     
     Check there are no overlapping path segments
@@ -2254,8 +2252,6 @@ approxequal</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -3223,11 +3219,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+034F COMBINING GRAPHEME JOINER: not included in any glyphset definition</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
 <li>U+08E2 ARABIC DISPUTED END OF AYAH: not included in any glyphset definition</li>
 <li>U+2000 EN QUAD: try adding symbols2</li>
 <li>U+2001 EM QUAD: try adding symbols2</li>
@@ -3238,7 +3234,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, syriac, thaana, hebrew, phags-pa</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, hebrew, phags-pa, thaana, syriac</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
@@ -3267,7 +3263,7 @@ definitions.</p>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, yi, symbols, math</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: math, symbols, yi, tai-tham</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -3276,14 +3272,14 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+2423 OPEN BOX: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: hanifi-rohingya, sharada, cham, kayah-li, coptic, buhid, tirhuta, kharoshthi, yi, dogra, elbasan, kaithi, music, new-tai-lue, tagalog, bassa-vah, armenian, oriya, masaram-gondi, khojki, marchen, psalter-pahlavi, duployan, modi, lao, tagbanwa, gurmukhi, tai-tham, phags-pa, sogdian, hanunoo, soyombo, malayalam, telugu, mende-kikakui, devanagari, thai, syloti-nagri, thaana, mongolian, symbols, manichaean, saurashtra, miao, khudawadi, tai-viet, canadian-aboriginal, newa, adlam, myanmar, tibetan, lepcha, buginese, khmer, math, batak, gunjala-gondi, nko, sundanese, mahajani, syriac, balinese, tifinagh, osage, kannada, limbu, gujarati, zanabazar-square, grantha, mandaic, meetei-mayek, chakma, wancho, takri, javanese, tamil, bhaiksuki, pahawh-hmong, sinhala, tai-le, ahom, caucasian-albanian, hebrew, old-permic, rejang, warang-citi, siddham, brahmi, bengali</li>
+<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: syloti-nagri, grantha, duployan, kharoshthi, chakma, tifinagh, canadian-aboriginal, khojki, mongolian, thaana, symbols, soyombo, marchen, hanunoo, tirhuta, devanagari, manichaean, tai-tham, cham, modi, oriya, tamil, thai, pahawh-hmong, javanese, miao, bengali, sogdian, mende-kikakui, hanifi-rohingya, tagalog, music, telugu, tai-viet, takri, math, nko, balinese, tai-le, buginese, siddham, myanmar, armenian, meetei-mayek, sharada, mahajani, phags-pa, dogra, zanabazar-square, old-permic, mandaic, saurashtra, warang-citi, new-tai-lue, adlam, khudawadi, gurmukhi, elbasan, rejang, limbu, bhaiksuki, syriac, malayalam, lepcha, coptic, sinhala, buhid, brahmi, kaithi, newa, gujarati, batak, bassa-vah, masaram-gondi, sundanese, tibetan, ahom, gunjala-gondi, tagbanwa, hebrew, psalter-pahlavi, yi, kannada, caucasian-albanian, wancho, osage, lao, khmer, kayah-li</li>
 <li>U+29F5 REVERSE SOLIDUS OPERATOR: try adding math</li>
 <li>U+F130 : not included in any glyphset definition</li>
 <li>U+F131 : not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, manichaean, phags-pa</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, phags-pa, manichaean</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -3336,11 +3332,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+034F COMBINING GRAPHEME JOINER: not included in any glyphset definition</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
 <li>U+08E2 ARABIC DISPUTED END OF AYAH: not included in any glyphset definition</li>
 <li>U+2000 EN QUAD: try adding symbols2</li>
 <li>U+2001 EM QUAD: try adding symbols2</li>
@@ -3351,7 +3347,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, syriac, thaana, hebrew, phags-pa</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, hebrew, phags-pa, thaana, syriac</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
@@ -3380,7 +3376,7 @@ definitions.</p>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, yi, symbols, math</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: math, symbols, yi, tai-tham</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -3389,14 +3385,14 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+2423 OPEN BOX: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: hanifi-rohingya, sharada, cham, kayah-li, coptic, buhid, tirhuta, kharoshthi, yi, dogra, elbasan, kaithi, music, new-tai-lue, tagalog, bassa-vah, armenian, oriya, masaram-gondi, khojki, marchen, psalter-pahlavi, duployan, modi, lao, tagbanwa, gurmukhi, tai-tham, phags-pa, sogdian, hanunoo, soyombo, malayalam, telugu, mende-kikakui, devanagari, thai, syloti-nagri, thaana, mongolian, symbols, manichaean, saurashtra, miao, khudawadi, tai-viet, canadian-aboriginal, newa, adlam, myanmar, tibetan, lepcha, buginese, khmer, math, batak, gunjala-gondi, nko, sundanese, mahajani, syriac, balinese, tifinagh, osage, kannada, limbu, gujarati, zanabazar-square, grantha, mandaic, meetei-mayek, chakma, wancho, takri, javanese, tamil, bhaiksuki, pahawh-hmong, sinhala, tai-le, ahom, caucasian-albanian, hebrew, old-permic, rejang, warang-citi, siddham, brahmi, bengali</li>
+<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: syloti-nagri, grantha, duployan, kharoshthi, chakma, tifinagh, canadian-aboriginal, khojki, mongolian, thaana, symbols, soyombo, marchen, hanunoo, tirhuta, devanagari, manichaean, tai-tham, cham, modi, oriya, tamil, thai, pahawh-hmong, javanese, miao, bengali, sogdian, mende-kikakui, hanifi-rohingya, tagalog, music, telugu, tai-viet, takri, math, nko, balinese, tai-le, buginese, siddham, myanmar, armenian, meetei-mayek, sharada, mahajani, phags-pa, dogra, zanabazar-square, old-permic, mandaic, saurashtra, warang-citi, new-tai-lue, adlam, khudawadi, gurmukhi, elbasan, rejang, limbu, bhaiksuki, syriac, malayalam, lepcha, coptic, sinhala, buhid, brahmi, kaithi, newa, gujarati, batak, bassa-vah, masaram-gondi, sundanese, tibetan, ahom, gunjala-gondi, tagbanwa, hebrew, psalter-pahlavi, yi, kannada, caucasian-albanian, wancho, osage, lao, khmer, kayah-li</li>
 <li>U+29F5 REVERSE SOLIDUS OPERATOR: try adding math</li>
 <li>U+F130 : not included in any glyphset definition</li>
 <li>U+F131 : not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, manichaean, phags-pa</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, phags-pa, manichaean</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -3449,11 +3445,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+034F COMBINING GRAPHEME JOINER: not included in any glyphset definition</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
 <li>U+08E2 ARABIC DISPUTED END OF AYAH: not included in any glyphset definition</li>
 <li>U+2000 EN QUAD: try adding symbols2</li>
 <li>U+2001 EM QUAD: try adding symbols2</li>
@@ -3464,7 +3460,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, syriac, thaana, hebrew, phags-pa</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, hebrew, phags-pa, thaana, syriac</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
@@ -3493,7 +3489,7 @@ definitions.</p>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, yi, symbols, math</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: math, symbols, yi, tai-tham</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -3502,14 +3498,14 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+2423 OPEN BOX: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: hanifi-rohingya, sharada, cham, kayah-li, coptic, buhid, tirhuta, kharoshthi, yi, dogra, elbasan, kaithi, music, new-tai-lue, tagalog, bassa-vah, armenian, oriya, masaram-gondi, khojki, marchen, psalter-pahlavi, duployan, modi, lao, tagbanwa, gurmukhi, tai-tham, phags-pa, sogdian, hanunoo, soyombo, malayalam, telugu, mende-kikakui, devanagari, thai, syloti-nagri, thaana, mongolian, symbols, manichaean, saurashtra, miao, khudawadi, tai-viet, canadian-aboriginal, newa, adlam, myanmar, tibetan, lepcha, buginese, khmer, math, batak, gunjala-gondi, nko, sundanese, mahajani, syriac, balinese, tifinagh, osage, kannada, limbu, gujarati, zanabazar-square, grantha, mandaic, meetei-mayek, chakma, wancho, takri, javanese, tamil, bhaiksuki, pahawh-hmong, sinhala, tai-le, ahom, caucasian-albanian, hebrew, old-permic, rejang, warang-citi, siddham, brahmi, bengali</li>
+<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: syloti-nagri, grantha, duployan, kharoshthi, chakma, tifinagh, canadian-aboriginal, khojki, mongolian, thaana, symbols, soyombo, marchen, hanunoo, tirhuta, devanagari, manichaean, tai-tham, cham, modi, oriya, tamil, thai, pahawh-hmong, javanese, miao, bengali, sogdian, mende-kikakui, hanifi-rohingya, tagalog, music, telugu, tai-viet, takri, math, nko, balinese, tai-le, buginese, siddham, myanmar, armenian, meetei-mayek, sharada, mahajani, phags-pa, dogra, zanabazar-square, old-permic, mandaic, saurashtra, warang-citi, new-tai-lue, adlam, khudawadi, gurmukhi, elbasan, rejang, limbu, bhaiksuki, syriac, malayalam, lepcha, coptic, sinhala, buhid, brahmi, kaithi, newa, gujarati, batak, bassa-vah, masaram-gondi, sundanese, tibetan, ahom, gunjala-gondi, tagbanwa, hebrew, psalter-pahlavi, yi, kannada, caucasian-albanian, wancho, osage, lao, khmer, kayah-li</li>
 <li>U+29F5 REVERSE SOLIDUS OPERATOR: try adding math</li>
 <li>U+F130 : not included in any glyphset definition</li>
 <li>U+F131 : not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, manichaean, phags-pa</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, phags-pa, manichaean</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -3562,11 +3558,11 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+034F COMBINING GRAPHEME JOINER: not included in any glyphset definition</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
 <li>U+08E2 ARABIC DISPUTED END OF AYAH: not included in any glyphset definition</li>
 <li>U+2000 EN QUAD: try adding symbols2</li>
 <li>U+2001 EM QUAD: try adding symbols2</li>
@@ -3577,7 +3573,7 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, syriac, thaana, hebrew, phags-pa</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: nko, hebrew, phags-pa, thaana, syriac</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+201B SINGLE HIGH-REVERSED-9 QUOTATION MARK: try adding adlam</li>
@@ -3606,7 +3602,7 @@ definitions.</p>
 <li>U+2206 INCREMENT: try adding math</li>
 <li>U+220F N-ARY PRODUCT: try adding math</li>
 <li>U+2211 N-ARY SUMMATION: try adding math</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: tai-tham, yi, symbols, math</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: math, symbols, yi, tai-tham</li>
 <li>U+221A SQUARE ROOT: try adding math</li>
 <li>U+221E INFINITY: try adding math</li>
 <li>U+222B INTEGRAL: try adding math</li>
@@ -3615,14 +3611,14 @@ definitions.</p>
 <li>U+2264 LESS-THAN OR EQUAL TO: try adding math</li>
 <li>U+2265 GREATER-THAN OR EQUAL TO: try adding math</li>
 <li>U+2423 OPEN BOX: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: hanifi-rohingya, sharada, cham, kayah-li, coptic, buhid, tirhuta, kharoshthi, yi, dogra, elbasan, kaithi, music, new-tai-lue, tagalog, bassa-vah, armenian, oriya, masaram-gondi, khojki, marchen, psalter-pahlavi, duployan, modi, lao, tagbanwa, gurmukhi, tai-tham, phags-pa, sogdian, hanunoo, soyombo, malayalam, telugu, mende-kikakui, devanagari, thai, syloti-nagri, thaana, mongolian, symbols, manichaean, saurashtra, miao, khudawadi, tai-viet, canadian-aboriginal, newa, adlam, myanmar, tibetan, lepcha, buginese, khmer, math, batak, gunjala-gondi, nko, sundanese, mahajani, syriac, balinese, tifinagh, osage, kannada, limbu, gujarati, zanabazar-square, grantha, mandaic, meetei-mayek, chakma, wancho, takri, javanese, tamil, bhaiksuki, pahawh-hmong, sinhala, tai-le, ahom, caucasian-albanian, hebrew, old-permic, rejang, warang-citi, siddham, brahmi, bengali</li>
+<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: syloti-nagri, grantha, duployan, kharoshthi, chakma, tifinagh, canadian-aboriginal, khojki, mongolian, thaana, symbols, soyombo, marchen, hanunoo, tirhuta, devanagari, manichaean, tai-tham, cham, modi, oriya, tamil, thai, pahawh-hmong, javanese, miao, bengali, sogdian, mende-kikakui, hanifi-rohingya, tagalog, music, telugu, tai-viet, takri, math, nko, balinese, tai-le, buginese, siddham, myanmar, armenian, meetei-mayek, sharada, mahajani, phags-pa, dogra, zanabazar-square, old-permic, mandaic, saurashtra, warang-citi, new-tai-lue, adlam, khudawadi, gurmukhi, elbasan, rejang, limbu, bhaiksuki, syriac, malayalam, lepcha, coptic, sinhala, buhid, brahmi, kaithi, newa, gujarati, batak, bassa-vah, masaram-gondi, sundanese, tibetan, ahom, gunjala-gondi, tagbanwa, hebrew, psalter-pahlavi, yi, kannada, caucasian-albanian, wancho, osage, lao, khmer, kayah-li</li>
 <li>U+29F5 REVERSE SOLIDUS OPERATOR: try adding math</li>
 <li>U+F130 : not included in any glyphset definition</li>
 <li>U+F131 : not included in any glyphset definition</li>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, manichaean, phags-pa</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: yi, phags-pa, manichaean</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
@@ -3672,7 +3668,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥🔥🔥🔥
+    💥💥💥💥
 </span>
 
     
@@ -3700,7 +3696,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Harmattan-SemiBold.ttf
                 
             </summary>
@@ -3709,56 +3705,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@93,-613+0</td>
-<td align="left">uni0647=0+747</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Malay (Arabic)</td>
-<td align="left">zlm_Arab (Malay (Arabic))</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3771,7 +3731,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Harmattan-Regular.ttf
                 
             </summary>
@@ -3780,56 +3740,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@98,-629+0</td>
-<td align="left">uni0647=0+722</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Malay (Arabic)</td>
-<td align="left">zlm_Arab (Malay (Arabic))</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3842,7 +3766,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Harmattan-Bold.ttf
                 
             </summary>
@@ -3851,56 +3775,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@91,-604+0</td>
-<td align="left">uni0647=0+759</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Malay (Arabic)</td>
-<td align="left">zlm_Arab (Malay (Arabic))</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -3913,7 +3801,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Harmattan-Medium.ttf
                 
             </summary>
@@ -3922,56 +3810,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">in Farsi, &quot;saria heh&quot; should use a small yeh above, not hamza; both buffers returned uni0654=0@95,-621+0</td>
-<td align="left">uni0647=0+734</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Malay (Arabic)</td>
-<td align="left">zlm_Arab (Malay (Arabic))</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>

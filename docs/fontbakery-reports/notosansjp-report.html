@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/fontdata_namecheck<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,13 +274,13 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td>8</td>
+        <td>7</td>
         <td>17</td>
         <td>42</td>
         <td>7</td>
-        <td>166</td>
+        <td>164</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -769,7 +769,7 @@ uni0304 (U+0304), uni20DD (U+20DD), uni20DE (U+20DE), uni302A (U+302A), uni302B 
                             <p>The most common width is 1000 among a set of 43 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 521:
-greater, logicalnot, less, equal, plus, minus</p>
+greater, equal, less, plus, minus, logicalnot</p>
 
                             
                              [code: width-outliers]
@@ -780,8 +780,6 @@ greater, logicalnot, less, equal, plus, minus</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1934,8 +1932,6 @@ greater, logicalnot, less, equal, plus, minus</p>
 
     
 
-    
-
             
         
             
@@ -2169,7 +2165,7 @@ subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
 <li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, math, old-permic, todhri, tifinagh, hebrew, canadian-aboriginal, duployan, syriac, tai-le, malayalam</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: malayalam, hebrew, old-permic, syriac, canadian-aboriginal, tifinagh, coptic, todhri, tai-le, math, duployan</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+0391 GREEK CAPITAL LETTER ALPHA: try adding one of: greek, math, elbasan</li>
 <li>U+0392 GREEK CAPITAL LETTER BETA: try adding one of: greek, math, elbasan</li>
@@ -2210,7 +2206,7 @@ definitions.</p>
 <li>U+03BD GREEK SMALL LETTER NU: try adding one of: greek, math</li>
 <li>U+03BE GREEK SMALL LETTER XI: try adding one of: greek, math</li>
 <li>U+03BF GREEK SMALL LETTER OMICRON: try adding one of: greek, math</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, yi, math</li>
 <li>U+03C1 GREEK SMALL LETTER RHO: try adding one of: greek, math</li>
 <li>U+03C2 GREEK SMALL LETTER FINAL SIGMA: try adding one of: greek, math</li>
 <li>U+03C3 GREEK SMALL LETTER SIGMA: try adding one of: greek, math</li>
@@ -2221,8 +2217,8 @@ definitions.</p>
 <li>U+03C8 GREEK SMALL LETTER PSI: try adding one of: greek, math</li>
 <li>U+03C9 GREEK SMALL LETTER OMEGA: try adding one of: greek, math</li>
 <li>U+2003 EM SPACE: try adding nushu</li>
-<li>U+2010 HYPHEN: try adding one of: yi, coptic, kayah-li, kaithi, hebrew, lisu, kharoshthi, syloti-nagri, arabic, sundanese, armenian, sora-sompeng, cham</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, yi, syloti-nagri</li>
+<li>U+2010 HYPHEN: try adding one of: kayah-li, hebrew, cham, kaithi, sora-sompeng, sundanese, syloti-nagri, armenian, coptic, kharoshthi, lisu, yi, arabic</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, syloti-nagri, arabic</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
@@ -2278,14 +2274,14 @@ definitions.</p>
 <li>U+2179 SMALL ROMAN NUMERAL TEN: try adding symbols</li>
 <li>U+217A SMALL ROMAN NUMERAL ELEVEN: try adding symbols</li>
 <li>U+217B SMALL ROMAN NUMERAL TWELVE: try adding symbols</li>
-<li>U+2190 LEFTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2192 RIGHTWARDS ARROW: try adding one of: symbols, math</li>
-<li>U+2194 LEFT RIGHT ARROW: try adding one of: symbols, math</li>
-<li>U+2195 UP DOWN ARROW: try adding one of: symbols, math</li>
-<li>U+2196 NORTH WEST ARROW: try adding one of: symbols, math</li>
-<li>U+2197 NORTH EAST ARROW: try adding one of: symbols, math</li>
-<li>U+2198 SOUTH EAST ARROW: try adding one of: symbols, math</li>
-<li>U+2199 SOUTH WEST ARROW: try adding one of: symbols, math</li>
+<li>U+2190 LEFTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2192 RIGHTWARDS ARROW: try adding one of: math, symbols</li>
+<li>U+2194 LEFT RIGHT ARROW: try adding one of: math, symbols</li>
+<li>U+2195 UP DOWN ARROW: try adding one of: math, symbols</li>
+<li>U+2196 NORTH WEST ARROW: try adding one of: math, symbols</li>
+<li>U+2197 NORTH EAST ARROW: try adding one of: math, symbols</li>
+<li>U+2198 SOUTH EAST ARROW: try adding one of: math, symbols</li>
+<li>U+2199 SOUTH WEST ARROW: try adding one of: math, symbols</li>
 <li>U+21B8 NORTH WEST ARROW TO LONG BAR: try adding math</li>
 <li>U+21B9 LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR: try adding math</li>
 <li>U+21C4 RIGHTWARDS ARROW OVER LEFTWARDS ARROW: try adding math</li>
@@ -2366,7 +2362,7 @@ definitions.</p>
 <li>U+2296 CIRCLED MINUS: try adding math</li>
 <li>U+2297 CIRCLED TIMES: try adding math</li>
 <li>U+2298 CIRCLED DIVISION SLASH: try adding math</li>
-<li>U+2299 CIRCLED DOT OPERATOR: try adding one of: symbols, math</li>
+<li>U+2299 CIRCLED DOT OPERATOR: try adding one of: math, symbols</li>
 <li>U+22A0 SQUARED TIMES: try adding math</li>
 <li>U+22A5 UP TACK: try adding math</li>
 <li>U+22BF RIGHT TRIANGLE: try adding math</li>
@@ -2421,8 +2417,8 @@ definitions.</p>
 <li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: yi, symbols, mongolian</li>
 <li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: yi, symbols, mongolian</li>
 <li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: yi, symbols, mongolian</li>
-<li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: symbols, math</li>
-<li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: symbols, math</li>
+<li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: math, symbols</li>
+<li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: math, symbols</li>
 <li>U+2476 PARENTHESIZED DIGIT THREE: try adding symbols</li>
 <li>U+2477 PARENTHESIZED DIGIT FOUR: try adding symbols</li>
 <li>U+2478 PARENTHESIZED DIGIT FIVE: try adding symbols</li>
@@ -2735,19 +2731,19 @@ definitions.</p>
 <li>U+25AB WHITE SMALL SQUARE: try adding symbols</li>
 <li>U+25B1 WHITE PARALLELOGRAM: try adding symbols</li>
 <li>U+25B2 BLACK UP-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: symbols, math</li>
+<li>U+25B3 WHITE UP-POINTING TRIANGLE: try adding one of: math, symbols</li>
 <li>U+25B6 BLACK RIGHT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: symbols, math</li>
+<li>U+25B7 WHITE RIGHT-POINTING TRIANGLE: try adding one of: math, symbols</li>
 <li>U+25BC BLACK DOWN-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: symbols, math</li>
+<li>U+25BD WHITE DOWN-POINTING TRIANGLE: try adding one of: math, symbols</li>
 <li>U+25C0 BLACK LEFT-POINTING TRIANGLE: try adding symbols</li>
-<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: symbols, math</li>
+<li>U+25C1 WHITE LEFT-POINTING TRIANGLE: try adding one of: math, symbols</li>
 <li>U+25C6 BLACK DIAMOND: try adding symbols</li>
 <li>U+25C7 WHITE DIAMOND: try adding symbols</li>
 <li>U+25C9 FISHEYE: try adding symbols</li>
-<li>U+25CA LOZENGE: try adding one of: symbols, math</li>
+<li>U+25CA LOZENGE: try adding one of: math, symbols</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: siddham, modi, tai-le, newa, gurmukhi, javanese, buhid, oriya, masaram-gondi, tagbanwa, tirhuta, limbu, osage, sogdian, dogra, chakma, manichaean, symbols, khojki, telugu, tagalog, bengali, phags-pa, gujarati, mongolian, hanifi-rohingya, yi, kannada, thai, miao, ahom, hebrew, tai-tham, devanagari, batak, coptic, pahawh-hmong, khmer, marchen, new-tai-lue, wancho, syloti-nagri, buginese, myanmar, gunjala-gondi, mandaic, sinhala, nko, hanunoo, kharoshthi, takri, lao, bassa-vah, kaithi, bhaiksuki, mende-kikakui, soyombo, caucasian-albanian, kayah-li, lepcha, sharada, canadian-aboriginal, tamil, thaana, grantha, meetei-mayek, adlam, balinese, elbasan, saurashtra, psalter-pahlavi, warang-citi, music, old-permic, khudawadi, zanabazar-square, cham, tai-viet, math, tifinagh, mahajani, syriac, armenian, sundanese, malayalam, duployan, rejang, brahmi, tibetan</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: kaithi, mende-kikakui, brahmi, modi, tirhuta, sinhala, thai, elbasan, khudawadi, siddham, hanunoo, cham, chakma, old-permic, manichaean, hanifi-rohingya, armenian, coptic, symbols, grantha, gurmukhi, kharoshthi, bassa-vah, dogra, newa, tai-viet, lepcha, zanabazar-square, tagbanwa, khmer, bengali, marchen, ahom, malayalam, adlam, miao, thaana, canadian-aboriginal, soyombo, tagalog, khojki, psalter-pahlavi, bhaiksuki, osage, balinese, masaram-gondi, tamil, tifinagh, buginese, nko, yi, gujarati, new-tai-lue, saurashtra, syriac, oriya, meetei-mayek, mandaic, sundanese, devanagari, kayah-li, rejang, gunjala-gondi, batak, javanese, myanmar, warang-citi, duployan, lao, mahajani, wancho, takri, phags-pa, limbu, tai-le, hebrew, syloti-nagri, caucasian-albanian, mongolian, tibetan, kannada, music, pahawh-hmong, sharada, sogdian, buhid, math, tai-tham, telugu</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+25D0 CIRCLE WITH LEFT HALF BLACK: try adding symbols</li>
@@ -2788,13 +2784,13 @@ definitions.</p>
 <li>U+2666 BLACK DIAMOND SUIT: try adding symbols</li>
 <li>U+2667 WHITE CLUB SUIT: try adding symbols</li>
 <li>U+2668 HOT SPRINGS: try adding symbols</li>
-<li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
-<li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
-<li>U+266B BEAMED EIGHTH NOTES: try adding one of: symbols, music</li>
-<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: music, symbols, math</li>
-<li>U+266E MUSIC NATURAL SIGN: try adding one of: music, symbols, math</li>
-<li>U+266F MUSIC SHARP SIGN: try adding one of: music, symbols, math</li>
+<li>U+2669 QUARTER NOTE: try adding one of: music, symbols</li>
+<li>U+266A EIGHTH NOTE: try adding one of: music, symbols</li>
+<li>U+266B BEAMED EIGHTH NOTES: try adding one of: music, symbols</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: music, symbols</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: math, music, symbols</li>
+<li>U+266E MUSIC NATURAL SIGN: try adding one of: math, music, symbols</li>
+<li>U+266F MUSIC SHARP SIGN: try adding one of: math, music, symbols</li>
 <li>U+2672 UNIVERSAL RECYCLING SYMBOL: try adding symbols</li>
 <li>U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS: try adding symbols</li>
 <li>U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS: try adding symbols</li>
@@ -2850,7 +2846,7 @@ definitions.</p>
 <li>U+27A1 BLACK RIGHTWARDS ARROW: try adding symbols</li>
 <li>U+2934 ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS: try adding math</li>
 <li>U+2935 ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS: try adding math</li>
-<li>U+29BF CIRCLED BULLET: try adding one of: symbols, math</li>
+<li>U+29BF CIRCLED BULLET: try adding one of: math, symbols</li>
 <li>U+29FA DOUBLE PLUS: try adding math</li>
 <li>U+29FB TRIPLE PLUS: try adding math</li>
 <li>U+2B05 LEFTWARDS BLACK ARROW: try adding symbols</li>
@@ -11825,7 +11821,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -11847,7 +11843,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 NotoSansJP[wght].ttf
                 
             </summary>
@@ -11856,28 +11852,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̂, ◌̃, ◌̆, ◌̉, ◌̛, ◌̣</td>
-<td align="left">vi_Latn (Vietnamese)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>

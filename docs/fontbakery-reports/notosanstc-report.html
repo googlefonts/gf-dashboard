@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_short_segments<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,13 +274,13 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td>8</td>
+        <td>7</td>
         <td>17</td>
         <td>42</td>
         <td>7</td>
-        <td>166</td>
+        <td>164</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -769,7 +769,7 @@ uni0304 (U+0304), uni20DD (U+20DD), uni20DE (U+20DE), uni302A (U+302A), uni302B 
                             <p>The most common width is 1000 among a set of 43 math glyphs.
 The following math glyphs have a different width, though:</p>
 <p>Width = 521:
-greater, plus, minus, equal, less, logicalnot</p>
+equal, greater, plus, minus, less, logicalnot</p>
 
                             
                              [code: width-outliers]
@@ -780,8 +780,6 @@ greater, plus, minus, equal, less, logicalnot</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -2052,8 +2050,6 @@ greater, plus, minus, equal, less, logicalnot</p>
 
     
 
-    
-
             
         
             
@@ -2286,61 +2282,61 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: math, old-permic, tai-le, tifinagh, malayalam, todhri, coptic, duployan, canadian-aboriginal, hebrew, syriac</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, hebrew, old-permic, duployan, coptic, math, tai-le, todhri, canadian-aboriginal, tifinagh, malayalam</li>
 <li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
-<li>U+0391 GREEK CAPITAL LETTER ALPHA: try adding one of: elbasan, greek, math</li>
-<li>U+0392 GREEK CAPITAL LETTER BETA: try adding one of: elbasan, greek, math</li>
-<li>U+0393 GREEK CAPITAL LETTER GAMMA: try adding one of: elbasan, greek, math</li>
-<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: elbasan, greek, math</li>
-<li>U+0395 GREEK CAPITAL LETTER EPSILON: try adding one of: elbasan, greek, math</li>
-<li>U+0396 GREEK CAPITAL LETTER ZETA: try adding one of: elbasan, greek, math</li>
-<li>U+0397 GREEK CAPITAL LETTER ETA: try adding one of: elbasan, greek, math</li>
-<li>U+0398 GREEK CAPITAL LETTER THETA: try adding one of: elbasan, greek, math</li>
-<li>U+0399 GREEK CAPITAL LETTER IOTA: try adding one of: elbasan, greek, math</li>
-<li>U+039A GREEK CAPITAL LETTER KAPPA: try adding one of: elbasan, greek, math</li>
-<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: elbasan, greek, math</li>
-<li>U+039C GREEK CAPITAL LETTER MU: try adding one of: elbasan, greek, math</li>
-<li>U+039D GREEK CAPITAL LETTER NU: try adding one of: elbasan, greek, math</li>
-<li>U+039E GREEK CAPITAL LETTER XI: try adding one of: elbasan, greek, math</li>
-<li>U+039F GREEK CAPITAL LETTER OMICRON: try adding one of: elbasan, greek, math</li>
-<li>U+03A0 GREEK CAPITAL LETTER PI: try adding one of: elbasan, greek, math</li>
-<li>U+03A1 GREEK CAPITAL LETTER RHO: try adding one of: elbasan, greek, math</li>
-<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding one of: elbasan, greek, math</li>
-<li>U+03A4 GREEK CAPITAL LETTER TAU: try adding one of: elbasan, greek, math</li>
-<li>U+03A5 GREEK CAPITAL LETTER UPSILON: try adding one of: elbasan, greek, math</li>
-<li>U+03A6 GREEK CAPITAL LETTER PHI: try adding one of: elbasan, greek, math</li>
-<li>U+03A7 GREEK CAPITAL LETTER CHI: try adding one of: elbasan, greek, math</li>
-<li>U+03A8 GREEK CAPITAL LETTER PSI: try adding one of: elbasan, greek, math</li>
-<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: elbasan, greek, math</li>
-<li>U+03B1 GREEK SMALL LETTER ALPHA: try adding one of: math, greek</li>
-<li>U+03B2 GREEK SMALL LETTER BETA: try adding one of: math, greek</li>
-<li>U+03B3 GREEK SMALL LETTER GAMMA: try adding one of: math, greek</li>
-<li>U+03B4 GREEK SMALL LETTER DELTA: try adding one of: math, greek</li>
-<li>U+03B5 GREEK SMALL LETTER EPSILON: try adding one of: math, greek</li>
-<li>U+03B6 GREEK SMALL LETTER ZETA: try adding one of: math, greek</li>
-<li>U+03B7 GREEK SMALL LETTER ETA: try adding one of: math, greek</li>
-<li>U+03B8 GREEK SMALL LETTER THETA: try adding one of: math, greek</li>
-<li>U+03B9 GREEK SMALL LETTER IOTA: try adding one of: math, greek</li>
-<li>U+03BA GREEK SMALL LETTER KAPPA: try adding one of: math, greek</li>
-<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: math, greek</li>
-<li>U+03BC GREEK SMALL LETTER MU: try adding one of: math, greek</li>
-<li>U+03BD GREEK SMALL LETTER NU: try adding one of: math, greek</li>
-<li>U+03BE GREEK SMALL LETTER XI: try adding one of: math, greek</li>
-<li>U+03BF GREEK SMALL LETTER OMICRON: try adding one of: math, greek</li>
-<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: yi, math, greek</li>
-<li>U+03C1 GREEK SMALL LETTER RHO: try adding one of: math, greek</li>
-<li>U+03C2 GREEK SMALL LETTER FINAL SIGMA: try adding one of: math, greek</li>
-<li>U+03C3 GREEK SMALL LETTER SIGMA: try adding one of: math, greek</li>
-<li>U+03C4 GREEK SMALL LETTER TAU: try adding one of: math, greek</li>
-<li>U+03C5 GREEK SMALL LETTER UPSILON: try adding one of: math, greek</li>
-<li>U+03C6 GREEK SMALL LETTER PHI: try adding one of: math, greek</li>
-<li>U+03C7 GREEK SMALL LETTER CHI: try adding one of: math, greek</li>
-<li>U+03C8 GREEK SMALL LETTER PSI: try adding one of: math, greek</li>
-<li>U+03C9 GREEK SMALL LETTER OMEGA: try adding one of: math, greek</li>
+<li>U+0391 GREEK CAPITAL LETTER ALPHA: try adding one of: greek, math, elbasan</li>
+<li>U+0392 GREEK CAPITAL LETTER BETA: try adding one of: greek, math, elbasan</li>
+<li>U+0393 GREEK CAPITAL LETTER GAMMA: try adding one of: greek, math, elbasan</li>
+<li>U+0394 GREEK CAPITAL LETTER DELTA: try adding one of: greek, math, elbasan</li>
+<li>U+0395 GREEK CAPITAL LETTER EPSILON: try adding one of: greek, math, elbasan</li>
+<li>U+0396 GREEK CAPITAL LETTER ZETA: try adding one of: greek, math, elbasan</li>
+<li>U+0397 GREEK CAPITAL LETTER ETA: try adding one of: greek, math, elbasan</li>
+<li>U+0398 GREEK CAPITAL LETTER THETA: try adding one of: greek, math, elbasan</li>
+<li>U+0399 GREEK CAPITAL LETTER IOTA: try adding one of: greek, math, elbasan</li>
+<li>U+039A GREEK CAPITAL LETTER KAPPA: try adding one of: greek, math, elbasan</li>
+<li>U+039B GREEK CAPITAL LETTER LAMDA: try adding one of: greek, math, elbasan</li>
+<li>U+039C GREEK CAPITAL LETTER MU: try adding one of: greek, math, elbasan</li>
+<li>U+039D GREEK CAPITAL LETTER NU: try adding one of: greek, math, elbasan</li>
+<li>U+039E GREEK CAPITAL LETTER XI: try adding one of: greek, math, elbasan</li>
+<li>U+039F GREEK CAPITAL LETTER OMICRON: try adding one of: greek, math, elbasan</li>
+<li>U+03A0 GREEK CAPITAL LETTER PI: try adding one of: greek, math, elbasan</li>
+<li>U+03A1 GREEK CAPITAL LETTER RHO: try adding one of: greek, math, elbasan</li>
+<li>U+03A3 GREEK CAPITAL LETTER SIGMA: try adding one of: greek, math, elbasan</li>
+<li>U+03A4 GREEK CAPITAL LETTER TAU: try adding one of: greek, math, elbasan</li>
+<li>U+03A5 GREEK CAPITAL LETTER UPSILON: try adding one of: greek, math, elbasan</li>
+<li>U+03A6 GREEK CAPITAL LETTER PHI: try adding one of: greek, math, elbasan</li>
+<li>U+03A7 GREEK CAPITAL LETTER CHI: try adding one of: greek, math, elbasan</li>
+<li>U+03A8 GREEK CAPITAL LETTER PSI: try adding one of: greek, math, elbasan</li>
+<li>U+03A9 GREEK CAPITAL LETTER OMEGA: try adding one of: greek, math, elbasan</li>
+<li>U+03B1 GREEK SMALL LETTER ALPHA: try adding one of: greek, math</li>
+<li>U+03B2 GREEK SMALL LETTER BETA: try adding one of: greek, math</li>
+<li>U+03B3 GREEK SMALL LETTER GAMMA: try adding one of: greek, math</li>
+<li>U+03B4 GREEK SMALL LETTER DELTA: try adding one of: greek, math</li>
+<li>U+03B5 GREEK SMALL LETTER EPSILON: try adding one of: greek, math</li>
+<li>U+03B6 GREEK SMALL LETTER ZETA: try adding one of: greek, math</li>
+<li>U+03B7 GREEK SMALL LETTER ETA: try adding one of: greek, math</li>
+<li>U+03B8 GREEK SMALL LETTER THETA: try adding one of: greek, math</li>
+<li>U+03B9 GREEK SMALL LETTER IOTA: try adding one of: greek, math</li>
+<li>U+03BA GREEK SMALL LETTER KAPPA: try adding one of: greek, math</li>
+<li>U+03BB GREEK SMALL LETTER LAMDA: try adding one of: greek, math</li>
+<li>U+03BC GREEK SMALL LETTER MU: try adding one of: greek, math</li>
+<li>U+03BD GREEK SMALL LETTER NU: try adding one of: greek, math</li>
+<li>U+03BE GREEK SMALL LETTER XI: try adding one of: greek, math</li>
+<li>U+03BF GREEK SMALL LETTER OMICRON: try adding one of: greek, math</li>
+<li>U+03C0 GREEK SMALL LETTER PI: try adding one of: greek, math, yi</li>
+<li>U+03C1 GREEK SMALL LETTER RHO: try adding one of: greek, math</li>
+<li>U+03C2 GREEK SMALL LETTER FINAL SIGMA: try adding one of: greek, math</li>
+<li>U+03C3 GREEK SMALL LETTER SIGMA: try adding one of: greek, math</li>
+<li>U+03C4 GREEK SMALL LETTER TAU: try adding one of: greek, math</li>
+<li>U+03C5 GREEK SMALL LETTER UPSILON: try adding one of: greek, math</li>
+<li>U+03C6 GREEK SMALL LETTER PHI: try adding one of: greek, math</li>
+<li>U+03C7 GREEK SMALL LETTER CHI: try adding one of: greek, math</li>
+<li>U+03C8 GREEK SMALL LETTER PSI: try adding one of: greek, math</li>
+<li>U+03C9 GREEK SMALL LETTER OMEGA: try adding one of: greek, math</li>
 <li>U+2003 EM SPACE: try adding nushu</li>
-<li>U+2010 HYPHEN: try adding one of: kaithi, kharoshthi, sora-sompeng, lisu, armenian, yi, coptic, sundanese, arabic, syloti-nagri, cham, kayah-li, hebrew</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: syloti-nagri, yi, arabic</li>
+<li>U+2010 HYPHEN: try adding one of: hebrew, kayah-li, lisu, arabic, coptic, kaithi, sundanese, syloti-nagri, cham, yi, armenian, kharoshthi, sora-sompeng</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, syloti-nagri, arabic</li>
 <li>U+2012 FIGURE DASH: not included in any glyphset definition</li>
 <li>U+2015 HORIZONTAL BAR: try adding adlam</li>
 <li>U+2016 DOUBLE VERTICAL LINE: try adding math</li>
@@ -2519,26 +2515,26 @@ definitions.</p>
 <li>U+23DA EARTH GROUND: try adding symbols</li>
 <li>U+23DB FUSE: try adding symbols</li>
 <li>U+2423 OPEN BOX: try adding symbols</li>
-<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, yi, symbols</li>
-<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, yi, symbols</li>
-<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, yi, symbols</li>
-<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, yi, symbols</li>
-<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, yi, symbols</li>
-<li>U+2469 CIRCLED NUMBER TEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246A CIRCLED NUMBER ELEVEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246B CIRCLED NUMBER TWELVE: try adding one of: mongolian, yi, symbols</li>
-<li>U+246C CIRCLED NUMBER THIRTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246D CIRCLED NUMBER FOURTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246E CIRCLED NUMBER FIFTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+246F CIRCLED NUMBER SIXTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: mongolian, yi, symbols</li>
-<li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: mongolian, yi, symbols</li>
+<li>U+2460 CIRCLED DIGIT ONE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2461 CIRCLED DIGIT TWO: try adding one of: mongolian, symbols, yi</li>
+<li>U+2462 CIRCLED DIGIT THREE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2463 CIRCLED DIGIT FOUR: try adding one of: mongolian, symbols, yi</li>
+<li>U+2464 CIRCLED DIGIT FIVE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2465 CIRCLED DIGIT SIX: try adding one of: mongolian, symbols, yi</li>
+<li>U+2466 CIRCLED DIGIT SEVEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2467 CIRCLED DIGIT EIGHT: try adding one of: mongolian, symbols, yi</li>
+<li>U+2468 CIRCLED DIGIT NINE: try adding one of: mongolian, symbols, yi</li>
+<li>U+2469 CIRCLED NUMBER TEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246A CIRCLED NUMBER ELEVEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246B CIRCLED NUMBER TWELVE: try adding one of: mongolian, symbols, yi</li>
+<li>U+246C CIRCLED NUMBER THIRTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246D CIRCLED NUMBER FOURTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246E CIRCLED NUMBER FIFTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+246F CIRCLED NUMBER SIXTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2470 CIRCLED NUMBER SEVENTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2471 CIRCLED NUMBER EIGHTEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2472 CIRCLED NUMBER NINETEEN: try adding one of: mongolian, symbols, yi</li>
+<li>U+2473 CIRCLED NUMBER TWENTY: try adding one of: mongolian, symbols, yi</li>
 <li>U+2474 PARENTHESIZED DIGIT ONE: try adding one of: math, symbols</li>
 <li>U+2475 PARENTHESIZED DIGIT TWO: try adding one of: math, symbols</li>
 <li>U+2476 PARENTHESIZED DIGIT THREE: try adding symbols</li>
@@ -2865,7 +2861,7 @@ definitions.</p>
 <li>U+25C9 FISHEYE: try adding symbols</li>
 <li>U+25CA LOZENGE: try adding one of: math, symbols</li>
 <li>U+25CB WHITE CIRCLE: try adding symbols</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: balinese, gujarati, kaithi, tifinagh, sundanese, mende-kikakui, symbols, psalter-pahlavi, wancho, canadian-aboriginal, oriya, marchen, old-permic, armenian, sharada, khojki, limbu, warang-citi, dogra, caucasian-albanian, bengali, sogdian, telugu, batak, zanabazar-square, duployan, grantha, ahom, soyombo, buhid, masaram-gondi, kayah-li, math, tagalog, buginese, kannada, lao, malayalam, newa, saurashtra, syriac, mongolian, music, brahmi, manichaean, javanese, nko, mandaic, tirhuta, adlam, kharoshthi, coptic, phags-pa, rejang, tai-viet, lepcha, hebrew, khudawadi, meetei-mayek, gurmukhi, tagbanwa, tai-tham, syloti-nagri, cham, tibetan, pahawh-hmong, modi, bassa-vah, myanmar, tai-le, thai, tamil, gunjala-gondi, osage, devanagari, elbasan, chakma, hanifi-rohingya, hanunoo, mahajani, bhaiksuki, new-tai-lue, thaana, miao, sinhala, yi, khmer, takri, siddham</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: ahom, miao, hanifi-rohingya, nko, marchen, khojki, mandaic, adlam, bassa-vah, new-tai-lue, elbasan, malayalam, mende-kikakui, warang-citi, syloti-nagri, chakma, sinhala, hanunoo, kayah-li, javanese, duployan, balinese, gunjala-gondi, tagbanwa, hebrew, soyombo, thaana, batak, meetei-mayek, symbols, tirhuta, caucasian-albanian, grantha, gurmukhi, yi, mahajani, bhaiksuki, music, sogdian, rejang, phags-pa, kannada, khmer, buhid, pahawh-hmong, limbu, khudawadi, newa, brahmi, myanmar, tibetan, sharada, dogra, oriya, siddham, canadian-aboriginal, bengali, armenian, kharoshthi, old-permic, masaram-gondi, kaithi, tai-tham, syriac, zanabazar-square, saurashtra, devanagari, psalter-pahlavi, tai-viet, lao, wancho, sundanese, manichaean, cham, lepcha, tai-le, osage, coptic, modi, tamil, tagalog, tifinagh, takri, telugu, math, mongolian, buginese, gujarati, thai</li>
 <li>U+25CE BULLSEYE: try adding symbols</li>
 <li>U+25CF BLACK CIRCLE: try adding symbols</li>
 <li>U+25D0 CIRCLE WITH LEFT HALF BLACK: try adding symbols</li>
@@ -2906,13 +2902,13 @@ definitions.</p>
 <li>U+2666 BLACK DIAMOND SUIT: try adding symbols</li>
 <li>U+2667 WHITE CLUB SUIT: try adding symbols</li>
 <li>U+2668 HOT SPRINGS: try adding symbols</li>
-<li>U+2669 QUARTER NOTE: try adding one of: symbols, music</li>
-<li>U+266A EIGHTH NOTE: try adding one of: symbols, music</li>
-<li>U+266B BEAMED EIGHTH NOTES: try adding one of: symbols, music</li>
-<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: symbols, music</li>
-<li>U+266D MUSIC FLAT SIGN: try adding one of: math, symbols, music</li>
-<li>U+266E MUSIC NATURAL SIGN: try adding one of: math, symbols, music</li>
-<li>U+266F MUSIC SHARP SIGN: try adding one of: math, symbols, music</li>
+<li>U+2669 QUARTER NOTE: try adding one of: music, symbols</li>
+<li>U+266A EIGHTH NOTE: try adding one of: music, symbols</li>
+<li>U+266B BEAMED EIGHTH NOTES: try adding one of: music, symbols</li>
+<li>U+266C BEAMED SIXTEENTH NOTES: try adding one of: music, symbols</li>
+<li>U+266D MUSIC FLAT SIGN: try adding one of: math, music, symbols</li>
+<li>U+266E MUSIC NATURAL SIGN: try adding one of: math, music, symbols</li>
+<li>U+266F MUSIC SHARP SIGN: try adding one of: math, music, symbols</li>
 <li>U+2672 UNIVERSAL RECYCLING SYMBOL: try adding symbols</li>
 <li>U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS: try adding symbols</li>
 <li>U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS: try adding symbols</li>
@@ -3441,10 +3437,10 @@ definitions.</p>
 <li>U+3094 HIRAGANA LETTER VU: try adding one of: japanese, chinese-simplified</li>
 <li>U+3095 HIRAGANA LETTER SMALL KA: try adding one of: japanese, chinese-simplified</li>
 <li>U+3096 HIRAGANA LETTER SMALL KE: try adding one of: japanese, chinese-simplified</li>
-<li>U+3099 COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK: try adding one of: japanese, chinese-simplified, kana-extended</li>
-<li>U+309A COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: try adding one of: japanese, chinese-simplified, kana-extended</li>
-<li>U+309B KATAKANA-HIRAGANA VOICED SOUND MARK: try adding one of: japanese, chinese-simplified, kana-extended</li>
-<li>U+309C KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: try adding one of: japanese, chinese-simplified, kana-extended</li>
+<li>U+3099 COMBINING KATAKANA-HIRAGANA VOICED SOUND MARK: try adding one of: kana-extended, japanese, chinese-simplified</li>
+<li>U+309A COMBINING KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: try adding one of: kana-extended, japanese, chinese-simplified</li>
+<li>U+309B KATAKANA-HIRAGANA VOICED SOUND MARK: try adding one of: kana-extended, japanese, chinese-simplified</li>
+<li>U+309C KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK: try adding one of: kana-extended, japanese, chinese-simplified</li>
 <li>U+309D HIRAGANA ITERATION MARK: try adding one of: japanese, chinese-simplified</li>
 <li>U+309E HIRAGANA VOICED ITERATION MARK: try adding one of: japanese, chinese-simplified</li>
 <li>U+309F HIRAGANA DIGRAPH YORI: try adding one of: japanese, chinese-simplified</li>
@@ -3539,7 +3535,7 @@ definitions.</p>
 <li>U+30F8 KATAKANA LETTER VI: try adding one of: japanese, chinese-simplified</li>
 <li>U+30F9 KATAKANA LETTER VE: try adding one of: japanese, chinese-simplified</li>
 <li>U+30FA KATAKANA LETTER VO: try adding one of: japanese, chinese-simplified</li>
-<li>U+30FB KATAKANA MIDDLE DOT: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+30FB KATAKANA MIDDLE DOT: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK: try adding one of: japanese, chinese-simplified</li>
 <li>U+30FD KATAKANA ITERATION MARK: try adding one of: japanese, chinese-simplified</li>
 <li>U+30FE KATAKANA VOICED ITERATION MARK: try adding one of: japanese, chinese-simplified</li>
@@ -4996,7 +4992,7 @@ definitions.</p>
 <li>U+504D CJK UNIFIED IDEOGRAPH-504D: not included in any glyphset definition</li>
 <li>U+5051 CJK UNIFIED IDEOGRAPH-5051: not included in any glyphset definition</li>
 <li>U+5053 CJK UNIFIED IDEOGRAPH-5053: not included in any glyphset definition</li>
-<li>U+5056 CJK UNIFIED IDEOGRAPH-5056: try adding one of: japanese, chinese-hongkong</li>
+<li>U+5056 CJK UNIFIED IDEOGRAPH-5056: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5057 CJK UNIFIED IDEOGRAPH-5057: not included in any glyphset definition</li>
 <li>U+5058 CJK UNIFIED IDEOGRAPH-5058: try adding chinese-hongkong</li>
 <li>U+505B CJK UNIFIED IDEOGRAPH-505B: not included in any glyphset definition</li>
@@ -5013,7 +5009,7 @@ definitions.</p>
 <li>U+5069 CJK UNIFIED IDEOGRAPH-5069: not included in any glyphset definition</li>
 <li>U+506A CJK UNIFIED IDEOGRAPH-506A: not included in any glyphset definition</li>
 <li>U+506B CJK UNIFIED IDEOGRAPH-506B: not included in any glyphset definition</li>
-<li>U+506C CJK UNIFIED IDEOGRAPH-506C: try adding one of: japanese, chinese-hongkong</li>
+<li>U+506C CJK UNIFIED IDEOGRAPH-506C: try adding one of: chinese-hongkong, japanese</li>
 <li>U+506D CJK UNIFIED IDEOGRAPH-506D: not included in any glyphset definition</li>
 <li>U+506E CJK UNIFIED IDEOGRAPH-506E: not included in any glyphset definition</li>
 <li>U+506F CJK UNIFIED IDEOGRAPH-506F: not included in any glyphset definition</li>
@@ -5174,7 +5170,7 @@ definitions.</p>
 <li>U+51F4 CJK UNIFIED IDEOGRAPH-51F4: not included in any glyphset definition</li>
 <li>U+51F5 CJK UNIFIED IDEOGRAPH-51F5: try adding japanese</li>
 <li>U+51FC CJK UNIFIED IDEOGRAPH-51FC: try adding chinese-simplified</li>
-<li>U+51FE CJK UNIFIED IDEOGRAPH-51FE: try adding one of: japanese, chinese-hongkong</li>
+<li>U+51FE CJK UNIFIED IDEOGRAPH-51FE: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5202 CJK UNIFIED IDEOGRAPH-5202: try adding chinese-simplified</li>
 <li>U+5205 CJK UNIFIED IDEOGRAPH-5205: not included in any glyphset definition</li>
 <li>U+5209 CJK UNIFIED IDEOGRAPH-5209: not included in any glyphset definition</li>
@@ -5198,7 +5194,7 @@ definitions.</p>
 <li>U+523C CJK UNIFIED IDEOGRAPH-523C: not included in any glyphset definition</li>
 <li>U+5244 CJK UNIFIED IDEOGRAPH-5244: try adding japanese</li>
 <li>U+5246 CJK UNIFIED IDEOGRAPH-5246: not included in any glyphset definition</li>
-<li>U+524F CJK UNIFIED IDEOGRAPH-524F: try adding one of: japanese, chinese-hongkong</li>
+<li>U+524F CJK UNIFIED IDEOGRAPH-524F: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5252 CJK UNIFIED IDEOGRAPH-5252: not included in any glyphset definition</li>
 <li>U+5255 CJK UNIFIED IDEOGRAPH-5255: not included in any glyphset definition</li>
 <li>U+5257 CJK UNIFIED IDEOGRAPH-5257: not included in any glyphset definition</li>
@@ -5280,7 +5276,7 @@ definitions.</p>
 <li>U+532D CJK UNIFIED IDEOGRAPH-532D: not included in any glyphset definition</li>
 <li>U+5330 CJK UNIFIED IDEOGRAPH-5330: not included in any glyphset definition</li>
 <li>U+5332 CJK UNIFIED IDEOGRAPH-5332: try adding chinese-hongkong</li>
-<li>U+5333 CJK UNIFIED IDEOGRAPH-5333: try adding one of: japanese, chinese-hongkong</li>
+<li>U+5333 CJK UNIFIED IDEOGRAPH-5333: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5334 CJK UNIFIED IDEOGRAPH-5334: not included in any glyphset definition</li>
 <li>U+5337 CJK UNIFIED IDEOGRAPH-5337: not included in any glyphset definition</li>
 <li>U+5338 CJK UNIFIED IDEOGRAPH-5338: try adding japanese</li>
@@ -5472,7 +5468,7 @@ definitions.</p>
 <li>U+5552 CJK UNIFIED IDEOGRAPH-5552: not included in any glyphset definition</li>
 <li>U+5553 CJK UNIFIED IDEOGRAPH-5553: try adding one of: japanese, chinese-simplified</li>
 <li>U+5557 CJK UNIFIED IDEOGRAPH-5557: try adding japanese</li>
-<li>U+555D CJK UNIFIED IDEOGRAPH-555D: try adding one of: japanese, chinese-hongkong</li>
+<li>U+555D CJK UNIFIED IDEOGRAPH-555D: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5562 CJK UNIFIED IDEOGRAPH-5562: not included in any glyphset definition</li>
 <li>U+5569 CJK UNIFIED IDEOGRAPH-5569: not included in any glyphset definition</li>
 <li>U+556B CJK UNIFIED IDEOGRAPH-556B: try adding chinese-simplified</li>
@@ -5596,7 +5592,7 @@ definitions.</p>
 <li>U+5684 CJK UNIFIED IDEOGRAPH-5684: not included in any glyphset definition</li>
 <li>U+5686 CJK UNIFIED IDEOGRAPH-5686: try adding japanese</li>
 <li>U+5689 CJK UNIFIED IDEOGRAPH-5689: try adding chinese-hongkong</li>
-<li>U+568A CJK UNIFIED IDEOGRAPH-568A: try adding one of: japanese, chinese-hongkong</li>
+<li>U+568A CJK UNIFIED IDEOGRAPH-568A: try adding one of: chinese-hongkong, japanese</li>
 <li>U+568B CJK UNIFIED IDEOGRAPH-568B: try adding chinese-hongkong</li>
 <li>U+568C CJK UNIFIED IDEOGRAPH-568C: not included in any glyphset definition</li>
 <li>U+568D CJK UNIFIED IDEOGRAPH-568D: not included in any glyphset definition</li>
@@ -5689,7 +5685,7 @@ definitions.</p>
 <li>U+577C CJK UNIFIED IDEOGRAPH-577C: not included in any glyphset definition</li>
 <li>U+577D CJK UNIFIED IDEOGRAPH-577D: not included in any glyphset definition</li>
 <li>U+577E CJK UNIFIED IDEOGRAPH-577E: try adding chinese-hongkong</li>
-<li>U+577F CJK UNIFIED IDEOGRAPH-577F: try adding one of: japanese, chinese-hongkong</li>
+<li>U+577F CJK UNIFIED IDEOGRAPH-577F: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5780 CJK UNIFIED IDEOGRAPH-5780: not included in any glyphset definition</li>
 <li>U+5788 CJK UNIFIED IDEOGRAPH-5788: try adding japanese</li>
 <li>U+578A CJK UNIFIED IDEOGRAPH-578A: try adding chinese-hongkong</li>
@@ -5710,8 +5706,8 @@ definitions.</p>
 <li>U+57A4 CJK UNIFIED IDEOGRAPH-57A4: try adding japanese</li>
 <li>U+57A5 CJK UNIFIED IDEOGRAPH-57A5: not included in any glyphset definition</li>
 <li>U+57A7 CJK UNIFIED IDEOGRAPH-57A7: try adding chinese-hongkong</li>
-<li>U+57AA CJK UNIFIED IDEOGRAPH-57AA: try adding one of: japanese, chinese-hongkong</li>
-<li>U+57B3 CJK UNIFIED IDEOGRAPH-57B3: try adding one of: japanese, chinese-hongkong</li>
+<li>U+57AA CJK UNIFIED IDEOGRAPH-57AA: try adding one of: chinese-hongkong, japanese</li>
+<li>U+57B3 CJK UNIFIED IDEOGRAPH-57B3: try adding one of: chinese-hongkong, japanese</li>
 <li>U+57B4 CJK UNIFIED IDEOGRAPH-57B4: try adding chinese-hongkong</li>
 <li>U+57B6 CJK UNIFIED IDEOGRAPH-57B6: not included in any glyphset definition</li>
 <li>U+57B8 CJK UNIFIED IDEOGRAPH-57B8: not included in any glyphset definition</li>
@@ -5866,7 +5862,7 @@ definitions.</p>
 <li>U+58D9 CJK UNIFIED IDEOGRAPH-58D9: try adding japanese</li>
 <li>U+58DA CJK UNIFIED IDEOGRAPH-58DA: not included in any glyphset definition</li>
 <li>U+58DB CJK UNIFIED IDEOGRAPH-58DB: not included in any glyphset definition</li>
-<li>U+58DC CJK UNIFIED IDEOGRAPH-58DC: try adding one of: japanese, chinese-hongkong</li>
+<li>U+58DC CJK UNIFIED IDEOGRAPH-58DC: try adding one of: chinese-hongkong, japanese</li>
 <li>U+58DD CJK UNIFIED IDEOGRAPH-58DD: not included in any glyphset definition</li>
 <li>U+58E0 CJK UNIFIED IDEOGRAPH-58E0: not included in any glyphset definition</li>
 <li>U+58E3 CJK UNIFIED IDEOGRAPH-58E3: not included in any glyphset definition</li>
@@ -6218,7 +6214,7 @@ definitions.</p>
 <li>U+5C1C CJK UNIFIED IDEOGRAPH-5C1C: try adding chinese-hongkong</li>
 <li>U+5C1E CJK UNIFIED IDEOGRAPH-5C1E: not included in any glyphset definition</li>
 <li>U+5C1F CJK UNIFIED IDEOGRAPH-5C1F: not included in any glyphset definition</li>
-<li>U+5C20 CJK UNIFIED IDEOGRAPH-5C20: try adding one of: japanese, chinese-hongkong</li>
+<li>U+5C20 CJK UNIFIED IDEOGRAPH-5C20: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5C23 CJK UNIFIED IDEOGRAPH-5C23: try adding chinese-hongkong</li>
 <li>U+5C25 CJK UNIFIED IDEOGRAPH-5C25: not included in any glyphset definition</li>
 <li>U+5C28 CJK UNIFIED IDEOGRAPH-5C28: try adding japanese</li>
@@ -6435,7 +6431,7 @@ definitions.</p>
 <li>U+5E04 CJK UNIFIED IDEOGRAPH-5E04: not included in any glyphset definition</li>
 <li>U+5E09 CJK UNIFIED IDEOGRAPH-5E09: try adding chinese-hongkong</li>
 <li>U+5E0A CJK UNIFIED IDEOGRAPH-5E0A: not included in any glyphset definition</li>
-<li>U+5E0B CJK UNIFIED IDEOGRAPH-5E0B: try adding one of: japanese, chinese-hongkong</li>
+<li>U+5E0B CJK UNIFIED IDEOGRAPH-5E0B: try adding one of: chinese-hongkong, japanese</li>
 <li>U+5E0E CJK UNIFIED IDEOGRAPH-5E0E: not included in any glyphset definition</li>
 <li>U+5E12 CJK UNIFIED IDEOGRAPH-5E12: try adding chinese-hongkong</li>
 <li>U+5E17 CJK UNIFIED IDEOGRAPH-5E17: not included in any glyphset definition</li>
@@ -6665,7 +6661,7 @@ definitions.</p>
 <li>U+606E CJK UNIFIED IDEOGRAPH-606E: not included in any glyphset definition</li>
 <li>U+6072 CJK UNIFIED IDEOGRAPH-6072: not included in any glyphset definition</li>
 <li>U+6075 CJK UNIFIED IDEOGRAPH-6075: try adding one of: japanese, chinese-simplified</li>
-<li>U+6077 CJK UNIFIED IDEOGRAPH-6077: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6077 CJK UNIFIED IDEOGRAPH-6077: try adding one of: chinese-hongkong, japanese</li>
 <li>U+607E CJK UNIFIED IDEOGRAPH-607E: try adding chinese-hongkong</li>
 <li>U+6080 CJK UNIFIED IDEOGRAPH-6080: not included in any glyphset definition</li>
 <li>U+6081 CJK UNIFIED IDEOGRAPH-6081: try adding japanese</li>
@@ -6752,7 +6748,7 @@ definitions.</p>
 <li>U+613D CJK UNIFIED IDEOGRAPH-613D: try adding japanese</li>
 <li>U+6140 CJK UNIFIED IDEOGRAPH-6140: not included in any glyphset definition</li>
 <li>U+6141 CJK UNIFIED IDEOGRAPH-6141: not included in any glyphset definition</li>
-<li>U+6142 CJK UNIFIED IDEOGRAPH-6142: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6142 CJK UNIFIED IDEOGRAPH-6142: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6145 CJK UNIFIED IDEOGRAPH-6145: not included in any glyphset definition</li>
 <li>U+6146 CJK UNIFIED IDEOGRAPH-6146: not included in any glyphset definition</li>
 <li>U+6149 CJK UNIFIED IDEOGRAPH-6149: not included in any glyphset definition</li>
@@ -6872,14 +6868,14 @@ definitions.</p>
 <li>U+6261 CJK UNIFIED IDEOGRAPH-6261: not included in any glyphset definition</li>
 <li>U+6262 CJK UNIFIED IDEOGRAPH-6262: not included in any glyphset definition</li>
 <li>U+6264 CJK UNIFIED IDEOGRAPH-6264: not included in any glyphset definition</li>
-<li>U+6268 CJK UNIFIED IDEOGRAPH-6268: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6268 CJK UNIFIED IDEOGRAPH-6268: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6272 CJK UNIFIED IDEOGRAPH-6272: not included in any glyphset definition</li>
 <li>U+6274 CJK UNIFIED IDEOGRAPH-6274: not included in any glyphset definition</li>
 <li>U+6277 CJK UNIFIED IDEOGRAPH-6277: not included in any glyphset definition</li>
 <li>U+627B CJK UNIFIED IDEOGRAPH-627B: not included in any glyphset definition</li>
 <li>U+627D CJK UNIFIED IDEOGRAPH-627D: not included in any glyphset definition</li>
 <li>U+6281 CJK UNIFIED IDEOGRAPH-6281: not included in any glyphset definition</li>
-<li>U+6282 CJK UNIFIED IDEOGRAPH-6282: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6282 CJK UNIFIED IDEOGRAPH-6282: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6283 CJK UNIFIED IDEOGRAPH-6283: try adding japanese</li>
 <li>U+6285 CJK UNIFIED IDEOGRAPH-6285: not included in any glyphset definition</li>
 <li>U+6286 CJK UNIFIED IDEOGRAPH-6286: not included in any glyphset definition</li>
@@ -7339,10 +7335,10 @@ definitions.</p>
 <li>U+6710 CJK UNIFIED IDEOGRAPH-6710: try adding chinese-simplified</li>
 <li>U+6712 CJK UNIFIED IDEOGRAPH-6712: not included in any glyphset definition</li>
 <li>U+6713 CJK UNIFIED IDEOGRAPH-6713: not included in any glyphset definition</li>
-<li>U+6716 CJK UNIFIED IDEOGRAPH-6716: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6716 CJK UNIFIED IDEOGRAPH-6716: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6718 CJK UNIFIED IDEOGRAPH-6718: not included in any glyphset definition</li>
 <li>U+6719 CJK UNIFIED IDEOGRAPH-6719: not included in any glyphset definition</li>
-<li>U+671E CJK UNIFIED IDEOGRAPH-671E: try adding one of: japanese, chinese-hongkong</li>
+<li>U+671E CJK UNIFIED IDEOGRAPH-671E: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6720 CJK UNIFIED IDEOGRAPH-6720: not included in any glyphset definition</li>
 <li>U+6721 CJK UNIFIED IDEOGRAPH-6721: not included in any glyphset definition</li>
 <li>U+6722 CJK UNIFIED IDEOGRAPH-6722: not included in any glyphset definition</li>
@@ -7525,7 +7521,7 @@ definitions.</p>
 <li>U+68B2 CJK UNIFIED IDEOGRAPH-68B2: not included in any glyphset definition</li>
 <li>U+68B4 CJK UNIFIED IDEOGRAPH-68B4: not included in any glyphset definition</li>
 <li>U+68B6 CJK UNIFIED IDEOGRAPH-68B6: try adding one of: japanese, chinese-simplified</li>
-<li>U+68B9 CJK UNIFIED IDEOGRAPH-68B9: try adding one of: japanese, chinese-hongkong</li>
+<li>U+68B9 CJK UNIFIED IDEOGRAPH-68B9: try adding one of: chinese-hongkong, japanese</li>
 <li>U+68BD CJK UNIFIED IDEOGRAPH-68BD: try adding chinese-hongkong</li>
 <li>U+68C1 CJK UNIFIED IDEOGRAPH-68C1: try adding chinese-hongkong</li>
 <li>U+68C3 CJK UNIFIED IDEOGRAPH-68C3: not included in any glyphset definition</li>
@@ -7561,7 +7557,7 @@ definitions.</p>
 <li>U+68FC CJK UNIFIED IDEOGRAPH-68FC: not included in any glyphset definition</li>
 <li>U+68FD CJK UNIFIED IDEOGRAPH-68FD: not included in any glyphset definition</li>
 <li>U+6900 CJK UNIFIED IDEOGRAPH-6900: try adding japanese</li>
-<li>U+6901 CJK UNIFIED IDEOGRAPH-6901: try adding one of: japanese, chinese-simplified, chinese-hongkong</li>
+<li>U+6901 CJK UNIFIED IDEOGRAPH-6901: try adding one of: chinese-hongkong, japanese, chinese-simplified</li>
 <li>U+6902 CJK UNIFIED IDEOGRAPH-6902: try adding chinese-simplified</li>
 <li>U+6903 CJK UNIFIED IDEOGRAPH-6903: try adding chinese-hongkong</li>
 <li>U+6904 CJK UNIFIED IDEOGRAPH-6904: try adding japanese</li>
@@ -7578,7 +7574,7 @@ definitions.</p>
 <li>U+6915 CJK UNIFIED IDEOGRAPH-6915: not included in any glyphset definition</li>
 <li>U+6917 CJK UNIFIED IDEOGRAPH-6917: not included in any glyphset definition</li>
 <li>U+6918 CJK UNIFIED IDEOGRAPH-6918: try adding chinese-hongkong</li>
-<li>U+6919 CJK UNIFIED IDEOGRAPH-6919: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6919 CJK UNIFIED IDEOGRAPH-6919: try adding one of: chinese-hongkong, japanese</li>
 <li>U+691A CJK UNIFIED IDEOGRAPH-691A: try adding japanese</li>
 <li>U+691B CJK UNIFIED IDEOGRAPH-691B: try adding japanese</li>
 <li>U+6925 CJK UNIFIED IDEOGRAPH-6925: try adding japanese</li>
@@ -7587,7 +7583,7 @@ definitions.</p>
 <li>U+6932 CJK UNIFIED IDEOGRAPH-6932: not included in any glyphset definition</li>
 <li>U+6933 CJK UNIFIED IDEOGRAPH-6933: not included in any glyphset definition</li>
 <li>U+6935 CJK UNIFIED IDEOGRAPH-6935: not included in any glyphset definition</li>
-<li>U+6936 CJK UNIFIED IDEOGRAPH-6936: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6936 CJK UNIFIED IDEOGRAPH-6936: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6937 CJK UNIFIED IDEOGRAPH-6937: not included in any glyphset definition</li>
 <li>U+6938 CJK UNIFIED IDEOGRAPH-6938: not included in any glyphset definition</li>
 <li>U+693B CJK UNIFIED IDEOGRAPH-693B: not included in any glyphset definition</li>
@@ -7653,7 +7649,7 @@ definitions.</p>
 <li>U+69AF CJK UNIFIED IDEOGRAPH-69AF: not included in any glyphset definition</li>
 <li>U+69B0 CJK UNIFIED IDEOGRAPH-69B0: not included in any glyphset definition</li>
 <li>U+69B1 CJK UNIFIED IDEOGRAPH-69B1: try adding japanese</li>
-<li>U+69B2 CJK UNIFIED IDEOGRAPH-69B2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+69B2 CJK UNIFIED IDEOGRAPH-69B2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+69B5 CJK UNIFIED IDEOGRAPH-69B5: not included in any glyphset definition</li>
 <li>U+69B6 CJK UNIFIED IDEOGRAPH-69B6: not included in any glyphset definition</li>
 <li>U+69B9 CJK UNIFIED IDEOGRAPH-69B9: not included in any glyphset definition</li>
@@ -7686,7 +7682,7 @@ definitions.</p>
 <li>U+69F6 CJK UNIFIED IDEOGRAPH-69F6: not included in any glyphset definition</li>
 <li>U+69F7 CJK UNIFIED IDEOGRAPH-69F7: not included in any glyphset definition</li>
 <li>U+69F8 CJK UNIFIED IDEOGRAPH-69F8: try adding chinese-simplified</li>
-<li>U+69F9 CJK UNIFIED IDEOGRAPH-69F9: try adding one of: japanese, chinese-hongkong</li>
+<li>U+69F9 CJK UNIFIED IDEOGRAPH-69F9: try adding one of: chinese-hongkong, japanese</li>
 <li>U+69FA CJK UNIFIED IDEOGRAPH-69FA: not included in any glyphset definition</li>
 <li>U+69FC CJK UNIFIED IDEOGRAPH-69FC: not included in any glyphset definition</li>
 <li>U+69FE CJK UNIFIED IDEOGRAPH-69FE: not included in any glyphset definition</li>
@@ -7699,7 +7695,7 @@ definitions.</p>
 <li>U+6A08 CJK UNIFIED IDEOGRAPH-6A08: not included in any glyphset definition</li>
 <li>U+6A09 CJK UNIFIED IDEOGRAPH-6A09: not included in any glyphset definition</li>
 <li>U+6A0B CJK UNIFIED IDEOGRAPH-6A0B: try adding one of: japanese, chinese-simplified</li>
-<li>U+6A0C CJK UNIFIED IDEOGRAPH-6A0C: try adding one of: japanese, chinese-hongkong</li>
+<li>U+6A0C CJK UNIFIED IDEOGRAPH-6A0C: try adding one of: chinese-hongkong, japanese</li>
 <li>U+6A0D CJK UNIFIED IDEOGRAPH-6A0D: not included in any glyphset definition</li>
 <li>U+6A0F CJK UNIFIED IDEOGRAPH-6A0F: not included in any glyphset definition</li>
 <li>U+6A14 CJK UNIFIED IDEOGRAPH-6A14: try adding japanese</li>
@@ -8773,7 +8769,7 @@ definitions.</p>
 <li>U+72DA CJK UNIFIED IDEOGRAPH-72DA: not included in any glyphset definition</li>
 <li>U+72DC CJK UNIFIED IDEOGRAPH-72DC: not included in any glyphset definition</li>
 <li>U+72DF CJK UNIFIED IDEOGRAPH-72DF: not included in any glyphset definition</li>
-<li>U+72E2 CJK UNIFIED IDEOGRAPH-72E2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+72E2 CJK UNIFIED IDEOGRAPH-72E2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+72E3 CJK UNIFIED IDEOGRAPH-72E3: not included in any glyphset definition</li>
 <li>U+72E4 CJK UNIFIED IDEOGRAPH-72E4: not included in any glyphset definition</li>
 <li>U+72E6 CJK UNIFIED IDEOGRAPH-72E6: not included in any glyphset definition</li>
@@ -9042,14 +9038,14 @@ definitions.</p>
 <li>U+74DF CJK UNIFIED IDEOGRAPH-74DF: not included in any glyphset definition</li>
 <li>U+74E1 CJK UNIFIED IDEOGRAPH-74E1: not included in any glyphset definition</li>
 <li>U+74E5 CJK UNIFIED IDEOGRAPH-74E5: not included in any glyphset definition</li>
-<li>U+74E7 CJK UNIFIED IDEOGRAPH-74E7: try adding one of: japanese, chinese-hongkong</li>
+<li>U+74E7 CJK UNIFIED IDEOGRAPH-74E7: try adding one of: chinese-hongkong, japanese</li>
 <li>U+74E8 CJK UNIFIED IDEOGRAPH-74E8: not included in any glyphset definition</li>
 <li>U+74EC CJK UNIFIED IDEOGRAPH-74EC: not included in any glyphset definition</li>
-<li>U+74F0 CJK UNIFIED IDEOGRAPH-74F0: try adding one of: japanese, chinese-hongkong</li>
-<li>U+74F1 CJK UNIFIED IDEOGRAPH-74F1: try adding one of: japanese, chinese-hongkong</li>
-<li>U+74F2 CJK UNIFIED IDEOGRAPH-74F2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+74F0 CJK UNIFIED IDEOGRAPH-74F0: try adding one of: chinese-hongkong, japanese</li>
+<li>U+74F1 CJK UNIFIED IDEOGRAPH-74F1: try adding one of: chinese-hongkong, japanese</li>
+<li>U+74F2 CJK UNIFIED IDEOGRAPH-74F2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+74F5 CJK UNIFIED IDEOGRAPH-74F5: not included in any glyphset definition</li>
-<li>U+74F8 CJK UNIFIED IDEOGRAPH-74F8: try adding one of: japanese, chinese-hongkong</li>
+<li>U+74F8 CJK UNIFIED IDEOGRAPH-74F8: try adding one of: chinese-hongkong, japanese</li>
 <li>U+74FB CJK UNIFIED IDEOGRAPH-74FB: not included in any glyphset definition</li>
 <li>U+74FD CJK UNIFIED IDEOGRAPH-74FD: not included in any glyphset definition</li>
 <li>U+74FE CJK UNIFIED IDEOGRAPH-74FE: not included in any glyphset definition</li>
@@ -9057,12 +9053,12 @@ definitions.</p>
 <li>U+7500 CJK UNIFIED IDEOGRAPH-7500: not included in any glyphset definition</li>
 <li>U+7502 CJK UNIFIED IDEOGRAPH-7502: not included in any glyphset definition</li>
 <li>U+7503 CJK UNIFIED IDEOGRAPH-7503: try adding japanese</li>
-<li>U+7505 CJK UNIFIED IDEOGRAPH-7505: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7505 CJK UNIFIED IDEOGRAPH-7505: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7507 CJK UNIFIED IDEOGRAPH-7507: not included in any glyphset definition</li>
 <li>U+7508 CJK UNIFIED IDEOGRAPH-7508: not included in any glyphset definition</li>
 <li>U+750B CJK UNIFIED IDEOGRAPH-750B: not included in any glyphset definition</li>
 <li>U+750D CJK UNIFIED IDEOGRAPH-750D: try adding japanese</li>
-<li>U+750E CJK UNIFIED IDEOGRAPH-750E: try adding one of: japanese, chinese-hongkong</li>
+<li>U+750E CJK UNIFIED IDEOGRAPH-750E: try adding one of: chinese-hongkong, japanese</li>
 <li>U+750F CJK UNIFIED IDEOGRAPH-750F: not included in any glyphset definition</li>
 <li>U+7510 CJK UNIFIED IDEOGRAPH-7510: not included in any glyphset definition</li>
 <li>U+7511 CJK UNIFIED IDEOGRAPH-7511: try adding one of: japanese, chinese-simplified</li>
@@ -9083,10 +9079,10 @@ definitions.</p>
 <li>U+753D CJK UNIFIED IDEOGRAPH-753D: not included in any glyphset definition</li>
 <li>U+753F CJK UNIFIED IDEOGRAPH-753F: not included in any glyphset definition</li>
 <li>U+7542 CJK UNIFIED IDEOGRAPH-7542: not included in any glyphset definition</li>
-<li>U+7546 CJK UNIFIED IDEOGRAPH-7546: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7546 CJK UNIFIED IDEOGRAPH-7546: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7548 CJK UNIFIED IDEOGRAPH-7548: try adding chinese-simplified</li>
 <li>U+754A CJK UNIFIED IDEOGRAPH-754A: try adding one of: japanese, chinese-simplified</li>
-<li>U+754D CJK UNIFIED IDEOGRAPH-754D: try adding one of: japanese, chinese-hongkong</li>
+<li>U+754D CJK UNIFIED IDEOGRAPH-754D: try adding one of: chinese-hongkong, japanese</li>
 <li>U+754E CJK UNIFIED IDEOGRAPH-754E: not included in any glyphset definition</li>
 <li>U+7551 CJK UNIFIED IDEOGRAPH-7551: try adding one of: japanese, chinese-simplified</li>
 <li>U+7553 CJK UNIFIED IDEOGRAPH-7553: try adding chinese-hongkong</li>
@@ -9129,7 +9125,7 @@ definitions.</p>
 <li>U+75C1 CJK UNIFIED IDEOGRAPH-75C1: not included in any glyphset definition</li>
 <li>U+75C3 CJK UNIFIED IDEOGRAPH-75C3: try adding japanese</li>
 <li>U+75C4 CJK UNIFIED IDEOGRAPH-75C4: not included in any glyphset definition</li>
-<li>U+75C8 CJK UNIFIED IDEOGRAPH-75C8: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+75C8 CJK UNIFIED IDEOGRAPH-75C8: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+75CB CJK UNIFIED IDEOGRAPH-75CB: not included in any glyphset definition</li>
 <li>U+75CC CJK UNIFIED IDEOGRAPH-75CC: not included in any glyphset definition</li>
 <li>U+75CE CJK UNIFIED IDEOGRAPH-75CE: not included in any glyphset definition</li>
@@ -9268,7 +9264,7 @@ definitions.</p>
 <li>U+771E CJK UNIFIED IDEOGRAPH-771E: try adding one of: japanese, chinese-simplified</li>
 <li>U+7722 CJK UNIFIED IDEOGRAPH-7722: not included in any glyphset definition</li>
 <li>U+7723 CJK UNIFIED IDEOGRAPH-7723: not included in any glyphset definition</li>
-<li>U+7724 CJK UNIFIED IDEOGRAPH-7724: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7724 CJK UNIFIED IDEOGRAPH-7724: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7726 CJK UNIFIED IDEOGRAPH-7726: try adding one of: japanese, chinese-simplified</li>
 <li>U+7727 CJK UNIFIED IDEOGRAPH-7727: not included in any glyphset definition</li>
 <li>U+772B CJK UNIFIED IDEOGRAPH-772B: try adding chinese-hongkong</li>
@@ -9453,7 +9449,7 @@ definitions.</p>
 <li>U+78AB CJK UNIFIED IDEOGRAPH-78AB: not included in any glyphset definition</li>
 <li>U+78AC CJK UNIFIED IDEOGRAPH-78AC: not included in any glyphset definition</li>
 <li>U+78AD CJK UNIFIED IDEOGRAPH-78AD: not included in any glyphset definition</li>
-<li>U+78AF CJK UNIFIED IDEOGRAPH-78AF: try adding one of: japanese, chinese-hongkong</li>
+<li>U+78AF CJK UNIFIED IDEOGRAPH-78AF: try adding one of: chinese-hongkong, japanese</li>
 <li>U+78B1 CJK UNIFIED IDEOGRAPH-78B1: try adding chinese-simplified</li>
 <li>U+78B2 CJK UNIFIED IDEOGRAPH-78B2: not included in any glyphset definition</li>
 <li>U+78B6 CJK UNIFIED IDEOGRAPH-78B6: not included in any glyphset definition</li>
@@ -9580,7 +9576,7 @@ definitions.</p>
 <li>U+7999 CJK UNIFIED IDEOGRAPH-7999: try adding chinese-hongkong</li>
 <li>U+799A CJK UNIFIED IDEOGRAPH-799A: not included in any glyphset definition</li>
 <li>U+799C CJK UNIFIED IDEOGRAPH-799C: not included in any glyphset definition</li>
-<li>U+799D CJK UNIFIED IDEOGRAPH-799D: try adding one of: japanese, chinese-hongkong</li>
+<li>U+799D CJK UNIFIED IDEOGRAPH-799D: try adding one of: chinese-hongkong, japanese</li>
 <li>U+799F CJK UNIFIED IDEOGRAPH-799F: not included in any glyphset definition</li>
 <li>U+79A0 CJK UNIFIED IDEOGRAPH-79A0: not included in any glyphset definition</li>
 <li>U+79A1 CJK UNIFIED IDEOGRAPH-79A1: not included in any glyphset definition</li>
@@ -9646,8 +9642,8 @@ definitions.</p>
 <li>U+7A30 CJK UNIFIED IDEOGRAPH-7A30: not included in any glyphset definition</li>
 <li>U+7A32 CJK UNIFIED IDEOGRAPH-7A32: try adding one of: japanese, chinese-simplified</li>
 <li>U+7A3A CJK UNIFIED IDEOGRAPH-7A3A: try adding chinese-hongkong</li>
-<li>U+7A3E CJK UNIFIED IDEOGRAPH-7A3E: try adding one of: japanese, chinese-hongkong</li>
-<li>U+7A43 CJK UNIFIED IDEOGRAPH-7A43: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7A3E CJK UNIFIED IDEOGRAPH-7A3E: try adding one of: chinese-hongkong, japanese</li>
+<li>U+7A43 CJK UNIFIED IDEOGRAPH-7A43: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7A44 CJK UNIFIED IDEOGRAPH-7A44: not included in any glyphset definition</li>
 <li>U+7A45 CJK UNIFIED IDEOGRAPH-7A45: not included in any glyphset definition</li>
 <li>U+7A47 CJK UNIFIED IDEOGRAPH-7A47: not included in any glyphset definition</li>
@@ -9674,7 +9670,7 @@ definitions.</p>
 <li>U+7A75 CJK UNIFIED IDEOGRAPH-7A75: not included in any glyphset definition</li>
 <li>U+7A78 CJK UNIFIED IDEOGRAPH-7A78: not included in any glyphset definition</li>
 <li>U+7A7B CJK UNIFIED IDEOGRAPH-7A7B: not included in any glyphset definition</li>
-<li>U+7A7D CJK UNIFIED IDEOGRAPH-7A7D: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7A7D CJK UNIFIED IDEOGRAPH-7A7D: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7A7E CJK UNIFIED IDEOGRAPH-7A7E: not included in any glyphset definition</li>
 <li>U+7A80 CJK UNIFIED IDEOGRAPH-7A80: not included in any glyphset definition</li>
 <li>U+7A83 CJK UNIFIED IDEOGRAPH-7A83: try adding one of: japanese, chinese-simplified</li>
@@ -9709,17 +9705,17 @@ definitions.</p>
 <li>U+7AC0 CJK UNIFIED IDEOGRAPH-7AC0: not included in any glyphset definition</li>
 <li>U+7AC1 CJK UNIFIED IDEOGRAPH-7AC1: not included in any glyphset definition</li>
 <li>U+7AC2 CJK UNIFIED IDEOGRAPH-7AC2: not included in any glyphset definition</li>
-<li>U+7AC3 CJK UNIFIED IDEOGRAPH-7AC3: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7AC3 CJK UNIFIED IDEOGRAPH-7AC3: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7AC8 CJK UNIFIED IDEOGRAPH-7AC8: try adding japanese</li>
 <li>U+7AC9 CJK UNIFIED IDEOGRAPH-7AC9: not included in any glyphset definition</li>
-<li>U+7ACF CJK UNIFIED IDEOGRAPH-7ACF: try adding one of: japanese, chinese-hongkong</li>
-<li>U+7AD3 CJK UNIFIED IDEOGRAPH-7AD3: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7ACF CJK UNIFIED IDEOGRAPH-7ACF: try adding one of: chinese-hongkong, japanese</li>
+<li>U+7AD3 CJK UNIFIED IDEOGRAPH-7AD3: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7AD8 CJK UNIFIED IDEOGRAPH-7AD8: not included in any glyphset definition</li>
 <li>U+7ADA CJK UNIFIED IDEOGRAPH-7ADA: try adding japanese</li>
 <li>U+7ADB CJK UNIFIED IDEOGRAPH-7ADB: try adding chinese-hongkong</li>
 <li>U+7ADC CJK UNIFIED IDEOGRAPH-7ADC: try adding one of: japanese, chinese-simplified</li>
 <li>U+7ADD CJK UNIFIED IDEOGRAPH-7ADD: try adding japanese</li>
-<li>U+7AE2 CJK UNIFIED IDEOGRAPH-7AE2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7AE2 CJK UNIFIED IDEOGRAPH-7AE2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7AE6 CJK UNIFIED IDEOGRAPH-7AE6: try adding japanese</li>
 <li>U+7AE7 CJK UNIFIED IDEOGRAPH-7AE7: try adding chinese-hongkong</li>
 <li>U+7AE9 CJK UNIFIED IDEOGRAPH-7AE9: not included in any glyphset definition</li>
@@ -9781,7 +9777,7 @@ definitions.</p>
 <li>U+7B65 CJK UNIFIED IDEOGRAPH-7B65: try adding japanese</li>
 <li>U+7B66 CJK UNIFIED IDEOGRAPH-7B66: not included in any glyphset definition</li>
 <li>U+7B69 CJK UNIFIED IDEOGRAPH-7B69: not included in any glyphset definition</li>
-<li>U+7B6C CJK UNIFIED IDEOGRAPH-7B6C: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7B6C CJK UNIFIED IDEOGRAPH-7B6C: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7B6D CJK UNIFIED IDEOGRAPH-7B6D: not included in any glyphset definition</li>
 <li>U+7B6F CJK UNIFIED IDEOGRAPH-7B6F: not included in any glyphset definition</li>
 <li>U+7B70 CJK UNIFIED IDEOGRAPH-7B70: try adding japanese</li>
@@ -9916,7 +9912,7 @@ definitions.</p>
 <li>U+7C7F CJK UNIFIED IDEOGRAPH-7C7F: not included in any glyphset definition</li>
 <li>U+7C80 CJK UNIFIED IDEOGRAPH-7C80: not included in any glyphset definition</li>
 <li>U+7C81 CJK UNIFIED IDEOGRAPH-7C81: try adding japanese</li>
-<li>U+7C83 CJK UNIFIED IDEOGRAPH-7C83: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7C83 CJK UNIFIED IDEOGRAPH-7C83: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7C85 CJK UNIFIED IDEOGRAPH-7C85: not included in any glyphset definition</li>
 <li>U+7C86 CJK UNIFIED IDEOGRAPH-7C86: try adding chinese-hongkong</li>
 <li>U+7C88 CJK UNIFIED IDEOGRAPH-7C88: not included in any glyphset definition</li>
@@ -9939,7 +9935,7 @@ definitions.</p>
 <li>U+7CB8 CJK UNIFIED IDEOGRAPH-7CB8: try adding chinese-hongkong</li>
 <li>U+7CBA CJK UNIFIED IDEOGRAPH-7CBA: not included in any glyphset definition</li>
 <li>U+7CBB CJK UNIFIED IDEOGRAPH-7CBB: not included in any glyphset definition</li>
-<li>U+7CC2 CJK UNIFIED IDEOGRAPH-7CC2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7CC2 CJK UNIFIED IDEOGRAPH-7CC2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7CC3 CJK UNIFIED IDEOGRAPH-7CC3: try adding chinese-hongkong</li>
 <li>U+7CC7 CJK UNIFIED IDEOGRAPH-7CC7: try adding chinese-hongkong</li>
 <li>U+7CC8 CJK UNIFIED IDEOGRAPH-7CC8: not included in any glyphset definition</li>
@@ -10072,7 +10068,7 @@ definitions.</p>
 <li>U+7DDC CJK UNIFIED IDEOGRAPH-7DDC: try adding japanese</li>
 <li>U+7DDF CJK UNIFIED IDEOGRAPH-7DDF: not included in any glyphset definition</li>
 <li>U+7DE1 CJK UNIFIED IDEOGRAPH-7DE1: try adding japanese</li>
-<li>U+7DE4 CJK UNIFIED IDEOGRAPH-7DE4: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7DE4 CJK UNIFIED IDEOGRAPH-7DE4: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7DE5 CJK UNIFIED IDEOGRAPH-7DE5: try adding chinese-hongkong</li>
 <li>U+7DE6 CJK UNIFIED IDEOGRAPH-7DE6: not included in any glyphset definition</li>
 <li>U+7DE7 CJK UNIFIED IDEOGRAPH-7DE7: not included in any glyphset definition</li>
@@ -10140,7 +10136,7 @@ definitions.</p>
 <li>U+7E62 CJK UNIFIED IDEOGRAPH-7E62: not included in any glyphset definition</li>
 <li>U+7E63 CJK UNIFIED IDEOGRAPH-7E63: not included in any glyphset definition</li>
 <li>U+7E65 CJK UNIFIED IDEOGRAPH-7E65: try adding chinese-hongkong</li>
-<li>U+7E67 CJK UNIFIED IDEOGRAPH-7E67: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7E67 CJK UNIFIED IDEOGRAPH-7E67: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7E68 CJK UNIFIED IDEOGRAPH-7E68: not included in any glyphset definition</li>
 <li>U+7E6C CJK UNIFIED IDEOGRAPH-7E6C: try adding chinese-hongkong</li>
 <li>U+7E6E CJK UNIFIED IDEOGRAPH-7E6E: not included in any glyphset definition</li>
@@ -10153,7 +10149,7 @@ definitions.</p>
 <li>U+7E78 CJK UNIFIED IDEOGRAPH-7E78: not included in any glyphset definition</li>
 <li>U+7E7A CJK UNIFIED IDEOGRAPH-7E7A: not included in any glyphset definition</li>
 <li>U+7E7B CJK UNIFIED IDEOGRAPH-7E7B: try adding japanese</li>
-<li>U+7E7F CJK UNIFIED IDEOGRAPH-7E7F: try adding one of: japanese, chinese-hongkong</li>
+<li>U+7E7F CJK UNIFIED IDEOGRAPH-7E7F: try adding one of: chinese-hongkong, japanese</li>
 <li>U+7E80 CJK UNIFIED IDEOGRAPH-7E80: not included in any glyphset definition</li>
 <li>U+7E81 CJK UNIFIED IDEOGRAPH-7E81: not included in any glyphset definition</li>
 <li>U+7E86 CJK UNIFIED IDEOGRAPH-7E86: not included in any glyphset definition</li>
@@ -10317,7 +10313,7 @@ definitions.</p>
 <li>U+805C CJK UNIFIED IDEOGRAPH-805C: not included in any glyphset definition</li>
 <li>U+805D CJK UNIFIED IDEOGRAPH-805D: not included in any glyphset definition</li>
 <li>U+8061 CJK UNIFIED IDEOGRAPH-8061: try adding japanese</li>
-<li>U+8062 CJK UNIFIED IDEOGRAPH-8062: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8062 CJK UNIFIED IDEOGRAPH-8062: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8063 CJK UNIFIED IDEOGRAPH-8063: try adding chinese-hongkong</li>
 <li>U+8064 CJK UNIFIED IDEOGRAPH-8064: not included in any glyphset definition</li>
 <li>U+8066 CJK UNIFIED IDEOGRAPH-8066: try adding chinese-hongkong</li>
@@ -10378,7 +10374,7 @@ definitions.</p>
 <li>U+810C CJK UNIFIED IDEOGRAPH-810C: try adding chinese-hongkong</li>
 <li>U+810E CJK UNIFIED IDEOGRAPH-810E: try adding chinese-hongkong</li>
 <li>U+8112 CJK UNIFIED IDEOGRAPH-8112: not included in any glyphset definition</li>
-<li>U+8114 CJK UNIFIED IDEOGRAPH-8114: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+8114 CJK UNIFIED IDEOGRAPH-8114: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+8115 CJK UNIFIED IDEOGRAPH-8115: not included in any glyphset definition</li>
 <li>U+8117 CJK UNIFIED IDEOGRAPH-8117: not included in any glyphset definition</li>
 <li>U+8119 CJK UNIFIED IDEOGRAPH-8119: not included in any glyphset definition</li>
@@ -10434,7 +10430,7 @@ definitions.</p>
 <li>U+818B CJK UNIFIED IDEOGRAPH-818B: not included in any glyphset definition</li>
 <li>U+818C CJK UNIFIED IDEOGRAPH-818C: not included in any glyphset definition</li>
 <li>U+818D CJK UNIFIED IDEOGRAPH-818D: not included in any glyphset definition</li>
-<li>U+8193 CJK UNIFIED IDEOGRAPH-8193: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8193 CJK UNIFIED IDEOGRAPH-8193: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8197 CJK UNIFIED IDEOGRAPH-8197: not included in any glyphset definition</li>
 <li>U+8199 CJK UNIFIED IDEOGRAPH-8199: not included in any glyphset definition</li>
 <li>U+819E CJK UNIFIED IDEOGRAPH-819E: not included in any glyphset definition</li>
@@ -10460,7 +10456,7 @@ definitions.</p>
 <li>U+81C4 CJK UNIFIED IDEOGRAPH-81C4: not included in any glyphset definition</li>
 <li>U+81C5 CJK UNIFIED IDEOGRAPH-81C5: not included in any glyphset definition</li>
 <li>U+81C7 CJK UNIFIED IDEOGRAPH-81C7: not included in any glyphset definition</li>
-<li>U+81C8 CJK UNIFIED IDEOGRAPH-81C8: try adding one of: japanese, chinese-hongkong</li>
+<li>U+81C8 CJK UNIFIED IDEOGRAPH-81C8: try adding one of: chinese-hongkong, japanese</li>
 <li>U+81CC CJK UNIFIED IDEOGRAPH-81CC: not included in any glyphset definition</li>
 <li>U+81D0 CJK UNIFIED IDEOGRAPH-81D0: not included in any glyphset definition</li>
 <li>U+81D1 CJK UNIFIED IDEOGRAPH-81D1: try adding japanese</li>
@@ -10527,7 +10523,7 @@ definitions.</p>
 <li>U+825E CJK UNIFIED IDEOGRAPH-825E: not included in any glyphset definition</li>
 <li>U+825F CJK UNIFIED IDEOGRAPH-825F: try adding japanese</li>
 <li>U+8261 CJK UNIFIED IDEOGRAPH-8261: not included in any glyphset definition</li>
-<li>U+8262 CJK UNIFIED IDEOGRAPH-8262: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8262 CJK UNIFIED IDEOGRAPH-8262: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8263 CJK UNIFIED IDEOGRAPH-8263: not included in any glyphset definition</li>
 <li>U+8264 CJK UNIFIED IDEOGRAPH-8264: try adding japanese</li>
 <li>U+8265 CJK UNIFIED IDEOGRAPH-8265: try adding chinese-hongkong</li>
@@ -10805,7 +10801,7 @@ definitions.</p>
 <li>U+84AA CJK UNIFIED IDEOGRAPH-84AA: not included in any glyphset definition</li>
 <li>U+84AB CJK UNIFIED IDEOGRAPH-84AB: not included in any glyphset definition</li>
 <li>U+84AC CJK UNIFIED IDEOGRAPH-84AC: not included in any glyphset definition</li>
-<li>U+84AD CJK UNIFIED IDEOGRAPH-84AD: try adding one of: japanese, chinese-hongkong</li>
+<li>U+84AD CJK UNIFIED IDEOGRAPH-84AD: try adding one of: chinese-hongkong, japanese</li>
 <li>U+84AE CJK UNIFIED IDEOGRAPH-84AE: not included in any glyphset definition</li>
 <li>U+84AF CJK UNIFIED IDEOGRAPH-84AF: try adding chinese-simplified</li>
 <li>U+84B0 CJK UNIFIED IDEOGRAPH-84B0: not included in any glyphset definition</li>
@@ -10824,13 +10820,13 @@ definitions.</p>
 <li>U+84D2 CJK UNIFIED IDEOGRAPH-84D2: not included in any glyphset definition</li>
 <li>U+84D4 CJK UNIFIED IDEOGRAPH-84D4: not included in any glyphset definition</li>
 <li>U+84D7 CJK UNIFIED IDEOGRAPH-84D7: not included in any glyphset definition</li>
-<li>U+84DA CJK UNIFIED IDEOGRAPH-84DA: try adding one of: japanese, chinese-hongkong</li>
+<li>U+84DA CJK UNIFIED IDEOGRAPH-84DA: try adding one of: chinese-hongkong, japanese</li>
 <li>U+84DB CJK UNIFIED IDEOGRAPH-84DB: not included in any glyphset definition</li>
 <li>U+84DE CJK UNIFIED IDEOGRAPH-84DE: try adding chinese-hongkong</li>
 <li>U+84E1 CJK UNIFIED IDEOGRAPH-84E1: try adding chinese-hongkong</li>
 <li>U+84E2 CJK UNIFIED IDEOGRAPH-84E2: not included in any glyphset definition</li>
 <li>U+84E4 CJK UNIFIED IDEOGRAPH-84E4: try adding chinese-hongkong</li>
-<li>U+84E5 CJK UNIFIED IDEOGRAPH-84E5: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+84E5 CJK UNIFIED IDEOGRAPH-84E5: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+84E7 CJK UNIFIED IDEOGRAPH-84E7: not included in any glyphset definition</li>
 <li>U+84E8 CJK UNIFIED IDEOGRAPH-84E8: not included in any glyphset definition</li>
 <li>U+84E9 CJK UNIFIED IDEOGRAPH-84E9: not included in any glyphset definition</li>
@@ -11005,7 +11001,7 @@ definitions.</p>
 <li>U+860D CJK UNIFIED IDEOGRAPH-860D: try adding chinese-hongkong</li>
 <li>U+860F CJK UNIFIED IDEOGRAPH-860F: try adding chinese-hongkong</li>
 <li>U+8610 CJK UNIFIED IDEOGRAPH-8610: not included in any glyphset definition</li>
-<li>U+8613 CJK UNIFIED IDEOGRAPH-8613: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8613 CJK UNIFIED IDEOGRAPH-8613: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8614 CJK UNIFIED IDEOGRAPH-8614: try adding chinese-hongkong</li>
 <li>U+8616 CJK UNIFIED IDEOGRAPH-8616: try adding one of: japanese, chinese-simplified</li>
 <li>U+8617 CJK UNIFIED IDEOGRAPH-8617: try adding japanese</li>
@@ -11027,7 +11023,7 @@ definitions.</p>
 <li>U+862A CJK UNIFIED IDEOGRAPH-862A: not included in any glyphset definition</li>
 <li>U+862C CJK UNIFIED IDEOGRAPH-862C: not included in any glyphset definition</li>
 <li>U+862E CJK UNIFIED IDEOGRAPH-862E: not included in any glyphset definition</li>
-<li>U+862F CJK UNIFIED IDEOGRAPH-862F: try adding one of: japanese, chinese-hongkong</li>
+<li>U+862F CJK UNIFIED IDEOGRAPH-862F: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8631 CJK UNIFIED IDEOGRAPH-8631: not included in any glyphset definition</li>
 <li>U+8632 CJK UNIFIED IDEOGRAPH-8632: not included in any glyphset definition</li>
 <li>U+8633 CJK UNIFIED IDEOGRAPH-8633: not included in any glyphset definition</li>
@@ -11285,7 +11281,7 @@ definitions.</p>
 <li>U+8809 CJK UNIFIED IDEOGRAPH-8809: not included in any glyphset definition</li>
 <li>U+880B CJK UNIFIED IDEOGRAPH-880B: not included in any glyphset definition</li>
 <li>U+880C CJK UNIFIED IDEOGRAPH-880C: not included in any glyphset definition</li>
-<li>U+880F CJK UNIFIED IDEOGRAPH-880F: try adding one of: japanese, chinese-hongkong</li>
+<li>U+880F CJK UNIFIED IDEOGRAPH-880F: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8810 CJK UNIFIED IDEOGRAPH-8810: not included in any glyphset definition</li>
 <li>U+8813 CJK UNIFIED IDEOGRAPH-8813: not included in any glyphset definition</li>
 <li>U+8816 CJK UNIFIED IDEOGRAPH-8816: try adding japanese</li>
@@ -11317,7 +11313,7 @@ definitions.</p>
 <li>U+883E CJK UNIFIED IDEOGRAPH-883E: not included in any glyphset definition</li>
 <li>U+883F CJK UNIFIED IDEOGRAPH-883F: not included in any glyphset definition</li>
 <li>U+8841 CJK UNIFIED IDEOGRAPH-8841: not included in any glyphset definition</li>
-<li>U+8842 CJK UNIFIED IDEOGRAPH-8842: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8842 CJK UNIFIED IDEOGRAPH-8842: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8843 CJK UNIFIED IDEOGRAPH-8843: not included in any glyphset definition</li>
 <li>U+8845 CJK UNIFIED IDEOGRAPH-8845: try adding chinese-simplified</li>
 <li>U+8846 CJK UNIFIED IDEOGRAPH-8846: try adding one of: japanese, chinese-simplified</li>
@@ -11366,7 +11362,7 @@ definitions.</p>
 <li>U+88AE CJK UNIFIED IDEOGRAPH-88AE: try adding japanese</li>
 <li>U+88B2 CJK UNIFIED IDEOGRAPH-88B2: not included in any glyphset definition</li>
 <li>U+88B4 CJK UNIFIED IDEOGRAPH-88B4: try adding japanese</li>
-<li>U+88B5 CJK UNIFIED IDEOGRAPH-88B5: try adding one of: japanese, chinese-hongkong</li>
+<li>U+88B5 CJK UNIFIED IDEOGRAPH-88B5: try adding one of: chinese-hongkong, japanese</li>
 <li>U+88B6 CJK UNIFIED IDEOGRAPH-88B6: not included in any glyphset definition</li>
 <li>U+88B7 CJK UNIFIED IDEOGRAPH-88B7: try adding japanese</li>
 <li>U+88B8 CJK UNIFIED IDEOGRAPH-88B8: not included in any glyphset definition</li>
@@ -11375,7 +11371,7 @@ definitions.</p>
 <li>U+88BC CJK UNIFIED IDEOGRAPH-88BC: not included in any glyphset definition</li>
 <li>U+88BD CJK UNIFIED IDEOGRAPH-88BD: not included in any glyphset definition</li>
 <li>U+88BE CJK UNIFIED IDEOGRAPH-88BE: not included in any glyphset definition</li>
-<li>U+88BF CJK UNIFIED IDEOGRAPH-88BF: try adding one of: japanese, chinese-hongkong</li>
+<li>U+88BF CJK UNIFIED IDEOGRAPH-88BF: try adding one of: chinese-hongkong, japanese</li>
 <li>U+88C0 CJK UNIFIED IDEOGRAPH-88C0: not included in any glyphset definition</li>
 <li>U+88C5 CJK UNIFIED IDEOGRAPH-88C5: try adding one of: japanese, chinese-simplified</li>
 <li>U+88C7 CJK UNIFIED IDEOGRAPH-88C7: not included in any glyphset definition</li>
@@ -11471,7 +11467,7 @@ definitions.</p>
 <li>U+8973 CJK UNIFIED IDEOGRAPH-8973: not included in any glyphset definition</li>
 <li>U+8974 CJK UNIFIED IDEOGRAPH-8974: try adding japanese</li>
 <li>U+8976 CJK UNIFIED IDEOGRAPH-8976: not included in any glyphset definition</li>
-<li>U+8977 CJK UNIFIED IDEOGRAPH-8977: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8977 CJK UNIFIED IDEOGRAPH-8977: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8979 CJK UNIFIED IDEOGRAPH-8979: not included in any glyphset definition</li>
 <li>U+897A CJK UNIFIED IDEOGRAPH-897A: not included in any glyphset definition</li>
 <li>U+897B CJK UNIFIED IDEOGRAPH-897B: not included in any glyphset definition</li>
@@ -11614,7 +11610,7 @@ definitions.</p>
 <li>U+8AD5 CJK UNIFIED IDEOGRAPH-8AD5: not included in any glyphset definition</li>
 <li>U+8AD8 CJK UNIFIED IDEOGRAPH-8AD8: not included in any glyphset definition</li>
 <li>U+8AD9 CJK UNIFIED IDEOGRAPH-8AD9: not included in any glyphset definition</li>
-<li>U+8ADA CJK UNIFIED IDEOGRAPH-8ADA: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8ADA CJK UNIFIED IDEOGRAPH-8ADA: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8ADD CJK UNIFIED IDEOGRAPH-8ADD: not included in any glyphset definition</li>
 <li>U+8ADE CJK UNIFIED IDEOGRAPH-8ADE: try adding japanese</li>
 <li>U+8ADF CJK UNIFIED IDEOGRAPH-8ADF: not included in any glyphset definition</li>
@@ -11775,7 +11771,7 @@ definitions.</p>
 <li>U+8CBA CJK UNIFIED IDEOGRAPH-8CBA: not included in any glyphset definition</li>
 <li>U+8CBE CJK UNIFIED IDEOGRAPH-8CBE: not included in any glyphset definition</li>
 <li>U+8CCC CJK UNIFIED IDEOGRAPH-8CCC: not included in any glyphset definition</li>
-<li>U+8CCD CJK UNIFIED IDEOGRAPH-8CCD: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8CCD CJK UNIFIED IDEOGRAPH-8CCD: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8CCF CJK UNIFIED IDEOGRAPH-8CCF: not included in any glyphset definition</li>
 <li>U+8CD4 CJK UNIFIED IDEOGRAPH-8CD4: not included in any glyphset definition</li>
 <li>U+8CD5 CJK UNIFIED IDEOGRAPH-8CD5: not included in any glyphset definition</li>
@@ -11989,7 +11985,7 @@ definitions.</p>
 <li>U+8EA9 CJK UNIFIED IDEOGRAPH-8EA9: not included in any glyphset definition</li>
 <li>U+8EAD CJK UNIFIED IDEOGRAPH-8EAD: not included in any glyphset definition</li>
 <li>U+8EB0 CJK UNIFIED IDEOGRAPH-8EB0: try adding japanese</li>
-<li>U+8EB6 CJK UNIFIED IDEOGRAPH-8EB6: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+8EB6 CJK UNIFIED IDEOGRAPH-8EB6: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+8EB9 CJK UNIFIED IDEOGRAPH-8EB9: not included in any glyphset definition</li>
 <li>U+8EBC CJK UNIFIED IDEOGRAPH-8EBC: not included in any glyphset definition</li>
 <li>U+8EBD CJK UNIFIED IDEOGRAPH-8EBD: not included in any glyphset definition</li>
@@ -12079,7 +12075,7 @@ definitions.</p>
 <li>U+8F59 CJK UNIFIED IDEOGRAPH-8F59: not included in any glyphset definition</li>
 <li>U+8F5A CJK UNIFIED IDEOGRAPH-8F5A: not included in any glyphset definition</li>
 <li>U+8F5B CJK UNIFIED IDEOGRAPH-8F5B: not included in any glyphset definition</li>
-<li>U+8F5C CJK UNIFIED IDEOGRAPH-8F5C: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8F5C CJK UNIFIED IDEOGRAPH-8F5C: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8F5D CJK UNIFIED IDEOGRAPH-8F5D: not included in any glyphset definition</li>
 <li>U+8F5E CJK UNIFIED IDEOGRAPH-8F5E: not included in any glyphset definition</li>
 <li>U+8F60 CJK UNIFIED IDEOGRAPH-8F60: not included in any glyphset definition</li>
@@ -12097,7 +12093,7 @@ definitions.</p>
 <li>U+8FB4 CJK UNIFIED IDEOGRAPH-8FB4: not included in any glyphset definition</li>
 <li>U+8FB5 CJK UNIFIED IDEOGRAPH-8FB5: not included in any glyphset definition</li>
 <li>U+8FB6 CJK UNIFIED IDEOGRAPH-8FB6: not included in any glyphset definition</li>
-<li>U+8FB7 CJK UNIFIED IDEOGRAPH-8FB7: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8FB7 CJK UNIFIED IDEOGRAPH-8FB7: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8FB8 CJK UNIFIED IDEOGRAPH-8FB8: try adding chinese-hongkong</li>
 <li>U+8FB9 CJK UNIFIED IDEOGRAPH-8FB9: try adding chinese-simplified</li>
 <li>U+8FBA CJK UNIFIED IDEOGRAPH-8FBA: try adding one of: japanese, chinese-simplified</li>
@@ -12118,7 +12114,7 @@ definitions.</p>
 <li>U+8FD5 CJK UNIFIED IDEOGRAPH-8FD5: not included in any glyphset definition</li>
 <li>U+8FD6 CJK UNIFIED IDEOGRAPH-8FD6: not included in any glyphset definition</li>
 <li>U+8FD7 CJK UNIFIED IDEOGRAPH-8FD7: not included in any glyphset definition</li>
-<li>U+8FDA CJK UNIFIED IDEOGRAPH-8FDA: try adding one of: japanese, chinese-hongkong</li>
+<li>U+8FDA CJK UNIFIED IDEOGRAPH-8FDA: try adding one of: chinese-hongkong, japanese</li>
 <li>U+8FE0 CJK UNIFIED IDEOGRAPH-8FE0: not included in any glyphset definition</li>
 <li>U+8FE1 CJK UNIFIED IDEOGRAPH-8FE1: not included in any glyphset definition</li>
 <li>U+8FE3 CJK UNIFIED IDEOGRAPH-8FE3: not included in any glyphset definition</li>
@@ -12148,7 +12144,7 @@ definitions.</p>
 <li>U+9046 CJK UNIFIED IDEOGRAPH-9046: try adding chinese-hongkong</li>
 <li>U+9049 CJK UNIFIED IDEOGRAPH-9049: try adding japanese</li>
 <li>U+904C CJK UNIFIED IDEOGRAPH-904C: try adding chinese-hongkong</li>
-<li>U+9056 CJK UNIFIED IDEOGRAPH-9056: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9056 CJK UNIFIED IDEOGRAPH-9056: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9058 CJK UNIFIED IDEOGRAPH-9058: try adding japanese</li>
 <li>U+905D CJK UNIFIED IDEOGRAPH-905D: not included in any glyphset definition</li>
 <li>U+9061 CJK UNIFIED IDEOGRAPH-9061: try adding japanese</li>
@@ -12325,10 +12321,10 @@ definitions.</p>
 <li>U+91C5 CJK UNIFIED IDEOGRAPH-91C5: not included in any glyphset definition</li>
 <li>U+91D3 CJK UNIFIED IDEOGRAPH-91D3: not included in any glyphset definition</li>
 <li>U+91D5 CJK UNIFIED IDEOGRAPH-91D5: not included in any glyphset definition</li>
-<li>U+91D6 CJK UNIFIED IDEOGRAPH-91D6: try adding one of: japanese, chinese-hongkong</li>
+<li>U+91D6 CJK UNIFIED IDEOGRAPH-91D6: try adding one of: chinese-hongkong, japanese</li>
 <li>U+91D9 CJK UNIFIED IDEOGRAPH-91D9: not included in any glyphset definition</li>
 <li>U+91DA CJK UNIFIED IDEOGRAPH-91DA: not included in any glyphset definition</li>
-<li>U+91DF CJK UNIFIED IDEOGRAPH-91DF: try adding one of: japanese, chinese-hongkong</li>
+<li>U+91DF CJK UNIFIED IDEOGRAPH-91DF: try adding one of: chinese-hongkong, japanese</li>
 <li>U+91E2 CJK UNIFIED IDEOGRAPH-91E2: not included in any glyphset definition</li>
 <li>U+91E5 CJK UNIFIED IDEOGRAPH-91E5: try adding chinese-hongkong</li>
 <li>U+91E8 CJK UNIFIED IDEOGRAPH-91E8: not included in any glyphset definition</li>
@@ -12520,7 +12516,7 @@ definitions.</p>
 <li>U+9341 CJK UNIFIED IDEOGRAPH-9341: not included in any glyphset definition</li>
 <li>U+9342 CJK UNIFIED IDEOGRAPH-9342: try adding chinese-hongkong</li>
 <li>U+9343 CJK UNIFIED IDEOGRAPH-9343: try adding chinese-hongkong</li>
-<li>U+9344 CJK UNIFIED IDEOGRAPH-9344: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9344 CJK UNIFIED IDEOGRAPH-9344: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9345 CJK UNIFIED IDEOGRAPH-9345: not included in any glyphset definition</li>
 <li>U+9346 CJK UNIFIED IDEOGRAPH-9346: not included in any glyphset definition</li>
 <li>U+9348 CJK UNIFIED IDEOGRAPH-9348: not included in any glyphset definition</li>
@@ -12712,12 +12708,12 @@ definitions.</p>
 <li>U+9475 CJK UNIFIED IDEOGRAPH-9475: try adding japanese</li>
 <li>U+9478 CJK UNIFIED IDEOGRAPH-9478: not included in any glyphset definition</li>
 <li>U+9479 CJK UNIFIED IDEOGRAPH-9479: try adding chinese-simplified</li>
-<li>U+947B CJK UNIFIED IDEOGRAPH-947B: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+947B CJK UNIFIED IDEOGRAPH-947B: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+9480 CJK UNIFIED IDEOGRAPH-9480: not included in any glyphset definition</li>
 <li>U+9481 CJK UNIFIED IDEOGRAPH-9481: try adding japanese</li>
 <li>U+9482 CJK UNIFIED IDEOGRAPH-9482: not included in any glyphset definition</li>
 <li>U+9483 CJK UNIFIED IDEOGRAPH-9483: not included in any glyphset definition</li>
-<li>U+9485 CJK UNIFIED IDEOGRAPH-9485: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+9485 CJK UNIFIED IDEOGRAPH-9485: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+949F CJK UNIFIED IDEOGRAPH-949F: try adding chinese-simplified</li>
 <li>U+94A2 CJK UNIFIED IDEOGRAPH-94A2: try adding chinese-simplified</li>
 <li>U+94C1 CJK UNIFIED IDEOGRAPH-94C1: try adding chinese-simplified</li>
@@ -12737,14 +12733,14 @@ definitions.</p>
 <li>U+958C CJK UNIFIED IDEOGRAPH-958C: not included in any glyphset definition</li>
 <li>U+958D CJK UNIFIED IDEOGRAPH-958D: not included in any glyphset definition</li>
 <li>U+9590 CJK UNIFIED IDEOGRAPH-9590: not included in any glyphset definition</li>
-<li>U+9596 CJK UNIFIED IDEOGRAPH-9596: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9596 CJK UNIFIED IDEOGRAPH-9596: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9597 CJK UNIFIED IDEOGRAPH-9597: try adding chinese-hongkong</li>
 <li>U+9599 CJK UNIFIED IDEOGRAPH-9599: try adding japanese</li>
 <li>U+959B CJK UNIFIED IDEOGRAPH-959B: not included in any glyphset definition</li>
 <li>U+959C CJK UNIFIED IDEOGRAPH-959C: not included in any glyphset definition</li>
 <li>U+959E CJK UNIFIED IDEOGRAPH-959E: not included in any glyphset definition</li>
 <li>U+959F CJK UNIFIED IDEOGRAPH-959F: not included in any glyphset definition</li>
-<li>U+95A0 CJK UNIFIED IDEOGRAPH-95A0: try adding one of: japanese, chinese-hongkong</li>
+<li>U+95A0 CJK UNIFIED IDEOGRAPH-95A0: try adding one of: chinese-hongkong, japanese</li>
 <li>U+95A2 CJK UNIFIED IDEOGRAPH-95A2: try adding one of: japanese, chinese-simplified</li>
 <li>U+95A6 CJK UNIFIED IDEOGRAPH-95A6: not included in any glyphset definition</li>
 <li>U+95A7 CJK UNIFIED IDEOGRAPH-95A7: try adding japanese</li>
@@ -12944,7 +12940,7 @@ definitions.</p>
 <li>U+97B1 CJK UNIFIED IDEOGRAPH-97B1: try adding chinese-hongkong</li>
 <li>U+97B2 CJK UNIFIED IDEOGRAPH-97B2: try adding chinese-hongkong</li>
 <li>U+97B3 CJK UNIFIED IDEOGRAPH-97B3: try adding japanese</li>
-<li>U+97B4 CJK UNIFIED IDEOGRAPH-97B4: try adding one of: japanese, chinese-hongkong</li>
+<li>U+97B4 CJK UNIFIED IDEOGRAPH-97B4: try adding one of: chinese-hongkong, japanese</li>
 <li>U+97B6 CJK UNIFIED IDEOGRAPH-97B6: not included in any glyphset definition</li>
 <li>U+97B7 CJK UNIFIED IDEOGRAPH-97B7: not included in any glyphset definition</li>
 <li>U+97B8 CJK UNIFIED IDEOGRAPH-97B8: try adding chinese-hongkong</li>
@@ -12959,7 +12955,7 @@ definitions.</p>
 <li>U+97C4 CJK UNIFIED IDEOGRAPH-97C4: not included in any glyphset definition</li>
 <li>U+97C5 CJK UNIFIED IDEOGRAPH-97C5: not included in any glyphset definition</li>
 <li>U+97C7 CJK UNIFIED IDEOGRAPH-97C7: not included in any glyphset definition</li>
-<li>U+97C8 CJK UNIFIED IDEOGRAPH-97C8: try adding one of: japanese, chinese-hongkong</li>
+<li>U+97C8 CJK UNIFIED IDEOGRAPH-97C8: try adding one of: chinese-hongkong, japanese</li>
 <li>U+97C9 CJK UNIFIED IDEOGRAPH-97C9: not included in any glyphset definition</li>
 <li>U+97CD CJK UNIFIED IDEOGRAPH-97CD: not included in any glyphset definition</li>
 <li>U+97CE CJK UNIFIED IDEOGRAPH-97CE: not included in any glyphset definition</li>
@@ -12981,7 +12977,7 @@ definitions.</p>
 <li>U+97EE CJK UNIFIED IDEOGRAPH-97EE: try adding japanese</li>
 <li>U+97F0 CJK UNIFIED IDEOGRAPH-97F0: not included in any glyphset definition</li>
 <li>U+97F1 CJK UNIFIED IDEOGRAPH-97F1: not included in any glyphset definition</li>
-<li>U+97F2 CJK UNIFIED IDEOGRAPH-97F2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+97F2 CJK UNIFIED IDEOGRAPH-97F2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+97F5 CJK UNIFIED IDEOGRAPH-97F5: try adding one of: japanese, chinese-simplified</li>
 <li>U+97F8 CJK UNIFIED IDEOGRAPH-97F8: not included in any glyphset definition</li>
 <li>U+97F9 CJK UNIFIED IDEOGRAPH-97F9: not included in any glyphset definition</li>
@@ -13019,7 +13015,7 @@ definitions.</p>
 <li>U+9848 CJK UNIFIED IDEOGRAPH-9848: not included in any glyphset definition</li>
 <li>U+9849 CJK UNIFIED IDEOGRAPH-9849: not included in any glyphset definition</li>
 <li>U+984A CJK UNIFIED IDEOGRAPH-984A: not included in any glyphset definition</li>
-<li>U+984B CJK UNIFIED IDEOGRAPH-984B: try adding one of: japanese, chinese-hongkong</li>
+<li>U+984B CJK UNIFIED IDEOGRAPH-984B: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9850 CJK UNIFIED IDEOGRAPH-9850: not included in any glyphset definition</li>
 <li>U+9851 CJK UNIFIED IDEOGRAPH-9851: not included in any glyphset definition</li>
 <li>U+9852 CJK UNIFIED IDEOGRAPH-9852: not included in any glyphset definition</li>
@@ -13055,7 +13051,7 @@ definitions.</p>
 <li>U+98C0 CJK UNIFIED IDEOGRAPH-98C0: not included in any glyphset definition</li>
 <li>U+98C1 CJK UNIFIED IDEOGRAPH-98C1: not included in any glyphset definition</li>
 <li>U+98C2 CJK UNIFIED IDEOGRAPH-98C2: not included in any glyphset definition</li>
-<li>U+98C3 CJK UNIFIED IDEOGRAPH-98C3: try adding one of: japanese, chinese-hongkong</li>
+<li>U+98C3 CJK UNIFIED IDEOGRAPH-98C3: try adding one of: chinese-hongkong, japanese</li>
 <li>U+98C7 CJK UNIFIED IDEOGRAPH-98C7: not included in any glyphset definition</li>
 <li>U+98C8 CJK UNIFIED IDEOGRAPH-98C8: not included in any glyphset definition</li>
 <li>U+98C9 CJK UNIFIED IDEOGRAPH-98C9: not included in any glyphset definition</li>
@@ -13109,7 +13105,7 @@ definitions.</p>
 <li>U+993C CJK UNIFIED IDEOGRAPH-993C: not included in any glyphset definition</li>
 <li>U+9940 CJK UNIFIED IDEOGRAPH-9940: not included in any glyphset definition</li>
 <li>U+9941 CJK UNIFIED IDEOGRAPH-9941: not included in any glyphset definition</li>
-<li>U+9942 CJK UNIFIED IDEOGRAPH-9942: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9942 CJK UNIFIED IDEOGRAPH-9942: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9947 CJK UNIFIED IDEOGRAPH-9947: not included in any glyphset definition</li>
 <li>U+994A CJK UNIFIED IDEOGRAPH-994A: not included in any glyphset definition</li>
 <li>U+994D CJK UNIFIED IDEOGRAPH-994D: not included in any glyphset definition</li>
@@ -13146,7 +13142,7 @@ definitions.</p>
 <li>U+99B9 CJK UNIFIED IDEOGRAPH-99B9: not included in any glyphset definition</li>
 <li>U+99BA CJK UNIFIED IDEOGRAPH-99BA: not included in any glyphset definition</li>
 <li>U+99BB CJK UNIFIED IDEOGRAPH-99BB: not included in any glyphset definition</li>
-<li>U+99BC CJK UNIFIED IDEOGRAPH-99BC: try adding one of: japanese, chinese-hongkong</li>
+<li>U+99BC CJK UNIFIED IDEOGRAPH-99BC: try adding one of: chinese-hongkong, japanese</li>
 <li>U+99BD CJK UNIFIED IDEOGRAPH-99BD: not included in any glyphset definition</li>
 <li>U+99C2 CJK UNIFIED IDEOGRAPH-99C2: not included in any glyphset definition</li>
 <li>U+99C3 CJK UNIFIED IDEOGRAPH-99C3: not included in any glyphset definition</li>
@@ -13279,7 +13275,7 @@ definitions.</p>
 <li>U+9ADF CJK UNIFIED IDEOGRAPH-9ADF: try adding japanese</li>
 <li>U+9AE0 CJK UNIFIED IDEOGRAPH-9AE0: try adding chinese-hongkong</li>
 <li>U+9AE1 CJK UNIFIED IDEOGRAPH-9AE1: not included in any glyphset definition</li>
-<li>U+9AE2 CJK UNIFIED IDEOGRAPH-9AE2: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9AE2 CJK UNIFIED IDEOGRAPH-9AE2: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9AE3 CJK UNIFIED IDEOGRAPH-9AE3: try adding japanese</li>
 <li>U+9AE7 CJK UNIFIED IDEOGRAPH-9AE7: not included in any glyphset definition</li>
 <li>U+9AEB CJK UNIFIED IDEOGRAPH-9AEB: try adding japanese</li>
@@ -13399,7 +13395,7 @@ definitions.</p>
 <li>U+9BC4 CJK UNIFIED IDEOGRAPH-9BC4: not included in any glyphset definition</li>
 <li>U+9BC6 CJK UNIFIED IDEOGRAPH-9BC6: try adding japanese</li>
 <li>U+9BC8 CJK UNIFIED IDEOGRAPH-9BC8: not included in any glyphset definition</li>
-<li>U+9BCF CJK UNIFIED IDEOGRAPH-9BCF: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9BCF CJK UNIFIED IDEOGRAPH-9BCF: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9BD4 CJK UNIFIED IDEOGRAPH-9BD4: try adding japanese</li>
 <li>U+9BD5 CJK UNIFIED IDEOGRAPH-9BD5: not included in any glyphset definition</li>
 <li>U+9BD7 CJK UNIFIED IDEOGRAPH-9BD7: not included in any glyphset definition</li>
@@ -13427,14 +13423,14 @@ definitions.</p>
 <li>U+9C09 CJK UNIFIED IDEOGRAPH-9C09: try adding japanese</li>
 <li>U+9C0A CJK UNIFIED IDEOGRAPH-9C0A: try adding japanese</li>
 <li>U+9C0B CJK UNIFIED IDEOGRAPH-9C0B: not included in any glyphset definition</li>
-<li>U+9C0C CJK UNIFIED IDEOGRAPH-9C0C: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9C0C CJK UNIFIED IDEOGRAPH-9C0C: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9C0E CJK UNIFIED IDEOGRAPH-9C0E: not included in any glyphset definition</li>
 <li>U+9C10 CJK UNIFIED IDEOGRAPH-9C10: try adding japanese</li>
 <li>U+9C12 CJK UNIFIED IDEOGRAPH-9C12: try adding japanese</li>
 <li>U+9C14 CJK UNIFIED IDEOGRAPH-9C14: try adding japanese</li>
 <li>U+9C15 CJK UNIFIED IDEOGRAPH-9C15: try adding japanese</li>
 <li>U+9C17 CJK UNIFIED IDEOGRAPH-9C17: not included in any glyphset definition</li>
-<li>U+9C1B CJK UNIFIED IDEOGRAPH-9C1B: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9C1B CJK UNIFIED IDEOGRAPH-9C1B: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9C1C CJK UNIFIED IDEOGRAPH-9C1C: not included in any glyphset definition</li>
 <li>U+9C1D CJK UNIFIED IDEOGRAPH-9C1D: not included in any glyphset definition</li>
 <li>U+9C1F CJK UNIFIED IDEOGRAPH-9C1F: not included in any glyphset definition</li>
@@ -13446,7 +13442,7 @@ definitions.</p>
 <li>U+9C28 CJK UNIFIED IDEOGRAPH-9C28: not included in any glyphset definition</li>
 <li>U+9C2B CJK UNIFIED IDEOGRAPH-9C2B: not included in any glyphset definition</li>
 <li>U+9C2C CJK UNIFIED IDEOGRAPH-9C2C: not included in any glyphset definition</li>
-<li>U+9C2F CJK UNIFIED IDEOGRAPH-9C2F: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9C2F CJK UNIFIED IDEOGRAPH-9C2F: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9C33 CJK UNIFIED IDEOGRAPH-9C33: not included in any glyphset definition</li>
 <li>U+9C34 CJK UNIFIED IDEOGRAPH-9C34: not included in any glyphset definition</li>
 <li>U+9C35 CJK UNIFIED IDEOGRAPH-9C35: not included in any glyphset definition</li>
@@ -13537,7 +13533,7 @@ definitions.</p>
 <li>U+9D41 CJK UNIFIED IDEOGRAPH-9D41: try adding japanese</li>
 <li>U+9D42 CJK UNIFIED IDEOGRAPH-9D42: not included in any glyphset definition</li>
 <li>U+9D43 CJK UNIFIED IDEOGRAPH-9D43: not included in any glyphset definition</li>
-<li>U+9D44 CJK UNIFIED IDEOGRAPH-9D44: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9D44 CJK UNIFIED IDEOGRAPH-9D44: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9D45 CJK UNIFIED IDEOGRAPH-9D45: not included in any glyphset definition</li>
 <li>U+9D49 CJK UNIFIED IDEOGRAPH-9D49: try adding chinese-hongkong</li>
 <li>U+9D4A CJK UNIFIED IDEOGRAPH-9D4A: not included in any glyphset definition</li>
@@ -13710,7 +13706,7 @@ definitions.</p>
 <li>U+9E90 CJK UNIFIED IDEOGRAPH-9E90: not included in any glyphset definition</li>
 <li>U+9E91 CJK UNIFIED IDEOGRAPH-9E91: try adding japanese</li>
 <li>U+9E94 CJK UNIFIED IDEOGRAPH-9E94: not included in any glyphset definition</li>
-<li>U+9E95 CJK UNIFIED IDEOGRAPH-9E95: try adding one of: japanese, chinese-hongkong</li>
+<li>U+9E95 CJK UNIFIED IDEOGRAPH-9E95: try adding one of: chinese-hongkong, japanese</li>
 <li>U+9E96 CJK UNIFIED IDEOGRAPH-9E96: not included in any glyphset definition</li>
 <li>U+9E98 CJK UNIFIED IDEOGRAPH-9E98: try adding chinese-hongkong</li>
 <li>U+9E99 CJK UNIFIED IDEOGRAPH-9E99: not included in any glyphset definition</li>
@@ -13770,7 +13766,7 @@ definitions.</p>
 <li>U+9EFB CJK UNIFIED IDEOGRAPH-9EFB: try adding japanese</li>
 <li>U+9EFC CJK UNIFIED IDEOGRAPH-9EFC: try adding japanese</li>
 <li>U+9EFD CJK UNIFIED IDEOGRAPH-9EFD: try adding japanese</li>
-<li>U+9EFE CJK UNIFIED IDEOGRAPH-9EFE: try adding one of: chinese-simplified, chinese-hongkong</li>
+<li>U+9EFE CJK UNIFIED IDEOGRAPH-9EFE: try adding one of: chinese-hongkong, chinese-simplified</li>
 <li>U+9F00 CJK UNIFIED IDEOGRAPH-9F00: not included in any glyphset definition</li>
 <li>U+9F01 CJK UNIFIED IDEOGRAPH-9F01: not included in any glyphset definition</li>
 <li>U+9F02 CJK UNIFIED IDEOGRAPH-9F02: try adding chinese-hongkong</li>
@@ -13986,13 +13982,13 @@ definitions.</p>
 <li>U+FE3A PRESENTATION FORM FOR VERTICAL RIGHT TORTOISE SHELL BRACKET: not included in any glyphset definition</li>
 <li>U+FE3B PRESENTATION FORM FOR VERTICAL LEFT BLACK LENTICULAR BRACKET: not included in any glyphset definition</li>
 <li>U+FE3C PRESENTATION FORM FOR VERTICAL RIGHT BLACK LENTICULAR BRACKET: not included in any glyphset definition</li>
-<li>U+FE3D PRESENTATION FORM FOR VERTICAL LEFT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, mongolian</li>
-<li>U+FE3E PRESENTATION FORM FOR VERTICAL RIGHT DOUBLE ANGLE BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE3D PRESENTATION FORM FOR VERTICAL LEFT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified</li>
+<li>U+FE3E PRESENTATION FORM FOR VERTICAL RIGHT DOUBLE ANGLE BRACKET: try adding one of: mongolian, chinese-simplified</li>
 <li>U+FE3F PRESENTATION FORM FOR VERTICAL LEFT ANGLE BRACKET: try adding chinese-simplified</li>
 <li>U+FE40 PRESENTATION FORM FOR VERTICAL RIGHT ANGLE BRACKET: try adding chinese-simplified</li>
-<li>U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET: try adding one of: mongolian, chinese-simplified</li>
 <li>U+FE42 PRESENTATION FORM FOR VERTICAL RIGHT CORNER BRACKET: try adding mongolian</li>
-<li>U+FE43 PRESENTATION FORM FOR VERTICAL LEFT WHITE CORNER BRACKET: try adding one of: chinese-simplified, mongolian</li>
+<li>U+FE43 PRESENTATION FORM FOR VERTICAL LEFT WHITE CORNER BRACKET: try adding one of: mongolian, chinese-simplified</li>
 <li>U+FE44 PRESENTATION FORM FOR VERTICAL RIGHT WHITE CORNER BRACKET: try adding mongolian</li>
 <li>U+FE45 SESAME DOT: not included in any glyphset definition</li>
 <li>U+FE46 WHITE SESAME DOT: not included in any glyphset definition</li>
@@ -14031,21 +14027,21 @@ definitions.</p>
 <li>U+FE69 SMALL DOLLAR SIGN: not included in any glyphset definition</li>
 <li>U+FE6A SMALL PERCENT SIGN: not included in any glyphset definition</li>
 <li>U+FE6B SMALL COMMERCIAL AT: not included in any glyphset definition</li>
-<li>U+FF01 FULLWIDTH EXCLAMATION MARK: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF01 FULLWIDTH EXCLAMATION MARK: try adding one of: japanese, yi, chinese-simplified</li>
+<li>U+FF02 FULLWIDTH QUOTATION MARK: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF03 FULLWIDTH NUMBER SIGN: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF04 FULLWIDTH DOLLAR SIGN: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF05 FULLWIDTH PERCENT SIGN: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF06 FULLWIDTH AMPERSAND: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF07 FULLWIDTH APOSTROPHE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF08 FULLWIDTH LEFT PARENTHESIS: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF09 FULLWIDTH RIGHT PARENTHESIS: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF08 FULLWIDTH LEFT PARENTHESIS: try adding one of: japanese, yi, chinese-simplified</li>
+<li>U+FF09 FULLWIDTH RIGHT PARENTHESIS: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF0A FULLWIDTH ASTERISK: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF0B FULLWIDTH PLUS SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0C FULLWIDTH COMMA: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF0C FULLWIDTH COMMA: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF0D FULLWIDTH HYPHEN-MINUS: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF0E FULLWIDTH FULL STOP: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF0F FULLWIDTH SOLIDUS: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF0E FULLWIDTH FULL STOP: try adding one of: japanese, yi, chinese-simplified</li>
+<li>U+FF0F FULLWIDTH SOLIDUS: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF10 FULLWIDTH DIGIT ZERO: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF11 FULLWIDTH DIGIT ONE: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF12 FULLWIDTH DIGIT TWO: try adding one of: japanese, chinese-simplified</li>
@@ -14056,12 +14052,12 @@ definitions.</p>
 <li>U+FF17 FULLWIDTH DIGIT SEVEN: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF18 FULLWIDTH DIGIT EIGHT: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF19 FULLWIDTH DIGIT NINE: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1A FULLWIDTH COLON: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF1B FULLWIDTH SEMICOLON: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF1A FULLWIDTH COLON: try adding one of: japanese, yi, chinese-simplified</li>
+<li>U+FF1B FULLWIDTH SEMICOLON: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF1C FULLWIDTH LESS-THAN SIGN: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF1D FULLWIDTH EQUALS SIGN: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF1E FULLWIDTH GREATER-THAN SIGN: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF1F FULLWIDTH QUESTION MARK: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF1F FULLWIDTH QUESTION MARK: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF20 FULLWIDTH COMMERCIAL AT: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF21 FULLWIDTH LATIN CAPITAL LETTER A: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF22 FULLWIDTH LATIN CAPITAL LETTER B: try adding one of: japanese, chinese-simplified</li>
@@ -14089,9 +14085,9 @@ definitions.</p>
 <li>U+FF38 FULLWIDTH LATIN CAPITAL LETTER X: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF39 FULLWIDTH LATIN CAPITAL LETTER Y: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF3A FULLWIDTH LATIN CAPITAL LETTER Z: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3B FULLWIDTH LEFT SQUARE BRACKET: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF3B FULLWIDTH LEFT SQUARE BRACKET: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF3C FULLWIDTH REVERSE SOLIDUS: try adding one of: japanese, chinese-simplified</li>
-<li>U+FF3D FULLWIDTH RIGHT SQUARE BRACKET: try adding one of: japanese, chinese-simplified, yi</li>
+<li>U+FF3D FULLWIDTH RIGHT SQUARE BRACKET: try adding one of: japanese, yi, chinese-simplified</li>
 <li>U+FF3E FULLWIDTH CIRCUMFLEX ACCENT: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF3F FULLWIDTH LOW LINE: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF40 FULLWIDTH GRAVE ACCENT: try adding one of: japanese, chinese-simplified</li>
@@ -14121,10 +14117,10 @@ definitions.</p>
 <li>U+FF58 FULLWIDTH LATIN SMALL LETTER X: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF59 FULLWIDTH LATIN SMALL LETTER Y: try adding one of: japanese, chinese-simplified</li>
 <li>U+FF5A FULLWIDTH LATIN SMALL LETTER Z: try adding japanese</li>
-<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: japanese, chinese-simplified, math, yi</li>
-<li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: japanese, chinese-simplified, yi</li>
-<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: japanese, chinese-simplified, math, yi</li>
-<li>U+FF5E FULLWIDTH TILDE: try adding one of: chinese-simplified, yi</li>
+<li>U+FF5B FULLWIDTH LEFT CURLY BRACKET: try adding one of: math, japanese, yi, chinese-simplified</li>
+<li>U+FF5C FULLWIDTH VERTICAL LINE: try adding one of: japanese, yi, chinese-simplified</li>
+<li>U+FF5D FULLWIDTH RIGHT CURLY BRACKET: try adding one of: math, japanese, yi, chinese-simplified</li>
+<li>U+FF5E FULLWIDTH TILDE: try adding one of: yi, chinese-simplified</li>
 <li>U+FF5F FULLWIDTH LEFT WHITE PARENTHESIS: not included in any glyphset definition</li>
 <li>U+FF60 FULLWIDTH RIGHT WHITE PARENTHESIS: not included in any glyphset definition</li>
 <li>U+FF61 HALFWIDTH IDEOGRAPHIC FULL STOP: try adding yi</li>
@@ -16236,7 +16232,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -16258,7 +16254,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 NotoSansTC[wght].ttf
                 
             </summary>
@@ -16267,28 +16263,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_TransLatin_Arabic glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌̂, ◌̃, ◌̆, ◌̉, ◌̛, ◌̣</td>
-<td align="left">vi_Latn (Vietnamese)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
