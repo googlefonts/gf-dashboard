@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_colinear_vectors<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/outline_alignment_miss<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,18 +274,18 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
-        <td>1</td>
+        <td>3</td>
         <td>0</td>
-        <td>4</td>
-        <td>20</td>
+        <td>3</td>
+        <td>19</td>
         <td>55</td>
         <td>8</td>
-        <td>152</td>
+        <td>150</td>
     </tr>
     <tr>
+        <td>1%</td>
         <td>0%</td>
-        <td>0%</td>
-        <td>2%</td>
+        <td>1%</td>
         <td>8%</td>
         <td>23%</td>
         <td>3%</td>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
                 <h2>OpenType Specification Checks</h2>
@@ -842,7 +842,7 @@ uni003E</p>
 <p>Width = 399:
 uni00AC</p>
 <p>Width = 579:
-divide, multiply, plusminus</p>
+divide, plusminus, multiply</p>
 <p>Width = 375:
 minus</p>
 
@@ -855,8 +855,6 @@ minus</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1036,8 +1034,6 @@ minus</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1301,13 +1297,13 @@ definitions.</p>
 <ul>
 <li>U+007F : try adding symbols</li>
 <li>U+017F LATIN SMALL LETTER LONG S: try adding latin-ext</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, cherokee, coptic</li>
-<li>U+0305 COMBINING OVERLINE: try adding one of: gothic, elbasan, math, glagolitic, coptic</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, tifinagh, cherokee</li>
+<li>U+0305 COMBINING OVERLINE: try adding one of: elbasan, math, glagolitic, gothic, coptic</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: syriac, malayalam, canadian-aboriginal, todhri, hebrew, math, old-permic, duployan, tai-le, tifinagh, coptic</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, hebrew, math, duployan, todhri, syriac, tifinagh, malayalam, old-permic, coptic, canadian-aboriginal</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
-<li>U+0311 COMBINING INVERTED BREVE: try adding one of: todhri, coptic</li>
+<li>U+0311 COMBINING INVERTED BREVE: try adding one of: coptic, todhri</li>
 <li>U+0327 COMBINING CEDILLA: try adding math</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
 <li>U+0332 COMBINING LOW LINE: try adding math</li>
@@ -1330,17 +1326,17 @@ definitions.</p>
 <li>U+2007 FIGURE SPACE: try adding symbols2</li>
 <li>U+2008 PUNCTUATION SPACE: try adding symbols2</li>
 <li>U+200A HAIR SPACE: try adding symbols2</li>
-<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: kaithi, hanifi-rohingya, new-tai-lue, dogra, siddham, hatran, hebrew, mahajani, saurashtra, bengali, khmer, syloti-nagri, cham, warang-citi, duployan, grantha, pahawh-hmong, kannada, lepcha, modi, psalter-pahlavi, gujarati, hanunoo, arabic, newa, tai-tham, khudawadi, avestan, mongolian, batak, tagbanwa, kharoshthi, myanmar, javanese, thai, zanabazar-square, telugu, syriac, malayalam, buginese, tagalog, gurmukhi, buhid, rejang, tibetan, sundanese, tai-le, masaram-gondi, brahmi, tamil, sharada, tifinagh, mandaic, balinese, lao, meetei-mayek, tai-viet, tirhuta, chakma, khojki, devanagari, nko, oriya, sogdian, limbu, kayah-li, takri, phags-pa, bhaiksuki, sinhala, gunjala-gondi, thaana, manichaean, yi</li>
-<li>U+200D ZERO WIDTH JOINER: try adding one of: kaithi, hanifi-rohingya, new-tai-lue, dogra, siddham, hebrew, mahajani, saurashtra, bengali, khmer, syloti-nagri, cham, warang-citi, duployan, grantha, pahawh-hmong, kannada, lepcha, modi, psalter-pahlavi, gujarati, hanunoo, arabic, newa, tai-tham, khudawadi, avestan, mongolian, batak, tagbanwa, kharoshthi, myanmar, javanese, thai, zanabazar-square, telugu, syriac, malayalam, buginese, tagalog, gurmukhi, buhid, rejang, tibetan, sundanese, tai-le, masaram-gondi, brahmi, tamil, sharada, tifinagh, mandaic, balinese, lao, meetei-mayek, old-hungarian, tai-viet, tirhuta, chakma, khojki, devanagari, nko, oriya, sogdian, limbu, kayah-li, takri, phags-pa, bhaiksuki, sinhala, gunjala-gondi, thaana, manichaean, yi</li>
-<li>U+200E LEFT-TO-RIGHT MARK: try adding one of: syriac, arabic, nko, hebrew, phags-pa, thaana</li>
-<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: syriac, nko, hebrew, phags-pa, thaana</li>
-<li>U+2010 HYPHEN: try adding one of: armenian, arabic, kaithi, yi, hebrew, sora-sompeng, syloti-nagri, kayah-li, cham, sundanese, kharoshthi, coptic, lisu</li>
-<li>U+2011 NON-BREAKING HYPHEN: try adding one of: arabic, syloti-nagri, yi</li>
-<li>U+2020 DAGGER: try adding one of: adlam, latin-ext</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: khmer, thai, hanifi-rohingya, chakma, rejang, javanese, duployan, mahajani, gujarati, tirhuta, syriac, nko, brahmi, new-tai-lue, kaithi, takri, gunjala-gondi, kannada, phags-pa, hanunoo, newa, balinese, sharada, thaana, modi, tai-le, yi, meetei-mayek, arabic, siddham, tibetan, bhaiksuki, avestan, myanmar, syloti-nagri, pahawh-hmong, batak, sinhala, bengali, manichaean, masaram-gondi, sogdian, saurashtra, dogra, khudawadi, malayalam, tagalog, cham, limbu, tai-viet, lepcha, grantha, tagbanwa, mongolian, kharoshthi, oriya, buhid, hebrew, tai-tham, lao, telugu, hatran, tifinagh, kayah-li, zanabazar-square, gurmukhi, khojki, psalter-pahlavi, sundanese, buginese, tamil, warang-citi, devanagari, mandaic</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: khmer, thai, hanifi-rohingya, chakma, rejang, javanese, duployan, mahajani, gujarati, tirhuta, syriac, nko, brahmi, new-tai-lue, kaithi, takri, gunjala-gondi, kannada, phags-pa, hanunoo, newa, balinese, sharada, thaana, modi, tai-le, yi, meetei-mayek, arabic, siddham, tibetan, bhaiksuki, avestan, myanmar, syloti-nagri, pahawh-hmong, batak, sinhala, bengali, manichaean, masaram-gondi, sogdian, saurashtra, dogra, khudawadi, malayalam, tagalog, old-hungarian, cham, limbu, tai-viet, lepcha, grantha, tagbanwa, mongolian, kharoshthi, oriya, buhid, hebrew, tai-tham, lao, telugu, tifinagh, kayah-li, zanabazar-square, gurmukhi, khojki, psalter-pahlavi, sundanese, buginese, tamil, warang-citi, devanagari, mandaic</li>
+<li>U+200E LEFT-TO-RIGHT MARK: try adding one of: thaana, hebrew, syriac, nko, arabic, phags-pa</li>
+<li>U+200F RIGHT-TO-LEFT MARK: try adding one of: thaana, hebrew, syriac, nko, phags-pa</li>
+<li>U+2010 HYPHEN: try adding one of: kharoshthi, hebrew, sora-sompeng, yi, kayah-li, arabic, cham, kaithi, sundanese, coptic, armenian, lisu, syloti-nagri</li>
+<li>U+2011 NON-BREAKING HYPHEN: try adding one of: yi, arabic, syloti-nagri</li>
+<li>U+2020 DAGGER: try adding one of: latin-ext, adlam</li>
 <li>U+2024 ONE DOT LEADER: try adding armenian</li>
 <li>U+2025 TWO DOT LEADER: try adding phags-pa</li>
 <li>U+2027 HYPHENATION POINT: not included in any glyphset definition</li>
-<li>U+202F NARROW NO-BREAK SPACE: try adding one of: mongolian, phags-pa, yi</li>
+<li>U+202F NARROW NO-BREAK SPACE: try adding one of: phags-pa, yi, mongolian</li>
 <li>U+203B REFERENCE MARK: not included in any glyphset definition</li>
 <li>U+2052 COMMERCIAL MINUS SIGN: not included in any glyphset definition</li>
 <li>U+2053 SWUNG DASH: try adding coptic</li>
@@ -1348,17 +1344,17 @@ definitions.</p>
 <li>U+2058 FOUR DOT PUNCTUATION: try adding coptic</li>
 <li>U+2059 FIVE DOT PUNCTUATION: try adding coptic</li>
 <li>U+205C DOTTED CROSS: not included in any glyphset definition</li>
-<li>U+205D TRICOLON: try adding one of: meroitic-hieroglyphs, carian, old-hungarian, meroitic</li>
+<li>U+205D TRICOLON: try adding one of: meroitic, carian, old-hungarian, meroitic-hieroglyphs</li>
 <li>U+205E VERTICAL FOUR DOTS: try adding old-hungarian</li>
 <li>U+2060 WORD JOINER: not included in any glyphset definition</li>
 <li>U+2074 SUPERSCRIPT FOUR: try adding math</li>
 <li>U+20DD COMBINING ENCLOSING CIRCLE: try adding symbols</li>
-<li>U+2219 BULLET OPERATOR: try adding one of: math, tai-tham, symbols, yi</li>
+<li>U+2219 BULLET OPERATOR: try adding one of: yi, tai-tham, symbols, math</li>
 <li>U+223B HOMOTHETIC: try adding math</li>
 <li>U+223C TILDE OPERATOR: try adding math</li>
 <li>U+223D REVERSED TILDE: try adding math</li>
 <li>U+2241 NOT TILDE: try adding math</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: armenian, dogra, zanabazar-square, malayalam, tagalog, rejang, sundanese, masaram-gondi, balinese, oriya, takri, phags-pa, gunjala-gondi, manichaean, yi, hebrew, saurashtra, bengali, khmer, cham, pahawh-hmong, modi, psalter-pahlavi, hanunoo, adlam, soyombo, tai-tham, khudawadi, mongolian, kharoshthi, myanmar, coptic, buginese, gurmukhi, caucasian-albanian, mende-kikakui, elbasan, tamil, lao, meetei-mayek, tai-viet, music, warang-citi, hanifi-rohingya, new-tai-lue, siddham, symbols, mahajani, syloti-nagri, grantha, javanese, thai, telugu, wancho, buhid, old-permic, tai-le, brahmi, sharada, mandaic, tirhuta, chakma, nko, sogdian, kayah-li, bhaiksuki, sinhala, thaana, kaithi, osage, duployan, kannada, lepcha, gujarati, miao, newa, canadian-aboriginal, ahom, tagbanwa, batak, syriac, tibetan, math, marchen, tifinagh, bassa-vah, khojki, devanagari, limbu</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: khmer, hanifi-rohingya, javanese, duployan, gujarati, tirhuta, nko, brahmi, kannada, sharada, newa, thaana, tai-le, yi, siddham, miao, syloti-nagri, batak, ahom, sinhala, bengali, sogdian, saurashtra, khudawadi, mende-kikakui, tai-tham, kharoshthi, zanabazar-square, gurmukhi, khojki, sundanese, warang-citi, pahawh-hmong, devanagari, thai, rejang, marchen, gunjala-gondi, armenian, balinese, modi, bhaiksuki, masaram-gondi, malayalam, limbu, tai-viet, grantha, elbasan, tagbanwa, mongolian, hebrew, wancho, telugu, psalter-pahlavi, buginese, chakma, mahajani, syriac, kaithi, takri, tibetan, cham, oriya, math, adlam, osage, tifinagh, caucasian-albanian, kayah-li, tamil, tagalog, coptic, canadian-aboriginal, mandaic, new-tai-lue, bassa-vah, old-permic, phags-pa, hanunoo, soyombo, symbols, meetei-mayek, myanmar, manichaean, dogra, lepcha, music, buhid, lao</li>
 <li>U+2626 ORTHODOX CROSS: try adding symbols</li>
 <li>U+263D FIRST QUARTER MOON: try adding symbols</li>
 <li>U+263E LAST QUARTER MOON: try adding symbols</li>
@@ -1571,11 +1567,11 @@ definitions.</p>
 <li>U+FB01 LATIN SMALL LIGATURE FI: not included in any glyphset definition</li>
 <li>U+FB02 LATIN SMALL LIGATURE FL: not included in any glyphset definition</li>
 <li>U+FB05 LATIN SMALL LIGATURE LONG S T: not included in any glyphset definition</li>
-<li>U+FE00 VARIATION SELECTOR-1: try adding one of: manichaean, phags-pa, yi</li>
+<li>U+FE00 VARIATION SELECTOR-1: try adding one of: phags-pa, yi, manichaean</li>
 <li>U+FE01 VARIATION SELECTOR-2: not included in any glyphset definition</li>
 <li>U+FE02 VARIATION SELECTOR-3: not included in any glyphset definition</li>
 <li>U+FE03 VARIATION SELECTOR-4: not included in any glyphset definition</li>
-<li>U+FE26 COMBINING CONJOINING MACRON: try adding one of: caucasian-albanian, coptic</li>
+<li>U+FE26 COMBINING CONJOINING MACRON: try adding one of: coptic, caucasian-albanian</li>
 <li>U+FFF9 INTERLINEAR ANNOTATION ANCHOR: try adding symbols</li>
 <li>U+FFFA INTERLINEAR ANNOTATION SEPARATOR: try adding symbols</li>
 <li>U+FFFB INTERLINEAR ANNOTATION TERMINATOR: try adding symbols</li>
@@ -1645,7 +1641,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -1667,7 +1663,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 Ponomar-Regular.ttf
                 
             </summary>
@@ -1676,44 +1672,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some base glyphs were missing: Ҁ, ҁ, Ꙃ, ꙃ</td>
-<td align="left">cu_Cyrl (Church Slavic)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ғ, қ, ң, ұ, ә</td>
-<td align="left">kk_Cyrl (Kazakh)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ғ, қ, ҳ, ҷ</td>
-<td align="left">tg_Cyrl (Tajik)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ғ, қ, ҳ</td>
-<td align="left">uz_Cyrl (Uzbek (Cyrillic))</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Җ, җ, Ң, ң, Ә, ә</td>
-<td align="left">tk_Cyrl (Turkmen (Cyrillic))</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
@@ -1935,7 +1907,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
             
                 <h2>Shaping Checks</h2>
 <span class='section__emoji'>
-    ⚠️⏩⏩⏩
+    💥⏩⏩⏩
 </span>
 
     
@@ -1965,7 +1937,7 @@ Please consider mentioning note-worthy improvements made to the family recently.
     
         <details>
             <summary>
-                ⚠️
+                💥
                 Ponomar-Regular.ttf
                 
             </summary>
@@ -1974,17 +1946,20 @@ Please consider mentioning note-worthy improvements made to the family recently.
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            ⚠️ WARN
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: i̋ j̀ j́ j̃ j̄ j̈ j̑ і́</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ ī i̅ ĭ i̇ ȉ ȋ i̾ i҃ i҄ i҅ i҆ i҇ i᷀ i᷁ iⷠ iⷡ iⷢ iⷣ iⷤ</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Belarusian (Cyrl, 10,064,517 speakers), Ukrainian (Cyrl, 29,273,587 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Dii (Latn, 71,000 speakers), Dutch (Latn, 31,709,104 speakers), Gulay (Latn, 250,478 speakers), Aghem (Latn, 38,843 speakers), Nateni (Latn, 100,000 speakers), Zapotec (Latn, 490,000 speakers), Igbo (Latn, 27,823,640 speakers), Yala (Latn, 200,000 speakers), Dan (Latn, 1,099,244 speakers), Nzakara (Latn, 50,000 speakers), Sar (Latn, 500,000 speakers), Heiltsuk (Latn, 300 speakers), Lithuanian (Latn, 2,357,094 speakers), Fur (Latn, 1,230,163 speakers), Ekpeye (Latn, 226,000 speakers), Longto (Latn, 5,000 speakers), Makaa (Latn, 221,000 speakers), Southern Tutchone (Latn, 65 speakers), Kaska (Latn, 125 speakers), Southern Kisi (Latn, 360,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ikwere (Latn, 717,000 speakers), Keliko (Latn, 63,000 speakers), Ma’di (Latn, 584,000 speakers), Cicipu (Latn, 44,000 speakers), Mfumte (Latn, 79,000 speakers), Navajo (Latn, 166,319 speakers), Lugbara (Latn, 2,200,000 speakers), South Central Banda (Latn, 244,000 speakers), Abua (Latn, 25,000 speakers), Avokaya (Latn, 100,000 speakers), Teke-Ebo (Latn, 260,000 speakers), Koonzime (Latn, 40,000 speakers), Kom (Latn, 360,685 speakers), Ngbaka (Latn, 1,020,000 speakers), Basaa (Latn, 332,940 speakers), Ejagham (Latn, 120,000 speakers), Northern Tutchone (Latn, 85 speakers), Han (Latn, 6 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Western Krahn (Latn, 97,800 speakers), Mango (Latn, 77,000 speakers), Bafut (Latn, 158,146 speakers), Ebira (Latn, 2,200,000 speakers), Mundani (Latn, 34,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Vute (Latn, 21,000 speakers).</p>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/soft_dotted.py&quot;, line 144, in check_soft_dotted
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: soft-dotted]
+                             [code: failed-check]
                             
                             </span>
                         </li>

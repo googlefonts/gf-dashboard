@@ -260,7 +260,7 @@ and remember to include a pointer to the repo and branch
 you're checking.</p>
         
         <h3>DEPRECATION WARNING</h3>
-        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/version_bump<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/ttx_roundtrip<br><br></p>
+        <p>By late-December 2024, FontBakery version 0.13.0 introduced a new naming scheme for the check-IDs.<br><br>Fontbakery detected usage of old IDs and performed an automatic backwards-compatibility translation for you.<br>This automatic translation will be deprecated in the next major release.<br><br>Please start using the new check-IDs as documented at <a href='https://github.com/fonttools/fontbakery/blob/31970cdc5807c3b75c2f9b6e223aca57ffda535f/Lib/fontbakery/legacy_checkids.py'>/Lib/fontbakery/legacy_checkids.py</a><br><br>The following legacy check-IDs were detected:<br> - com.google.fonts/check/ttx_roundtrip<br> - com.google.fonts/check/outline_colinear_vectors<br> - com.google.fonts/check/outline_jaggy_segments<br> - com.google.fonts/check/outline_alignment_miss<br> - com.google.fonts/check/outline_semi_vertical<br> - com.google.fonts/check/fontdata_namecheck<br> - com.google.fonts/check/outline_short_segments<br> - com.google.fonts/check/version_bump<br><br></p>
         
         <h2>Summary</h2>
     <table>
@@ -274,13 +274,13 @@ you're checking.</p>
         <th>✅ PASS</th>
     </tr>
     <tr>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td>5</td>
+        <td>4</td>
         <td>10</td>
         <td>58</td>
         <td>6</td>
-        <td>161</td>
+        <td>159</td>
     </tr>
     <tr>
         <td>0%</td>
@@ -288,7 +288,7 @@ you're checking.</p>
         <td>2%</td>
         <td>4%</td>
         <td>24%</td>
-        <td>2%</td>
+        <td>3%</td>
         <td>67%</td>
     </tr>
 </table>
@@ -314,7 +314,7 @@ immediately.
 <p>(but other kinds of bug reports and/or feature requests
     are also always welcome, of course!)</p>
 
-<p>FontBakery version: 0.13.0</p>
+<p>FontBakery version: 0.13.1</p>
         
             
         
@@ -818,8 +818,6 @@ greaterequal</p>
     
 
     
-
-    
     <h3>
     
     Check there are no overlapping path segments
@@ -959,8 +957,6 @@ greaterequal</p>
                 </ul>
             </div>
         </details>
-    
-
     
 
     
@@ -1249,24 +1245,24 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
 <li>U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh</li>
 <li>U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+030D COMBINING VERTICAL LINE ABOVE: try adding sunuwar</li>
 <li>U+030F COMBINING DOUBLE GRAVE ACCENT: not included in any glyphset definition</li>
 <li>U+0311 COMBINING INVERTED BREVE: try adding one of: coptic, todhri</li>
 <li>U+0313 COMBINING COMMA ABOVE: try adding one of: old-permic, todhri</li>
 <li>U+031B COMBINING HORN: not included in any glyphset definition</li>
-<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, syriac, duployan</li>
+<li>U+0324 COMBINING DIAERESIS BELOW: try adding one of: cherokee, duployan, syriac</li>
 <li>U+0325 COMBINING RING BELOW: try adding syriac</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 <li>U+032D COMBINING CIRCUMFLEX ACCENT BELOW: try adding one of: sunuwar, syriac</li>
 <li>U+032E COMBINING BREVE BELOW: try adding syriac</li>
-<li>U+0331 COMBINING MACRON BELOW: try adding one of: caucasian-albanian, sunuwar, thai, cherokee, tifinagh, syriac, gothic</li>
+<li>U+0331 COMBINING MACRON BELOW: try adding one of: cherokee, tifinagh, sunuwar, caucasian-albanian, syriac, thai, gothic</li>
 <li>U+0334 COMBINING TILDE OVERLAY: not included in any glyphset definition</li>
 <li>U+0335 COMBINING SHORT STROKE OVERLAY: not included in any glyphset definition</li>
 <li>U+0337 COMBINING SHORT SOLIDUS OVERLAY: not included in any glyphset definition</li>
@@ -1316,7 +1312,7 @@ definitions.</p>
             
                 <h2>Glyphset Checks</h2>
 <span class='section__emoji'>
-    🔥
+    💥
 </span>
 
     
@@ -1338,7 +1334,7 @@ definitions.</p>
     
         <details>
             <summary>
-                🔥
+                💥
                 TacOne-Regular.ttf
                 
             </summary>
@@ -1347,768 +1343,20 @@ definitions.</p>
                 
                         <li class='details_item'>
                             <span class='details_indicator'>
-                            🔥 FAIL
+                            💥 ERROR
                             </span>
 
                             <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">FAIL messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uni025B</td>
-<td align="left">bqv_Latn (Koro Wachi), lom_Latn (Loma, Liberia), kpe_Latn (Kpelle), lob_Latn (Lobi), dnj_Latn_LR (Liberian Dan), ebo_Latn (Teke-Ebo), bqp_Latn (Bisã), nyb_Latn (Nyangbo), gna_Latn (Kaansa), ife_Latn (Ifè), kst_Latn (Winyé), dya_Latn (Dyan), mev_Latn (Mano), gkp_Latn (Kpelle, Guinea), vai_Latn (Vai (Latin)), tuz_Latn (Turka), bfo_Latn (Malba Birifor), tcd_Latn (Tafi), sld_Latn (Sissala), tbz_Latn (Ditammari), box_Latn (Buamu), pug_Latn (Phuie), bwj_Latn (Láá Láá Bwamu), wwa_Latn (Waama), dgi_Latn (Northern Dagara), gur_Latn (Frafra), bqc_Latn (Boko), bsq_Latn (Bassa (Latin)), biv_Latn (Birifor, Southern), nga_Latn (Ngbaka), bba_Latn (Baatonum), lee_Latn (Lyélé), soy_Latn (Miyobe) and ee_Latn (Ewe)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uni0190</td>
-<td align="left">bqv_Latn (Koro Wachi), lom_Latn (Loma, Liberia), kpe_Latn (Kpelle), lob_Latn (Lobi), dnj_Latn_LR (Liberian Dan), ebo_Latn (Teke-Ebo), bqp_Latn (Bisã), nyb_Latn (Nyangbo), gna_Latn (Kaansa), ife_Latn (Ifè), kst_Latn (Winyé), dya_Latn (Dyan), mev_Latn (Mano), gkp_Latn (Kpelle, Guinea), vai_Latn (Vai (Latin)), tuz_Latn (Turka), bfo_Latn (Malba Birifor), tcd_Latn (Tafi), sld_Latn (Sissala), tbz_Latn (Ditammari), box_Latn (Buamu), pug_Latn (Phuie), bwj_Latn (Láá Láá Bwamu), wwa_Latn (Waama), dgi_Latn (Northern Dagara), gur_Latn (Frafra), bqc_Latn (Boko), bsq_Latn (Bassa (Latin)), biv_Latn (Birifor, Southern), nga_Latn (Ngbaka), bba_Latn (Baatonum), lee_Latn (Lyélé), soy_Latn (Miyobe) and ee_Latn (Ewe)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni025B</td>
-<td align="left">ddn_Latn (Dendi), wok_Latn (Longto), lom_Latn (Loma, Liberia), kpe_Latn (Kpelle), pnz_Latn (Pana, Central African Republic), lu_Latn (Luba-Katanga), dnj_Latn_LR (Liberian Dan), dow_Latn (Doyayo), bfd_Latn (Bafut), nnw_Latn (Southern Nuni), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), bqp_Latn (Bisã), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), gna_Latn (Kaansa), lol_Latn (Mongo), mcp_Latn (Makaa), kst_Latn (Winyé), yo_Latn_BJ (Yoruba, Benin), etx_Latn (Iten), mev_Latn (Mano), gkp_Latn (Kpelle, Guinea), vai_Latn (Vai (Latin)), goa_Latn (Guro), mdt_Latn (Mbere), tuz_Latn (Turka), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), neb_Latn (Toura), bom_Latn (Berom), tcd_Latn (Tafi), sld_Latn (Sissala), eto_Latn (Eton, Cameroon), dua_Latn (Duala), nnh_Latn (Ngiemboon), gvl_Latn (Gulay), bas_Latn (Basaa), tbz_Latn (Ditammari), box_Latn (Buamu), aks_Latn (Akeselem), pug_Latn (Phuie), bbj_Latn (Ghomala), blo_Latn (Anii), dgi_Latn (Northern Dagara), dnj_Latn (Dan), kyq_Latn (Kenga), bqc_Latn (Boko), myk_Latn (Mamara Senoufo), yav_Latn (Yangben), ozm_Latn (Koonzime), bsq_Latn (Bassa (Latin)), bax_Latn (Bamun (Latin)), gej_Latn (Gen), nga_Latn (Ngbaka), ntm_Latn (Nateni), lee_Latn (Lyélé), soy_Latn (Miyobe), tvu_Latn (Tunen), ksf_Latn (Bafia), loq_Latn (Lobala), sbd_Latn (Southern Samo), ee_Latn (Ewe), ln_Latn (Lingala) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni025B</td>
-<td align="left">ddn_Latn (Dendi), wok_Latn (Longto), dow_Latn (Doyayo), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), agq_Latn (Aghem), tcd_Latn (Tafi), bas_Latn (Basaa), dnj_Latn (Dan), kyq_Latn (Kenga), yba_Latn (Yala), bax_Latn (Bamun (Latin)) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni0190</td>
-<td align="left">ddn_Latn (Dendi), wok_Latn (Longto), dow_Latn (Doyayo), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), agq_Latn (Aghem), tcd_Latn (Tafi), bas_Latn (Basaa), dnj_Latn (Dan), kyq_Latn (Kenga), yba_Latn (Yala), bax_Latn (Bamun (Latin)) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni0190</td>
-<td align="left">ddn_Latn (Dendi), wok_Latn (Longto), lom_Latn (Loma, Liberia), kpe_Latn (Kpelle), lu_Latn (Luba-Katanga), dnj_Latn_LR (Liberian Dan), dow_Latn (Doyayo), bfd_Latn (Bafut), krw_Latn (Western Krahn), nnw_Latn (Southern Nuni), byv_Latn (Medumba), kss_Latn (Southern Kisi), bqp_Latn (Bisã), grb_Latn (Grebo), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), lol_Latn (Mongo), yo_Latn_BJ (Yoruba, Benin), etx_Latn (Iten), mev_Latn (Mano), gkp_Latn (Kpelle, Guinea), goa_Latn (Guro), tuz_Latn (Turka), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), agq_Latn (Aghem), neb_Latn (Toura), bom_Latn (Berom), tcd_Latn (Tafi), tik_Latn (Tikar), eto_Latn (Eton, Cameroon), nnh_Latn (Ngiemboon), gvl_Latn (Gulay), bas_Latn (Basaa), tbz_Latn (Ditammari), box_Latn (Buamu), pug_Latn (Phuie), bbj_Latn (Ghomala), wwa_Latn (Waama), blo_Latn (Anii), dgi_Latn (Northern Dagara), dnj_Latn (Dan), kyq_Latn (Kenga), bqc_Latn (Boko), myk_Latn (Mamara Senoufo), yav_Latn (Yangben), bsq_Latn (Bassa (Latin)), bax_Latn (Bamun (Latin)), gej_Latn (Gen), nga_Latn (Ngbaka), ntm_Latn (Nateni), lee_Latn (Lyélé), loq_Latn (Lobala), sbd_Latn (Southern Samo), ee_Latn (Ewe) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni025B</td>
-<td align="left">ddn_Latn (Dendi), wok_Latn (Longto), lom_Latn (Loma, Liberia), kpe_Latn (Kpelle), lu_Latn (Luba-Katanga), dnj_Latn_LR (Liberian Dan), dow_Latn (Doyayo), bfd_Latn (Bafut), krw_Latn (Western Krahn), nnw_Latn (Southern Nuni), byv_Latn (Medumba), kss_Latn (Southern Kisi), bqp_Latn (Bisã), grb_Latn (Grebo), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), lol_Latn (Mongo), yo_Latn_BJ (Yoruba, Benin), etx_Latn (Iten), mev_Latn (Mano), gkp_Latn (Kpelle, Guinea), goa_Latn (Guro), tuz_Latn (Turka), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), agq_Latn (Aghem), neb_Latn (Toura), bom_Latn (Berom), tcd_Latn (Tafi), tik_Latn (Tikar), eto_Latn (Eton, Cameroon), nnh_Latn (Ngiemboon), gvl_Latn (Gulay), bas_Latn (Basaa), tbz_Latn (Ditammari), box_Latn (Buamu), pug_Latn (Phuie), bbj_Latn (Ghomala), wwa_Latn (Waama), blo_Latn (Anii), dgi_Latn (Northern Dagara), dnj_Latn (Dan), kyq_Latn (Kenga), bqc_Latn (Boko), myk_Latn (Mamara Senoufo), yav_Latn (Yangben), bsq_Latn (Bassa (Latin)), bax_Latn (Bamun (Latin)), gej_Latn (Gen), nga_Latn (Ngbaka), ntm_Latn (Nateni), lee_Latn (Lyélé), loq_Latn (Lobala), sbd_Latn (Southern Samo), ee_Latn (Ewe) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0190</td>
-<td align="left">ddn_Latn (Dendi), wok_Latn (Longto), lom_Latn (Loma, Liberia), kpe_Latn (Kpelle), pnz_Latn (Pana, Central African Republic), lu_Latn (Luba-Katanga), dnj_Latn_LR (Liberian Dan), dow_Latn (Doyayo), bfd_Latn (Bafut), nnw_Latn (Southern Nuni), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), bqp_Latn (Bisã), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), gna_Latn (Kaansa), lol_Latn (Mongo), mcp_Latn (Makaa), kst_Latn (Winyé), yo_Latn_BJ (Yoruba, Benin), etx_Latn (Iten), mev_Latn (Mano), gkp_Latn (Kpelle, Guinea), vai_Latn (Vai (Latin)), goa_Latn (Guro), mdt_Latn (Mbere), tuz_Latn (Turka), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), neb_Latn (Toura), bom_Latn (Berom), tcd_Latn (Tafi), sld_Latn (Sissala), eto_Latn (Eton, Cameroon), dua_Latn (Duala), nnh_Latn (Ngiemboon), gvl_Latn (Gulay), bas_Latn (Basaa), tbz_Latn (Ditammari), box_Latn (Buamu), aks_Latn (Akeselem), pug_Latn (Phuie), bbj_Latn (Ghomala), blo_Latn (Anii), dgi_Latn (Northern Dagara), dnj_Latn (Dan), kyq_Latn (Kenga), bqc_Latn (Boko), myk_Latn (Mamara Senoufo), yav_Latn (Yangben), ozm_Latn (Koonzime), bsq_Latn (Bassa (Latin)), bax_Latn (Bamun (Latin)), gej_Latn (Gen), nga_Latn (Ngbaka), ntm_Latn (Nateni), lee_Latn (Lyélé), soy_Latn (Miyobe), tvu_Latn (Tunen), ksf_Latn (Bafia), loq_Latn (Lobala), sbd_Latn (Southern Samo), ee_Latn (Ewe), ln_Latn (Lingala) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0330 to uni0190</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano), mge_Latn (Mango) and ntm_Latn (Nateni)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni0330</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano) and mge_Latn (Mango)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0330 to uni025B</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano), mge_Latn (Mango) and ntm_Latn (Nateni)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni0330</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano), mge_Latn (Mango) and ntm_Latn (Nateni)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0330</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano), mge_Latn (Mango) and ntm_Latn (Nateni)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni018F</td>
-<td align="left">wok_Latn (Longto), fmp_Latn (Fe’fe’), mge_Latn (Mango), ybb_Latn (Yemba), mwm_Latn (Sar), kyq_Latn (Kenga) and bax_Latn (Bamun (Latin))</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni018F</td>
-<td align="left">wok_Latn (Longto), bfd_Latn (Bafut), nnw_Latn (Southern Nuni), ewo_Latn (Ewondo), mcp_Latn (Makaa), gkp_Latn (Kpelle, Guinea), etu_Latn (Ejagham), fmp_Latn (Fe’fe’), dur_Latn (Dii), mge_Latn (Mango), nfu_Latn (Mfumte), bum_Latn (Bulu), eto_Latn (Eton, Cameroon), ybb_Latn (Yemba), sba_Latn (Ngambay), mwm_Latn (Sar), gvl_Latn (Gulay), bbj_Latn (Ghomala), kyq_Latn (Kenga), bax_Latn (Bamun (Latin)), lee_Latn (Lyélé) and sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to Eng</td>
-<td align="left">wok_Latn (Longto), kss_Latn (Southern Kisi), mev_Latn (Mano), kyq_Latn (Kenga) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to Eng</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano), tcd_Latn (Tafi), eto_Latn (Eton, Cameroon), aks_Latn (Akeselem), kyq_Latn (Kenga) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni018F</td>
-<td align="left">wok_Latn (Longto), mgo_Latn (Metaʼ), bfd_Latn (Bafut), nnw_Latn (Southern Nuni), byv_Latn (Medumba), ewo_Latn (Ewondo), gkp_Latn (Kpelle, Guinea), gnd_Latn (Zulgo-Gemzek), fmp_Latn (Fe’fe’), mnf_Latn (Mundani), dur_Latn (Dii), mge_Latn (Mango), nfu_Latn (Mfumte), bum_Latn (Bulu), eto_Latn (Eton, Cameroon), gvl_Latn (Gulay), bbj_Latn (Ghomala), kyq_Latn (Kenga), bax_Latn (Bamun (Latin)), lee_Latn (Lyélé) and sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to Eng</td>
-<td align="left">wok_Latn (Longto), mev_Latn (Mano), tik_Latn (Tikar), eto_Latn (Eton, Cameroon), kyq_Latn (Kenga) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0331 to uni025B</td>
-<td align="left">nus_Latn (Nuer) and kdj_Latn (Karamojong)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0331 to uni0190</td>
-<td align="left">nus_Latn (Nuer) and kdj_Latn (Karamojong)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0308 to uni0331</td>
-<td align="left">nus_Latn (Nuer)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0308 to uni025B</td>
-<td align="left">nus_Latn (Nuer), grb_Latn (Grebo), dip_Latn (Dinka, Northeastern), lnl_Latn (South Central Banda), din_Latn (Dinka) and sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0308 to uni0190</td>
-<td align="left">nus_Latn (Nuer), grb_Latn (Grebo), dip_Latn (Dinka, Northeastern), lnl_Latn (South Central Banda), din_Latn (Dinka) and sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni0190</td>
-<td align="left">kpe_Latn (Kpelle), pnz_Latn (Pana, Central African Republic), bfd_Latn (Bafut), byv_Latn (Medumba), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), ewo_Latn (Ewondo), gna_Latn (Kaansa), lol_Latn (Mongo), mcp_Latn (Makaa), gkp_Latn (Kpelle, Guinea), goa_Latn (Guro), lnl_Latn (South Central Banda), kkj_Latn (Kako), agq_Latn (Aghem), neb_Latn (Toura), ksp_Latn (Kabba), bom_Latn (Berom), tik_Latn (Tikar), nnh_Latn (Ngiemboon), bas_Latn (Basaa), bbj_Latn (Ghomala), blo_Latn (Anii), dnj_Latn (Dan), ozm_Latn (Koonzime), bax_Latn (Bamun (Latin)), nga_Latn (Ngbaka), lee_Latn (Lyélé), ln_Latn (Lingala) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni025B</td>
-<td align="left">kpe_Latn (Kpelle), pnz_Latn (Pana, Central African Republic), bfd_Latn (Bafut), byv_Latn (Medumba), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), ewo_Latn (Ewondo), gna_Latn (Kaansa), lol_Latn (Mongo), mcp_Latn (Makaa), gkp_Latn (Kpelle, Guinea), goa_Latn (Guro), lnl_Latn (South Central Banda), kkj_Latn (Kako), agq_Latn (Aghem), neb_Latn (Toura), ksp_Latn (Kabba), bom_Latn (Berom), tik_Latn (Tikar), nnh_Latn (Ngiemboon), bas_Latn (Basaa), bbj_Latn (Ghomala), blo_Latn (Anii), dnj_Latn (Dan), ozm_Latn (Koonzime), bax_Latn (Bamun (Latin)), nga_Latn (Ngbaka), lee_Latn (Lyélé), ln_Latn (Lingala) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0327 to uni0190</td>
-<td align="left">pnz_Latn (Pana, Central African Republic), dow_Latn (Doyayo), mcp_Latn (Makaa) and kkj_Latn (Kako)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0327</td>
-<td align="left">pnz_Latn (Pana, Central African Republic), mcp_Latn (Makaa), dur_Latn (Dii) and vut_Latn (Vute)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0327 to uni025B</td>
-<td align="left">pnz_Latn (Pana, Central African Republic), dow_Latn (Doyayo), mcp_Latn (Makaa) and kkj_Latn (Kako)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni0327</td>
-<td align="left">pnz_Latn (Pana, Central African Republic), mcp_Latn (Makaa) and vut_Latn (Vute)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uni01B2</td>
-<td align="left">lob_Latn (Lobi), gna_Latn (Kaansa), kst_Latn (Winyé), bfo_Latn (Malba Birifor), sld_Latn (Sissala) and pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uni028B</td>
-<td align="left">lob_Latn (Lobi), gna_Latn (Kaansa), kst_Latn (Winyé), bfo_Latn (Malba Birifor), sld_Latn (Sissala) and pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uni0269</td>
-<td align="left">lob_Latn (Lobi), gna_Latn (Kaansa), kst_Latn (Winyé), bfo_Latn (Malba Birifor), tcd_Latn (Tafi), sld_Latn (Sissala), pug_Latn (Phuie) and biv_Latn (Birifor, Southern)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uniA78D</td>
-<td align="left">dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uniA78D</td>
-<td align="left">dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uniA78D</td>
-<td align="left">dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uniA78D</td>
-<td align="left">dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni028B</td>
-<td align="left">xsm_Latn_BF (Kasem, Burkina Faso), gna_Latn (Kaansa), kst_Latn (Winyé), goa_Latn (Guro), neb_Latn (Toura), sld_Latn (Sissala) and pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0269</td>
-<td align="left">xsm_Latn_BF (Kasem, Burkina Faso), gna_Latn (Kaansa), kst_Latn (Winyé), goa_Latn (Guro), neb_Latn (Toura), tcd_Latn (Tafi), sld_Latn (Sissala), aks_Latn (Akeselem), pug_Latn (Phuie) and blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni01B2</td>
-<td align="left">xsm_Latn_BF (Kasem, Burkina Faso), gna_Latn (Kaansa), kst_Latn (Winyé), goa_Latn (Guro), neb_Latn (Toura), sld_Latn (Sissala) and pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni0327</td>
-<td align="left">dow_Latn (Doyayo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030D to uni025B</td>
-<td align="left">dow_Latn (Doyayo), krw_Latn (Western Krahn), kss_Latn (Southern Kisi), yba_Latn (Yala) and nga_Latn (Ngbaka)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030D to uni0190</td>
-<td align="left">dow_Latn (Doyayo), krw_Latn (Western Krahn), kss_Latn (Southern Kisi), yba_Latn (Yala) and nga_Latn (Ngbaka)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni018F</td>
-<td align="left">bfd_Latn (Bafut), byv_Latn (Medumba), ewo_Latn (Ewondo), mcp_Latn (Makaa), gkp_Latn (Kpelle, Guinea), etu_Latn (Ejagham), lnl_Latn (South Central Banda), mnf_Latn (Mundani), ksp_Latn (Kabba), nfu_Latn (Mfumte), bbj_Latn (Ghomala), bax_Latn (Bamun (Latin)) and lee_Latn (Lyélé)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni025B</td>
-<td align="left">bfd_Latn (Bafut), krw_Latn (Western Krahn), byv_Latn (Medumba), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), grb_Latn (Grebo), ewo_Latn (Ewondo), gna_Latn (Kaansa), lol_Latn (Mongo), mcp_Latn (Makaa), goa_Latn (Guro), agq_Latn (Aghem), bom_Latn (Berom), tcd_Latn (Tafi), tik_Latn (Tikar), nnh_Latn (Ngiemboon), bas_Latn (Basaa), bbj_Latn (Ghomala), ozm_Latn (Koonzime), bsq_Latn (Bassa (Latin)), bax_Latn (Bamun (Latin)), gej_Latn (Gen), nga_Latn (Ngbaka), lee_Latn (Lyélé), sbd_Latn (Southern Samo), ln_Latn (Lingala) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni018F</td>
-<td align="left">bfd_Latn (Bafut), byv_Latn (Medumba), ewo_Latn (Ewondo), mcp_Latn (Makaa), fmp_Latn (Fe’fe’), mnf_Latn (Mundani), nfu_Latn (Mfumte), bbj_Latn (Ghomala), bax_Latn (Bamun (Latin)), lee_Latn (Lyélé) and sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni0190</td>
-<td align="left">bfd_Latn (Bafut), krw_Latn (Western Krahn), byv_Latn (Medumba), kss_Latn (Southern Kisi), nmg_Latn (Kwasio), grb_Latn (Grebo), ewo_Latn (Ewondo), gna_Latn (Kaansa), lol_Latn (Mongo), mcp_Latn (Makaa), goa_Latn (Guro), agq_Latn (Aghem), bom_Latn (Berom), tcd_Latn (Tafi), tik_Latn (Tikar), nnh_Latn (Ngiemboon), bas_Latn (Basaa), bbj_Latn (Ghomala), ozm_Latn (Koonzime), bsq_Latn (Bassa (Latin)), bax_Latn (Bamun (Latin)), gej_Latn (Gen), nga_Latn (Ngbaka), lee_Latn (Lyélé), sbd_Latn (Southern Samo), ln_Latn (Lingala) and jgo_Latn (Ngomba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni2C6D</td>
-<td align="left">byv_Latn (Medumba) and fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni2C6D</td>
-<td align="left">byv_Latn (Medumba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni2C6D</td>
-<td align="left">byv_Latn (Medumba) and fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni0251</td>
-<td align="left">byv_Latn (Medumba)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni0251</td>
-<td align="left">byv_Latn (Medumba) and fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni0251</td>
-<td align="left">byv_Latn (Medumba) and fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to a</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to A</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to a</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to A</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to e</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to E</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to e</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to E</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to uni025B</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to uni0190</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to uni025B</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to uni0190</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to dotlessi</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to I</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to dotlessi</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to I</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030D to Eng</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to o</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to O</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to o</td>
-<td align="left">kss_Latn (Southern Kisi), tcd_Latn (Tafi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to O</td>
-<td align="left">kss_Latn (Southern Kisi), tcd_Latn (Tafi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to uni0254</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to uni0186</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to uni0254</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to uni0186</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to u</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC4 to U</td>
-<td align="left">kss_Latn (Southern Kisi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to u</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC5 to U</td>
-<td align="left">kss_Latn (Southern Kisi) and btt_Latn (Bete-Bendi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni028B</td>
-<td align="left">gna_Latn (Kaansa), goa_Latn (Guro) and neb_Latn (Toura)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni0269</td>
-<td align="left">gna_Latn (Kaansa), goa_Latn (Guro), neb_Latn (Toura), tcd_Latn (Tafi) and blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni0269</td>
-<td align="left">gna_Latn (Kaansa), goa_Latn (Guro) and tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to uni01B2</td>
-<td align="left">gna_Latn (Kaansa), goa_Latn (Guro) and neb_Latn (Toura)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni0327</td>
-<td align="left">mcp_Latn (Makaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0328 to uni018F</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0328</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0328 to uni025B</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0328 to uni0190</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0328 to uni0254</td>
-<td align="left">gkp_Latn (Kpelle, Guinea)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni01B2</td>
-<td align="left">goa_Latn (Guro)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni028B</td>
-<td align="left">goa_Latn (Guro), neb_Latn (Toura) and pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to uni028B</td>
-<td align="left">goa_Latn (Guro)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni01B2</td>
-<td align="left">goa_Latn (Guro), neb_Latn (Toura) and pug_Latn (Phuie)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni0269</td>
-<td align="left">goa_Latn (Guro), neb_Latn (Toura), pug_Latn (Phuie) and blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0308 to uni018F</td>
-<td align="left">lnl_Latn (South Central Banda), ksp_Latn (Kabba), ybb_Latn (Yemba) and sbd_Latn (Southern Samo)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni2C6D</td>
-<td align="left">fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni0251</td>
-<td align="left">fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni2C6D</td>
-<td align="left">fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni0251</td>
-<td align="left">fmp_Latn (Fe’fe’)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ᵃ, ᵉ, ᵋ, ᵒ, ᵓ, ᶶ</td>
-<td align="left">teo_Latn (Teso)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0327 to uni018F</td>
-<td align="left">dur_Latn (Dii) and vut_Latn (Vute)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni0327</td>
-<td align="left">dur_Latn (Dii) and vut_Latn (Vute)</td>
-</tr>
-<tr>
-<td align="left">Some mark glyphs were missing: ◌͟</td>
-<td align="left">apd_Latn (Sudanese Arabic) and udu_Latn (Uduk)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0330 to uni018F</td>
-<td align="left">mge_Latn (Mango) and sba_Latn (Ngambay)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to a</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to A</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to e</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to E</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to uni0269</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to uni0269</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to Iotalatin</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to tildecomb</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to o</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to O</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to uni0254</td>
-<td align="left">tcd_Latn (Tafi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to uni0186</td>
-<td align="left">tcd_Latn (Tafi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to u</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to U</td>
-<td align="left">tcd_Latn (Tafi), btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to utilde</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to Utilde</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to Upsilonlatin</td>
-<td align="left">tcd_Latn (Tafi), aks_Latn (Akeselem) and blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to Upsilonlatin</td>
-<td align="left">tcd_Latn (Tafi) and biv_Latn (Birifor, Southern)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0304 to Upsilonlatin</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to Upsilonlatin</td>
-<td align="left">tcd_Latn (Tafi)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to I</td>
-<td align="left">btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to dotlessi</td>
-<td align="left">btt_Latn (Bete-Bendi) and bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to uni019D</td>
-<td align="left">eto_Latn (Eton, Cameroon)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to uni019D</td>
-<td align="left">eto_Latn (Eton, Cameroon)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: T͟H, t͟h</td>
-<td align="left">udu_Latn (Uduk)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to O</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to e</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to A</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to uni0190</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to o</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to U</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to uni025B</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to a</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to uni0186</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to dotlessi</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to uni0190</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to E</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to I</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to uni0254</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC7 to u</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni1DC6 to uni025B</td>
-<td align="left">bas_Latn (Basaa)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to Upsilonlatin</td>
-<td align="left">blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to Upsilonlatin</td>
-<td align="left">blo_Latn (Anii)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, ɤ̄, ɤ̋, ɤ̏, Ɤ, Ɤ̀, Ɤ́, Ɤ̂, Ɤ̄, Ɤ̋, Ɤ̏</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach acutecomb to oe</td>
-<td align="left">dnj_Latn (Dan) and ozm_Latn (Koonzime)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030F to uni025B</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030F to uni0190</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030B to uni025B</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030B to uni0190</td>
-<td align="left">dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach tildecomb to uniA7AE</td>
-<td align="left">kzc_Latn (Bondoukou Kulango)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0302 to oe</td>
-<td align="left">ozm_Latn (Koonzime) and bkm_Latn (Kom)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni030C to oe</td>
-<td align="left">ozm_Latn (Koonzime)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach uni0308 to Eng</td>
-<td align="left">nmz_Latn (Nawdm)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: ɤ, ɤ̀, ɤ́, ɤ̂, Ɤ, Ɤ̀, Ɤ́, Ɤ̂</td>
-<td align="left">gov_Latn (Goo)</td>
-</tr>
-<tr>
-<td align="left">Some base glyphs were missing: Ꟈ, ꟈ</td>
-<td align="left">mor_Latn (Moro)</td>
-</tr>
-<tr>
-<td align="left">Shaper didn't attach gravecomb to oe</td>
-<td align="left">bkm_Latn (Kom)</td>
-</tr>
-</tbody>
-</table>
+                            <p>Failed with ModuleNotFoundError: No module named 'shaperglot.checker'</p>
+<pre><code>  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checkrunner.py&quot;, line 222, in _run_check
+    subresults = list(subresults)
+  File &quot;/Users/simon/work/gf-dashboard/venv/lib/python3.13/site-packages/fontbakery/checks/vendorspecific/googlefonts/glyphsets/shape_languages.py&quot;, line 19, in check_glyphsets_shape_languages
+    from shaperglot.checker import Checker
+
+</code></pre>
 
                             
-                             [code: failed-language-shaping]
-                            
-                            </span>
-                        </li>
-                
-                        <li class='details_item'>
-                            <span class='details_indicator'>
-                            ⚠️ WARN
-                            </span>
-
-                            <span class='details_text'>
-                            <p>GF_Phonetics_SinoExt glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">WARN messages</th>
-<th align="left">Languages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ŀ, ŀ</td>
-<td align="left">ca_Latn (Catalan)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ſ</td>
-<td align="left">de_Latn (German) and fr_Latn (French)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for Eng</td>
-<td align="left">bm_Latn (Bambara), dyu_Latn (Dyula), ig_Latn (Igbo), lg_Latn (Ganda), mua_Latn (Mundang), bqv_Latn (Koro Wachi), lia_Latn (Limba, West-Central), gng_Latn (Ngangam), kyf_Latn (Kouya), bsc_Latn (Bassari), bjt_Latn (Balanta-Ganja), fuf_Latn (Pular), lmp_Latn (Limbum), nhu_Latn (Noone), mnk_Latn (Mandinka), ddn_Latn (Dendi), dop_Latn (Lukpa), wok_Latn (Longto), nus_Latn (Nuer), bcw_Latn (Bana), sxw_Latn (Saxwe Gbe), lom_Latn (Loma, Liberia), toq_Latn (Toposa), kdh_Latn (Tem), ahs_Latn (Ashe), ekm_Latn (Elip), pnz_Latn (Pana, Central African Republic), ffm_Latn (Maasina Fulfulde), tpm_Latn (Tampulma), wan_Latn (Wan), moa_Latn (Mwan), mgo_Latn (Metaʼ), dyo_Latn (Jola-Fonyi), kvf_Latn (Kabalai), tuq_Latn (Tedaga), dow_Latn (Doyayo), bfd_Latn (Bafut), tem_Latn (Timne), fuh_Latn (Fulfulde, Western Niger), khq_Latn (Koyra Chiini), lok_Latn (Loko), adj_Latn (Adioukrou), nnw_Latn (Southern Nuni), byv_Latn (Medumba), tnr_Latn (Ménik), kss_Latn (Southern Kisi), saf_Latn (Safaliba), ikx_Latn (Ik), ebo_Latn (Teke-Ebo), nmg_Latn (Kwasio), lig_Latn (Ligbi), ewo_Latn (Ewondo), nyb_Latn (Nyangbo), god_Latn (Godié), gna_Latn (Kaansa), ted_Latn (Krumen, Tepo), bib_Latn (Bissa), mmu_Latn (Mmaala), mne_Latn (Naba), dyi_Latn (Sénoufo, Djimini), anv_Latn (Denya), gaa_Latn (Ga), ife_Latn (Ifè), bim_Latn (Bimoba), mfd_Latn (Mendankwe-Nkwen), sok_Latn (Sokoro), dts_Latn (Dogon, Toro So), bza_Latn (Bandi), nym_Latn (Nyamwezi), dje_Latn (Zarma), mcp_Latn (Makaa), mbu_Latn (Mbula-Bwazza), hag_Latn (Hanga), ajg_Latn (Aja), xrb_Latn (Karaboro, Eastern), sig_Latn (Paasaal), acd_Latn (Gikyode), spp_Latn (Sénoufo, Supyire), ig_Latn (Igbo), snf_Latn (Noon), gud_Latn (Dida, Yocoboué), naw_Latn (Nawuri), ade_Latn (Adele), yam_Latn (Yamba), xsm_Latn (Kasem), krs_Latn (Gbaya, Sudan), knp_Latn (Kwanja), xon_Latn (Konkomba), ken_Latn (Kenyang), csk_Latn (Jola-Kasa), pbi_Latn (Parkwa), mev_Latn (Mano), kbo_Latn (Keliko), mgc_Latn (Morokodo), gkp_Latn (Kpelle, Guinea), bud_Latn (Ntcham), fue_Latn (Fulfulde, Borgu), avn_Latn (Avatime), bex_Latn (Jur Modo), vai_Latn (Vai (Latin)), gnd_Latn (Zulgo-Gemzek), kye_Latn (Krache), dip_Latn (Dinka, Northeastern), mcu_Latn (Mambila, Cameroon), lun_Latn (Lunda), etu_Latn (Ejagham), cae_Latn (Lehar), mgd_Latn (Moru), ntr_Latn (Delo), mdt_Latn (Mbere), meq_Latn (Merey), idu_Latn (Idoma), lgg_Latn (Lugbara), fub_Latn (Fulfulde, Adamawa), mfi_Latn (Wandala), fvr_Latn (Fur), fmp_Latn (Fe’fe’), rub_Latn (Gungu), kzr_Latn (Karang), mls_Latn (Masalit), fan_Latn (Fang), mnf_Latn (Mundani), kkj_Latn (Kako), emk_Latn (Maninkakan, Eastern), fuc_Latn (Pulaar), agq_Latn (Aghem), nfr_Latn (Nafaanra), fod_Latn (Foodo), laj_Latn (Lango, Uganda), neb_Latn (Toura), vag_Latn (Vagla), ach_Latn (Acoli), dur_Latn (Dii), bze_Latn (Jenaama Bozo), xuo_Latn (Kuo), nuv_Latn (Nuni, Northern), tcd_Latn (Tafi), nko_Latn (Nkonya), log_Latn (Logo), taq_Latn (Tamasheq (Latin)), lam_Latn (Lamba), kpo_Latn (Ikposo), nfu_Latn (Mfumte), kdj_Latn (Karamojong), bfa_Latn (Bari), sil_Latn (Sisaala, Tumulung), ttq_Latn (Tawallammat Tamajaq), ses_Latn (Koyraboro Senni), kus_Latn (Kusaal), bum_Latn (Bulu), ncu_Latn (Chumburung), tik_Latn (Tikar), ktj_Latn (Krumen, Plapo), srr_Latn (Serer), sld_Latn (Sissala), eto_Latn (Eton, Cameroon), cou_Latn (Wamey), sav_Latn (Saafi-Saafi), dua_Latn (Duala), ny_Latn (Nyanja), ybb_Latn (Yemba), udu_Latn (Uduk), nnh_Latn (Ngiemboon), shz_Latn (Syenara Senoufo), gde_Latn (Gude), bas_Latn (Basaa), mzw_Latn (Deg), avu_Latn (Avokaya), muy_Latn (Muyang), kqp_Latn (Kimré), aks_Latn (Akeselem), ndz_Latn (Ndogo), kib_Latn (Koalib), pug_Latn (Phuie), yat_Latn (Yambeta), nku_Latn (Kulango, Bouna), gjn_Latn (Gonja), pil_Latn (Yom), bbj_Latn (Ghomala), bss_Latn (Akoose), wwa_Latn (Waama), bzx_Latn (Bozo, Hainyaxo), keu_Latn (Akebu), blo_Latn (Anii), mwk_Latn (Kita Maninkakan), bzw_Latn (Basa), mas_Latn (Masai), wo_Latn (Wolof), sef_Latn (Cebaara Senoufo), nhb_Latn (Beng), yas_Latn (Nugunu), dgi_Latn (Northern Dagara), gur_Latn (Frafra), agc_Latn (Agatu), fuq_Latn (Central-Eastern Niger Fulfulde), dzg_Latn (Dazaga), dnj_Latn (Dan), ahl_Latn (Igo), dtm_Latn (Tomo Kan Dogon), kpz_Latn (Sapiny), kyq_Latn (Kenga), mcn_Latn (Masana), azo_Latn (Awing), gux_Latn (Gourmanchéma), cko_Latn (Anufo), knf_Latn (Mankanya), tod_Latn (Toma), nza_Latn (Tigon Mbembe), wci_Latn (Gbe, Waci), lg_Latn (Ganda), kzc_Latn (Bondoukou Kulango), dag_Latn (Dagbani), bm_Latn (Bambara), myk_Latn (Mamara Senoufo), dyu_Latn (Dyula), bbo_Latn (Northern Bobo Madaré), twq_Latn (Tasawaq), yav_Latn (Yangben), ozm_Latn (Koonzime), gmm_Latn (Gbaya-Mbodomo), boz_Latn (Tiéyaxo Bozo), xed_Latn (Hdi), kmy_Latn (Koma), biv_Latn (Birifor, Southern), xwe_Latn (Gbe, Xwela), mdj_Latn (Mangbetu), dno_Latn (Ndrulo), bax_Latn (Bamun (Latin)), vut_Latn (Vute), mbo_Latn (Mbo), gej_Latn (Gen), bsp_Latn (Baga Sitemu), mur_Latn (Murle), cme_Latn (Cerma), nmz_Latn (Nawdm), daa_Latn (Dangaléat), lem_Latn (Nomaande), lns_Latn (Lamnso’), mfv_Latn (Mandjak), kia_Latn (Kim), lee_Latn (Lyélé), kao_Latn (Xaasongaxango), soy_Latn (Miyobe), tvu_Latn (Tunen), maw_Latn (Mampruli), kqs_Latn (Kissi, Northern), ksf_Latn (Bafia), ndv_Latn (Ndut), kbp_Latn (Kabiyé), loq_Latn (Lobala), mor_Latn (Moro), bkm_Latn (Kom), bav_Latn (Vengo), giz_Latn (Southern Giziga), mfq_Latn (Moba), sbd_Latn (Southern Samo), ee_Latn (Ewe), las_Latn (Lama, Togo), jgo_Latn (Ngomba) and bqj_Latn (Bandial)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Mina</td>
-<td align="left">hna_Latn (Mina)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Amo</td>
-<td align="left">amo_Latn (Amo)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: Ƃ, ƃ</td>
-<td align="left">lom_Latn (Loma, Liberia) and dnj_Latn_LR (Liberian Dan)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni0181</td>
-<td align="left">lom_Latn (Loma, Liberia) and dnj_Latn (Dan)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01A9</td>
-<td align="left">gaa_Latn (Ga)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01B7</td>
-<td align="left">gaa_Latn (Ga)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Eastern Gurung, Latin</td>
-<td align="left">ggn_Latn (Eastern Gurung, Latin)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Mbunga</td>
-<td align="left">mgy_Latn (Mbunga)</td>
-</tr>
-<tr>
-<td align="left">Some auxiliary glyphs were missing: ɐ, ɐ̀, ɐ́, ɐ̂, Ⓐ, ⓐ, Ɐ, Ɐ̀, Ɐ́, Ɐ̂</td>
-<td align="left">kib_Latn (Koalib)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni028B</td>
-<td align="left">tod_Latn (Toma)</td>
-</tr>
-<tr>
-<td align="left">No variant glyphs were found for uni01B2</td>
-<td align="left">tod_Latn (Toma)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Koro</td>
-<td align="left">kfo_Latn (Koro)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Seki</td>
-<td align="left">syi_Latn (Seki)</td>
-</tr>
-<tr>
-<td align="left">No exemplar glyphs were defined for language Atsam</td>
-<td align="left">cch_Latn (Atsam)</td>
-</tr>
-</tbody>
-</table>
-
-                            
-                             [code: warning-language-shaping]
+                             [code: failed-check]
                             
                             </span>
                         </li>
