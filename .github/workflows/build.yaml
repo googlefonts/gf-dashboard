@@ -30,8 +30,10 @@ jobs:
       with:
         repository: google/fonts
         path: fonts
-    - name: Run dashboard builder
-      run: python3 dashboard.py
+    - name: Update servers
+      run: python3 update_servers.py
+    #- name: Run dashboard builder
+    #  run: python3 dashboard.py
     - uses: stefanzweifel/git-auto-commit-action@v4
       name: Commit downloaded fonts and data
       with:
