@@ -4,7 +4,10 @@ from functools import cached_property
 from pathlib import Path
 
 import certifi
-import yaml
+try:
+    from yaml import CSafeLoader as SafeLoader
+except ImportError:
+    from yaml import SafeLoader
 from fontTools.misc.timeTools import epoch_diff
 from fontTools.ttLib import TTFont
 from gflanguages import LoadLanguages
@@ -126,7 +129,7 @@ class GoogleFont:
     def upstream(self):
         upstream_path = self.root("upstream.yaml")
         if upstream_path.exists():
-            return yaml.load(upstream_path.open(), Loader=Loader)
+            return yaml.safe_load(upstream_path.open())
         return {}
 
     @cached_property
