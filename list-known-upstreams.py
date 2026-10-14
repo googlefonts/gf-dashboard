@@ -3,7 +3,10 @@ import glob
 import requests
 import tqdm
 
-from yaml import Loader
+try:
+    from yaml import CSafeLoader as SafeLoader
+except ImportError:
+    from yaml import SafeLoader
 import yaml
 from googlefonts import GoogleFont
 from github import Github, Auth
@@ -61,7 +64,7 @@ for directory in tqdm.tqdm(list(sorted(glob.glob(GFDIR + "/ofl/*")))):
             continue
         if "sources" not in source.decoded_content.decode("utf-8"):
             continue
-        configs.append(yaml.load(source.decoded_content, Loader=Loader))
+        configs.append(yaml.safe_load(source.decoded_content))
 
     if configs:
         this_repo["is_gfr"] = True
